@@ -39,7 +39,7 @@ namespace Samurai.SqlDataAccess
 
     public IEnumerable<string> GetTeamOrPlayerAlias(string entityName, ExternalSource convertTo)
     {
-      return GetQuery<TeamPlayerExternalSourceAlias>(a => a.TeamsPlayer.TeamDisplayName == entityName && a.Id == convertTo.Id)
+      return GetQuery<TeamPlayerExternalSourceAlias>(a => a.TeamsPlayer.TeamName == entityName && a.Id == convertTo.Id)
                 .Select(a => a.Alias);
     }
 

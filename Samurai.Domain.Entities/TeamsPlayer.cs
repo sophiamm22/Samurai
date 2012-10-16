@@ -12,11 +12,9 @@ namespace Samurai.Domain.Entities
       this.TeamPlayerExternalSourceAlias = new List<TeamPlayerExternalSourceAlias>();
     }
 
+    public string TeamName { get; set; }
+    public string Slug { get; set; }
     public int? FinkTankID { get; set; }
-    public string GuardianID { get; set; }
-    public string OddscheckerID { get; set; }
-    public string OddsPortalID { get; set; }
-    public string TeamDisplayName { get; set; }
     public virtual ICollection<Match> MatchesB { get; set; }
     public virtual ICollection<Match> MatchesA { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }

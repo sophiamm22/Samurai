@@ -10,6 +10,7 @@ namespace Samurai.Domain.Entities
       this.MatchOutcomeProbabilitiesInMatches = new List<MatchOutcomeProbabilitiesInMatch>();
       this.ObservedOutcomes = new List<ObservedOutcome>();
       this.ScoreOutcomeProbabilitiesInMatches = new List<ScoreOutcomeProbabilitiesInMatch>();
+      this.MatchCouponURLs = new List<MatchCouponURL>();
     }
 
     public int CompetitionID { get; set; }
@@ -26,5 +27,7 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<MatchOutcomeProbabilitiesInMatch> MatchOutcomeProbabilitiesInMatches { get; set; }
     public virtual ICollection<ObservedOutcome> ObservedOutcomes { get; set; }
     public virtual ICollection<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }
+    public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
+
   }
 }

@@ -1,0 +1,5 @@
+﻿@{var formattedValue = ViewData.TemplateInfo.FormattedModelValue == ViewData.ModelMetadata.Model ?
+    string.Format(System.Globalization.CultureInfo.CurrentCulture,"{0:0.00}", ViewData.ModelMetadata.Model):
+    ViewData.TemplateInfo.FormattedModelValue;
+    Html.Encode(formattedValue);
+}

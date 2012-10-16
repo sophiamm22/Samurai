@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7118D25C-F41F-4B1E-8F3B-739D25D86321}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samurai.Services</RootNamespace>
+    <AssemblyName>Samurai.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountService.cs" />
+    <Compile Include="Contracts\IAccountService.cs" />
+    <Compile Include="Contracts\IFixtureService.cs" />
+    <Compile Include="FixtureService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Samurai.Core\Samurai.Core.csproj">
+      <Project>{8f6d4baf-a8ee-4221-b667-3ee8b4a6849c}</Project>
+      <Name>Samurai.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain.Entities\Samurai.Domain.Entities.csproj">
+      <Project>{805325f9-8997-4247-b5c7-36476609f616}</Project>
+      <Name>Samurai.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain\Samurai.Domain.csproj">
+      <Project>{47f48263-b575-4254-ae3f-fbd8925ade86}</Project>
+      <Name>Samurai.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.SqlDataAccess\Samurai.SqlDataAccess.csproj">
+      <Project>{d118c841-b535-480a-9eff-be652cd6b116}</Project>
+      <Name>Samurai.SqlDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
+      <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>
+      <Name>Samurai.Web.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

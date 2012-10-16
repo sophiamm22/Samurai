@@ -1,0 +1,5 @@
+﻿@{
+  DateTime? modelValue = ViewData.Model as DateTime?;
+  string displayValue = modelValue == null ? string.Empty : modelValue.Value.ToShortDateString();
+}
+@Html.TextBox("", modelValue, new { @class = "datePicker" })

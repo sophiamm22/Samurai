@@ -10,7 +10,6 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 
 using Samurai.Services.Contracts;
-using Samurai.WebPresentationModel.Filters;
 using Samurai.Web.ViewModels;
 using Samurai.WebPresentationModel.Messaging;
 using Samurai.WebPresentationModel.Messaging.UserRegistration.Messages;
@@ -18,7 +17,6 @@ using Samurai.WebPresentationModel.Messaging.UserRegistration.Messages;
 namespace Samurai.WebPresentationModel.Controllers
 {
   [Authorize]
-  [InitializeSimpleMembership]
   public class AccountController : Controller
   {
     private readonly IBus bus;

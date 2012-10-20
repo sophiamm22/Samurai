@@ -24,30 +24,27 @@ namespace Samurai.SqlDataAccess
         fixtureDate.Day, fixtureDate.ToString("MMMM").ToLower(), fixtureDate.Year));
     }
 
-    public TeamsPlayer GetTeamFromSkySportsName(string teamName)
+    public TeamsPlayer GetTeamOrPlayer(string slug)
     {
-      var externalSource = GetQuery<ExternalSource>(x => x.Source == "Sky Sports")
-        .Include("TeamPlayerExternalSourceAlias")
-        .Include("TeamPlayerExternalSourceAlias.TeamsPlayer");
-
-      var teamOrPlayer = externalSource.SelectMany(x => x.TeamPlayerExternalSourceAlias)
-                                       .Where(a => a.Alias == teamName)
-                                       .Select(a => a.TeamsPlayer)
-                                       .FirstOrDefault();
+      var teamOrPlayer = First<TeamsPlayer>(t => t.Slug == slug);
       return teamOrPlayer;
     }
 
-    public Match GetFootballFixtureFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime seasonDate)
+    public IEnumerable<Match> GetMatchesFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime startDate, DateTime endDate)
     {
-      var seasonStartYear = seasonDate.Month >= 8 ? seasonDate.Year : (seasonDate.Year - 1);
-      var seasonEndYear = seasonDate.Month >= 8 ? (seasonDate.Year + 1) : seasonDate.Year;
-      var safeDateStart = new DateTime(seasonStartYear, 8, 1);
-      var safeDateEnd = new DateTime(seasonEndYear, 5, 31);
-
       return GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
                                   m.TeamBID == awayTeam.Id &&
-                                  m.MatchDate.Date >= safeDateStart &&
-                                  m.MatchDate.Date <= safeDateEnd)
+                                  m.MatchDate.Date >= startDate &&
+                                  m.MatchDate.Date <= endDate)
+                            .Include("ObservedOutcomes")
+                            .Include("ObservedOutcomes.ScoreOutcome");
+    }
+
+    public Match GetMatchFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime matchDate)
+    {
+      return GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
+                                  m.TeamBID == awayTeam.Id &&
+                                  m.MatchDate.Date == matchDate.Date)
                             .Include("ObservedOutcomes")
                             .Include("ObservedOutcomes.ScoreOutcome")
                             .FirstOrDefault();

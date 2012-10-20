@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AutoMapper;
+
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.SqlDataAccess.Contracts;
+using Samurai.Domain.Entities;
 
 namespace Samurai.Services
 {
@@ -20,18 +23,18 @@ namespace Samurai.Services
       this.fixtureRepository = fixtureRepository;
     }
 
-    public FootballFixtureViewModel GetFootballFixture(string dateString, string homeTeam, string awayTeam)
+    public FootballFixtureViewModel GetFootballFixture(string dateString, string homeTeamSlug, string awayTeamSlug)
     {
-      var dateParts = dateString.Split('-');
+      DateTime fixtureDate;
+      if (!DateTime.TryParse(dateString, out fixtureDate))
+        return null;
 
-      var fixtureDate = new DateTime(int.Parse(dateParts[2]), int.Parse(dateParts[1]), int.Parse(dateParts[0]));
+      var homeTeamEntity = this.fixtureRepository.GetTeamOrPlayer(homeTeamSlug);
+      var awayTeamEntity = this.fixtureRepository.GetTeamOrPlayer(awayTeamSlug);
 
-      var homeTeamEntity = this.fixtureRepository.GetTeamFromSkySportsName(homeTeam);
-      var awayTeamEntity = this.fixtureRepository.GetTeamFromSkySportsName(awayTeam);
+      var match = this.fixtureRepository.GetMatchFromTeamSelections(homeTeamEntity, awayTeamEntity, fixtureDate);
 
-      var match = this.fixtureRepository.GetFootballFixtureFromTeamSelections(homeTeamEntity, awayTeamEntity, fixtureDate);
-
-      return new FootballFixtureViewModel();
+      return Mapper.Map<Match, FootballFixtureViewModel>(match);
     }
     public IEnumerable<FootballFixtureSummaryViewModel> GetFootballFixturesByDate(string league, string dateString)
     {

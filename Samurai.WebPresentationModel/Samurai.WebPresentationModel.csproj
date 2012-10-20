@@ -77,7 +77,6 @@
     <Compile Include="Controllers\CommandController.cs" />
     <Compile Include="Controllers\FixturesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Messaging\Fixtures\CommandHandlers\IndexFootballFixturesHandler.cs" />
     <Compile Include="Messaging\Fixtures\CommandHandlers\ShowFootballFixtureHandler.cs" />
     <Compile Include="Messaging\ICommandHandlerFactory.cs" />

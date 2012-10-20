@@ -47,13 +47,13 @@ namespace Samurai.Domain.Value
 
       foreach (var fixture in fixturesTokens)
       {
-        var homeTeam = this.fixtureService.GetTeamFromSkySportsName(fixture.HomeTeam);
-        var awayTeam = this.fixtureService.GetTeamFromSkySportsName(fixture.AwayTeam);
+        var homeTeam = this.fixtureService.GetTeamOrPlayer(fixture.HomeTeam);
+        var awayTeam = this.fixtureService.GetTeamOrPlayer(fixture.AwayTeam);
 
         if (homeTeam == null) throw new ArgumentNullException("homeTeam");
         if (awayTeam == null) throw new ArgumentNullException("awayTeam");
 
-        var persistedMatch = this.fixtureService.GetFootballFixtureFromTeamSelections(homeTeam, awayTeam, fixtureDate);
+        var persistedMatch = this.fixtureService.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
         if (persistedMatch == null)
         {
           var league = this.fixtureService.GetCompetition((int)fixture.LeagueEnum);
@@ -90,13 +90,13 @@ namespace Samurai.Domain.Value
 
       foreach (var fixture in fixturesTokens)
       {
-        var homeTeam = this.fixtureService.GetTeamFromSkySportsName(fixture.HomeTeam);
-        var awayTeam = this.fixtureService.GetTeamFromSkySportsName(fixture.AwayTeam);
+        var homeTeam = this.fixtureService.GetTeamOrPlayer(fixture.HomeTeam);
+        var awayTeam = this.fixtureService.GetTeamOrPlayer(fixture.AwayTeam);
 
         if (homeTeam == null) throw new ArgumentNullException("homeTeam");
         if (awayTeam == null) throw new ArgumentNullException("awayTeam");
 
-        var persistedMatch = this.fixtureService.GetFootballFixtureFromTeamSelections(homeTeam, awayTeam, fixtureDate);
+        var persistedMatch = this.fixtureService.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
         if (persistedMatch == null)
         {
           var league = this.fixtureService.GetCompetition((int)fixture.LeagueEnum);

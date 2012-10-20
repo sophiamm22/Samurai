@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,12 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="AutoMapper\FootballFixtureProfile.cs" />
+    <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />
     <Compile Include="FixtureService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samurai.Core\Samurai.Core.csproj">
       <Project>{8f6d4baf-a8ee-4221-b667-3ee8b4a6849c}</Project>

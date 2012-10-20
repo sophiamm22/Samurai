@@ -1,11 +1,14 @@
 using System;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Collections.Generic;
 using WebMatrix.WebData;
 using System.Web.Security;
+using System.Diagnostics;
+using System.Text;
 
 using Samurai.Domain.Entities;
 using Samurai.SqlDataAccess;
@@ -21,16 +24,19 @@ namespace Samurai.SqlDataAccess.Migrations
 
     protected override void Seed(ValueSamuraiContext context)
     {
-      WebSecurity.InitializeDatabaseConnection(
-        "ValueSamuraiContext",
-        "UserProfile",
-        "UserProfileID_pk",
-        "UserName",
-        autoCreateTables: true);
 
-      
+      WebSecurity.InitializeDatabaseConnection(
+     "ValueSamuraiContext",
+     "UserProfile",
+     "UserProfileID_pk",
+     "UserName",
+     autoCreateTables: true);
+
+
+
       SeedUsersAndRoles();
-      SeedBookmakers(context);
+      SeedSamurai(context);
+
     }
 
     private void SeedUsersAndRoles()
@@ -48,48 +54,48 @@ namespace Samurai.SqlDataAccess.Migrations
         Roles.AddUsersToRoles(new[] { "martinstaniforth" }, new[] { "Administrator" });
     }
 
-    private void SeedBookmakers(ValueSamuraiContext context)
+    private void SeedSamurai(ValueSamuraiContext context)
     {
-      context.Set<Bookmaker>().AddOrUpdate(
-        new Bookmaker { BookmakerName = "10Bet", IsExchange = false },
-        new Bookmaker { BookmakerName = "32Red bet", IsExchange = false },
-        new Bookmaker { BookmakerName = "888 Sport", IsExchange = false },
-        new Bookmaker { BookmakerName = "Bet 365", IsExchange = false },
-        new Bookmaker { BookmakerName = "Bet Victor", IsExchange = false },
-        new Bookmaker { BookmakerName = "Bet770", IsExchange = false },
-        new Bookmaker { BookmakerName = "BETDAQ", IsExchange = false },
-        new Bookmaker { BookmakerName = "Betfair", IsExchange = true },
-        new Bookmaker { BookmakerName = "Betfred", IsExchange = false },
-        new Bookmaker { BookmakerName = "Betinternet", IsExchange = false },
-        new Bookmaker { BookmakerName = "BetVictor", IsExchange = false },
-        new Bookmaker { BookmakerName = "Blue Square", IsExchange = false },
-        new Bookmaker { BookmakerName = "Bodog", IsExchange = false },
-        new Bookmaker { BookmakerName = "Boylesports", IsExchange = false },
-        new Bookmaker { BookmakerName = "Bwin", IsExchange = false },
-        new Bookmaker { BookmakerName = "Coral", IsExchange = false },
-        new Bookmaker { BookmakerName = "Corbetts", IsExchange = false },
-        new Bookmaker { BookmakerName = "Ladbrokes", IsExchange = false },
-        new Bookmaker { BookmakerName = "Matchbook.com", IsExchange = true },
-        new Bookmaker { BookmakerName = "Paddy Power", IsExchange = false },
-        new Bookmaker { BookmakerName = "Panbet", IsExchange = false },
-        new Bookmaker { BookmakerName = "Pinnacle Sports", IsExchange = false },
-        new Bookmaker { BookmakerName = "Sky Bet", IsExchange = false },
-        new Bookmaker { BookmakerName = "Smarkets", IsExchange = true },
-        new Bookmaker { BookmakerName = "Sporting Bet", IsExchange = false },
-        new Bookmaker { BookmakerName = "Spreadex", IsExchange = false },
-        new Bookmaker { BookmakerName = "Stan James", IsExchange = false },
-        new Bookmaker { BookmakerName = "Totesport", IsExchange = false },
-        new Bookmaker { BookmakerName = "WBX", IsExchange = false },
-        new Bookmaker { BookmakerName = "William Hill", IsExchange = false },
-        new Bookmaker { BookmakerName = "youwin", IsExchange = false }
-        );
-    }
+      //bookmakers
+      var b10bet = new Bookmaker { BookmakerName = "10Bet", Slug = "10bet", IsExchange = false, BookmakerURL = "nothing" };
+      var b32red_bet = new Bookmaker { BookmakerName = "32Red bet", Slug = "32red-bet", IsExchange = false, BookmakerURL = "nothing" };
+      var b888_sport = new Bookmaker { BookmakerName = "888 Sport", Slug = "888-sport", IsExchange = false, BookmakerURL = "nothing" };
+      var bbet_365 = new Bookmaker { BookmakerName = "Bet 365", Slug = "bet-365", IsExchange = false, BookmakerURL = "nothing" };
+      var bbet_victor = new Bookmaker { BookmakerName = "Bet Victor", Slug = "bet-victor", IsExchange = false, BookmakerURL = "nothing" };
+      var bbet770 = new Bookmaker { BookmakerName = "Bet770", Slug = "bet770", IsExchange = false, BookmakerURL = "nothing" };
+      var bbetdaq = new Bookmaker { BookmakerName = "BETDAQ", Slug = "betdaq", IsExchange = false, BookmakerURL = "nothing" };
+      var bbetfair = new Bookmaker { BookmakerName = "Betfair", Slug = "betfair", IsExchange = false, BookmakerURL = "nothing" };
+      var bbetfred = new Bookmaker { BookmakerName = "Betfred", Slug = "betfred", IsExchange = false, BookmakerURL = "nothing" };
+      var bbetinternet = new Bookmaker { BookmakerName = "Betinternet", Slug = "betinternet", IsExchange = false, BookmakerURL = "nothing" };
+      var bbetvictor = new Bookmaker { BookmakerName = "BetVictor", Slug = "betvictor", IsExchange = false, BookmakerURL = "nothing" };
+      var bblue_square = new Bookmaker { BookmakerName = "Blue Square", Slug = "blue-square", IsExchange = false, BookmakerURL = "nothing" };
+      var bbodog = new Bookmaker { BookmakerName = "Bodog", Slug = "bodog", IsExchange = false, BookmakerURL = "nothing" };
+      var bboylesports = new Bookmaker { BookmakerName = "Boylesports", Slug = "boylesports", IsExchange = false, BookmakerURL = "nothing" };
+      var bbwin = new Bookmaker { BookmakerName = "Bwin", Slug = "bwin", IsExchange = false, BookmakerURL = "nothing" };
+      var bcoral = new Bookmaker { BookmakerName = "Coral", Slug = "coral", IsExchange = false, BookmakerURL = "nothing" };
+      var bcorbetts = new Bookmaker { BookmakerName = "Corbetts", Slug = "corbetts", IsExchange = false, BookmakerURL = "nothing" };
+      var bladbrokes = new Bookmaker { BookmakerName = "Ladbrokes", Slug = "ladbrokes", IsExchange = false, BookmakerURL = "nothing" };
+      var bmatchbook_com = new Bookmaker { BookmakerName = "Matchbook.com", Slug = "matchbook-com", IsExchange = false, BookmakerURL = "nothing" };
+      var bpaddy_power = new Bookmaker { BookmakerName = "Paddy Power", Slug = "paddy-power", IsExchange = false, BookmakerURL = "nothing" };
+      var bpanbet = new Bookmaker { BookmakerName = "Panbet", Slug = "panbet", IsExchange = false, BookmakerURL = "nothing" };
+      var bpinnacle_sports = new Bookmaker { BookmakerName = "Pinnacle Sports", Slug = "pinnacle-sports", IsExchange = false, BookmakerURL = "nothing" };
+      var bsky_bet = new Bookmaker { BookmakerName = "Sky Bet", Slug = "sky-bet", IsExchange = false, BookmakerURL = "nothing" };
+      var bsmarkets = new Bookmaker { BookmakerName = "Smarkets", Slug = "smarkets", IsExchange = false, BookmakerURL = "nothing" };
+      var bsporting_bet = new Bookmaker { BookmakerName = "Sporting Bet", Slug = "sporting-bet", IsExchange = false, BookmakerURL = "nothing" };
+      var bspreadex = new Bookmaker { BookmakerName = "Spreadex", Slug = "spreadex", IsExchange = false, BookmakerURL = "nothing" };
+      var bstan_james = new Bookmaker { BookmakerName = "Stan James", Slug = "stan-james", IsExchange = false, BookmakerURL = "nothing" };
+      var btotesport = new Bookmaker { BookmakerName = "Totesport", Slug = "totesport", IsExchange = false, BookmakerURL = "nothing" };
+      var bwbx = new Bookmaker { BookmakerName = "WBX", Slug = "wbx", IsExchange = false, BookmakerURL = "nothing" };
+      var bwilliam_hill = new Bookmaker { BookmakerName = "William Hill", Slug = "william-hill", IsExchange = false, BookmakerURL = "nothing" };
+      var byouwin = new Bookmaker { BookmakerName = "youwin", Slug = "youwin", IsExchange = false, BookmakerURL = "nothing" };
 
-    private void SeedSportsCompetitionsAndFunds(ValueSamuraiContext context)
-    {
+      context.Set<Bookmaker>().AddOrUpdate(b10bet, b32red_bet, b888_sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin);
+
       //sports
       var football = new Sport { SportName = "Football" };
       var tennis = new Sport { SportName = "Tennis" };
+
+      context.Set<Sport>().AddOrUpdate(football, tennis);
 
       //competitions
       var premierLeague = new Competition { Sport = football, CompetitionName = "Premier League", OverroundRequired = 0.1M };
@@ -98,13 +104,17 @@ namespace Samurai.SqlDataAccess.Migrations
       var leagueTwo = new Competition { Sport = football, CompetitionName = "League Two", OverroundRequired = 0.1M };
       var atp = new Competition { Sport = tennis, CompetitionName = "ATP", OverroundRequired = 0.1M, GamesRequiredForBet = 50 };
 
+      context.Set<Competition>().AddOrUpdate(premierLeague, championship, leagueOne, leagueTwo, atp);
+
       //funds
       var premierFund = new Fund { FundName = "Premier", Bank = 500M, Competitions = new List<Competition>() { premierLeague }, KellyMultiplier = 0.25M };
       var footballLeagueFund = new Fund { FundName = "Football League", Bank = 500M, Competitions = new List<Competition>() { championship, leagueOne, leagueTwo }, KellyMultiplier = 0.25M };
       var tennisFund = new Fund { FundName = "ATP", Bank = 500M, Competitions = new List<Competition>() { atp }, KellyMultiplier = 0.25M };
 
+      context.Set<Fund>().AddOrUpdate(premierFund, footballLeagueFund, tennisFund);
+
       //external sources
-      var skysports = new ExternalSource { Source = "Sky Sports", OddsSource = false, TheoreticalOddsSource = false };
+      var skySports = new ExternalSource { Source = "Sky Sports", OddsSource = false, TheoreticalOddsSource = false };
       var bestBetting = new ExternalSource { Source = "Best Bestting", OddsSource = true, TheoreticalOddsSource = false };
       var oddsCheckerMobi = new ExternalSource { Source = "Odds Checker Mobi", OddsSource = true, TheoreticalOddsSource = false };
       var oddsCheckerWeb = new ExternalSource { Source = "Odds Checker Web", OddsSource = true, TheoreticalOddsSource = false };
@@ -113,23 +123,29 @@ namespace Samurai.SqlDataAccess.Migrations
       var tb365 = new ExternalSource { Source = "Tennis Betting 365", OddsSource = false, TheoreticalOddsSource = false };
       var finkTank = new ExternalSource { Source = "Fink Tank (dectech)", OddsSource = false, TheoreticalOddsSource = false };
 
+      context.Set<ExternalSource>().AddOrUpdate(skySports, bestBetting, oddsCheckerMobi, oddsCheckerWeb, tennisDataOdds, footballDataOdds, tb365, finkTank);
+
       //match outcomes
-      var teamOrPlayerAWin = new MatchOutcome { MatchOutcomeString = "TeamOrPlayerAWin" };
+      var teamOrPlayerAWin = new MatchOutcome { MatchOutcomeString = "Team or player A win" };
       var draw = new MatchOutcome { MatchOutcomeString = "Draw" };
-      var teamOrPlayerBWin = new MatchOutcome { MatchOutcomeString = "TeamOrPlayerBWin" };
+      var teamOrPlayerBWin = new MatchOutcome { MatchOutcomeString = "Team or player A win" };
+
+      context.Set<MatchOutcome>().AddOrUpdate(teamOrPlayerAWin, draw, teamOrPlayerBWin);
 
       //scoreOutcomes
-      var scores = (
-                    from scoreA in Enumerable.Range(0, 15)
-                    from scoreB in Enumerable.Range(0, 15)
-                    let outcome = (scoreA == scoreB ? draw : (scoreA > scoreB ? teamOrPlayerAWin : teamOrPlayerBWin))
-                    select new ScoreOutcome
-                    {
-                      TeamAScore = scoreA,
-                      TeamBScore = scoreB,
-                      MatchOutcome = outcome
-                    }
-                   ).ToList();
+      (
+        from scoreA in Enumerable.Range(0, 21)
+        from scoreB in Enumerable.Range(0, 21)
+        let outcome = (scoreA == scoreB ? draw : (scoreA > scoreB ? teamOrPlayerAWin : teamOrPlayerBWin))
+        select new ScoreOutcome
+        {
+          TeamAScore = scoreA,
+          TeamBScore = scoreB,
+          MatchOutcome = outcome
+        }
+      ).ToList()
+      .ForEach(s => context.Set<ScoreOutcome>().AddOrUpdate(s));
+
 
       //teams
       var arsenal = new TeamsPlayer { TeamName = "Arsenal", Slug = "arsenal", FinkTankID = 0 };
@@ -229,6 +245,8 @@ namespace Samurai.SqlDataAccess.Migrations
       var fleetwoodtown = new TeamsPlayer { TeamName = "Fleetwood Town", Slug = "fleetwood-town", FinkTankID = 2033 };
       var york = new TeamsPlayer { TeamName = "York", Slug = "york", FinkTankID = 91 };
 
+      context.Set<TeamsPlayer>().AddOrUpdate(arsenal, astonvilla, birmingham, blackburn, blackpool, bolton, chelsea, everton, fulham, liverpool, mancity, manunited, newcastle, stoke, sunderland, tottenham, westbrom, westham, wigan, wolves, barnsley, bristolcity, burnley, cardiff, coventry, crystalpalace, derby, doncaster, hull, ipswich, leeds, leicester, middlesboro, millwall, norwich, nottmforest, portsmouth, preston, qpr, reading, scunthorpe, sheffieldunited, swansea, watford, bournemouth, brentford, brighton, bristolrvs, carlisle, charlton, colchester, dagandred, exeter, hartlepool, huddersfield, leytonorient, miltonkeynes, nottscounty, oldham, peterboro, plymouth, rochdale, sheffieldweds, southampton, swindon, tranmere, walsall, yeovil, accrington, aldershot, barnet, bradford, burton, bury, cheltenham, chesterfield, crewe, gillingham, hereford, lincolncity, macclesfield, morecambe, northampton, oxford, portvale, rotherham, shrewsbury, southend, stevenage, stockport, torquay, wycombe, afcwimbledon, crawleytown, fleetwoodtown, york);
+
       var ocm_manunited = new TeamPlayerExternalSourceAlias { ExternalSource = oddsCheckerMobi, TeamsPlayer = manunited, Alias = "Man Utd" };
       var ocm_wolves = new TeamPlayerExternalSourceAlias { ExternalSource = oddsCheckerMobi, TeamsPlayer = wolves, Alias = "Wolverhampton" };
       var ocm_middlesboro = new TeamPlayerExternalSourceAlias { ExternalSource = oddsCheckerMobi, TeamsPlayer = middlesboro, Alias = "Middlesbrough" };
@@ -306,7 +324,93 @@ namespace Samurai.SqlDataAccess.Migrations
       var bb_wycombe = new TeamPlayerExternalSourceAlias { ExternalSource = bestBetting, TeamsPlayer = wycombe, Alias = "Wycombe" };
       var bb_york = new TeamPlayerExternalSourceAlias { ExternalSource = bestBetting, TeamsPlayer = york, Alias = "York" };
 
+      context.Set<TeamPlayerExternalSourceAlias>().AddOrUpdate(ocm_manunited, ocm_wolves, ocm_middlesboro, ocm_nottmforest, ocm_sheffieldunited, ocm_bristolrvs, ocm_dagandred, ocm_miltonkeynes, ocm_nottscounty, ocm_peterboro, ocm_sheffieldweds, ocm_lincolncity, ocm_crawleytown, bb_birmingham, bb_blackburn, bb_bolton, bb_mancity, bb_manunited, bb_newcastle, bb_stoke, bb_tottenham, bb_westbrom, bb_wigan, bb_wolves, bb_cardiff, bb_coventry, bb_derby, bb_doncaster, bb_hull, bb_ipswich, bb_leeds, bb_leicester, bb_middlesboro, bb_norwich, bb_nottmforest, bb_preston, bb_qpr, bb_scunthorpe, bb_swansea, bb_bournemouth, bb_brighton, bb_bristolrvs, bb_carlisle, bb_charlton, bb_colchester, bb_dagandred, bb_exeter, bb_hartlepool, bb_huddersfield, bb_miltonkeynes, bb_oldham, bb_peterboro, bb_plymouth, bb_sheffieldweds, bb_swindon, bb_tranmere, bb_yeovil, bb_accrington, bb_aldershot, bb_bradford, bb_burton, bb_cheltenham, bb_crewe, bb_hereford, bb_lincolncity, bb_macclesfield, bb_northampton, bb_oxford, bb_rotherham, bb_shrewsbury, bb_southend, bb_stockport, bb_torquay, bb_wycombe, bb_york);
 
+      var ss_mancity = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = mancity, Alias = "Manchester City" };
+      var ss_manunited = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = manunited, Alias = "Manchester United" };
+      var ss_newcastle = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = newcastle, Alias = "Newcastle United" };
+      var ss_norwich = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = norwich, Alias = "Norwich City" };
+      var ss_qpr = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = qpr, Alias = "Queens Park Rangers" };
+      var ss_stoke = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = stoke, Alias = "Stoke City" };
+      var ss_swansea = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = swansea, Alias = "Swansea City" };
+      var ss_tottenham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = tottenham, Alias = "Tottenham Hotspur" };
+      var ss_westbrom = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = westbrom, Alias = "West Bromwich Albion" };
+      var ss_westham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = westham, Alias = "West Ham United" };
+      var ss_wigan = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = wigan, Alias = "Wigan Athletic" };
+      var ss_birmingham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = birmingham, Alias = "Birmingham City" };
+      var ss_blackburn = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = blackburn, Alias = "Blackburn Rovers" };
+      var ss_bolton = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = bolton, Alias = "Bolton Wanderers" };
+      var ss_cardiff = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = cardiff, Alias = "Cardiff City" };
+      var ss_charlton = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = charlton, Alias = "Charlton Athletic" };
+      var ss_derby = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = derby, Alias = "Derby County" };
+      var ss_huddersfield = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = huddersfield, Alias = "Huddersfield Town" };
+      var ss_hull = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = hull, Alias = "Hull City" };
+      var ss_ipswich = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = ipswich, Alias = "Ipswich Town" };
+      var ss_leeds = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = leeds, Alias = "Leeds United" };
+      var ss_leicester = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = leicester, Alias = "Leicester City" };
+      var ss_middlesboro = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = middlesboro, Alias = "Middlesbrough" };
+      var ss_nottmforest = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = nottmforest, Alias = "Nottingham Forest" };
+      var ss_peterboro = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = peterboro, Alias = "Peterborough United" };
+      var ss_sheffieldweds = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = sheffieldweds, Alias = "Sheffield Wednesday" };
+      var ss_wolves = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = wolves, Alias = "Wolverhampton" };
+      var ss_carlisle = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = carlisle, Alias = "Carlisle United" };
+      var ss_colchester = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = colchester, Alias = "Colchester United" };
+      var ss_coventry = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = coventry, Alias = "Coventry City" };
+      var ss_crewe = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = crewe, Alias = "Crewe Alexandra" };
+      var ss_hartlepool = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = hartlepool, Alias = "Hartlepool United" };
+      var ss_miltonkeynes = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = miltonkeynes, Alias = "Milton Keynes Dons" };
+      var ss_oldham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = oldham, Alias = "Oldham Athletic" };
+      var ss_preston = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = preston, Alias = "Preston North End" };
+      var ss_scunthorpe = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = scunthorpe, Alias = "Scunthorpe United" };
+      var ss_shrewsbury = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = shrewsbury, Alias = "Shrewsbury Town" };
+      var ss_swindon = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = swindon, Alias = "Swindon Town" };
+      var ss_tranmere = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = tranmere, Alias = "Tranmere Rovers" };
+      var ss_yeovil = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = yeovil, Alias = "Yeovil Town" };
+      var ss_accrington = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = accrington, Alias = "Accrington Stanley" };
+      var ss_barnet = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = barnet, Alias = "Barnet FC" };
+      var ss_bradford = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = bradford, Alias = "Bradford City" };
+      var ss_bristolrvs = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = bristolrvs, Alias = "Bristol Rovers" };
+      var ss_burton = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = burton, Alias = "Burton Albion" };
+      var ss_cheltenham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = cheltenham, Alias = "Cheltenham Town" };
+      var ss_dagandred = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = dagandred, Alias = "Dagenham and Redbridge" };
+      var ss_exeter = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = exeter, Alias = "Exeter City" };
+      var ss_northampton = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = northampton, Alias = "Northampton Town" };
+      var ss_oxford = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = oxford, Alias = "Oxford Utd" };
+      var ss_plymouth = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = plymouth, Alias = "Plymouth Argyle" };
+      var ss_rotherham = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = rotherham, Alias = "Rotherham United" };
+      var ss_southend = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = southend, Alias = "Southend United" };
+      var ss_torquay = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = torquay, Alias = "Torquay United" };
+      var ss_wycombe = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = wycombe, Alias = "Wycombe Wanderers" };
+      var ss_york = new TeamPlayerExternalSourceAlias { ExternalSource = skySports, TeamsPlayer = york, Alias = "York City" };
+
+      context.Set<TeamPlayerExternalSourceAlias>().AddOrUpdate(ss_mancity, ss_manunited, ss_newcastle, ss_norwich, ss_qpr, ss_stoke, ss_swansea, ss_tottenham, ss_westbrom, ss_westham, ss_wigan, ss_birmingham, ss_blackburn, ss_bolton, ss_cardiff, ss_charlton, ss_derby, ss_huddersfield, ss_hull, ss_ipswich, ss_leeds, ss_leicester, ss_middlesboro, ss_nottmforest, ss_peterboro, ss_sheffieldweds, ss_wolves, ss_carlisle, ss_colchester, ss_coventry, ss_crewe, ss_hartlepool, ss_miltonkeynes, ss_oldham, ss_preston, ss_scunthorpe, ss_shrewsbury, ss_swindon, ss_tranmere, ss_yeovil, ss_accrington, ss_barnet, ss_bradford, ss_bristolrvs, ss_burton, ss_cheltenham, ss_dagandred, ss_exeter, ss_northampton, ss_oxford, ss_plymouth, ss_rotherham, ss_southend, ss_torquay, ss_wycombe, ss_york);
+
+      SaveChanges(context);
+    }
+
+    private void SaveChanges(ValueSamuraiContext context)
+    {
+      try
+      {
+        context.SaveChanges();
+      }
+      catch (DbEntityValidationException ex)
+      {
+        StringBuilder sb = new StringBuilder();
+
+        foreach (var failure in ex.EntityValidationErrors)
+        {
+          sb.AppendFormat("{0} failed validation\n", failure.Entry.Entity.GetType());
+
+          foreach (var error in failure.ValidationErrors)
+          {
+            sb.AppendFormat("- {0} : {1}", error.PropertyName, error.ErrorMessage);
+            sb.AppendLine();
+          }
+        }
+
+        throw new DbEntityValidationException("Entity Validation Failed - errors follow:\n" + sb.ToString());
+      }
     }
 
   }

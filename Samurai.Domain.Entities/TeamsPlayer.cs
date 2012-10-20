@@ -18,5 +18,9 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<Match> MatchesB { get; set; }
     public virtual ICollection<Match> MatchesA { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
+    public override string ToString()
+    {
+      return TeamName;
+    }
   }
 }

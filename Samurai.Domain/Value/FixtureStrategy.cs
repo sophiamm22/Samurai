@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 using Model = Samurai.Domain.Model;
 using Samurai.Domain.Entities;
@@ -15,48 +16,46 @@ namespace Samurai.Domain.Value
 {
   public abstract class AbstractFixtureStrategy
   {
-    protected readonly IFixtureRepository fixtureService;
+    protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
 
-    public AbstractFixtureStrategy(IFixtureRepository fixtureService, IWebRepository webRepository)
+    public AbstractFixtureStrategy(IFixtureRepository fixtureRepository, IWebRepository webRepository)
     {
-      this.fixtureService = fixtureService;
+      this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
     public abstract IEnumerable<Match> UpdateFixtures(DateTime fixtureDate);
-    public abstract IEnumerable<Match> UpdateResults(DateTime fixtureDate);
+    public abstract IEnumerable<Match> UpdateResults(DateTime fixtureDate, string reusedHTML = "");
   }
 
   public class FootballFixtureStrategy : AbstractFixtureStrategy
   {
-    public FootballFixtureStrategy(IFixtureRepository fixtureService, IWebRepository webRepository)
-      : base(fixtureService, webRepository)
+    public FootballFixtureStrategy(IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      : base(fixtureRepository, webRepository)
     {
     }
 
-    public override IEnumerable<Match> UpdateFixtures(DateTime fixtureDate)
+    private IEnumerable<Match> ConvertFirxtures(DateTime fixtureDate, IEnumerable<ISkySportsFixture> fixtureTokens)
     {
-      var fixturesURL = this.fixtureService.GetSkySportsFootballFixturesOrResults(fixtureDate);
-      var fixturesHTML = this.webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First();
-      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballFixture>(fixturesHTML, s => Console.WriteLine(s))
-                                   .Cast<SkySportsFootballFixture>();
-
-      if (fixturesTokens.Count() == 0) return UpdateResults(fixtureDate);
-
       var returnMatches = new List<Match>();
+      var skySportsSource = this.fixtureRepository.GetExternalSource("Sky Sports");
+      var valueSamuraiSource = this.fixtureRepository.GetExternalSource("Value Samurai");
 
-      foreach (var fixture in fixturesTokens)
+      foreach (var fixture in fixtureTokens)
       {
-        var homeTeam = this.fixtureService.GetTeamOrPlayer(fixture.HomeTeam);
-        var awayTeam = this.fixtureService.GetTeamOrPlayer(fixture.AwayTeam);
+        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource);
+        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource);
+
+        var homeTeam = this.fixtureRepository.GetTeamOrPlayer(homeTeamName);
+        var awayTeam = this.fixtureRepository.GetTeamOrPlayer(awayTeamName);
 
         if (homeTeam == null) throw new ArgumentNullException("homeTeam");
         if (awayTeam == null) throw new ArgumentNullException("awayTeam");
 
-        var persistedMatch = this.fixtureService.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
+        var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
         if (persistedMatch == null)
         {
-          var league = this.fixtureService.GetCompetition((int)fixture.LeagueEnum);
+          var league = this.fixtureRepository.GetCompetition((int)fixture.LeagueEnum);
           var newMatch = new Match()
           {
             Competition = league,
@@ -75,63 +74,52 @@ namespace Samurai.Domain.Value
           returnMatches.Add(persistedMatch);
         }
       }
-      this.fixtureService.SaveChanges();
+
       return returnMatches;
     }
 
-    public override IEnumerable<Match> UpdateResults(DateTime fixtureDate)
+
+    public override IEnumerable<Match> UpdateFixtures(DateTime fixtureDate)
     {
-      var fixturesURL = this.fixtureService.GetSkySportsFootballFixturesOrResults(fixtureDate);
+      var fixturesURL = this.fixtureRepository.GetSkySportsFootballFixturesOrResults(fixtureDate);
       var fixturesHTML = this.webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First();
-      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
-                                   .Cast<SkySportsFootballResult>();
+      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballFixture>(fixturesHTML, s => Console.WriteLine(s))
+                                   .Cast<ISkySportsFixture>();
 
       var returnMatches = new List<Match>();
 
-      foreach (var fixture in fixturesTokens)
+      if (fixturesTokens.Count() == 0)
+        returnMatches = UpdateResults(fixtureDate, fixturesHTML).ToList();
+      else
+        returnMatches = ConvertFirxtures(fixtureDate, fixturesTokens).ToList();
+
+      this.fixtureRepository.SaveChanges();
+
+      return returnMatches;
+    }
+
+    public override IEnumerable<Match> UpdateResults(DateTime fixtureDate, string reusedHTML = "")
+    {
+      var fixturesURL = this.fixtureRepository.GetSkySportsFootballFixturesOrResults(fixtureDate);
+      var fixturesHTML = reusedHTML == "" ? this.webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : reusedHTML;
+      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
+                                   .Cast<ISkySportsFixture>();
+
+      var returnMatches = new List<Match>(); 
+      
+      var matchAndToken = ConvertFirxtures(fixtureDate, fixturesTokens).Zip(fixturesTokens, (m, t) => new { Match = m, Token = t }).ToList();
+
+      foreach (var mt in matchAndToken)
       {
-        var homeTeam = this.fixtureService.GetTeamOrPlayer(fixture.HomeTeam);
-        var awayTeam = this.fixtureService.GetTeamOrPlayer(fixture.AwayTeam);
-
-        if (homeTeam == null) throw new ArgumentNullException("homeTeam");
-        if (awayTeam == null) throw new ArgumentNullException("awayTeam");
-
-        var persistedMatch = this.fixtureService.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
-        if (persistedMatch == null)
+        var match = mt.Match;
+        match.ObservedOutcomes.Add(new ObservedOutcome()
         {
-          var league = this.fixtureService.GetCompetition((int)fixture.LeagueEnum);
-          var newMatch = new Match()
-          {
-            Competition = league,
-            MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes),
-            TeamsPlayerA = homeTeam,
-            TeamsPlayerB = awayTeam,
-            EligibleForBetting = true
-          };
-
-          newMatch.ObservedOutcomes.Add(new ObservedOutcome()
-          {
-            ScoreOutcome = this.fixtureService.GetScoreOutcome(fixture.HomeTeamScore, fixture.AwayTeamScore)
-          });
-
-          returnMatches.Add(newMatch);
-        }
-        else
-        {
-          persistedMatch.MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes);
-          var onlyMatchResult = persistedMatch.ObservedOutcomes.FirstOrDefault();
-          if (onlyMatchResult != null)
-            persistedMatch.ObservedOutcomes.Clear();
-
-          persistedMatch.ObservedOutcomes.Add(new ObservedOutcome()
-          {
-            ScoreOutcome = this.fixtureService.GetScoreOutcome(fixture.HomeTeamScore, fixture.AwayTeamScore)
-          });
-
-          returnMatches.Add(persistedMatch);
-        }
+          Match = match,
+          ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore)
+        });
+        returnMatches.Add(match);
       }
-      this.fixtureService.SaveChanges();
+      this.fixtureRepository.SaveChanges();
       return returnMatches;
     }
   }
@@ -149,7 +137,7 @@ namespace Samurai.Domain.Value
       throw new NotImplementedException("Smells like a leaky abstraction!");
     }
 
-    public override IEnumerable<Match> UpdateResults(DateTime fixtureDate)
+    public override IEnumerable<Match> UpdateResults(DateTime fixtureDate, string reusedHTML = "")
     {
       //will use but still need to implement
       throw new NotImplementedException();

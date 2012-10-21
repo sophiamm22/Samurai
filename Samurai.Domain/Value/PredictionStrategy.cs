@@ -13,12 +13,12 @@ namespace Samurai.Domain.Value
 {
   public abstract class AbstractPredictionStrategy
   {
-    protected readonly IPredictionRepository predictionService;
+    protected readonly IPredictionRepository predictionRepository;
     protected readonly IWebRepository webRepository;
 
-    public AbstractPredictionStrategy(IPredictionRepository predictionService, IWebRepository webRepository)
+    public AbstractPredictionStrategy(IPredictionRepository predictionRepository, IWebRepository webRepository)
     {
-      this.predictionService = predictionService;
+      this.predictionRepository = predictionRepository;
       this.webRepository = webRepository;
     }
     public abstract IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions, bool overrideExisting);
@@ -34,7 +34,7 @@ namespace Samurai.Domain.Value
     {
       var predictions = new List<Model.IGenericPrediction>();
 
-      var jsonTennisMatches = this.webRepository.GetJsonObjects<APITennisMatch>(this.predictionService.GetTodaysMatchesURL(),
+      var jsonTennisMatches = this.webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
         s => Console.WriteLine(s), string.Format("{0}-{1}", valueOptions.Competition.ToString(), valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
@@ -104,7 +104,7 @@ namespace Samurai.Domain.Value
 
     public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions, bool overrideExisting)
     {
-      var gameWeek = this.predictionService.GetDaysFootballMatches(valueOptions.Competition, valueOptions.CouponDate);
+      var gameWeek = this.predictionRepository.GetDaysFootballMatches(valueOptions.Competition, valueOptions.CouponDate);
       var footballTeams = new List<TeamsPlayer>();
       var predictions = new List<Model.IGenericPrediction>();
 
@@ -122,7 +122,7 @@ namespace Samurai.Domain.Value
         var homeTeamID = footballTeams[i].FinkTankID ?? 0;
         var awayTeamID = footballTeams[i + 1].FinkTankID ?? 0;
         var jsonFootballPredicton = (APIFootballPrediction)this.webRepository.ParseJson<APIFootballPrediction>(
-          this.predictionService.GetFootballAPIURL(homeTeamID, awayTeamID), s => Console.WriteLine(s), string.Format("{0}-{1}", 
+          this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID), s => Console.WriteLine(s), string.Format("{0}-{1}", 
           valueOptions.Competition.ToString(), valueOptions.CouponDate.ToShortDateString()));
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Competition, valueOptions.CouponDate));
       }

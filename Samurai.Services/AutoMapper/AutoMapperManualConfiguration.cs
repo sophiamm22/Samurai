@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using AutoMapper;
+using Samurai.Services.AutoMapper;
 
 namespace Samurai.Services.AutoMapper
 {
-  class AutoMapperManualConfiguration
+  public class AutoMapperManualConfiguration
   {
+    public static void Configure()
+    {
+      Mapper.Initialize(x =>
+      {
+        x.AddProfile<FootballFixtureProfile>();
+      });
+    }
   }
 }

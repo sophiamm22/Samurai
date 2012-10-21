@@ -51,9 +51,10 @@ namespace Samurai.Tests.Services
       var aWins = new MatchOutcome { MatchOutcomeString = "Team or player A win" };
       var oneNil = new ScoreOutcome { MatchOutcome = aWins, TeamAScore = 1, TeamBScore = 0 };
       var observedOneNil = new ObservedOutcome { ScoreOutcome = oneNil };
+      var premierLeague = new Competition { CompetitionName = "Premier League" };
       
-      var completedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = manCity, ObservedOutcomes = new List<ObservedOutcome>() { observedOneNil } };
-      var notPlayedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = arsenal };
+      var completedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = manCity, Competition = premierLeague, MatchDate = alreadyPlayed, ObservedOutcomes = new List<ObservedOutcome>() { observedOneNil } };
+      var notPlayedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = arsenal, Competition = premierLeague, MatchDate = yetToPlay };
 
       this.fixtureRepository.Setup(r => r.GetMatchFromTeamSelections(manUtd, manCity, alreadyPlayed)).Returns(completedMatch);
       this.fixtureRepository.Setup(r => r.GetMatchFromTeamSelections(manUtd, arsenal, yetToPlay)).Returns(notPlayedMatch);
@@ -90,7 +91,7 @@ namespace Samurai.Tests.Services
         MatchDate = yetToPlay,
         TeamsPlayerA = "Man Utd",
         TeamsPlayerB = "Arsenal",
-        ScoreLine = string.Empty
+        ScoreLine = "Not played"
       };
     }
 
@@ -103,13 +104,13 @@ namespace Samurai.Tests.Services
     [Test]
     public void then_a_valid_complete_match_should_be_returned()
     {
-      completedMatchViewModel.ShouldEqual(this.expectedCompletedMatchViewModel);
+      completedMatchViewModel.PropertyValuesShouldEqual(this.expectedCompletedMatchViewModel);
     }
 
     [Test]
     public void then_a_valid_unplayed_match_should_be_returned()
     {
-      notPlayedMatchViewModel.ShouldEqual(this.expectedNotPlayedMatchViewModel);
+      notPlayedMatchViewModel.PropertyValuesShouldEqual(this.expectedNotPlayedMatchViewModel);
     }
   }
 

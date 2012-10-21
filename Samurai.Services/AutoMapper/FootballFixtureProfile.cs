@@ -13,10 +13,26 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
+      
       Mapper.CreateMap<Match, FootballFixtureViewModel>().IgnoreAllNonExisting();
       Mapper.CreateMap<Match, FootballFixtureViewModel>().ForMember(x => x.League, opt =>
         { opt.MapFrom(x => x.Competition.CompetitionName); });
+      Mapper.CreateMap<Match, FootballFixtureViewModel>().ForMember(x => x.ScoreLine, opt =>
+        opt.ResolveUsing<ScoreLineResolver>());
+      Mapper.CreateMap<Match, FootballFixtureViewModel>().ForMember(x => x.League, opt =>
+        opt.MapFrom(x => x.Competition.CompetitionName));
         
+    }
+  }
+
+  public class ScoreLineResolver : ValueResolver<Match, string>
+  {
+    protected override string ResolveCore(Match source)
+    {
+      var observedOutcome = source.ObservedOutcomes.FirstOrDefault();
+      if (observedOutcome == null)
+        return "Not played";
+      return observedOutcome.ScoreOutcome.ToString();
     }
   }
 }

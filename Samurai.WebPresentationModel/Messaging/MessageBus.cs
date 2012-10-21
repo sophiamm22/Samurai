@@ -30,12 +30,6 @@ namespace Samurai.WebPresentationModel.Messaging
 
     public void Send<TMessage>(TMessage message)
     {
-      //var handler = this.commandHandlerFactory.Create<TMessage>();
-      //if (handler == null)
-      //  throw new ArgumentNullException(string.Format("CommandHandler<{0}>", 
-      //    typeof(TMessage).Name));
-
-      //handler.Handle(message);
       throw new NotImplementedException();
     }
 

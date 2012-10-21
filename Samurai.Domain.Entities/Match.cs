@@ -29,5 +29,10 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
 
+    public override string ToString()
+    {
+      return (TeamsPlayerA == null || TeamsPlayerB == null) ? "No teams" : string.Format("{0} vs {1}", TeamsPlayerA.TeamName, TeamsPlayerB.TeamName);
+    }
+
   }
 }

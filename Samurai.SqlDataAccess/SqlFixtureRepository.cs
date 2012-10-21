@@ -17,6 +17,27 @@ namespace Samurai.SqlDataAccess
       : base(context)
     { }
 
+    public ExternalSource GetExternalSource(string sourceName)
+    {
+      return First<ExternalSource>(g => g.Source == sourceName);
+    }
+
+    public string GetAlias(string teamNameSource, ExternalSource source, ExternalSource destination)
+    {
+      var teamNameDestination = string.Empty;
+      var teamAlias = GetQuery<TeamPlayerExternalSourceAlias>()
+                        .Include(t => t.TeamsPlayer)
+                        .Where(a => a.Alias == teamNameSource &&
+                                    a.ExternalSource.Source == source.Source);
+
+      if (teamAlias.Count() == 0)
+        teamNameDestination = teamNameSource;
+      else
+        teamNameDestination = teamAlias.First().TeamsPlayer.TeamName;
+
+      return teamNameDestination;
+    }
+
     public Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate)
     {
       //should get this from the database

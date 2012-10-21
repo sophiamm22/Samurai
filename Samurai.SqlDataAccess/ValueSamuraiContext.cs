@@ -6,7 +6,13 @@ using Samurai.SqlDataAccess.Mapping;
 
 namespace Samurai.SqlDataAccess
 {
-  public class ValueSamuraiContext : DbContext
+
+  public interface ISamuraiContext
+  {
+    
+  }
+
+  public class ValueSamuraiContext : DbContext, ISamuraiContext
   {
     static ValueSamuraiContext()
     {

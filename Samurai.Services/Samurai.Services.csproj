@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
     <Compile Include="AutoMapper\FootballFixtureProfile.cs" />
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
     <Compile Include="Contracts\IAccountService.cs" />

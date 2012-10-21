@@ -17,5 +17,10 @@ namespace Samurai.Domain.Entities
     public virtual MatchOutcome MatchOutcome { get; set; }
     public virtual ICollection<ObservedOutcome> ObservedOutcomes { get; set; }
     public virtual ICollection<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }
+
+    public override string ToString()
+    {
+      return string.Format("{0}-{1}", TeamAScore, TeamBScore);
+    }
   }
 }

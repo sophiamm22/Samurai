@@ -55,10 +55,10 @@ namespace Samurai.Domain.Value
         var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
         if (persistedMatch == null)
         {
-          var league = this.fixtureRepository.GetCompetition((int)fixture.LeagueEnum);
+          var tournamentEvent = this.fixtureRepository.GetFootballTournamentEvent((int)fixture.LeagueEnum, fixtureDate);
           var newMatch = new Match()
           {
-            Competition = league,
+            TournamentEvent = tournamentEvent,
             MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes),
             TeamsPlayerA = homeTeam,
             TeamsPlayerB = awayTeam,

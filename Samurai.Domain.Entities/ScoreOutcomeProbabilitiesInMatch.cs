@@ -7,7 +7,7 @@ namespace Samurai.Domain.Entities
   {
     public int MatchID { get; set; }
     public int ScoreOutcomeID { get; set; }
-    public decimal? ScoreOutcomeProbability { get; set; }
+    public decimal ScoreOutcomeProbability { get; set; }
     public virtual Match Match { get; set; }
     public virtual ScoreOutcome ScoreOutcome { get; set; }
   }

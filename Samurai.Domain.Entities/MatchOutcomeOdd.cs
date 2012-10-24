@@ -15,6 +15,7 @@ namespace Samurai.Domain.Entities
     public int BookmakerID { get; set; }
     public DateTime TimeStamp { get; set; }
     public decimal Odd { get; set; }
+    public string ClickThroughURL { get; set; }
 
     public virtual ICollection<BettingPAndL> BettingPAndLs { get; set; }
     public virtual Bookmaker Bookmaker { get; set; }

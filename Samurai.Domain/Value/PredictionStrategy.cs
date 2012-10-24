@@ -14,28 +14,33 @@ namespace Samurai.Domain.Value
   public abstract class AbstractPredictionStrategy
   {
     protected readonly IPredictionRepository predictionRepository;
+    protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
 
-    public AbstractPredictionStrategy(IPredictionRepository predictionRepository, IWebRepository webRepository)
+    public AbstractPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository,
+      IWebRepository webRepository)
     {
       this.predictionRepository = predictionRepository;
+      this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
-    public abstract IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions, bool overrideExisting);
+    public abstract IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
   }
 
   public class TennisPredictionStrategy : AbstractPredictionStrategy
   {
-    public TennisPredictionStrategy(IPredictionRepository predictionRepository, IWebRepository webRepository)
-      : base(predictionRepository, webRepository)
+    public TennisPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, 
+      IWebRepository webRepository)
+      : base(predictionRepository, fixtureRepository, webRepository)
     {
     }
-    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions, bool overrideExisting)
+
+    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
       var predictions = new List<Model.IGenericPrediction>();
 
       var jsonTennisMatches = this.webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => Console.WriteLine(s), string.Format("{0}-{1}", valueOptions.Competition.ToString(), valueOptions.CouponDate.ToShortDateString()));
+        s => Console.WriteLine(s), string.Format("{0}-{1}", valueOptions.Competition.CompetitionName, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
@@ -97,14 +102,15 @@ namespace Samurai.Domain.Value
 
   public class FootballFinkTankPredictionStrategy : AbstractPredictionStrategy
   {
-    public FootballFinkTankPredictionStrategy(IPredictionRepository predictionService, IWebRepository webRepository)
-      : base(predictionService, webRepository)
+    public FootballFinkTankPredictionStrategy(IPredictionRepository predictionRepository, 
+      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      : base(predictionRepository, fixtureRepository, webRepository)
     {
     }
 
-    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions, bool overrideExisting)
+    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
-      var gameWeek = this.predictionRepository.GetDaysFootballMatches(valueOptions.Competition, valueOptions.CouponDate);
+      var gameWeek = this.fixtureRepository.GetDaysFootballMatches(valueOptions.Competition.CompetitionName, valueOptions.CouponDate);
       var footballTeams = new List<TeamsPlayer>();
       var predictions = new List<Model.IGenericPrediction>();
 
@@ -123,7 +129,7 @@ namespace Samurai.Domain.Value
         var awayTeamID = footballTeams[i + 1].FinkTankID ?? 0;
         var jsonFootballPredicton = (APIFootballPrediction)this.webRepository.ParseJson<APIFootballPrediction>(
           this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID), s => Console.WriteLine(s), string.Format("{0}-{1}", 
-          valueOptions.Competition.ToString(), valueOptions.CouponDate.ToShortDateString()));
+          valueOptions.Competition.CompetitionName, valueOptions.CouponDate.ToShortDateString()));
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Competition, valueOptions.CouponDate));
       }
       return predictions;

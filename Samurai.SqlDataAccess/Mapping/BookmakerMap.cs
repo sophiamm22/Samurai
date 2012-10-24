@@ -11,6 +11,7 @@ namespace Samurai.SqlDataAccess.Mapping
     public BookmakerMap()
     {
       this.Property(t => t.BookmakerName).IsRequired();
+      this.Property(t => t.Slug).IsRequired();
       this.Property(t => t.BookmakerURL).IsRequired();
       this.Property(t => t.OddsCheckerShortID).HasMaxLength(2);
 

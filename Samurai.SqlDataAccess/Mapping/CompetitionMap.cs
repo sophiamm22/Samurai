@@ -11,6 +11,7 @@ namespace Samurai.SqlDataAccess.Mapping
     public CompetitionMap()
     {
       this.Property(t => t.CompetitionName).IsRequired();
+      this.Property(t => t.Slug).IsRequired();
 
       this.ToTable("Competitions");
       this.Property(t => t.Id).HasColumnName("CompetitionID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

@@ -51,10 +51,12 @@ namespace Samurai.Tests.Services
       var aWins = new MatchOutcome { MatchOutcomeString = "Team or player A win" };
       var oneNil = new ScoreOutcome { MatchOutcome = aWins, TeamAScore = 1, TeamBScore = 0 };
       var observedOneNil = new ObservedOutcome { ScoreOutcome = oneNil };
-      var premierLeague = new Competition { CompetitionName = "Premier League" };
-      
-      var completedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = manCity, Competition = premierLeague, MatchDate = alreadyPlayed, ObservedOutcomes = new List<ObservedOutcome>() { observedOneNil } };
-      var notPlayedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = arsenal, Competition = premierLeague, MatchDate = yetToPlay };
+      var premierLeagueCompetition = new Competition { CompetitionName = "Premier League" };
+      var premierLeagueTournament = new Tournament { Competition = premierLeagueCompetition, TournamentName = "Premier League" };
+      var premierLeagueSeason = new TournamentEvent { EventName = "2012/13 season", Tournament = premierLeagueTournament };
+
+      var completedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = manCity, TournamentEvent = premierLeagueSeason, MatchDate = alreadyPlayed, ObservedOutcomes = new List<ObservedOutcome>() { observedOneNil } };
+      var notPlayedMatch = new Match { TeamsPlayerA = manUtd, TeamsPlayerB = arsenal, TournamentEvent = premierLeagueSeason, MatchDate = yetToPlay };
 
       this.fixtureRepository.Setup(r => r.GetMatchFromTeamSelections(manUtd, manCity, alreadyPlayed)).Returns(completedMatch);
       this.fixtureRepository.Setup(r => r.GetMatchFromTeamSelections(manUtd, arsenal, yetToPlay)).Returns(notPlayedMatch);
@@ -78,7 +80,7 @@ namespace Samurai.Tests.Services
 
       this.expectedCompletedMatchViewModel = new FootballFixtureViewModel
       {
-        League = "Premier League",
+        LeagueAndSeason = "Premier League - 2012/13 season",
         MatchDate = alreadyPlayed,
         TeamsPlayerA = "Man Utd",
         TeamsPlayerB = "Man City",
@@ -87,7 +89,7 @@ namespace Samurai.Tests.Services
 
       this.expectedNotPlayedMatchViewModel = new FootballFixtureViewModel
       {
-        League = "Premier League",
+        LeagueAndSeason = "Premier League - 2012/13 season",
         MatchDate = yetToPlay,
         TeamsPlayerA = "Man Utd",
         TeamsPlayerB = "Arsenal",

@@ -12,14 +12,14 @@ namespace Samurai.SqlDataAccess.Mapping
     {
       this.ToTable("Matches");
       this.Property(t => t.Id).HasColumnName("MatchID_pk");
-      this.Property(t => t.CompetitionID).HasColumnName("CompetitionID_fk");
+      this.Property(t => t.TournamentEventID).HasColumnName("TournamentEventID_fk");
       this.Property(t => t.TeamAID).HasColumnName("TeamAID_fk");
       this.Property(t => t.TeamBID).HasColumnName("TeamBID_fk");
 
       // Relationships
-      this.HasRequired(t => t.Competition)
+      this.HasRequired(t => t.TournamentEvent)
           .WithMany(t => t.Matches)
-          .HasForeignKey(d => d.CompetitionID);
+          .HasForeignKey(d => d.TournamentEventID);
       this.HasRequired(t => t.TeamsPlayerB)
           .WithMany(t => t.MatchesB)
           .HasForeignKey(d => d.TeamBID).WillCascadeOnDelete(false);

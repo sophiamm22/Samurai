@@ -15,11 +15,11 @@ using Samurai.SqlDataAccess;
 
 namespace Samurai.SqlDataAccess.Migrations
 {
-  internal sealed class Configuration : DropCreateDatabaseAlways<ValueSamuraiContext>
+  internal sealed class Configuration : DbMigrationsConfiguration<ValueSamuraiContext>
   {
     public Configuration()
     {
-      //AutomaticMigrationsEnabled = true;
+      AutomaticMigrationsEnabled = true;   
     }
 
     protected override void Seed(ValueSamuraiContext context)
@@ -60,6 +60,8 @@ namespace Samurai.SqlDataAccess.Migrations
       context.Set<Bookmaker>().AddOrUpdate(seed.Bookmakers);
       context.Set<Sport>().AddOrUpdate(seed.Sports);
       context.Set<Competition>().AddOrUpdate(seed.Competitions);
+      context.Set<Tournament>().AddOrUpdate(seed.Tournaments);
+      context.Set<TournamentEvent>().AddOrUpdate(seed.TournamentEvents);
       context.Set<Fund>().AddOrUpdate(seed.Funds);
       context.Set<ExternalSource>().AddOrUpdate(seed.ExternalSources);
       context.Set<MatchOutcome>().AddOrUpdate(seed.MatchOutcomes);

@@ -17,6 +17,18 @@ namespace Samurai.SqlDataAccess
       : base(context)
     { }
 
+    public IEnumerable<Match> GetDaysFootballMatches(string competitionName, DateTime matchDate)
+    {
+      var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
+
+      var competition = GetQuery<Competition>(t => t.CompetitionName == competitionName)
+                          .Include(t => t.Tournaments)
+                          .FirstOrDefault();
+      return competition.Tournaments.FirstOrDefault().TournamentEvents
+                          .FirstOrDefault(t => t.StartDate.Year == seasonStartYear)
+                          .Matches;
+    }
+
     public ExternalSource GetExternalSource(string sourceName)
     {
       return First<ExternalSource>(g => g.Source == sourceName);
@@ -68,6 +80,8 @@ namespace Samurai.SqlDataAccess
                                   m.MatchDate.Date == matchDate.Date)
                             .Include("ObservedOutcomes")
                             .Include("ObservedOutcomes.ScoreOutcome")
+                            .Include("TournamentEvent")
+                            .Include("TournamentEvent.Tournament")
                             .FirstOrDefault();
     }
 
@@ -79,6 +93,17 @@ namespace Samurai.SqlDataAccess
     public Competition GetCompetition(int competitionID)
     {
       return First<Competition>(l => l.Id == competitionID);
+    }
+
+    public TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate)
+    {
+      var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
+
+      var tournament = GetQuery<Tournament>(t => t.Id == leagueEnum)
+                        .Include(t => t.TournamentEvents)
+                        .FirstOrDefault();
+      return tournament.TournamentEvents
+                       .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
     }
 
     public Match SaveMatch(Match match)

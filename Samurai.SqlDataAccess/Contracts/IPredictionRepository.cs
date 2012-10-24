@@ -12,10 +12,9 @@ namespace Samurai.SqlDataAccess.Contracts
   {
     Uri GetFootballAPIURL(int teamAID, int teamBID);
     Uri GetTodaysMatchesURL();
-    IEnumerable<Match> GetDaysFootballMatches(Competition competition, DateTime date);
-    string GetPredictionCompetitionAlias(string predictionName, ExternalSource source);
-    int GetGamesRequiredForBet();
-    double GetOverroundRequired(Sport sport);
+    string GetTournamentAlias(string tournamentName, ExternalSource source);
+    int GetGamesRequiredForBet(string competitionName);
+    decimal GetOverroundRequired(string competitionName);
     Fund GetFundDetails(string fundName);
   }
 }

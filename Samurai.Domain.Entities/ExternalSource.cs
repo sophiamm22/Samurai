@@ -11,6 +11,7 @@ namespace Samurai.Domain.Entities
       this.MatchCouponURLs = new List<MatchCouponURL>();
       this.MatchOutcomeOdds = new List<MatchOutcomeOdd>();
       this.TeamPlayerExternalSourceAlias = new List<TeamPlayerExternalSourceAlias>();
+      this.TournamentExternalSourceAlias = new List<TournamentExternalSourceAlias>();
     }
 
     public string Source { get; set; }
@@ -23,5 +24,6 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
+    public virtual ICollection<TournamentExternalSourceAlias> TournamentExternalSourceAlias { get; set; }
   }
 }

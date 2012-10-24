@@ -78,11 +78,152 @@ namespace Samurai.SqlDataAccess
       var tennis = new Sport { SportName = "Tennis" };
 
       //competition
-      var premierLeague = new Competition { Sport = football, CompetitionName = "Premier League", OverroundRequired = 0.1M };
-      var championship = new Competition { Sport = football, CompetitionName = "Championship", OverroundRequired = 0.1M };
-      var leagueOne = new Competition { Sport = football, CompetitionName = "League One", OverroundRequired = 0.1M };
-      var leagueTwo = new Competition { Sport = football, CompetitionName = "League Two", OverroundRequired = 0.1M };
-      var atp = new Competition { Sport = tennis, CompetitionName = "ATP", OverroundRequired = 0.1M, GamesRequiredForBet = 50 };
+      var premierLeague = new Competition { Sport = football, CompetitionName = "Premier League", Slug = "premier-league", OverroundRequired = 0.1M };
+      var championship = new Competition { Sport = football, CompetitionName = "Championship", Slug = "championship", OverroundRequired = 0.1M };
+      var leagueOne = new Competition { Sport = football, CompetitionName = "League One", Slug = "league-one", OverroundRequired = 0.1M };
+      var leagueTwo = new Competition { Sport = football, CompetitionName = "League Two", Slug = "league-two", OverroundRequired = 0.1M };
+      var atp = new Competition { Sport = tennis, CompetitionName = "ATP", Slug = "atp", OverroundRequired = 0.1M, GamesRequiredForBet = 50 };
+
+      //tournament
+      var t_premierLeague = new Tournament { Competition = premierLeague, TournamentName = "Premier League", Slug = "premier-league", Location = "England" };
+      var t_championship = new Tournament { Competition = championship, TournamentName = "Championship", Slug = "championship", Location = "England" };
+      var t_leagueOne = new Tournament { Competition = leagueOne, TournamentName = "League One", Slug = "league-one", Location = "England" };
+      var t_leagueTwo = new Tournament { Competition = leagueTwo, TournamentName = "League Two", Slug = "league-two", Location = "England" };
+
+      var brisbane_international = new Tournament { Competition = atp, TournamentName = "Brisbane International", Slug = "brisbane-international", Location = "Australia" };
+      var aircel_chennai_open = new Tournament { Competition = atp, TournamentName = "Aircel Chennai Open", Slug = "aircel-chennai-open", Location = "India" };
+      var qatar_exxonmobil_open = new Tournament { Competition = atp, TournamentName = "Qatar ExxonMobil Open", Slug = "qatar-exxonmobil-open", Location = "Qatar" };
+      var apia_international_sydney = new Tournament { Competition = atp, TournamentName = "Apia International Sydney", Slug = "apia-international-sydney", Location = "Australia" };
+      var heineken_open = new Tournament { Competition = atp, TournamentName = "Heineken Open", Slug = "heineken-open", Location = "New Zealand" };
+      var australian_open = new Tournament { Competition = atp, TournamentName = "Australian Open", Slug = "australian-open", Location = "Australia" };
+      var open_sud_de_france = new Tournament { Competition = atp, TournamentName = "Open Sud de France", Slug = "open-sud-de-france", Location = "France" };
+      var pbz_zagreb_indoors = new Tournament { Competition = atp, TournamentName = "PBZ Zagreb Indoors", Slug = "pbz-zagreb-indoors", Location = "Croatia" };
+      var vtr_open = new Tournament { Competition = atp, TournamentName = "VTR Open", Slug = "vtr-open", Location = "Chile" };
+      var abn_amro_world_tennis_tournament = new Tournament { Competition = atp, TournamentName = "ABN AMRO World Tennis Tournament", Slug = "abn-amro-world-tennis-tournament", Location = "The Netherlands" };
+      var brasil_open_2012 = new Tournament { Competition = atp, TournamentName = "Brasil Open 2012", Slug = "brasil-open-2012", Location = "Brazil" };
+      var sap_open = new Tournament { Competition = atp, TournamentName = "SAP Open", Slug = "sap-open", Location = "CA, U.S.A." };
+      var regions_morgan_keegan_championships = new Tournament { Competition = atp, TournamentName = "Regions Morgan Keegan Championships", Slug = "regions-morgan-keegan-championships", Location = "TN, U.S.A." };
+      var copa_claro = new Tournament { Competition = atp, TournamentName = "Copa Claro", Slug = "copa-claro", Location = "Argentina" };
+      var open_13 = new Tournament { Competition = atp, TournamentName = "Open 13", Slug = "open-13", Location = "France" };
+      var dubai_duty_free_tennis_championships = new Tournament { Competition = atp, TournamentName = "Dubai Duty Free Tennis Championships", Slug = "dubai-duty-free-tennis-championships", Location = "U.A.E." };
+      var delray_beach_international_tennis_championships = new Tournament { Competition = atp, TournamentName = "Delray Beach International Tennis Championships", Slug = "delray-beach-international-tennis-championships", Location = "FL, U.S.A." };
+      var abierto_mexicano_telcel = new Tournament { Competition = atp, TournamentName = "Abierto Mexicano Telcel", Slug = "abierto-mexicano-telcel", Location = "Mexico" };
+      var bnp_paribas_open = new Tournament { Competition = atp, TournamentName = "BNP Paribas Open", Slug = "bnp-paribas-open", Location = "CA, U.S.A." };
+      var sony_ericsson_open = new Tournament { Competition = atp, TournamentName = "Sony Ericsson Open", Slug = "sony-ericsson-open", Location = "FL, U.S.A." };
+      var grand_prix_hassan_ii = new Tournament { Competition = atp, TournamentName = "Grand Prix Hassan II", Slug = "grand-prix-hassan-ii", Location = "Morocco" };
+      var us_mens_clay_court_championship = new Tournament { Competition = atp, TournamentName = "US Men's Clay Court Championship", Slug = "us-mens-clay-court-championship", Location = "TX, U.S.A." };
+      var monte_carlo_rolex_masters = new Tournament { Competition = atp, TournamentName = "Monte-Carlo Rolex Masters", Slug = "monte-carlo-rolex-masters", Location = "Monaco" };
+      var brd_nastase_tiriac_trophy = new Tournament { Competition = atp, TournamentName = "BRD Nastase Tiriac Trophy", Slug = "brd-nastase-tiriac-trophy", Location = "Romania" };
+      var barcelona_open_banc_sabadell = new Tournament { Competition = atp, TournamentName = "Barcelona Open Banc Sabadell", Slug = "barcelona-open-banc-sabadell", Location = "Spain" };
+      var bmw_open = new Tournament { Competition = atp, TournamentName = "BMW Open", Slug = "bmw-open", Location = "Germany" };
+      var serbia_open_2012 = new Tournament { Competition = atp, TournamentName = "Serbia Open 2012", Slug = "serbia-open-2012", Location = "Serbia" };
+      var estoril_open = new Tournament { Competition = atp, TournamentName = "Estoril Open", Slug = "estoril-open", Location = "Portugal" };
+      var mutua_madrid_open = new Tournament { Competition = atp, TournamentName = "Mutua Madrid Open", Slug = "mutua-madrid-open", Location = "Spain" };
+      var internazionali_bnl_ditalia = new Tournament { Competition = atp, TournamentName = "Internazionali BNL d'Italia", Slug = "internazionali-bnl-ditalia", Location = "Italy" };
+      var open_de_nice_cote_dazur = new Tournament { Competition = atp, TournamentName = "Open de Nice Côte d’Azur", Slug = "open-de-nice-cote-dazur", Location = "France" };
+      var roland_garros = new Tournament { Competition = atp, TournamentName = "Roland Garros", Slug = "roland-garros", Location = "France" };
+      var gerry_weber_open = new Tournament { Competition = atp, TournamentName = "Gerry Weber Open ", Slug = "gerry-weber-open", Location = "Germany" };
+      var aegon_championships = new Tournament { Competition = atp, TournamentName = "AEGON Championships", Slug = "aegon-championships", Location = "Great Britain" };
+      var unicef_open = new Tournament { Competition = atp, TournamentName = "UNICEF Open", Slug = "unicef-open", Location = "The Netherlands" };
+      var aegon_international = new Tournament { Competition = atp, TournamentName = "AEGON International", Slug = "aegon-international", Location = "Great Britain" };
+      var wimbledon = new Tournament { Competition = atp, TournamentName = "Wimbledon", Slug = "wimbledon", Location = "Wimbledon, Great Britain" };
+      var mercedescup = new Tournament { Competition = atp, TournamentName = "MercedesCup", Slug = "mercedescup", Location = "Stuttgart, Germany" };
+      var campbells_hall_of_fame_tennis_championships = new Tournament { Competition = atp, TournamentName = "Campbell’s Hall of Fame Tennis Championships", Slug = "campbells-hall-of-fame-tennis-championships", Location = "Newport, U.S.A." };
+      var skistar_swedish_open = new Tournament { Competition = atp, TournamentName = "SkiStar Swedish Open", Slug = "skistar-swedish-open", Location = "Båstad, Sweden" };
+      var atp_studena_croatia_open = new Tournament { Competition = atp, TournamentName = "ATP Studena Croatia Open", Slug = "atp-studena-croatia-open", Location = "Umag, Croatia" };
+      var bet_at_home_open___german_tennis_championships_2012 = new Tournament { Competition = atp, TournamentName = "bet-at-home Open - German Tennis Championships 2012", Slug = "bet-at-home-open---german-tennis-championships-2012", Location = "Hamburg, Germany" };
+      var atlanta_tennis_championships = new Tournament { Competition = atp, TournamentName = "Atlanta Tennis Championships", Slug = "atlanta-tennis-championships", Location = "Atlanta, U.S.A." };
+      var credit_agricole_suisse_open_gstaad = new Tournament { Competition = atp, TournamentName = "Crédit Agricole Suisse Open Gstaad", Slug = "credit-agricole-suisse-open-gstaad", Location = "Gstaad, Switzerland" };
+      var bet_at_home_cup_kitzbuhel = new Tournament { Competition = atp, TournamentName = "bet-at-home Cup Kitzbühel", Slug = "bet-at-home-cup-kitzbuhel", Location = "Kitzbühel, Austria" };
+      var farmers_classic = new Tournament { Competition = atp, TournamentName = "Farmers Classic", Slug = "farmers-classic", Location = "Los Angeles, U.S.A.  " };
+      var legg_mason_tennis_classic = new Tournament { Competition = atp, TournamentName = "Legg Mason Tennis Classic", Slug = "legg-mason-tennis-classic", Location = "Washington D.C., U.S.A." };
+      var rogers_cup = new Tournament { Competition = atp, TournamentName = "Rogers Cup", Slug = "rogers-cup", Location = "Toronto, Canada" };
+      var western__southern_open = new Tournament { Competition = atp, TournamentName = "Western & Southern Open", Slug = "western--southern-open", Location = "Cincinnati, U.S.A" };
+      var winston_salem_open = new Tournament { Competition = atp, TournamentName = "Winston-Salem Open", Slug = "winston-salem-open", Location = "Winston Salem, U.S.A." };
+      var us_open = new Tournament { Competition = atp, TournamentName = "US Open", Slug = "us-open", Location = "NY, U.S.A." };
+      var moselle_open = new Tournament { Competition = atp, TournamentName = "Moselle Open", Slug = "moselle-open", Location = "Metz, France" };
+      var st_petersburg_open = new Tournament { Competition = atp, TournamentName = "St. Petersburg Open", Slug = "st-petersburg-open", Location = "St. Petersburg, Russia" };
+      var ptt_thailand_open = new Tournament { Competition = atp, TournamentName = "PTT Thailand Open", Slug = "ptt-thailand-open", Location = "Bangkok, Thailand" };
+      var malaysian_open_kuala_lumpur = new Tournament { Competition = atp, TournamentName = "Malaysian Open, Kuala Lumpur", Slug = "malaysian-open-kuala-lumpur", Location = "Kuala Lumpur, Malaysia" };
+      var china_open = new Tournament { Competition = atp, TournamentName = "China Open", Slug = "china-open", Location = "Beijing, China" };
+      var rakuten_japan_open_tennis_championships = new Tournament { Competition = atp, TournamentName = "Rakuten Japan Open Tennis Championships", Slug = "rakuten-japan-open-tennis-championships", Location = "Tokyo, Japan" };
+      var shanghai_rolex_masters = new Tournament { Competition = atp, TournamentName = "Shanghai Rolex Masters", Slug = "shanghai-rolex-masters", Location = "Shanghai, China" };
+      var erste_bank_open = new Tournament { Competition = atp, TournamentName = "Erste Bank Open", Slug = "erste-bank-open", Location = "Vienna, Austria" };
+      var if_stockholm_open = new Tournament { Competition = atp, TournamentName = "If Stockholm Open", Slug = "if-stockholm-open", Location = "Stockholm, Sweden" };
+      var kremlin_cup = new Tournament { Competition = atp, TournamentName = "Kremlin Cup", Slug = "kremlin-cup", Location = "Moscow, Russia " };
+      var valencia_open_500 = new Tournament { Competition = atp, TournamentName = "Valencia Open 500", Slug = "valencia-open-500", Location = "Valencia, Spain" };
+      var swiss_indoors_basel = new Tournament { Competition = atp, TournamentName = "Swiss Indoors Basel", Slug = "swiss-indoors-basel", Location = "Basel, Switzerland" };
+      var bnp_paribas_masters = new Tournament { Competition = atp, TournamentName = "BNP Paribas Masters", Slug = "bnp-paribas-masters", Location = "Paris, France" };
+
+      //tournament events
+      var s2012_t_premierLeague = new TournamentEvent { Tournament = t_premierLeague, EventName = "2012/13 season", Slug = "2012-2013", StartDate = new DateTime(2012, 8, 18), EndDate = new DateTime(2013, 5, 19) };
+      var s2012_t_championship = new TournamentEvent { Tournament = t_championship, EventName = "2012/13 season", Slug = "2012-2013", StartDate = new DateTime(2012, 8, 17), EndDate = new DateTime(2013, 5, 4) };
+      var s2012_t_leagueOne = new TournamentEvent { Tournament = t_leagueOne, EventName = "2012/13 season", Slug = "2012-2013", StartDate = new DateTime(2012, 8, 18), EndDate = new DateTime(2013, 5, 4) };
+      var s2012_t_leagueTwo = new TournamentEvent { Tournament = t_leagueTwo, EventName = "2012/13 season", Slug = "2012-2013", StartDate = new DateTime(2012, 8, 18), EndDate = new DateTime(2013, 5, 4) };
+      var s2012_brisbane_international = new TournamentEvent { Tournament = brisbane_international, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 2), EndDate = new DateTime(2012, 1, 8) };
+      var s2012_aircel_chennai_open = new TournamentEvent { Tournament = aircel_chennai_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 2), EndDate = new DateTime(2012, 1, 8) };
+      var s2012_qatar_exxonmobil_open = new TournamentEvent { Tournament = qatar_exxonmobil_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 2), EndDate = new DateTime(2012, 1, 8) };
+      var s2012_apia_international_sydney = new TournamentEvent { Tournament = apia_international_sydney, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 9), EndDate = new DateTime(2012, 1, 15) };
+      var s2012_heineken_open = new TournamentEvent { Tournament = heineken_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 9), EndDate = new DateTime(2012, 1, 15) };
+      var s2012_australian_open = new TournamentEvent { Tournament = australian_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 16), EndDate = new DateTime(2012, 1, 29) };
+      var s2012_open_sud_de_france = new TournamentEvent { Tournament = open_sud_de_france, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 30), EndDate = new DateTime(2012, 2, 5) };
+      var s2012_pbz_zagreb_indoors = new TournamentEvent { Tournament = pbz_zagreb_indoors, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 30), EndDate = new DateTime(2012, 2, 5) };
+      var s2012_vtr_open = new TournamentEvent { Tournament = vtr_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 1, 30), EndDate = new DateTime(2012, 2, 5) };
+      var s2012_abn_amro_world_tennis_tournament = new TournamentEvent { Tournament = abn_amro_world_tennis_tournament, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 13), EndDate = new DateTime(2012, 2, 19) };
+      var s2012_brasil_open_2012 = new TournamentEvent { Tournament = brasil_open_2012, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 13), EndDate = new DateTime(2012, 2, 19) };
+      var s2012_sap_open = new TournamentEvent { Tournament = sap_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 13), EndDate = new DateTime(2012, 2, 19) };
+      var s2012_regions_morgan_keegan_championships = new TournamentEvent { Tournament = regions_morgan_keegan_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 20), EndDate = new DateTime(2012, 2, 26) };
+      var s2012_copa_claro = new TournamentEvent { Tournament = copa_claro, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 20), EndDate = new DateTime(2012, 2, 26) };
+      var s2012_open_13 = new TournamentEvent { Tournament = open_13, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 20), EndDate = new DateTime(2012, 2, 26) };
+      var s2012_dubai_duty_free_tennis_championships = new TournamentEvent { Tournament = dubai_duty_free_tennis_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 27), EndDate = new DateTime(2012, 3, 4) };
+      var s2012_delray_beach_international_tennis_championships = new TournamentEvent { Tournament = delray_beach_international_tennis_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 27), EndDate = new DateTime(2012, 3, 4) };
+      var s2012_abierto_mexicano_telcel = new TournamentEvent { Tournament = abierto_mexicano_telcel, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 2, 27), EndDate = new DateTime(2012, 3, 4) };
+      var s2012_bnp_paribas_open = new TournamentEvent { Tournament = bnp_paribas_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 3, 5), EndDate = new DateTime(2012, 3, 18) };
+      var s2012_sony_ericsson_open = new TournamentEvent { Tournament = sony_ericsson_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 3, 19), EndDate = new DateTime(2012, 4, 1) };
+      var s2012_grand_prix_hassan_ii = new TournamentEvent { Tournament = grand_prix_hassan_ii, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 9), EndDate = new DateTime(2012, 4, 15) };
+      var s2012_us_mens_clay_court_championship = new TournamentEvent { Tournament = us_mens_clay_court_championship, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 9), EndDate = new DateTime(2012, 4, 15) };
+      var s2012_monte_carlo_rolex_masters = new TournamentEvent { Tournament = monte_carlo_rolex_masters, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 16), EndDate = new DateTime(2012, 4, 22) };
+      var s2012_brd_nastase_tiriac_trophy = new TournamentEvent { Tournament = brd_nastase_tiriac_trophy, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 23), EndDate = new DateTime(2012, 4, 29) };
+      var s2012_barcelona_open_banc_sabadell = new TournamentEvent { Tournament = barcelona_open_banc_sabadell, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 23), EndDate = new DateTime(2012, 4, 29) };
+      var s2012_bmw_open = new TournamentEvent { Tournament = bmw_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 30), EndDate = new DateTime(2012, 5, 6) };
+      var s2012_serbia_open_2012 = new TournamentEvent { Tournament = serbia_open_2012, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 30), EndDate = new DateTime(2012, 5, 6) };
+      var s2012_estoril_open = new TournamentEvent { Tournament = estoril_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 4, 30), EndDate = new DateTime(2012, 5, 6) };
+      var s2012_mutua_madrid_open = new TournamentEvent { Tournament = mutua_madrid_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 5, 7), EndDate = new DateTime(2012, 5, 13) };
+      var s2012_internazionali_bnl_ditalia = new TournamentEvent { Tournament = internazionali_bnl_ditalia, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 5, 14), EndDate = new DateTime(2012, 5, 20) };
+      var s2012_open_de_nice_cote_dazur = new TournamentEvent { Tournament = open_de_nice_cote_dazur, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 5, 21), EndDate = new DateTime(2012, 5, 27) };
+      var s2012_roland_garros = new TournamentEvent { Tournament = roland_garros, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 5, 28), EndDate = new DateTime(2012, 6, 10) };
+      var s2012_gerry_weber_open = new TournamentEvent { Tournament = gerry_weber_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 6, 11), EndDate = new DateTime(2012, 6, 17) };
+      var s2012_aegon_championships = new TournamentEvent { Tournament = aegon_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 6, 11), EndDate = new DateTime(2012, 6, 17) };
+      var s2012_unicef_open = new TournamentEvent { Tournament = unicef_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 6, 18), EndDate = new DateTime(2012, 6, 24) };
+      var s2012_aegon_international = new TournamentEvent { Tournament = aegon_international, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 6, 18), EndDate = new DateTime(2012, 6, 24) };
+      var s2012_wimbledon = new TournamentEvent { Tournament = wimbledon, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 6, 25), EndDate = new DateTime(2012, 7, 8) };
+      var s2012_mercedescup = new TournamentEvent { Tournament = mercedescup, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 9), EndDate = new DateTime(2012, 7, 15) };
+      var s2012_campbells_hall_of_fame_tennis_championships = new TournamentEvent { Tournament = campbells_hall_of_fame_tennis_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 9), EndDate = new DateTime(2012, 7, 15) };
+      var s2012_skistar_swedish_open = new TournamentEvent { Tournament = skistar_swedish_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 9), EndDate = new DateTime(2012, 7, 15) };
+      var s2012_atp_studena_croatia_open = new TournamentEvent { Tournament = atp_studena_croatia_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 9), EndDate = new DateTime(2012, 7, 15) };
+      var s2012_bet_at_home_open___german_tennis_championships_2012 = new TournamentEvent { Tournament = bet_at_home_open___german_tennis_championships_2012, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 16), EndDate = new DateTime(2012, 7, 22) };
+      var s2012_atlanta_tennis_championships = new TournamentEvent { Tournament = atlanta_tennis_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 16), EndDate = new DateTime(2012, 7, 22) };
+      var s2012_credit_agricole_suisse_open_gstaad = new TournamentEvent { Tournament = credit_agricole_suisse_open_gstaad, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 16), EndDate = new DateTime(2012, 7, 22) };
+      var s2012_bet_at_home_cup_kitzbuhel = new TournamentEvent { Tournament = bet_at_home_cup_kitzbuhel, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 22), EndDate = new DateTime(2012, 7, 28) };
+      var s2012_farmers_classic = new TournamentEvent { Tournament = farmers_classic, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 23), EndDate = new DateTime(2012, 7, 29) };
+      var s2012_legg_mason_tennis_classic = new TournamentEvent { Tournament = legg_mason_tennis_classic, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 7, 30), EndDate = new DateTime(2012, 8, 5) };
+      var s2012_rogers_cup = new TournamentEvent { Tournament = rogers_cup, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 8, 6), EndDate = new DateTime(2012, 8, 12) };
+      var s2012_western__southern_open = new TournamentEvent { Tournament = western__southern_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 8, 13), EndDate = new DateTime(2012, 8, 19) };
+      var s2012_winston_salem_open = new TournamentEvent { Tournament = winston_salem_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 8, 19), EndDate = new DateTime(2012, 8, 25) };
+      var s2012_us_open = new TournamentEvent { Tournament = us_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 8, 27), EndDate = new DateTime(2012, 9, 9) };
+      var s2012_moselle_open = new TournamentEvent { Tournament = moselle_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 9, 17), EndDate = new DateTime(2012, 9, 23) };
+      var s2012_st_petersburg_open = new TournamentEvent { Tournament = st_petersburg_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 9, 17), EndDate = new DateTime(2012, 9, 23) };
+      var s2012_ptt_thailand_open = new TournamentEvent { Tournament = ptt_thailand_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 9, 24), EndDate = new DateTime(2012, 9, 30) };
+      var s2012_malaysian_open_kuala_lumpur = new TournamentEvent { Tournament = malaysian_open_kuala_lumpur, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 9, 24), EndDate = new DateTime(2012, 9, 30) };
+      var s2012_china_open = new TournamentEvent { Tournament = china_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 1), EndDate = new DateTime(2012, 10, 7) };
+      var s2012_rakuten_japan_open_tennis_championships = new TournamentEvent { Tournament = rakuten_japan_open_tennis_championships, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 1), EndDate = new DateTime(2012, 10, 7) };
+      var s2012_shanghai_rolex_masters = new TournamentEvent { Tournament = shanghai_rolex_masters, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 7), EndDate = new DateTime(2012, 10, 14) };
+      var s2012_erste_bank_open = new TournamentEvent { Tournament = erste_bank_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 15), EndDate = new DateTime(2012, 10, 21) };
+      var s2012_if_stockholm_open = new TournamentEvent { Tournament = if_stockholm_open, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 15), EndDate = new DateTime(2012, 10, 21) };
+      var s2012_kremlin_cup = new TournamentEvent { Tournament = kremlin_cup, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 15), EndDate = new DateTime(2012, 10, 21) };
+      var s2012_valencia_open_500 = new TournamentEvent { Tournament = valencia_open_500, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 22), EndDate = new DateTime(2012, 10, 28) };
+      var s2012_swiss_indoors_basel = new TournamentEvent { Tournament = swiss_indoors_basel, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 22), EndDate = new DateTime(2012, 10, 28) };
+      var s2012_bnp_paribas_masters = new TournamentEvent { Tournament = bnp_paribas_masters, EventName = "2012/13 season", Slug = "2012", StartDate = new DateTime(2012, 10, 29), EndDate = new DateTime(2012, 11, 4) };
 
       //funds
       var premierFund = new Fund { FundName = "Premier", Bank = 500M, Competitions = new List<Competition>() { premierLeague }, KellyMultiplier = 0.25M };
@@ -325,6 +466,8 @@ namespace Samurai.SqlDataAccess
       Bookmakers = new Bookmaker[] { b10bet, b32red_bet, b888_sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin };
       Sports = new Sport[] { football, tennis };
       Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp };
+      Tournaments = new Tournament[] { t_premierLeague, t_championship, t_leagueOne, t_leagueTwo, brisbane_international, aircel_chennai_open, qatar_exxonmobil_open, apia_international_sydney, heineken_open, australian_open, open_sud_de_france, pbz_zagreb_indoors, vtr_open, abn_amro_world_tennis_tournament, brasil_open_2012, sap_open, regions_morgan_keegan_championships, copa_claro, open_13, dubai_duty_free_tennis_championships, delray_beach_international_tennis_championships, abierto_mexicano_telcel, bnp_paribas_open, sony_ericsson_open, grand_prix_hassan_ii, us_mens_clay_court_championship, monte_carlo_rolex_masters, brd_nastase_tiriac_trophy, barcelona_open_banc_sabadell, bmw_open, serbia_open_2012, estoril_open, mutua_madrid_open, internazionali_bnl_ditalia, open_de_nice_cote_dazur, roland_garros, gerry_weber_open, aegon_championships, unicef_open, aegon_international, wimbledon, mercedescup, campbells_hall_of_fame_tennis_championships, skistar_swedish_open, atp_studena_croatia_open, bet_at_home_open___german_tennis_championships_2012, atlanta_tennis_championships, credit_agricole_suisse_open_gstaad, bet_at_home_cup_kitzbuhel, farmers_classic, legg_mason_tennis_classic, rogers_cup, western__southern_open, winston_salem_open, us_open, moselle_open, st_petersburg_open, ptt_thailand_open, malaysian_open_kuala_lumpur, china_open, rakuten_japan_open_tennis_championships, shanghai_rolex_masters, erste_bank_open, if_stockholm_open, kremlin_cup, valencia_open_500, swiss_indoors_basel, bnp_paribas_masters };
+      TournamentEvents = new TournamentEvent[] { s2012_t_premierLeague, s2012_t_championship, s2012_t_leagueOne, s2012_t_leagueTwo, s2012_brisbane_international, s2012_aircel_chennai_open, s2012_qatar_exxonmobil_open, s2012_apia_international_sydney, s2012_heineken_open, s2012_australian_open, s2012_open_sud_de_france, s2012_pbz_zagreb_indoors, s2012_vtr_open, s2012_abn_amro_world_tennis_tournament, s2012_brasil_open_2012, s2012_sap_open, s2012_regions_morgan_keegan_championships, s2012_copa_claro, s2012_open_13, s2012_dubai_duty_free_tennis_championships, s2012_delray_beach_international_tennis_championships, s2012_abierto_mexicano_telcel, s2012_bnp_paribas_open, s2012_sony_ericsson_open, s2012_grand_prix_hassan_ii, s2012_us_mens_clay_court_championship, s2012_monte_carlo_rolex_masters, s2012_brd_nastase_tiriac_trophy, s2012_barcelona_open_banc_sabadell, s2012_bmw_open, s2012_serbia_open_2012, s2012_estoril_open, s2012_mutua_madrid_open, s2012_internazionali_bnl_ditalia, s2012_open_de_nice_cote_dazur, s2012_roland_garros, s2012_gerry_weber_open, s2012_aegon_championships, s2012_unicef_open, s2012_aegon_international, s2012_wimbledon, s2012_mercedescup, s2012_campbells_hall_of_fame_tennis_championships, s2012_skistar_swedish_open, s2012_atp_studena_croatia_open, s2012_bet_at_home_open___german_tennis_championships_2012, s2012_atlanta_tennis_championships, s2012_credit_agricole_suisse_open_gstaad, s2012_bet_at_home_cup_kitzbuhel, s2012_farmers_classic, s2012_legg_mason_tennis_classic, s2012_rogers_cup, s2012_western__southern_open, s2012_winston_salem_open, s2012_us_open, s2012_moselle_open, s2012_st_petersburg_open, s2012_ptt_thailand_open, s2012_malaysian_open_kuala_lumpur, s2012_china_open, s2012_rakuten_japan_open_tennis_championships, s2012_shanghai_rolex_masters, s2012_erste_bank_open, s2012_if_stockholm_open, s2012_kremlin_cup, s2012_valencia_open_500, s2012_swiss_indoors_basel, s2012_bnp_paribas_masters };
       Funds = new Fund[] { premierFund, footballLeagueFund, tennisFund };
       ExternalSources = new ExternalSource[] { valueSamurai, skySports, bestBetting, oddsCheckerMobi, oddsCheckerWeb, tennisDataOdds, footballDataOdds, tb365, finkTank };
       MatchOutcomes = new MatchOutcome[] { teamOrPlayerAWin, draw, teamOrPlayerBWin };
@@ -336,6 +479,8 @@ namespace Samurai.SqlDataAccess
     public Bookmaker[] Bookmakers { get; set; }
     public Sport[] Sports { get; set; }
     public Competition[] Competitions { get; set; }
+    public Tournament[] Tournaments { get; set; }
+    public TournamentEvent[] TournamentEvents { get; set; }
     public Fund[] Funds { get; set; }
     public ExternalSource[] ExternalSources { get; set; }
     public MatchOutcome[] MatchOutcomes { get; set; }

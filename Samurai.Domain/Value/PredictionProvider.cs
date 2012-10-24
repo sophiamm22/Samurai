@@ -16,21 +16,22 @@ namespace Samurai.Domain.Value
 
   public class PredictionProvider : IPredictionProvider
   {
-    protected readonly IPredictionRepository predictionService;
+    protected readonly IPredictionRepository predictionRepository;
+    protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
 
-    public PredictionProvider(IPredictionRepository predictionService, IWebRepository webRepository)
+    public PredictionProvider(IPredictionRepository predictionRepository, IWebRepository webRepository)
     {
-      this.predictionService = predictionService;
+      this.predictionRepository = predictionRepository;
       this.webRepository = webRepository;
     }
 
     public AbstractPredictionStrategy CreatePredictionStrategy(IValueOptions valueOptions, bool overrideExisting)
     {
       if (valueOptions.Sport.SportName == "Football")
-        return new FootballFinkTankPredictionStrategy(this.predictionService, this.webRepository);
+        return new FootballFinkTankPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
       else if (valueOptions.Sport.SportName == "Tennis")
-        return new TennisPredictionStrategy(this.predictionService, this.webRepository);
+        return new TennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
       else
         throw new ArgumentException("Sport not recognised");
     }

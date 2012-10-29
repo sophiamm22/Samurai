@@ -89,7 +89,7 @@
     <Compile Include="Model\FootballPrediction.cs" />
     <Compile Include="Model\FootballTeam.cs" />
     <Compile Include="Model\Fund.cs" />
-    <Compile Include="Model\GenericCompetitionCoupon.cs" />
+    <Compile Include="Model\GenericTournamentCoupon.cs" />
     <Compile Include="Model\GenericMatchCoupon.cs" />
     <Compile Include="Model\GenericOdd.cs" />
     <Compile Include="Model\GenericPrediction.cs" />

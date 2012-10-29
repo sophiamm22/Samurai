@@ -15,7 +15,7 @@ namespace Samurai.SqlDataAccess.Mapping
 
       this.ToTable("TeamsPlayers");
       this.Property(t => t.Id).HasColumnName("TeamPlayerID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-      this.Property(t => t.FinkTankID).HasColumnName("FinkTankID_efk");
+      this.Property(t => t.ExternalID).HasColumnName("ExternalID_efk");
     }
   }
 }

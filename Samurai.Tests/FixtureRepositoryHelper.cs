@@ -88,5 +88,39 @@ namespace Samurai.Tests
       return repo;
     }
 
+    public static M.Mock<IFixtureRepository> HasFinkTankIDMatches(this M.Mock<IFixtureRepository> repo)
+    {
+      repo.Setup(t => t.GetDaysFootballMatches(M.It.IsAny<string>(), M.It.IsAny<DateTime>())).Returns((string comp, DateTime date) =>
+        {
+          var returnList = new List<Match>();
+
+          int[,] theseTeams;
+          int[,] premTeams = new int[,] { { 17, 6 }, { 8, 1 }, { 10, 35 }, { 12, 39 }, { 88, 66 }, { 18, 11 }, { 19, 15 }, { 31, 0 } };
+          int[,] champTeams = new int[,] { { 2, 29 }, { 4, 47 }, { 21, 13 }, { 5, 44 }, { 24, 30 }, { 25, 3 }, { 53, 43 }, { 77, 28 }, { 32, 48 }, { 41, 59 }, { 22, 45 } };
+          int[,] l1Teams = new int[,] { { 69, 65 }, { 51, 73 }, { 23, 57 }, { 95, 46 }, { 76, 2004 }, { 42, 2015 }, { 58, 79 }, { 33, 86 }, { 34, 37 }, { 64, 85 }, { 40, 52 }, { 96, 71 } };
+          int[,] l2Teams = new int[,] { { 2000, 36 }, { 20, 49 }, { 70, 89 }, { 75, 50 }, { 2033, 2029 }, { 26, 2002 }, { 2009, 87 }, { 82, 97 }, { 60, 83 }, { 61, 67 }, { 91, 2005 } };
+
+          switch (comp)
+          {
+            case "Premier League": theseTeams = premTeams; break;
+            case "Championship": theseTeams = champTeams; break;
+            case "League One": theseTeams = l1Teams; break;
+            case "League Two":
+            default: theseTeams = l2Teams; break;
+          }
+
+          for (int i = 0; i < theseTeams.GetLength(0); i++)
+          {
+            var homeTeam = new TeamsPlayer { ExternalID = theseTeams[i, 0].ToString() };
+            var awayTeam = new TeamsPlayer { ExternalID = theseTeams[i, 1].ToString() };
+            var match = new Match { TeamsPlayerA = homeTeam, TeamsPlayerB = awayTeam };
+
+            returnList.Add(match);
+          }
+          return returnList;
+        });
+      return repo;
+    }
+
   }
 }

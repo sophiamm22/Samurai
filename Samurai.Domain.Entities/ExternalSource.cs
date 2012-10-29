@@ -7,7 +7,7 @@ namespace Samurai.Domain.Entities
   {
     public ExternalSource()
     {
-      this.CompetitionCouponURLs = new List<CompetitionCouponURL>();
+      this.TournamentCouponURLs = new List<TournamentCouponURL>();
       this.MatchCouponURLs = new List<MatchCouponURL>();
       this.MatchOutcomeOdds = new List<MatchOutcomeOdd>();
       this.TeamPlayerExternalSourceAlias = new List<TeamPlayerExternalSourceAlias>();
@@ -20,7 +20,7 @@ namespace Samurai.Domain.Entities
     public bool TheoreticalOddsSource { get; set; }
     public string PredictionURL { get; set; }
 
-    public virtual ICollection<CompetitionCouponURL> CompetitionCouponURLs { get; set; }
+    public virtual ICollection<TournamentCouponURL> TournamentCouponURLs { get; set; }
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }

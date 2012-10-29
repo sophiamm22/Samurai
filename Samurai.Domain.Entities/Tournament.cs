@@ -10,6 +10,7 @@ namespace Samurai.Domain.Entities
   {
     public Tournament()
     {
+      this.TournamentCouponURLs = new List<TournamentCouponURL>();
       this.TournamentExternalSourceAlias = new List<TournamentExternalSourceAlias>();
       this.TournamentEvents = new List<TournamentEvent>();
     }
@@ -20,6 +21,7 @@ namespace Samurai.Domain.Entities
     public string Location { get; set; }
 
     public virtual Competition Competition { get; set; }
+    public virtual ICollection<TournamentCouponURL> TournamentCouponURLs { get; set; }
     public virtual ICollection<TournamentExternalSourceAlias> TournamentExternalSourceAlias { get; set; }
     public virtual ICollection<TournamentEvent> TournamentEvents { get; set; }
 

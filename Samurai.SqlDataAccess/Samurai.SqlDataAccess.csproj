@@ -58,7 +58,7 @@
     <Compile Include="Contracts\IPredictionRepository.cs" />
     <Compile Include="Mapping\BettingPAndLMap.cs" />
     <Compile Include="Mapping\BookmakerMap.cs" />
-    <Compile Include="Mapping\CompetitionCouponURLMap.cs" />
+    <Compile Include="Mapping\TournamentCouponURLMap.cs" />
     <Compile Include="Mapping\CompetitionMap.cs" />
     <Compile Include="Mapping\ExternalSourceMap.cs" />
     <Compile Include="Mapping\FundMap.cs" />

@@ -74,6 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmakerRepositoryHelper.cs" />
+    <Compile Include="Domain\FootballCouponStrategyTests.cs" />
     <Compile Include="Domain\FixtureStrategyTests.cs" />
     <Compile Include="Domain\PredictionStrategyTests.cs" />
     <Compile Include="FixtureRepositoryHelper.cs" />

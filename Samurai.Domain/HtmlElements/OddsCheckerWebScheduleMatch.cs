@@ -58,7 +58,8 @@ namespace Samurai.Domain.HtmlElements
         BestOdds.Add(Outcome.TeamOrPlayerA, oddsTokens.ElementAt(0).Odds);
         BestOdds.Add(Outcome.TeamOrPlayerB, oddsTokens.ElementAt(1).Odds);
       }
-
+      TeamOrPlayerA = oddsTokens.First().TeamOrPlayer;
+      TeamOrPlayerB = oddsTokens.Last().TeamOrPlayer;
     }
   }
 }

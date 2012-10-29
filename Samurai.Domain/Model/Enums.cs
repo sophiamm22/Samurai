@@ -7,7 +7,7 @@ namespace Samurai.Domain.Model
 {
   public enum OddsDownloadStage
   {
-    Competition,
+    Tournament,
     Matches,
     Odds
   }

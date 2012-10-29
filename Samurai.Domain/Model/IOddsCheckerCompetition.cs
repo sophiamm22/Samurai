@@ -12,7 +12,6 @@ namespace Samurai.Domain.Model
     string CompetitionName { get; set; }
     string PartURL { get; set; }
     Uri CompetitionURL { get; set; }
-    string ConvertTeamOrPlayerName(string teamOrPlayer);
     string CompetitionType { get; set; }
   }
 }

@@ -5,21 +5,21 @@ using System.Text;
 
 namespace Samurai.Domain.Model
 {
-  public interface IGenericCompetitionCoupon
+  public interface IGenericTournamentCoupon
   {
-    string CompetitionName { get; set; }
-    Uri CompetitionURL { get; set; }
+    string TournamentName { get; set; }
+    Uri TournamentURL { get; set; }
     IEnumerable<IGenericMatchCoupon> Matches { get; set; }
   }
 
-  public class GenericCompetitionCoupon : IGenericCompetitionCoupon
+  public class GenericTournamentCoupon : IGenericTournamentCoupon
   {
-    public GenericCompetitionCoupon()
+    public GenericTournamentCoupon()
     {
       Matches = new List<IGenericMatchCoupon>();
     }
-    public string CompetitionName { get; set; }
-    public Uri CompetitionURL { get; set; }
+    public string TournamentName { get; set; }
+    public Uri TournamentURL { get; set; }
     public IEnumerable<IGenericMatchCoupon> Matches { get; set; }
   }
 

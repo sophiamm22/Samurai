@@ -14,7 +14,7 @@ namespace Samurai.Domain.Entities
 
     public string TeamName { get; set; }
     public string Slug { get; set; }
-    public int? FinkTankID { get; set; }
+    public string ExternalID { get; set; }
     public virtual ICollection<Match> MatchesB { get; set; }
     public virtual ICollection<Match> MatchesA { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }

@@ -13,55 +13,70 @@ namespace Samurai.Domain.Value
 {
   public abstract class AbstractCouponStrategy
   {
-    protected readonly IBookmakerRepository bookmakerService;
+    protected readonly IBookmakerRepository bookmakerRepository;
+    protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
     protected readonly IValueOptions valueOptions;
 
-    public AbstractCouponStrategy(IBookmakerRepository bookmakerService,
-      IWebRepository webRepository, IValueOptions valueOptions)
+    public AbstractCouponStrategy(IBookmakerRepository bookmakerRepository,
+      IFixtureRepository fixtureRepository, IWebRepository webRepository, 
+      IValueOptions valueOptions)
     {
-      this.bookmakerService = bookmakerService;
+      if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
+      if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
+      if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (valueOptions == null) throw new ArgumentNullException("valueOptions");
+
+      this.bookmakerRepository = bookmakerRepository;
+      this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
       this.valueOptions = valueOptions;
+
     }
 
-    public abstract IEnumerable<IGenericCompetitionCoupon> GetCompetitions(OddsDownloadStage stage = OddsDownloadStage.Competition);
-    public abstract IEnumerable<IGenericMatchCoupon> GetMatches(Uri competitionURL);
+    public abstract IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
+    public abstract IEnumerable<IGenericMatchCoupon> GetMatches(Uri tournamentURL);
+
+    public IEnumerable<IGenericMatchCoupon> GetMatches()
+    {
+      return GetMatches(this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource));
+    }
   }
 
   public class BestBettingCouponStrategy<TCompetition> : AbstractCouponStrategy
     where TCompetition : IBestBettingCompetition, new()
   {
-    public BestBettingCouponStrategy(IBookmakerRepository bookmakerService, IWebRepository webRepository,
+    public BestBettingCouponStrategy(IBookmakerRepository bookmakerRepository, 
+      IFixtureRepository fixtureRepository, IWebRepository webRepository,
       IValueOptions valueOptions)
-      : base(bookmakerService, webRepository, valueOptions)
+      : base(bookmakerRepository, fixtureRepository, webRepository, valueOptions)
     { }
 
-    public override IEnumerable<IGenericCompetitionCoupon> GetCompetitions(OddsDownloadStage stage = OddsDownloadStage.Competition)
+    public override IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament)
     {
-      var competitionsReturn = new List<IGenericCompetitionCoupon>();
+      var competitionsReturn = new List<IGenericTournamentCoupon>();
 
-      var html = this.webRepository.GetHTML(new[] { this.bookmakerService.GetCompetitionCouponUrl(this.valueOptions.Competition, this.valueOptions.OddsSource) },
+      var html = this.webRepository.GetHTML(new[] { this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource) },
         s => Console.WriteLine(s), string.Format("{0} BestBetting Coupon", this.valueOptions.CouponDate.ToShortDateString()))
         .First();
 
       var bestbettingCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => Console.WriteLine(s))
         .Cast<TCompetition>()
-        .Where(c => c.CompetitionType == this.valueOptions.Competition.CompetitionName)
+        .Where(c => c.CompetitionType == this.valueOptions.Tournament.TournamentName)
         .ToList();
 
       foreach (var t in bestbettingCompetitions)
       {
-        if (competitionsReturn.Count(tMain => tMain.CompetitionName == t.CompetitionName) != 0)
+        if (competitionsReturn.Count(tMain => tMain.TournamentName == t.CompetitionName) != 0)
           continue; //guard against repetition on BestBetting tennis
 
-        var tournament = new GenericCompetitionCoupon
+        var tournament = new GenericTournamentCoupon
         {
-          CompetitionName = t.CompetitionName,
-          CompetitionURL = t.CompetitionURL,
+          TournamentName = t.CompetitionName,
+          TournamentURL = t.CompetitionURL,
         };
 
-        if (stage != OddsDownloadStage.Competition)
+        if (stage != OddsDownloadStage.Tournament)
         {
           var matchesToAdd = new List<IGenericMatchCoupon>();
           matchesToAdd.AddRange(GetMatches(t.CompetitionURL));
@@ -95,9 +110,8 @@ namespace Samurai.Domain.Value
           var match = ((BestBettingScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');
 
-          var obj = new TCompetition();
-          var teamOrPlayerA = obj.ConvertTeamOrPlayerName(match.TeamOrPlayerA);
-          var teamOrPlayerB = obj.ConvertTeamOrPlayerName(match.TeamOrPlayerB);
+          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
 
           var matchData = new GenericMatchCoupon
           {
@@ -119,33 +133,34 @@ namespace Samurai.Domain.Value
   public class OddsCheckerMobiCouponStrategy<TCompetition> : AbstractCouponStrategy
     where TCompetition : IOddsCheckerCompetition, new()
   {
-    public OddsCheckerMobiCouponStrategy(IBookmakerRepository bookmakerService, IWebRepository webRepository,
+    public OddsCheckerMobiCouponStrategy(IBookmakerRepository bookmakerRepository, 
+      IFixtureRepository fixtureRepository, IWebRepository webRepository,
       IValueOptions valueOptions)
-      : base(bookmakerService, webRepository, valueOptions)
+      : base(bookmakerRepository, fixtureRepository, webRepository, valueOptions)
     { }
 
-    public override IEnumerable<IGenericCompetitionCoupon> GetCompetitions(OddsDownloadStage stage = OddsDownloadStage.Competition)
+    public override IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament)
     {
-      var tournamentsReturn = new List<IGenericCompetitionCoupon>();
+      var tournamentsReturn = new List<IGenericTournamentCoupon>();
 
-      var html = this.webRepository.GetHTML(new[] { this.bookmakerService.GetCompetitionCouponUrl(this.valueOptions.Competition, this.valueOptions.OddsSource) },
+      var html = this.webRepository.GetHTML(new[] { this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource) },
         s => Console.WriteLine(s), string.Format("{0} OddsChecker Coupon", this.valueOptions.CouponDate.ToShortDateString()))
         .First();
 
       var oddscheckerCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => Console.WriteLine(s))
         .Cast<TCompetition>()
-        .Where(c => c.CompetitionType == this.valueOptions.Competition.CompetitionName)
+        .Where(c => c.CompetitionType == this.valueOptions.Tournament.TournamentName)
         .ToList();
 
       foreach (var t in oddscheckerCompetitions)
       {
-        var competetion = new GenericCompetitionCoupon()
+        var competetion = new GenericTournamentCoupon()
         {
-          CompetitionName = t.CompetitionName,
-          CompetitionURL = t.CompetitionURL,
+          TournamentName = t.CompetitionName,
+          TournamentURL = t.CompetitionURL,
         };
 
-        if (stage != OddsDownloadStage.Competition)
+        if (stage != OddsDownloadStage.Tournament)
         {
           var matchesToAdd = new List<IGenericMatchCoupon>();
           matchesToAdd.AddRange(GetMatches(t.CompetitionURL));
@@ -169,11 +184,14 @@ namespace Samurai.Domain.Value
 
       foreach (var match in matchTokens)
       {
+        var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+        var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+
         var matchData = new GenericMatchCoupon
         {
           MatchURL = match.MatchURL,
-          TeamOrPlayerA = match.TeamOrPlayerA,
-          TeamOrPlayerB = match.TeamOrPlayerB,
+          TeamOrPlayerA = teamOrPlayerA,
+          TeamOrPlayerB = teamOrPlayerB,
         };
         returnMatches.Add(matchData);
       }
@@ -184,9 +202,10 @@ namespace Samurai.Domain.Value
   public class OddsCheckerWebCouponStrategy<TCompetition> : OddsCheckerMobiCouponStrategy<TCompetition>
     where TCompetition : IOddsCheckerCompetition, new()
   {
-    public OddsCheckerWebCouponStrategy(IBookmakerRepository bookmakerService, IWebRepository webRepository,
+    public OddsCheckerWebCouponStrategy(IBookmakerRepository bookmakerRepository, 
+      IFixtureRepository fixtureRepository, IWebRepository webRepository,
       IValueOptions valueOptions)
-      : base(bookmakerService, webRepository, valueOptions)
+      : base(bookmakerRepository, fixtureRepository, webRepository, valueOptions)
     { }
 
     public override IEnumerable<IGenericMatchCoupon> GetMatches(Uri competitionURL)
@@ -211,10 +230,8 @@ namespace Samurai.Domain.Value
           var match = ((OddsCheckerWebScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');
 
-          var obj = new TCompetition();
-          var teamOrPlayerA = obj.ConvertTeamOrPlayerName(match.TeamOrPlayerA);
-          var teamOrPlayerB = obj.ConvertTeamOrPlayerName(match.TeamOrPlayerB);
-
+          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
 
           var matchData = new GenericMatchCoupon
           {

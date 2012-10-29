@@ -43,7 +43,7 @@
     <Compile Include="BettingPAndL.cs" />
     <Compile Include="Bookmaker.cs" />
     <Compile Include="Competition.cs" />
-    <Compile Include="CompetitionCouponURL.cs" />
+    <Compile Include="TournamentCouponURL.cs" />
     <Compile Include="ExternalSource.cs" />
     <Compile Include="Fund.cs" />
     <Compile Include="Match.cs" />

@@ -42,11 +42,6 @@ namespace Samurai.Domain.HtmlElements
         CompetitionType = "League Two";
     }
 
-    public string ConvertTeamOrPlayerName(string teamOrPlayer)
-    {
-      return teamOrPlayer;
-    }
-
     public override string ToString()
     {
       return CompetitionName;

@@ -26,7 +26,7 @@ namespace Samurai.SqlDataAccess
 
     public DbSet<BettingPAndL> BettingPAndLs { get; set; }
     public DbSet<Bookmaker> Bookmakers { get; set; }
-    public DbSet<CompetitionCouponURL> CompetitionCouponURLs { get; set; }
+    public DbSet<TournamentCouponURL> CompetitionCouponURLs { get; set; }
     public DbSet<Competition> Competitions { get; set; }
     public DbSet<Tournament> Tournaments { get; set; }
     public DbSet<TournamentEvent> TournamentEvents { get; set; }
@@ -48,7 +48,7 @@ namespace Samurai.SqlDataAccess
     {
       modelBuilder.Configurations.Add(new BettingPAndLMap());
       modelBuilder.Configurations.Add(new BookmakerMap());
-      modelBuilder.Configurations.Add(new CompetitionCouponURLMap());
+      modelBuilder.Configurations.Add(new TournamentCouponURLMap());
       modelBuilder.Configurations.Add(new CompetitionMap());
       modelBuilder.Configurations.Add(new TournamentMap());
       modelBuilder.Configurations.Add(new TournamentEventMap());

@@ -13,7 +13,7 @@ namespace Samurai.Domain.Model
     DateTime CouponDate { get; set; }
     ExternalSource OddsSource { get; set; }
     Sport Sport { get; set; }
-    Competition Competition { get; set; }
+    Tournament Tournament { get; set; }
   }
 
   public class ValueOptions
@@ -21,6 +21,6 @@ namespace Samurai.Domain.Model
     public DateTime CouponDate { get; set; }
     public ExternalSource OddsSource { get; set; }
     public Sport Sport { get; set; }
-    public Competition Competition { get; set; }
+    public Tournament Tournament { get; set; }
   }
 }

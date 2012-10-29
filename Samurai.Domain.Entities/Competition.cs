@@ -7,7 +7,6 @@ namespace Samurai.Domain.Entities
   {
     public Competition()
     {
-      this.CompetitionCouponURLs = new List<CompetitionCouponURL>();
       this.Funds = new List<Fund>();
       this.Tournaments = new List<Tournament>();
     }
@@ -18,7 +17,6 @@ namespace Samurai.Domain.Entities
     public decimal OverroundRequired { get; set; }
     public int? GamesRequiredForBet { get; set; }
 
-    public virtual ICollection<CompetitionCouponURL> CompetitionCouponURLs { get; set; }
     public virtual Sport Sport { get; set; }
     public virtual ICollection<Fund> Funds { get; set; }
     public virtual ICollection<Tournament> Tournaments { get; set; }

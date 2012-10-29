@@ -17,9 +17,9 @@ namespace Samurai.SqlDataAccess
       :base(context)
     { }
 
-    public Uri GetCompetitionCouponUrl(Competition competition, ExternalSource externalSource)
+    public Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource)
     {
-      var couponData = GetQuery<CompetitionCouponURL>(c => c.Id == competition.Id && c.Id == externalSource.Id)
+      var couponData = GetQuery<TournamentCouponURL>(c => c.Id == tournament.Id && c.Id == externalSource.Id)
                         .FirstOrDefault();
       if (couponData == null)
         throw new ArgumentNullException("couponData");
@@ -35,12 +35,6 @@ namespace Samurai.SqlDataAccess
     public Competition GetCompetition(string competitionName)
     {
       return First<Competition>(c => c.CompetitionName == competitionName);
-    }
-
-    public IEnumerable<string> GetTeamOrPlayerAlias(string entityName, ExternalSource convertTo)
-    {
-      return GetQuery<TeamPlayerExternalSourceAlias>(a => a.TeamsPlayer.TeamName == entityName && a.Id == convertTo.Id)
-                .Select(a => a.Alias);
     }
 
     public Bookmaker FindByName(string bookmakerName)

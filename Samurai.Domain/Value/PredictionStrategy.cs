@@ -44,23 +44,26 @@ namespace Samurai.Domain.Value
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
+        var predictionURL = new Uri(jsonTennisMatch.ToString());
+
         var jsonTennisPrediction = (APITennisPrediction)this.webRepository.ParseJson<APITennisPrediction>(
-          new Uri(jsonTennisMatch.ToString()), s => Console.WriteLine(s));
+          predictionURL, s => Console.WriteLine(s));
         jsonTennisPrediction.StartTime = jsonTennisMatch.MatchDate;
 
-        predictions.Add(ConvertAPIToGeneric(jsonTennisPrediction));
+        predictions.Add(ConvertAPIToGeneric(jsonTennisPrediction, predictionURL));
       }
 
       return predictions;
     }
 
-    public static Model.IGenericPrediction ConvertAPIToGeneric(APITennisPrediction apiPrediction)
+    public static Model.IGenericPrediction ConvertAPIToGeneric(APITennisPrediction apiPrediction, Uri predictionURL)
     {
       var tennisPrediction = new Model.TennisPrediction()
       {
         CompetitionName = apiPrediction.TournamentName,
         TeamOrPlayerA = string.Format("{0}, {1}", apiPrediction.PlayerASurname, apiPrediction.PlayerAFirstname),
         TeamOrPlayerB = string.Format("{0}, {1}", apiPrediction.PlayerBSurname, apiPrediction.PlayerBFirstname),
+        PredictionURL = predictionURL,
 
         PlayerAFirstName = apiPrediction.PlayerAFirstname,
         PlayerASurname = apiPrediction.PlayerASurname,
@@ -127,15 +130,18 @@ namespace Samurai.Domain.Value
       {
         var homeTeamID = footballTeams[i].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i].ExternalID);
         var awayTeamID = footballTeams[i + 1].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i + 1].ExternalID);
+
+        var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
+
         var jsonFootballPredicton = (APIFootballPrediction)this.webRepository.ParseJson<APIFootballPrediction>(
-          this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID), s => Console.WriteLine(s), string.Format("{0}-{1}", 
+          predictionURL, s => Console.WriteLine(s), string.Format("{0}-{1}", 
           valueOptions.Tournament.TournamentName.Replace(" ",""), valueOptions.CouponDate.ToShortDateString()));
-        predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate));
+        predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
       }
       return predictions;
     }
 
-    private Model.IGenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date)
+    private Model.IGenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
     {
       var footballPrediction = new Model.FootballPrediction()
       {

@@ -13,6 +13,7 @@ namespace Samurai.Domain.Model
 
     string Sport { get; set; }
     string CompetitionName { get; set; }
+    Uri PredictionURL { get; set; }
 
     DateTime MatchDate { get; set; }
 
@@ -35,6 +36,7 @@ namespace Samurai.Domain.Model
 
     public string Sport { get; set; }
     public string CompetitionName { get; set; }
+    public Uri PredictionURL { get; set; }
 
     public DateTime MatchDate { get; set; }
 

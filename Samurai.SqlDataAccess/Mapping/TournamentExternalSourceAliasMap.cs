@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using Samurai.Domain.Entities;
 
-
 namespace Samurai.SqlDataAccess.Mapping
 {
   public class TournamentExternalSourceAliasMap : EntityTypeConfiguration<TournamentExternalSourceAlias>
@@ -14,7 +13,7 @@ namespace Samurai.SqlDataAccess.Mapping
       this.Property(t => t.Alias).IsRequired();
 
       this.ToTable("TournamentExternalSourceAlias");
-      this.Property(t => t.Id).HasColumnName("TournamentExternalSourceAlias_pk");
+      this.Property(t => t.Id).HasColumnName("TournamentExternalSourceAlias_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
       this.Property(t => t.ExternalSourceID).HasColumnName("ExternalSourceID_fk");
       this.Property(t => t.TournamentID).HasColumnName("TournamentID_fk");
 

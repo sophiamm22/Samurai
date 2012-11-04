@@ -14,6 +14,10 @@ namespace Samurai.SqlDataAccess.Contracts
     ExternalSource GetExternalSource(string sourceName);
     Competition GetCompetition(string competitionName);
     Bookmaker FindByName(string bookmakerName);
+    Bookmaker FindByOddsCheckerID(string oddsCheckerID);
     Bookmaker AddOrUpdate(Bookmaker bookmaker);
+    string GetOddsCheckerJavaScript();
+    void SetOddsCheckerJavaScript(string javaScript);
+    string GetAlias(string bookmakerNameSource, ExternalSource source, ExternalSource destination);
   }
 }

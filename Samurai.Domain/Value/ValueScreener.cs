@@ -11,21 +11,22 @@ namespace Samurai.Domain.Value
 {
   public class ValueScreener
   {
-    private readonly IPredictionRepository predictionService;
     private readonly IPredictionProvider predictionProvider;
     private readonly ICouponProvider couponProvider;
+    private readonly IOddsProvider oddsProvider;
 
-    public ValueScreener(IPredictionRepository predictionService, 
-      IPredictionProvider predictionProvider, ICouponProvider couponProvider)
+    public ValueScreener(IPredictionProvider predictionProvider, ICouponProvider couponProvider,
+      IOddsProvider oddsProvider)
     {
-      if (predictionService == null) throw new ArgumentNullException("predictionService");
       if (predictionProvider == null) throw new ArgumentNullException("predictionProvider");
       if (couponProvider == null) throw new ArgumentNullException("couponProvider");
+      if (oddsProvider == null) throw new ArgumentNullException("oddsProvider");
       
-      this.predictionService = predictionService;
       this.predictionProvider = predictionProvider;
       this.couponProvider = couponProvider;
+      this.oddsProvider = oddsProvider;
     }
+
 
 
   }

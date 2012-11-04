@@ -9,29 +9,51 @@ using Samurai.Core;
 using Samurai.Domain.Repository;
 using Samurai.Domain.Model;
 using Samurai.Domain.HtmlElements;
+using Samurai.SqlDataAccess.Contracts;
 
 namespace Samurai.Domain.Value
 {
   public abstract class AbstractOddsStrategy
   {
-    protected IWebRepository _webRepository;
-    public AbstractOddsStrategy(IWebRepository webRepository)
+    protected readonly IWebRepository webRepository;
+    protected readonly IBookmakerRepository bookmakerRepository;
+    protected readonly IFixtureRepository fixtureRepository;
+
+    public AbstractOddsStrategy(IBookmakerRepository bookmakerRepository, 
+      IFixtureRepository fixtureRepository, IWebRepository webRepository)
     {
-      _webRepository = webRepository;
+      if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
+      if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
+      if (webRepository == null) throw new ArgumentNullException("webRepository");
+
+      this.bookmakerRepository = bookmakerRepository;
+      this.fixtureRepository = fixtureRepository;
+      this.webRepository = webRepository;
     }
-    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(Uri matchURL, IDictionary<string, Outcome> teamOrPlayerToOutcome, DateTime timeStamp);
+    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp);
   }
 
   public class BestBettingOddsStrategy : AbstractOddsStrategy
   {
-    public BestBettingOddsStrategy(IWebRepository webRepository)
-      : base(webRepository)
+    public BestBettingOddsStrategy(IBookmakerRepository bookmakerRepository,
+      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      : base(bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(Uri matchURL, IDictionary<string, Outcome> teamOrPlayerToOutcome, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
+      var playerLookup = new Dictionary<string, Outcome>()
+      {
+        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { "Draw", Outcome.Draw },
+        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+      };
+
+      var source = this.fixtureRepository.GetExternalSource("Best Betting");
+      var destination = this.fixtureRepository.GetExternalSource("Value Samurai");
+
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
-      var oddsHTML = _webRepository.GetHTML(new Uri[] { matchURL }, s => Console.WriteLine(s)).First();
+      var oddsHTML = webRepository.GetHTML(new Uri[] { matchCoupon.MatchURL }, s => Console.WriteLine(s)).First();
       var oddsTokens = WebUtils.ParseWebsite<BestBettingOddsCompetitor, BestBettingOdds>(
         oddsHTML, s => Console.WriteLine(s));
 
@@ -42,7 +64,8 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is BestBettingOddsCompetitor)
         {
-          currentOutcome = teamOrPlayerToOutcome[((BestBettingOddsCompetitor)oddsToken).Competitor];
+          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination);
+          currentOutcome = playerLookup[currentOutcomeLocal];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -50,13 +73,18 @@ namespace Samurai.Domain.Value
         else
         {
           var odd = (BestBettingOdds)oddsToken;
+          var bookmakerName = this.bookmakerRepository.GetAlias(odd.Bookmaker, source, destination);
+          var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
+
           oddsForOutcome.Add(new BestBettingOdd()
           {
-            DecimalOdds = odd.DecimalOdds,
-            BookmakerName = odd.Bookmaker,
-            Source = "BestBetting",
+            OddsBeforeCommission = odd.DecimalOdds,
+            CommissionPct = (double)(bookmaker.CurrentCommission ?? 0.0m),
+            DecimalOdds = odd.DecimalOdds * (1 - (double)(bookmaker.CurrentCommission ?? 0.0m)),
+            BookmakerName = bookmaker.BookmakerName,
+            Source = "Best Betting",
             TimeStamp = timeStamp,
-            Priority = odd.Priority,
+            Priority = bookmaker.Priority,
             ClickThroughURL = odd.ClickThroughURL
           });
         }
@@ -67,15 +95,26 @@ namespace Samurai.Domain.Value
 
   public class OddsCheckerMobiOddsStrategy : AbstractOddsStrategy
   {
-    public OddsCheckerMobiOddsStrategy(IWebRepository webRepository)
-      : base(webRepository)
+    public OddsCheckerMobiOddsStrategy(IBookmakerRepository bookmakerRepository,
+      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      : base(bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(Uri matchURL, IDictionary<string, Outcome> teamOrPlayerToOutcome, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
+      var playerLookup = new Dictionary<string, Outcome>()
+      {
+        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { "Draw", Outcome.Draw },
+        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+      };
+
+      var source = this.fixtureRepository.GetExternalSource("Odds Checker Mobi");
+      var destination = this.fixtureRepository.GetExternalSource("Value Samurai");
+
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
 
-      var html = _webRepository.GetHTML(new[] { matchURL }, s => Console.WriteLine(s), matchURL.ToString())
+      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => Console.WriteLine(s), matchCoupon.MatchURL.ToString())
                                .First();
 
       var oddsTokens = WebUtils.ParseWebsite<OddsCheckerMobiCompetitor, OddsCheckerMobiOdds>(
@@ -88,7 +127,8 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerMobiCompetitor)
         {
-          currentOutcome = teamOrPlayerToOutcome[((OddsCheckerMobiCompetitor)oddsToken).Outcome];
+          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination);
+          currentOutcome = playerLookup[currentOutcomeLocal];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -96,14 +136,19 @@ namespace Samurai.Domain.Value
         else
         {
           var odd = (OddsCheckerMobiOdds)oddsToken;
+          var bookmakerName = this.bookmakerRepository.GetAlias(odd.Bookmaker, source, destination);
+          var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
+
           oddsForOutcome.Add(new OddsCheckerOdd()
           {
-            DecimalOdds = odd.DecimalOdds,
-            BookmakerName = odd.Bookmaker,
-            Source = "OddsChecker Mobi",
-            TimeStamp = timeStamp,
+            OddsBeforeCommission = odd.DecimalOdds,
+            CommissionPct = (double)(bookmaker.CurrentCommission ?? 0.0m),
+            DecimalOdds = odd.DecimalOdds * (1 - (double)(bookmaker.CurrentCommission ?? 0.0m)),
+            BookmakerName = bookmaker.BookmakerName,
+            Source = "Odds Checker Mobi",
             BetSlipValue = odd.BetSlipValue,
-            Priority = odd.Priority
+            TimeStamp = timeStamp,
+            Priority = bookmaker.Priority
           });
         }
       }
@@ -113,22 +158,33 @@ namespace Samurai.Domain.Value
 
   public class OddsCheckerWebOddsStrategy : AbstractOddsStrategy
   {
-    public OddsCheckerWebOddsStrategy(IWebRepository webRepository)
-      : base(webRepository)
+    public OddsCheckerWebOddsStrategy(IBookmakerRepository bookmakerRepository,
+      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      : base(bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(Uri matchURL, IDictionary<string, Outcome> teamOrPlayerToOutcome, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
+      var playerLookup = new Dictionary<string, Outcome>()
+      {
+        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { "Draw", Outcome.Draw },
+        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+      };
+
+      var source = this.fixtureRepository.GetExternalSource("Odds Checker Web");
+      var destination = this.fixtureRepository.GetExternalSource("Value Samurai");
+
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
 
-      var html = _webRepository.GetHTML(new[] { matchURL }, s => Console.WriteLine(s), matchURL.ToString())
+      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => Console.WriteLine(s), matchCoupon.MatchURL.ToString())
                                .First();
 
       var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebCompetitor, OddsCheckerWebOdds>(
         html, s => Console.WriteLine(s));
 
-      var oddsCheckerJSFile = _webRepository.GetHTML(new[] { new Uri(@"http://static.oddschecker.com/javascript/betslip.js") }, s => Console.WriteLine(s))
-                                      .First();
+      var oddsCheckerJSFile = this.bookmakerRepository.GetOddsCheckerJavaScript();
+
       var jint = new JintEngine();
       jint.Run(oddsCheckerJSFile);
 
@@ -139,7 +195,8 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerWebCompetitor)
         {
-          currentOutcome = teamOrPlayerToOutcome[((OddsCheckerWebCompetitor)oddsToken).Outcome];
+          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination);
+          currentOutcome = playerLookup[currentOutcomeLocal];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -147,23 +204,23 @@ namespace Samurai.Domain.Value
         else
         {
           var odd = (OddsCheckerWebOdds)oddsToken;
-
-          var bSlip = jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString();
+          var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.OddsCheckerID);
+          var bSlip = string.Format("www.oddschecker.com{0}", jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString());
 
           oddsForOutcome.Add(new OddsCheckerOdd()
           {
-            DecimalOdds = odd.DecimalOdds,
-            BookmakerName = odd.Bookmaker,
-            Source = "OddsChecker Web",
+            OddsBeforeCommission = odd.DecimalOdds,
+            CommissionPct = (double)(bookmaker.CurrentCommission ?? 0.0m),
+            DecimalOdds = odd.DecimalOdds * (1 - (double)(bookmaker.CurrentCommission ?? 0.0m)),
+            BookmakerName = bookmaker.BookmakerName,
+            Source = "Odds Checker Web",
             BetSlipValue = bSlip,
             TimeStamp = timeStamp,
-            Priority = odd.Priority
+            Priority = bookmaker.Priority
           });
         }
       }
       return outcomeDictionary;
     }
-
   }
-
 }

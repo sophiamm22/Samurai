@@ -42,7 +42,7 @@ namespace Samurai.Domain.HtmlElements
     {
       BestOdds = new Dictionary<Outcome, double>();
       //url
-      MatchURL = new Uri("http://http://www.oddschecker.com" + PartURL);
+      MatchURL = new Uri("http://www.oddschecker.com" + PartURL);
 
       var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleMatchOdds>(BestOddsString, s => Console.WriteLine(s))
                                .Cast<OddsCheckerWebScheduleMatchOdds>();

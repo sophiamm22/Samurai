@@ -77,6 +77,7 @@
     <Compile Include="BookmakerRepositoryHelper.cs" />
     <Compile Include="Domain\FootballCouponStrategyTests.cs" />
     <Compile Include="Domain\FixtureStrategyTests.cs" />
+    <Compile Include="Domain\OddsStrategyTests.cs" />
     <Compile Include="Domain\PredictionStrategyTests.cs" />
     <Compile Include="FixtureRepositoryHelper.cs" />
     <Compile Include="PredictionRepositoryHelper.cs" />

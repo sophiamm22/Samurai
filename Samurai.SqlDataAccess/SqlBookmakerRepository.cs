@@ -43,6 +43,29 @@ namespace Samurai.SqlDataAccess
                                   .FirstOrDefault();
     }
 
+    public Bookmaker FindByOddsCheckerID(string oddsCheckerID)
+    {
+      return First<Bookmaker>(b => b.OddsCheckerShortID == oddsCheckerID);
+    }
+
+    public string GetOddsCheckerJavaScript()
+    {
+      var script = First<KeyValuePair>(k => k.Key == "OddsCheckerJavaScript");
+      if (script == null)
+        return string.Empty;
+      else
+        return script.Value;
+    }
+
+    public void SetOddsCheckerJavaScript(string javaScript)
+    {
+      var script = First<KeyValuePair>(k => k.Key == "OddsCheckerJavaScript");
+      if (script == null)
+        Add<KeyValuePair>(new KeyValuePair { Key = "OddsCheckerJavaScript", Value = javaScript });
+      else
+        script.Value = javaScript;
+    }
+
     public Bookmaker AddOrUpdate(Bookmaker bookmaker)
     {
       var storedBookmaker = First<Bookmaker>(b => b.BookmakerName == bookmaker.BookmakerName);
@@ -59,5 +82,20 @@ namespace Samurai.SqlDataAccess
       }
     }
 
+    public string GetAlias(string bookmakerNameSource, ExternalSource source, ExternalSource destination)
+    {
+      var bookmakerNameDestination = string.Empty;
+      var bookmakerAlias = GetQuery<BookmakerExternalSourceAlias>()
+                              .Include(t => t.Bookmaker)
+                              .Where(a => a.Alias == bookmakerNameSource &&
+                                          a.ExternalSource.Source == source.Source);
+
+      if (bookmakerAlias.Count() == 0)
+        bookmakerNameDestination = bookmakerNameSource;
+      else
+        bookmakerNameDestination = bookmakerAlias.First().Bookmaker.BookmakerName;
+
+      return bookmakerNameDestination;
+    }
   }
 }

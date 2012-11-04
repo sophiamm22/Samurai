@@ -12,6 +12,7 @@ namespace Samurai.Domain.Entities
       this.MatchOutcomeOdds = new List<MatchOutcomeOdd>();
       this.TeamPlayerExternalSourceAlias = new List<TeamPlayerExternalSourceAlias>();
       this.TournamentExternalSourceAlias = new List<TournamentExternalSourceAlias>();
+      this.BookmakerExternalSourceAlias = new List<BookmakerExternalSourceAlias>();
     }
 
     public string Source { get; set; }
@@ -25,5 +26,6 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public virtual ICollection<TournamentExternalSourceAlias> TournamentExternalSourceAlias { get; set; }
+    public virtual ICollection<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
   }
 }

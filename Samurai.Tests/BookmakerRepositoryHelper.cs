@@ -18,6 +18,28 @@ namespace Samurai.Tests
   {
     public static M.Mock<IBookmakerRepository> HasBasicMethods(this M.Mock<IBookmakerRepository> repo, SeedDataDictionaries db)
     {
+      repo.Setup(t => t.FindByName(M.It.IsAny<string>())).Returns<string>((string bookmakerName) =>
+        {
+          return db.Bookmaker[bookmakerName];
+        });
+
+      repo.Setup(t =>
+      t.GetAlias(M.It.IsAny<string>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<ExternalSource>()))
+       .Returns<string, ExternalSource, ExternalSource>(
+       (string teamNameSource, ExternalSource exSource, ExternalSource exDestination) =>
+       {
+         var teamNameDestination = string.Empty;
+         var teamAlias = db.BookmakerExternalSourceAliass
+                           .Where(a => a.Alias == teamNameSource &&
+                                       a.ExternalSource.Source == exSource.Source);
+         if (teamAlias.Count() == 0)
+           teamNameDestination = teamNameSource;
+         else
+           teamNameDestination = teamAlias.First().Bookmaker.BookmakerName;
+
+         return teamNameDestination;
+       });
+
       repo.Setup(r => r.GetTournamentCouponUrl(M.It.IsAny<Tournament>(), M.It.IsAny<ExternalSource>()))
           .Returns((Tournament tournament, ExternalSource externalSource) =>
         {
@@ -47,6 +69,7 @@ namespace Samurai.Tests
           }
           return returnURI;
         });
+      repo.Setup(r => r.GetOddsCheckerJavaScript()).Returns(db.KeyValuePair["OddsCheckerJavaScript"].Value);
       return repo;
     }
   }

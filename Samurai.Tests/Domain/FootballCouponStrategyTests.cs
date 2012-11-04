@@ -86,8 +86,6 @@ namespace Samurai.Tests.Domain
       westhamManCity[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 9.0 / 2.0, 0.05);
       westhamManCity[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 3.0, 0.05);
       westhamManCity[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 4.0 / 6.0, 0.05);
-
-
     }
   }
 

@@ -45,32 +45,7 @@ namespace Samurai.Domain.HtmlElements
       {
         var numDen = OddsText.Split('/');
         DecimalOdds = numDen.Length == 1 ? Math.Round(1 + Convert.ToDouble(numDen[0])) : Math.Round(1 + Convert.ToDouble(numDen[0]) / Convert.ToDouble(numDen[1]), 2);
-        if (Bookmaker == "WBX" || Bookmaker == "Betfair")
-          DecimalOdds = (DecimalOdds - 1) * .95 + 1;
       }
-
-      var priorityLookup = new Dictionary<string, int>()
-      {
-         { "William Hill", 10000 },
-         { "Bet 365", 2 },
-         { "Ladbrokes", 3 },
-         { "Sky Bet", 4 },
-         { "Paddy Power", 5 },
-         { "Sporting Bet", 6 },
-         { "Coral", 7000 },
-         { "Stan James", 8 },
-         { "Blue Square", 9 },
-         { "Betfred", 10 },
-         { "Totesport", 11 },
-         { "888sport", 12 },
-         { "Bet Victor", 13 },
-         { "Bwin", 14 },
-         { "Boylesports", 15 },
-         { "Betfair", 16 },
-         { "WBX", 17 }
-      };
-      Priority = priorityLookup[Bookmaker];
     }
-
   }
 }

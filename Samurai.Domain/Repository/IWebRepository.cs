@@ -15,6 +15,7 @@ namespace Samurai.Domain.Repository
   public interface IWebRepository
   {
     IEnumerable<string> GetHTML(IEnumerable<Uri> uris, Action<string> report, string identifier = null);
+    IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null);
     string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null);
@@ -43,6 +44,11 @@ namespace Samurai.Domain.Repository
       return path + @"\" + fileName.Replace("/", "æ")
                                    .Replace("?", "^")
                                    .Replace(":", "~");
+    }
+
+    public virtual IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
+    {
+      return WebUtils.GetWebpages(uris, report, s => new StreamReader(s).ReadToEnd().Trim(), _proxy);
     }
 
     public virtual IEnumerable<string> GetHTML(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
@@ -84,6 +90,11 @@ namespace Samurai.Domain.Repository
       : this(tournamentFolderName)
     {
       _proxy = proxy;
+    }
+
+    public override IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
+    {
+      return GetHTML(uris, report, identifier);
     }
 
     public override IEnumerable<string> GetHTML(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
@@ -155,6 +166,19 @@ namespace Samurai.Domain.Repository
       : base(proxy)
     {
       _competitionFolderName = competitionFolderName;
+    }
+
+    public override IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
+    {
+      var htmls = base.GetHTMLRaw(uris, report);
+      foreach (var html in htmls.Zip(uris.Select(u => u.PathAndQuery), (h, u) => new { HTML = h, UriString = u }))
+      {
+        using (TextWriter htmlWriter = new StreamWriter(GetPath(_competitionFolderName, html.UriString + (identifier == null ? string.Empty : identifier)) + ".txt"))
+        {
+          htmlWriter.Write(html.HTML);
+        }
+      }
+      return htmls;
     }
 
     public override IEnumerable<string> GetHTML(IEnumerable<Uri> uris, Action<string> report, string identifier = null)

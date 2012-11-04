@@ -42,7 +42,9 @@
     <Compile Include="BaseEntity.cs" />
     <Compile Include="BettingPAndL.cs" />
     <Compile Include="Bookmaker.cs" />
+    <Compile Include="BookmakerExternalSourceAlias.cs" />
     <Compile Include="Competition.cs" />
+    <Compile Include="KeyValuePair.cs" />
     <Compile Include="TournamentCouponURL.cs" />
     <Compile Include="ExternalSource.cs" />
     <Compile Include="Fund.cs" />

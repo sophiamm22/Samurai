@@ -8,6 +8,7 @@ namespace Samurai.Domain.Entities
     public Bookmaker()
     {
       this.MatchOutcomeOdds = new List<MatchOutcomeOdd>();
+      this.BookmakerExternalSourceAlias = new List<BookmakerExternalSourceAlias>();
     }
 
     public string BookmakerName { get; set; }
@@ -18,6 +19,8 @@ namespace Samurai.Domain.Entities
     public decimal? CurrentCommission { get; set; }
     public decimal? BookmakerBalance { get; set; }
     public string OddsCheckerShortID { get; set; }
+    public int Priority { get; set; }
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }
+    public virtual ICollection<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
   }
 }

@@ -50,14 +50,14 @@ namespace Samurai.Domain.HtmlElements
 
       if (oddsTokens.Count() == 3)
       {
-        BestOdds.Add(Outcome.TeamOrPlayerA, oddsTokens.ElementAt(0).Odds);
+        BestOdds.Add(Outcome.HomeWin, oddsTokens.ElementAt(0).Odds);
         BestOdds.Add(Outcome.Draw, oddsTokens.ElementAt(1).Odds);
-        BestOdds.Add(Outcome.TeamOrPlayerB, oddsTokens.ElementAt(2).Odds);
+        BestOdds.Add(Outcome.AwayWin, oddsTokens.ElementAt(2).Odds);
       }
       else
       {
-        BestOdds.Add(Outcome.TeamOrPlayerA, oddsTokens.ElementAt(0).Odds);
-        BestOdds.Add(Outcome.TeamOrPlayerB, oddsTokens.ElementAt(1).Odds);
+        BestOdds.Add(Outcome.HomeWin, oddsTokens.ElementAt(0).Odds);
+        BestOdds.Add(Outcome.AwayWin, oddsTokens.ElementAt(1).Odds);
       }
 
       //payout

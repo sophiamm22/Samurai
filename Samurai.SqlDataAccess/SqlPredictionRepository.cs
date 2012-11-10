@@ -54,5 +54,8 @@ namespace Samurai.SqlDataAccess
     {
       return First<Fund>(f => f.FundName == fundName);
     }
+
+    //public Match GetOutcomePrediction(
+
   }
 }

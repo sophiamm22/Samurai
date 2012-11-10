@@ -14,9 +14,9 @@ namespace Samurai.Domain.Model
 
   public enum Outcome
   {
-    TeamOrPlayerA,
-    Draw,
-    TeamOrPlayerB,
+    Draw = 1,
+    AwayWin = 2,
+    HomeWin = 3,
     NotAssigned
   }
 

@@ -80,8 +80,8 @@ namespace Samurai.Domain.Value
         ESets = apiPrediction.ExpectedSets
       };
 
-      tennisPrediction.OutcomeProbabilities.Add(Model.Outcome.TeamOrPlayerA, apiPrediction.PlayerAProbability);
-      tennisPrediction.OutcomeProbabilities.Add(Model.Outcome.TeamOrPlayerB, apiPrediction.PlayerBProbability);
+      tennisPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.PlayerAProbability);
+      tennisPrediction.OutcomeProbabilities.Add(Model.Outcome.AwayWin, apiPrediction.PlayerBProbability);
 
       if (apiPrediction.FiveSets)
       {
@@ -153,9 +153,9 @@ namespace Samurai.Domain.Value
           tournament.ToString(), date.ToShortDateString())
       };
 
-      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.TeamOrPlayerA, apiPrediction.ExpectedProbabilities.HomeWinProb);
+      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.ExpectedProbabilities.HomeWinProb);
       footballPrediction.OutcomeProbabilities.Add(Model.Outcome.Draw, apiPrediction.ExpectedProbabilities.DrawProb);
-      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.TeamOrPlayerB, apiPrediction.ExpectedProbabilities.AwayWinProb);
+      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.AwayWin, apiPrediction.ExpectedProbabilities.AwayWinProb);
 
       foreach (var scoreLine in apiPrediction.ScoreProbabilities)
       {

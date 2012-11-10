@@ -16,7 +16,7 @@ namespace Samurai.Domain.Model
     Tournament Tournament { get; set; }
   }
 
-  public class ValueOptions
+  public class ValueOptions : IValueOptions
   {
     public DateTime CouponDate { get; set; }
     public ExternalSource OddsSource { get; set; }

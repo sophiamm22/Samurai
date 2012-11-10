@@ -15,12 +15,16 @@ namespace Samurai.SqlDataAccess.Contracts
     string GetAlias(string teamName, ExternalSource source, ExternalSource destination);
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
     TeamsPlayer GetTeamOrPlayer(string slug);
+    TeamsPlayer GetTeamOrPlayerFromName(string team);
     IEnumerable<Match> GetMatchesFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime startDate, DateTime endDate);
     Match GetMatchFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime matchDate);
     Competition GetCompetition(int competitionID);
     TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
     ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
+    MatchOutcome GetMatchOutcomeByID(int id);
     Match SaveMatch(Match match);
     void SaveChanges();
+    Sport GetSport(string sport);
+    Tournament GetTournament(string tournament);
   }
 }

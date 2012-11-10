@@ -36,6 +36,7 @@ namespace Samurai.Services
 
       return Mapper.Map<Match, FootballFixtureViewModel>(match);
     }
+
     public IEnumerable<FootballFixtureSummaryViewModel> GetFootballFixturesByDate(string league, string dateString)
     {
       throw new NotImplementedException();

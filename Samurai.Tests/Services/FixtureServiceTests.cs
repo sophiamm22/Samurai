@@ -80,7 +80,8 @@ namespace Samurai.Tests.Services
 
       this.expectedCompletedMatchViewModel = new FootballFixtureViewModel
       {
-        LeagueAndSeason = "Premier League - 2012/13 season",
+        League = "Premier League" ,
+        Season = "2012/13 season",
         MatchDate = alreadyPlayed,
         TeamsPlayerA = "Man Utd",
         TeamsPlayerB = "Man City",
@@ -89,7 +90,8 @@ namespace Samurai.Tests.Services
 
       this.expectedNotPlayedMatchViewModel = new FootballFixtureViewModel
       {
-        LeagueAndSeason = "Premier League - 2012/13 season",
+        League ="Premier League",
+        Season =  "2012/13 season",
         MatchDate = yetToPlay,
         TeamsPlayerA = "Man Utd",
         TeamsPlayerB = "Arsenal",

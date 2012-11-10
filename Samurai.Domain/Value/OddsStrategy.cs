@@ -44,9 +44,9 @@ namespace Samurai.Domain.Value
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
-        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },
         { "Draw", Outcome.Draw },
-        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+        { matchCoupon.TeamOrPlayerB, Outcome.AwayWin }
       };
 
       var source = this.fixtureRepository.GetExternalSource("Best Betting");
@@ -104,9 +104,9 @@ namespace Samurai.Domain.Value
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
-        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },
         { "Draw", Outcome.Draw },
-        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+        { matchCoupon.TeamOrPlayerB, Outcome.AwayWin }
       };
 
       var source = this.fixtureRepository.GetExternalSource("Odds Checker Mobi");
@@ -167,9 +167,9 @@ namespace Samurai.Domain.Value
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
-        { matchCoupon.TeamOrPlayerA, Outcome.TeamOrPlayerA },
+        { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },
         { "Draw", Outcome.Draw },
-        { matchCoupon.TeamOrPlayerB, Outcome.TeamOrPlayerB }
+        { matchCoupon.TeamOrPlayerB, Outcome.AwayWin }
       };
 
       var source = this.fixtureRepository.GetExternalSource("Odds Checker Web");

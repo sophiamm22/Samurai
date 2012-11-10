@@ -16,5 +16,6 @@ namespace Samurai.SqlDataAccess.Contracts
     int GetGamesRequiredForBet(string competitionName);
     decimal GetOverroundRequired(string competitionName);
     Fund GetFundDetails(string fundName);
+    
   }
 }

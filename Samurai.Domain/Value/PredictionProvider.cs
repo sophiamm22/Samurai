@@ -6,12 +6,13 @@ using System.Text;
 using Samurai.Domain.Model;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
+using Samurai.Domain.Entities;
 
 namespace Samurai.Domain.Value
 {
   public interface IPredictionProvider
   {
-    AbstractPredictionStrategy CreatePredictionStrategy(IValueOptions valueOptions, bool overrideExisting);
+    AbstractPredictionStrategy CreatePredictionStrategy(Sport sport);
   }
 
   public class PredictionProvider : IPredictionProvider
@@ -26,11 +27,11 @@ namespace Samurai.Domain.Value
       this.webRepository = webRepository;
     }
 
-    public AbstractPredictionStrategy CreatePredictionStrategy(IValueOptions valueOptions, bool overrideExisting)
+    public AbstractPredictionStrategy CreatePredictionStrategy(Sport sport)
     {
-      if (valueOptions.Sport.SportName == "Football")
+      if (sport.SportName == "Football")
         return new FootballFinkTankPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
-      else if (valueOptions.Sport.SportName == "Tennis")
+      else if (sport.SportName == "Tennis")
         return new TennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
       else
         throw new ArgumentException("Sport not recognised");

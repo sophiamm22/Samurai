@@ -106,6 +106,26 @@ namespace Samurai.SqlDataAccess
                        .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
     }
 
+    public MatchOutcome GetMatchOutcomeByID(int id)
+    {
+      return First<MatchOutcome>(m => m.Id == id);
+    }
+
+    public Sport GetSport(string sport)
+    {
+      return First<Sport>(s => s.SportName == sport);
+    }
+
+    public Tournament GetTournament(string tournament)
+    {
+      return First<Tournament>(t => t.TournamentName == tournament);
+    }
+
+    public TeamsPlayer GetTeamOrPlayerFromName(string team)
+    {
+      return First<TeamsPlayer>(t => t.TeamName == team);
+    }
+    
     public Match SaveMatch(Match match)
     {
       return Save<Match>(match);

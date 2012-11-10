@@ -8,7 +8,8 @@ namespace Samurai.Web.ViewModels
 {
   public class FootballFixtureViewModel
   {
-    public string LeagueAndSeason { get; set; }
+    public string League { get; set; }
+    public string Season { get; set; }
     public DateTime MatchDate { get; set; }
     public string TeamsPlayerA { get; set; }
     public string TeamsPlayerB { get; set; }

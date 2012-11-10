@@ -75,17 +75,17 @@ namespace Samurai.Tests.Domain
       var sunderlandVilla = this.premCoupon.FirstOrDefault(m => m.TeamOrPlayerA == "Sunderland" && m.TeamOrPlayerB == "Aston Villa").HeadlineOdds;
       var westhamManCity = this.premCoupon.FirstOrDefault(m => m.TeamOrPlayerA == "West Ham" && m.TeamOrPlayerB == "Man City").HeadlineOdds;
 
-      manUtdArsenal[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 4.0 / 6.0, 0.05);
+      manUtdArsenal[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 4.0 / 6.0, 0.05);
       manUtdArsenal[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 14.0 / 5.0, 0.05);
-      manUtdArsenal[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 9.0 / 2.0, 0.05);
+      manUtdArsenal[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 9.0 / 2.0, 0.05);
 
-      sunderlandVilla[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 18.0 / 19.0, 0.05);
+      sunderlandVilla[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 18.0 / 19.0, 0.05);
       sunderlandVilla[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 13.0 / 5.0, 0.05);
-      sunderlandVilla[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 3.0, 0.05);
+      sunderlandVilla[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 3.0, 0.05);
 
-      westhamManCity[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 9.0 / 2.0, 0.05);
+      westhamManCity[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 9.0 / 2.0, 0.05);
       westhamManCity[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 3.0, 0.05);
-      westhamManCity[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 4.0 / 6.0, 0.05);
+      westhamManCity[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 4.0 / 6.0, 0.05);
     }
   }
 
@@ -177,17 +177,17 @@ namespace Samurai.Tests.Domain
       var manuStokeOdds = this.premCoupon.FirstOrDefault(m => m.TeamOrPlayerA == "Man United" && m.TeamOrPlayerB == "Stoke").HeadlineOdds;
       var norwichArsenalOdds = this.premCoupon.FirstOrDefault(m => m.TeamOrPlayerA == "Norwich" && m.TeamOrPlayerB == "Arsenal").HeadlineOdds;
 
-      spursChelseaOdds[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 21.0 / 10.0, 0.05);
+      spursChelseaOdds[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 21.0 / 10.0, 0.05);
       spursChelseaOdds[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 12.0 / 5.0, 0.05);
-      spursChelseaOdds[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 7.0 / 4.0, 0.05);
+      spursChelseaOdds[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 7.0 / 4.0, 0.05);
 
-      manuStokeOdds[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 1.0 / 3.0, 0.05);
+      manuStokeOdds[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 1.0 / 3.0, 0.05);
       manuStokeOdds[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 5.0, 0.05);
-      manuStokeOdds[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 13.0, 0.05);
+      manuStokeOdds[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 13.0, 0.05);
 
-      norwichArsenalOdds[Outcome.TeamOrPlayerA].ShouldApproximatelyEqual(1.0 + 11.0 / 2.0, 0.05);
+      norwichArsenalOdds[Outcome.HomeWin].ShouldApproximatelyEqual(1.0 + 11.0 / 2.0, 0.05);
       norwichArsenalOdds[Outcome.Draw].ShouldApproximatelyEqual(1.0 + 7.0 / 2.0, 0.05);
-      norwichArsenalOdds[Outcome.TeamOrPlayerB].ShouldApproximatelyEqual(1.0 + 3.0 / 5.0, 0.05);
+      norwichArsenalOdds[Outcome.AwayWin].ShouldApproximatelyEqual(1.0 + 3.0 / 5.0, 0.05);
 
     }
 

@@ -21,8 +21,8 @@ namespace Samurai.Domain.Entities
     public int? IKTSGameWeek { get; set; }
 
     public virtual TournamentEvent TournamentEvent { get; set; }
-    public virtual TeamsPlayer TeamsPlayerB { get; set; }
-    public virtual TeamsPlayer TeamsPlayerA { get; set; }
+    public virtual TeamPlayer TeamsPlayerB { get; set; }
+    public virtual TeamPlayer TeamsPlayerA { get; set; }
     public virtual ICollection<MatchOutcomeProbabilitiesInMatch> MatchOutcomeProbabilitiesInMatches { get; set; }
     public virtual ICollection<ObservedOutcome> ObservedOutcomes { get; set; }
     public virtual ICollection<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }

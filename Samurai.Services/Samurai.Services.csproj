@@ -48,8 +48,10 @@
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />
+    <Compile Include="Contracts\IOddsService.cs" />
     <Compile Include="Contracts\IPredictionService.cs" />
     <Compile Include="FixtureService.cs" />
+    <Compile Include="OddsService.cs" />
     <Compile Include="PredictionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -42,7 +42,7 @@ namespace Samurai.SqlDataAccess
     public DbSet<ScoreOutcome> ScoreOutcomes { get; set; }
     public DbSet<Sport> Sports { get; set; }
     public DbSet<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
-    public DbSet<TeamsPlayer> TeamsPlayers { get; set; }
+    public DbSet<TeamPlayer> TeamsPlayers { get; set; }
     public DbSet<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -13,7 +13,12 @@ using Samurai.SqlDataAccess.Contracts;
 
 namespace Samurai.Domain.Value
 {
-  public abstract class AbstractOddsStrategy
+  public interface IOddsStrategy
+  {
+    IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp);
+  }
+
+  public abstract class AbstractOddsStrategy : IOddsStrategy
   {
     protected readonly IWebRepository webRepository;
     protected readonly IBookmakerRepository bookmakerRepository;

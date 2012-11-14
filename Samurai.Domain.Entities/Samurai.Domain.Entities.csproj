@@ -60,7 +60,7 @@
     <Compile Include="ScoreOutcomeProbabilitiesInMatch.cs" />
     <Compile Include="Sport.cs" />
     <Compile Include="TeamPlayerExternalSourceAlias.cs" />
-    <Compile Include="TeamsPlayer.cs" />
+    <Compile Include="TeamPlayer.cs" />
     <Compile Include="Tournament.cs" />
     <Compile Include="TournamentExternalSourceAlias.cs" />
     <Compile Include="TournamentEvent.cs" />

@@ -66,7 +66,7 @@ namespace Samurai.SqlDataAccess.Migrations
       context.Set<ExternalSource>().AddOrUpdate(seed.ExternalSources);
       context.Set<MatchOutcome>().AddOrUpdate(seed.MatchOutcomes);
       context.Set<ScoreOutcome>().AddOrUpdate(seed.ScoreOutcomes);
-      context.Set<TeamsPlayer>().AddOrUpdate(seed.TeamsPlayers);
+      context.Set<TeamPlayer>().AddOrUpdate(seed.TeamsPlayers);
       context.Set<TeamPlayerExternalSourceAlias>().AddOrUpdate(seed.TeamPlayerExternalSourceAliass);
 
       SaveChanges(context);

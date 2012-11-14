@@ -19,7 +19,7 @@ namespace Samurai.SqlDataAccess
     public IDictionary<string, ExternalSource> ExternalSource { get; set; }
     public IDictionary<string, MatchOutcome> MatchOutcome { get; set; }
     public IDictionary<string, ScoreOutcome> ScoreOutcome { get; set; }
-    public IDictionary<string, TeamsPlayer> TeamsPlayer { get; set; }
+    public IDictionary<string, TeamPlayer> TeamsPlayer { get; set; }
     public IEnumerable<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public IDictionary<string, KeyValuePair> KeyValuePair { get; set; }
     public IEnumerable<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
@@ -47,6 +47,7 @@ namespace Samurai.SqlDataAccess
     public SeedData()
     {
       //bookmakers
+      var bFootballDataBestAvailable = new Bookmaker { BookmakerName = "Football Data Best Available", Slug = "football-data-best-available", IsExchange = false, BookmakerURL = "http://www.football-data.co.uk", CurrentCommission = null };
       var b10bet = new Bookmaker { BookmakerName = "10Bet", Slug = "10bet", IsExchange = false, BookmakerURL = "http://www.10bet.com", CurrentCommission = null };
       var b188bet = new Bookmaker { BookmakerName = "188Bet", Slug = "188bet", IsExchange = false, BookmakerURL = "http://www.188bet.com/en-gb/sports", CurrentCommission = null };
       var b32red_bet = new Bookmaker { BookmakerName = "32Red bet", Slug = "32red-bet", IsExchange = false, BookmakerURL = "http://www.32redbet.com/UI/Default.aspx", CurrentCommission = null };
@@ -80,6 +81,12 @@ namespace Samurai.SqlDataAccess
       var bwbx = new Bookmaker { BookmakerName = "WBX", Slug = "wbx", IsExchange = true, BookmakerURL = "http://www.wbx.com/default.ashx", CurrentCommission = 0.05m };
       var bwilliam_hill = new Bookmaker { BookmakerName = "William Hill", Slug = "william-hill", IsExchange = false, BookmakerURL = "http://www.williamhill.com/", CurrentCommission = null };
       var byouwin = new Bookmaker { BookmakerName = "youwin", Slug = "youwin", IsExchange = false, BookmakerURL = "http://www.youwin.com/en", CurrentCommission = null };
+      var bbet_win = new Bookmaker { BookmakerName = "Bet & Win", Slug = "bet-win", IsExchange = false, BookmakerURL = "https://www.bwin.com/default.aspx", CurrentCommission = null };
+      var bgamebookers = new Bookmaker { BookmakerName = "Gamebookers", Slug = "gamebookers", IsExchange = false, BookmakerURL = "https://sports.gamebookers.com/en/sports", CurrentCommission = null };
+      var binterwetten = new Bookmaker { BookmakerName = "Interwetten", Slug = "interwetten", IsExchange = false, BookmakerURL = "https://www.interwetten.com/en/Default.aspx", CurrentCommission = null };
+      var bstanleybet = new Bookmaker { BookmakerName = "Stanleybet", Slug = "stanleybet", IsExchange = false, BookmakerURL = "http://web.stanleybet.ro/", CurrentCommission = null };
+      var bsporting_odds = new Bookmaker { BookmakerName = "Sporting Odds", Slug = "sporting-odds", IsExchange = false, BookmakerURL = "www.sportingodds.co.uk", CurrentCommission = null };
+
 
       //sport
       var football = new Sport { SportName = "Football" };
@@ -269,102 +276,102 @@ namespace Samurai.SqlDataAccess
       ).ToArray();
 
       //teams
-      var arsenal = new TeamsPlayer { TeamName = "Arsenal", Slug = "arsenal", ExternalID = "0" };
-      var astonvilla = new TeamsPlayer { TeamName = "Aston Villa", Slug = "aston-villa", ExternalID = "1" };
-      var birmingham = new TeamsPlayer { TeamName = "Birmingham", Slug = "birmingham", ExternalID = "2" };
-      var blackburn = new TeamsPlayer { TeamName = "Blackburn", Slug = "blackburn", ExternalID = "3" };
-      var blackpool = new TeamsPlayer { TeamName = "Blackpool", Slug = "blackpool", ExternalID = "45" };
-      var bolton = new TeamsPlayer { TeamName = "Bolton", Slug = "bolton", ExternalID = "4" };
-      var chelsea = new TeamsPlayer { TeamName = "Chelsea", Slug = "chelsea", ExternalID = "6" };
-      var everton = new TeamsPlayer { TeamName = "Everton", Slug = "everton", ExternalID = "7" };
-      var fulham = new TeamsPlayer { TeamName = "Fulham", Slug = "fulham", ExternalID = "8" };
-      var liverpool = new TeamsPlayer { TeamName = "Liverpool", Slug = "liverpool", ExternalID = "10" };
-      var mancity = new TeamsPlayer { TeamName = "Man City", Slug = "man-city", ExternalID = "11" };
-      var manunited = new TeamsPlayer { TeamName = "Man United", Slug = "man-united", ExternalID = "12" };
-      var newcastle = new TeamsPlayer { TeamName = "Newcastle", Slug = "newcastle", ExternalID = "14" };
-      var stoke = new TeamsPlayer { TeamName = "Stoke", Slug = "stoke", ExternalID = "39" };
-      var sunderland = new TeamsPlayer { TeamName = "Sunderland", Slug = "sunderland", ExternalID = "16" };
-      var tottenham = new TeamsPlayer { TeamName = "Tottenham", Slug = "tottenham", ExternalID = "17" };
-      var westbrom = new TeamsPlayer { TeamName = "West Brom", Slug = "west-brom", ExternalID = "18" };
-      var westham = new TeamsPlayer { TeamName = "West Ham", Slug = "west-ham", ExternalID = "19" };
-      var wigan = new TeamsPlayer { TeamName = "Wigan", Slug = "wigan", ExternalID = "66" };
-      var wolves = new TeamsPlayer { TeamName = "Wolves", Slug = "wolves", ExternalID = "43" };
-      var barnsley = new TeamsPlayer { TeamName = "Barnsley", Slug = "barnsley", ExternalID = "44" };
-      var bristolcity = new TeamsPlayer { TeamName = "Bristol City", Slug = "bristol-city", ExternalID = "47" };
-      var burnley = new TeamsPlayer { TeamName = "Burnley", Slug = "burnley", ExternalID = "22" };
-      var cardiff = new TeamsPlayer { TeamName = "Cardiff", Slug = "cardiff", ExternalID = "48" };
-      var coventry = new TeamsPlayer { TeamName = "Coventry", Slug = "coventry", ExternalID = "23" };
-      var crystalpalace = new TeamsPlayer { TeamName = "Crystal Palace", Slug = "crystal-palace", ExternalID = "24" };
-      var derby = new TeamsPlayer { TeamName = "Derby", Slug = "derby", ExternalID = "25" };
-      var doncaster = new TeamsPlayer { TeamName = "Doncaster", Slug = "doncaster", ExternalID = "95" };
-      var hull = new TeamsPlayer { TeamName = "Hull", Slug = "hull", ExternalID = "77" };
-      var ipswich = new TeamsPlayer { TeamName = "Ipswich", Slug = "ipswich", ExternalID = "28" };
-      var leeds = new TeamsPlayer { TeamName = "Leeds", Slug = "leeds", ExternalID = "9" };
-      var leicester = new TeamsPlayer { TeamName = "Leicester", Slug = "leicester", ExternalID = "29" };
-      var middlesboro = new TeamsPlayer { TeamName = "Middlesboro", Slug = "middlesboro", ExternalID = "13" };
-      var millwall = new TeamsPlayer { TeamName = "Millwall", Slug = "millwall", ExternalID = "30" };
-      var norwich = new TeamsPlayer { TeamName = "Norwich", Slug = "norwich", ExternalID = "31" };
-      var nottmforest = new TeamsPlayer { TeamName = "Nott'm Forest", Slug = "nottm-forest", ExternalID = "32" };
-      var portsmouth = new TeamsPlayer { TeamName = "Portsmouth", Slug = "portsmouth", ExternalID = "33" };
-      var preston = new TeamsPlayer { TeamName = "Preston", Slug = "preston", ExternalID = "34" };
-      var qpr = new TeamsPlayer { TeamName = "QPR", Slug = "qpr", ExternalID = "62" };
-      var reading = new TeamsPlayer { TeamName = "Reading", Slug = "reading", ExternalID = "35" };
-      var scunthorpe = new TeamsPlayer { TeamName = "Scunthorpe", Slug = "scunthorpe", ExternalID = "85" };
-      var sheffieldunited = new TeamsPlayer { TeamName = "Sheffield United", Slug = "sheffield-united", ExternalID = "37" };
-      var swansea = new TeamsPlayer { TeamName = "Swansea", Slug = "swansea", ExternalID = "88" };
-      var watford = new TeamsPlayer { TeamName = "Watford", Slug = "watford", ExternalID = "41" };
-      var bournemouth = new TeamsPlayer { TeamName = "Bournemouth", Slug = "bournemouth", ExternalID = "69" };
-      var brentford = new TeamsPlayer { TeamName = "Brentford", Slug = "brentford", ExternalID = "46" };
-      var brighton = new TeamsPlayer { TeamName = "Brighton", Slug = "brighton", ExternalID = "21" };
-      var bristolrvs = new TeamsPlayer { TeamName = "Bristol Rvs", Slug = "bristol-rvs", ExternalID = "70" };
-      var carlisle = new TeamsPlayer { TeamName = "Carlisle", Slug = "carlisle", ExternalID = "73" };
-      var charlton = new TeamsPlayer { TeamName = "Charlton", Slug = "charlton", ExternalID = "5" };
-      var colchester = new TeamsPlayer { TeamName = "Colchester", Slug = "colchester", ExternalID = "51" };
-      var dagandred = new TeamsPlayer { TeamName = "Dag and Red", Slug = "dag-and-red", ExternalID = "2005" };
-      var exeter = new TeamsPlayer { TeamName = "Exeter", Slug = "exeter", ExternalID = "75" };
-      var hartlepool = new TeamsPlayer { TeamName = "Hartlepool", Slug = "hartlepool", ExternalID = "76" };
-      var huddersfield = new TeamsPlayer { TeamName = "Huddersfield", Slug = "huddersfield", ExternalID = "53" };
-      var leytonorient = new TeamsPlayer { TeamName = "Leyton Orient", Slug = "leyton-orient", ExternalID = "79" };
-      var miltonkeynes = new TeamsPlayer { TeamName = "Milton Keynes", Slug = "milton-keynes", ExternalID = "42" };
-      var nottscounty = new TeamsPlayer { TeamName = "Notts County", Slug = "notts-county", ExternalID = "57" };
-      var oldham = new TeamsPlayer { TeamName = "Oldham", Slug = "oldham", ExternalID = "58" };
-      var peterboro = new TeamsPlayer { TeamName = "Peterboro", Slug = "peterboro", ExternalID = "59" };
-      var plymouth = new TeamsPlayer { TeamName = "Plymouth", Slug = "plymouth", ExternalID = "60" };
-      var rochdale = new TeamsPlayer { TeamName = "Rochdale", Slug = "rochdale", ExternalID = "83" };
-      var sheffieldweds = new TeamsPlayer { TeamName = "Sheffield Weds", Slug = "sheffield-weds", ExternalID = "38" };
-      var southampton = new TeamsPlayer { TeamName = "Southampton", Slug = "southampton", ExternalID = "15" };
-      var swindon = new TeamsPlayer { TeamName = "Swindon", Slug = "swindon", ExternalID = "64" };
-      var tranmere = new TeamsPlayer { TeamName = "Tranmere", Slug = "tranmere", ExternalID = "65" };
-      var walsall = new TeamsPlayer { TeamName = "Walsall", Slug = "walsall", ExternalID = "40" };
-      var yeovil = new TeamsPlayer { TeamName = "Yeovil", Slug = "yeovil", ExternalID = "96" };
-      var accrington = new TeamsPlayer { TeamName = "Accrington", Slug = "accrington", ExternalID = "97" };
-      var aldershot = new TeamsPlayer { TeamName = "Aldershot", Slug = "aldershot", ExternalID = "2000" };
-      var barnet = new TeamsPlayer { TeamName = "Barnet", Slug = "barnet", ExternalID = "92" };
-      var bradford = new TeamsPlayer { TeamName = "Bradford", Slug = "bradford", ExternalID = "20" };
-      var burton = new TeamsPlayer { TeamName = "Burton", Slug = "burton", ExternalID = "2002" };
-      var bury = new TeamsPlayer { TeamName = "Bury", Slug = "bury", ExternalID = "71" };
-      var cheltenham = new TeamsPlayer { TeamName = "Cheltenham", Slug = "cheltenham", ExternalID = "49" };
-      var chesterfield = new TeamsPlayer { TeamName = "Chesterfield", Slug = "chesterfield", ExternalID = "50" };
-      var crewe = new TeamsPlayer { TeamName = "Crewe", Slug = "crewe", ExternalID = "52" };
-      var gillingham = new TeamsPlayer { TeamName = "Gillingham", Slug = "gillingham", ExternalID = "26" };
-      var hereford = new TeamsPlayer { TeamName = "Hereford", Slug = "hereford", ExternalID = "98" };
-      var lincolncity = new TeamsPlayer { TeamName = "Lincoln City", Slug = "lincoln-city", ExternalID = "80" };
-      var macclesfield = new TeamsPlayer { TeamName = "Macclesfield", Slug = "macclesfield", ExternalID = "81" };
-      var morecambe = new TeamsPlayer { TeamName = "Morecambe", Slug = "morecambe", ExternalID = "2009" };
-      var northampton = new TeamsPlayer { TeamName = "Northampton", Slug = "northampton", ExternalID = "56" };
-      var oxford = new TeamsPlayer { TeamName = "Oxford", Slug = "oxford", ExternalID = "82" };
-      var portvale = new TeamsPlayer { TeamName = "Port Vale", Slug = "port-vale", ExternalID = "61" };
-      var rotherham = new TeamsPlayer { TeamName = "Rotherham", Slug = "rotherham", ExternalID = "36" };
-      var shrewsbury = new TeamsPlayer { TeamName = "Shrewsbury", Slug = "shrewsbury", ExternalID = "86" };
-      var southend = new TeamsPlayer { TeamName = "Southend", Slug = "southend", ExternalID = "87" };
-      var stevenage = new TeamsPlayer { TeamName = "Stevenage", Slug = "stevenage", ExternalID = "2015" };
-      var stockport = new TeamsPlayer { TeamName = "Stockport", Slug = "stockport", ExternalID = "63" };
-      var torquay = new TeamsPlayer { TeamName = "Torquay", Slug = "torquay", ExternalID = "89" };
-      var wycombe = new TeamsPlayer { TeamName = "Wycombe", Slug = "wycombe", ExternalID = "67" };
-      var afcwimbledon = new TeamsPlayer { TeamName = "AFC Wimbledon", Slug = "afc-wimbledon", ExternalID = "2029" };
-      var crawleytown = new TeamsPlayer { TeamName = "Crawley Town", Slug = "crawley-town", ExternalID = "2004" };
-      var fleetwoodtown = new TeamsPlayer { TeamName = "Fleetwood Town", Slug = "fleetwood-town", ExternalID = "2033" };
-      var york = new TeamsPlayer { TeamName = "York", Slug = "york", ExternalID = "91" };
+      var arsenal = new TeamPlayer { TeamName = "Arsenal", Slug = "arsenal", ExternalID = "0" };
+      var astonvilla = new TeamPlayer { TeamName = "Aston Villa", Slug = "aston-villa", ExternalID = "1" };
+      var birmingham = new TeamPlayer { TeamName = "Birmingham", Slug = "birmingham", ExternalID = "2" };
+      var blackburn = new TeamPlayer { TeamName = "Blackburn", Slug = "blackburn", ExternalID = "3" };
+      var blackpool = new TeamPlayer { TeamName = "Blackpool", Slug = "blackpool", ExternalID = "45" };
+      var bolton = new TeamPlayer { TeamName = "Bolton", Slug = "bolton", ExternalID = "4" };
+      var chelsea = new TeamPlayer { TeamName = "Chelsea", Slug = "chelsea", ExternalID = "6" };
+      var everton = new TeamPlayer { TeamName = "Everton", Slug = "everton", ExternalID = "7" };
+      var fulham = new TeamPlayer { TeamName = "Fulham", Slug = "fulham", ExternalID = "8" };
+      var liverpool = new TeamPlayer { TeamName = "Liverpool", Slug = "liverpool", ExternalID = "10" };
+      var mancity = new TeamPlayer { TeamName = "Man City", Slug = "man-city", ExternalID = "11" };
+      var manunited = new TeamPlayer { TeamName = "Man United", Slug = "man-united", ExternalID = "12" };
+      var newcastle = new TeamPlayer { TeamName = "Newcastle", Slug = "newcastle", ExternalID = "14" };
+      var stoke = new TeamPlayer { TeamName = "Stoke", Slug = "stoke", ExternalID = "39" };
+      var sunderland = new TeamPlayer { TeamName = "Sunderland", Slug = "sunderland", ExternalID = "16" };
+      var tottenham = new TeamPlayer { TeamName = "Tottenham", Slug = "tottenham", ExternalID = "17" };
+      var westbrom = new TeamPlayer { TeamName = "West Brom", Slug = "west-brom", ExternalID = "18" };
+      var westham = new TeamPlayer { TeamName = "West Ham", Slug = "west-ham", ExternalID = "19" };
+      var wigan = new TeamPlayer { TeamName = "Wigan", Slug = "wigan", ExternalID = "66" };
+      var wolves = new TeamPlayer { TeamName = "Wolves", Slug = "wolves", ExternalID = "43" };
+      var barnsley = new TeamPlayer { TeamName = "Barnsley", Slug = "barnsley", ExternalID = "44" };
+      var bristolcity = new TeamPlayer { TeamName = "Bristol City", Slug = "bristol-city", ExternalID = "47" };
+      var burnley = new TeamPlayer { TeamName = "Burnley", Slug = "burnley", ExternalID = "22" };
+      var cardiff = new TeamPlayer { TeamName = "Cardiff", Slug = "cardiff", ExternalID = "48" };
+      var coventry = new TeamPlayer { TeamName = "Coventry", Slug = "coventry", ExternalID = "23" };
+      var crystalpalace = new TeamPlayer { TeamName = "Crystal Palace", Slug = "crystal-palace", ExternalID = "24" };
+      var derby = new TeamPlayer { TeamName = "Derby", Slug = "derby", ExternalID = "25" };
+      var doncaster = new TeamPlayer { TeamName = "Doncaster", Slug = "doncaster", ExternalID = "95" };
+      var hull = new TeamPlayer { TeamName = "Hull", Slug = "hull", ExternalID = "77" };
+      var ipswich = new TeamPlayer { TeamName = "Ipswich", Slug = "ipswich", ExternalID = "28" };
+      var leeds = new TeamPlayer { TeamName = "Leeds", Slug = "leeds", ExternalID = "9" };
+      var leicester = new TeamPlayer { TeamName = "Leicester", Slug = "leicester", ExternalID = "29" };
+      var middlesboro = new TeamPlayer { TeamName = "Middlesboro", Slug = "middlesboro", ExternalID = "13" };
+      var millwall = new TeamPlayer { TeamName = "Millwall", Slug = "millwall", ExternalID = "30" };
+      var norwich = new TeamPlayer { TeamName = "Norwich", Slug = "norwich", ExternalID = "31" };
+      var nottmforest = new TeamPlayer { TeamName = "Nott'm Forest", Slug = "nottm-forest", ExternalID = "32" };
+      var portsmouth = new TeamPlayer { TeamName = "Portsmouth", Slug = "portsmouth", ExternalID = "33" };
+      var preston = new TeamPlayer { TeamName = "Preston", Slug = "preston", ExternalID = "34" };
+      var qpr = new TeamPlayer { TeamName = "QPR", Slug = "qpr", ExternalID = "62" };
+      var reading = new TeamPlayer { TeamName = "Reading", Slug = "reading", ExternalID = "35" };
+      var scunthorpe = new TeamPlayer { TeamName = "Scunthorpe", Slug = "scunthorpe", ExternalID = "85" };
+      var sheffieldunited = new TeamPlayer { TeamName = "Sheffield United", Slug = "sheffield-united", ExternalID = "37" };
+      var swansea = new TeamPlayer { TeamName = "Swansea", Slug = "swansea", ExternalID = "88" };
+      var watford = new TeamPlayer { TeamName = "Watford", Slug = "watford", ExternalID = "41" };
+      var bournemouth = new TeamPlayer { TeamName = "Bournemouth", Slug = "bournemouth", ExternalID = "69" };
+      var brentford = new TeamPlayer { TeamName = "Brentford", Slug = "brentford", ExternalID = "46" };
+      var brighton = new TeamPlayer { TeamName = "Brighton", Slug = "brighton", ExternalID = "21" };
+      var bristolrvs = new TeamPlayer { TeamName = "Bristol Rvs", Slug = "bristol-rvs", ExternalID = "70" };
+      var carlisle = new TeamPlayer { TeamName = "Carlisle", Slug = "carlisle", ExternalID = "73" };
+      var charlton = new TeamPlayer { TeamName = "Charlton", Slug = "charlton", ExternalID = "5" };
+      var colchester = new TeamPlayer { TeamName = "Colchester", Slug = "colchester", ExternalID = "51" };
+      var dagandred = new TeamPlayer { TeamName = "Dag and Red", Slug = "dag-and-red", ExternalID = "2005" };
+      var exeter = new TeamPlayer { TeamName = "Exeter", Slug = "exeter", ExternalID = "75" };
+      var hartlepool = new TeamPlayer { TeamName = "Hartlepool", Slug = "hartlepool", ExternalID = "76" };
+      var huddersfield = new TeamPlayer { TeamName = "Huddersfield", Slug = "huddersfield", ExternalID = "53" };
+      var leytonorient = new TeamPlayer { TeamName = "Leyton Orient", Slug = "leyton-orient", ExternalID = "79" };
+      var miltonkeynes = new TeamPlayer { TeamName = "Milton Keynes", Slug = "milton-keynes", ExternalID = "42" };
+      var nottscounty = new TeamPlayer { TeamName = "Notts County", Slug = "notts-county", ExternalID = "57" };
+      var oldham = new TeamPlayer { TeamName = "Oldham", Slug = "oldham", ExternalID = "58" };
+      var peterboro = new TeamPlayer { TeamName = "Peterboro", Slug = "peterboro", ExternalID = "59" };
+      var plymouth = new TeamPlayer { TeamName = "Plymouth", Slug = "plymouth", ExternalID = "60" };
+      var rochdale = new TeamPlayer { TeamName = "Rochdale", Slug = "rochdale", ExternalID = "83" };
+      var sheffieldweds = new TeamPlayer { TeamName = "Sheffield Weds", Slug = "sheffield-weds", ExternalID = "38" };
+      var southampton = new TeamPlayer { TeamName = "Southampton", Slug = "southampton", ExternalID = "15" };
+      var swindon = new TeamPlayer { TeamName = "Swindon", Slug = "swindon", ExternalID = "64" };
+      var tranmere = new TeamPlayer { TeamName = "Tranmere", Slug = "tranmere", ExternalID = "65" };
+      var walsall = new TeamPlayer { TeamName = "Walsall", Slug = "walsall", ExternalID = "40" };
+      var yeovil = new TeamPlayer { TeamName = "Yeovil", Slug = "yeovil", ExternalID = "96" };
+      var accrington = new TeamPlayer { TeamName = "Accrington", Slug = "accrington", ExternalID = "97" };
+      var aldershot = new TeamPlayer { TeamName = "Aldershot", Slug = "aldershot", ExternalID = "2000" };
+      var barnet = new TeamPlayer { TeamName = "Barnet", Slug = "barnet", ExternalID = "92" };
+      var bradford = new TeamPlayer { TeamName = "Bradford", Slug = "bradford", ExternalID = "20" };
+      var burton = new TeamPlayer { TeamName = "Burton", Slug = "burton", ExternalID = "2002" };
+      var bury = new TeamPlayer { TeamName = "Bury", Slug = "bury", ExternalID = "71" };
+      var cheltenham = new TeamPlayer { TeamName = "Cheltenham", Slug = "cheltenham", ExternalID = "49" };
+      var chesterfield = new TeamPlayer { TeamName = "Chesterfield", Slug = "chesterfield", ExternalID = "50" };
+      var crewe = new TeamPlayer { TeamName = "Crewe", Slug = "crewe", ExternalID = "52" };
+      var gillingham = new TeamPlayer { TeamName = "Gillingham", Slug = "gillingham", ExternalID = "26" };
+      var hereford = new TeamPlayer { TeamName = "Hereford", Slug = "hereford", ExternalID = "98" };
+      var lincolncity = new TeamPlayer { TeamName = "Lincoln City", Slug = "lincoln-city", ExternalID = "80" };
+      var macclesfield = new TeamPlayer { TeamName = "Macclesfield", Slug = "macclesfield", ExternalID = "81" };
+      var morecambe = new TeamPlayer { TeamName = "Morecambe", Slug = "morecambe", ExternalID = "2009" };
+      var northampton = new TeamPlayer { TeamName = "Northampton", Slug = "northampton", ExternalID = "56" };
+      var oxford = new TeamPlayer { TeamName = "Oxford", Slug = "oxford", ExternalID = "82" };
+      var portvale = new TeamPlayer { TeamName = "Port Vale", Slug = "port-vale", ExternalID = "61" };
+      var rotherham = new TeamPlayer { TeamName = "Rotherham", Slug = "rotherham", ExternalID = "36" };
+      var shrewsbury = new TeamPlayer { TeamName = "Shrewsbury", Slug = "shrewsbury", ExternalID = "86" };
+      var southend = new TeamPlayer { TeamName = "Southend", Slug = "southend", ExternalID = "87" };
+      var stevenage = new TeamPlayer { TeamName = "Stevenage", Slug = "stevenage", ExternalID = "2015" };
+      var stockport = new TeamPlayer { TeamName = "Stockport", Slug = "stockport", ExternalID = "63" };
+      var torquay = new TeamPlayer { TeamName = "Torquay", Slug = "torquay", ExternalID = "89" };
+      var wycombe = new TeamPlayer { TeamName = "Wycombe", Slug = "wycombe", ExternalID = "67" };
+      var afcwimbledon = new TeamPlayer { TeamName = "AFC Wimbledon", Slug = "afc-wimbledon", ExternalID = "2029" };
+      var crawleytown = new TeamPlayer { TeamName = "Crawley Town", Slug = "crawley-town", ExternalID = "2004" };
+      var fleetwoodtown = new TeamPlayer { TeamName = "Fleetwood Town", Slug = "fleetwood-town", ExternalID = "2033" };
+      var york = new TeamPlayer { TeamName = "York", Slug = "york", ExternalID = "91" };
 
       //Alias
       var ocm_manunited = new TeamPlayerExternalSourceAlias { ExternalSource = oddsCheckerMobi, TeamsPlayer = manunited, Alias = "Man Utd" };
@@ -491,6 +498,21 @@ namespace Samurai.SqlDataAccess
       var bbb_888sport = new BookmakerExternalSourceAlias { ExternalSource = bestBetting, Bookmaker = b888sport, Alias = "888 Sport" };
       var bbb_totesport = new BookmakerExternalSourceAlias { ExternalSource = bestBetting, Bookmaker = btotesport, Alias = "totesport" };
 
+      var fdbbet_365 = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bbet_365, Alias = "B365" };
+      var fdbblue_square = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bblue_square, Alias = "BS" };
+      var fdbladbrokes = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bladbrokes, Alias = "LB" };
+      var fdbpinnacle_sports = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bpinnacle_sports, Alias = "PS" };
+      var fdbsporting_bet = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bsporting_bet, Alias = "SB" };
+      var fdbstan_james = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bstan_james, Alias = "SJ" };
+      var fdbwilliam_hill = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bwilliam_hill, Alias = "WH" };
+      var fdbbet_win = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bbet_win, Alias = "BW" };
+      var fdbgamebookers = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bgamebookers, Alias = "GB" };
+      var fdbinterwetten = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = binterwetten, Alias = "IW" };
+      var fdbsporting_odds = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bsporting_odds, Alias = "SO" };
+      var fdbstanleybet = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bstanleybet, Alias = "SY" };
+      var fdbbetvictor = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bbetvictor, Alias = "VC" };
+
+
       #region OddsCheckerJavaScript
       var oddsCheckerJavaScript = new KeyValuePair 
       { 
@@ -499,7 +521,7 @@ namespace Samurai.SqlDataAccess
       };
       #endregion
 
-      Bookmakers = new Bookmaker[] { bmarathonbet_co_uk, b10bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin };
+      Bookmakers = new Bookmaker[] { bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds };
       Sports = new Sport[] { football, tennis };
       Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp };
       Tournaments = new Tournament[] { t_premierLeague, t_championship, t_leagueOne, t_leagueTwo, brisbane_international, aircel_chennai_open, qatar_exxonmobil_open, apia_international_sydney, heineken_open, australian_open, open_sud_de_france, pbz_zagreb_indoors, vtr_open, abn_amro_world_tennis_tournament, brasil_open_2012, sap_open, regions_morgan_keegan_championships, copa_claro, open_13, dubai_duty_free_tennis_championships, delray_beach_international_tennis_championships, abierto_mexicano_telcel, bnp_paribas_open, sony_ericsson_open, grand_prix_hassan_ii, us_mens_clay_court_championship, monte_carlo_rolex_masters, brd_nastase_tiriac_trophy, barcelona_open_banc_sabadell, bmw_open, serbia_open_2012, estoril_open, mutua_madrid_open, internazionali_bnl_ditalia, open_de_nice_cote_dazur, roland_garros, gerry_weber_open, aegon_championships, unicef_open, aegon_international, wimbledon, mercedescup, campbells_hall_of_fame_tennis_championships, skistar_swedish_open, atp_studena_croatia_open, bet_at_home_open___german_tennis_championships_2012, atlanta_tennis_championships, credit_agricole_suisse_open_gstaad, bet_at_home_cup_kitzbuhel, farmers_classic, legg_mason_tennis_classic, rogers_cup, western__southern_open, winston_salem_open, us_open, moselle_open, st_petersburg_open, ptt_thailand_open, malaysian_open_kuala_lumpur, china_open, rakuten_japan_open_tennis_championships, shanghai_rolex_masters, erste_bank_open, if_stockholm_open, kremlin_cup, valencia_open_500, swiss_indoors_basel, bnp_paribas_masters };
@@ -508,10 +530,10 @@ namespace Samurai.SqlDataAccess
       ExternalSources = new ExternalSource[] { valueSamurai, skySports, bestBetting, oddsCheckerMobi, oddsCheckerWeb, tennisDataOdds, footballDataOdds, tb365, finkTank };
       MatchOutcomes = new MatchOutcome[] { teamOrPlayerAWin, draw, teamOrPlayerBWin };
       ScoreOutcomes = scoreOutcomes;
-      TeamsPlayers = new TeamsPlayer[] { arsenal, astonvilla, birmingham, blackburn, blackpool, bolton, chelsea, everton, fulham, liverpool, mancity, manunited, newcastle, stoke, sunderland, tottenham, westbrom, westham, wigan, wolves, barnsley, bristolcity, burnley, cardiff, coventry, crystalpalace, derby, doncaster, hull, ipswich, leeds, leicester, middlesboro, millwall, norwich, nottmforest, portsmouth, preston, qpr, reading, scunthorpe, sheffieldunited, swansea, watford, bournemouth, brentford, brighton, bristolrvs, carlisle, charlton, colchester, dagandred, exeter, hartlepool, huddersfield, leytonorient, miltonkeynes, nottscounty, oldham, peterboro, plymouth, rochdale, sheffieldweds, southampton, swindon, tranmere, walsall, yeovil, accrington, aldershot, barnet, bradford, burton, bury, cheltenham, chesterfield, crewe, gillingham, hereford, lincolncity, macclesfield, morecambe, northampton, oxford, portvale, rotherham, shrewsbury, southend, stevenage, stockport, torquay, wycombe, afcwimbledon, crawleytown, fleetwoodtown, york };
+      TeamsPlayers = new TeamPlayer[] { arsenal, astonvilla, birmingham, blackburn, blackpool, bolton, chelsea, everton, fulham, liverpool, mancity, manunited, newcastle, stoke, sunderland, tottenham, westbrom, westham, wigan, wolves, barnsley, bristolcity, burnley, cardiff, coventry, crystalpalace, derby, doncaster, hull, ipswich, leeds, leicester, middlesboro, millwall, norwich, nottmforest, portsmouth, preston, qpr, reading, scunthorpe, sheffieldunited, swansea, watford, bournemouth, brentford, brighton, bristolrvs, carlisle, charlton, colchester, dagandred, exeter, hartlepool, huddersfield, leytonorient, miltonkeynes, nottscounty, oldham, peterboro, plymouth, rochdale, sheffieldweds, southampton, swindon, tranmere, walsall, yeovil, accrington, aldershot, barnet, bradford, burton, bury, cheltenham, chesterfield, crewe, gillingham, hereford, lincolncity, macclesfield, morecambe, northampton, oxford, portvale, rotherham, shrewsbury, southend, stevenage, stockport, torquay, wycombe, afcwimbledon, crawleytown, fleetwoodtown, york };
       TeamPlayerExternalSourceAliass = new TeamPlayerExternalSourceAlias[] { ocw_manunited, ocw_wolves, ocw_middlesboro, ocw_nottmforest, ocw_sheffieldunited, ocw_bristolrvs, ocw_dagandred, ocw_miltonkeynes, ocw_nottscounty, ocw_peterboro, ocw_sheffieldweds, ocw_lincolncity, ocw_crawleytown, ocm_manunited, ocm_wolves, ocm_middlesboro, ocm_nottmforest, ocm_sheffieldunited, ocm_bristolrvs, ocm_dagandred, ocm_miltonkeynes, ocm_nottscounty, ocm_peterboro, ocm_sheffieldweds, ocm_lincolncity, ocm_crawleytown, bb_birmingham, bb_blackburn, bb_bolton, bb_mancity, bb_manunited, bb_newcastle, bb_stoke, bb_tottenham, bb_westbrom, bb_wigan, bb_wolves, bb_cardiff, bb_coventry, bb_derby, bb_doncaster, bb_hull, bb_ipswich, bb_leeds, bb_leicester, bb_middlesboro, bb_norwich, bb_nottmforest, bb_preston, bb_qpr, bb_scunthorpe, bb_swansea, bb_bournemouth, bb_brighton, bb_bristolrvs, bb_carlisle, bb_charlton, bb_colchester, bb_dagandred, bb_exeter, bb_hartlepool, bb_huddersfield, bb_miltonkeynes, bb_oldham, bb_peterboro, bb_plymouth, bb_sheffieldweds, bb_swindon, bb_tranmere, bb_yeovil, bb_accrington, bb_aldershot, bb_bradford, bb_burton, bb_cheltenham, bb_crewe, bb_hereford, bb_lincolncity, bb_macclesfield, bb_northampton, bb_oxford, bb_rotherham, bb_shrewsbury, bb_southend, bb_stockport, bb_torquay, bb_wycombe, bb_york, ss_astonvilla, ss_afcwimbledon, ss_bournemouth, ss_bristolcity, ss_bristolrvs, ss_burton, ss_crystalpalace, ss_chesterfield, ss_crawleytown, ss_dagandred, ss_fleetwoodtown, ss_huddersfield, ss_hull, ss_leytonorient, ss_manunited, ss_middlesboro, ss_miltonkeynes, ss_nottmforest, ss_northampton, ss_nottscounty, ss_oxford, ss_sheffieldunited, ss_sheffieldweds, ss_southampton, ss_stoke, ss_york };
       KeyValuePairs = new KeyValuePair[] { oddsCheckerJavaScript };
-      BookmakerExternalSourceAliass = new BookmakerExternalSourceAlias[] { bbb_totesport, bbb_888sport, bbb_skybet, bbb_sportingbet };
+      BookmakerExternalSourceAliass = new BookmakerExternalSourceAlias[] { bbb_totesport, bbb_888sport, bbb_skybet, bbb_sportingbet, fdbbet_365, fdbblue_square, fdbladbrokes, fdbpinnacle_sports, fdbsporting_bet, fdbstan_james, fdbwilliam_hill, fdbbet_win, fdbgamebookers, fdbinterwetten, fdbsporting_odds, fdbstanleybet, fdbbetvictor };
     }
 
     public Bookmaker[] Bookmakers { get; set; }
@@ -523,7 +545,7 @@ namespace Samurai.SqlDataAccess
     public ExternalSource[] ExternalSources { get; set; }
     public MatchOutcome[] MatchOutcomes { get; set; }
     public ScoreOutcome[] ScoreOutcomes { get; set; }
-    public TeamsPlayer[] TeamsPlayers { get; set; }
+    public TeamPlayer[] TeamsPlayers { get; set; }
     public TeamPlayerExternalSourceAlias[] TeamPlayerExternalSourceAliass { get; set; }
     public KeyValuePair[] KeyValuePairs { get; set; }
     public BookmakerExternalSourceAlias[] BookmakerExternalSourceAliass { get; set; }

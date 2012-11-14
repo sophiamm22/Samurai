@@ -12,6 +12,7 @@ namespace Samurai.SqlDataAccess.Contracts
   {
     Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource);
     ExternalSource GetExternalSource(string sourceName);
+    ExternalSource GetExternalSourceFromSlug(string slug);
     Competition GetCompetition(string competitionName);
     Bookmaker FindByName(string bookmakerName);
     Bookmaker FindByOddsCheckerID(string oddsCheckerID);

@@ -6,7 +6,7 @@ using Samurai.Domain.Entities;
 
 namespace Samurai.SqlDataAccess.Mapping
 {
-  public class TeamsPlayerMap : EntityTypeConfiguration<TeamsPlayer>
+  public class TeamsPlayerMap : EntityTypeConfiguration<TeamPlayer>
   {
     public TeamsPlayerMap()
     {

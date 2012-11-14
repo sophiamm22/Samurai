@@ -43,7 +43,13 @@
     <Compile Include="AccountViewModels.cs" />
     <Compile Include="FootballFixtureSummaryViewModel.cs" />
     <Compile Include="FootballFixtureViewModel.cs" />
+    <Compile Include="MatchCouponViewModel.cs" />
+    <Compile Include="OddsSourceViewModel.cs" />
+    <Compile Include="OddsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SportViewModel.cs" />
+    <Compile Include="TeamPlayerViewModel.cs" />
+    <Compile Include="TournamentViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

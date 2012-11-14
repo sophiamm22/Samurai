@@ -65,15 +65,15 @@ namespace Samurai.Tests
 
     public static M.Mock<IFixtureRepository> HasNoPersistedMatches(this M.Mock<IFixtureRepository> repo)
     {
-      repo.Setup(t => t.GetMatchFromTeamSelections(M.It.IsAny<TeamsPlayer>(), M.It.IsAny<TeamsPlayer>(), M.It.IsAny<DateTime>()))
+      repo.Setup(t => t.GetMatchFromTeamSelections(M.It.IsAny<TeamPlayer>(), M.It.IsAny<TeamPlayer>(), M.It.IsAny<DateTime>()))
           .Returns<Match>(null);
       return repo;
     }
 
     public static M.Mock<IFixtureRepository> HasPersistedMatches(this M.Mock<IFixtureRepository> repo)
     {
-      repo.Setup(t => t.GetMatchFromTeamSelections(M.It.IsAny<TeamsPlayer>(), M.It.IsAny<TeamsPlayer>(), M.It.IsAny<DateTime>()))
-          .Returns((TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime matchDate) =>
+      repo.Setup(t => t.GetMatchFromTeamSelections(M.It.IsAny<TeamPlayer>(), M.It.IsAny<TeamPlayer>(), M.It.IsAny<DateTime>()))
+          .Returns((TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate) =>
             {
               var match = new Match
               {
@@ -111,8 +111,8 @@ namespace Samurai.Tests
 
           for (int i = 0; i < theseTeams.GetLength(0); i++)
           {
-            var homeTeam = new TeamsPlayer { ExternalID = theseTeams[i, 0].ToString() };
-            var awayTeam = new TeamsPlayer { ExternalID = theseTeams[i, 1].ToString() };
+            var homeTeam = new TeamPlayer { ExternalID = theseTeams[i, 0].ToString() };
+            var awayTeam = new TeamPlayer { ExternalID = theseTeams[i, 1].ToString() };
             var match = new Match { TeamsPlayerA = homeTeam, TeamsPlayerB = awayTeam };
 
             returnList.Add(match);

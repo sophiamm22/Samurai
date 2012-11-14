@@ -14,7 +14,13 @@ using Samurai.Core;
 
 namespace Samurai.Domain.Value
 {
-  public abstract class AbstractFixtureStrategy
+  public interface IFixtureStrategy
+  {
+    IEnumerable<Match> UpdateFixtures(DateTime fixtureDate);
+    IEnumerable<Match> UpdateResults(DateTime fixtureDate, string reusedHTML = "");
+  }
+
+  public abstract class AbstractFixtureStrategy : IFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
@@ -34,50 +40,6 @@ namespace Samurai.Domain.Value
       : base(fixtureRepository, webRepository)
     {
     }
-
-    private IEnumerable<Match> ConvertFirxtures(DateTime fixtureDate, IEnumerable<ISkySportsFixture> fixtureTokens)
-    {
-      var returnMatches = new List<Match>();
-      var skySportsSource = this.fixtureRepository.GetExternalSource("Sky Sports");
-      var valueSamuraiSource = this.fixtureRepository.GetExternalSource("Value Samurai");
-
-      foreach (var fixture in fixtureTokens)
-      {
-        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource);
-        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource);
-
-        var homeTeam = this.fixtureRepository.GetTeamOrPlayer(homeTeamName);
-        var awayTeam = this.fixtureRepository.GetTeamOrPlayer(awayTeamName);
-
-        if (homeTeam == null) throw new ArgumentNullException("homeTeam");
-        if (awayTeam == null) throw new ArgumentNullException("awayTeam");
-
-        var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
-        if (persistedMatch == null)
-        {
-          var tournamentEvent = this.fixtureRepository.GetFootballTournamentEvent((int)fixture.LeagueEnum, fixtureDate);
-          var newMatch = new Match()
-          {
-            TournamentEvent = tournamentEvent,
-            MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes),
-            TeamsPlayerA = homeTeam,
-            TeamsPlayerB = awayTeam,
-            EligibleForBetting = true
-          };
-
-          returnMatches.Add(newMatch);
-        }
-        else
-        {
-          //only field we're likley to need to update
-          persistedMatch.MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes);
-          returnMatches.Add(persistedMatch);
-        }
-      }
-
-      return returnMatches;
-    }
-
 
     public override IEnumerable<Match> UpdateFixtures(DateTime fixtureDate)
     {
@@ -120,6 +82,50 @@ namespace Samurai.Domain.Value
         returnMatches.Add(match);
       }
       this.fixtureRepository.SaveChanges();
+      return returnMatches;
+    }
+
+
+    private IEnumerable<Match> ConvertFirxtures(DateTime fixtureDate, IEnumerable<ISkySportsFixture> fixtureTokens)
+    {
+      var returnMatches = new List<Match>();
+      var skySportsSource = this.fixtureRepository.GetExternalSource("Sky Sports");
+      var valueSamuraiSource = this.fixtureRepository.GetExternalSource("Value Samurai");
+
+      foreach (var fixture in fixtureTokens)
+      {
+        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource);
+        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource);
+
+        var homeTeam = this.fixtureRepository.GetTeamOrPlayer(homeTeamName);
+        var awayTeam = this.fixtureRepository.GetTeamOrPlayer(awayTeamName);
+
+        if (homeTeam == null) throw new ArgumentNullException("homeTeam");
+        if (awayTeam == null) throw new ArgumentNullException("awayTeam");
+
+        var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixtureDate);
+        if (persistedMatch == null)
+        {
+          var tournamentEvent = this.fixtureRepository.GetFootballTournamentEvent((int)fixture.LeagueEnum, fixtureDate);
+          var newMatch = new Match()
+          {
+            TournamentEvent = tournamentEvent,
+            MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes),
+            TeamsPlayerA = homeTeam,
+            TeamsPlayerB = awayTeam,
+            EligibleForBetting = true
+          };
+
+          returnMatches.Add(newMatch);
+        }
+        else
+        {
+          //only field we're likley to need to update
+          persistedMatch.MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes);
+          returnMatches.Add(persistedMatch);
+        }
+      }
+
       return returnMatches;
     }
   }

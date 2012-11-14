@@ -27,6 +27,11 @@ namespace Samurai.SqlDataAccess
         return new Uri(couponData.CouponURL);
     }
 
+    public ExternalSource GetExternalSourceFromSlug(string slug)
+    {
+      return First<ExternalSource>(s => s.Source.Replace(" ", "-").ToLower() == slug.ToLower());
+    }
+
     public ExternalSource GetExternalSource(string source)
     {
       return First<ExternalSource>(s => s.Source == source);

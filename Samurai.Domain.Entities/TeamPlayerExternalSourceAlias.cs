@@ -10,6 +10,6 @@ namespace Samurai.Domain.Entities
     public string Alias { get; set; }
 
     public virtual ExternalSource ExternalSource { get; set; }
-    public virtual TeamsPlayer TeamsPlayer { get; set; }
+    public virtual TeamPlayer TeamsPlayer { get; set; }
   }
 }

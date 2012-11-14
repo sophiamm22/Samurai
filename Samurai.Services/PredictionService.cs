@@ -17,11 +17,11 @@ namespace Samurai.Services
 {
   public class PredictionService : IPredictionService
   {
-    private readonly IPredictionProvider predictionProvider;
+    private readonly IPredictionStrategyProvider predictionProvider;
     private readonly IPredictionRepository predictionRepository;
     private readonly IFixtureRepository fixtureRepository;
 
-    public PredictionService(IPredictionProvider predictionProvider,
+    public PredictionService(IPredictionStrategyProvider predictionProvider,
       IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
     {
       if (predictionProvider == null) throw new ArgumentNullException("predictionProvider");

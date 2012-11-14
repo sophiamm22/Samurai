@@ -24,17 +24,29 @@ namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
     public override IndexFootballFixturesReply Handle(IndexFootballFixturesRequest request)
     {
       var fixtures = new List<FootballFixtureSummaryViewModel>();
+
+      DateTime fixtureDate = DateTime.Now.Date;
+      if (!request.GameWeek.HasValue && !DateTime.TryParse(request.DateString, out fixtureDate))
+      {
+        this.reply.ModelErrors.Add("DateFormat", string.Format("Date was not in a recognised format {0}", request.DateString));
+        return this.reply;
+      }
+      
+      var leagueViewModel = this.fixtureService.GetTournament(request.League);
+      if (leagueViewModel == null)
+      {
+        this.reply.ModelErrors.Add("LeagueName", string.Format("Couldn't find league: {0}", request.League));
+        return this.reply;
+      }
+
       if (!request.GameWeek.HasValue)
-        fixtures.AddRange(this.fixtureService.GetFootballFixturesByDate(request.League, request.DateString));
+        fixtures.AddRange(this.fixtureService.GetFootballFixturesByDate(fixtureDate, leagueViewModel.TournamentName));
       else
-        fixtures.AddRange(this.fixtureService.GetFootballFixturesByGameweek(request.League, request.DateString));
+        fixtures.AddRange(this.fixtureService.GetFootballFixturesByGameweek((int)request.GameWeek, leagueViewModel.TournamentName));
       
       if (fixtures.Count() == 0)
       {
-        if (this.fixtureService.LeagueExists(request.League))
-          this.reply.ModelErrors.Add("NoMatches", string.Format("Couldn't find {0} league matches on {1}", request.League, request.DateString));
-        else
-          this.reply.ModelErrors.Add("NoLeague", string.Format("Didn't recognise the league name {0}", request.League));
+        this.reply.ModelErrors.Add("NoMatches", string.Format("Couldn't find {0} league matches on {1}", request.League, request.DateString));
         return this.reply;
       }
 

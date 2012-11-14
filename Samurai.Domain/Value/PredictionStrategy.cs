@@ -11,7 +11,12 @@ using Samurai.Domain.APIModel;
 
 namespace Samurai.Domain.Value
 {
-  public abstract class AbstractPredictionStrategy
+  public interface IPredictionStrategy
+  {
+    IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+  }
+
+  public abstract class AbstractPredictionStrategy : IPredictionStrategy
   {
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
@@ -114,7 +119,7 @@ namespace Samurai.Domain.Value
     public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
       var gameWeek = this.fixtureRepository.GetDaysFootballMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
-      var footballTeams = new List<TeamsPlayer>();
+      var footballTeams = new List<TeamPlayer>();
       var predictions = new List<Model.IGenericPrediction>();
 
       foreach (var game in gameWeek)

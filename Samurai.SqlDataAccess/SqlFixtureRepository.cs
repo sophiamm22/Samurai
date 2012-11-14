@@ -57,13 +57,13 @@ namespace Samurai.SqlDataAccess
         fixtureDate.Day, fixtureDate.ToString("MMMM").ToLower(), fixtureDate.Year));
     }
 
-    public TeamsPlayer GetTeamOrPlayer(string slug)
+    public TeamPlayer GetTeamOrPlayer(string slug)
     {
-      var teamOrPlayer = First<TeamsPlayer>(t => t.Slug == slug);
+      var teamOrPlayer = First<TeamPlayer>(t => t.Slug == slug);
       return teamOrPlayer;
     }
 
-    public IEnumerable<Match> GetMatchesFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime startDate, DateTime endDate)
+    public IEnumerable<Match> GetMatchesFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime startDate, DateTime endDate)
     {
       return GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
                                   m.TeamBID == awayTeam.Id &&
@@ -73,7 +73,7 @@ namespace Samurai.SqlDataAccess
                             .Include("ObservedOutcomes.ScoreOutcome");
     }
 
-    public Match GetMatchFromTeamSelections(TeamsPlayer homeTeam, TeamsPlayer awayTeam, DateTime matchDate)
+    public Match GetMatchFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate)
     {
       return GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
                                   m.TeamBID == awayTeam.Id &&
@@ -83,6 +83,14 @@ namespace Samurai.SqlDataAccess
                             .Include("TournamentEvent")
                             .Include("TournamentEvent.Tournament")
                             .FirstOrDefault();
+    }
+
+    public IEnumerable<Match> GetMatchesForOdds(DateTime matchDate)
+    {
+      return GetQuery<Match>(m => m.MatchDate.Date == matchDate.Date)
+                            .Include(m => m.MatchCouponURLs.Select(u => u.ExternalSource))
+                            .Include(m => m.MatchOutcomeProbabilitiesInMatches.Select(o => o.MatchOutcome))
+                            .Include(m => m.MatchOutcomeProbabilitiesInMatches.SelectMany(o => o.MatchOutcomeOdds).Select(e => e.ExternalSource));
     }
 
     public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore)
@@ -113,7 +121,12 @@ namespace Samurai.SqlDataAccess
 
     public Sport GetSport(string sport)
     {
-      return First<Sport>(s => s.SportName == sport);
+      return First<Sport>(s => s.SportName.ToLower() == sport.ToLower());
+    }
+
+    public Tournament GetTournamentFromSlug(string slug)
+    {
+      return First<Tournament>(t => t.Slug == slug.ToLower());
     }
 
     public Tournament GetTournament(string tournament)
@@ -121,9 +134,9 @@ namespace Samurai.SqlDataAccess
       return First<Tournament>(t => t.TournamentName == tournament);
     }
 
-    public TeamsPlayer GetTeamOrPlayerFromName(string team)
+    public TeamPlayer GetTeamOrPlayerFromName(string team)
     {
-      return First<TeamsPlayer>(t => t.TeamName == team);
+      return First<TeamPlayer>(t => t.TeamName == team);
     }
     
     public Match SaveMatch(Match match)

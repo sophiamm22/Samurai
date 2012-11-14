@@ -11,7 +11,14 @@ using Samurai.Domain.HtmlElements;
 
 namespace Samurai.Domain.Value
 {
-  public abstract class AbstractCouponStrategy
+  public interface ICouponStrategy
+  {
+    IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
+    IEnumerable<IGenericMatchCoupon> GetMatches(Uri tournamentURL);
+    IEnumerable<IGenericMatchCoupon> GetMatches();
+  }
+
+  public abstract class AbstractCouponStrategy : ICouponStrategy
   {
     protected readonly IBookmakerRepository bookmakerRepository;
     protected readonly IFixtureRepository fixtureRepository;

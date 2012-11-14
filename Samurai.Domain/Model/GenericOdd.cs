@@ -36,4 +36,9 @@ namespace Samurai.Domain.Model
   {
     public string BetSlipValue { get; set; }
   }
+
+  public class ConcreateOdd : GenericOdd
+  {
+  }
+
 }

@@ -126,6 +126,8 @@ namespace Samurai.Domain.Value
             TeamOrPlayerA = teamOrPlayerA,
             TeamOrPlayerB = teamOrPlayerB,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
+            Source = this.valueOptions.OddsSource.Source,
+            LastChecked = DateTime.Now
           };
 
           matchData.HeadlineOdds = match.BestOdds;
@@ -199,6 +201,8 @@ namespace Samurai.Domain.Value
           MatchURL = match.MatchURL,
           TeamOrPlayerA = teamOrPlayerA,
           TeamOrPlayerB = teamOrPlayerB,
+          Source = this.valueOptions.OddsSource.Source,
+          LastChecked = DateTime.Now
         };
         returnMatches.Add(matchData);
       }
@@ -246,6 +250,8 @@ namespace Samurai.Domain.Value
             TeamOrPlayerA = teamOrPlayerA,
             TeamOrPlayerB = teamOrPlayerB,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
+            Source = this.valueOptions.OddsSource.Source,
+            LastChecked = DateTime.Now
           };
 
           matchData.HeadlineOdds = match.BestOdds;

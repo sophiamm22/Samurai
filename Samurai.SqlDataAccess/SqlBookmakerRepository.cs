@@ -19,12 +19,17 @@ namespace Samurai.SqlDataAccess
 
     public Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource)
     {
-      var couponData = GetQuery<TournamentCouponURL>(c => c.Id == tournament.Id && c.Id == externalSource.Id)
+      var couponData = GetQuery<TournamentCouponURL>(c => c.Tournament.Id == tournament.Id && c.ExternalSource.Id == externalSource.Id)
                         .FirstOrDefault();
       if (couponData == null)
         throw new ArgumentNullException("couponData");
       else
         return new Uri(couponData.CouponURL);
+    }
+
+    public IEnumerable<ExternalSource> GetActiveOddsSources()
+    {
+      return GetQuery<ExternalSource>(e => e.UseByDefault && e.OddsSource).ToList();
     }
 
     public ExternalSource GetExternalSourceFromSlug(string slug)
@@ -101,6 +106,11 @@ namespace Samurai.SqlDataAccess
         bookmakerNameDestination = bookmakerAlias.First().Bookmaker.BookmakerName;
 
       return bookmakerNameDestination;
+    }
+
+    public void SaveChanges()
+    {
+      UnitOfWork.SaveChanges();
     }
   }
 }

@@ -15,6 +15,8 @@ namespace Samurai.SqlDataAccess.Mapping
       this.Property(t => t.Turnover).IsRequired();
       this.Property(t => t.Revenue).IsRequired();
       this.Property(t => t.KellyMultiplier).IsRequired();
+      this.Property(t => t.EdgeRequiredOverride).HasPrecision(10, 4);
+      this.Property(t => t.KellyMultiplier).HasPrecision(5, 4);
 
       this.ToTable("Funds");
       this.Property(t => t.Id).HasColumnName("FundID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

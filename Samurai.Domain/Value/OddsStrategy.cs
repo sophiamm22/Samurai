@@ -132,7 +132,7 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerMobiCompetitor)
         {
-          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination);
+          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerMobiCompetitor)oddsToken).Outcome, source, destination);
           currentOutcome = playerLookup[currentOutcomeLocal];
 
           oddsForOutcome = new List<GenericOdd>();
@@ -200,7 +200,7 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerWebCompetitor)
         {
-          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination);
+          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerWebCompetitor)oddsToken).Outcome, source, destination);
           currentOutcome = playerLookup[currentOutcomeLocal];
 
           oddsForOutcome = new List<GenericOdd>();
@@ -209,7 +209,7 @@ namespace Samurai.Domain.Value
         else
         {
           var odd = (OddsCheckerWebOdds)oddsToken;
-          var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.OddsCheckerID);
+          var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.BookmakerID);
           var bSlip = string.Format("www.oddschecker.com{0}", jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString());
 
           oddsForOutcome.Add(new OddsCheckerOdd()

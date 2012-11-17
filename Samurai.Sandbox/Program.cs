@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Castle.Windsor;
+using Samurai.Services.AutoMapper;
 
 namespace Samurai.Sandbox
 {
@@ -11,11 +12,14 @@ namespace Samurai.Sandbox
   {
     static void Main(string[] args)
     {
+      AutoMapperManualConfiguration.Configure();
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());
 
-      
+      var date = new DateTime(2012, 11, 18);
 
+      var doitbaby = new FullFootballDownload(container, date);
+      doitbaby.PopulateDatabase();
     }
   }
 }

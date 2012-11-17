@@ -15,6 +15,7 @@ namespace Samurai.SqlDataAccess.Mapping
       this.Property(t => t.ExternalSourceID).HasColumnName("ExternalSourceID_fk");
       this.Property(t => t.MatchOutcomeProbabilitiesInMatchID).HasColumnName("MatchOutcomeProbabilitiesInMatchID_fk");
       this.Property(t => t.BookmakerID).HasColumnName("BookmakerID_fk");
+      this.Property(t => t.Odd).HasPrecision(10, 4);
 
       // Relationships
       this.HasRequired(t => t.Bookmaker)

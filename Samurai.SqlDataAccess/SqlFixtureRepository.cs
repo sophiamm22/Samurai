@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.Objects;
 
 using Infrastructure.Data;
 using Samurai.Domain.Entities;
@@ -27,6 +28,14 @@ namespace Samurai.SqlDataAccess
       return competition.Tournaments.FirstOrDefault().TournamentEvents
                           .FirstOrDefault(t => t.StartDate.Year == seasonStartYear)
                           .Matches;
+    }
+
+    public IEnumerable<Match> GetDaysFootballMatches(DateTime matchDate)
+    {
+      var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
+
+      return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
+                .Include(m => m.TournamentEvent.Tournament);
     }
 
     public ExternalSource GetExternalSource(string sourceName)
@@ -77,7 +86,7 @@ namespace Samurai.SqlDataAccess
     {
       return GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
                                   m.TeamBID == awayTeam.Id &&
-                                  m.MatchDate.Date == matchDate.Date)
+                                  EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
                             .Include("ObservedOutcomes")
                             .Include("ObservedOutcomes.ScoreOutcome")
                             .Include("TournamentEvent")
@@ -85,12 +94,14 @@ namespace Samurai.SqlDataAccess
                             .FirstOrDefault();
     }
 
-    public IEnumerable<Match> GetMatchesForOdds(DateTime matchDate)
+    public IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament)
     {
-      return GetQuery<Match>(m => m.MatchDate.Date == matchDate.Date)
+      return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
+                            .Where(m => m.TournamentEvent.Tournament.TournamentName == tournament)
                             .Include(m => m.MatchCouponURLs.Select(u => u.ExternalSource))
                             .Include(m => m.MatchOutcomeProbabilitiesInMatches.Select(o => o.MatchOutcome))
-                            .Include(m => m.MatchOutcomeProbabilitiesInMatches.SelectMany(o => o.MatchOutcomeOdds).Select(e => e.ExternalSource));
+                            .Include(m => m.MatchOutcomeProbabilitiesInMatches.Select(o => o.MatchOutcomeOdds.Select(e => e.ExternalSource)))
+                            .ToList();
     }
 
     public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore)
@@ -137,6 +148,11 @@ namespace Samurai.SqlDataAccess
     public TeamPlayer GetTeamOrPlayerFromName(string team)
     {
       return First<TeamPlayer>(t => t.TeamName == team);
+    }
+
+    public void AddMatch(Match match)
+    {
+      Add<Match>(match);
     }
     
     public Match SaveMatch(Match match)

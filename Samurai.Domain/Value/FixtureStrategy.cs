@@ -81,7 +81,6 @@ namespace Samurai.Domain.Value
         });
         returnMatches.Add(match);
       }
-      this.fixtureRepository.SaveChanges();
       return returnMatches;
     }
 
@@ -97,8 +96,8 @@ namespace Samurai.Domain.Value
         var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource);
         var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource);
 
-        var homeTeam = this.fixtureRepository.GetTeamOrPlayer(homeTeamName);
-        var awayTeam = this.fixtureRepository.GetTeamOrPlayer(awayTeamName);
+        var homeTeam = this.fixtureRepository.GetTeamOrPlayerFromName(homeTeamName);
+        var awayTeam = this.fixtureRepository.GetTeamOrPlayerFromName(awayTeamName);
 
         if (homeTeam == null) throw new ArgumentNullException("homeTeam");
         if (awayTeam == null) throw new ArgumentNullException("awayTeam");
@@ -117,6 +116,7 @@ namespace Samurai.Domain.Value
           };
 
           returnMatches.Add(newMatch);
+          this.fixtureRepository.AddMatch(newMatch);
         }
         else
         {
@@ -125,7 +125,6 @@ namespace Samurai.Domain.Value
           returnMatches.Add(persistedMatch);
         }
       }
-
       return returnMatches;
     }
   }

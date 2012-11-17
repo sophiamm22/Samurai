@@ -68,6 +68,8 @@ namespace Samurai.SqlDataAccess.Migrations
       context.Set<ScoreOutcome>().AddOrUpdate(seed.ScoreOutcomes);
       context.Set<TeamPlayer>().AddOrUpdate(seed.TeamsPlayers);
       context.Set<TeamPlayerExternalSourceAlias>().AddOrUpdate(seed.TeamPlayerExternalSourceAliass);
+      context.Set<TournamentCouponURL>().AddOrUpdate(seed.TournamentCouponURLs);
+      context.Set<KeyValuePair>().AddOrUpdate(seed.KeyValuePairs);
 
       SaveChanges(context);
     }

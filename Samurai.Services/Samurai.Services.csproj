@@ -46,6 +46,9 @@
     <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
     <Compile Include="AutoMapper\FootballFixtureProfile.cs" />
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
+    <Compile Include="AutoMapper\OddsSourceProfile.cs" />
+    <Compile Include="AutoMapper\SportProfile.cs" />
+    <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />
     <Compile Include="Contracts\IOddsService.cs" />

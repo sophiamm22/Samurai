@@ -44,6 +44,7 @@ namespace Samurai.SqlDataAccess
     public DbSet<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public DbSet<TeamPlayer> TeamsPlayers { get; set; }
     public DbSet<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
+    public DbSet<KeyValuePair> KeyValuePairs { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
@@ -68,6 +69,7 @@ namespace Samurai.SqlDataAccess
       modelBuilder.Configurations.Add(new TeamsPlayerMap());
       modelBuilder.Configurations.Add(new TournamentExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new BookmakerExternalSourceAliasMap());
+      modelBuilder.Configurations.Add(new KeyValuePairMap());
     }
   }
 }

@@ -31,7 +31,7 @@ namespace Samurai.Domain.Value
 
     public ICouponStrategy CreateCouponStrategy(IValueOptions valueOptions)
     {
-      if (valueOptions.OddsSource.Source == "BestBetting")
+      if (valueOptions.OddsSource.Source == "Best Betting")
       {
         if (valueOptions.Sport.SportName == "Football")
           return new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository, 
@@ -42,7 +42,7 @@ namespace Samurai.Domain.Value
         else
           throw new ArgumentException("Sport not recognised");
       }
-      else if (valueOptions.OddsSource.Source == "OddsChecker Mobi")
+      else if (valueOptions.OddsSource.Source == "Odds Checker Mobi")
       {
         if (valueOptions.Sport.SportName == "Football")
           return new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository,
@@ -53,7 +53,7 @@ namespace Samurai.Domain.Value
         else
           throw new ArgumentException("Sport not recognised");
       }
-      else if (valueOptions.OddsSource.Source == "OddsChecker Web")
+      else if (valueOptions.OddsSource.Source == "Odds Checker Web")
       {
         if (valueOptions.Sport.SportName == "Football")
           return new OddsCheckerWebCouponStrategy<OddsCheckerWebCompetitionFootball>(this.bookmakerRepository,

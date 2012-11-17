@@ -14,6 +14,9 @@ namespace Samurai.Services.AutoMapper
       Mapper.Initialize(x =>
       {
         x.AddProfile<FootballFixtureProfile>();
+        x.AddProfile<OddsSourceProfile>();
+        x.AddProfile<SportProfile>();
+        x.AddProfile<TournamentProfile>();
       });
     }
   }

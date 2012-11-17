@@ -23,10 +23,12 @@ namespace Samurai.SqlDataAccess
     public IEnumerable<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public IDictionary<string, KeyValuePair> KeyValuePair { get; set; }
     public IEnumerable<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
+    public IEnumerable<TournamentCouponURL> TournamentCouponURL { get; set; }
 
     public SeedDataDictionaries()
       : base()
     {
+      
       Bookmaker = Bookmakers.ToDictionary(d => d.BookmakerName);
       Sport = Sports.ToDictionary(d => d.SportName);
       Competition = Competitions.ToDictionary(d => d.CompetitionName);
@@ -39,6 +41,7 @@ namespace Samurai.SqlDataAccess
       TeamPlayerExternalSourceAlias = TeamPlayerExternalSourceAliass.ToList();
       KeyValuePair = KeyValuePairs.ToDictionary(d => d.Key);
       BookmakerExternalSourceAlias = BookmakerExternalSourceAliass.ToList();
+      TournamentCouponURL = TournamentCouponURLs.ToList();
     }
   }
 
@@ -48,45 +51,48 @@ namespace Samurai.SqlDataAccess
     {
       //bookmakers
       var bFootballDataBestAvailable = new Bookmaker { BookmakerName = "Football Data Best Available", Slug = "football-data-best-available", IsExchange = false, BookmakerURL = "http://www.football-data.co.uk", CurrentCommission = null };
-      var b10bet = new Bookmaker { BookmakerName = "10Bet", Slug = "10bet", IsExchange = false, BookmakerURL = "http://www.10bet.com", CurrentCommission = null };
-      var b188bet = new Bookmaker { BookmakerName = "188Bet", Slug = "188bet", IsExchange = false, BookmakerURL = "http://www.188bet.com/en-gb/sports", CurrentCommission = null };
-      var b32red_bet = new Bookmaker { BookmakerName = "32Red bet", Slug = "32red-bet", IsExchange = false, BookmakerURL = "http://www.32redbet.com/UI/Default.aspx", CurrentCommission = null };
-      var b888sport = new Bookmaker { BookmakerName = "888sport", Slug = "888sport", IsExchange = false, BookmakerURL = "http://www.888sport.com/bet", CurrentCommission = null };
-      var bbet_365 = new Bookmaker { BookmakerName = "Bet 365", Slug = "bet-365", IsExchange = false, BookmakerURL = "http://www.bet365.com", CurrentCommission = null };
-      var bbet_victor = new Bookmaker { BookmakerName = "Bet Victor", Slug = "bet-victor", IsExchange = false, BookmakerURL = "http://www.betvictor.com", CurrentCommission = null };
-      var bbet770 = new Bookmaker { BookmakerName = "Bet770", Slug = "bet770", IsExchange = false, BookmakerURL = "http://bet.770.com/", CurrentCommission = null };
-      var bbetdaq = new Bookmaker { BookmakerName = "BETDAQ", Slug = "betdaq", IsExchange = false, BookmakerURL = "https://www.betdaq.com/UI/", CurrentCommission = 0.05m };
-      var bbetfair = new Bookmaker { BookmakerName = "Betfair", Slug = "betfair", IsExchange = true, BookmakerURL = "http://www.betfair.com/", CurrentCommission = 0.05m };
-      var bbetfred = new Bookmaker { BookmakerName = "Betfred", Slug = "betfred", IsExchange = false, BookmakerURL = "http://www.betfred.com/", CurrentCommission = null };
-      var bbetinternet = new Bookmaker { BookmakerName = "Betinternet", Slug = "betinternet", IsExchange = false, BookmakerURL = "http://www.betinternet.com/en/Sports.bet", CurrentCommission = null };
-      var bbetvictor = new Bookmaker { BookmakerName = "BetVictor", Slug = "betvictor", IsExchange = false, BookmakerURL = "http://www.betvictor.com/sports/en", CurrentCommission = null };
-      var bblue_square = new Bookmaker { BookmakerName = "Blue Square", Slug = "blue-square", IsExchange = false, BookmakerURL = "http://www.bluesq.com/bet", CurrentCommission = null };
-      var bbodog = new Bookmaker { BookmakerName = "Bodog", Slug = "bodog", IsExchange = false, BookmakerURL = "http://www.bodog.co.uk/", CurrentCommission = null };
-      var bboylesports = new Bookmaker { BookmakerName = "Boylesports", Slug = "boylesports", IsExchange = false, BookmakerURL = "http://www.boylesports.com/betting", CurrentCommission = null };
-      var bbwin = new Bookmaker { BookmakerName = "Bwin", Slug = "bwin", IsExchange = false, BookmakerURL = "https://www.bwin.com/", CurrentCommission = null };
-      var bcoral = new Bookmaker { BookmakerName = "Coral", Slug = "coral", IsExchange = false, BookmakerURL = "http://www.coral.co.uk/splash", CurrentCommission = null };
-      var bcorbetts = new Bookmaker { BookmakerName = "Corbetts", Slug = "corbetts", IsExchange = false, BookmakerURL = "http://corbettsports.info/", CurrentCommission = null };
-      var bladbrokes = new Bookmaker { BookmakerName = "Ladbrokes", Slug = "ladbrokes", IsExchange = false, BookmakerURL = "http://www.ladbrokes.com/home/en", CurrentCommission = null };
-      var bmatchbook_com = new Bookmaker { BookmakerName = "Matchbook.com", Slug = "matchbook-com", IsExchange = true, BookmakerURL = "http://matchbook.com/index.xml", CurrentCommission = 0.05m };
-      var bmarathonbet_co_uk = new Bookmaker { BookmakerName = "Marathonbet.co.uk", Slug = "marathonbet-co-uk", IsExchange = false, BookmakerURL = "http://www.marathonbet.co.uk/en/", CurrentCommission = null };
-      var bpaddy_power = new Bookmaker { BookmakerName = "Paddy Power", Slug = "paddy-power", IsExchange = false, BookmakerURL = "http://www.paddypower.com/bet", CurrentCommission = null };
-      var bpanbet = new Bookmaker { BookmakerName = "Panbet", Slug = "panbet", IsExchange = false, BookmakerURL = "http://www.marathonbet.co.uk/en/", CurrentCommission = null };
-      var bpinnacle_sports = new Bookmaker { BookmakerName = "Pinnacle Sports", Slug = "pinnacle-sports", IsExchange = false, BookmakerURL = "http://www.pinnaclesports.com/", CurrentCommission = null };
-      var bsky_bet = new Bookmaker { BookmakerName = "Sky Bet", Slug = "sky-bet", IsExchange = false, BookmakerURL = "http://www.skybet.com/", CurrentCommission = null };
-      var bsmarkets = new Bookmaker { BookmakerName = "Smarkets", Slug = "smarkets", IsExchange = true, BookmakerURL = "https://smarkets.com/", CurrentCommission = 0.02m };
-      var bsporting_bet = new Bookmaker { BookmakerName = "Sporting Bet", Slug = "sporting-bet", IsExchange = false, BookmakerURL = "http://www.sportingbet.com/", CurrentCommission = null };
-      var bspreadex = new Bookmaker { BookmakerName = "Spreadex", Slug = "spreadex", IsExchange = false, BookmakerURL = "http://www.spreadex.com/", CurrentCommission = null };
-      var bstan_james = new Bookmaker { BookmakerName = "Stan James", Slug = "stan-james", IsExchange = false, BookmakerURL = "http://www.stanjames.com/UK/541/Homepage", CurrentCommission = null };
-      var btotesport = new Bookmaker { BookmakerName = "Totesport", Slug = "totesport", IsExchange = false, BookmakerURL = "http://www.totesport.com/Welcome/", CurrentCommission = null };
-      var bwbx = new Bookmaker { BookmakerName = "WBX", Slug = "wbx", IsExchange = true, BookmakerURL = "http://www.wbx.com/default.ashx", CurrentCommission = 0.05m };
-      var bwilliam_hill = new Bookmaker { BookmakerName = "William Hill", Slug = "william-hill", IsExchange = false, BookmakerURL = "http://www.williamhill.com/", CurrentCommission = null };
-      var byouwin = new Bookmaker { BookmakerName = "youwin", Slug = "youwin", IsExchange = false, BookmakerURL = "http://www.youwin.com/en", CurrentCommission = null };
-      var bbet_win = new Bookmaker { BookmakerName = "Bet & Win", Slug = "bet-win", IsExchange = false, BookmakerURL = "https://www.bwin.com/default.aspx", CurrentCommission = null };
-      var bgamebookers = new Bookmaker { BookmakerName = "Gamebookers", Slug = "gamebookers", IsExchange = false, BookmakerURL = "https://sports.gamebookers.com/en/sports", CurrentCommission = null };
-      var binterwetten = new Bookmaker { BookmakerName = "Interwetten", Slug = "interwetten", IsExchange = false, BookmakerURL = "https://www.interwetten.com/en/Default.aspx", CurrentCommission = null };
-      var bstanleybet = new Bookmaker { BookmakerName = "Stanleybet", Slug = "stanleybet", IsExchange = false, BookmakerURL = "http://web.stanleybet.ro/", CurrentCommission = null };
-      var bsporting_odds = new Bookmaker { BookmakerName = "Sporting Odds", Slug = "sporting-odds", IsExchange = false, BookmakerURL = "www.sportingodds.co.uk", CurrentCommission = null };
+      var bOddsCheckerWebBestAvailable = new Bookmaker { BookmakerName = "Odds Checker Web Best Available", Slug = "odds-checker-web-best-available", IsExchange = false, BookmakerURL = "http://www.oddschecker.com", CurrentCommission = null };
+      var bOddsCheckerMobiBestAvailable = new Bookmaker { BookmakerName = "Odds Checker Mobi Best Available", Slug = "odds-checker-mobi-best-available", IsExchange = false, BookmakerURL = "http://www.oddschecker.mobi", CurrentCommission = null };
+      var bBestBettingBestAvailable = new Bookmaker { BookmakerName = "Best Betting Best Available", Slug = "best-betting-best-available", IsExchange = false, BookmakerURL = "http://odds.bestbetting.com", CurrentCommission = null };
 
+      var b10bet = new Bookmaker { BookmakerName = "10Bet", Slug = "10bet", IsExchange = false, BookmakerURL = "http://www.10bet.com", CurrentCommission = null, OddsCheckerShortID = null, Priority = 15 };
+      var b188bet = new Bookmaker { BookmakerName = "188Bet", Slug = "188bet", IsExchange = false, BookmakerURL = "http://www.188bet.com/en-gb/sports", CurrentCommission = null, OddsCheckerShortID = "EB", Priority = 26 };
+      var b32red_bet = new Bookmaker { BookmakerName = "32Red bet", Slug = "32red-bet", IsExchange = false, BookmakerURL = "http://www.32redbet.com/UI/Default.aspx", CurrentCommission = null, OddsCheckerShortID = "RD", Priority = 16 };
+      var b888sport = new Bookmaker { BookmakerName = "888sport", Slug = "888sport", IsExchange = false, BookmakerURL = "http://www.888sport.com/bet", CurrentCommission = null, OddsCheckerShortID = "EE", Priority = 28 };
+      var bbet_365 = new Bookmaker { BookmakerName = "Bet 365", Slug = "bet-365", IsExchange = false, BookmakerURL = "http://www.bet365.com", CurrentCommission = null, OddsCheckerShortID = "B3", Priority = 11 };
+      var bbet_victor = new Bookmaker { BookmakerName = "Bet Victor", Slug = "bet-victor", IsExchange = false, BookmakerURL = "http://www.betvictor.com", CurrentCommission = null, OddsCheckerShortID = null, Priority = 8 };
+      var bbet770 = new Bookmaker { BookmakerName = "Bet770", Slug = "bet770", IsExchange = false, BookmakerURL = "http://bet.770.com/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 17 };
+      var bbetdaq = new Bookmaker { BookmakerName = "BETDAQ", Slug = "betdaq", IsExchange = false, BookmakerURL = "https://www.betdaq.com/UI/", CurrentCommission = 0.05m, OddsCheckerShortID = "BD", Priority = 21 };
+      var bbetfair = new Bookmaker { BookmakerName = "Betfair", Slug = "betfair", IsExchange = true, BookmakerURL = "http://www.betfair.com/", CurrentCommission = 0.05m, OddsCheckerShortID = "BF", Priority = 20 };
+      var bbetfred = new Bookmaker { BookmakerName = "Betfred", Slug = "betfred", IsExchange = false, BookmakerURL = "http://www.betfred.com/", CurrentCommission = null, OddsCheckerShortID = "FR", Priority = 10 };
+      var bbetinternet = new Bookmaker { BookmakerName = "Betinternet", Slug = "betinternet", IsExchange = false, BookmakerURL = "http://www.betinternet.com/en/Sports.bet", CurrentCommission = null, OddsCheckerShortID = null, Priority = 12 };
+      var bbetvictor = new Bookmaker { BookmakerName = "BetVictor", Slug = "betvictor", IsExchange = false, BookmakerURL = "http://www.betvictor.com/sports/en", CurrentCommission = null, OddsCheckerShortID = "VC", Priority = 30 };
+      var bblue_square = new Bookmaker { BookmakerName = "Blue Square", Slug = "blue-square", IsExchange = false, BookmakerURL = "http://www.bluesq.com/bet", CurrentCommission = null, OddsCheckerShortID = "BS", Priority = 9 };
+      var bbodog = new Bookmaker { BookmakerName = "Bodog", Slug = "bodog", IsExchange = false, BookmakerURL = "http://www.bodog.co.uk/", CurrentCommission = null, OddsCheckerShortID = "BO", Priority = 18 };
+      var bboylesports = new Bookmaker { BookmakerName = "Boylesports", Slug = "boylesports", IsExchange = false, BookmakerURL = "http://www.boylesports.com/betting", CurrentCommission = null, OddsCheckerShortID = "BY", Priority = 7 };
+      var bbwin = new Bookmaker { BookmakerName = "Bwin", Slug = "bwin", IsExchange = false, BookmakerURL = "https://www.bwin.com/", CurrentCommission = null, OddsCheckerShortID = "BW", Priority = 31 };
+      var bcoral = new Bookmaker { BookmakerName = "Coral", Slug = "coral", IsExchange = false, BookmakerURL = "http://www.coral.co.uk/splash", CurrentCommission = null, OddsCheckerShortID = "CE", Priority = 26 };
+      var bcorbetts = new Bookmaker { BookmakerName = "Corbetts", Slug = "corbetts", IsExchange = false, BookmakerURL = "http://corbettsports.info/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 25 };
+      var bladbrokes = new Bookmaker { BookmakerName = "Ladbrokes", Slug = "ladbrokes", IsExchange = false, BookmakerURL = "http://www.ladbrokes.com/home/en", CurrentCommission = null, OddsCheckerShortID = "LD", Priority = 3 };
+      var bmatchbook_com = new Bookmaker { BookmakerName = "Matchbook.com", Slug = "matchbook-com", IsExchange = true, BookmakerURL = "http://matchbook.com/index.xml", CurrentCommission = 0.05m, OddsCheckerShortID = null, Priority = 22 };
+      var bmarathonbet_co_uk = new Bookmaker { BookmakerName = "Marathonbet.co.uk", Slug = "marathonbet-co-uk", IsExchange = false, BookmakerURL = "http://www.marathonbet.co.uk/en/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 32 };
+      var bpaddy_power = new Bookmaker { BookmakerName = "Paddy Power", Slug = "paddy-power", IsExchange = false, BookmakerURL = "http://www.paddypower.com/bet", CurrentCommission = null, OddsCheckerShortID = "PP", Priority = 1 };
+      var bpanbet = new Bookmaker { BookmakerName = "Panbet", Slug = "panbet", IsExchange = false, BookmakerURL = "http://www.marathonbet.co.uk/en/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 14 };
+      var bpinnacle_sports = new Bookmaker { BookmakerName = "Pinnacle Sports", Slug = "pinnacle-sports", IsExchange = false, BookmakerURL = "http://www.pinnaclesports.com/", CurrentCommission = null, OddsCheckerShortID = "PN", Priority = 19 };
+      var bsky_bet = new Bookmaker { BookmakerName = "Sky Bet", Slug = "sky-bet", IsExchange = false, BookmakerURL = "http://www.skybet.com/", CurrentCommission = null, OddsCheckerShortID = "SK", Priority = 4 };
+      var bsmarkets = new Bookmaker { BookmakerName = "Smarkets", Slug = "smarkets", IsExchange = true, BookmakerURL = "https://smarkets.com/", CurrentCommission = 0.02m, OddsCheckerShortID = null, Priority = 24 };
+      var bsporting_bet = new Bookmaker { BookmakerName = "Sporting Bet", Slug = "sporting-bet", IsExchange = false, BookmakerURL = "http://www.sportingbet.com/", CurrentCommission = null, OddsCheckerShortID = "SO", Priority = 5 };
+      var bspreadex = new Bookmaker { BookmakerName = "Spreadex", Slug = "spreadex", IsExchange = false, BookmakerURL = "http://www.spreadex.com/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 29 };
+      var bstan_james = new Bookmaker { BookmakerName = "Stan James", Slug = "stan-james", IsExchange = false, BookmakerURL = "http://www.stanjames.com/UK/541/Homepage", CurrentCommission = null, OddsCheckerShortID = "SJ", Priority = 2 };
+      var btotesport = new Bookmaker { BookmakerName = "Totesport", Slug = "totesport", IsExchange = false, BookmakerURL = "http://www.totesport.com/Welcome/", CurrentCommission = null, OddsCheckerShortID = "BX", Priority = 6 };
+      var bwbx = new Bookmaker { BookmakerName = "WBX", Slug = "wbx", IsExchange = true, BookmakerURL = "http://www.wbx.com/default.ashx", CurrentCommission = 0.05m, OddsCheckerShortID = "WB", Priority = 33 };
+      var bwilliam_hill = new Bookmaker { BookmakerName = "William Hill", Slug = "william-hill", IsExchange = false, BookmakerURL = "http://www.williamhill.com/", CurrentCommission = null, OddsCheckerShortID = "WH", Priority = 23 };
+      var byouwin = new Bookmaker { BookmakerName = "youwin", Slug = "youwin", IsExchange = false, BookmakerURL = "http://www.youwin.com/en", CurrentCommission = null, OddsCheckerShortID = "YW", Priority = 13 };
+      var bbet_win = new Bookmaker { BookmakerName = "Bet & Win", Slug = "bet-win", IsExchange = false, BookmakerURL = "https://www.bwin.com/default.aspx", CurrentCommission = null, OddsCheckerShortID = null, Priority = 34 };
+      var bgamebookers = new Bookmaker { BookmakerName = "Gamebookers", Slug = "gamebookers", IsExchange = false, BookmakerURL = "https://sports.gamebookers.com/en/sports", CurrentCommission = null, OddsCheckerShortID = null, Priority = 35 };
+      var binterwetten = new Bookmaker { BookmakerName = "Interwetten", Slug = "interwetten", IsExchange = false, BookmakerURL = "https://www.interwetten.com/en/Default.aspx", CurrentCommission = null, OddsCheckerShortID = null, Priority = 36 };
+      var bstanleybet = new Bookmaker { BookmakerName = "Stanleybet", Slug = "stanleybet", IsExchange = false, BookmakerURL = "http://web.stanleybet.ro/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 37 };
+      var bsporting_odds = new Bookmaker { BookmakerName = "Sporting Odds", Slug = "sporting-odds", IsExchange = false, BookmakerURL = "www.sportingodds.co.uk", CurrentCommission = null, OddsCheckerShortID = null, Priority = 38 };
 
       //sport
       var football = new Sport { SportName = "Football" };
@@ -246,15 +252,15 @@ namespace Samurai.SqlDataAccess
       var tennisFund = new Fund { FundName = "ATP", Bank = 500M, Competitions = new List<Competition>() { atp }, KellyMultiplier = 0.25M };
 
       //external source
-      var valueSamurai = new ExternalSource { Source = "Value Samurai", OddsSource = false, TheoreticalOddsSource = false };
-      var skySports = new ExternalSource { Source = "Sky Sports", OddsSource = false, TheoreticalOddsSource = false };
-      var bestBetting = new ExternalSource { Source = "Best Betting", OddsSource = true, TheoreticalOddsSource = false };
-      var oddsCheckerMobi = new ExternalSource { Source = "Odds Checker Mobi", OddsSource = true, TheoreticalOddsSource = false };
-      var oddsCheckerWeb = new ExternalSource { Source = "Odds Checker Web", OddsSource = true, TheoreticalOddsSource = false };
-      var tennisDataOdds = new ExternalSource { Source = "Tennis Data Odds", OddsSource = true, TheoreticalOddsSource = true };
-      var footballDataOdds = new ExternalSource { Source = "Football Data Odds", OddsSource = true, TheoreticalOddsSource = true };
-      var tb365 = new ExternalSource { Source = "Tennis Betting 365", OddsSource = false, TheoreticalOddsSource = false };
-      var finkTank = new ExternalSource { Source = "Fink Tank (dectech)", OddsSource = false, TheoreticalOddsSource = false };
+      var valueSamurai = new ExternalSource { Source = "Value Samurai", OddsSource = false, TheoreticalOddsSource = false, UseByDefault = false };
+      var skySports = new ExternalSource { Source = "Sky Sports", OddsSource = false, TheoreticalOddsSource = false, UseByDefault = false };
+      var bestBetting = new ExternalSource { Source = "Best Betting", OddsSource = true, TheoreticalOddsSource = false, UseByDefault = true };
+      var oddsCheckerMobi = new ExternalSource { Source = "Odds Checker Mobi", OddsSource = true, TheoreticalOddsSource = false, UseByDefault = false };
+      var oddsCheckerWeb = new ExternalSource { Source = "Odds Checker Web", OddsSource = true, TheoreticalOddsSource = false, UseByDefault = true };
+      var tennisDataOdds = new ExternalSource { Source = "Tennis Data Odds", OddsSource = true, TheoreticalOddsSource = true, UseByDefault = false };
+      var footballDataOdds = new ExternalSource { Source = "Football Data Odds", OddsSource = true, TheoreticalOddsSource = true, UseByDefault = false };
+      var tb365 = new ExternalSource { Source = "Tennis Betting 365", OddsSource = false, TheoreticalOddsSource = false, UseByDefault = false };
+      var finkTank = new ExternalSource { Source = "Fink Tank (dectech)", OddsSource = false, TheoreticalOddsSource = false, UseByDefault = false };
 
       //match outcomes
       var teamOrPlayerAWin = new MatchOutcome { MatchOutcomeString = "Home Win" };
@@ -512,6 +518,21 @@ namespace Samurai.SqlDataAccess
       var fdbstanleybet = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bstanleybet, Alias = "SY" };
       var fdbbetvictor = new BookmakerExternalSourceAlias { ExternalSource = footballDataOdds, Bookmaker = bbetvictor, Alias = "VC" };
 
+      var tcb_premierLeague = new TournamentCouponURL { Tournament = t_premierLeague, ExternalSource = bestBetting, CouponURL = "http://odds.bestbetting.com/football/england/premier-league/" };
+      var tcb_championship = new TournamentCouponURL { Tournament = t_championship, ExternalSource = bestBetting, CouponURL = "http://odds.bestbetting.com/football/england/football-league-championship/" };
+      var tcb_leagueOne = new TournamentCouponURL { Tournament = t_leagueOne, ExternalSource = bestBetting, CouponURL = "http://odds.bestbetting.com/football/england/league-one/" };
+      var tcb_leagueTwo = new TournamentCouponURL { Tournament = t_leagueTwo, ExternalSource = bestBetting, CouponURL = "http://odds.bestbetting.com/football/england/league-two/" };
+
+      var tcow_premierLeague = new TournamentCouponURL { Tournament = t_premierLeague, ExternalSource = oddsCheckerWeb, CouponURL = "http://www.oddschecker.com/football/english/premier-league" };
+      var tcow_championship = new TournamentCouponURL { Tournament = t_championship, ExternalSource = oddsCheckerWeb, CouponURL = "http://www.oddschecker.com/football/english/championship" };
+      var tcow_leagueOne = new TournamentCouponURL { Tournament = t_leagueOne, ExternalSource = oddsCheckerWeb, CouponURL = "http://www.oddschecker.com/football/english/league-1" };
+      var tcow_leagueTwo = new TournamentCouponURL { Tournament = t_leagueTwo, ExternalSource = oddsCheckerWeb, CouponURL = "http://www.oddschecker.com/football/english/league-2" };
+
+      var tcom_premierLeague = new TournamentCouponURL { Tournament = t_premierLeague, ExternalSource = oddsCheckerMobi, CouponURL = "http://oddschecker.mobi/football/english/premier-league" };
+      var tcom_championship = new TournamentCouponURL { Tournament = t_championship, ExternalSource = oddsCheckerMobi, CouponURL = "http://oddschecker.mobi/football/english/championship" };
+      var tcom_leagueOne = new TournamentCouponURL { Tournament = t_leagueOne, ExternalSource = oddsCheckerMobi, CouponURL = "http://oddschecker.mobi/football/english/league-1" };
+      var tcom_leagueTwo = new TournamentCouponURL { Tournament = t_leagueTwo, ExternalSource = oddsCheckerMobi, CouponURL = "http://oddschecker.mobi/football/english/league-2" };
+
 
       #region OddsCheckerJavaScript
       var oddsCheckerJavaScript = new KeyValuePair 
@@ -521,11 +542,13 @@ namespace Samurai.SqlDataAccess
       };
       #endregion
 
-      Bookmakers = new Bookmaker[] { bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds };
+      Bookmakers = new Bookmaker[] { bOddsCheckerWebBestAvailable, bOddsCheckerMobiBestAvailable, bBestBettingBestAvailable, bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds };
       Sports = new Sport[] { football, tennis };
       Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp };
       Tournaments = new Tournament[] { t_premierLeague, t_championship, t_leagueOne, t_leagueTwo, brisbane_international, aircel_chennai_open, qatar_exxonmobil_open, apia_international_sydney, heineken_open, australian_open, open_sud_de_france, pbz_zagreb_indoors, vtr_open, abn_amro_world_tennis_tournament, brasil_open_2012, sap_open, regions_morgan_keegan_championships, copa_claro, open_13, dubai_duty_free_tennis_championships, delray_beach_international_tennis_championships, abierto_mexicano_telcel, bnp_paribas_open, sony_ericsson_open, grand_prix_hassan_ii, us_mens_clay_court_championship, monte_carlo_rolex_masters, brd_nastase_tiriac_trophy, barcelona_open_banc_sabadell, bmw_open, serbia_open_2012, estoril_open, mutua_madrid_open, internazionali_bnl_ditalia, open_de_nice_cote_dazur, roland_garros, gerry_weber_open, aegon_championships, unicef_open, aegon_international, wimbledon, mercedescup, campbells_hall_of_fame_tennis_championships, skistar_swedish_open, atp_studena_croatia_open, bet_at_home_open___german_tennis_championships_2012, atlanta_tennis_championships, credit_agricole_suisse_open_gstaad, bet_at_home_cup_kitzbuhel, farmers_classic, legg_mason_tennis_classic, rogers_cup, western__southern_open, winston_salem_open, us_open, moselle_open, st_petersburg_open, ptt_thailand_open, malaysian_open_kuala_lumpur, china_open, rakuten_japan_open_tennis_championships, shanghai_rolex_masters, erste_bank_open, if_stockholm_open, kremlin_cup, valencia_open_500, swiss_indoors_basel, bnp_paribas_masters };
       TournamentEvents = new TournamentEvent[] { s2012_t_premierLeague, s2012_t_championship, s2012_t_leagueOne, s2012_t_leagueTwo, s2012_brisbane_international, s2012_aircel_chennai_open, s2012_qatar_exxonmobil_open, s2012_apia_international_sydney, s2012_heineken_open, s2012_australian_open, s2012_open_sud_de_france, s2012_pbz_zagreb_indoors, s2012_vtr_open, s2012_abn_amro_world_tennis_tournament, s2012_brasil_open_2012, s2012_sap_open, s2012_regions_morgan_keegan_championships, s2012_copa_claro, s2012_open_13, s2012_dubai_duty_free_tennis_championships, s2012_delray_beach_international_tennis_championships, s2012_abierto_mexicano_telcel, s2012_bnp_paribas_open, s2012_sony_ericsson_open, s2012_grand_prix_hassan_ii, s2012_us_mens_clay_court_championship, s2012_monte_carlo_rolex_masters, s2012_brd_nastase_tiriac_trophy, s2012_barcelona_open_banc_sabadell, s2012_bmw_open, s2012_serbia_open_2012, s2012_estoril_open, s2012_mutua_madrid_open, s2012_internazionali_bnl_ditalia, s2012_open_de_nice_cote_dazur, s2012_roland_garros, s2012_gerry_weber_open, s2012_aegon_championships, s2012_unicef_open, s2012_aegon_international, s2012_wimbledon, s2012_mercedescup, s2012_campbells_hall_of_fame_tennis_championships, s2012_skistar_swedish_open, s2012_atp_studena_croatia_open, s2012_bet_at_home_open___german_tennis_championships_2012, s2012_atlanta_tennis_championships, s2012_credit_agricole_suisse_open_gstaad, s2012_bet_at_home_cup_kitzbuhel, s2012_farmers_classic, s2012_legg_mason_tennis_classic, s2012_rogers_cup, s2012_western__southern_open, s2012_winston_salem_open, s2012_us_open, s2012_moselle_open, s2012_st_petersburg_open, s2012_ptt_thailand_open, s2012_malaysian_open_kuala_lumpur, s2012_china_open, s2012_rakuten_japan_open_tennis_championships, s2012_shanghai_rolex_masters, s2012_erste_bank_open, s2012_if_stockholm_open, s2012_kremlin_cup, s2012_valencia_open_500, s2012_swiss_indoors_basel, s2012_bnp_paribas_masters };
+
+      TournamentCouponURLs = new TournamentCouponURL[] { tcb_premierLeague, tcb_championship, tcb_leagueOne, tcb_leagueTwo, tcow_premierLeague, tcow_championship, tcow_leagueOne, tcow_leagueTwo, tcom_premierLeague, tcom_championship, tcom_leagueOne, tcom_leagueTwo };
       Funds = new Fund[] { premierFund, footballLeagueFund, tennisFund };
       ExternalSources = new ExternalSource[] { valueSamurai, skySports, bestBetting, oddsCheckerMobi, oddsCheckerWeb, tennisDataOdds, footballDataOdds, tb365, finkTank };
       MatchOutcomes = new MatchOutcome[] { teamOrPlayerAWin, draw, teamOrPlayerBWin };
@@ -541,6 +564,7 @@ namespace Samurai.SqlDataAccess
     public Competition[] Competitions { get; set; }
     public Tournament[] Tournaments { get; set; }
     public TournamentEvent[] TournamentEvents { get; set; }
+    public TournamentCouponURL[] TournamentCouponURLs { get; set; }
     public Fund[] Funds { get; set; }
     public ExternalSource[] ExternalSources { get; set; }
     public MatchOutcome[] MatchOutcomes { get; set; }

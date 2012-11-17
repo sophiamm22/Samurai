@@ -1,0 +1,21 @@
+﻿//var fixtureDate = new DateTime(2012, 11, 17);
+
+from match in Matches
+join homeTeam in TeamsPlayers on match.TeamAID_fk equals homeTeam.TeamPlayerID_pk
+join awayTeam in TeamsPlayers on match.TeamBID_fk equals awayTeam.TeamPlayerID_pk
+join tournamentEvent in TournamentEvents on match.TournamentEventID_fk equals tournamentEvent.TournamentEventID_pk
+join tournament in Tournaments on tournamentEvent.TournamentID_fk equals tournament.TournamentID_pk
+let homeWin = MatchOutcomeProbabilitiesInMatches.First(m=> m.MatchID_fk == match.MatchID_pk && m.MatchOutcome_fk == 3)
+let awayWin = MatchOutcomeProbabilitiesInMatches.First(m=> m.MatchID_fk == match.MatchID_pk && m.MatchOutcome_fk == 2)
+let draw = MatchOutcomeProbabilitiesInMatches.First(m=> m.MatchID_fk == match.MatchID_pk && m.MatchOutcome_fk == 1)
+//where EntityFunctions.TruncateTime(match.MatchDate) == fixtureDate
+select new
+{
+	Tournament = tournament.TournamentName,
+	Date = match.MatchDate,
+	HomeTeam = homeTeam.TeamName,
+	O1 = homeWin.MatchOutcomeProbability,
+	OX = draw.MatchOutcomeProbability,
+	O2 = awayWin.MatchOutcomeProbability,
+	AwayTeam = awayTeam.TeamName
+}

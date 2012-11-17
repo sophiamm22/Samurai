@@ -56,35 +56,59 @@ namespace Samurai.Services
       if (tournament == null) return null;
       return Mapper.Map<Tournament, TournamentViewModel>(tournament);
     }
-    
-    public IEnumerable<MatchCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds)
+
+    public IEnumerable<FootballFixtureViewModel> FetchAllFootballOdds(DateTime date)
+    {
+      var matchCoupons = new List<FootballFixtureViewModel>();
+
+      var tournaments = this.fixtureRepository.GetDaysFootballMatches(date)
+                                              .Select(t => t.TournamentEvent.Tournament.TournamentName)
+                                              .Distinct()
+                                              .ToList();
+      var sport = "Football";
+
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source);
+
+      foreach (var tournament in tournaments)
+      {
+        foreach (var source in oddsSources)
+        {
+          matchCoupons.AddRange(FetchCoupons(date, tournament, source, sport, true));
+        }
+      }
+      return matchCoupons;
+    }
+
+    public IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds)
     {
       var valueOptions = GetValueOptions(date, tournament, oddsSource, sport);
       var couponStrategy = this.couponProvider.CreateCouponStrategy(valueOptions);
 
       var coupons = couponStrategy.GetMatches().ToList();
+      //for odds checker mobile - no dates
+      var todaysCoupons = coupons.Any(x => x.MatchDate == null) ? coupons.ToList() : coupons.Where(x => x.MatchDate.Date == date.Date).ToList();
       if (getOdds)
       {
         var oddsStrategy = this.oddsProvider.CreateOddsStrategy(valueOptions);
         var timeStamp = DateTime.Now;
-        foreach (var coupon in coupons)
+        foreach (var coupon in todaysCoupons)
         {
           coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
         }
       }
-      var matches = PersistCoupons(coupons, date);
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<MatchCouponViewModel>>(matches);
+      var matches = PersistCoupons(todaysCoupons, date, tournament);
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
     }
 
-    private IEnumerable<Match> PersistCoupons(IEnumerable<Model.IGenericMatchCoupon> coupons, DateTime couponDate)
+    private IEnumerable<Match> PersistCoupons(IEnumerable<Model.IGenericMatchCoupon> coupons, DateTime couponDate, string tournament)
     {
-      var matches = this.fixtureRepository.GetMatchesForOdds(couponDate);
+      var matches = this.fixtureRepository.GetMatchesForOdds(couponDate, tournament);
 
       var sources = coupons.Select(c => c.Source).Distinct()
         .ToDictionary(s => s, s => this.bookmakerRepository.GetExternalSource(s));
 
       var bestOddsBookmaker = coupons.Select(c=>c.Source).Distinct()
-        .ToDictionary(s => s, s => this.bookmakerRepository.FindByName(s + " Best Available"));
+        .ToDictionary(s => s + " Best Available", s => this.bookmakerRepository.FindByName(s + " Best Available"));
 
       foreach (var coupon in coupons)
       {
@@ -166,6 +190,7 @@ namespace Samurai.Services
           }
         }
       }
+      this.fixtureRepository.SaveChanges();
       return matches;
     }
 

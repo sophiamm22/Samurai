@@ -25,6 +25,10 @@ namespace Samurai.Domain.Value
     public AbstractPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository,
       IWebRepository webRepository)
     {
+      if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
+      if (predictionRepository == null) throw new ArgumentNullException("preictionRepository");
+      if (webRepository == null) throw new ArgumentNullException("webRepository");
+
       this.predictionRepository = predictionRepository;
       this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;

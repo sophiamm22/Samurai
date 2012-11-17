@@ -11,11 +11,11 @@ using Samurai.SqlDataAccess.Contracts;
 
 namespace Samurai.Domain.Value
 {
-  public interface IExcelFootballFixtureCouponOddsProvider : IFixtureStrategyProvider, ICouponStrategyProvider, IOddsStrategyProvider
-  {
-  }
+  //public interface IExcelFootballFixtureCouponOddsProvider : IFixtureStrategyProvider, ICouponStrategyProvider, IOddsStrategyProvider
+  //{
+  //}
 
-  public class ExcelFootballFixtureCouponOddsProvider : IExcelFootballFixtureCouponOddsProvider
+  public class ExcelFootballFixtureCouponOddsProvider //: IExcelFootballFixtureCouponOddsProvider
   {
     private static IFixturesAndOdds excelFootballFixtureCouponOddsStrategy;
 
@@ -28,9 +28,9 @@ namespace Samurai.Domain.Value
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
       if (valueOptions == null) throw new ArgumentNullException("valueOptions");
 
-      if (excelFootballFixtureCouponOddsStrategy == null)
-        excelFootballFixtureCouponOddsStrategy = new ExcelFootballFixtureCouponOddsStrategy(
-          bookmakerRepository, fixtureRepository, predictionRepository, valueOptions);
+      //if (excelFootballFixtureCouponOddsStrategy == null)
+      //  excelFootballFixtureCouponOddsStrategy = new ExcelFootballFixtureCouponOddsStrategy(
+      //    bookmakerRepository, fixtureRepository, predictionRepository, valueOptions);
     }
 
     public IFixtureStrategy CreateFixtureStrategy(Model.SportEnum sport)

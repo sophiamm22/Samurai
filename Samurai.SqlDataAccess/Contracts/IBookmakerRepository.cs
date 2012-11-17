@@ -13,6 +13,7 @@ namespace Samurai.SqlDataAccess.Contracts
     Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource);
     ExternalSource GetExternalSource(string sourceName);
     ExternalSource GetExternalSourceFromSlug(string slug);
+    IEnumerable<ExternalSource> GetActiveOddsSources();
     Competition GetCompetition(string competitionName);
     Bookmaker FindByName(string bookmakerName);
     Bookmaker FindByOddsCheckerID(string oddsCheckerID);
@@ -20,5 +21,6 @@ namespace Samurai.SqlDataAccess.Contracts
     string GetOddsCheckerJavaScript();
     void SetOddsCheckerJavaScript(string javaScript);
     string GetAlias(string bookmakerNameSource, ExternalSource source, ExternalSource destination);
+    void SaveChanges();
   }
 }

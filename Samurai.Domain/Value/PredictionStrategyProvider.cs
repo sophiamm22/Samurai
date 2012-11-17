@@ -21,9 +21,15 @@ namespace Samurai.Domain.Value
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
 
-    public PredictionStrategyProvider(IPredictionRepository predictionRepository, IWebRepository webRepository)
+    public PredictionStrategyProvider(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository,
+      IWebRepository webRepository)
     {
+      if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
+      if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
+      if (webRepository == null) throw new ArgumentNullException("webRepository");
+
       this.predictionRepository = predictionRepository;
+      this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
 

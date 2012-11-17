@@ -67,7 +67,7 @@ namespace Samurai.Services
         foreach (var outcome in prediction.OutcomeProbabilities)
         {
           var persistedOutcome = match.MatchOutcomeProbabilitiesInMatches
-                                      .First(o => o.MatchOutcome.Id == (int)outcome.Key);
+                                      .FirstOrDefault(o => o.MatchOutcome.Id == (int)outcome.Key);
 
           if (persistedOutcome == null)
           {
@@ -87,7 +87,7 @@ namespace Samurai.Services
         foreach (var scoreLine in prediction.ScoreLineProbabilities)
         {
           var persistedScoreLine = match.ScoreOutcomeProbabilitiesInMatches
-                                        .First(s => string.Format("{0}-{1}", s.ScoreOutcome.TeamAScore, s.ScoreOutcome.TeamBScore) == scoreLine.Key);
+                                        .FirstOrDefault(s => string.Format("{0}-{1}", s.ScoreOutcome.TeamAScore, s.ScoreOutcome.TeamBScore) == scoreLine.Key);
           if (persistedScoreLine == null)
           {
             match.ScoreOutcomeProbabilitiesInMatches.Add(new ScoreOutcomeProbabilitiesInMatch

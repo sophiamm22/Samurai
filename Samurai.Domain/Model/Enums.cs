@@ -22,11 +22,11 @@ namespace Samurai.Domain.Model
 
   public enum LeagueEnum
   {
-    Premier,
-    Championship,
-    League1,
-    League2,
-    ATP
+    Premier = 1,
+    Championship = 2,
+    League1 = 3,
+    League2 = 4,
+    ATP = 5
   }
 
   public enum SourceEnum

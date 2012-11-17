@@ -11,6 +11,7 @@ namespace Samurai.SqlDataAccess.Contracts
   public interface IFixtureRepository
   {
     IEnumerable<Match> GetDaysFootballMatches(string competition, DateTime matchDate);
+    IEnumerable<Match> GetDaysFootballMatches(DateTime matchDate);
     ExternalSource GetExternalSource(string sourceName);
     string GetAlias(string teamName, ExternalSource source, ExternalSource destination);
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
@@ -18,13 +19,14 @@ namespace Samurai.SqlDataAccess.Contracts
     TeamPlayer GetTeamOrPlayerFromName(string team);
     IEnumerable<Match> GetMatchesFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime startDate, DateTime endDate);
     Match GetMatchFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate);
-    IEnumerable<Match> GetMatchesForOdds(DateTime matchDate);
+    IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament);
     Competition GetCompetition(int competitionID);
     TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
     ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
     MatchOutcome GetMatchOutcomeByID(int id);
     Match SaveMatch(Match match);
     void SaveChanges();
+    void AddMatch(Match match);
     Sport GetSport(string sport);
     Tournament GetTournament(string tournament);
     Tournament GetTournamentFromSlug(string slug);

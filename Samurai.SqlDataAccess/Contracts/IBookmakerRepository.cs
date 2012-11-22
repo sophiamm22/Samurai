@@ -10,6 +10,7 @@ namespace Samurai.SqlDataAccess.Contracts
 {
   public interface IBookmakerRepository
   {
+    void AddMatchOutcomeOdd(MatchOutcomeOdd odd);
     Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource);
     ExternalSource GetExternalSource(string sourceName);
     ExternalSource GetExternalSourceFromSlug(string slug);

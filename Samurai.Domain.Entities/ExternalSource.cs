@@ -21,6 +21,7 @@ namespace Samurai.Domain.Entities
     public bool TheoreticalOddsSource { get; set; }
     public string PredictionURL { get; set; }
     public bool UseByDefault { get; set; }
+    public bool PrescreenDecider { get; set; }
 
     public virtual ICollection<TournamentCouponURL> TournamentCouponURLs { get; set; }
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }

@@ -16,6 +16,7 @@ using Samurai.SqlDataAccess.Mapping;
 using Samurai.WebPresentationModel.Messaging;
 using Samurai.Services;
 using Samurai.Domain.Value;
+using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
 
 using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
@@ -30,27 +31,19 @@ namespace Samurai.Sandbox
 
       container.Register(Component
                         .For<IValueOptions>()
-                        .ImplementedBy<ValueOptions>()
-                        /*.LifeStyle
-                        .Singleton*/);
+                        .ImplementedBy<ValueOptions>());
 
       container.Register(Component
                         .For<DbContext>()
-                        .ImplementedBy<ValueSamuraiContext>()
-                        /*.LifeStyle
-                        .Transient*/);
+                        .ImplementedBy<ValueSamuraiContext>());
 
       container.Register(Component
                         .For<IWebRepository>()
-                        .ImplementedBy<WebRepository>()
-        /*.LifeStyle
-        .Transient*/);
+                        .ImplementedBy<WebRepository>());
 
       container.Register(Component
                         .For<IBus>()
-                        .ImplementedBy<MessageBus>()
-        /*.LifeStyle
-        .Transient*/);
+                        .ImplementedBy<MessageBus>());
 
       container.Register(AllTypes
                         .FromAssemblyContaining<SqlPredictionRepository>()
@@ -58,38 +51,36 @@ namespace Samurai.Sandbox
                                     t.Name.EndsWith("Repository"))
                         .WithService
                         .AllInterfaces());
-                        //.LifestyleTransient());
 
       container.Register(AllTypes
                         .FromAssemblyContaining<FixtureService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces());
-                        //.LifestyleTransient());
 
       container.Register(AllTypes
                         .FromAssemblyContaining<IndexFootballFixturesHandler>()
                         .Where(t => t.Name.EndsWith("Handler"))
                         .WithService
                         .AllInterfaces());
-                        //.LifestyleTransient());
 
       container.Register(AllTypes
                         .FromAssemblyContaining<FixtureStrategyProvider>()
-                        .Where(t => t.Name.EndsWith("Provider"))
+                        .Where(t => t.Name.StartsWith("Excel"))
                         .WithService
                         .AllInterfaces());
-                        //.LifestyleTransient());
+
+      container.Register(Component
+                        .For<ISpreadsheetData>()
+                        .ImplementedBy<SpreadsheetData>());
 
       container.Register(Component
                         .For<IMessageHandlerFactory>()
                         .AsFactory());
-                        //.LifestyleTransient());
 
       container.Register(Component
                         .For<ICommandHandlerFactory>()
                         .AsFactory());
-                        //.LifestyleTransient());
     }
   }
 }

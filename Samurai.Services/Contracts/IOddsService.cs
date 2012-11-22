@@ -13,7 +13,10 @@ namespace Samurai.Services.Contracts
     OddsSourceViewModel FindOddsSource(string slug);
     SportViewModel FindSport(string slug);
     TournamentViewModel FindTournament(string slug);
-    IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds);
+
+    //Football Related
     IEnumerable<FootballFixtureViewModel> FetchAllFootballOdds(DateTime date);
+    IEnumerable<FootballFixtureViewModel> FetchAllPreScreenedFootballOdds(DateTime date);
+    IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
   }
 }

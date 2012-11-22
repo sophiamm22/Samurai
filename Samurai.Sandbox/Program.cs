@@ -18,6 +18,9 @@ namespace Samurai.Sandbox
 
       var date = new DateTime(2012, 11, 18);
 
+      var diditbaby = new Populate2011PremierLeagueSeasonOdds(container);
+      diditbaby.Populate();
+
       var doitbaby = new FullFootballDownload(container, date);
       doitbaby.PopulateDatabase();
     }

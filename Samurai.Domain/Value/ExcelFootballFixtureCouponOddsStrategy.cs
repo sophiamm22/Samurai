@@ -14,7 +14,7 @@ using Samurai.SqlDataAccess.Contracts;
 
 namespace Samurai.Domain.Value
 {
-  public class ExcelFootballFixtureCouponOddsStrategy //: IFixturesAndOdds
+  public class ExcelFootballFixtureCouponOddsStrategy : IFixturesAndOdds
   {
     private readonly IBookmakerRepository bookmakerRepository;
     private readonly IFixtureRepository fixtureRepository;

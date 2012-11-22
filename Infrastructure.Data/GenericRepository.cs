@@ -262,6 +262,11 @@ namespace Infrastructure.Data
       }
     }
 
+    public DbSet<TEntity> DbSet<TEntity>() where TEntity : class
+    {
+      return DbContext.Set<TEntity>();
+    }
+
     private EntityKey GetEntityKey<TEntity>(object keyValue) where TEntity : class
     {
       var entitySetName = GetEntityName<TEntity>();

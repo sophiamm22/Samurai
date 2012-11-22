@@ -14,7 +14,7 @@ namespace Samurai.Domain.Entities
     public int SportID { get; set; }
     public string CompetitionName { get; set; }
     public string Slug { get; set; }
-    public decimal OverroundRequired { get; set; }
+    public decimal EdgeRequired { get; set; }
     public int? GamesRequiredForBet { get; set; }
 
     public virtual Sport Sport { get; set; }

@@ -44,6 +44,8 @@
     <Compile Include="Bookmaker.cs" />
     <Compile Include="BookmakerExternalSourceAlias.cs" />
     <Compile Include="Competition.cs" />
+    <Compile Include="ComplexTypes\OddsForEvent.cs" />
+    <Compile Include="ComplexTypes\OutcomeProbabilitiesForSport.cs" />
     <Compile Include="KeyValuePair.cs" />
     <Compile Include="TournamentCouponURL.cs" />
     <Compile Include="ExternalSource.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="User.cs" />
     <Compile Include="UserProfile.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -90,7 +90,7 @@ namespace Samurai.Domain.Value
             Source = "Best Betting",
             TimeStamp = timeStamp,
             Priority = bookmaker.Priority,
-            ClickThroughURL = odd.ClickThroughURL
+            //ClickThroughURL = odd.ClickThroughURL
           });
         }
       }

@@ -109,8 +109,16 @@
     <Compile Include="Repository\IWebRepository.cs" />
     <Compile Include="Value\CouponStrategy.cs" />
     <Compile Include="Value\CouponStrategyProvider.cs" />
+    <Compile Include="Value\Excel\ExcelCouponStrategy.cs" />
+    <Compile Include="Value\Excel\ExcelCouponStrategyProvider.cs" />
+    <Compile Include="Value\Excel\ExcelFixtureStrategy.cs" />
     <Compile Include="Value\ExcelFootballFixtureCouponOddsProvider.cs" />
     <Compile Include="Value\ExcelFootballFixtureCouponOddsStrategy.cs" />
+    <Compile Include="Value\Excel\ExcelFixtureStrategyProvider.cs" />
+    <Compile Include="Value\Excel\ExcelOddsStrategy.cs" />
+    <Compile Include="Value\Excel\ExcelOddsStrategyProvider.cs" />
+    <Compile Include="Value\Excel\ExcelPredictionStrategy.cs" />
+    <Compile Include="Value\Excel\ExcelPredictionStrategyProvider.cs" />
     <Compile Include="Value\FixtureStrategyProvider.cs" />
     <Compile Include="Value\FixtureStrategy.cs" />
     <Compile Include="Value\IFixturesAndOdds.cs" />
@@ -118,6 +126,7 @@
     <Compile Include="Value\OddsStrategyProvider.cs" />
     <Compile Include="Value\PredictionStrategy.cs" />
     <Compile Include="Value\PredictionStrategyProvider.cs" />
+    <Compile Include="Value\Excel\SpreadsheetData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

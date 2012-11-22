@@ -28,7 +28,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<td id=æ(?<OddsCheckerID>[^_]+)_(?<BookmakerID>[A-Z0-9]{2})æ class=æ[^æ]+æ onclick=æs\(this,'(?<MarketIDOne>[^']+)','(?<MarketIDTwo>[^']+)','[^']+'\);b\([^\(]+\);æ\>(?<OddsText>[^\<]+)\</td\>")
+          new Regex(@"\<td id=æ(?<OddsCheckerID>[^_]+)_(?<BookmakerID>[A-Z0-9]{2})æ class=æ[^æ]+æ onclick=æs\(this,'(?<MarketIDOne>[^']+)','(?<MarketIDTwo>[^']*)','[^']+'\);b\([^\(]+\);æ\>(?<OddsText>[^\<]+)\</td\>")
         };
       }
     }
@@ -42,6 +42,9 @@ namespace Samurai.Domain.HtmlElements
         var numDen = OddsText.Split('/');
         DecimalOdds = numDen.Length == 1 ? Math.Round(1 + Convert.ToDouble(numDen[0])) : Math.Round(1 + Convert.ToDouble(numDen[0]) / Convert.ToDouble(numDen[1]), 2);
       }
+
+      if (string.IsNullOrEmpty(MarketIDTwo))
+        MarketIDTwo = "";
     }
     
   }

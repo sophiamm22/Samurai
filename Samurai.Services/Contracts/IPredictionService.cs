@@ -11,6 +11,5 @@ namespace Samurai.Services.Contracts
   {
     IEnumerable<FootballFixtureViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
     IEnumerable<FootballFixtureViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
-
   }
 }

@@ -70,6 +70,7 @@ namespace Samurai.SqlDataAccess.Migrations
       context.Set<TeamPlayerExternalSourceAlias>().AddOrUpdate(seed.TeamPlayerExternalSourceAliass);
       context.Set<TournamentCouponURL>().AddOrUpdate(seed.TournamentCouponURLs);
       context.Set<KeyValuePair>().AddOrUpdate(seed.KeyValuePairs);
+      context.Set<BookmakerExternalSourceAlias>().AddOrUpdate(seed.BookmakerExternalSourceAliass);
 
       SaveChanges(context);
     }

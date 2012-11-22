@@ -17,6 +17,11 @@ namespace Samurai.SqlDataAccess
       :base(context)
     { }
 
+    public void AddMatchOutcomeOdd(MatchOutcomeOdd odd)
+    {
+      Add<MatchOutcomeOdd>(odd);
+    }
+
     public Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource)
     {
       var couponData = GetQuery<TournamentCouponURL>(c => c.Tournament.Id == tournament.Id && c.ExternalSource.Id == externalSource.Id)

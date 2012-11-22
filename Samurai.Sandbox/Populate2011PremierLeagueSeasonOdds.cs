@@ -4,48 +4,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Castle.Windsor;
+
 using Samurai.Services.Contracts;
+using Samurai.Domain.Value.Excel;
+using Samurai.Domain.Model;
+using Samurai.Domain.Entities;
+using Samurai.Web.ViewModels;
 
 namespace Samurai.Sandbox
 {
   public class Populate2011PremierLeagueSeasonOdds
   {
     private readonly IWindsorContainer container;
+    private List<FootballFixtureViewModel> fixtures;
 
     public Populate2011PremierLeagueSeasonOdds(IWindsorContainer container)
     {
       if (container == null) throw new ArgumentNullException("container");
       this.container = container;
+      this.fixtures = new List<FootballFixtureViewModel>();
     }
 
     public void Populate()
     {
       GetFixtures();
-      GetCoupons();
+      GetPredictions();
+      GetOdds();
     }
 
     private void GetFixtures()
     {
+      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+
+      spreadsheetData.ReadData();
+
       var fixtureService = this.container.Resolve<IFixtureService>();
 
       var dates = Enumerable.Range(0, 280).Select(d => new DateTime(2011, 08, 13).AddDays(d));
 
       foreach (var date in dates)
       {
+        spreadsheetData.CouponDate = date;
+
         var fixtures = fixtureService.FetchSkySportsFootballResults(date)
                                      .ToList();
         if (fixtures.Count == 0)
           Console.WriteLine(string.Format("No fixtures on {0}", date.ToShortDateString()));
         else
         {
-          Console.WriteLine(string.Format("Fixtures on {1}:", date.ToShortDateString()));
+          this.fixtures.AddRange(fixtures);
+          Console.WriteLine(string.Format("Fixtures on {0}:", date.ToShortDateString()));
           fixtures.ForEach(f => Console.WriteLine(f.ToString()));
         }
       }
     }
 
-    private void GetCoupons()
+    private void GetPredictions()
     {
+      var predictionService = this.container.Resolve<IPredictionService>();
+      var matches = predictionService.FetchFootballPredictions(this.fixtures);
+    }
+
+    private void GetOdds()
+    {
+      var oddsService = this.container.Resolve<IOddsService>();
+      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+
+      var dates = this.fixtures.Select(f => f.MatchDate.Date).Distinct().ToList();
+      foreach (var date in dates)
+      {
+        spreadsheetData.CouponDate = date;
+        oddsService.FetchAllFootballOdds(date);
+      }
+      
     }
   }
 }

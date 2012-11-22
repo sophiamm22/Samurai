@@ -13,6 +13,10 @@ namespace Samurai.SqlDataAccess
 {
   public class SqlPredictionRepository : GenericRepository, IPredictionRepository
   {
+    public SqlPredictionRepository(DbContext context)
+      :base(context)
+    { }
+
     public Uri GetFootballAPIURL(int teamAID, int teamBID)
     {
       return new Uri(string.Format("http://www.dectech.org/cgi-bin/new_site/GetEuroIntlSimulatedFast.pl?homeID={0}&awayType=0&awayID={1}&homeType=0&neutral=0",
@@ -47,7 +51,7 @@ namespace Samurai.SqlDataAccess
     public decimal GetOverroundRequired(string competitionName)
     {
       var comp = First<Competition>(c => c.CompetitionName == competitionName);
-      return comp == null ? 0 : comp.OverroundRequired;
+      return comp == null ? 0 : comp.EdgeRequired;
     }
 
     public Fund GetFundDetails(string fundName)

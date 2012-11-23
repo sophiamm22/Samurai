@@ -15,11 +15,11 @@ using Samurai.Domain.Model;
 
 namespace Samurai.Services
 {
-  public class PredictionService : IPredictionService
+  public abstract class PredictionService
   {
-    private readonly IPredictionStrategyProvider predictionProvider;
-    private readonly IPredictionRepository predictionRepository;
-    private readonly IFixtureRepository fixtureRepository;
+    protected readonly IPredictionStrategyProvider predictionProvider;
+    protected readonly IPredictionRepository predictionRepository;
+    protected readonly IFixtureRepository fixtureRepository;
 
     public PredictionService(IPredictionStrategyProvider predictionProvider,
       IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
@@ -33,24 +33,7 @@ namespace Samurai.Services
       this.fixtureRepository = fixtureRepository;
     }
 
-    public IEnumerable<FootballFixtureViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
-    {
-      var returnFixtures = new List<FootballFixtureViewModel>();
-      foreach (var fixture in fixtures)
-      {
-        //var prediction = this.predictionRepository.
-      }
-      return returnFixtures;
-    }
-
-    public IEnumerable<FootballFixtureViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
-    {
-      var predictions = GetGenericFootballPredictionsFromViewModelFixtures(fixtures);
-      var matches = PersistFootballPredictions(predictions);
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
-    }
-
-    private IEnumerable<Match> PersistFootballPredictions(IEnumerable<FootballPrediction> predictions)
+    protected IEnumerable<Match> PersistGenericPredictions(IEnumerable<GenericPrediction> predictions)
     {
       var matches = new List<Match>();
 
@@ -105,6 +88,26 @@ namespace Samurai.Services
       }
       this.fixtureRepository.SaveChanges();
       return matches;
+    }
+  }
+
+  public class FootballPredictionService : PredictionService, IFootballPredictionService
+  {
+    public FootballPredictionService(IPredictionStrategyProvider predictionProvider,
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
+      : base(predictionProvider, predictionRepository, fixtureRepository)
+    { }
+
+    public IEnumerable<FootballFixtureViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
+    {
+      throw new NotImplementedException();
+    }
+
+    public IEnumerable<FootballFixtureViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
+    {
+      var predictions = GetGenericFootballPredictionsFromViewModelFixtures(fixtures);
+      var matches = PersistGenericPredictions(predictions);
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
     }
 
     private IEnumerable<FootballPrediction> GetGenericFootballPredictionsFromViewModelFixtures(IEnumerable<FootballFixtureViewModel> fixtures)

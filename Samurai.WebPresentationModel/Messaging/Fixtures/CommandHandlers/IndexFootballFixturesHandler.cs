@@ -11,9 +11,9 @@ namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
 {
   public class IndexFootballFixturesHandler : MessageHandler<IndexFootballFixturesRequest, IndexFootballFixturesReply>
   {
-    private readonly IFixtureService fixtureService;
+    private readonly IFootballFixtureService fixtureService;
 
-    public IndexFootballFixturesHandler(IFixtureService fixtureService)
+    public IndexFootballFixturesHandler(IFootballFixtureService fixtureService)
       : base()
     {
       if (fixtureService == null)

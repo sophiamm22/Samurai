@@ -53,10 +53,13 @@
     <Compile Include="Contracts\IFixtureService.cs" />
     <Compile Include="Contracts\IOddsService.cs" />
     <Compile Include="Contracts\IPredictionService.cs" />
-    <Compile Include="FixtureService.cs" />
-    <Compile Include="OddsService.cs" />
-    <Compile Include="PredictionService.cs" />
+    <Compile Include="FootballFixtureService.cs" />
+    <Compile Include="FootballOddsService.cs" />
+    <Compile Include="FootballPredictionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TennisFixtureService.cs" />
+    <Compile Include="TennisOddsService.cs" />
+    <Compile Include="TennisPredictionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

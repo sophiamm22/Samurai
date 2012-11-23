@@ -10,6 +10,7 @@ namespace Samurai.SqlDataAccess.Contracts
 {
   public interface IPredictionRepository
   {
+    void AddOrUpdateTennisPredictionsStats(int matchID, TennisPredictionStat stat);
     Uri GetFootballAPIURL(int teamAID, int teamBID);
     Uri GetTodaysMatchesURL();
     string GetTournamentAlias(string tournamentName, ExternalSource source);

@@ -11,7 +11,7 @@ namespace Samurai.SqlDataAccess.Mapping
     public MatchMap()
     {
       this.ToTable("Matches");
-      this.Property(t => t.Id).HasColumnName("MatchID_pk");
+      this.Property(t => t.Id).HasColumnName("MatchID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
       this.Property(t => t.TournamentEventID).HasColumnName("TournamentEventID_fk");
       this.Property(t => t.TeamAID).HasColumnName("TeamAID_fk");
       this.Property(t => t.TeamBID).HasColumnName("TeamBID_fk");
@@ -26,7 +26,7 @@ namespace Samurai.SqlDataAccess.Mapping
       this.HasRequired(t => t.TeamsPlayerA)
           .WithMany(t => t.MatchesA)
           .HasForeignKey(d => d.TeamAID);
-
+      
     }
   }
 }

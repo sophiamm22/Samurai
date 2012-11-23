@@ -16,15 +16,17 @@ using Model = Samurai.Domain.Model;
 
 namespace Samurai.Services
 {
-  public class OddsService : IOddsService
+  public abstract class OddsService : IOddsService
   {
-    private readonly IFixtureRepository fixtureRepository;
-    private readonly IBookmakerRepository bookmakerRepository;
-    private readonly IStoredProceduresRepository storedProcedureRepository;
-    private readonly ICouponStrategyProvider couponProvider;
-    private readonly IOddsStrategyProvider oddsProvider;
+    protected readonly IFixtureRepository fixtureRepository;
+    protected readonly IBookmakerRepository bookmakerRepository;
+    protected readonly IStoredProceduresRepository storedProcedureRepository;
+    protected readonly ICouponStrategyProvider couponProvider;
+    protected readonly IOddsStrategyProvider oddsProvider;
 
-    private List<Model.IGenericMatchCoupon> prescreenedCouponTarget;
+    protected string sport;
+
+    protected List<Model.IGenericMatchCoupon> prescreenedCouponTarget;
 
     public OddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
       IStoredProceduresRepository storedProcedureRepository,
@@ -41,7 +43,6 @@ namespace Samurai.Services
       this.storedProcedureRepository = storedProcedureRepository;
       this.couponProvider = couponProvider;
       this.oddsProvider = oddsProvider;
-
       this.prescreenedCouponTarget = new List<Model.IGenericMatchCoupon>();
     }
 
@@ -66,65 +67,18 @@ namespace Samurai.Services
       return Mapper.Map<Tournament, TournamentViewModel>(tournament);
     }
 
-    public IEnumerable<FootballFixtureViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
-    {
-      var matchCoupons = new List<Match>();
-      var matchCouponsQualifying = new List<Match>();
-      var matchCouponsNotQualifying = new List<Match>();
-
-      var tournaments = DaysTournaments(date);
-      var sport = "Football";
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources()
-                                                .OrderByDescending(s => s.PrescreenDecider)
-                                                .Select(o => o.Source)
-                                                .ToList(); //order by the prescreen decider.  Most likely BestBetting.  
-                                                //This is a bit messy but based on what is cached in the text versions of th HTML files
-
-      foreach (var tournament in tournaments)
-      {
-        foreach (var source in oddsSources)
-        {
-          matchCoupons.AddRange(FetchMatchCoupons(date, tournament, source, sport, false, true));
-        }
-      }
-
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matchCoupons);
-    }
-
-    public IEnumerable<FootballFixtureViewModel> FetchAllFootballOdds(DateTime date)
-    {
-      var matchCoupons = new List<FootballFixtureViewModel>();
-
-      var tournaments = DaysTournaments(date);
-      var sport = "Football";
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source);
-
-      foreach (var tournament in tournaments)
-      {
-        foreach (var source in oddsSources)
-        {
-          matchCoupons.AddRange(FetchCoupons(date, tournament, source, sport, true, false));
-        }
-      }
-      return matchCoupons;
-    }
-
-    public IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
-    {
-      var matches = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
-    }
-
-    private IEnumerable<string> DaysTournaments(DateTime date)
+    protected IEnumerable<string> DaysTournaments(DateTime date, string sport)
     {
       var tournaments = this.fixtureRepository.GetDaysFootballMatches(date)
+                                              .Where(m => m.TournamentEvent.Tournament.Competition.Sport.SportName == sport)
                                               .Select(t => t.TournamentEvent.Tournament.TournamentName)
                                               .Distinct()
                                               .ToList();
       return tournaments;
     }
 
-    private IEnumerable<Match> FetchMatchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool preScreenOdds)
+
+    protected IEnumerable<Match> FetchMatchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool preScreenOdds)
     {
       var valueOptions = GetValueOptions(date, tournament, oddsSource, sport);
       var couponStrategy = this.couponProvider.CreateCouponStrategy(valueOptions);
@@ -140,7 +94,7 @@ namespace Samurai.Services
       {
         if (preScreenOdds)
         {
-          PrescreenFootballCoupons(date, todaysCoupons, out getOddsFor, out dontGetOddsFor);
+          PrescreenCoupons(date, todaysCoupons, out getOddsFor, out dontGetOddsFor);
         }
         else
           getOddsFor = todaysCoupons;
@@ -169,14 +123,14 @@ namespace Samurai.Services
       return matches;
     }
 
-    private void PrescreenFootballCoupons(DateTime date, IEnumerable<Model.IGenericMatchCoupon> allCoupons,
+    protected void PrescreenCoupons(DateTime date, IEnumerable<Model.IGenericMatchCoupon> allCoupons,
       out IEnumerable<Model.IGenericMatchCoupon> getOddsFor, out IEnumerable<Model.IGenericMatchCoupon> dontGetOddsFor)
     {
       var getOddsForReturn = new List<Model.IGenericMatchCoupon>();
       var dontGetOddsForReturn = new List<Model.IGenericMatchCoupon>();
 
       var probabilities = this.storedProcedureRepository
-                              .GetOutcomeProbabilitiesForSport(date, "Football")
+                              .GetOutcomeProbabilitiesForSport(date, this.sport)
                               .ToDictionary(p => string.Format("{0}|{1}", p.HomeTeam, p.AwayTeam));
 
       var coupons = allCoupons.ToDictionary(c => string.Format("{0}|{1}", c.TeamOrPlayerA, c.TeamOrPlayerB));
@@ -211,7 +165,7 @@ namespace Samurai.Services
       dontGetOddsFor = dontGetOddsForReturn;
     }
 
-    private IEnumerable<Match> FetchOddsForMatches(Model.IValueOptions valueOptions, IEnumerable<Match> matches)
+    protected IEnumerable<Match> FetchOddsForMatches(Model.IValueOptions valueOptions, IEnumerable<Match> matches)
     {
       var coupons = new List<Model.IGenericMatchCoupon>();
       var oddsStrategy = this.oddsProvider.CreateOddsStrategy(valueOptions);
@@ -232,7 +186,7 @@ namespace Samurai.Services
       return matchesReturn;
     }
 
-    private IEnumerable<Match> PersistCoupons(IEnumerable<Model.IGenericMatchCoupon> coupons, DateTime couponDate, string tournament)
+    protected IEnumerable<Match> PersistCoupons(IEnumerable<Model.IGenericMatchCoupon> coupons, DateTime couponDate, string tournament)
     {
       var matches = this.fixtureRepository.GetMatchesForOdds(couponDate, tournament);
 
@@ -244,9 +198,9 @@ namespace Samurai.Services
 
       foreach (var coupon in coupons)
       {
-        var persistedMatch = matches.FirstOrDefault(m => m.TeamsPlayerA.TeamName == coupon.TeamOrPlayerA && 
+        var persistedMatch = matches.FirstOrDefault(m => m.TeamsPlayerA.TeamName == coupon.TeamOrPlayerA &&
                                                          m.TeamsPlayerB.TeamName == coupon.TeamOrPlayerB);
-        if (persistedMatch == null) 
+        if (persistedMatch == null)
           continue; //need a better way to deal with this
 
         if (persistedMatch.MatchCouponURLs.Count(u => u.ExternalSource.Source == coupon.Source) == 0)
@@ -271,14 +225,12 @@ namespace Samurai.Services
           var outcomeOdds = probForOutcome.MatchOutcomeOdds;
           var bestAvailableBookmaker = string.Format("{0} Best Available", coupon.Source);
 
-          Func<MatchOutcomeOdd, bool> predicate = o => o.ExternalSource.Source == coupon.Source && 
+          Func<MatchOutcomeOdd, bool> predicate = o => o.ExternalSource.Source == coupon.Source &&
                                                        o.Bookmaker.BookmakerName == bestAvailableBookmaker &&
                                                        o.TimeStamp == coupon.LastChecked;
 
           if (outcomeOdds.Count(predicate) == 0)
           {
-            if (bestOddsBookmaker[bestAvailableBookmaker] == null)
-              Console.WriteLine("We're screwed");
             var matchOutcomeOdd = new MatchOutcomeOdd()
             {
               Bookmaker = bestOddsBookmaker[bestAvailableBookmaker],
@@ -310,8 +262,6 @@ namespace Samurai.Services
 
             if (outcomeOdds.Count(predicate) == 0)
             {
-              if (this.bookmakerRepository.FindByName(odd.BookmakerName) == null)
-                Console.WriteLine("We're screwed");
               var matchOutcomeOdd = new MatchOutcomeOdd()
               {
                 Bookmaker = this.bookmakerRepository.FindByName(odd.BookmakerName),
@@ -335,8 +285,8 @@ namespace Samurai.Services
       return matches;
     }
 
-    private Model.IValueOptions GetValueOptions(DateTime date, string tournamentString, string oddsSourceString, string sportString)
-    {      
+    protected Model.IValueOptions GetValueOptions(DateTime date, string tournamentString, string oddsSourceString, string sportString)
+    {
       var tournament = fixtureRepository.GetTournament(tournamentString);
       var sport = this.fixtureRepository.GetSport(sportString);
       var source = this.bookmakerRepository.GetExternalSource(oddsSourceString);
@@ -351,5 +301,67 @@ namespace Samurai.Services
 
       return valueOptions;
     }
+  }
+
+  public class FootballOddsService : OddsService, IFootballOddsService
+  {
+    public FootballOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
+      IStoredProceduresRepository storedProcedureRepository,
+      ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
+      : base(fixtureRepository, bookmakerRepository, storedProcedureRepository,
+      couponProvider, oddsProvider)
+    {
+      this.sport = "Football";
+    }
+
+    public IEnumerable<FootballFixtureViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
+    {
+      var matchCoupons = new List<Match>();
+      var matchCouponsQualifying = new List<Match>();
+      var matchCouponsNotQualifying = new List<Match>();
+
+      var tournaments = DaysTournaments(date, this.sport);
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources()
+                                                .OrderByDescending(s => s.PrescreenDecider)
+                                                .Select(o => o.Source)
+                                                .ToList(); //order by the prescreen decider.  Most likely BestBetting.  
+                                                //This is a bit messy but based on what is cached in the text versions of th HTML files
+
+      foreach (var tournament in tournaments)
+      {
+        foreach (var source in oddsSources)
+        {
+          matchCoupons.AddRange(FetchMatchCoupons(date, tournament, source, sport, false, true));
+        }
+      }
+
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matchCoupons);
+    }
+
+    public IEnumerable<FootballFixtureViewModel> FetchAllFootballOdds(DateTime date)
+    {
+      var matchCoupons = new List<FootballFixtureViewModel>();
+
+      var tournaments = DaysTournaments(date, this.sport);
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source);
+
+      foreach (var tournament in tournaments)
+      {
+        foreach (var source in oddsSources)
+        {
+          matchCoupons.AddRange(FetchCoupons(date, tournament, source, sport, true, false));
+        }
+      }
+      return matchCoupons;
+    }
+
+    public IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
+    {
+      var matches = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
+    }
+  
+
+
   }
 }

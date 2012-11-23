@@ -53,7 +53,7 @@ namespace Samurai.Sandbox
                         .AllInterfaces());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<FixtureService>()
+                        .FromAssemblyContaining<FootballFixtureService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces());

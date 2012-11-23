@@ -7,12 +7,7 @@ using Samurai.SqlDataAccess.Mapping;
 namespace Samurai.SqlDataAccess
 {
 
-  public interface ISamuraiContext
-  {
-    
-  }
-
-  public class ValueSamuraiContext : DbContext, ISamuraiContext
+  public class ValueSamuraiContext : DbContext
   {
     static ValueSamuraiContext()
     {
@@ -45,6 +40,7 @@ namespace Samurai.SqlDataAccess
     public DbSet<TeamPlayer> TeamsPlayers { get; set; }
     public DbSet<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
     public DbSet<KeyValuePair> KeyValuePairs { get; set; }
+    public DbSet<TennisPredictionStat> TennisPredictionStats { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
@@ -70,6 +66,7 @@ namespace Samurai.SqlDataAccess
       modelBuilder.Configurations.Add(new TournamentExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new BookmakerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new KeyValuePairMap());
+      modelBuilder.Configurations.Add(new TennisPredictionStatMap());
     }
   }
 }

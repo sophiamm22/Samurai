@@ -18,6 +18,19 @@ namespace Samurai.SqlDataAccess
       : base(context)
     { }
 
+    public Match GetTennisMatch(string playerA, string playerB, DateTime matchDate)
+    {
+      return First<Match>(m => m.TeamsPlayerA.TeamName == playerA &&
+                              m.TeamsPlayerB.TeamName == playerB &&
+                              m.MatchDate == matchDate);
+    }
+
+    public IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate)
+    {
+      return GetQuery<Match>(m => m.MatchDate == matchDate && 
+                                  m.TournamentEvent.Tournament.Competition.Sport.SportName == "Tennis");
+    }
+
     public IEnumerable<Match> GetDaysFootballMatches(string competitionName, DateTime matchDate)
     {
       var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);

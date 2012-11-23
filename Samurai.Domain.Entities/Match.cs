@@ -23,6 +23,8 @@ namespace Samurai.Domain.Entities
     public virtual TournamentEvent TournamentEvent { get; set; }
     public virtual TeamPlayer TeamsPlayerB { get; set; }
     public virtual TeamPlayer TeamsPlayerA { get; set; }
+    public virtual TennisPredictionStat TennisPredictionStat { get; set; }
+
     public virtual ICollection<MatchOutcomeProbabilitiesInMatch> MatchOutcomeProbabilitiesInMatches { get; set; }
     public virtual ICollection<ObservedOutcome> ObservedOutcomes { get; set; }
     public virtual ICollection<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }

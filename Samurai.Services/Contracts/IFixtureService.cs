@@ -12,10 +12,20 @@ namespace Samurai.Services.Contracts
   {
     TournamentViewModel GetTournament(string slug);
     TeamPlayerViewModel GetTeamOrPlayer(string slug);
+  }
+
+  public interface IFootballFixtureService : IFixtureService
+  {
     FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam);
     IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResults(DateTime fixtureDate);
     IEnumerable<FootballFixtureSummaryViewModel> GetFootballFixturesByDate(DateTime dateString, string league);
     IEnumerable<FootballFixtureSummaryViewModel> GetFootballFixturesByGameweek(int gameWeek, string league);
   }
+
+  public interface ITennisFixtureService : IFixtureService
+  {
+
+  }
+
 }

@@ -61,6 +61,7 @@
     <Compile Include="Mapping\BookmakerExternalSourceAliasMap.cs" />
     <Compile Include="Mapping\BookmakerMap.cs" />
     <Compile Include="Mapping\KeyValuePairMap.cs" />
+    <Compile Include="Mapping\TennisPredictionStatMap.cs" />
     <Compile Include="Mapping\TournamentCouponURLMap.cs" />
     <Compile Include="Mapping\CompetitionMap.cs" />
     <Compile Include="Mapping\ExternalSourceMap.cs" />

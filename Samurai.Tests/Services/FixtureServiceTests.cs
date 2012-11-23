@@ -17,7 +17,7 @@ namespace Samurai.Tests.Services
 {
   public class when_working_with_the_fixture_service : Specification
   {
-    protected IFixtureService fixtureService;
+    protected IFootballFixtureService fixtureService;
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IFixtureStrategyProvider> fixtureProvider;
 
@@ -26,7 +26,7 @@ namespace Samurai.Tests.Services
       base.Establish_context();
       this.fixtureRepository = new M.Mock<IFixtureRepository>();
       this.fixtureProvider = new M.Mock<IFixtureStrategyProvider>();
-      this.fixtureService = new FixtureService(this.fixtureRepository.Object, this.fixtureProvider.Object);
+      this.fixtureService = new FootballFixtureService(this.fixtureRepository.Object, this.fixtureProvider.Object);
     }
   }
 

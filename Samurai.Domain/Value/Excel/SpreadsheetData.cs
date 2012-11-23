@@ -35,7 +35,6 @@ namespace Samurai.Domain.Value.Excel
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
 
-    private bool isRead;
     private List<Model.IGenericPrediction> genericPredictions;
 
     public DateTime CouponDate { get; set; }

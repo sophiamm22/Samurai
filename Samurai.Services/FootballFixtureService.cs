@@ -15,10 +15,10 @@ using Model = Samurai.Domain.Model;
 
 namespace Samurai.Services
 {
-  public class FixtureService : IFixtureService
+  public abstract class FixtureService : IFixtureService
   {
-    private readonly IFixtureStrategyProvider fixtureProvider;
-    private readonly IFixtureRepository fixtureRepository;
+    protected readonly IFixtureStrategyProvider fixtureProvider;
+    protected readonly IFixtureRepository fixtureRepository;
 
     public FixtureService(IFixtureRepository fixtureRepository,
       IFixtureStrategyProvider fixtureProvider)
@@ -43,10 +43,17 @@ namespace Samurai.Services
       if (teamEntity == null) return null;
       return Mapper.Map<TeamPlayer, TeamPlayerViewModel>(teamEntity);
     }
+  }
+
+  public class FootballFixtureService : FixtureService, IFootballFixtureService
+  {
+    public FootballFixtureService(IFixtureRepository fixtureRepository,
+      IFixtureStrategyProvider fixtureProvider)
+      : base(fixtureRepository, fixtureProvider)
+    { }
 
     public FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam)
     {
-      
       var homeTeamEntity = this.fixtureRepository.GetTeamOrPlayerFromName(homeTeam);
       var awayTeamEntity = this.fixtureRepository.GetTeamOrPlayerFromName(awayTeam);
 

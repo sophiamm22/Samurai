@@ -10,9 +10,9 @@ namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
 {
   public class ShowFootballFixtureHandler : MessageHandler<ShowFootballFixtureRequest, ShowFootballFixtureReply>
   {
-    private readonly IFixtureService fixtureService;
+    private readonly IFootballFixtureService fixtureService;
 
-    public ShowFootballFixtureHandler(IFixtureService fixtureService)
+    public ShowFootballFixtureHandler(IFootballFixtureService fixtureService)
       : base()
     {
       if (fixtureService == null)

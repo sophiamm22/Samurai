@@ -17,6 +17,11 @@ namespace Samurai.SqlDataAccess
       :base(context)
     { }
 
+    public void AddOrUpdateTennisPredictionsStats(int matchID, TennisPredictionStat stat)
+    {
+      throw new NotImplementedException();
+    }
+
     public Uri GetFootballAPIURL(int teamAID, int teamBID)
     {
       return new Uri(string.Format("http://www.dectech.org/cgi-bin/new_site/GetEuroIntlSimulatedFast.pl?homeID={0}&awayType=0&awayID={1}&homeType=0&neutral=0",

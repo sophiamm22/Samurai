@@ -112,8 +112,6 @@
     <Compile Include="Value\Excel\ExcelCouponStrategy.cs" />
     <Compile Include="Value\Excel\ExcelCouponStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelFixtureStrategy.cs" />
-    <Compile Include="Value\ExcelFootballFixtureCouponOddsProvider.cs" />
-    <Compile Include="Value\ExcelFootballFixtureCouponOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelFixtureStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelOddsStrategyProvider.cs" />

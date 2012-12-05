@@ -72,6 +72,7 @@ namespace Samurai.Services
                         {
                           var prediction = new TennisPredictionStat
                           {
+                            Id = m.MatchID,
                             PlayerAGames = m.Prediction.PlayerAGames,
                             PlayerBGames = m.Prediction.PlayerBGames,
                             EPoints = (decimal?)m.Prediction.EPoints,
@@ -79,10 +80,9 @@ namespace Samurai.Services
                             ESets = (decimal?)m.Prediction.ESets
                           };
                           this.predictionRepository
-                              .AddOrUpdateTennisPredictionsStats(m.MatchID,
-                                                                 prediction);
+                              .AddOrUpdateTennisPredictionsStats(prediction);
                         });
-
+      this.predictionRepository.SaveChanges();
       return persistedMatches;
     }
 

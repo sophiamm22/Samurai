@@ -35,11 +35,11 @@ namespace Samurai.Domain.Value
     public IOddsStrategy CreateOddsStrategy(IValueOptions valueOptions)
     {
       if (valueOptions.OddsSource.Source == "Best Betting")
-        return new BestBettingOddsStrategy(this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new BestBettingOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
       else if (valueOptions.OddsSource.Source == "Odds Checker Mobi")
-        return new OddsCheckerMobiOddsStrategy(this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new OddsCheckerMobiOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
       else if (valueOptions.OddsSource.Source == "Odds Checker Web")
-        return new OddsCheckerWebOddsStrategy(this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new OddsCheckerWebOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
       else
         throw new ArgumentException("Odds Source not recognised");
     }

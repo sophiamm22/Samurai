@@ -9,8 +9,6 @@ namespace Samurai.Domain.Entities
     {
     }
 
-    public int MatchID { get; set; }
-
     public int PlayerAGames { get; set; }
     public int PlayerBGames { get; set; }
     public decimal? EPoints { get; set; }

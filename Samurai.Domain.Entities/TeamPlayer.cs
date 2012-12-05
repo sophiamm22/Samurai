@@ -12,7 +12,8 @@ namespace Samurai.Domain.Entities
       this.TeamPlayerExternalSourceAlias = new List<TeamPlayerExternalSourceAlias>();
     }
 
-    public string TeamName { get; set; }
+    public string Name { get; set; }
+    public string FirstName { get; set; }
     public string Slug { get; set; }
     public string ExternalID { get; set; }
     public virtual ICollection<Match> MatchesB { get; set; }
@@ -20,7 +21,7 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public override string ToString()
     {
-      return TeamName;
+      return Name;
     }
   }
 }

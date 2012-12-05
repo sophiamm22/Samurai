@@ -17,6 +17,11 @@ namespace Samurai.SqlDataAccess
       :base(context)
     { }
 
+    public int? GetMinGamesForTennisBet()
+    {
+      return First<Competition>(t => t.Sport.SportName == "Tennis").GamesRequiredForBet;
+    }
+
     public void AddMatchOutcomeOdd(MatchOutcomeOdd odd)
     {
       Add<MatchOutcomeOdd>(odd);
@@ -27,14 +32,14 @@ namespace Samurai.SqlDataAccess
       var couponData = GetQuery<TournamentCouponURL>(c => c.Tournament.Id == tournament.Id && c.ExternalSource.Id == externalSource.Id)
                         .FirstOrDefault();
       if (couponData == null)
-        throw new ArgumentNullException("couponData");
+        return null;
       else
         return new Uri(couponData.CouponURL);
     }
 
     public IEnumerable<ExternalSource> GetActiveOddsSources()
     {
-      return GetQuery<ExternalSource>(e => e.UseByDefault && e.OddsSource).ToList();
+      return GetQuery<ExternalSource>(e => e.UseByDefault && e.OddsSource).OrderByDescending(x => x.PrescreenDecider).ToList();
     }
 
     public ExternalSource GetExternalSourceFromSlug(string slug)

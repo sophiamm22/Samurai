@@ -39,12 +39,15 @@ namespace Samurai.Services
 
       foreach (var prediction in predictions)
       {
-        var teamA = this.fixtureRepository.GetTeamOrPlayerFromName(prediction.TeamOrPlayerA);
-        var teamB = this.fixtureRepository.GetTeamOrPlayerFromName(prediction.TeamOrPlayerB);
-        if (teamA == null || teamB == null) throw new ArgumentNullException("teamA or teamB");
+        var teamA = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(prediction.TeamOrPlayerA, prediction.PlayerAFirstName);
+        var teamB = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(prediction.TeamOrPlayerB, prediction.PlayerBFirstName);
 
         var match = this.fixtureRepository.GetMatchFromTeamSelections(teamA, teamB, prediction.MatchDate);
-        if (match == null) throw new ArgumentNullException("match"); //come back to, I need to be able handle missing fixtures
+        if (match == null)
+        {
+          var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(prediction.MatchDate, prediction.TournamentName);
+          match = this.fixtureRepository.CreateMatch(teamA, teamB, prediction.MatchDate, tournamentEvent);
+        }
         matches.Add(match);
 
         foreach (var outcome in prediction.OutcomeProbabilities)

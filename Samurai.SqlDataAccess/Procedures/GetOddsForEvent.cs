@@ -36,7 +36,7 @@ namespace Samurai.SqlDataAccess.Procedures
               join matchOdd in DbSet<MatchOutcomeOdd>() on probability.Id equals matchOdd.MatchOutcomeProbabilitiesInMatchID
               join bookmaker in DbSet<Bookmaker>() on matchOdd.BookmakerID equals bookmaker.Id
               join source in DbSet<ExternalSource>() on matchOdd.ExternalSourceID equals source.Id
-              where (homeTeam.TeamName == teamA && awayTeam.TeamName == teamB && EntityFunctions.TruncateTime(match.MatchDate) == matchDate.Date)
+              where (homeTeam.Name == teamA && awayTeam.Name == teamB && EntityFunctions.TruncateTime(match.MatchDate) == matchDate.Date)
               let latestTimeStamp = probability.MatchOutcomeOdds.Max(m => m.TimeStamp)
               where takeAll || matchOdd.TimeStamp == latestTimeStamp
               select new OddsForEvent

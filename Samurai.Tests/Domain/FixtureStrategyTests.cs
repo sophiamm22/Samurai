@@ -51,11 +51,11 @@ namespace Samurai.Tests.Domain
     public void then_a_complete_list_of_unplayed_fixtures_is_returned()
     {
       this.fixtures.Count().ShouldEqual(2);
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "Sunderland" && f.TeamsPlayerB.TeamName == "Newcastle").ShouldNotBeNull();
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "QPR" && f.TeamsPlayerB.TeamName == "Everton").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "Sunderland" && f.TeamsPlayerB.Name == "Newcastle").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "QPR" && f.TeamsPlayerB.Name == "Everton").ShouldNotBeNull();
 
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "Sunderland" && f.TeamsPlayerB.TeamName == "Newcastle").MatchDate.ShouldEqual((new DateTime(2012, 10, 21)).AddHours(13).AddMinutes(30));
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "QPR" && f.TeamsPlayerB.TeamName == "Everton").MatchDate.ShouldEqual((new DateTime(2012, 10, 21)).AddHours(16));
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "Sunderland" && f.TeamsPlayerB.Name == "Newcastle").MatchDate.ShouldEqual((new DateTime(2012, 10, 21)).AddHours(13).AddMinutes(30));
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "QPR" && f.TeamsPlayerB.Name == "Everton").MatchDate.ShouldEqual((new DateTime(2012, 10, 21)).AddHours(16));
     }
 
   }
@@ -83,15 +83,15 @@ namespace Samurai.Tests.Domain
     {
       this.fixtures.Count().ShouldEqual(42);
       //spot check - one from each league
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "Swansea" && f.TeamsPlayerB.TeamName == "Wigan").ShouldNotBeNull();
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "Crystal Palace" && f.TeamsPlayerB.TeamName == "Millwall").ShouldNotBeNull();
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "Oldham" && f.TeamsPlayerB.TeamName == "Leyton Orient").ShouldNotBeNull();
-      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.TeamName == "York" && f.TeamsPlayerB.TeamName == "Dag and Red").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "Swansea" && f.TeamsPlayerB.Name == "Wigan").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "Crystal Palace" && f.TeamsPlayerB.Name == "Millwall").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "Oldham" && f.TeamsPlayerB.Name == "Leyton Orient").ShouldNotBeNull();
+      this.fixtures.FirstOrDefault(f => f.TeamsPlayerA.Name == "York" && f.TeamsPlayerB.Name == "Dag and Red").ShouldNotBeNull();
 
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "Swansea" && f.TeamsPlayerB.TeamName == "Wigan").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-1");
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "Crystal Palace" && f.TeamsPlayerB.TeamName == "Millwall").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-2");
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "Oldham" && f.TeamsPlayerB.TeamName == "Leyton Orient").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-0");
-      this.fixtures.First(f => f.TeamsPlayerA.TeamName == "York" && f.TeamsPlayerB.TeamName == "Dag and Red").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("3-2");
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "Swansea" && f.TeamsPlayerB.Name == "Wigan").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-1");
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "Crystal Palace" && f.TeamsPlayerB.Name == "Millwall").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-2");
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "Oldham" && f.TeamsPlayerB.Name == "Leyton Orient").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("2-0");
+      this.fixtures.First(f => f.TeamsPlayerA.Name == "York" && f.TeamsPlayerB.Name == "Dag and Red").ObservedOutcomes.First().ScoreOutcome.ToString().ShouldEqual("3-2");
     }
   }
 

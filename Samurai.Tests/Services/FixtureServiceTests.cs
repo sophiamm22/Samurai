@@ -42,9 +42,9 @@ namespace Samurai.Tests.Services
       alreadyPlayed = new DateTime(2012, 09, 01);
       yetToPlay = new DateTime(2013, 01, 01);
 
-      var manUtd = new TeamPlayer { TeamName = "Man Utd", Slug = "man-utd" };
-      var arsenal = new TeamPlayer { TeamName = "Arsenal", Slug = "arsenal" };
-      var manCity = new TeamPlayer { TeamName = "Man City", Slug = "man-city" };
+      var manUtd = new TeamPlayer { Name = "Man Utd", Slug = "man-utd" };
+      var arsenal = new TeamPlayer { Name = "Arsenal", Slug = "arsenal" };
+      var manCity = new TeamPlayer { Name = "Man City", Slug = "man-city" };
 
       this.fixtureRepository.Setup(r => r.GetTeamOrPlayer("man-utd")).Returns(manUtd);
       this.fixtureRepository.Setup(r => r.GetTeamOrPlayer("arsenal")).Returns(arsenal);

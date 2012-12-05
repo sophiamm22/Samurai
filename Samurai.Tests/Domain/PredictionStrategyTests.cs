@@ -22,7 +22,7 @@ namespace Samurai.Tests.Domain
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IValueOptions> valueOptions;
     protected DateTime couponDate;
-    protected IEnumerable<IGenericPrediction> predictions;
+    protected IEnumerable<GenericPrediction> predictions;
 
     protected override void Establish_context()
     {
@@ -37,10 +37,10 @@ namespace Samurai.Tests.Domain
 
   public class and_using_the_football_prediction_strategy : when_working_with_a_prediction_strategy
   {
-    protected IEnumerable<IGenericPrediction> premPredictions;
-    protected IEnumerable<IGenericPrediction> champPredictions;
-    protected IEnumerable<IGenericPrediction> league1Predictions;
-    protected IEnumerable<IGenericPrediction> league2Predictions;
+    protected IEnumerable<GenericPrediction> premPredictions;
+    protected IEnumerable<GenericPrediction> champPredictions;
+    protected IEnumerable<GenericPrediction> league1Predictions;
+    protected IEnumerable<GenericPrediction> league2Predictions;
 
     protected override void Establish_context()
     {

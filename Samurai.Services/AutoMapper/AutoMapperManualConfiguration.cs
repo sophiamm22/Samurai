@@ -17,6 +17,7 @@ namespace Samurai.Services.AutoMapper
         x.AddProfile<OddsSourceProfile>();
         x.AddProfile<SportProfile>();
         x.AddProfile<TournamentProfile>();
+        x.AddProfile<TennisMatchProfile>();
       });
     }
   }

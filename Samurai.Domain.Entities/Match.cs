@@ -32,7 +32,7 @@ namespace Samurai.Domain.Entities
 
     public override string ToString()
     {
-      return (TeamsPlayerA == null || TeamsPlayerB == null) ? "No teams" : string.Format("{0} vs {1}", TeamsPlayerA.TeamName, TeamsPlayerB.TeamName);
+      return (TeamsPlayerA == null || TeamsPlayerB == null) ? "No teams" : string.Format("{0} vs {1}", TeamsPlayerA.Name, TeamsPlayerB.Name);
     }
 
   }

@@ -10,13 +10,13 @@ namespace Samurai.SqlDataAccess.Contracts
 {
   public interface IPredictionRepository
   {
-    void AddOrUpdateTennisPredictionsStats(int matchID, TennisPredictionStat stat);
+    void AddOrUpdateTennisPredictionsStats(TennisPredictionStat stat);
     Uri GetFootballAPIURL(int teamAID, int teamBID);
     Uri GetTodaysMatchesURL();
     string GetTournamentAlias(string tournamentName, ExternalSource source);
     int GetGamesRequiredForBet(string competitionName);
     decimal GetOverroundRequired(string competitionName);
     Fund GetFundDetails(string fundName);
-    
+    void SaveChanges();
   }
 }

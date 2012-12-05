@@ -22,6 +22,7 @@ namespace Samurai.Domain.Model
     public GenericMatchCoupon()
     {
       HeadlineOdds = new Dictionary<Outcome, double>();
+      ActualOdds = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
     }
     public DateTime MatchDate { get; set; }
     public string TeamOrPlayerA { get; set; }

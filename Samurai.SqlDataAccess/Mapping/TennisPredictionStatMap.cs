@@ -11,8 +11,7 @@ namespace Samurai.SqlDataAccess.Mapping
     public TennisPredictionStatMap()
     {
       this.ToTable("TennisPredictionStats");
-      this.Property(t => t.Id).HasColumnName("TennisPredictionStat_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-      this.Property(t => t.MatchID).HasColumnName("MatchID_fk");
+      this.Property(t => t.Id).HasColumnName("MatchID_fk");
 
       this.Property(t => t.ESets).HasPrecision(10, 4);
       this.Property(t => t.EGames).HasPrecision(10, 4);

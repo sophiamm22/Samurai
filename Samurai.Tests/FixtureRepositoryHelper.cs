@@ -24,7 +24,7 @@ namespace Samurai.Tests
       repo.Setup(t => t.GetExternalSource(M.It.IsAny<string>())).Returns((string s) => db.ExternalSource[s]);
 
       repo.Setup(t =>
-        t.GetAlias(M.It.IsAny<string>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<ExternalSource>()))
+        t.GetAlias(M.It.IsAny<string>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<Sport>()))
          .Returns<string, ExternalSource, ExternalSource>(
          (string teamNameSource, ExternalSource exSource, ExternalSource exDestination) =>
          {
@@ -35,7 +35,7 @@ namespace Samurai.Tests
            if (teamAlias.Count() == 0)
              teamNameDestination = teamNameSource;
            else
-             teamNameDestination = teamAlias.First().TeamsPlayer.TeamName;
+             teamNameDestination = teamAlias.First().TeamsPlayer.Name;
 
            return teamNameDestination;
          });
@@ -90,7 +90,7 @@ namespace Samurai.Tests
 
     public static M.Mock<IFixtureRepository> HasFinkTankIDMatches(this M.Mock<IFixtureRepository> repo)
     {
-      repo.Setup(t => t.GetDaysFootballMatches(M.It.IsAny<string>(), M.It.IsAny<DateTime>())).Returns((string comp, DateTime date) =>
+      repo.Setup(t => t.GetDaysMatches(M.It.IsAny<string>(), M.It.IsAny<DateTime>())).Returns((string comp, DateTime date) =>
         {
           var returnList = new List<Match>();
 

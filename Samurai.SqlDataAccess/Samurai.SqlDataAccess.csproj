@@ -57,9 +57,11 @@
     <Compile Include="Contracts\IMVCMembershipRepository.cs" />
     <Compile Include="Contracts\IPredictionRepository.cs" />
     <Compile Include="Contracts\IStoredProceduresRepository.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Mapping\BettingPAndLMap.cs" />
     <Compile Include="Mapping\BookmakerExternalSourceAliasMap.cs" />
     <Compile Include="Mapping\BookmakerMap.cs" />
+    <Compile Include="Mapping\CompetitionCouponURLMap.cs" />
     <Compile Include="Mapping\KeyValuePairMap.cs" />
     <Compile Include="Mapping\TennisPredictionStatMap.cs" />
     <Compile Include="Mapping\TournamentCouponURLMap.cs" />

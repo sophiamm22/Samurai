@@ -7,24 +7,8 @@ using Samurai.Domain.Entities;
 
 namespace Samurai.Domain.Model
 {
-  public interface IGenericPrediction
-  {
-    string Identifier { get; set; }
 
-    string Sport { get; set; }
-    string CompetitionName { get; set; }
-    Uri PredictionURL { get; set; }
-
-    DateTime MatchDate { get; set; }
-
-    string TeamOrPlayerA { get; set; }
-    string TeamOrPlayerB { get; set; }
-
-    IDictionary<Outcome, double> OutcomeProbabilities { get; set; }
-    IDictionary<string, double?> ScoreLineProbabilities { get; set; }
-  }
-
-  public class GenericPrediction : IGenericPrediction
+  public class GenericPrediction
   {
     public GenericPrediction()
     {
@@ -35,13 +19,17 @@ namespace Samurai.Domain.Model
     public string Identifier { get; set; }
 
     public string Sport { get; set; }
-    public string CompetitionName { get; set; }
+    public string TournamentName { get; set; }
     public Uri PredictionURL { get; set; }
 
     public DateTime MatchDate { get; set; }
 
     public string TeamOrPlayerA { get; set; }
     public string TeamOrPlayerB { get; set; }
+
+    public string PlayerAFirstName { get; set; }
+    public string PlayerBFirstName { get; set; }
+
 
     public IDictionary<Outcome, double> OutcomeProbabilities { get; set; }
     public IDictionary<string, double?> ScoreLineProbabilities { get; set; }

@@ -9,6 +9,7 @@ namespace Samurai.Domain.Entities
     {
       this.Funds = new List<Fund>();
       this.Tournaments = new List<Tournament>();
+      this.CompetitionCouponURLs = new List<CompetitionCouponURL>();
     }
 
     public int SportID { get; set; }
@@ -20,5 +21,6 @@ namespace Samurai.Domain.Entities
     public virtual Sport Sport { get; set; }
     public virtual ICollection<Fund> Funds { get; set; }
     public virtual ICollection<Tournament> Tournaments { get; set; }
+    public virtual ICollection<CompetitionCouponURL> CompetitionCouponURLs { get; set; }
   }
 }

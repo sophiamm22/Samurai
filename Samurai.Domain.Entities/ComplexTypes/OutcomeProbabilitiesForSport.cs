@@ -8,6 +8,7 @@ namespace Samurai.Domain.Entities.ComplexTypes
 {
   public class OutcomeProbabilitiesForSport
   {
+    public int MatchID { get; set; }
     public string Tournament { get; set; }
     public DateTime Date { get; set; }
     public string HomeTeam { get; set; }
@@ -15,5 +16,7 @@ namespace Samurai.Domain.Entities.ComplexTypes
     public IDictionary<int, decimal> OutcomeProbabilties { get; set; }
     public decimal EdgeRequired { get; set; }
     public int? GamesRequiredForBet { get; set; }
+    public int? GamesPlayedA { get; set; }
+    public int? GamesPlayedB { get; set; }
   }
 }

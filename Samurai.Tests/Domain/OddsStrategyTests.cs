@@ -32,7 +32,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new BestBettingOddsStrategy(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new BestBettingOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
     }
 
     protected override void Because_of()
@@ -70,7 +70,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new OddsCheckerMobiOddsStrategy(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new OddsCheckerMobiOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
     }
 
     protected override void Because_of()
@@ -107,7 +107,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new OddsCheckerWebOddsStrategy(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new OddsCheckerWebOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
     }
 
     protected override void Because_of()

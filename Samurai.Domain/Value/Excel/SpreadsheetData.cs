@@ -25,7 +25,7 @@ namespace Samurai.Domain.Value.Excel
     IEnumerable<Model.IGenericMatchCoupon> GetMatches(Uri tournamentURL);
     IEnumerable<Model.IGenericMatchCoupon> GetMatches();
     IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.IGenericMatchCoupon matchCoupon, DateTime timeStamp);
-    IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+    IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
 
   }
 
@@ -35,7 +35,7 @@ namespace Samurai.Domain.Value.Excel
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
 
-    private List<Model.IGenericPrediction> genericPredictions;
+    private List<Model.GenericPrediction> genericPredictions;
 
     public DateTime CouponDate { get; set; }
     public IDictionary<int, EnumerableRowCollection<DataRow>> Predictions { get; set; }
@@ -64,7 +64,7 @@ namespace Samurai.Domain.Value.Excel
 
     private void ReadPredictionData()
     {
-      genericPredictions = new List<Model.IGenericPrediction>();
+      genericPredictions = new List<Model.GenericPrediction>();
 
       var files = Directory.GetFiles(@"C:\Users\u0158158\Documents\Visual Studio 2010\Projects\ValueSamurai\ValueSamurai.IKTS\bin\Debug")
                            .Where(f => f.IndexOf("IKTS 2011") > 0)
@@ -121,7 +121,7 @@ namespace Samurai.Domain.Value.Excel
           {
             prediction = new Model.FootballPrediction()
             {
-              CompetitionName = "Premier League",
+              TournamentName = "Premier League",
               TeamOrPlayerA = teamAName,
               TeamOrPlayerB = teamBName,
               MatchDate = this.FixturesCouponsOdds.First(x => x.Field<string>("HomeTeam") == teamAName && x.Field<string>("AwayTeam") == teamBName).Field<DateTime>("Date"),
@@ -287,7 +287,7 @@ namespace Samurai.Domain.Value.Excel
       return returnOdds;
     }
 
-    public IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
       return genericPredictions.Where(p => p.MatchDate.Date == valueOptions.CouponDate.Date);
     }

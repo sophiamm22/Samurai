@@ -90,11 +90,12 @@ namespace Samurai.Domain.Value
       var returnMatches = new List<Match>();
       var skySportsSource = this.fixtureRepository.GetExternalSource("Sky Sports");
       var valueSamuraiSource = this.fixtureRepository.GetExternalSource("Value Samurai");
+      var sport = this.fixtureRepository.GetSport("Football");
 
       foreach (var fixture in fixtureTokens)
       {
-        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource);
-        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource);
+        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource, sport);
+        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource, sport);
 
         var homeTeam = this.fixtureRepository.GetTeamOrPlayerFromName(homeTeamName);
         var awayTeam = this.fixtureRepository.GetTeamOrPlayerFromName(awayTeamName);

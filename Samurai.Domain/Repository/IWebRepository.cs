@@ -82,6 +82,11 @@ namespace Samurai.Domain.Repository
   {
     private string _competitionFolderName;
 
+    public WebRepositoryTestData() //hack need to learn how to do this properly with DI -> I think it's property injection
+    {
+      _competitionFolderName = "Tennis/" + (new DateTime(2012, 08, 17)).ToShortDateString().Replace("/", "-");
+    }
+
     public WebRepositoryTestData(string competitionFolderName)
     {
       _competitionFolderName = competitionFolderName;

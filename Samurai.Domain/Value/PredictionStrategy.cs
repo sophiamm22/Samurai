@@ -13,7 +13,7 @@ namespace Samurai.Domain.Value
 {
   public interface IPredictionStrategy
   {
-    IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+    IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
   }
 
   public abstract class AbstractPredictionStrategy : IPredictionStrategy
@@ -33,7 +33,7 @@ namespace Samurai.Domain.Value
       this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
-    public abstract IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+    public abstract IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
   }
 
   public class TennisPredictionStrategy : AbstractPredictionStrategy
@@ -44,12 +44,14 @@ namespace Samurai.Domain.Value
     {
     }
 
-    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public override IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
-      var predictions = new List<Model.IGenericPrediction>();
+      var predictions = new List<Model.GenericPrediction>();
+
+      var atp = "ATP";
 
       var jsonTennisMatches = this.webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => Console.WriteLine(s), string.Format("{0}-{1}", valueOptions.Tournament.Competition.CompetitionName, valueOptions.CouponDate.ToShortDateString()));
+        s => Console.WriteLine(s), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
@@ -65,19 +67,17 @@ namespace Samurai.Domain.Value
       return predictions;
     }
 
-    public static Model.IGenericPrediction ConvertAPIToGeneric(APITennisPrediction apiPrediction, Uri predictionURL)
+    public static Model.GenericPrediction ConvertAPIToGeneric(APITennisPrediction apiPrediction, Uri predictionURL)
     {
       var tennisPrediction = new Model.TennisPrediction()
       {
-        CompetitionName = apiPrediction.TournamentName,
-        TeamOrPlayerA = string.Format("{0}, {1}", apiPrediction.PlayerASurname, apiPrediction.PlayerAFirstname),
-        TeamOrPlayerB = string.Format("{0}, {1}", apiPrediction.PlayerBSurname, apiPrediction.PlayerBFirstname),
+        TournamentName = apiPrediction.TournamentName,
         PredictionURL = predictionURL,
 
         PlayerAFirstName = apiPrediction.PlayerAFirstname,
-        PlayerASurname = apiPrediction.PlayerASurname,
+        TeamOrPlayerA = apiPrediction.PlayerASurname,
         PlayerBFirstName = apiPrediction.PlayerBFirstname,
-        PlayerBSurname = apiPrediction.PlayerBSurname,
+        TeamOrPlayerB = apiPrediction.PlayerBSurname,
 
         PlayerAGames = apiPrediction.PlayerAGames,
         PlayerBGames = apiPrediction.PlayerBGames,
@@ -120,11 +120,11 @@ namespace Samurai.Domain.Value
     {
     }
 
-    public override IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public override IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
-      var gameWeek = this.fixtureRepository.GetDaysFootballMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
+      var gameWeek = this.fixtureRepository.GetDaysMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
       var footballTeams = new List<TeamPlayer>();
-      var predictions = new List<Model.IGenericPrediction>();
+      var predictions = new List<Model.GenericPrediction>();
 
       foreach (var game in gameWeek)
       {
@@ -150,11 +150,11 @@ namespace Samurai.Domain.Value
       return predictions;
     }
 
-    private Model.IGenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
+    private Model.GenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
     {
       var footballPrediction = new Model.FootballPrediction()
       {
-        CompetitionName = tournament.ToString(),
+        TournamentName = tournament.ToString(),
         TeamOrPlayerA = apiPrediction.HomeTeam,
         TeamOrPlayerB = apiPrediction.AwayTeam,
         MatchDate = date,

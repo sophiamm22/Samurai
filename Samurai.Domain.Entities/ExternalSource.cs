@@ -7,6 +7,7 @@ namespace Samurai.Domain.Entities
   {
     public ExternalSource()
     {
+      this.CompeitionCouponURLs = new List<CompetitionCouponURL>();
       this.TournamentCouponURLs = new List<TournamentCouponURL>();
       this.MatchCouponURLs = new List<MatchCouponURL>();
       this.MatchOutcomeOdds = new List<MatchOutcomeOdd>();
@@ -23,6 +24,7 @@ namespace Samurai.Domain.Entities
     public bool UseByDefault { get; set; }
     public bool PrescreenDecider { get; set; }
 
+    public virtual ICollection<CompetitionCouponURL> CompeitionCouponURLs { get; set; }
     public virtual ICollection<TournamentCouponURL> TournamentCouponURLs { get; set; }
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }

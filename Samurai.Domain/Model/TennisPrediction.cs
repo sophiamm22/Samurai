@@ -9,11 +9,6 @@ namespace Samurai.Domain.Model
 {
   public class TennisPrediction : GenericPrediction
   {
-    public string PlayerAFirstName { get; set; }
-    public string PlayerBFirstName { get; set; }
-    public string PlayerASurname { get; set; }
-    public string PlayerBSurname { get; set; }
-
     public int PlayerAGames { get; set; }
     public int PlayerBGames { get; set; }
 

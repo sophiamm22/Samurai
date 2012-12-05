@@ -17,9 +17,21 @@ namespace Samurai.SqlDataAccess
       :base(context)
     { }
 
-    public void AddOrUpdateTennisPredictionsStats(int matchID, TennisPredictionStat stat)
+    public void AddOrUpdateTennisPredictionsStats(TennisPredictionStat stat)
     {
-      throw new NotImplementedException();
+      var persistedStat = First<TennisPredictionStat>(s => s.Id == stat.Id);
+      if (persistedStat == null)
+      {
+        Add<TennisPredictionStat>(stat);
+      }
+      else
+      {
+        persistedStat.PlayerAGames = stat.PlayerAGames;
+        persistedStat.PlayerBGames = stat.PlayerBGames;
+        persistedStat.EPoints = stat.EPoints;
+        persistedStat.EGames = stat.EGames;
+        persistedStat.ESets = stat.ESets;
+      }
     }
 
     public Uri GetFootballAPIURL(int teamAID, int teamBID)
@@ -64,7 +76,10 @@ namespace Samurai.SqlDataAccess
       return First<Fund>(f => f.FundName == fundName);
     }
 
-    //public Match GetOutcomePrediction(
+    public void SaveChanges()
+    {
+      UnitOfWork.SaveChanges();
+    }
 
   }
 }

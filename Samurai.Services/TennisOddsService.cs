@@ -32,16 +32,31 @@ namespace Samurai.Services
       var matchCoupons = new List<TennisMatchViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport);
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source);
 
-      foreach (var tournament in tournaments)
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source).ToList();
+
+      foreach (var tournament in tournaments.Select(t=>t.TournamentName))
       {
         foreach (var source in oddsSources)
         {
-          //matchCoupons.AddRange(
+          matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, true));
         }
       }
       return matchCoupons;
     }
+
+    public IEnumerable<TennisMatchViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
+    {
+      var matches = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<TennisMatchViewModel>>(matches);
+    }
+
+    protected override bool QualifiesPredicate(decimal probability, decimal odds, decimal edgeRequired, int gamesPlayed, int? minGamesRequired)
+    {
+      return base.QualifiesPredicate(probability, odds, edgeRequired, gamesPlayed, minGamesRequired) &&
+        gamesPlayed >= (minGamesRequired ?? 0);
+    }
+
+
   }
 }

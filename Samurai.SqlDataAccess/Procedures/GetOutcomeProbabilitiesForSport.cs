@@ -16,6 +16,8 @@ namespace Samurai.SqlDataAccess.Procedures
     {
       var outcomeProbs = (
         from match in DbSet<Match>()
+        join tennisStat in DbSet<TennisPredictionStat>() on match.Id equals tennisStat.Id into joinedTennisStat
+        from tennisStat in joinedTennisStat.DefaultIfEmpty()
         join homeTeam in DbSet<TeamPlayer>() on match.TeamAID equals homeTeam.Id
         join awayTeam in DbSet<TeamPlayer>() on match.TeamBID equals awayTeam.Id
         join tournamentEvent in DbSet<TournamentEvent>() on match.TournamentEventID equals tournamentEvent.Id
@@ -23,22 +25,29 @@ namespace Samurai.SqlDataAccess.Procedures
         join competition in DbSet<Competition>() on tournament.CompetitionID equals competition.Id
         join sport in DbSet<Sport>() on competition.SportID equals sport.Id
 
-        let outcomeProbabilities = DbSet<MatchOutcomeProbabilitiesInMatch>()
-                                    .Where(m => m.MatchID == match.Id)
-                                    .ToDictionary(o => o.MatchOutcomeID, o => o.MatchOutcomeProbability)
 
         where EntityFunctions.TruncateTime(match.MatchDate) == matchDate.Date && sport.SportName == sportName
         select new OutcomeProbabilitiesForSport
         {
+          MatchID = match.Id,
           Tournament = tournament.TournamentName,
           Date = match.MatchDate,
-          HomeTeam = homeTeam.TeamName,
-          OutcomeProbabilties = outcomeProbabilities,
-          AwayTeam = awayTeam.TeamName,
+          HomeTeam = homeTeam.Slug,
+          AwayTeam = awayTeam.Slug,
           EdgeRequired = competition.EdgeRequired,
-          GamesRequiredForBet = competition.GamesRequiredForBet
+          GamesRequiredForBet = competition.GamesRequiredForBet,
+          GamesPlayedA = tennisStat == null ? new Nullable<int>() : tennisStat.PlayerAGames,
+          GamesPlayedB = tennisStat == null ? new Nullable<int>() : tennisStat.PlayerBGames,
         })
         .ToList();
+
+      outcomeProbs
+        .ForEach(match =>
+          {
+            match.OutcomeProbabilties = DbSet<MatchOutcomeProbabilitiesInMatch>()
+                                          .Where(m => m.MatchID == match.MatchID)
+                                          .ToDictionary(o => o.MatchOutcomeID, o => o.MatchOutcomeProbability);
+          });
 
       return outcomeProbs;
     }

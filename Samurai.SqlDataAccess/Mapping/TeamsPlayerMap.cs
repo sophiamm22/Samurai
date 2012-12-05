@@ -10,7 +10,8 @@ namespace Samurai.SqlDataAccess.Mapping
   {
     public TeamsPlayerMap()
     {
-      this.Property(t => t.TeamName).IsRequired();
+      this.Property(t => t.Name).IsRequired();
+      this.Property(t => t.FirstName).IsOptional();
       this.Property(t => t.Slug).IsRequired();
 
       this.ToTable("TeamsPlayers");

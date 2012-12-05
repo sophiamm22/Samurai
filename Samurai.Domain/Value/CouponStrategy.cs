@@ -46,7 +46,11 @@ namespace Samurai.Domain.Value
 
     public IEnumerable<IGenericMatchCoupon> GetMatches()
     {
-      return GetMatches(this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource));
+      var couponURL = this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource);
+      if (couponURL == null)
+        throw new ArgumentNullException("couponURL");
+      
+      return GetMatches(couponURL);
     }
   }
 
@@ -105,6 +109,9 @@ namespace Samurai.Domain.Value
         s => Console.WriteLine(s)).ToList();
 
       var currentDate = DateTime.Now.Date;
+      var lastChecked = DateTime.Now;
+
+      var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
 
       foreach (var token in matchTokens)
       {
@@ -117,8 +124,14 @@ namespace Samurai.Domain.Value
           var match = ((BestBettingScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');
 
-          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
-          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+
+          if (teamOrPlayerA == string.Empty || teamOrPlayerB == string.Empty)
+          {
+            Console.WriteLine("we're screwed");
+            continue;
+          }
 
           var matchData = new GenericMatchCoupon
           {
@@ -127,7 +140,7 @@ namespace Samurai.Domain.Value
             TeamOrPlayerB = teamOrPlayerB,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
             Source = this.valueOptions.OddsSource.Source,
-            LastChecked = DateTime.Now
+            LastChecked = lastChecked
           };
 
           matchData.HeadlineOdds = match.BestOdds;
@@ -191,10 +204,14 @@ namespace Samurai.Domain.Value
         .Cast<OddsCheckerMobiGenericMatch>()
         .ToList();
 
+      var lastChecked = DateTime.Now;
+
+      var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
+
       foreach (var match in matchTokens)
       {
-        var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
-        var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+        var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+        var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
         var matchData = new GenericMatchCoupon
         {
@@ -202,7 +219,7 @@ namespace Samurai.Domain.Value
           TeamOrPlayerA = teamOrPlayerA,
           TeamOrPlayerB = teamOrPlayerB,
           Source = this.valueOptions.OddsSource.Source,
-          LastChecked = DateTime.Now
+          LastChecked = lastChecked
         };
         returnMatches.Add(matchData);
       }
@@ -229,6 +246,9 @@ namespace Samurai.Domain.Value
         s => Console.WriteLine(s));
 
       var currentDate = DateTime.Now.Date;
+      var lastChecked = DateTime.Now;
+
+      var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
 
       foreach (var token in matchTokens)
       {
@@ -241,8 +261,8 @@ namespace Samurai.Domain.Value
           var match = ((OddsCheckerWebScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');
 
-          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
-          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, this.fixtureRepository.GetExternalSource("Value Samurai"));
+          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
           var matchData = new GenericMatchCoupon
           {
@@ -251,7 +271,7 @@ namespace Samurai.Domain.Value
             TeamOrPlayerB = teamOrPlayerB,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
             Source = this.valueOptions.OddsSource.Source,
-            LastChecked = DateTime.Now
+            LastChecked = lastChecked
           };
 
           matchData.HeadlineOdds = match.BestOdds;

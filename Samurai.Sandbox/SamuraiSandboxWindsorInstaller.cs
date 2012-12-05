@@ -39,7 +39,7 @@ namespace Samurai.Sandbox
 
       container.Register(Component
                         .For<IWebRepository>()
-                        .ImplementedBy<WebRepository>());
+                        .ImplementedBy<WebRepositoryTestData>());
 
       container.Register(Component
                         .For<IBus>()
@@ -66,13 +66,13 @@ namespace Samurai.Sandbox
 
       container.Register(AllTypes
                         .FromAssemblyContaining<FixtureStrategyProvider>()
-                        .Where(t => t.Name.StartsWith("Excel"))
+                        .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(Component
-                        .For<ISpreadsheetData>()
-                        .ImplementedBy<SpreadsheetData>());
+      //container.Register(Component
+      //                  .For<ISpreadsheetData>()
+      //                  .ImplementedBy<SpreadsheetData>());
 
       container.Register(Component
                         .For<IMessageHandlerFactory>()

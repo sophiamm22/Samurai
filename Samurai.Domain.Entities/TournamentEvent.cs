@@ -18,6 +18,8 @@ namespace Samurai.Domain.Entities
     public string Slug { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }
+    public bool TournamentInProgress { get; set; }
+    public bool TournamentCompleted { get; set; }
 
     public virtual Tournament Tournament { get; set; }
     public virtual ICollection<Match> Matches { get; set; }

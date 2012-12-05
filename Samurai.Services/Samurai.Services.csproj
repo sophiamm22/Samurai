@@ -48,6 +48,7 @@
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
+    <Compile Include="AutoMapper\TennisMatchProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />

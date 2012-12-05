@@ -18,7 +18,7 @@ namespace Samurai.Domain.Value.Excel
       this.spreadsheetData = spreadsheetData;
     }
 
-    public IEnumerable<Model.IGenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
     {
       return this.spreadsheetData.GetPredictions(valueOptions);
     }

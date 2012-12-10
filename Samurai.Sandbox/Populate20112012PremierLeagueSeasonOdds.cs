@@ -13,12 +13,12 @@ using Samurai.Web.ViewModels;
 
 namespace Samurai.Sandbox
 {
-  public class Populate2011PremierLeagueSeasonOdds
+  public class Populate20112012PremierLeagueSeasonOdds
   {
     private readonly IWindsorContainer container;
     private List<FootballFixtureViewModel> fixtures;
 
-    public Populate2011PremierLeagueSeasonOdds(IWindsorContainer container)
+    public Populate20112012PremierLeagueSeasonOdds(IWindsorContainer container)
     {
       if (container == null) throw new ArgumentNullException("container");
       this.container = container;

@@ -8,11 +8,11 @@ using Samurai.Domain.Value;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public class ExcelPredictionStrategy : IPredictionStrategy
+  public class ExcelFootballPredictionStrategy : IPredictionStrategy
   {
     private readonly ISpreadsheetData spreadsheetData;
 
-    public ExcelPredictionStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballPredictionStrategy(ISpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

@@ -11,11 +11,11 @@ using Samurai.Domain.HtmlElements;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public class ExcelCouponStrategy : ICouponStrategy
+  public class ExcelFootballCouponStrategy : ICouponStrategy
   {
     private readonly ISpreadsheetData spreadsheetData;
 
-    public ExcelCouponStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballCouponStrategy(ISpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

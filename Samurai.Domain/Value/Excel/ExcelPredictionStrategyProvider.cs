@@ -20,7 +20,7 @@ namespace Samurai.Domain.Value.Excel
 
     public IPredictionStrategy CreatePredictionStrategy(Entities.Sport sport)
     {
-      return new ExcelPredictionStrategy(this.spreadsheetData);
+      return new ExcelFootballPredictionStrategy(this.spreadsheetData);
     }
   }
 }

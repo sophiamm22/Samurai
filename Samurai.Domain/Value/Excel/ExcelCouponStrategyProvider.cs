@@ -22,7 +22,7 @@ namespace Samurai.Domain.Value.Excel
 
     public ICouponStrategy CreateCouponStrategy(IValueOptions valueOptions)
     {
-      return new ExcelCouponStrategy(this.spreadsheetData);
+      return new ExcelFootballCouponStrategy(this.spreadsheetData);
     }
   }
 }

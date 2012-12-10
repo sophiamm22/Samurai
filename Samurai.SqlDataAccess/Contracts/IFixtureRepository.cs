@@ -10,7 +10,7 @@ namespace Samurai.SqlDataAccess.Contracts
 {
   public interface IFixtureRepository
   {
-    Match GetTennisMatch(string playerA, string playerB, DateTime matchDate);
+    Match GetTennisMatch(string playerASlug, string playerBSlug, DateTime matchDate);
     IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(string competition, DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(DateTime matchDate);

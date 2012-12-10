@@ -19,10 +19,10 @@ namespace Samurai.SqlDataAccess
       : base(context)
     { }
 
-    public Match GetTennisMatch(string playerA, string playerB, DateTime matchDate)
+    public Match GetTennisMatch(string playerASlug, string playerBSlug, DateTime matchDate)
     {
-      return First<Match>(m => m.TeamsPlayerA.Name == playerA &&
-                              m.TeamsPlayerB.Name == playerB &&
+      return First<Match>(m => m.TeamsPlayerA.Slug == playerASlug &&
+                              m.TeamsPlayerB.Slug == playerBSlug &&
                               m.MatchDate == matchDate);
     }
 

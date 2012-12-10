@@ -17,8 +17,6 @@ namespace Samurai.Domain.Value.Excel
   public interface ISpreadsheetData
   {
     DateTime CouponDate { get; set; }
-    EnumerableRowCollection<DataRow> FixturesCouponsOdds { get; set; }
-    IDictionary<int, EnumerableRowCollection<DataRow>> Predictions { get; set; }
     void ReadData();
     IEnumerable<Match> UpdateResults(DateTime fixtureDate);
     IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament);
@@ -29,7 +27,7 @@ namespace Samurai.Domain.Value.Excel
 
   }
 
-  public class SpreadsheetData : ISpreadsheetData
+  public class FootballSpreadsheetData : ISpreadsheetData
   {
     private readonly IBookmakerRepository bookmakerRepository;
     private readonly IFixtureRepository fixtureRepository;
@@ -41,7 +39,7 @@ namespace Samurai.Domain.Value.Excel
     public IDictionary<int, EnumerableRowCollection<DataRow>> Predictions { get; set; }
     public EnumerableRowCollection<DataRow> FixturesCouponsOdds { get; set; }
 
-    public SpreadsheetData(IBookmakerRepository bookmakerRepository,
+   public FootballSpreadsheetData(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IPredictionRepository predictionRepository)
     {
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
@@ -51,9 +49,6 @@ namespace Samurai.Domain.Value.Excel
       this.bookmakerRepository = bookmakerRepository;
       this.fixtureRepository = fixtureRepository;
       this.predictionRepository = predictionRepository;
-
-      Predictions = new Dictionary<int, EnumerableRowCollection<DataRow>>();
-
     }
 
     public void ReadData()
@@ -222,8 +217,8 @@ namespace Samurai.Domain.Value.Excel
     public IEnumerable<Model.IGenericMatchCoupon> GetMatches()
     {
       var matches = new List<Model.IGenericMatchCoupon>();
-
       var returnMatches = new List<Match>();
+
       FixturesCouponsOdds.Where(x => x.Field<DateTime>("Date").Date == CouponDate.Date)
                                  .ToList()
                                  .ForEach(x =>

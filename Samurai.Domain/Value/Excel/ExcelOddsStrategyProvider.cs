@@ -20,7 +20,7 @@ namespace Samurai.Domain.Value.Excel
 
     public IOddsStrategy CreateOddsStrategy(Model.IValueOptions valueOptions)
     {
-      return new ExcelOddsStrategy(this.spreadsheetData);
+      return new ExcelFootballOddsStrategy(this.spreadsheetData);
     }
   }
 }

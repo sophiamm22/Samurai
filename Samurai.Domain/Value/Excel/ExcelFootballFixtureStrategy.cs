@@ -8,11 +8,11 @@ using Samurai.Domain.Entities;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public class ExcelFixtureStrategy : IFixtureStrategy
+  public class ExcelFootballFixtureStrategy : IFixtureStrategy
   {
     private readonly ISpreadsheetData spreadsheetData;
 
-    public ExcelFixtureStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballFixtureStrategy(ISpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

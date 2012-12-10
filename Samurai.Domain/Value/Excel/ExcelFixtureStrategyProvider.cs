@@ -19,7 +19,7 @@ namespace Samurai.Domain.Value.Excel
     }
     public IFixtureStrategy CreateFixtureStrategy(Model.SportEnum sport)
     {
-      return new ExcelFixtureStrategy(spreadsheetData);
+      return new ExcelFootballFixtureStrategy(spreadsheetData);
     }
   }
 }

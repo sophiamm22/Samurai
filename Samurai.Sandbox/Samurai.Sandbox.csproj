@@ -54,7 +54,8 @@
   <ItemGroup>
     <Compile Include="FullFootballDownload.cs" />
     <Compile Include="FullTennisDownload.cs" />
-    <Compile Include="Populate2011PremierLeagueSeasonOdds.cs" />
+    <Compile Include="Populate20112012PremierLeagueSeasonOdds.cs" />
+    <Compile Include="Populate2012TennisSeasonOdds.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SamuraiSandboxWindsorInstaller.cs" />

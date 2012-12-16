@@ -22,7 +22,12 @@ namespace Samurai.Domain.Value.Excel
 
     public ICouponStrategy CreateCouponStrategy(IValueOptions valueOptions)
     {
-      return new ExcelFootballCouponStrategy(this.spreadsheetData);
+      if (valueOptions.Sport.SportName == "Football")
+        return new ExcelFootballCouponStrategy(this.spreadsheetData);
+      else if (valueOptions.Sport.SportName == "Tennis")
+        return new ExcelTennisCouponStrategy(this.spreadsheetData);
+      else
+        throw new ArgumentException("valueOptions.Sport.SportName");
     }
   }
 }

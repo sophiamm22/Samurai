@@ -20,7 +20,12 @@ namespace Samurai.Domain.Value.Excel
 
     public IOddsStrategy CreateOddsStrategy(Model.IValueOptions valueOptions)
     {
-      return new ExcelFootballOddsStrategy(this.spreadsheetData);
+      if (valueOptions.Sport.SportName == "Football")
+        return new ExcelFootballOddsStrategy(this.spreadsheetData);
+      else if (valueOptions.Sport.SportName == "Tennis")
+        return new ExcelTennisOddsStrategy(this.spreadsheetData);
+      else
+        throw new ArgumentException("valueOptions.Sport.SportName");
     }
   }
 }

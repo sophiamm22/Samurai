@@ -14,7 +14,7 @@ namespace Samurai.SqlDataAccess.Contracts
     IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(string competition, DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(DateTime matchDate);
-    IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate);
+    IEnumerable<Tournament> GetDaysTennisTournaments(DateTime matchDate);
     ExternalSource GetExternalSource(string sourceName);
     string GetAlias(string teamName, ExternalSource source, ExternalSource destination, Sport sport);
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);

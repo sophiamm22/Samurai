@@ -19,7 +19,12 @@ namespace Samurai.Domain.Value.Excel
     }
     public IFixtureStrategy CreateFixtureStrategy(Model.SportEnum sport)
     {
-      return new ExcelFootballFixtureStrategy(spreadsheetData);
+      if (sport == Model.SportEnum.Football)
+        return new ExcelFootballFixtureStrategy(spreadsheetData);
+      else if (sport == Model.SportEnum.Tennis)
+        return new ExcelTennisFixtureStrategy(spreadsheetData);
+      else
+        throw new ArgumentException("sport");
     }
   }
 }

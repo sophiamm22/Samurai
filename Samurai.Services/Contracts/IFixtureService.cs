@@ -25,7 +25,9 @@ namespace Samurai.Services.Contracts
 
   public interface ITennisFixtureService : IFixtureService
   {
-
+    IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
+    TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);
+    IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate);
   }
 
 }

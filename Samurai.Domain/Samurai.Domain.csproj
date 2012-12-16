@@ -119,6 +119,7 @@
     <Compile Include="Value\Excel\ExcelPredictionStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelTennisCouponStrategy.cs" />
     <Compile Include="Value\Excel\ExcelTennisFixtureStrategy.cs" />
+    <Compile Include="Value\Excel\ExcelTennisOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelTennisPredictionStrategy.cs" />
     <Compile Include="Value\Excel\TennisSpreadsheetData.cs" />
     <Compile Include="Value\FixtureStrategyProvider.cs" />

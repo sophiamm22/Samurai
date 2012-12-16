@@ -23,17 +23,28 @@ namespace Samurai.Sandbox
       this.container = container;
     }
 
-    public void PopulateDatabase()
+    public void Populate()
     {
+      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+      spreadsheetData.ReadData();
+
       var dates = Enumerable.Range(0, 365)
                             .Select(d => new DateTime(2012, 01, 01).AddDays(d))
                             .ToList();
 
       foreach (var date in dates)
       {
+        spreadsheetData.CouponDate = date;
+        GetFixtures(date);
         GetPredictions(date);
         GetOdds(date);        
       }
+    }
+
+    private void GetFixtures(DateTime date)
+    {
+      var fixtureService = this.container.Resolve<ITennisFixtureService>();
+      fixtureService.FetchTennisResults(date);
     }
 
     private void GetPredictions(DateTime date)

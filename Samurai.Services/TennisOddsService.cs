@@ -39,7 +39,7 @@ namespace Samurai.Services
       {
         foreach (var source in oddsSources)
         {
-          matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, true));
+          matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, false));
         }
       }
       return matchCoupons;

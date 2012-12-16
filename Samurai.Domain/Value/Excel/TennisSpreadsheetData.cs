@@ -47,7 +47,7 @@ namespace Samurai.Domain.Value.Excel
     public void ReadData()
     {
       var file = @"C:\Users\u0158158\Documents\VS\Tennis\2012TennisOdds.xlsx";
-      var connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"{0}\"; Extended Properties=\"Excel 12.0; IMEX=1; HDR=NO\";", file);
+      var connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"{0}\"; Extended Properties=\"Excel 12.0; IMEX=1; HDR=YES\";", file);
       var adapter = new OleDbDataAdapter("SELECT * FROM [TennisOdds$]", connectionString);
       using (var ds = new DataSet())
       {
@@ -57,12 +57,14 @@ namespace Samurai.Domain.Value.Excel
 
       foreach (var match in this.excelMatches)
       {
-        var predictionURL = new Uri(match.Field<string>("URL").Replace(".", "").RemoveDiacritics());
+        var predictionURL = new Uri(match.Field<string>("URL").Replace(".", "").Replace("’", "").Replace("'", "").Replace("&", "").Replace(",", "").RemoveDiacritics());
         var jsonTennisPrediction = (APITennisPrediction)this.webRepository.ParseJson<APITennisPrediction>(
           predictionURL, s => Console.WriteLine(s));
 
         var genericPrediction = TennisPredictionStrategy.ConvertAPIToGeneric(jsonTennisPrediction, predictionURL);
-        this.predictions.Add(match.Field<string>("URL"), genericPrediction);
+        genericPrediction.MatchDate = match.Field<DateTime>("DateToTake").Date;
+        if (!this.predictions.ContainsKey(match.Field<string>("URL")))
+          this.predictions.Add(match.Field<string>("URL"), genericPrediction);
       }
     }
 
@@ -70,13 +72,13 @@ namespace Samurai.Domain.Value.Excel
     {
       var returnMatches = new List<Match>();
       this.excelMatches.Where(x =>
-                            x.Field<DateTime>("Date").Date == fixtureDate.Date)
+                            x.Field<DateTime>("DateToTake").Date == fixtureDate.Date)
                               .ToList()
                               .ForEach(x =>
                               {
-                                var player1 = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(x.Field<string>("Player1FirstName"), x.Field<string>("Player1Surname"));
-                                var player2 = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(x.Field<string>("Player2FirstName"), x.Field<string>("Player2Surname"));
-                                var matchDate = x.Field<DateTime>("Date");
+                                var player1 = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(x.Field<string>("Player1Surname"), x.Field<string>("Player1FirstName"));
+                                var player2 = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(x.Field<string>("Player2Surname"), x.Field<string>("Player2FirstName"));
+                                var matchDate = x.Field<DateTime>("DateToTake");
                                 var persistedMatch = this.fixtureRepository.GetTennisMatch(player1.Slug, player2.Slug, matchDate);
                                 if (persistedMatch == null)
                                 {
@@ -102,7 +104,7 @@ namespace Samurai.Domain.Value.Excel
                                   newMatch.ObservedOutcomes.Add(new ObservedOutcome()
                                   {
                                     Match = newMatch,
-                                    ScoreOutcome = this.fixtureRepository.GetScoreOutcome(scores.Count(s => s == 1), scores.Count(s => s == -1))
+                                    ScoreOutcome = this.fixtureRepository.GetScoreOutcome(scores.Count(s => s == 1), scores.Count(s => s == -1)) //TODO <- this is bullshit, retirie's will get a null returned
                                   });
                                   returnMatches.Add(newMatch);
                                   this.fixtureRepository.AddMatch(newMatch);
@@ -138,7 +140,7 @@ namespace Samurai.Domain.Value.Excel
                          {
                            matches.Add(new Model.GenericMatchCoupon()
                            {
-                             MatchDate = x.Field<DateTime>("Date").Date,
+                             MatchDate = x.Field<DateTime>("DateToTake").Date,
                              TeamOrPlayerA = string.Format("{0}-{1}", x.Field<string>("Player1FirstName"), x.Field<string>("Player1Surname")).ToHyphenated().RemoveDiacritics().ToLower(),
                              TeamOrPlayerB = string.Format("{0}-{1}", x.Field<string>("Player2FirstName"), x.Field<string>("Player2Surname")).ToHyphenated().RemoveDiacritics().ToLower(),
                              LastChecked = CouponDate.Date,
@@ -146,8 +148,8 @@ namespace Samurai.Domain.Value.Excel
                              MatchURL = new Uri(x.Field<string>("URL")),
                              HeadlineOdds = new Dictionary<Model.Outcome, double>()
                              {
-                               { Model.Outcome.HomeWin, x.Field<double>("Player1TennisDataBestAvailable") },
-                               { Model.Outcome.AwayWin, x.Field<double>("Player2TennisDataBestAvailable") }
+                               { Model.Outcome.HomeWin, x.Field<double?>("TDB1") ?? 1.01 },
+                               { Model.Outcome.AwayWin, x.Field<double?>("TDB2") ?? 1.01 }
                              }
                            });
                          });
@@ -180,10 +182,13 @@ namespace Samurai.Domain.Value.Excel
           var bookie = bookiesDic[bookieKey];
           var lookup = bookieKey + (outcome == "HomeWin" ? "1" : "2");
 
-          var odd = oddsRow.Field<double>(lookup);
+          var odd = oddsRow.Field<double?>(lookup);
 
-          var genericOdd = CreateConcreateOdd(bookie, odd);
-          oddsForOutcome.Add(genericOdd);
+          if (odd != null)
+          {
+            var genericOdd = CreateConcreateOdd(bookie, odd ?? 0.0);
+            oddsForOutcome.Add(genericOdd);
+          }
         }
       }
       return returnOdds;

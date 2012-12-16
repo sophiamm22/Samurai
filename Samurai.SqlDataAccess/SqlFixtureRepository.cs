@@ -55,11 +55,13 @@ namespace Samurai.SqlDataAccess
                 .ToList();
     }
 
-    public IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate)
+    public IEnumerable<Tournament> GetDaysTennisTournaments(DateTime matchDate)
     {
       var tournaments = GetQuery<TournamentEvent>(t => EntityFunctions.AddDays(t.StartDate, -2) <= matchDate &&
                                                       EntityFunctions.AddDays(t.EndDate, 2) >= matchDate &&
-                                                      t.TournamentInProgress)
+                                                      t.Tournament.Competition.Sport.SportName == "Tennis"
+        /* &&
+        t.TournamentInProgress*/)
                                                       .Select(t => t.Tournament)
                                                       .ToList();
       return tournaments;
@@ -275,7 +277,7 @@ namespace Samurai.SqlDataAccess
 
     public TeamPlayer GetTeamOrPlayerFromNameAndMaybeFirstName(string teamSurname, string firstName)
     {
-      var teamOrPlayer = First<TeamPlayer>(t => t.Name == teamSurname);
+      var teamOrPlayer = string.IsNullOrEmpty(firstName) ? First<TeamPlayer>(t => t.Name == teamSurname) : First<TeamPlayer>(t => t.Name == teamSurname && t.FirstName == firstName);
       if (teamOrPlayer == null)
       {
         teamOrPlayer = new TeamPlayer() { Name = teamSurname };

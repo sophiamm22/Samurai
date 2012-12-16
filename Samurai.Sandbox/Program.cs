@@ -16,12 +16,16 @@ namespace Samurai.Sandbox
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());
 
+      var didItBaby = new Populate2012TennisSeasonOdds(container);
+      didItBaby.Populate();
+
       //var diditbaby = new Populate2011PremierLeagueSeasonOdds(container);
       //diditbaby.Populate();
 
-      var date = new DateTime(2012, 08, 17);
-      var doitbaby = new FullTennisDownload(container, date);
-      doitbaby.PopulateDatabase();
+      //var date = new DateTime(2012, 08, 17);
+
+      //var doitbaby = new FullTennisDownload(container, date);
+      //doitbaby.PopulateDatabase();
     }
   }
 }

@@ -35,7 +35,6 @@ namespace Samurai.Sandbox
     private void GetFixtures()
     {
       var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
-
       spreadsheetData.ReadData();
 
       var fixtureService = this.container.Resolve<IFootballFixtureService>();

@@ -84,7 +84,7 @@ namespace Samurai.Domain.Repository
 
     public WebRepositoryTestData() //hack need to learn how to do this properly with DI -> I think it's property injection
     {
-      _competitionFolderName = "Tennis/" + (new DateTime(2012, 08, 17)).ToShortDateString().Replace("/", "-");
+      _competitionFolderName = "Tennis/" + (new DateTime(1981, 06, 29)).ToShortDateString().Replace("/", "-");
     }
 
     public WebRepositoryTestData(string competitionFolderName)
@@ -161,6 +161,11 @@ namespace Samurai.Domain.Repository
   public class WebRepositorySaveTestData : WebRepository
   {
     private string _competitionFolderName;
+
+    public WebRepositorySaveTestData()
+    {
+      _competitionFolderName = "Tennis/" + (new DateTime(1981, 06, 29)).ToShortDateString().Replace("/", "-");
+    }
 
     public WebRepositorySaveTestData(string competitionFolderName)
     {

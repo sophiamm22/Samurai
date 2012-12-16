@@ -69,7 +69,7 @@ namespace Samurai.Services
 
     protected IEnumerable<Tournament> DaysTournaments(DateTime date, string sport)
     {
-      var tournaments = this.fixtureRepository.GetDaysTournaments(date);
+      var tournaments = this.fixtureRepository.GetDaysTennisTournaments(date);
 
       return tournaments;
     }

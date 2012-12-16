@@ -20,7 +20,12 @@ namespace Samurai.Domain.Value.Excel
 
     public IPredictionStrategy CreatePredictionStrategy(Entities.Sport sport)
     {
-      return new ExcelFootballPredictionStrategy(this.spreadsheetData);
+      if (sport.SportName == "Football")
+        return new ExcelFootballPredictionStrategy(this.spreadsheetData);
+      else if (sport.SportName == "Tennis")
+        return new ExcelTennisPredictionStrategy(this.spreadsheetData);
+      else
+        throw new ArgumentException("sport.SportName");
     }
   }
 }

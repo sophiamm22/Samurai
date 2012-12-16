@@ -35,6 +35,14 @@ namespace Samurai.Services
       if (match == null) return null;
       return Mapper.Map<Match, TennisMatchViewModel>(match);
     }
+
+    public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
+    {
+      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Tennis);
+      var fixtures = fixtureStrategy.UpdateResults(matchDate);
+
+      return Mapper.Map<IEnumerable<Match>, IEnumerable<TennisMatchViewModel>>(fixtures);
+    }
   
   }
 }

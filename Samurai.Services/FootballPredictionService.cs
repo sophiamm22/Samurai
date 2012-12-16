@@ -76,16 +76,19 @@ namespace Samurai.Services
                                         .FirstOrDefault(s => string.Format("{0}-{1}", s.ScoreOutcome.TeamAScore, s.ScoreOutcome.TeamBScore) == scoreLine.Key);
           if (persistedScoreLine == null)
           {
-            match.ScoreOutcomeProbabilitiesInMatches.Add(new ScoreOutcomeProbabilitiesInMatch
+            if (scoreLine.Value.HasValue)
             {
-              Match = match,
-              ScoreOutcome = this.fixtureRepository.GetScoreOutcome(int.Parse(scoreLine.Key.Split('-')[0]), int.Parse(scoreLine.Key.Split('-')[1])),
-              ScoreOutcomeProbability = (decimal)(scoreLine.Value ?? 0.0)
-            });
+              match.ScoreOutcomeProbabilitiesInMatches.Add(new ScoreOutcomeProbabilitiesInMatch
+              {
+                Match = match,
+                ScoreOutcome = this.fixtureRepository.GetScoreOutcome(int.Parse(scoreLine.Key.Split('-')[0]), int.Parse(scoreLine.Key.Split('-')[1])),
+                ScoreOutcomeProbability = (decimal)(scoreLine.Value ?? 0.0)
+              });
+            }
           }
           else
           {
-            persistedScoreLine.ScoreOutcomeProbability = (decimal)(scoreLine.Value ?? 0.0);
+            persistedScoreLine.ScoreOutcomeProbability = (decimal)(scoreLine.Value ?? 0.0); //should be nullable
           }
         }
       }

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Samurai.WebPresentationModel.Messaging;
 using Samurai.WebPresentationModel.Messaging.Fixtures.Messages;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.WebPresentationModel.Controllers
 {
@@ -35,7 +36,7 @@ namespace Samurai.WebPresentationModel.Controllers
     }
 
     [HttpPost]
-    public ActionResult EditFootballFixtures(IEnumerable<FootballFixtureSummaryViewModel> fixtures)
+    public ActionResult EditFootballFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
     {
       var request = new EditFootballFixturesRequest { Fixtures = fixtures };
 

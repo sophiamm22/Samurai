@@ -122,5 +122,23 @@ namespace Samurai.SqlDataAccess
     {
       UnitOfWork.SaveChanges();
     }
+
+    public IQueryable<MatchCouponURL> GetMatchCouponURLs(int matchID)
+    {
+      return GetQuery<MatchCouponURL>(x => x.Id == matchID);
+    }
+
+    public void AddMatchCouponURL(MatchCouponURL entity)
+    {
+      Add<MatchCouponURL>(entity);
+    }
+
+    public IQueryable<MatchOutcomeOdd> GetMatchOutcomeOdds(int probOutcomeID)
+    {
+      return GetQuery<MatchOutcomeOdd>(x => x.MatchOutcomeProbabilitiesInMatchID == probOutcomeID)
+        .Include(x => x.ExternalSource)
+        .Include(x => x.Bookmaker);
+    }
+
   }
 }

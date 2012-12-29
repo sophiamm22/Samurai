@@ -90,6 +90,7 @@
     <Compile Include="HtmlElements\OddsCheckerWebScheduleMatchOdds.cs" />
     <Compile Include="HtmlElements\SkySportsFootballFixture.cs" />
     <Compile Include="HtmlElements\SkySportsFootballResult.cs" />
+    <Compile Include="Model\GenericMatchDetail.cs" />
     <Compile Include="Model\IBestBettingCompetition.cs" />
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\FootballMatch.cs" />
@@ -151,7 +152,9 @@
   <ItemGroup>
     <Content Include="Lib\Jint.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

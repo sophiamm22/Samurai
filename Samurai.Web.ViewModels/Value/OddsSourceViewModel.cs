@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Samurai.Web.ViewModels
+namespace Samurai.Web.ViewModels.Value
 {
   public class OddsSourceViewModel
   {

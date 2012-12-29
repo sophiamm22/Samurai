@@ -23,16 +23,16 @@ namespace Samurai.Services
       : base(predictionProvider, predictionRepository, fixtureRepository)
     { }
 
-    public IEnumerable<TennisMatchViewModel> GetTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisPredictionViewModel> GetTennisPredictions(DateTime matchDate)
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<TennisMatchViewModel> FetchTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisPredictionViewModel> FetchTennisPredictions(DateTime matchDate)
     {
       var predictions = GetModelTennisPredictions(matchDate);
-      var matches = PersistTennisPredictions(predictions);
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<TennisMatchViewModel>>(matches);
+      PersistTennisPredictions(predictions);
+      return Mapper.Map<IEnumerable<TennisPrediction>, IEnumerable<TennisPredictionViewModel>>(predictions);
     }
 
     private IEnumerable<TennisPrediction> GetModelTennisPredictions(DateTime matchDate)
@@ -51,18 +51,17 @@ namespace Samurai.Services
       };
 
       var predictionStrategy = this.predictionProvider.CreatePredictionStrategy(sport);
-      var tennisPredictions = predictionStrategy.GetPredictions(valueOptions)
+      var tennisPredictions = predictionStrategy.FetchPredictions(valueOptions)
                                                 .Cast<TennisPrediction>()
                                                 .ToList();
       return tennisPredictions;
     }
 
-    private IEnumerable<Match> PersistTennisPredictions(IEnumerable<TennisPrediction> tennisPredictions)
+    private void PersistTennisPredictions(IEnumerable<TennisPrediction> tennisPredictions)
     {
       var persistedMatches = PersistGenericPredictions(tennisPredictions);
 
-      persistedMatches.Select(p => p.Id)
-                      .Zip(tennisPredictions, (m, p) => new
+      persistedMatches.Zip(tennisPredictions, (m, p) => new
                         {
                           MatchID = m,
                           Prediction = p
@@ -83,7 +82,6 @@ namespace Samurai.Services
                               .AddOrUpdateTennisPredictionsStats(prediction);
                         });
       this.predictionRepository.SaveChanges();
-      return persistedMatches;
     }
 
   }

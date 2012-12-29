@@ -64,16 +64,16 @@ namespace Samurai.Tests.Domain
     protected override void Because_of()
     {
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Premier League"]);
-      this.premPredictions = this.predictionStrategy.GetPredictions(this.valueOptions.Object).ToList();
+      this.premPredictions = this.predictionStrategy.FetchPredictions(this.valueOptions.Object).ToList();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Championship"]);
-      this.champPredictions = this.predictionStrategy.GetPredictions(this.valueOptions.Object).ToList();
+      this.champPredictions = this.predictionStrategy.FetchPredictions(this.valueOptions.Object).ToList();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League One"]);
-      this.league1Predictions = this.predictionStrategy.GetPredictions(this.valueOptions.Object).ToList();
+      this.league1Predictions = this.predictionStrategy.FetchPredictions(this.valueOptions.Object).ToList();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League Two"]);
-      this.league2Predictions = this.predictionStrategy.GetPredictions(this.valueOptions.Object).ToList();
+      this.league2Predictions = this.predictionStrategy.FetchPredictions(this.valueOptions.Object).ToList();
     }
 
     [Test]
@@ -127,7 +127,7 @@ namespace Samurai.Tests.Domain
 
     protected override void Because_of()
     {
-      this.predictions = this.predictionStrategy.GetPredictions(this.valueOptions.Object).ToList();
+      this.predictions = this.predictionStrategy.FetchPredictions(this.valueOptions.Object).ToList();
     }
 
     [Test]

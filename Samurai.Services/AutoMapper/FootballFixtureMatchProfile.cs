@@ -7,10 +7,12 @@ using AutoMapper;
 
 using Samurai.Domain.Entities;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
+using Samurai.Domain.Model;
 
 namespace Samurai.Services.AutoMapper
 {
-  public class FootballFixtureProfile : Profile
+  public class FootballFixtureMatchProfile : Profile
   {
     protected override void Configure()
     {

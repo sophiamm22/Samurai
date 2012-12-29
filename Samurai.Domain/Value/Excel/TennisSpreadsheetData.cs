@@ -124,14 +124,14 @@ namespace Samurai.Domain.Value.Excel
       throw new NotImplementedException();
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches(Uri tournamentURL)
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL)
     {
       return GetMatches();
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches()
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches()
     {
-      var matches = new List<Model.IGenericMatchCoupon>();
+      var matches = new List<Model.GenericMatchCoupon>();
       var returnMatches = new List<Match>();
 
       this.excelMatches.Where(x => x.Field<DateTime>("DateToTake").Date == CouponDate.Date)
@@ -156,7 +156,7 @@ namespace Samurai.Domain.Value.Excel
       return matches;
     }
 
-    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.IGenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
       var returnOdds = new Dictionary<Model.Outcome, IEnumerable<Model.GenericOdd>>();
 

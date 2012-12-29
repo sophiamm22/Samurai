@@ -4,17 +4,23 @@ using System.Linq;
 using System.Text;
 
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.Services.Contracts
 {
-  public interface ITennisPredictionService
+  public interface IPredictionService
   {
-    IEnumerable<TennisMatchViewModel> GetTennisPredictions(DateTime matchDate);
-    IEnumerable<TennisMatchViewModel> FetchTennisPredictions(DateTime matchDate);
+    int GetCountOfDaysPredictions(DateTime fixtureDate, string sport);
   }
-  public interface IFootballPredictionService
+
+  public interface ITennisPredictionService : IPredictionService
   {
-    IEnumerable<FootballFixtureViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
-    IEnumerable<FootballFixtureViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
+    IEnumerable<TennisPredictionViewModel> GetTennisPredictions(DateTime matchDate);
+    IEnumerable<TennisPredictionViewModel> FetchTennisPredictions(DateTime matchDate);
+  }
+  public interface IFootballPredictionService : IPredictionService
+  {
+    IEnumerable<FootballPredictionViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
+    IEnumerable<FootballPredictionViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures);
   }
 }

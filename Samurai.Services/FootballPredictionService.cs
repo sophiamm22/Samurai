@@ -8,6 +8,7 @@ using AutoMapper;
 
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Value;
@@ -15,7 +16,7 @@ using Samurai.Domain.Model;
 
 namespace Samurai.Services
 {
-  public abstract class PredictionService
+  public abstract class PredictionService : IPredictionService
   {
     protected readonly IPredictionStrategyProvider predictionProvider;
     protected readonly IPredictionRepository predictionRepository;
@@ -33,9 +34,16 @@ namespace Samurai.Services
       this.fixtureRepository = fixtureRepository;
     }
 
-    protected IEnumerable<Match> PersistGenericPredictions(IEnumerable<GenericPrediction> predictions)
+    public int GetCountOfDaysPredictions(DateTime fixtureDate, string sport)
     {
-      var matches = new List<Match>();
+      var probCount = this.predictionRepository.GetMatchOutcomeProbabiltiesInMatchByDate(fixtureDate, sport)
+        .Count();
+      return sport == "Football" ? (probCount / 3) : (probCount / 2);
+    }
+
+    protected IEnumerable<int> PersistGenericPredictions(IEnumerable<GenericPrediction> predictions)
+    {
+      var matchIDs = new List<int>();
 
       foreach (var prediction in predictions)
       {
@@ -48,21 +56,23 @@ namespace Samurai.Services
           var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(prediction.MatchDate, prediction.TournamentName);
           match = this.fixtureRepository.CreateMatch(teamA, teamB, prediction.MatchDate, tournamentEvent);
         }
-        matches.Add(match);
+        matchIDs.Add(match.Id);
+
+        var persistedOutcomes = this.predictionRepository.GetMatchOutcomeProbabilities(match.Id).ToList();
 
         foreach (var outcome in prediction.OutcomeProbabilities)
         {
-          var persistedOutcome = match.MatchOutcomeProbabilitiesInMatches
-                                      .FirstOrDefault(o => o.MatchOutcome.Id == (int)outcome.Key);
+          var persistedOutcome = persistedOutcomes.FirstOrDefault(p => p.MatchOutcomeID == (int)outcome.Key); //match.MatchOutcomeProbabilitiesInMatches.FirstOrDefault(o => o.MatchOutcome.Id == (int)outcome.Key);
 
           if (persistedOutcome == null)
           {
-            match.MatchOutcomeProbabilitiesInMatches.Add(new MatchOutcomeProbabilitiesInMatch
+            var newOutcomeProb = new MatchOutcomeProbabilitiesInMatch
             {
-              Match = match,
+              MatchID = match.Id,
               MatchOutcome = this.fixtureRepository.GetMatchOutcomeByID((int)outcome.Key),
               MatchOutcomeProbability = (decimal)outcome.Value
-            });
+            };
+            this.predictionRepository.AddMatchOutcomeProbabilitiesInMatch(newOutcomeProb);
           }
           else
           {
@@ -70,20 +80,23 @@ namespace Samurai.Services
           }
         }
 
+        var persistedScoreLines = this.predictionRepository.GetScoreOutcomeProbabilities(match.Id).ToList();
+
         foreach (var scoreLine in prediction.ScoreLineProbabilities)
         {
-          var persistedScoreLine = match.ScoreOutcomeProbabilitiesInMatches
-                                        .FirstOrDefault(s => string.Format("{0}-{1}", s.ScoreOutcome.TeamAScore, s.ScoreOutcome.TeamBScore) == scoreLine.Key);
+          var persistedScoreLine = persistedScoreLines.FirstOrDefault(s => string.Format("{0}-{1}", s.ScoreOutcome.TeamAScore, s.ScoreOutcome.TeamBScore) == scoreLine.Key);
+
           if (persistedScoreLine == null)
           {
             if (scoreLine.Value.HasValue)
             {
-              match.ScoreOutcomeProbabilitiesInMatches.Add(new ScoreOutcomeProbabilitiesInMatch
+              var newScoreOutcomeProbabilty = new ScoreOutcomeProbabilitiesInMatch
               {
-                Match = match,
+                MatchID = match.Id,
                 ScoreOutcome = this.fixtureRepository.GetScoreOutcome(int.Parse(scoreLine.Key.Split('-')[0]), int.Parse(scoreLine.Key.Split('-')[1])),
                 ScoreOutcomeProbability = (decimal)(scoreLine.Value ?? 0.0)
-              });
+              };
+              this.predictionRepository.AddScoreOutcomeProbabilities(newScoreOutcomeProbabilty);
             }
           }
           else
@@ -93,7 +106,7 @@ namespace Samurai.Services
         }
       }
       this.fixtureRepository.SaveChanges();
-      return matches;
+      return matchIDs;
     }
   }
 
@@ -104,19 +117,49 @@ namespace Samurai.Services
       : base(predictionProvider, predictionRepository, fixtureRepository)
     { }
 
-    public IEnumerable<FootballFixtureViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
+    public IEnumerable<FootballPredictionViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
     {
-      throw new NotImplementedException();
+      var predictions = GetFootballPredictionsFromFixtures(fixtures);
+      return Mapper.Map<IEnumerable<FootballPrediction>, IEnumerable<FootballPredictionViewModel>>(predictions);
     }
 
-    public IEnumerable<FootballFixtureViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
+    public IEnumerable<FootballPredictionViewModel> FetchFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)
     {
-      var predictions = GetGenericFootballPredictionsFromViewModelFixtures(fixtures);
-      var matches = PersistGenericPredictions(predictions);
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(matches);
+      var predictions = FetchFootballPredictionsFromFixtures(fixtures);
+      PersistGenericPredictions(predictions);
+      return Mapper.Map<IEnumerable<FootballPrediction>, IEnumerable<FootballPredictionViewModel>>(predictions);
     }
 
-    private IEnumerable<FootballPrediction> GetGenericFootballPredictionsFromViewModelFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
+    private IEnumerable<FootballPrediction> GetFootballPredictionsFromFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
+    {
+      var footballPredictions = new List<FootballPrediction>();
+      var matchIDs = new Dictionary<int, string>();
+      foreach (var fixture in fixtures)
+      {
+        var homeTeam = this.fixtureRepository.GetTeamOrPlayerFromName(fixture.HomeTeam);
+        var awayTeam = this.fixtureRepository.GetTeamOrPlayerFromName(fixture.AwayTeam);
+        var match = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixture.MatchDate.Date);
+        var identifier = string.Format("{0}/vs/{1}/{2}", homeTeam.Name, awayTeam.Name, fixture.MatchDate.Date.ToShortDateString().Replace("/", "-"));
+        matchIDs.Add(match.Id, identifier);
+      }
+
+      var outcomePredictions = this.predictionRepository.GetMatchOutcomeProbabilitiesInMatchByIDs(matchIDs.Keys);
+      var scoreLinePredictions = this.predictionRepository.GetScoreOutcomeProbabilitiesInMatchByIDs(matchIDs.Keys);
+
+      foreach (var id in matchIDs)
+      {
+        footballPredictions.Add(new FootballPrediction
+        {
+          Identifier = id.Value,
+          OutcomeProbabilities = outcomePredictions[id.Key].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability),
+          ScoreLineProbabilities = scoreLinePredictions[id.Key].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability)
+        });
+      }
+
+      return footballPredictions;
+    }
+
+    private IEnumerable<FootballPrediction> FetchFootballPredictionsFromFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
     {
       var predictions = new List<FootballPrediction>();
       var source = this.fixtureRepository.GetExternalSource("Fink Tank (dectech)");
@@ -148,10 +191,12 @@ namespace Samurai.Services
       .ToList()
       .ForEach(p =>
         predictions.AddRange(p.DateGroups
-                              .SelectMany(f => predictionStrategy.GetPredictions(f.ValueOptions))
+                              .SelectMany(f => predictionStrategy.FetchPredictions(f.ValueOptions))
                               .Cast<FootballPrediction>()));
 
       return predictions;
     }
+
+    
   }
 }

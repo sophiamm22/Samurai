@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.Contracts
 {
@@ -22,6 +24,7 @@ namespace Samurai.Services.Contracts
 
   public interface IFootballOddsService : IOddsService
   {
+    IEnumerable<FootballCouponViewModel> FetchAllFootballOddsNew(DateTime date);
     IEnumerable<FootballFixtureViewModel> FetchAllFootballOdds(DateTime date);
     IEnumerable<FootballFixtureViewModel> FetchAllPreScreenedFootballOdds(DateTime date);
     IEnumerable<FootballFixtureViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);

@@ -26,12 +26,12 @@ namespace Samurai.Domain.Value.Excel
       return this.spreadsheetData.GetTournaments(stage);
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches(Uri tournamentURL)
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL)
     {
       return this.spreadsheetData.GetMatches(tournamentURL);
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches()
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches()
     {
       return this.spreadsheetData.GetMatches();
     }

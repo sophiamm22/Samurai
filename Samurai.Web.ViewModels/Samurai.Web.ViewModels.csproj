@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -41,16 +44,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountViewModels.cs" />
-    <Compile Include="FootballFixtureSummaryViewModel.cs" />
-    <Compile Include="FootballFixtureViewModel.cs" />
-    <Compile Include="MatchCouponViewModel.cs" />
-    <Compile Include="OddsSourceViewModel.cs" />
-    <Compile Include="OddsViewModel.cs" />
+    <Compile Include="Football\FootballCouponViewModel.cs" />
+    <Compile Include="Football\FootballFixtureViewModel.cs" />
+    <Compile Include="Football\FootballPredictionViewModel.cs" />
+    <Compile Include="Tennis\TennisCouponViewModel.cs" />
+    <Compile Include="Tennis\TennisFixtureViewModel.cs" />
+    <Compile Include="Tennis\TennisPredictionViewModel.cs" />
+    <Compile Include="Value\OddsSourceViewModel.cs" />
+    <Compile Include="Value\OddViewModel.cs" />
+    <Compile Include="Value\OutcomeProbabilityViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Value\ScoreLineProbabilityViewModel.cs" />
     <Compile Include="SportViewModel.cs" />
     <Compile Include="TeamPlayerViewModel.cs" />
     <Compile Include="TennisMatchViewModel.cs" />
+    <Compile Include="TennisPredictionViewModel.cs" />
     <Compile Include="TournamentViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

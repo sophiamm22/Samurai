@@ -41,4 +41,13 @@ namespace Samurai.Domain.Model
     Football,
     Tennis
   }
+
+  public enum ReporterImportance
+  {
+    Low,
+    Medium,
+    High,
+    Error,
+    Completed
+  }
 }

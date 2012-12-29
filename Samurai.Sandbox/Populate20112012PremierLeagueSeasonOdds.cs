@@ -10,6 +10,7 @@ using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
 using Samurai.Domain.Entities;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.Sandbox
 {

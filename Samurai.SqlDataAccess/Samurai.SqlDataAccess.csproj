@@ -87,6 +87,7 @@
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="Mapping\UserProfileMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Procedures\GetGenericMatchDetails.cs" />
     <Compile Include="Procedures\GetOddsForEvent.cs" />
     <Compile Include="Procedures\GetOutcomeProbabilitiesForSport.cs" />
     <Compile Include="Procedures\SqlStoredProceduresRepository.cs" />

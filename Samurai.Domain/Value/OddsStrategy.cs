@@ -16,7 +16,7 @@ namespace Samurai.Domain.Value
 {
   public interface IOddsStrategy
   {
-    IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp);
+    IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp);
   }
 
   public abstract class AbstractOddsStrategy : IOddsStrategy
@@ -39,7 +39,7 @@ namespace Samurai.Domain.Value
       this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
-    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp);
+    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp);
   }
 
   public class BestBettingOddsStrategy : AbstractOddsStrategy
@@ -49,7 +49,7 @@ namespace Samurai.Domain.Value
       : base(sport, bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
@@ -109,7 +109,7 @@ namespace Samurai.Domain.Value
       : base(sport, bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
@@ -172,7 +172,7 @@ namespace Samurai.Domain.Value
       : base(sport, bookmakerRepository, fixtureRepository, webRepository)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(IGenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {

@@ -16,21 +16,24 @@ namespace Samurai.Domain.Value
   }
   public class FixtureStrategyProvider : IFixtureStrategyProvider
   {
-    protected readonly IFixtureRepository fixtureService;
+    protected readonly IFixtureRepository fixtureRepository;
+    protected readonly IStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepository webRepository;
 
-    public FixtureStrategyProvider(IFixtureRepository fixtureService, IWebRepository webRepository)
+    public FixtureStrategyProvider(IFixtureRepository fixtureService, 
+      IStoredProceduresRepository storedProcRepository, IWebRepository webRepository)
     {
-      this.fixtureService = fixtureService;
+      this.fixtureRepository = fixtureService;
+      this.storedProcRepository = storedProcRepository;
       this.webRepository = webRepository;
     }
 
     public IFixtureStrategy CreateFixtureStrategy(SportEnum sport)
     {
       if (sport == SportEnum.Football)
-        return new FootballFixtureStrategy(this.fixtureService, this.webRepository);
+        return new FootballFixtureStrategy(this.fixtureRepository, this.storedProcRepository, this.webRepository);
       else if (sport == SportEnum.Tennis)
-        return new TennisFixtureStrategy(this.fixtureService, this.webRepository);
+        return new TennisFixtureStrategy(this.fixtureRepository, this.storedProcRepository, this.webRepository);
       else
         throw new ArgumentException("Sport not recognised");
     }

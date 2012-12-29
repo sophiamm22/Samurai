@@ -44,16 +44,20 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
-    <Compile Include="AutoMapper\FootballFixtureProfile.cs" />
+    <Compile Include="AutoMapper\FootballFixtureMatchProfile.cs" />
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
+    <Compile Include="AutoMapper\FootballFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />
+    <Compile Include="Contracts\IFootballFacadeService.cs" />
     <Compile Include="Contracts\IOddsService.cs" />
     <Compile Include="Contracts\IPredictionService.cs" />
+    <Compile Include="FootballServiceFacade.cs" />
     <Compile Include="FootballFixtureService.cs" />
     <Compile Include="FootballOddsService.cs" />
     <Compile Include="FootballPredictionService.cs" />

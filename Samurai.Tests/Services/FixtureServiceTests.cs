@@ -11,6 +11,7 @@ using Samurai.Services.Contracts;
 using Samurai.Services;
 using Samurai.Domain.Entities;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 using Samurai.Domain.Value;
 
 namespace Samurai.Tests.Services
@@ -19,6 +20,7 @@ namespace Samurai.Tests.Services
   {
     protected IFootballFixtureService fixtureService;
     protected M.Mock<IFixtureRepository> fixtureRepository;
+    protected M.Mock<IStoredProceduresRepository> storedProcRespository;
     protected M.Mock<IFixtureStrategyProvider> fixtureProvider;
 
     protected override void Establish_context()
@@ -26,7 +28,8 @@ namespace Samurai.Tests.Services
       base.Establish_context();
       this.fixtureRepository = new M.Mock<IFixtureRepository>();
       this.fixtureProvider = new M.Mock<IFixtureStrategyProvider>();
-      this.fixtureService = new FootballFixtureService(this.fixtureRepository.Object, this.fixtureProvider.Object);
+      this.storedProcRespository = new M.Mock<IStoredProceduresRepository>();
+      this.fixtureService = new FootballFixtureService(this.fixtureRepository.Object, this.fixtureProvider.Object, this.storedProcRespository.Object);
     }
   }
 
@@ -86,8 +89,8 @@ namespace Samurai.Tests.Services
         League = "Premier League" ,
         Season = "2012/13 season",
         MatchDate = alreadyPlayed,
-        TeamsPlayerA = "Man Utd",
-        TeamsPlayerB = "Man City",
+        HomeTeam = "Man Utd",
+        AwayTeam = "Man City",
         ScoreLine = "1-0"
       };
 
@@ -96,8 +99,8 @@ namespace Samurai.Tests.Services
         League ="Premier League",
         Season =  "2012/13 season",
         MatchDate = yetToPlay,
-        TeamsPlayerA = "Man Utd",
-        TeamsPlayerB = "Arsenal",
+        HomeTeam = "Man Utd",
+        AwayTeam = "Arsenal",
         ScoreLine = "Not played"
       };
     }

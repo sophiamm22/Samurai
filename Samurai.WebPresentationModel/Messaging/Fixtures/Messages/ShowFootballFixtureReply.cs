@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.WebPresentationModel.Messaging.Fixtures.Messages
 {

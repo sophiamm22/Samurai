@@ -44,6 +44,7 @@
     <Compile Include="Bookmaker.cs" />
     <Compile Include="BookmakerExternalSourceAlias.cs" />
     <Compile Include="Competition.cs" />
+    <Compile Include="ComplexTypes\GenericMatchDetailsQuery.cs" />
     <Compile Include="ComplexTypes\OddsForEvent.cs" />
     <Compile Include="ComplexTypes\OutcomeProbabilitiesForSport.cs" />
     <Compile Include="CompetitionCouponURL.cs" />

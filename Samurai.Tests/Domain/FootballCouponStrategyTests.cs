@@ -23,10 +23,10 @@ namespace Samurai.Tests.Domain
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IValueOptions> valueOptions;
     protected DateTime couponDate;
-    protected IEnumerable<IGenericMatchCoupon> premCoupon;
-    protected IEnumerable<IGenericMatchCoupon> champCoupon;
-    protected IEnumerable<IGenericMatchCoupon> league1Coupon;
-    protected IEnumerable<IGenericMatchCoupon> league2Coupon;
+    protected IEnumerable<GenericMatchCoupon> premCoupon;
+    protected IEnumerable<GenericMatchCoupon> champCoupon;
+    protected IEnumerable<GenericMatchCoupon> league1Coupon;
+    protected IEnumerable<GenericMatchCoupon> league2Coupon;
 
     protected override void Establish_context()
     {

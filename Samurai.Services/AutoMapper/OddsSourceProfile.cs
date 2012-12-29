@@ -8,6 +8,7 @@ using AutoMapper;
 
 using Samurai.Domain.Entities;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.AutoMapper
 {

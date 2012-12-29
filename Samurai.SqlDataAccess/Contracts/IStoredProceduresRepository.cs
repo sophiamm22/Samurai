@@ -14,6 +14,6 @@ namespace Samurai.SqlDataAccess.Contracts
     IEnumerable<OddsForEvent> GetAllOddsForEvent(DateTime matchDate, string teamA, string teamB);
     IEnumerable<OddsForEvent> GetLatestOddsForEvent(DateTime matchDate, string teamA, string teamB);
     IEnumerable<OutcomeProbabilitiesForSport> GetOutcomeProbabilitiesForSport(DateTime matchDate, string sportName);
-
+    IQueryable<GenericMatchDetailQuery> GetGenericMatchDetails(DateTime matchDate, string queriedSport);
   }
 }

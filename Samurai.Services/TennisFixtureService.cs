@@ -18,8 +18,8 @@ namespace Samurai.Services
   public class TennisFixtureService : FixtureService, ITennisFixtureService
   {
     public TennisFixtureService(IFixtureRepository fixtureRepository,
-      IFixtureStrategyProvider fixtureProvider)
-      : base(fixtureRepository, fixtureProvider)
+      IFixtureStrategyProvider fixtureProvider, IStoredProceduresRepository storedProcRepository)
+      : base(fixtureRepository, fixtureProvider, storedProcRepository)
     { }
 
     public IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate)

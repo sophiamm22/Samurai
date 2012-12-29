@@ -24,5 +24,8 @@ namespace Samurai.SqlDataAccess.Contracts
     void SetOddsCheckerJavaScript(string javaScript);
     string GetAlias(string bookmakerNameSource, ExternalSource source, ExternalSource destination);
     void SaveChanges();
+    IQueryable<MatchCouponURL> GetMatchCouponURLs(int matchID);
+    void AddMatchCouponURL(MatchCouponURL entity);
+    IQueryable<MatchOutcomeOdd> GetMatchOutcomeOdds(int probOutcomeID);
   }
 }

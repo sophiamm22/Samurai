@@ -13,7 +13,7 @@ namespace Samurai.Domain.Value
 {
   public interface IPredictionStrategy
   {
-    IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+    IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
   }
 
   public abstract class AbstractPredictionStrategy : IPredictionStrategy
@@ -33,7 +33,7 @@ namespace Samurai.Domain.Value
       this.fixtureRepository = fixtureRepository;
       this.webRepository = webRepository;
     }
-    public abstract IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+    public abstract IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
   }
 
   public class TennisPredictionStrategy : AbstractPredictionStrategy
@@ -44,7 +44,7 @@ namespace Samurai.Domain.Value
     {
     }
 
-    public override IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public override IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
     {
       var predictions = new List<Model.GenericPrediction>();
 
@@ -120,7 +120,7 @@ namespace Samurai.Domain.Value
     {
     }
 
-    public override IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions)
+    public override IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
     {
       var gameWeek = this.fixtureRepository.GetDaysMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
       var footballTeams = new List<TeamPlayer>();

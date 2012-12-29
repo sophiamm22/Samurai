@@ -18,5 +18,12 @@ namespace Samurai.SqlDataAccess.Contracts
     decimal GetOverroundRequired(string competitionName);
     Fund GetFundDetails(string fundName);
     void SaveChanges();
+    IQueryable<MatchOutcomeProbabilitiesInMatch> GetMatchOutcomeProbabilities(int matchID);
+    void AddMatchOutcomeProbabilitiesInMatch(MatchOutcomeProbabilitiesInMatch entity);
+    IQueryable<ScoreOutcomeProbabilitiesInMatch> GetScoreOutcomeProbabilities(int matchID);
+    void AddScoreOutcomeProbabilities(ScoreOutcomeProbabilitiesInMatch entity);
+    IQueryable<MatchOutcomeProbabilitiesInMatch> GetMatchOutcomeProbabiltiesInMatchByDate(DateTime fixtureDate, string sport);
+    IDictionary<int, IEnumerable<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
+    IDictionary<int, IEnumerable<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
   }
 }

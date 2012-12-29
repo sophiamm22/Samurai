@@ -14,8 +14,8 @@ namespace Samurai.Domain.Value
   public interface ICouponStrategy
   {
     IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
-    IEnumerable<IGenericMatchCoupon> GetMatches(Uri tournamentURL);
-    IEnumerable<IGenericMatchCoupon> GetMatches();
+    IEnumerable<GenericMatchCoupon> GetMatches(Uri tournamentURL);
+    IEnumerable<GenericMatchCoupon> GetMatches();
   }
 
   public abstract class AbstractCouponStrategy : ICouponStrategy
@@ -42,9 +42,9 @@ namespace Samurai.Domain.Value
     }
 
     public abstract IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
-    public abstract IEnumerable<IGenericMatchCoupon> GetMatches(Uri tournamentURL);
+    public abstract IEnumerable<GenericMatchCoupon> GetMatches(Uri tournamentURL);
 
-    public IEnumerable<IGenericMatchCoupon> GetMatches()
+    public IEnumerable<GenericMatchCoupon> GetMatches()
     {
       var couponURL = this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource);
       if (couponURL == null)
@@ -89,7 +89,7 @@ namespace Samurai.Domain.Value
 
         if (stage != OddsDownloadStage.Tournament)
         {
-          var matchesToAdd = new List<IGenericMatchCoupon>();
+          var matchesToAdd = new List<GenericMatchCoupon>();
           matchesToAdd.AddRange(GetMatches(t.CompetitionURL));
           tournament.Matches = matchesToAdd;
         }
@@ -98,9 +98,9 @@ namespace Samurai.Domain.Value
       return competitionsReturn;
     }
 
-    public override IEnumerable<IGenericMatchCoupon> GetMatches(Uri competitionURL)
+    public override IEnumerable<GenericMatchCoupon> GetMatches(Uri competitionURL)
     {
-      var returnMatches = new List<IGenericMatchCoupon>();
+      var returnMatches = new List<GenericMatchCoupon>();
 
       var html = this.webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                                .First();
@@ -184,7 +184,7 @@ namespace Samurai.Domain.Value
 
         if (stage != OddsDownloadStage.Tournament)
         {
-          var matchesToAdd = new List<IGenericMatchCoupon>();
+          var matchesToAdd = new List<GenericMatchCoupon>();
           matchesToAdd.AddRange(GetMatches(t.CompetitionURL));
           competetion.Matches = matchesToAdd;
         }
@@ -193,9 +193,9 @@ namespace Samurai.Domain.Value
       return tournamentsReturn;
     }
 
-    public override IEnumerable<IGenericMatchCoupon> GetMatches(Uri competitionURL)
+    public override IEnumerable<GenericMatchCoupon> GetMatches(Uri competitionURL)
     {
-      var returnMatches = new List<IGenericMatchCoupon>();
+      var returnMatches = new List<GenericMatchCoupon>();
 
       var html = this.webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                                .First();
@@ -236,9 +236,9 @@ namespace Samurai.Domain.Value
       : base(bookmakerRepository, fixtureRepository, webRepository, valueOptions)
     { }
 
-    public override IEnumerable<IGenericMatchCoupon> GetMatches(Uri competitionURL)
+    public override IEnumerable<GenericMatchCoupon> GetMatches(Uri competitionURL)
     {
-      var returnMatches = new List<IGenericMatchCoupon>();
+      var returnMatches = new List<GenericMatchCoupon>();
 
       var html = this.webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                                .First();

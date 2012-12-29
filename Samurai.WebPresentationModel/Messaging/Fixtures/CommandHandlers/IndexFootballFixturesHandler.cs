@@ -6,6 +6,7 @@ using System.Text;
 using Samurai.WebPresentationModel.Messaging.Fixtures.Messages;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
 {
@@ -23,7 +24,7 @@ namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
 
     public override IndexFootballFixturesReply Handle(IndexFootballFixturesRequest request)
     {
-      var fixtures = new List<FootballFixtureSummaryViewModel>();
+      var fixtures = new List<FootballFixtureViewModel>();
 
       DateTime fixtureDate = DateTime.Now.Date;
       if (!request.GameWeek.HasValue && !DateTime.TryParse(request.DateString, out fixtureDate))
@@ -40,7 +41,7 @@ namespace Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers
       }
 
       if (!request.GameWeek.HasValue)
-        fixtures.AddRange(this.fixtureService.GetFootballFixturesByDate(fixtureDate, leagueViewModel.TournamentName));
+        fixtures.AddRange(this.fixtureService.GetFootballFixturesByDate(fixtureDate));
       else
         fixtures.AddRange(this.fixtureService.GetFootballFixturesByGameweek((int)request.GameWeek, leagueViewModel.TournamentName));
       

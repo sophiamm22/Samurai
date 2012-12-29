@@ -9,18 +9,18 @@ namespace Samurai.Domain.Model
   {
     string TournamentName { get; set; }
     Uri TournamentURL { get; set; }
-    IEnumerable<IGenericMatchCoupon> Matches { get; set; }
+    IEnumerable<GenericMatchCoupon> Matches { get; set; }
   }
 
   public class GenericTournamentCoupon : IGenericTournamentCoupon
   {
     public GenericTournamentCoupon()
     {
-      Matches = new List<IGenericMatchCoupon>();
+      Matches = new List<GenericMatchCoupon>();
     }
     public string TournamentName { get; set; }
     public Uri TournamentURL { get; set; }
-    public IEnumerable<IGenericMatchCoupon> Matches { get; set; }
+    public IEnumerable<GenericMatchCoupon> Matches { get; set; }
   }
 
 }

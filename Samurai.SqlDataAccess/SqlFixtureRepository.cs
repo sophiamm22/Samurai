@@ -26,6 +26,21 @@ namespace Samurai.SqlDataAccess
                               m.MatchDate == matchDate);
     }
 
+    public IQueryable<Match> GetDaysMatches(DateTime matchDate, string sport)
+    {
+      return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date &&
+                                  m.TournamentEvent.Tournament.Competition.Sport.SportName == sport);
+    }
+
+    public IQueryable<Match> GetDaysMatchesWithTeamsTournaments(DateTime matchDate, string sport)
+    {
+      return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date &&
+                                  m.TournamentEvent.Tournament.Competition.Sport.SportName == sport)
+                            .Include(m => m.TeamsPlayerA)
+                            .Include(m => m.TeamsPlayerB)
+                            .Include(m => m.TournamentEvent);
+    }
+
     public IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate)
     {
       return GetQuery<Match>(m => m.MatchDate == matchDate && 
@@ -168,6 +183,12 @@ namespace Samurai.SqlDataAccess
         fixtureDate.Day, fixtureDate.ToString("MMMM").ToLower(), fixtureDate.Year));
     }
 
+    public TeamPlayer GetTeamOrPlayerById(int id)
+    {
+      var teamOrPlayer = GetByKey<TeamPlayer>(id);
+      return teamOrPlayer;
+    }
+
     public TeamPlayer GetTeamOrPlayer(string slug)
     {
       var teamOrPlayer = First<TeamPlayer>(t => t.Slug == slug);
@@ -190,10 +211,6 @@ namespace Samurai.SqlDataAccess
       var match = GetQuery<Match>(m => m.TeamAID == homeTeam.Id &&
                                   m.TeamBID == awayTeam.Id &&
                                   EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
-                            .Include("ObservedOutcomes")
-                            .Include("ObservedOutcomes.ScoreOutcome")
-                            .Include("TournamentEvent")
-                            .Include("TournamentEvent.Tournament")
                             .FirstOrDefault();
       return match;
     }
@@ -216,7 +233,15 @@ namespace Samurai.SqlDataAccess
         TournamentEvent = tournamentEvent
       };
       AddMatch(match);
+      Save<Match>(match);//need ID
       return match;
+    }
+
+    public IEnumerable<Match> GetMatchesForTournament(DateTime matchDate, string tournament)
+    {
+      return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
+                      .Where(m => m.TournamentEvent.Tournament.TournamentName == tournament)
+                      .ToList();
     }
 
     public IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament)
@@ -236,7 +261,7 @@ namespace Samurai.SqlDataAccess
 
     public Competition GetCompetition(int competitionID)
     {
-      return First<Competition>(l => l.Id == competitionID);
+      return GetByKey<Competition>(competitionID);
     }
 
     public TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate)
@@ -245,6 +270,7 @@ namespace Samurai.SqlDataAccess
 
       var tournament = GetQuery<Tournament>(t => t.Id == leagueEnum)
                         .Include(t => t.TournamentEvents)
+                        .Include(t => t.Competition)
                         .FirstOrDefault();
       return tournament.TournamentEvents
                        .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
@@ -268,6 +294,11 @@ namespace Samurai.SqlDataAccess
     public Tournament GetTournament(string tournament)
     {
       return First<Tournament>(t => t.TournamentName == tournament);
+    }
+
+    public Tournament GetTournamentByID(int tournamentID)
+    {
+      return GetByKey<Tournament>(tournamentID);
     }
 
     public TeamPlayer GetTeamOrPlayerFromName(string team)

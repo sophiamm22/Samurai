@@ -20,9 +20,9 @@ namespace Samurai.Domain.Value.Excel
     void ReadData();
     IEnumerable<Match> UpdateResults(DateTime fixtureDate);
     IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament);
-    IEnumerable<Model.IGenericMatchCoupon> GetMatches(Uri tournamentURL);
-    IEnumerable<Model.IGenericMatchCoupon> GetMatches();
-    IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.IGenericMatchCoupon matchCoupon, DateTime timeStamp);
+    IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL);
+    IEnumerable<Model.GenericMatchCoupon> GetMatches();
+    IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime timeStamp);
     IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
 
   }
@@ -209,14 +209,14 @@ namespace Samurai.Domain.Value.Excel
       return tournaments;
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches(Uri tournamentURL)
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL)
     {
       return GetMatches();
     }
 
-    public IEnumerable<Model.IGenericMatchCoupon> GetMatches()
+    public IEnumerable<Model.GenericMatchCoupon> GetMatches()
     {
-      var matches = new List<Model.IGenericMatchCoupon>();
+      var matches = new List<Model.GenericMatchCoupon>();
       var returnMatches = new List<Match>();
 
       FixturesCouponsOdds.Where(x => x.Field<DateTime>("Date").Date == CouponDate.Date)
@@ -241,7 +241,7 @@ namespace Samurai.Domain.Value.Excel
       return matches;
     }
 
-    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.IGenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime timeStamp)
     {
       var returnOdds = new Dictionary<Model.Outcome, IEnumerable<Model.GenericOdd>>();
 

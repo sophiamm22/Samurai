@@ -8,6 +8,7 @@ using Castle.Windsor;
 
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.Sandbox
 {

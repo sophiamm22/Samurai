@@ -27,5 +27,15 @@ namespace Samurai.Domain.Value.Excel
     {
       return this.spreadsheetData.UpdateResults(fixtureDate);
     }
+
+    public IEnumerable<Entities.ComplexTypes.GenericMatchDetailQuery> UpdateFixturesNew(DateTime fixtureDate)
+    {
+      throw new NotImplementedException();
+    }
+
+    public IEnumerable<Entities.ComplexTypes.GenericMatchDetailQuery> UpdateResultsNew(DateTime fixtureDate)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

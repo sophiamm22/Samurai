@@ -30,6 +30,10 @@ namespace Samurai.Services
       this.tennisOddsService = tennisOddsService;
     }
 
+    public IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
+    {
+
+    }
     
   }
 }

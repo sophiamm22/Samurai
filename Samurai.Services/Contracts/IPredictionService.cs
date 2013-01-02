@@ -5,6 +5,7 @@ using System.Text;
 
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Services.Contracts
 {

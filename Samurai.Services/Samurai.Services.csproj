@@ -60,11 +60,13 @@
     <Compile Include="Contracts\IFootballFacadeService.cs" />
     <Compile Include="Contracts\IOddsService.cs" />
     <Compile Include="Contracts\IPredictionService.cs" />
+    <Compile Include="Contracts\ITennisFacadeService.cs" />
     <Compile Include="FootballFacadeService.cs" />
     <Compile Include="FootballFixtureService.cs" />
     <Compile Include="FootballOddsService.cs" />
     <Compile Include="FootballPredictionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TennisFacadeService.cs" />
     <Compile Include="TennisFixtureService.cs" />
     <Compile Include="TennisOddsService.cs" />
     <Compile Include="TennisPredictionService.cs" />

@@ -58,7 +58,6 @@
     <Compile Include="SportViewModel.cs" />
     <Compile Include="TeamPlayerViewModel.cs" />
     <Compile Include="TennisMatchViewModel.cs" />
-    <Compile Include="TennisPredictionViewModel.cs" />
     <Compile Include="TournamentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

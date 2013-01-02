@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 
 using Samurai.Services.Contracts;
-using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Tennis;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Value;

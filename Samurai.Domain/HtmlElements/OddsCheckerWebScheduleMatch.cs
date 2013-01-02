@@ -32,7 +32,8 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<td class=æcolTimeæ\>(?<TimeString>\d{1,2}:\d{2})\<br /\>(\<img src=æ[^\>]+\>|)\</td\>\<td class=ætdSpaceæ\> \</td\>(?<BestOddsString>(\<[^\<]+\>[^\<]+\<span class=æteamOddsæ\> \([^\)]+\)\</span\>\</td\>){2,3})\<td class=æcolImageæ\>\<a href=æ(?<PartURL>[^æ]+)æ\>")
+          new Regex(@"\<p data-hints=æ[^æ]+æ data-offset=æ[^æ]+æ\>(?<TimeString>\d{1,2}:\d{2})(\<img class=æ[^æ]+æ src=æ[^æ]+æ alt=æ[^æ]+æ width=æ[^æ]+æ height=æ[^æ]+æ\>|)\</p\>[^\<]+\</td\>[^\<]+(?<BestOddsString>(\<td data-participant-id=æ[^æ]+æ\>[^\<]+\<p\>\<span title=æ[^æ]+æ class=æ[^æ]+æ data-name=æ[^æ]+æ\>\</span\>\<span class=æfixtures-bet-nameæ\>[^\<]+\</span\>\<span class=æoddsæ\>[^\<]+\</span\>\</p\>[^\<]+\</td\>[^\<]+){2,3})\<td class=æbettingæ\>\<a title=æ[^æ]+æ class=æ[^æ]+æ href=æ(?<PartURL>[^æ]+)æ\>All Odds\<span class=æ[^æ]+æ\>\</span\>")
+          //deprecated - new Regex(@"\<td class=æcolTimeæ\>(?<TimeString>\d{1,2}:\d{2})\<br /\>(\<img src=æ[^\>]+\>|)\</td\>\<td class=ætdSpaceæ\> \</td\>(?<BestOddsString>(\<[^\<]+\>[^\<]+\<span class=æteamOddsæ\> \([^\)]+\)\</span\>\</td\>){2,3})\<td class=æcolImageæ\>\<a href=æ(?<PartURL>[^æ]+)æ\>")
         };
       }
     }

@@ -23,7 +23,8 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<td class=[^\<]+\>(?<TeamOrPlayer>[^\<]+)\<span class=[^\<]+\> \((?<OddsString>[0-9/]+)\)\</span\>\</td\>")
+          new Regex(@"\<span class=æfixtures-bet-nameæ\>(?<TeamOrPlayer>[^\<]+)\</span><span class=æoddsæ> \((?<OddsString>[0-9/]+)\)\</span\>\</p\>")
+          //deprecated - new Regex(@"\<td class=[^\<]+\>(?<TeamOrPlayer>[^\<]+)\<span class=[^\<]+\> \((?<OddsString>[0-9/]+)\)\</span\>\</td\>")
         };
       }
     }

@@ -81,9 +81,11 @@
     <Compile Include="HtmlElements\OddsCheckerMobiCompetitor.cs" />
     <Compile Include="HtmlElements\OddsCheckerMobiGenericMatch.cs" />
     <Compile Include="HtmlElements\OddsCheckerMobiOdds.cs" />
+    <Compile Include="HtmlElements\OddsCheckerWebCard.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCompetitionFootball.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCompetitionTennis.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCompetitor.cs" />
+    <Compile Include="HtmlElements\OddsCheckerWebMarketID.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebOdds.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebScheduleDate.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebScheduleMatch.cs" />

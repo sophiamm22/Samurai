@@ -180,6 +180,7 @@ namespace Samurai.Domain.Value
           persistedMatch.MatchDate = fixtureDate.AddHours(fixture.KickOffHours).AddMinutes(fixture.KickOffMintutes);
         }
       }
+      this.fixtureRepository.SaveChanges();
       return this.storedProcRepository
                  .GetGenericMatchDetails(fixtureDate, "Football")
                  .ToList();

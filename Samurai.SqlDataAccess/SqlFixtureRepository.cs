@@ -48,7 +48,7 @@ namespace Samurai.SqlDataAccess
                                   .ToList();
     }
 
-    public IEnumerable<Match> GetDaysMatches(string competitionName, DateTime matchDate)
+    public IEnumerable<Match> GetDaysMatches(string competitionName, DateTime matchDate) //confusing, why did I do this??
     {
       var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
 
@@ -58,6 +58,7 @@ namespace Samurai.SqlDataAccess
       return competition.Tournaments.FirstOrDefault().TournamentEvents
                           .FirstOrDefault(t => t.StartDate.Year == seasonStartYear)
                           .Matches
+                          .Where(m => Convert.ToDateTime(m.MatchDate).ToString("yyyy-MM-dd") == Convert.ToDateTime(matchDate.Date).ToString("yyyy-MM-dd"))
                           .ToList();
     }
 
@@ -70,11 +71,11 @@ namespace Samurai.SqlDataAccess
                 .ToList();
     }
 
-    public IEnumerable<Tournament> GetDaysTennisTournaments(DateTime matchDate)
+    public IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate, string sport)
     {
       var tournaments = GetQuery<TournamentEvent>(t => EntityFunctions.AddDays(t.StartDate, -2) <= matchDate &&
                                                       EntityFunctions.AddDays(t.EndDate, 2) >= matchDate &&
-                                                      t.Tournament.Competition.Sport.SportName == "Tennis"
+                                                      t.Tournament.Competition.Sport.SportName == sport
         /* &&
         t.TournamentInProgress*/)
                                                       .Select(t => t.Tournament)
@@ -180,7 +181,7 @@ namespace Samurai.SqlDataAccess
     {
       //should get this from the database
       return new Uri(string.Format(@"http://www1.skysports.com/football/fixtures-results/{0}-{1}-{2}",
-        fixtureDate.Day, fixtureDate.ToString("MMMM").ToLower(), fixtureDate.Year));
+        fixtureDate.Day.ToString("00"), fixtureDate.ToString("MMMM").ToLower(), fixtureDate.Year));
     }
 
     public TeamPlayer GetTeamOrPlayerById(int id)
@@ -264,6 +265,11 @@ namespace Samurai.SqlDataAccess
       return GetByKey<Competition>(competitionID);
     }
 
+    public TournamentEvent GetTournamentEventById(int tournamentEventID)
+    {
+      return GetByKey<TournamentEvent>(tournamentEventID);
+    }
+
     public TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate)
     {
       var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
@@ -289,6 +295,15 @@ namespace Samurai.SqlDataAccess
     public Tournament GetTournamentFromSlug(string slug)
     {
       return First<Tournament>(t => t.Slug == slug.ToLower());
+    }
+
+    public Tournament GetTournamentFromTournamentEvent(string tournamentEventName)
+    {
+      var tournamentEvent = GetQuery<TournamentEvent>(t => t.EventName == tournamentEventName)
+                            .Include(t=>t.Tournament)
+                            .FirstOrDefault();
+
+      return tournamentEvent.Tournament;
     }
 
     public Tournament GetTournament(string tournament)

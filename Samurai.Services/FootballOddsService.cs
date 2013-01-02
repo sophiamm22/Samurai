@@ -75,7 +75,7 @@ namespace Samurai.Services
 
     protected IEnumerable<Tournament> DaysTournaments(DateTime date, string sport)
     {
-      var tournaments = this.fixtureRepository.GetDaysTennisTournaments(date);
+      var tournaments = this.fixtureRepository.GetDaysTournaments(date, sport);
 
       return tournaments;
     }
@@ -85,8 +85,10 @@ namespace Samurai.Services
     {
       var valueOptions = GetValueOptions(date, tournament, oddsSource, sport);
       var couponStrategy = this.couponProvider.CreateCouponStrategy(valueOptions);
+      var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(date, tournament);
 
       var coupons = couponStrategy.GetMatches().ToList();
+      coupons.ForEach(x => x.TournamentEventName = tournamentEvent.EventName);
       //for odds checker mobile - no dates
       var todaysCoupons = coupons.Any(x => x.MatchDate == null || x.MatchDate == new DateTime()) ? coupons.ToList() : coupons.Where(x => x.MatchDate.Date == date.Date).ToList();
 
@@ -117,12 +119,12 @@ namespace Samurai.Services
       if (valueOptions.OddsSource.PrescreenDecider)
         this.prescreenedCouponTarget.AddRange(getOddsFor);
 
-      var matchesOdds = getOddsFor == null || getOddsFor.Count() == 0 ? Enumerable.Empty<Match>() : PersistCoupons(getOddsFor, date, tournament);
-      var matchesNoOdds = dontGetOddsFor == null || dontGetOddsFor.Count() == 0 ? Enumerable.Empty<Match>() : PersistCoupons(dontGetOddsFor, date, tournament);
+      var matchesOdds = getOddsFor == null || getOddsFor.Count() == 0 ? Enumerable.Empty<Model.GenericMatchCoupon>() : PersistCouponsNew(getOddsFor, date, tournament);
+      var matchesNoOdds = dontGetOddsFor == null || dontGetOddsFor.Count() == 0 ? Enumerable.Empty<Model.GenericMatchCoupon>() : PersistCouponsNew(dontGetOddsFor, date, tournament);
 
       var matches = new List<Model.GenericMatchCoupon>();
-      //matches.AddRange(matchesOdds);
-      //matches.AddRange(matchesNoOdds);
+      matches.AddRange(matchesOdds);
+      matches.AddRange(matchesNoOdds);
       return matches;
     }
 
@@ -229,10 +231,15 @@ namespace Samurai.Services
       var oddsStrategy = this.oddsProvider.CreateOddsStrategy(valueOptions);
       var timeStamp = DateTime.Now;
 
+      var tournamentEventIDs = matches.Select(m => m.TournamentEventID)
+                                      .Distinct()
+                                      .ToDictionary(t => t, t => this.fixtureRepository.GetTournamentEventById(t).EventName);
+
+
       foreach (var match in matches)
       {
-        var teamOrPlayerA = this.fixtureRepository.GetTeamOrPlayerById(match.TeamAID).Name;
-        var teamOrPlayerB = this.fixtureRepository.GetTeamOrPlayerById(match.TeamBID).Name;
+        var teamOrPlayerA = this.fixtureRepository.GetTeamOrPlayerById(match.TeamAID);
+        var teamOrPlayerB = this.fixtureRepository.GetTeamOrPlayerById(match.TeamBID);
         var matchCouponURLs = this.bookmakerRepository
                                   .GetMatchCouponURLs(match.Id)
                                   .First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source)
@@ -240,9 +247,12 @@ namespace Samurai.Services
 
         var coupon = new Model.GenericMatchCoupon
         {
-          TeamOrPlayerA = teamOrPlayerA,
-          TeamOrPlayerB = teamOrPlayerB,
-          MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
+          TeamOrPlayerA = teamOrPlayerA.Name,
+          FirstNameA = teamOrPlayerA.FirstName,
+          TeamOrPlayerB = teamOrPlayerB.Name,
+          FirstNameB = teamOrPlayerB.FirstName,
+          TournamentEventName = tournamentEventIDs[match.TournamentEventID],
+          MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString)
         };
         coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
         coupons.Add(coupon);
@@ -262,7 +272,10 @@ namespace Samurai.Services
         var coupon = new Model.GenericMatchCoupon
         {
           TeamOrPlayerA = match.TeamsPlayerA.Name,
+          FirstNameA = (!string.IsNullOrEmpty(match.TeamsPlayerA.FirstName)) ? match.TeamsPlayerA.FirstName : null,
           TeamOrPlayerB = match.TeamsPlayerB.Name,
+          FirstNameB = (!string.IsNullOrEmpty(match.TeamsPlayerB.FirstName)) ? match.TeamsPlayerB.FirstName : null,
+          TournamentEventName = match.TournamentEvent.EventName,
           MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
         };
         coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
@@ -285,8 +298,8 @@ namespace Samurai.Services
 
       foreach (var coupon in coupons)
       {
-        var teamPlayerA = this.fixtureRepository.GetTeamOrPlayer(coupon.TeamOrPlayerA);
-        var teamPlayerB = this.fixtureRepository.GetTeamOrPlayer(coupon.TeamOrPlayerB);
+        var teamPlayerA = this.fixtureRepository.GetTeamOrPlayerFromName(coupon.TeamOrPlayerA);
+        var teamPlayerB = this.fixtureRepository.GetTeamOrPlayerFromName(coupon.TeamOrPlayerB);
         var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(teamPlayerA, teamPlayerB, couponDate);
         
         if (persistedMatch == null)
@@ -372,6 +385,7 @@ namespace Samurai.Services
             {
               var matchOutcomeOdd = new MatchOutcomeOdd()
               {
+                MatchOutcomeProbabilitiesInMatchID = probForOutcome.Id,
                 Bookmaker = this.bookmakerRepository.FindByName(odd.BookmakerName),
                 ExternalSource = sources[coupon.Source],
                 Odd = (decimal)odd.DecimalOdds,
@@ -536,7 +550,7 @@ namespace Samurai.Services
                                                 .ToList(); //order by the prescreen decider.  Most likely BestBetting.  
                                                 //This is a bit messy but based on what is cached in the text versions of th HTML files
 
-      foreach (var tournament in tournaments.Select(t=>t.TournamentName))
+      foreach (var tournament in tournaments.Select(t => t.TournamentName))
       {
         foreach (var source in oddsSources)
         {

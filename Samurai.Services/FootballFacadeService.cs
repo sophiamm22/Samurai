@@ -4,19 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AutoMapper;
+
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.Services
 {
-  public class FootballServiceFacade : IFootballFacadeService
+  public class FootballFacadeService : IFootballFacadeService
   {
     protected readonly IFootballFixtureService footballFixtureService;
     protected readonly IFootballPredictionService footballPredictionService;
     protected readonly IFootballOddsService footballOddsService;
 
-    public FootballServiceFacade(IFootballFixtureService footballFixtureService,
+    public FootballFacadeService(IFootballFixtureService footballFixtureService,
       IFootballPredictionService footballPredictionService, IFootballOddsService footballOddsService)
     {
       if (footballFixtureService == null) throw new ArgumentNullException("footballFixtureService");
@@ -28,13 +30,13 @@ namespace Samurai.Services
       this.footballOddsService = footballOddsService;
     }
 
-    public IEnumerable<FootballFixtureViewModel> RetrieveDaysSchedule(DateTime fixtureDate)
+    public IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
       var ret = new List<FootballFixtureViewModel>();
 
-      var footballFixtures = RetrieveDaysFixtures(fixtureDate);
-      var footballPredictions = RetrieveDaysPredictions(fixtureDate, footballFixtures);
-      var footballOdds = RetrieveDaysOdds(fixtureDate);
+      var footballFixtures = UpdateDaysFixtures(fixtureDate);
+      var footballPredictions = UpdateDaysPredictions(fixtureDate, footballFixtures);
+      var footballOdds = UpdateDaysOdds(fixtureDate);
 
       foreach (var footballFixture in footballFixtures)
       {
@@ -50,7 +52,7 @@ namespace Samurai.Services
       return ret;
     }
 
-    private IEnumerable<FootballFixtureViewModel> RetrieveDaysFixtures(DateTime fixtureDate)
+    private IEnumerable<FootballFixtureViewModel> UpdateDaysFixtures(DateTime fixtureDate)
     {
       var footballFixtures = new List<FootballFixtureViewModel>();
       var daysMatchCount = this.footballFixtureService.GetCountOfDaysMatches(fixtureDate, "Football");
@@ -65,23 +67,35 @@ namespace Samurai.Services
       return footballFixtures;
     }
 
-    private Dictionary<string, FootballPredictionViewModel> RetrieveDaysPredictions(DateTime fixtureDate, IEnumerable<FootballFixtureViewModel> footballFixtures)
+    private Dictionary<string, FootballPredictionViewModel> UpdateDaysPredictions(DateTime fixtureDate, IEnumerable<FootballFixtureViewModel> footballFixtures)
     {
       Dictionary<string, FootballPredictionViewModel> daysPredictions;
       var daysPredictionCount = this.footballPredictionService.GetCountOfDaysPredictions(fixtureDate, "Football");
       if (daysPredictionCount == 0)
         daysPredictions = this.footballPredictionService.FetchFootballPredictions(footballFixtures).ToDictionary(f => f.MatchIdentifier);
       else
-        daysPredictions = this.footballPredictionService.GetFootballPredictions(footballFixtures).ToDictionary(f => f.MatchIdentifier);
+      {
+        daysPredictions = this.footballPredictionService.GetFootballPredictions(footballFixtures).ToDictionary(f => f.MatchIdentifier, f => f);
+      }
 
       return daysPredictions;
     }
 
-    private Dictionary<string, FootballCouponViewModel> RetrieveDaysOdds(DateTime fixtureDate)
+    private Dictionary<string, FootballCouponViewModel> UpdateDaysOdds(DateTime fixtureDate)
     {
-      var daysOdds = this.footballOddsService.FetchAllFootballOddsNew(fixtureDate).ToDictionary(o => o.MatchIdentifier);
+      var groupedCoupons = new Dictionary<string, List<FootballCouponViewModel>>();
 
-      return daysOdds;
+      var daysCoupons = this.footballOddsService.FetchAllFootballOddsNew(fixtureDate).ToList();
+      foreach (var coupon in daysCoupons)
+      {
+        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<FootballCouponViewModel>());
+        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
+      }
+
+      var ret = Mapper.Map<Dictionary<string, List<FootballCouponViewModel>>, Dictionary<string, FootballCouponViewModel>>(groupedCoupons);
+
+      return ret;
     }
 
   }

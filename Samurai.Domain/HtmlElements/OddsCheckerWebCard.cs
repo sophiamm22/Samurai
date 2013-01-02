@@ -8,13 +8,11 @@ using Samurai.Core;
 
 namespace Samurai.Domain.HtmlElements
 {
-  public class OddsCheckerWebCompetitor : IRegexableWebsite
+  public class OddsCheckerWebCard : IRegexableWebsite
   {
+    public string CardID { get; set; }
+
     public int Identifier { get; set; }
-
-    public string OutcomeFullName { get; set; }
-
-    public string Outcome { get; set; }
 
     public List<Regex> Regexs
     {
@@ -22,16 +20,15 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<a class=æpopup selTxtæ [^\>]+\>(?<OutcomeFullName>[^\<]+)\</a\>")
+          new Regex(@"oc\.cardId = æ(?<CardID>[^æ]+)æ")
         };
       }
     }
-
     public bool Validates() { return true; }
     public void Clean()
     {
-      Outcome = OutcomeFullName.Trim().Replace("&amp;", "&");
+      return;
     }
-
+   
   }
 }

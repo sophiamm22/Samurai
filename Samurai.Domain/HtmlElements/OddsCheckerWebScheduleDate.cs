@@ -22,7 +22,8 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<td colspan=æ6æ\>(?<DateString>\d{1,2} [A-Za-z]+ \d{4})\</td\>")
+          // deprecated - new Regex(@"\<td colspan=æ6æ\>(?<DateString>\d{1,2} [A-Za-z]+ \d{4})\</td\>"),
+          new Regex(@"\<td class=ædayæ colspan=æ5æ\>[^\<]+\<p\>(?<DateString>\d{1,2} [A-Za-z]+ \d{4})\</p\>[^\<]+\</td\>")
         };
       }
     }

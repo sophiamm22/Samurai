@@ -28,9 +28,33 @@ namespace Samurai.Domain.Entities.ComplexTypes
     public string PlayerBFirstName { get; set; }
 
     public int? ScoreOutcomeID { get; set; }
-    public string ObservedOutcome { get; set; }
+    public string ObservedOutcome 
+    {
+      get
+      {
+        return (string.IsNullOrEmpty(_scoreAHackString) || string.IsNullOrEmpty(_scoreBHackString)) ? "not played" : string.Format("{0}-{1}", _scoreAHackString.ToString(), _scoreBHackString.ToString());
+      }
+    }
 
     public int? IKTSGameWeek { get; set; }
+
+    private string _scoreAHackString;
+    public int ScoreAHack
+    {
+      set
+      {
+        _scoreAHackString = value == -1 ? string.Empty : value.ToString();
+      }
+    }
+
+    private string _scoreBHackString;
+    public int ScoreBHack
+    {
+      set
+      {
+        _scoreBHackString = value == -1 ? string.Empty : value.ToString();
+      }
+    }
 
   }
 }

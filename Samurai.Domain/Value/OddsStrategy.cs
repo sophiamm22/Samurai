@@ -94,7 +94,7 @@ namespace Samurai.Domain.Value
             Source = "Best Betting",
             TimeStamp = timeStamp,
             Priority = bookmaker.Priority,
-            //ClickThroughURL = odd.ClickThroughURL
+            ClickThroughURL = odd.ClickThroughURL
           });
         }
       }
@@ -189,13 +189,31 @@ namespace Samurai.Domain.Value
       var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => Console.WriteLine(s), matchCoupon.MatchURL.ToString())
                                .First();
 
-      var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebCompetitor, OddsCheckerWebOdds>(
-        html, s => Console.WriteLine(s));
+      var oddsTokens = new List<IRegexableWebsite>();
 
-      var oddsCheckerJSFile = this.bookmakerRepository.GetOddsCheckerJavaScript();
+      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebMarketID, OddsCheckerWebCard>(html, s => Console.WriteLine(s)));
+      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebCompetitor, OddsCheckerWebOdds>(html, s => Console.WriteLine(s)));
 
-      var jint = new JintEngine();
-      jint.Run(oddsCheckerJSFile);
+      #region deprecated
+      //deprecated - redirection used to be handled by javascript.  We now get an easy to hack URL
+      //var oddsCheckerJSFile = this.bookmakerRepository.GetOddsCheckerJavaScript();
+
+      //var jint = new JintEngine();
+      //jint.Run(oddsCheckerJSFile);
+      #endregion
+
+      string webCard = ((OddsCheckerWebCard)oddsTokens.First(o => o is OddsCheckerWebCard)).CardID;
+      string webMarketID = ((OddsCheckerWebMarketID)oddsTokens.First(o => o is OddsCheckerWebMarketID)).MarketID;
+
+      var bestBookies =
+        (from odd in oddsTokens.OfType<OddsCheckerWebOdds>()
+         group odd by odd.OddsCheckerID into groupedOdds
+         select new
+         {
+           ID = groupedOdds.Key,
+           BestBookies = groupedOdds.Where(x => x.IsBestOdd).Aggregate(string.Empty, (acc, item) => acc + "," + item.BookmakerID)
+         })
+        .ToDictionary(x => x.ID, x => x.BestBookies);
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
@@ -210,12 +228,16 @@ namespace Samurai.Domain.Value
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
         }
-        else
+        else if (oddsToken is OddsCheckerWebOdds)
         {
           var odd = (OddsCheckerWebOdds)oddsToken;
+          if (odd.BookmakerID == "SI")
+            continue;
           var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.BookmakerID);
-          var bSlip = string.Format("www.oddschecker.com{0}", jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString());
-
+          var clickThroughURL = string.Format("http://www.oddschecker.com/betslip?bk={0}&mkid={1}&pid={2}&cardId={3}&bestBookies={4}",
+            odd.BookmakerID, webMarketID, odd.OddsCheckerID, webCard, bestBookies[odd.OddsCheckerID]);
+          //var bSlip = string.Format("www.oddschecker.com{0}", jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString());
+          
           oddsForOutcome.Add(new OddsCheckerOdd()
           {
             OddsBeforeCommission = odd.DecimalOdds,
@@ -223,7 +245,7 @@ namespace Samurai.Domain.Value
             DecimalOdds = odd.DecimalOdds * (1 - (double)(bookmaker.CurrentCommission ?? 0.0m)),
             BookmakerName = bookmaker.BookmakerName,
             Source = "Odds Checker Web",
-            BetSlipValue = bSlip,
+            ClickThroughURL = new Uri(clickThroughURL),
             TimeStamp = timeStamp,
             Priority = bookmaker.Priority
           });

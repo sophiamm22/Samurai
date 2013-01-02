@@ -15,7 +15,7 @@ namespace Samurai.Web.ViewModels.Football
     public DateTime MatchDate { get; set; }
 
     public OutcomeProbabilityViewModel HomeWinProbability { get; set; }
-    public OutcomeProbabilityViewModel DrawProbabiltity { get; set; }
+    public OutcomeProbabilityViewModel DrawProbabilitity { get; set; }
     public OutcomeProbabilityViewModel AwayWinProbability { get; set; }
 
     public IEnumerable<ScoreLineProbabilityViewModel> ScoreLineProbabilities { get; set; }

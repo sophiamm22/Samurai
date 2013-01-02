@@ -82,7 +82,7 @@ namespace Samurai.Domain.Value
         PlayerAGames = apiPrediction.PlayerAGames,
         PlayerBGames = apiPrediction.PlayerBGames,
         MatchDate = apiPrediction.StartTime,
-        Identifier = string.Format("{0} vs. {1} @ {2} on {3}", apiPrediction.PlayerASurname, apiPrediction.PlayerBSurname,
+        MatchIdentifier = string.Format("{0} vs. {1} @ {2} on {3}", apiPrediction.PlayerASurname, apiPrediction.PlayerBSurname,
           apiPrediction.TournamentName, apiPrediction.StartTime.ToShortDateString()),
         EPoints = apiPrediction.ExpectedPoints,
         EGames = apiPrediction.ExpectedGames,
@@ -152,14 +152,17 @@ namespace Samurai.Domain.Value
 
     private Model.GenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
     {
+      var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(date, tournament.TournamentName);
+
       var footballPrediction = new Model.FootballPrediction()
       {
-        TournamentName = tournament.ToString(),
+        TournamentName = tournament.TournamentName,
+        TournamentEventName = tournamentEvent.EventName,
         TeamOrPlayerA = apiPrediction.HomeTeam,
         TeamOrPlayerB = apiPrediction.AwayTeam,
         MatchDate = date,
-        Identifier = string.Format("{0} vs. {1} @ {2} on {3}", apiPrediction.HomeTeam, apiPrediction.AwayTeam,
-          tournament.ToString(), date.ToShortDateString())
+        MatchIdentifier = string.Format("{0}/vs/{1}/{2}/{3}", apiPrediction.HomeTeam, apiPrediction.AwayTeam,
+          tournamentEvent.EventName, date.ToShortDateString().Replace("/","-"))
       };
 
       footballPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.ExpectedProbabilities.HomeWinProb);

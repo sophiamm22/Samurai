@@ -66,13 +66,13 @@ namespace Samurai.Sandbox
 
       container.Register(AllTypes
                         .FromAssemblyContaining<FixtureStrategyProvider>()
-                        .Where(t => t.Name.StartsWith("Excel"))
+                        .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(Component
-                        .For<ISpreadsheetData>()
-                        .ImplementedBy<TennisSpreadsheetData>());
+      //container.Register(Component
+      //                  .For<ISpreadsheetData>()
+      //                  .ImplementedBy<TennisSpreadsheetData>());
 
       //container.Register(Component
       //                  .For<ISpreadsheetData>()

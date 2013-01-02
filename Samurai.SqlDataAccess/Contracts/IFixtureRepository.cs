@@ -16,7 +16,7 @@ namespace Samurai.SqlDataAccess.Contracts
     IQueryable<Match> GetDaysMatchesWithTeamsTournaments(DateTime matchDate, string sport);
     IEnumerable<Match> GetDaysMatches(string competition, DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(DateTime matchDate);
-    IEnumerable<Tournament> GetDaysTennisTournaments(DateTime matchDate);
+    IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate, string sport);
     ExternalSource GetExternalSource(string sourceName);
     string GetAlias(string teamName, ExternalSource source, ExternalSource destination, Sport sport);
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
@@ -29,10 +29,12 @@ namespace Samurai.SqlDataAccess.Contracts
     IEnumerable<Match> GetMatchesFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime startDate, DateTime endDate);
     Match GetMatchFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate);
     TournamentEvent GetTournamentEventFromTournamentAndDate(DateTime matchDate, string tournamentName);
+    Tournament GetTournamentFromTournamentEvent(string tournamentEventName);
     Match CreateMatch(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate, TournamentEvent tournamentEvent);
     IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament);
     Competition GetCompetition(int competitionID);
     TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
+    TournamentEvent GetTournamentEventById(int tournamentEventID);
     ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
     MatchOutcome GetMatchOutcomeByID(int id);
     Match SaveMatch(Match match);

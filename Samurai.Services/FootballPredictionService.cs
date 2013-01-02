@@ -132,31 +132,41 @@ namespace Samurai.Services
 
     private IEnumerable<FootballPrediction> GetFootballPredictionsFromFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
     {
-      var footballPredictions = new List<FootballPrediction>();
+      var footballPredictions = new Dictionary<int, FootballPrediction>();
       var matchIDs = new Dictionary<int, string>();
       foreach (var fixture in fixtures)
       {
         var homeTeam = this.fixtureRepository.GetTeamOrPlayerFromName(fixture.HomeTeam);
         var awayTeam = this.fixtureRepository.GetTeamOrPlayerFromName(fixture.AwayTeam);
         var match = this.fixtureRepository.GetMatchFromTeamSelections(homeTeam, awayTeam, fixture.MatchDate.Date);
-        var identifier = string.Format("{0}/vs/{1}/{2}", homeTeam.Name, awayTeam.Name, fixture.MatchDate.Date.ToShortDateString().Replace("/", "-"));
+        var tournamentEvent = this.fixtureRepository.GetTournamentEventById(match.TournamentEventID);
+        var tournament = this.fixtureRepository.GetTournamentFromTournamentEvent(tournamentEvent.EventName);
+
+        var identifier = string.Format("{0}/vs/{1}/{2}/{3}", homeTeam.Name, awayTeam.Name, tournamentEvent.EventName, 
+          fixture.MatchDate.Date.ToShortDateString().Replace("/", "-"));
         matchIDs.Add(match.Id, identifier);
+        footballPredictions.Add(match.Id, new FootballPrediction
+        {
+          MatchIdentifier = identifier,
+          TournamentName = tournament.TournamentName,
+          MatchDate = match.MatchDate,
+          TeamOrPlayerA = homeTeam.Name,
+          TeamOrPlayerB = awayTeam.Name
+        });
       }
 
       var outcomePredictions = this.predictionRepository.GetMatchOutcomeProbabilitiesInMatchByIDs(matchIDs.Keys);
       var scoreLinePredictions = this.predictionRepository.GetScoreOutcomeProbabilitiesInMatchByIDs(matchIDs.Keys);
 
-      foreach (var id in matchIDs)
+      foreach (var id in matchIDs.Keys)
       {
-        footballPredictions.Add(new FootballPrediction
-        {
-          Identifier = id.Value,
-          OutcomeProbabilities = outcomePredictions[id.Key].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability),
-          ScoreLineProbabilities = scoreLinePredictions[id.Key].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability)
-        });
+        var footballPrediction = footballPredictions[id];
+
+        footballPrediction.OutcomeProbabilities = outcomePredictions[id].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability);
+        footballPrediction.ScoreLineProbabilities = scoreLinePredictions[id].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability);
       }
 
-      return footballPredictions;
+      return footballPredictions.Values;
     }
 
     private IEnumerable<FootballPrediction> FetchFootballPredictionsFromFixtures(IEnumerable<FootballFixtureViewModel> fixtures)
@@ -168,7 +178,7 @@ namespace Samurai.Services
 
       (from fixture in fixtures
        group fixture by fixture.League into byLeagues
-       let tournament = this.fixtureRepository.GetTournament(fixtures.First(f => f.League == byLeagues.Key).League)
+       let tournament = this.fixtureRepository.GetTournamentFromTournamentEvent(fixtures.First(f => f.League == byLeagues.Key).League)
        select new
        {
          LeagueGroup = byLeagues.Key,

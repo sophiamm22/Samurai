@@ -13,14 +13,16 @@ namespace Samurai.Services.AutoMapper
     {
       Mapper.Initialize(x =>
       {
+        x.AddProfile<FootballCouponDictionary>();
+        x.AddProfile<FootballCouponViewModelProfile>();
         x.AddProfile<FootballFixtureMatchProfile>();
         x.AddProfile<FootballFixtureViewModelProfile>();
+        x.AddProfile<FootballPredictionViewModelProfile>();
         x.AddProfile<GenericMatchDetailProfile>();
         x.AddProfile<OddsSourceProfile>();
         x.AddProfile<SportProfile>();
         x.AddProfile<TennisMatchProfile>();
         x.AddProfile<TournamentProfile>();
-        
       });
     }
   }

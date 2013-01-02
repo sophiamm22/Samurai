@@ -28,6 +28,12 @@ namespace Samurai.Sandbox
       this.date = date;
     }
 
+    public void PopulateDatabaseNew()
+    {
+      var footballService = this.container.Resolve<IFootballFacadeService>();
+      this.fixtures = footballService.UpdateDaysSchedule(this.date);
+    }
+
     public void PopulateDatabase()
     {
       GetFixtures();

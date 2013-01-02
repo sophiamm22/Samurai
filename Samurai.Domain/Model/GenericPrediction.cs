@@ -16,10 +16,11 @@ namespace Samurai.Domain.Model
       ScoreLineProbabilities = new Dictionary<string, double?>();
     }
 
-    public string Identifier { get; set; }
+    public string MatchIdentifier { get; set; }
 
     public string Sport { get; set; }
     public string TournamentName { get; set; }
+    public string TournamentEventName { get; set; }
     public Uri PredictionURL { get; set; }
 
     public DateTime MatchDate { get; set; }
@@ -29,7 +30,6 @@ namespace Samurai.Domain.Model
 
     public string PlayerAFirstName { get; set; }
     public string PlayerBFirstName { get; set; }
-
 
     public IDictionary<Outcome, double> OutcomeProbabilities { get; set; }
     public IDictionary<string, double?> ScoreLineProbabilities { get; set; }

@@ -27,12 +27,12 @@ namespace Samurai.SqlDataAccess.Procedures
               from observedOutcome in joinedObservedOutcome.DefaultIfEmpty()
               join scoreOutcome in DbSet<ScoreOutcome>() on observedOutcome.ScoreOutcomeID equals scoreOutcome.Id into joinedScoreOutcome
               from scoreOutcome in joinedScoreOutcome.DefaultIfEmpty()
-              let scoreLine = scoreOutcome == null ? "not played" : string.Format("{0}-{1}", scoreOutcome.TeamAScore, scoreOutcome.TeamBScore)
+
               where (EntityFunctions.TruncateTime(match.MatchDate) == matchDate.Date && sport.SportName == queriedSport)
               select new GenericMatchDetailQuery
               {
                 MatchID = match.Id,
-
+                MatchDate = match.MatchDate,
                 TournamentID = tournament.Id,
                 TournamentName = tournament.TournamentName,
                 TournamentEventID = tournamentEvent.Id,
@@ -49,8 +49,9 @@ namespace Samurai.SqlDataAccess.Procedures
                 TeamOrPlayerB = awayTeam.Name,
                 PlayerBFirstName = awayTeam.FirstName,
 
-                ScoreOutcomeID = scoreOutcome == null ? new Nullable<int>() : scoreOutcome.Id,
-                ObservedOutcome = scoreLine
+                ScoreOutcomeID = scoreOutcome != null ? scoreOutcome.Id : new Nullable<int>(),
+                ScoreAHack = scoreOutcome != null ? scoreOutcome.TeamAScore : -1,
+                ScoreBHack = scoreOutcome != null ? scoreOutcome.TeamBScore : -1
               };
       return matches;
 

@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
-    <Compile Include="AutoMapper\FootballCouponDictionary.cs" />
+    <Compile Include="AutoMapper\FootballCouponDictionaryProfile.cs" />
     <Compile Include="AutoMapper\FootballCouponViewModelProfile.cs" />
     <Compile Include="AutoMapper\FootballFixtureMatchProfile.cs" />
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
@@ -53,7 +53,10 @@
     <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
+    <Compile Include="AutoMapper\TennisFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TennisMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchProfile.cs" />
+    <Compile Include="AutoMapper\TennisPredictionViewModelProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />

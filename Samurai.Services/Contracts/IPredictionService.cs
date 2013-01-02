@@ -16,8 +16,8 @@ namespace Samurai.Services.Contracts
 
   public interface ITennisPredictionService : IPredictionService
   {
-    IEnumerable<TennisPredictionViewModel> GetTennisPredictions(DateTime matchDate);
-    IEnumerable<TennisPredictionViewModel> FetchTennisPredictions(DateTime matchDate);
+    IEnumerable<TennisFixtureViewModel> GetTennisPredictions(DateTime matchDate);
+    IEnumerable<TennisFixtureViewModel> FetchTennisPredictions(DateTime matchDate);
   }
   public interface IFootballPredictionService : IPredictionService
   {

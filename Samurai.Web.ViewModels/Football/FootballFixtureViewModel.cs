@@ -8,8 +8,6 @@ using AutoMapper;
 
 using Samurai.Web.ViewModels.Value;
 
-
-
 namespace Samurai.Web.ViewModels.Football
 {
   public class FootballFixtureViewModel

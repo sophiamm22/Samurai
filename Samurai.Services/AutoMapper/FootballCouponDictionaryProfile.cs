@@ -13,7 +13,7 @@ using Samurai.Domain.Model;
 
 namespace Samurai.Services.AutoMapper
 {
-  public class FootballCouponDictionary : Profile
+  public class FootballCouponDictionaryProfile : Profile
   {
     protected override void Configure()
     {

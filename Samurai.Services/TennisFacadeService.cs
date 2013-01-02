@@ -32,6 +32,26 @@ namespace Samurai.Services
 
     public IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
+      var ret = new List<TennisFixtureViewModel>();
+
+      //do stuff
+
+      return ret;
+    }
+
+    private IEnumerable<TennisFixtureViewModel> UpdateDaysFixturesAndPredicitons(DateTime fixtureDate)
+    {
+      var tennisFixtures = new List<TennisFixtureViewModel>();
+      var daysMatchCount = this.tennisPredictionService.GetCountOfDaysPredictions(fixtureDate, "Tennis");
+      if (daysMatchCount == 0)
+        tennisFixtures.AddRange(this.tennisPredictionService.FetchTennisPredictions(fixtureDate));
+      else
+        tennisFixtures.AddRange(this.tennisPredictionService.GetTennisPredictions(fixtureDate));
+
+      if (tennisFixtures.Count == 0)
+        return Enumerable.Empty<TennisFixtureViewModel>();
+
+      return tennisFixtures;
 
     }
     

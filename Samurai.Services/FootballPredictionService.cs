@@ -21,17 +21,20 @@ namespace Samurai.Services
     protected readonly IPredictionStrategyProvider predictionProvider;
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
+    protected readonly IStoredProceduresRepository storedProcRepository;
 
     public PredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
     {
       if (predictionProvider == null) throw new ArgumentNullException("predictionProvider");
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
+      if (storedProcRepository == null) throw new ArgumentException("storedProcRepository");
 
       this.predictionProvider = predictionProvider;
       this.predictionRepository = predictionRepository;
       this.fixtureRepository = fixtureRepository;
+      this.storedProcRepository = storedProcRepository;
     }
 
     public int GetCountOfDaysPredictions(DateTime fixtureDate, string sport)
@@ -113,8 +116,8 @@ namespace Samurai.Services
   public class FootballPredictionService : PredictionService, IFootballPredictionService
   {
     public FootballPredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
-      : base(predictionProvider, predictionRepository, fixtureRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 
     public IEnumerable<FootballPredictionViewModel> GetFootballPredictions(IEnumerable<FootballFixtureViewModel> fixtures)

@@ -10,6 +10,7 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
+using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value;
 using Samurai.Domain.Model;
 
@@ -19,23 +20,31 @@ namespace Samurai.Services
   public class TennisPredictionService : PredictionService, ITennisPredictionService
   {
     public TennisPredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository)
-      : base(predictionProvider, predictionRepository, fixtureRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 
-    public IEnumerable<TennisPredictionViewModel> GetTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> GetTennisPredictions(DateTime matchDate)
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<TennisPredictionViewModel> FetchTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisPredicitonsNew(DateTime matchDate)
     {
-      var predictions = GetModelTennisPredictions(matchDate);
-      PersistTennisPredictions(predictions);
-      return Mapper.Map<IEnumerable<TennisPrediction>, IEnumerable<TennisPredictionViewModel>>(predictions);
+      var predictions = FetchGenericTennisPredictions(matchDate);
+      var combinedStats = PersistTennisPredictions(predictions, matchDate);
+
+      return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
     }
 
-    private IEnumerable<TennisPrediction> GetModelTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictions(DateTime matchDate)
+    {
+      var predictions = FetchGenericTennisPredictions(matchDate);
+      PersistTennisPredictions(predictions, matchDate);
+      return Mapper.Map<IEnumerable<TennisPrediction>, IEnumerable<TennisFixtureViewModel>>(predictions);
+    }
+
+    private IEnumerable<TennisPrediction> FetchGenericTennisPredictions(DateTime matchDate)
     {
       var sport = this.fixtureRepository.GetSport("Tennis");
       var tournament = this.fixtureRepository.GetTournament("ATP");
@@ -57,11 +66,14 @@ namespace Samurai.Services
       return tennisPredictions;
     }
 
-    private void PersistTennisPredictions(IEnumerable<TennisPrediction> tennisPredictions)
+    private IEnumerable<TennisMatchDetail> PersistTennisPredictions(IEnumerable<TennisPrediction> tennisPredictions, DateTime matchDate)
     {
-      var persistedMatches = PersistGenericPredictions(tennisPredictions);
-
-      persistedMatches.Zip(tennisPredictions, (m, p) => new
+      var persistedMatchIds = PersistGenericPredictions(tennisPredictions);
+      var tennisPredictionsDic = new Dictionary<int, TennisPrediction>();
+      var tennisPredictionStatsDic = new Dictionary<int, TennisPredictionStat>();
+      var ret = new List<TennisMatchDetail>();
+      
+      persistedMatchIds.Zip(tennisPredictions, (m, p) => new
                         {
                           MatchID = m,
                           Prediction = p
@@ -69,7 +81,7 @@ namespace Samurai.Services
                       .ToList()
                       .ForEach(m =>
                         {
-                          var prediction = new TennisPredictionStat
+                          var predictionStat = new TennisPredictionStat
                           {
                             Id = m.MatchID,
                             PlayerAGames = m.Prediction.PlayerAGames,
@@ -79,9 +91,32 @@ namespace Samurai.Services
                             ESets = (decimal?)m.Prediction.ESets
                           };
                           this.predictionRepository
-                              .AddOrUpdateTennisPredictionsStats(prediction);
+                              .AddOrUpdateTennisPredictionsStats(predictionStat);
+
+                          tennisPredictionStatsDic.Add(m.MatchID, predictionStat);
+                          tennisPredictionsDic.Add(m.MatchID, m.Prediction);
                         });
       this.predictionRepository.SaveChanges();
+
+      var genericMatchDetailsDic = this.storedProcRepository
+                                       .GetGenericMatchDetails(matchDate, "Tennis")
+                                       .ToDictionary(x => x.MatchID);
+
+      foreach (var matchId in persistedMatchIds)
+      {
+        var genericMatchDetailQuery = genericMatchDetailsDic[matchId];
+        var genericMatchDetail = Mapper.Map<GenericMatchDetailQuery, GenericMatchDetail>(genericMatchDetailQuery);
+
+        var tennisPrediction = tennisPredictionsDic[matchId];
+        var tennisPredictionStat = tennisPredictionStatsDic[matchId];
+
+        var combinedStats = Mapper.Map<GenericMatchDetail, TennisMatchDetail>(genericMatchDetail);
+        combinedStats.TennisPrediction = tennisPrediction;
+        combinedStats.TennisPredictionStat = tennisPredictionStat;
+        ret.Add(combinedStats);
+      }
+
+      return ret;
     }
 
   }

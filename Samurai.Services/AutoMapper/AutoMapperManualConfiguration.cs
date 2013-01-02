@@ -13,7 +13,7 @@ namespace Samurai.Services.AutoMapper
     {
       Mapper.Initialize(x =>
       {
-        x.AddProfile<FootballCouponDictionary>();
+        x.AddProfile<FootballCouponDictionaryProfile>();
         x.AddProfile<FootballCouponViewModelProfile>();
         x.AddProfile<FootballFixtureMatchProfile>();
         x.AddProfile<FootballFixtureViewModelProfile>();
@@ -21,7 +21,10 @@ namespace Samurai.Services.AutoMapper
         x.AddProfile<GenericMatchDetailProfile>();
         x.AddProfile<OddsSourceProfile>();
         x.AddProfile<SportProfile>();
+        x.AddProfile<TennisFixtureViewModelProfile>();
+        x.AddProfile<TennisMatchDetailProfile>();
         x.AddProfile<TennisMatchProfile>();
+        x.AddProfile<TennisPredictionViewModelProfile>();
         x.AddProfile<TournamentProfile>();
       });
     }

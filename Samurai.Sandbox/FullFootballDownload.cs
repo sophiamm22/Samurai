@@ -17,7 +17,7 @@ namespace Samurai.Sandbox
     private readonly IWindsorContainer container;
     private readonly DateTime date;
 
-    private IEnumerable<FootballFixtureViewModel> fixtures;
+    public IEnumerable<FootballFixtureViewModel> Fixtures { get; set; }
 
     public FullFootballDownload(IWindsorContainer container, DateTime date)
     {
@@ -31,7 +31,7 @@ namespace Samurai.Sandbox
     public void PopulateDatabaseNew()
     {
       var footballService = this.container.Resolve<IFootballFacadeService>();
-      this.fixtures = footballService.UpdateDaysSchedule(this.date);
+      Fixtures = footballService.UpdateDaysSchedule(this.date);
     }
 
     public void PopulateDatabase()
@@ -44,13 +44,13 @@ namespace Samurai.Sandbox
     private void GetFixtures()
     {
       var fixtureService = this.container.Resolve<IFootballFixtureService>();
-      this.fixtures = fixtureService.FetchSkySportsFootballFixtures(this.date);
+      this.Fixtures = fixtureService.FetchSkySportsFootballFixtures(this.date);
     }
 
     private void GetPredictions()
     {
       var predictionService = this.container.Resolve<IFootballPredictionService>();
-      var predictions = predictionService.FetchFootballPredictions(this.fixtures);
+      var predictions = predictionService.FetchFootballPredictions(this.Fixtures);
     }
 
     private void GetOdds()

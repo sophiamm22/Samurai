@@ -34,7 +34,17 @@ namespace Samurai.Services
     {
       var ret = new List<TennisFixtureViewModel>();
 
-      //do stuff
+      var tennisFixturesAndPredictions = UpdateDaysFixturesAndPredicitons(fixtureDate);
+      var tennisOdds = UpdateDaysOdds(fixtureDate);
+
+      foreach (var tennisFixture in tennisFixturesAndPredictions)
+      {
+        TennisCouponViewModel oddsDecider;
+
+        oddsDecider = tennisOdds.ContainsKey(tennisFixture.MatchIdentifier) ? tennisOdds[tennisFixture.MatchIdentifier] : null;
+
+        ret.Add(TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider));
+      }
 
       return ret;
     }
@@ -44,7 +54,7 @@ namespace Samurai.Services
       var tennisFixtures = new List<TennisFixtureViewModel>();
       var daysMatchCount = this.tennisPredictionService.GetCountOfDaysPredictions(fixtureDate, "Tennis");
       if (daysMatchCount == 0)
-        tennisFixtures.AddRange(this.tennisPredictionService.FetchTennisPredictions(fixtureDate));
+        tennisFixtures.AddRange(this.tennisPredictionService.FetchTennisPredictionsNew(fixtureDate));
       else
         tennisFixtures.AddRange(this.tennisPredictionService.GetTennisPredictions(fixtureDate));
 
@@ -52,8 +62,28 @@ namespace Samurai.Services
         return Enumerable.Empty<TennisFixtureViewModel>();
 
       return tennisFixtures;
-
     }
+
+    private Dictionary<string, TennisCouponViewModel> UpdateDaysOdds(DateTime matchDate)
+    {
+      var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
+
+      var daysCoupons =
+        this.tennisOddsService
+            .FetchAllTennisOddsNew(matchDate);
+
+      foreach (var coupon in daysCoupons)
+      {
+        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponViewModel>());
+        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
+      }
+
+      var ret = Mapper.Map<Dictionary<string, List<TennisCouponViewModel>>, Dictionary<string, TennisCouponViewModel>>(groupedCoupons);
+
+      return ret;
+    }
+    
     
   }
 }

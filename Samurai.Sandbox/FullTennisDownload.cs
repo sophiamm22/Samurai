@@ -8,6 +8,7 @@ using Castle.Windsor;
 
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Sandbox
 {
@@ -16,6 +17,8 @@ namespace Samurai.Sandbox
     private readonly IWindsorContainer container;
     private readonly DateTime date;
 
+    public IEnumerable<TennisFixtureViewModel> Fixtures { get; set; }
+
     public FullTennisDownload(IWindsorContainer container, DateTime date)
     {
       if (container == null) throw new ArgumentNullException("container");
@@ -23,6 +26,12 @@ namespace Samurai.Sandbox
 
       this.container = container;
       this.date = date;
+    }
+
+    public void PopulateDatabaseNew()
+    {
+      var tennisService = this.container.Resolve<ITennisFacadeService>();
+      Fixtures = tennisService.UpdateDaysSchedule(this.date);
     }
 
     public void PopulateDatabase()

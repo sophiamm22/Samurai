@@ -21,6 +21,7 @@ namespace Samurai.Services.AutoMapper
         x.AddProfile<GenericMatchDetailProfile>();
         x.AddProfile<OddsSourceProfile>();
         x.AddProfile<SportProfile>();
+        x.AddProfile<TennisCouponDictionaryProfile>();
         x.AddProfile<TennisFixtureViewModelProfile>();
         x.AddProfile<TennisMatchDetailProfile>();
         x.AddProfile<TennisMatchProfile>();

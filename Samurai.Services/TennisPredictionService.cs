@@ -26,10 +26,48 @@ namespace Samurai.Services
 
     public IEnumerable<TennisFixtureViewModel> GetTennisPredictions(DateTime matchDate)
     {
-      throw new NotImplementedException();
+      var tennisPredictionsDic = new Dictionary<int, TennisPrediction>();
+      var matches = 
+        this.fixtureRepository
+            .GetDaysMatches(matchDate, "Tennis")
+            .ToList();
+
+      var tennisPredictionStatsDic = 
+        this.predictionRepository
+            .GetTennisPredictionStatByMatchIDs(matches.Select(m => m.Id))
+            .ToDictionary(x => x.Id);
+
+      foreach (var match in matches)
+      {
+        var playerA = this.fixtureRepository.GetTeamOrPlayerById(match.TeamAID);
+        var playerB = this.fixtureRepository.GetTeamOrPlayerById(match.TeamBID);
+        var tournamentEvent = this.fixtureRepository.GetTournamentEventById(match.TournamentEventID);
+        var tournament = this.fixtureRepository.GetTournamentFromTournamentEvent(tournamentEvent.EventName);
+
+        var identifier = string.Format("{0},{1}/vs/{2},{3}/{4}/{5}", playerA.Name, playerA.FirstName, playerB.Name, playerB.FirstName,
+          tournamentEvent.EventName, matchDate.Date.ToShortDateString().Replace("/", "-"));
+
+        var tennisPrediction = new TennisPrediction
+        {
+          MatchIdentifier = identifier,
+          TournamentName = tournament.TournamentName,
+          MatchDate = match.MatchDate,
+          TeamOrPlayerA = playerA.Name,
+          PlayerAFirstName = playerA.FirstName,
+          TeamOrPlayerB = playerB.Name,
+          PlayerBFirstName = playerB.FirstName,
+        };
+
+        tennisPredictionsDic.Add(match.Id, tennisPrediction);
+      }
+
+      var combinedStats = HydrateFullTennisMatchDetails(matchDate, tennisPredictionsDic,
+        tennisPredictionStatsDic);
+
+      return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
     }
 
-    public IEnumerable<TennisFixtureViewModel> FetchTennisPredicitonsNew(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictionsNew(DateTime matchDate)
     {
       var predictions = FetchGenericTennisPredictions(matchDate);
       var combinedStats = PersistTennisPredictions(predictions, matchDate);
@@ -41,6 +79,7 @@ namespace Samurai.Services
     {
       var predictions = FetchGenericTennisPredictions(matchDate);
       PersistTennisPredictions(predictions, matchDate);
+
       return Mapper.Map<IEnumerable<TennisPrediction>, IEnumerable<TennisFixtureViewModel>>(predictions);
     }
 
@@ -98,11 +137,20 @@ namespace Samurai.Services
                         });
       this.predictionRepository.SaveChanges();
 
-      var genericMatchDetailsDic = this.storedProcRepository
-                                       .GetGenericMatchDetails(matchDate, "Tennis")
-                                       .ToDictionary(x => x.MatchID);
+      return HydrateFullTennisMatchDetails(matchDate, tennisPredictionsDic, tennisPredictionStatsDic);
 
-      foreach (var matchId in persistedMatchIds)
+    }
+
+    private IEnumerable<TennisMatchDetail> HydrateFullTennisMatchDetails(DateTime matchDate, 
+      Dictionary<int, TennisPrediction> tennisPredictionsDic, Dictionary<int, TennisPredictionStat> tennisPredictionStatsDic)
+    {
+      var ret = new List<TennisMatchDetail>();
+
+      var genericMatchDetailsDic = this.storedProcRepository
+                                 .GetGenericMatchDetails(matchDate, "Tennis")
+                                 .ToDictionary(x => x.MatchID);
+
+      foreach (var matchId in genericMatchDetailsDic.Keys)
       {
         var genericMatchDetailQuery = genericMatchDetailsDic[matchId];
         var genericMatchDetail = Mapper.Map<GenericMatchDetailQuery, GenericMatchDetail>(genericMatchDetailQuery);
@@ -118,6 +166,5 @@ namespace Samurai.Services
 
       return ret;
     }
-
   }
 }

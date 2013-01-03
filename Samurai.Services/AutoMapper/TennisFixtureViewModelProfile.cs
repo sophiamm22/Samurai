@@ -27,9 +27,11 @@ namespace Samurai.Services.AutoMapper
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.PlayerBSurname, opt =>
         opt.MapFrom(x => x.TeamOrPlayerB));
 
+      Mapper.CreateMap<GenericMatchDetail, TennisFixtureViewModel>().IgnoreAllNonExisting();
       Mapper.CreateMap<GenericMatchDetail, TennisFixtureViewModel>().ForMember(x => x.ScoreLine, opt =>
         { opt.MapFrom(x => x.ObservedOutcome); });
 
+      Mapper.CreateMap<TennisFixtureViewModel, TennisFixtureViewModel>().IgnoreAllNonExisting();
 
 
     }

@@ -137,6 +137,13 @@ namespace Samurai.SqlDataAccess
       return selection.ToDictionary(s => s.ID, s => s.Probs.AsEnumerable());
     }
 
+    public IQueryable<TennisPredictionStat> GetTennisPredictionStatByMatchIDs(IEnumerable<int> ids)
+    {
+      var selection = from predictionStat in GetQuery<TennisPredictionStat>()
+                      where ids.Contains(predictionStat.Id)
+                      select predictionStat;
+      return selection;
+    }
 
   }
 }

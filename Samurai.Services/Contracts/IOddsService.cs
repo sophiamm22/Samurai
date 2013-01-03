@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.Contracts
@@ -20,6 +21,7 @@ namespace Samurai.Services.Contracts
   public interface ITennisOddsService : IOddsService
   {
     IEnumerable<TennisMatchViewModel> FetchAllTennisOdds(DateTime date);
+    IEnumerable<TennisCouponViewModel> FetchAllTennisOddsNew(DateTime date);
   }
 
   public interface IFootballOddsService : IOddsService

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AutoMapper;
+
+using Samurai.Web.ViewModels.Value;
+
 namespace Samurai.Web.ViewModels.Tennis
 {
   public class TennisFixtureViewModel
@@ -23,5 +27,15 @@ namespace Samurai.Web.ViewModels.Tennis
 
     public TennisPredictionViewModel Predictions { get; set; }
     public TennisCouponViewModel Coupons { get; set; }
+
+    public static TennisFixtureViewModel CreateCombination(TennisFixtureViewModel fixture,
+      TennisCouponViewModel coupons)
+    {
+      var ret = Mapper.Map<TennisFixtureViewModel, TennisFixtureViewModel>(fixture);
+      ret.Coupons = coupons;
+
+      return ret;
+    }
+
   }
 }

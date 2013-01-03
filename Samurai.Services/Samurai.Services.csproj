@@ -53,6 +53,7 @@
     <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
+    <Compile Include="AutoMapper\TennisCouponDictionaryProfile.cs" />
     <Compile Include="AutoMapper\TennisFixtureViewModelProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchProfile.cs" />

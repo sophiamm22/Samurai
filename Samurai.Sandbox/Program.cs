@@ -16,8 +16,10 @@ namespace Samurai.Sandbox
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());
 
-      var testNewFootballServiceFacade = new FullFootballDownload(container, new DateTime(2013, 01, 02));
-      testNewFootballServiceFacade.PopulateDatabaseNew();
+      var testNewTennisServiceFacade = new FullTennisDownload(container, new DateTime(2013, 
+
+      //var testNewFootballServiceFacade = new FullFootballDownload(container, new DateTime(2013, 01, 02));
+      //testNewFootballServiceFacade.PopulateDatabaseNew();
 
       //var didItBaby = new Populate2012TennisSeasonOdds(container);
       //didItBaby.Populate();

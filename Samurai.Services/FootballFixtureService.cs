@@ -19,18 +19,15 @@ namespace Samurai.Services
 {
   public abstract class FixtureService : IFixtureService
   {
-    protected readonly IFixtureStrategyProvider fixtureProvider;
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;
 
     public FixtureService(IFixtureRepository fixtureRepository,
-      IFixtureStrategyProvider fixtureProvider, IStoredProceduresRepository storedProcRepository)
+      IStoredProceduresRepository storedProcRepository)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (fixtureProvider == null) throw new ArgumentNullException("fixtureProvider");
       if (storedProcRepository == null) throw new ArgumentNullException("storedProcRepository");
       this.fixtureRepository = fixtureRepository;
-      this.fixtureProvider = fixtureProvider;
       this.storedProcRepository = storedProcRepository;
     }
 
@@ -58,10 +55,15 @@ namespace Samurai.Services
 
   public class FootballFixtureService : FixtureService, IFootballFixtureService
   {
+    protected readonly IFootballFixtureStrategy fixtureStrategy;
+
     public FootballFixtureService(IFixtureRepository fixtureRepository,
-      IFixtureStrategyProvider fixtureProvider, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, fixtureProvider, storedProcRepository)
-    { }
+      IFootballFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
+      : base(fixtureRepository, storedProcRepository)
+    {
+      if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
+      this.fixtureStrategy = fixtureStrategy;
+    }
 
     public FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam)
     {
@@ -75,36 +77,18 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixturesNew(DateTime fixtureDate)
     {
-      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Football);
-      var fixtures = fixtureStrategy.UpdateFixturesNew(fixtureDate);
+      var fixtures = this.fixtureStrategy.UpdateFixtures(fixtureDate);
 
       var fixturesDTO = Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<Model.GenericMatchDetail>>(fixtures);
       return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
-    }
-
-    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate)
-    {
-      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Football);
-      var fixtures = fixtureStrategy.UpdateFixtures(fixtureDate);
-
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(fixtures);
     }
 
     public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResultsNew(DateTime fixtureDate)
     {
-      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Football);
-      var fixtures = fixtureStrategy.UpdateResultsNew(fixtureDate);
+      var fixtures = this.fixtureStrategy.UpdateResults(fixtureDate);
 
       var fixturesDTO = Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<Model.GenericMatchDetail>>(fixtures);
       return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
-    }
-
-    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResults(DateTime fixtureDate)
-    {
-      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Football);
-      var fixtures = fixtureStrategy.UpdateResults(fixtureDate);
-
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(fixtures);
     }
 
     public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateNew(DateTime fixtureDate)

@@ -61,6 +61,18 @@ namespace Samurai.Services
         tennisPredictionsDic.Add(match.Id, tennisPrediction);
       }
 
+      var outcomePredictions = this.predictionRepository.GetMatchOutcomeProbabilitiesInMatchByIDs(matches.Select(x => x.Id));
+      var scoreLinePredictions = this.predictionRepository.GetScoreOutcomeProbabilitiesInMatchByIDs(matches.Select(x => x.Id));
+
+      foreach (var id in matches.Select(x => x.Id))
+      {
+        var footballPrediction = tennisPredictionsDic[id];
+
+        footballPrediction.OutcomeProbabilities = outcomePredictions[id].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability);
+        if (scoreLinePredictions.ContainsKey(id))
+          footballPrediction.ScoreLineProbabilities = scoreLinePredictions[id].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability);
+      }
+
       var combinedStats = HydrateFullTennisMatchDetails(matchDate, tennisPredictionsDic,
         tennisPredictionStatsDic);
 
@@ -158,9 +170,11 @@ namespace Samurai.Services
         var tennisPrediction = tennisPredictionsDic[matchId];
         var tennisPredictionStat = tennisPredictionStatsDic[matchId];
 
+
         var combinedStats = Mapper.Map<GenericMatchDetail, TennisMatchDetail>(genericMatchDetail);
         combinedStats.TennisPrediction = tennisPrediction;
         combinedStats.TennisPredictionStat = tennisPredictionStat;
+        Mapper.Map<TennisPredictionStat, TennisPrediction>(tennisPredictionStat, combinedStats.TennisPrediction);
         ret.Add(combinedStats);
       }
 

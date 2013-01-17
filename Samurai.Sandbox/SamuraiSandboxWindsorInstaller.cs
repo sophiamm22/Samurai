@@ -65,7 +65,7 @@ namespace Samurai.Sandbox
                         .AllInterfaces());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<FixtureStrategyProvider>()
+                        .FromAssemblyContaining<PredictionStrategyProvider>()
                         .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService
                         .AllInterfaces());

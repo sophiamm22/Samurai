@@ -57,7 +57,9 @@
     <Compile Include="AutoMapper\TennisFixtureViewModelProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchProfile.cs" />
+    <Compile Include="AutoMapper\TennisPredictionProfile.cs" />
     <Compile Include="AutoMapper\TennisPredictionViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TournamentEventViewModelProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureService.cs" />

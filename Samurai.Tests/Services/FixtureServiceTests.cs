@@ -21,15 +21,15 @@ namespace Samurai.Tests.Services
     protected IFootballFixtureService fixtureService;
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IStoredProceduresRepository> storedProcRespository;
-    protected M.Mock<IFixtureStrategyProvider> fixtureProvider;
+    protected M.Mock<IFootballFixtureStrategy> fixtureStrategy;
 
     protected override void Establish_context()
     {
       base.Establish_context();
       this.fixtureRepository = new M.Mock<IFixtureRepository>();
-      this.fixtureProvider = new M.Mock<IFixtureStrategyProvider>();
+      this.fixtureStrategy = new M.Mock<IFootballFixtureStrategy>();
       this.storedProcRespository = new M.Mock<IStoredProceduresRepository>();
-      this.fixtureService = new FootballFixtureService(this.fixtureRepository.Object, this.fixtureProvider.Object, this.storedProcRespository.Object);
+      this.fixtureService = new FootballFixtureService(this.fixtureRepository.Object, this.fixtureStrategy.Object, this.storedProcRespository.Object);
     }
   }
 

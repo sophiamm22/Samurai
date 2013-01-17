@@ -67,9 +67,12 @@
     <Compile Include="APIModel\APIFootballPredictionGoal.cs" />
     <Compile Include="APIModel\APITennisMatch.cs" />
     <Compile Include="APIModel\APITennisPrediction.cs" />
+    <Compile Include="APIModel\APITennisTourCalendar.cs" />
     <Compile Include="APIModel\APITournamentDetails.cs" />
     <Compile Include="APIModel\APITournamentLadder.cs" />
     <Compile Include="Contracts\IAccountContainer.cs" />
+    <Compile Include="Exceptions\MissingTeamPlayerAliasException.cs" />
+    <Compile Include="Exceptions\TournamentCouponURLMissingException.cs" />
     <Compile Include="HtmlElements\BestBettingCompetitionFootball.cs" />
     <Compile Include="HtmlElements\BestBettingCompetitionTennis.cs" />
     <Compile Include="HtmlElements\BestBettingOdds.cs" />
@@ -117,7 +120,6 @@
     <Compile Include="Value\Excel\ExcelFootballCouponStrategy.cs" />
     <Compile Include="Value\Excel\ExcelCouponStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelFootballFixtureStrategy.cs" />
-    <Compile Include="Value\Excel\ExcelFixtureStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelFootballOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelOddsStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelFootballPredictionStrategy.cs" />
@@ -127,14 +129,15 @@
     <Compile Include="Value\Excel\ExcelTennisOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelTennisPredictionStrategy.cs" />
     <Compile Include="Value\Excel\TennisSpreadsheetData.cs" />
-    <Compile Include="Value\FixtureStrategyProvider.cs" />
     <Compile Include="Value\FixtureStrategy.cs" />
+    <Compile Include="Value\NewFootballFixtureStrategy.cs" />
     <Compile Include="Value\IFixturesAndOdds.cs" />
     <Compile Include="Value\OddsStrategy.cs" />
     <Compile Include="Value\OddsStrategyProvider.cs" />
     <Compile Include="Value\PredictionStrategy.cs" />
     <Compile Include="Value\PredictionStrategyProvider.cs" />
     <Compile Include="Value\Excel\FootballSpreadsheetData.cs" />
+    <Compile Include="Value\NewTennisFixtureStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

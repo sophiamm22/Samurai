@@ -52,6 +52,13 @@ namespace Samurai.Services
       this.prescreenedCouponTarget = new List<Model.GenericMatchCoupon>();
     }
 
+    public void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel)
+    {
+      var externalSource = this.bookmakerRepository.GetExternalSource(viewModel.ExternalSource);
+      var tournament = this.fixtureRepository.GetTournament(viewModel.Tournament);
+      this.bookmakerRepository.AddTournamentCouponURL(externalSource, tournament, viewModel.URL);
+    }
+
     public OddsSourceViewModel FindOddsSource(string slug)
     {
       var externalSource = this.bookmakerRepository.GetExternalSourceFromSlug(slug);

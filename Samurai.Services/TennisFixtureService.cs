@@ -10,6 +10,7 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
+using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value;
 using Model = Samurai.Domain.Model;
 
@@ -17,10 +18,15 @@ namespace Samurai.Services
 {
   public class TennisFixtureService : FixtureService, ITennisFixtureService
   {
+    protected readonly ITennisFixtureStrategy fixtureStrategy;
+
     public TennisFixtureService(IFixtureRepository fixtureRepository,
-      IFixtureStrategyProvider fixtureProvider, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, fixtureProvider, storedProcRepository)
-    { }
+      ITennisFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
+      : base(fixtureRepository, storedProcRepository)
+    {
+      if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
+      this.fixtureStrategy = fixtureStrategy;
+    }
 
     public IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate)
     {
@@ -38,11 +44,21 @@ namespace Samurai.Services
 
     public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
     {
-      var fixtureStrategy = this.fixtureProvider.CreateFixtureStrategy(Model.SportEnum.Tennis);
-      var fixtures = fixtureStrategy.UpdateResults(matchDate);
+      var fixtures = this.fixtureStrategy.UpdateResultsNew(matchDate);
 
-      return Mapper.Map<IEnumerable<Match>, IEnumerable<TennisMatchViewModel>>(fixtures);
+      return Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<TennisMatchViewModel>>(fixtures);
     }
-  
+
+    public IEnumerable<TournamentEventViewModel> GetTournamentEvents()
+    {
+      var tournamentEvents = this.fixtureStrategy.UpdateTournamentEvents();
+
+      return Mapper.Map<IEnumerable<TournamentEvent>, IEnumerable<TournamentEventViewModel>>(tournamentEvents);
+    }
+
+    public IEnumerable<Web.ViewModels.Tennis.TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

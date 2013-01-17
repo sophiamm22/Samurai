@@ -37,5 +37,10 @@ namespace Samurai.Domain.Value.Excel
     {
       throw new NotImplementedException();
     }
+
+    public IEnumerable<TournamentEvent> UpdateTournamentEvents()
+    {
+      throw new NotImplementedException();
+    }
   }
 }

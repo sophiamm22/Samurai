@@ -41,7 +41,7 @@ namespace Samurai.Tests
          });
       repo.Setup(t => t.GetTeamOrPlayer(M.It.IsAny<string>())).Returns((string s) => db.TeamsPlayer[s]);
 
-      repo.Setup(t => t.GetCompetition(M.It.IsInRange<int>(0, 4, M.Range.Inclusive))).Returns((int id) =>
+      repo.Setup(t => t.GetCompetitionById(M.It.IsInRange<int>(0, 4, M.Range.Inclusive))).Returns((int id) =>
       {
         switch (id)
         {

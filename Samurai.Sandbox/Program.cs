@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Castle.Windsor;
+
+using Samurai.Services.Contracts;
 using Samurai.Services.AutoMapper;
+using Samurai.Domain.Exceptions;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Sandbox
 {
@@ -16,7 +20,10 @@ namespace Samurai.Sandbox
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());
 
-      var testNewTennisServiceFacade = new FullTennisDownload(container, new DateTime(2013, 
+      var tennisService = container.Resolve<ITennisFacadeService>();
+      var testNewTennisServiceFacade = new FullTennisDownload(tennisService, new DateTime(2013, 01, 15));
+      //testNewTennisServiceFacade.Get2013Calendar();
+      testNewTennisServiceFacade.PopulateDatabaseNew();
 
       //var testNewFootballServiceFacade = new FullFootballDownload(container, new DateTime(2013, 01, 02));
       //testNewFootballServiceFacade.PopulateDatabaseNew();

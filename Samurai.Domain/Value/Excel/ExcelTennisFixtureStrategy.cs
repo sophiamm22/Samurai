@@ -39,8 +39,9 @@ namespace Samurai.Domain.Value.Excel
       return this.spreadsheetData.UpdateResults(fixtureDate);
     }
 
-
-
-
+    public IEnumerable<TournamentEvent> UpdateTournamentEvents()
+    {
+      throw new NotImplementedException();
+    }
   }
 }

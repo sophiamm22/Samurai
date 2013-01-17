@@ -44,7 +44,7 @@ namespace Samurai.Sandbox
     private void GetFixtures()
     {
       var fixtureService = this.container.Resolve<IFootballFixtureService>();
-      this.Fixtures = fixtureService.FetchSkySportsFootballFixtures(this.date);
+      this.Fixtures = fixtureService.FetchSkySportsFootballFixturesNew(this.date);
     }
 
     private void GetPredictions()

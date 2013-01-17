@@ -46,7 +46,7 @@ namespace Samurai.Sandbox
       {
         spreadsheetData.CouponDate = date;
 
-        var fixtures = fixtureService.FetchSkySportsFootballResults(date)
+        var fixtures = fixtureService.FetchSkySportsFootballResultsNew(date)
                                      .ToList();
         if (fixtures.Count == 0)
           Console.WriteLine(string.Format("No fixtures on {0}", date.ToShortDateString()));

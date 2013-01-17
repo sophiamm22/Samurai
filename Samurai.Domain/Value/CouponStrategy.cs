@@ -8,6 +8,7 @@ using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Core;
 using Samurai.Domain.HtmlElements;
+using Samurai.Domain.Exceptions;
 
 namespace Samurai.Domain.Value
 {
@@ -24,6 +25,7 @@ namespace Samurai.Domain.Value
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepository webRepository;
     protected readonly IValueOptions valueOptions;
+    protected List<MissingAlias> missingAlias;
 
     public AbstractCouponStrategy(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IWebRepository webRepository, 
@@ -39,6 +41,7 @@ namespace Samurai.Domain.Value
       this.webRepository = webRepository;
       this.valueOptions = valueOptions;
 
+      this.missingAlias = new List<MissingAlias>();
     }
 
     public abstract IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
@@ -52,6 +55,23 @@ namespace Samurai.Domain.Value
       
       return GetMatches(couponURL);
     }
+
+    protected bool CheckPlayers(string teamOrPlayerA, string teamOrPlayerB)
+    {
+      bool @continue = false;
+      if (teamOrPlayerA == string.Empty)
+      {
+        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerA, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        @continue = true;
+      }
+      if (teamOrPlayerB == string.Empty)
+      {
+        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerB, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        @continue = true;
+      }
+      return @continue;
+    }
+
   }
 
   public class BestBettingCouponStrategy<TCompetition> : AbstractCouponStrategy
@@ -127,11 +147,7 @@ namespace Samurai.Domain.Value
           var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
           var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
-          if (teamOrPlayerA == string.Empty || teamOrPlayerB == string.Empty)
-          {
-            Console.WriteLine("we're screwed");
-            continue;
-          }
+          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
 
           var matchData = new GenericMatchCoupon
           {
@@ -148,6 +164,9 @@ namespace Samurai.Domain.Value
           returnMatches.Add(matchData);
         }
       }
+      if (this.missingAlias.Count > 0)
+        throw new MissingTeamPlayerAliasException(this.missingAlias, "Missing team or player alias");
+
       return returnMatches;
     }
   }
@@ -212,6 +231,8 @@ namespace Samurai.Domain.Value
       {
         var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
         var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+        
+        if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
 
         var matchData = new GenericMatchCoupon
         {
@@ -223,6 +244,9 @@ namespace Samurai.Domain.Value
         };
         returnMatches.Add(matchData);
       }
+      if (this.missingAlias.Count > 0)
+        throw new MissingTeamPlayerAliasException(this.missingAlias, "Missing team or player alias");
+
       return returnMatches;
     }
   }
@@ -264,6 +288,8 @@ namespace Samurai.Domain.Value
           var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
           var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
+          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
+
           var matchData = new GenericMatchCoupon
           {
             MatchURL = match.MatchURL,
@@ -280,6 +306,9 @@ namespace Samurai.Domain.Value
 
         }
       }
+      if (this.missingAlias.Count > 0)
+        throw new MissingTeamPlayerAliasException(this.missingAlias, "Missing team or player alias");
+
       return returnMatches;
     }
   }

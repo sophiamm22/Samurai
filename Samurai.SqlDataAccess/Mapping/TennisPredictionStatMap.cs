@@ -19,7 +19,8 @@ namespace Samurai.SqlDataAccess.Mapping
 
       // Relationships
       this.HasRequired(t => t.Match)
-          .WithOptional(t => t.TennisPredictionStat);
+          .WithOptional(t => t.TennisPredictionStat)
+          .WillCascadeOnDelete(true);
           
     }
   }

@@ -9,6 +9,7 @@ using AutoMapper;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Tennis;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services
 {
@@ -49,6 +50,16 @@ namespace Samurai.Services
       return ret;
     }
 
+    public IEnumerable<TournamentEventViewModel> GetTournamentEvents()
+    {
+      return this.tennisFixtureService.GetTournamentEvents();
+    }
+
+    public void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel)
+    {
+      this.tennisOddsService.AddTournamentCouponURL(viewModel);
+    }
+
     private IEnumerable<TennisFixtureViewModel> UpdateDaysFixturesAndPredicitons(DateTime fixtureDate)
     {
       var tennisFixtures = new List<TennisFixtureViewModel>();
@@ -83,7 +94,10 @@ namespace Samurai.Services
 
       return ret;
     }
-    
-    
+
+    public IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

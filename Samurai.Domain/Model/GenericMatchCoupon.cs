@@ -17,8 +17,8 @@ namespace Samurai.Domain.Model
       get
       {
         var haveFirstNames = !(string.IsNullOrEmpty(FirstNameA) && string.IsNullOrEmpty(FirstNameB));
-        var teamPlayerA = haveFirstNames ? string.Format("{0}, {1}", TeamOrPlayerA, FirstNameA) : TeamOrPlayerA;
-        var teamPlayerB = haveFirstNames ? string.Format("{0}, {1}", TeamOrPlayerB, FirstNameB) : TeamOrPlayerB;
+        var teamPlayerA = haveFirstNames ? string.Format("{0},{1}", TeamOrPlayerA, FirstNameA) : TeamOrPlayerA;
+        var teamPlayerB = haveFirstNames ? string.Format("{0},{1}", TeamOrPlayerB, FirstNameB) : TeamOrPlayerB;
 
         return string.Format("{0}/vs/{1}/{2}/{3}", teamPlayerA, teamPlayerB, TournamentEventName, MatchDate.ToShortDateString().Replace("/", "-"));
       }

@@ -26,8 +26,8 @@ namespace Samurai.Services.AutoMapper
     protected override string ResolveCore(GenericMatchDetailQuery source)
     {
       var haveFirstNames = !(string.IsNullOrEmpty(source.PlayerAFirstName) && string.IsNullOrEmpty(source.PlayerBFirstName));
-      var teamPlayerA = haveFirstNames ? string.Format("{0}, {1}", source.TeamOrPlayerA, source.PlayerAFirstName) : source.TeamOrPlayerA;
-      var teamPlayerB = haveFirstNames ? string.Format("{0}, {1}", source.TeamOrPlayerB, source.PlayerBFirstName) : source.TeamOrPlayerB;
+      var teamPlayerA = haveFirstNames ? string.Format("{0},{1}", source.TeamOrPlayerA, source.PlayerAFirstName) : source.TeamOrPlayerA;
+      var teamPlayerB = haveFirstNames ? string.Format("{0},{1}", source.TeamOrPlayerB, source.PlayerBFirstName) : source.TeamOrPlayerB;
 
       return string.Format("{0}/vs/{1}/{2}/{3}", teamPlayerA, teamPlayerB, source.TournamentEventName, source.MatchDate.ToShortDateString().Replace("/", "-"));
     }

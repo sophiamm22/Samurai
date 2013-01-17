@@ -16,6 +16,7 @@ namespace Samurai.Services.Contracts
     OddsSourceViewModel FindOddsSource(string slug);
     SportViewModel FindSport(string slug);
     TournamentViewModel FindTournament(string slug);
+    void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
   }
 
   public interface ITennisOddsService : IOddsService

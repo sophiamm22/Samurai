@@ -10,40 +10,54 @@ namespace Samurai.SqlDataAccess.Contracts
 {
   public interface IFixtureRepository
   {
+    Match GetMatchFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate);
+    Match CreateMatch(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate, TournamentEvent tournamentEvent);
+    Match SaveMatch(Match match);
     Match GetTennisMatch(string playerASlug, string playerBSlug, DateTime matchDate);
-    IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate);
     IQueryable<Match> GetDaysMatches(DateTime matchDate, string sport);
     IQueryable<Match> GetDaysMatchesWithTeamsTournaments(DateTime matchDate, string sport);
+    IEnumerable<Match> GetMatchesFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime startDate, DateTime endDate);
+    IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament);
+    IEnumerable<Match> GetMatchesForTournament(DateTime matchDate, string tournament);
+    IEnumerable<Match> GetDaysTennisMatches(DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(string competition, DateTime matchDate);
     IEnumerable<Match> GetDaysMatches(DateTime matchDate);
-    IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate, string sport);
+    
     ExternalSource GetExternalSource(string sourceName);
     string GetAlias(string teamName, ExternalSource source, ExternalSource destination, Sport sport);
+    
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
+    Uri GetTennisTournamentCalendar();
     
     TeamPlayer GetTeamOrPlayerById(int id);
     TeamPlayer GetTeamOrPlayer(string slug);
     TeamPlayer GetTeamOrPlayerFromName(string team);
     TeamPlayer GetTeamOrPlayerFromNameAndMaybeFirstName(string teamSurname, string firstName);
     
-    IEnumerable<Match> GetMatchesFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime startDate, DateTime endDate);
-    Match GetMatchFromTeamSelections(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate);
-    TournamentEvent GetTournamentEventFromTournamentAndDate(DateTime matchDate, string tournamentName);
-    Tournament GetTournamentFromTournamentEvent(string tournamentEventName);
-    Match CreateMatch(TeamPlayer homeTeam, TeamPlayer awayTeam, DateTime matchDate, TournamentEvent tournamentEvent);
-    IEnumerable<Match> GetMatchesForOdds(DateTime matchDate, string tournament);
-    Competition GetCompetition(int competitionID);
-    TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
-    TournamentEvent GetTournamentEventById(int tournamentEventID);
-    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
-    MatchOutcome GetMatchOutcomeByID(int id);
-    Match SaveMatch(Match match);
-    void SaveChanges();
     void AddMatch(Match match);
-    Sport GetSport(string sport);
+    
+    Tournament GetTournamentFromTournamentEvent(string tournamentEventName);
+    Tournament CreateTournament(Tournament entity);
     Tournament GetTournament(string tournament);
     Tournament GetTournamentByID(int tournamentID);
     Tournament GetTournamentFromSlug(string slug);
-    IEnumerable<Match> GetMatchesForTournament(DateTime matchDate, string tournament);
+    IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate, string sport);
+
+    void AddTournamentEvent(TournamentEvent entity);
+    TournamentEvent GetTournamentEventFromTournamentAndDate(DateTime matchDate, string tournamentName);
+    TournamentEvent GetTournamentEventFromTournamentAndYear(int year, string tournamentName);
+    TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
+    TournamentEvent GetTournamentEventById(int tournamentEventID);
+
+    Competition GetCompetitionById(int competitionID);
+    Competition GetCompetition(string competitionName);
+
+    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
+
+    MatchOutcome GetMatchOutcomeByID(int id);
+
+    Sport GetSport(string sport);
+
+    void SaveChanges();
   }
 }

@@ -118,6 +118,17 @@ namespace Samurai.SqlDataAccess
       return bookmakerNameDestination;
     }
 
+    public void AddTournamentCouponURL(ExternalSource source, Tournament tournament, string couponURL)
+    {
+      var tournamentCoupon = new TournamentCouponURL 
+      { 
+        ExternalSource = source,
+        Tournament = tournament,
+        CouponURL = couponURL
+      };
+      Add<TournamentCouponURL>(tournamentCoupon);
+    }
+
     public void SaveChanges()
     {
       UnitOfWork.SaveChanges();

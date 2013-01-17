@@ -13,6 +13,7 @@ using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value;
+using Samurai.Domain.Exceptions;
 using Model = Samurai.Domain.Model;
 
 namespace Samurai.Services
@@ -31,36 +32,69 @@ namespace Samurai.Services
     public IEnumerable<TennisCouponViewModel> FetchAllTennisOddsNew(DateTime date)
     {
       var matchCoupons = new List<TennisCouponViewModel>();
+      var missingAlias = new List<MissingAlias>();
 
       var tournaments = DaysTournaments(date, this.sport);
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
 
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source).ToList();
+      //check URL's exist first
+      var urlCheck =
+        tournaments.SelectMany(t => oddsSources.Where(s => this.bookmakerRepository.GetTournamentCouponUrl(t, s) == null)
+                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }));
+      if (urlCheck.Count() > 0)
+        throw new TournamentCouponURLMissingException(urlCheck, "Tournament coupons missing");
+
 
       foreach (var tournament in tournaments.Select(t => t.TournamentName))
       {
-        foreach (var source in oddsSources)
+        foreach (var source in oddsSources.Select(o => o.Source))
         {
-          matchCoupons.AddRange(FetchCouponsNew(date, tournament, source, this.sport, true, false));
+          try
+          {
+            matchCoupons.AddRange(FetchCouponsNew(date, tournament, source, this.sport, true, false));
+          }
+          catch (MissingTeamPlayerAliasException mtpaEx)
+          {
+            missingAlias.AddRange(mtpaEx.MissingAlias);
+          }
         }
       }
+      if (missingAlias.Count > 0)
+        throw new MissingTeamPlayerAliasException(missingAlias, "Missing team or player alias");
       return matchCoupons;
     }
 
     public IEnumerable<TennisMatchViewModel> FetchAllTennisOdds(DateTime date)
     {
       var matchCoupons = new List<TennisMatchViewModel>();
+      var missingAlias = new List<MissingAlias>();
 
-      var tournaments = DaysTournaments(date, this.sport);
+      var tournaments = DaysTournaments(date, this.sport).ToList();
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
 
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source).ToList();
-
+      //check URL's exist first
+      var urlCheck =
+        tournaments.SelectMany(t => oddsSources.Where(s => this.bookmakerRepository.GetTournamentCouponUrl(t, s) == null)
+                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }));
+      if (urlCheck.Count() > 0)
+        throw new TournamentCouponURLMissingException(urlCheck, "Tournament coupons missing");
+            
       foreach (var tournament in tournaments.Select(t => t.TournamentName))
       {
-        foreach (var source in oddsSources)
+        foreach (var source in oddsSources.Select(o => o.Source))
         {
-          matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, false));
+          try
+          {
+            matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, false));
+          }
+          catch (MissingTeamPlayerAliasException mtpaEx)
+          {
+            missingAlias.AddRange(mtpaEx.MissingAlias);
+          }
         }
       }
+      if (missingAlias.Count > 0)
+        throw new MissingTeamPlayerAliasException(missingAlias, "Missing team or player alias");
       return matchCoupons;
     }
 

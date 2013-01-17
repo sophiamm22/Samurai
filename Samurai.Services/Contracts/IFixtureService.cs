@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Services.Contracts
 {
@@ -21,9 +22,7 @@ namespace Samurai.Services.Contracts
   {
     FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam);
     IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixturesNew(DateTime fixtureDate);
-    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResultsNew(DateTime fixtureDate);
-    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResults(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateNew(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateLeague(DateTime fixtureDate, string league);
@@ -35,6 +34,8 @@ namespace Samurai.Services.Contracts
     IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
     TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);
     IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate);
+    IEnumerable<TournamentEventViewModel> GetTournamentEvents();
+    IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }
 
 }

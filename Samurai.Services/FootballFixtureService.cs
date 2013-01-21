@@ -51,6 +51,19 @@ namespace Samurai.Services
       if (teamEntity == null) return null;
       return Mapper.Map<TeamPlayer, TeamPlayerViewModel>(teamEntity);
     }
+
+    public void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName)
+    {
+      var player
+        = this.fixtureRepository
+              .GetTeamOrPlayerFromNameAndMaybeFirstName(valueSamuraiName, valueSamuraiFirstName);
+      var externalSource
+        = this.fixtureRepository
+              .GetExternalSource(source);
+
+      this.fixtureRepository
+          .CreateTeamPlayerExternalAlias(player, externalSource, playerName);
+    }
   }
 
   public class FootballFixtureService : FixtureService, IFootballFixtureService

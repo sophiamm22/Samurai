@@ -18,6 +18,7 @@ namespace Samurai.Domain.Repository
     IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null);
+    T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null);
     string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null);
     IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
   }
@@ -59,6 +60,11 @@ namespace Samurai.Domain.Repository
     public virtual IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null)
     {
       return WebUtils.GetAndConvertJsonWebRequest<T>(uri, report, _proxy);
+    }
+
+    public virtual T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
+    {
+      return WebUtils.GetAndConvertSingleJsonWebRequest<T>(uri, report, _proxy);
     }
 
     public virtual IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null)

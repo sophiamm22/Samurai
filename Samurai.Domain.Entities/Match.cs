@@ -19,6 +19,7 @@ namespace Samurai.Domain.Entities
     public int TeamBID { get; set; }
     public bool EligibleForBetting { get; set; }
     public int? IKTSGameWeek { get; set; }
+    public bool InPlay { get; set; }
 
     public virtual TournamentEvent TournamentEvent { get; set; }
     public virtual TeamPlayer TeamsPlayerB { get; set; }

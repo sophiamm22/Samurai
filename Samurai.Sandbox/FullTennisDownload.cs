@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 using Castle.Windsor;
 
@@ -54,11 +55,10 @@ namespace Samurai.Sandbox
       }
     }
 
-    //public void Get2013Calendar()
-    //{
-    //  var tennisService = this.container.Resolve<ITennisFacadeService>();
-    //  var events = tennisService.GetTournamentEvents();
-    //}
+    public void Get2013Calendar()
+    {
+      var events = tennisService.GetTournamentEvents();
+    }
 
     //public void PopulateDatabase()
     //{
@@ -95,7 +95,8 @@ namespace Samurai.Sandbox
 
     private string GetTournamentCouponURL(string externalSource, string tournament)
     {
-      while (true)
+      int count = 1;
+      while (count <= 3)
       {
         Console.WriteLine(string.Format("Enter URL for {0} via {1}", tournament, externalSource));
         var input = Console.ReadLine();
@@ -103,7 +104,9 @@ namespace Samurai.Sandbox
           return input;
         else
           Console.WriteLine("Not a recognised URL format, try again..");
+        count++;
       }
+      throw new ArgumentException("url");
     }
 
     private void AddMissingAlias(IEnumerable<MissingAlias> missingAlias)
@@ -131,10 +134,29 @@ namespace Samurai.Sandbox
           {
             foreach (var teamOrPlayer in externalSourceGroup.TeamsOrPlayers)
             {
-              throw new NotImplementedException();
+              var playerFullName = GetMissingAlias(tournamentLadder, externalSourceGroup.ExternalSource, teamOrPlayer);
+              var playerNames = playerFullName.Split(',').Select(y => y.Trim());
+
+              this.tennisService.AddAlias(externalSourceGroup.ExternalSource, teamOrPlayer, 
+                playerNames.ElementAt(0), playerNames.ElementAt(1));
             }
           }
         });
+    }
+    private string GetMissingAlias(IEnumerable<TennisLadderViewModel> tournamentLadder, string source, string playerName)
+    {
+      Console.WriteLine(string.Format("Select a player from the list by ladder position (1-{0})", tournamentLadder.Count()));
+      tournamentLadder.ToList()
+                      .ForEach(x => Console.WriteLine(string.Format("{0}\t{2},{3}", x.Position, x.PlayerSurname.ToUpper(), x.PlayerFirstName)));
+      Console.WriteLine(string.Format("..or enter the player's local name in for the form 'Surname, FirstName' for {0} via {1}", playerName, source));
+      var response = Console.ReadLine();
+      if (Regex.IsMatch(response, @"\d+"))
+      {
+        var player = tournamentLadder.First(x => x.Position == int.Parse(response));
+        return string.Format("{0}, {1}", player.PlayerSurname, player.PlayerFirstName);
+      }
+      else
+        return response;
     }
   }
   

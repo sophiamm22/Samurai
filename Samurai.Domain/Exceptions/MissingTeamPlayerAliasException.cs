@@ -24,5 +24,11 @@ namespace Samurai.Domain.Exceptions
     public string TeamOrPlayerName { get; set; }
     public string Tournament { get; set; }
     public string ExternalSource { get; set; }
+
+    public override string ToString()
+    {
+      return string.Format("{0} @ {1} from {2}", TeamOrPlayerName, Tournament, ExternalSource);
+    }
+
   }
 }

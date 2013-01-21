@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
+using Samurai.Domain.APIModel;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public class ExcelTennisFixtureStrategy : IFixtureStrategy
+  public class ExcelTennisFixtureStrategy : ITennisFixtureStrategy
   {
     private readonly ISpreadsheetData spreadsheetData;
 
@@ -40,6 +41,13 @@ namespace Samurai.Domain.Value.Excel
     }
 
     public IEnumerable<TournamentEvent> UpdateTournamentEvents()
+    {
+      throw new NotImplementedException();
+    }
+
+
+
+    public APITournamentDetail GetTournamentDetail(string tournament, int year)
     {
       throw new NotImplementedException();
     }

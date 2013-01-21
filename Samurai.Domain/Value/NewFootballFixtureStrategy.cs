@@ -98,11 +98,8 @@ namespace Samurai.Domain.Value
 
       foreach (var fixture in fixtureTokens)
       {
-        var homeTeamName = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource, sport);
-        var awayTeamName = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource, sport);
-
-        var homeTeam = this.fixtureRepository.GetTeamOrPlayerFromName(homeTeamName);
-        var awayTeam = this.fixtureRepository.GetTeamOrPlayerFromName(awayTeamName);
+        var homeTeam = this.fixtureRepository.GetAlias(fixture.HomeTeam, skySportsSource, valueSamuraiSource, sport);
+        var awayTeam = this.fixtureRepository.GetAlias(fixture.AwayTeam, skySportsSource, valueSamuraiSource, sport);
 
         if (homeTeam == null) throw new ArgumentNullException("homeTeam");
         if (awayTeam == null) throw new ArgumentNullException("awayTeam");

@@ -9,6 +9,7 @@ using Samurai.SqlDataAccess.Contracts;
 using Samurai.Core;
 using Samurai.Domain.HtmlElements;
 using Samurai.Domain.Exceptions;
+using Samurai.Domain.Entities;
 
 namespace Samurai.Domain.Value
 {
@@ -56,17 +57,17 @@ namespace Samurai.Domain.Value
       return GetMatches(couponURL);
     }
 
-    protected bool CheckPlayers(string teamOrPlayerA, string teamOrPlayerB)
+    protected bool CheckPlayers(TeamPlayer teamOrPlayerA, TeamPlayer teamOrPlayerB, string teamOrPlayerALookup, string teamOrPlayerBLookup)
     {
       bool @continue = false;
-      if (teamOrPlayerA == string.Empty)
+      if (teamOrPlayerA == null)
       {
-        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerA, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerALookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
-      if (teamOrPlayerB == string.Empty)
+      if (teamOrPlayerB == null)
       {
-        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerB, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerBLookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
       return @continue;
@@ -125,7 +126,7 @@ namespace Samurai.Domain.Value
       var html = this.webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                                .First();
 
-      var matchTokens = WebUtils.ParseWebsite<BestBettingScheduleDate, BestBettingScheduleMatch>(html,
+      var matchTokens = WebUtils.ParseWebsite<BestBettingScheduleDate, BestBettingScheduleMatch, BestBettingScheduleInRunning>(html,
         s => Console.WriteLine(s)).ToList();
 
       var currentDate = DateTime.Now.Date;
@@ -147,13 +148,15 @@ namespace Samurai.Domain.Value
           var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
           var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
-          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
+          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB, match.TeamOrPlayerA, match.TeamOrPlayerB)) continue;
 
           var matchData = new GenericMatchCoupon
           {
             MatchURL = match.MatchURL,
-            TeamOrPlayerA = teamOrPlayerA,
-            TeamOrPlayerB = teamOrPlayerB,
+            TeamOrPlayerA = teamOrPlayerA.Name,
+            FirstNameA = teamOrPlayerA.FirstName,
+            TeamOrPlayerB = teamOrPlayerB.Name,
+            FirstNameB = teamOrPlayerB.FirstName,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
             Source = this.valueOptions.OddsSource.Source,
             LastChecked = lastChecked
@@ -162,6 +165,10 @@ namespace Samurai.Domain.Value
           matchData.HeadlineOdds = match.BestOdds;
 
           returnMatches.Add(matchData);
+        }
+        else if (token is BestBettingScheduleInRunning)
+        {
+          returnMatches.Last().InPlay = true;
         }
       }
       if (this.missingAlias.Count > 0)
@@ -231,16 +238,19 @@ namespace Samurai.Domain.Value
       {
         var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
         var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
-        
-        if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
+
+        if (CheckPlayers(teamOrPlayerA, teamOrPlayerB, match.TeamOrPlayerA, match.TeamOrPlayerB)) continue;
 
         var matchData = new GenericMatchCoupon
         {
           MatchURL = match.MatchURL,
-          TeamOrPlayerA = teamOrPlayerA,
-          TeamOrPlayerB = teamOrPlayerB,
+          TeamOrPlayerA = teamOrPlayerA.Name,
+          FirstNameA = teamOrPlayerA.FirstName,
+          TeamOrPlayerB = teamOrPlayerB.Name,
+          FirstNameB = teamOrPlayerB.FirstName,
           Source = this.valueOptions.OddsSource.Source,
-          LastChecked = lastChecked
+          LastChecked = lastChecked,
+          InPlay = match.InPlay
         };
         returnMatches.Add(matchData);
       }
@@ -288,16 +298,19 @@ namespace Samurai.Domain.Value
           var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
           var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
-          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB)) continue;
+          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB, match.TeamOrPlayerA, match.TeamOrPlayerB)) continue;
 
           var matchData = new GenericMatchCoupon
           {
             MatchURL = match.MatchURL,
-            TeamOrPlayerA = teamOrPlayerA,
-            TeamOrPlayerB = teamOrPlayerB,
+            TeamOrPlayerA = teamOrPlayerA.Name,
+            FirstNameA = teamOrPlayerA.FirstName,
+            TeamOrPlayerB = teamOrPlayerB.Name,
+            FirstNameB = teamOrPlayerB.FirstName,
             MatchDate = currentDate.AddHours(double.Parse(matchTime[0])).AddHours(double.Parse(matchTime[1]) / 60.0),
             Source = this.valueOptions.OddsSource.Source,
-            LastChecked = lastChecked
+            LastChecked = lastChecked,
+            InPlay = match.InPlay
           };
 
           matchData.HeadlineOdds = match.BestOdds;

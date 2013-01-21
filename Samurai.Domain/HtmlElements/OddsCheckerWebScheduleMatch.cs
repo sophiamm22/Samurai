@@ -18,9 +18,10 @@ namespace Samurai.Domain.HtmlElements
     public string TimeString { get; set; }
 
     public string BestOddsString { get; set; }
-
+    public string GameState { get; set; }
     public string PayoutString { get; set; }
 
+    public bool InPlay { get; set; }
     public Uri MatchURL { get; set; }
     public double Payout { get; set; }
     public IDictionary<Outcome, double> BestOdds { get; set; }
@@ -32,7 +33,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<p data-hints=æ[^æ]+æ data-offset=æ[^æ]+æ\>(?<TimeString>\d{1,2}:\d{2})(\<img class=æ[^æ]+æ src=æ[^æ]+æ alt=æ[^æ]+æ width=æ[^æ]+æ height=æ[^æ]+æ\>|)\</p\>[^\<]+\</td\>[^\<]+(?<BestOddsString>(\<td data-participant-id=æ[^æ]+æ\>[^\<]+\<p\>\<span title=æ[^æ]+æ class=æ[^æ]+æ data-name=æ[^æ]+æ\>\</span\>\<span class=æfixtures-bet-nameæ\>[^\<]+\</span\>\<span class=æoddsæ\>[^\<]+\</span\>\</p\>[^\<]+\</td\>[^\<]+){2,3})\<td class=æbettingæ\>\<a title=æ[^æ]+æ class=æ[^æ]+æ href=æ(?<PartURL>[^æ]+)æ\>All Odds\<span class=æ[^æ]+æ\>\</span\>")
+          new Regex(@"\<p[^\>]*\>(?<TimeString>\d{1,2}:\d{2})(\<img class=æ[^æ]+æ src=æ[^æ]+æ alt=æ[^æ]+æ width=æ[^æ]+æ height=æ[^æ]+æ\>|)\</p\>[^\<]+\</td\>[^\<]+(?<BestOddsString>(\<td data-participant-id=æ[^æ]+æ\>[^\<]+\<p\>\<span title=æ[^æ]+æ class=æ[^æ]+æ data-name=æ[^æ]+æ\>\</span\>\<span class=æfixtures-bet-nameæ\>[^\<]+\</span\>\<span class=æoddsæ\>[^\<]+\</span\>\</p\>[^\<]+\</td\>[^\<]+){2,3})\<td class=æbettingæ\>\<a title=æ[^æ]+æ class=æ[^æ]+æ href=æ(?<PartURL>[^æ]+)æ\>(?<GameState>(All Odds|In Play))\<span class=æ[^æ]+æ\>\</span\>")
           //deprecated - new Regex(@"\<td class=æcolTimeæ\>(?<TimeString>\d{1,2}:\d{2})\<br /\>(\<img src=æ[^\>]+\>|)\</td\>\<td class=ætdSpaceæ\> \</td\>(?<BestOddsString>(\<[^\<]+\>[^\<]+\<span class=æteamOddsæ\> \([^\)]+\)\</span\>\</td\>){2,3})\<td class=æcolImageæ\>\<a href=æ(?<PartURL>[^æ]+)æ\>")
         };
       }
@@ -61,6 +62,7 @@ namespace Samurai.Domain.HtmlElements
       }
       TeamOrPlayerA = oddsTokens.First().TeamOrPlayer;
       TeamOrPlayerB = oddsTokens.Last().TeamOrPlayer;
+      InPlay = GameState == "In Play";
     }
   }
 }

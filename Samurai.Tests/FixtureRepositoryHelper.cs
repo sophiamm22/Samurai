@@ -23,22 +23,22 @@ namespace Samurai.Tests
 
       repo.Setup(t => t.GetExternalSource(M.It.IsAny<string>())).Returns((string s) => db.ExternalSource[s]);
 
-      repo.Setup(t =>
-        t.GetAlias(M.It.IsAny<string>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<Sport>()))
-         .Returns<string, ExternalSource, ExternalSource>(
-         (string teamNameSource, ExternalSource exSource, ExternalSource exDestination) =>
-         {
-           var teamNameDestination = string.Empty;
-           var teamAlias = db.TeamPlayerExternalSourceAlias
-                             .Where(a => a.Alias == teamNameSource &&
-                                         a.ExternalSource.Source == exSource.Source);
-           if (teamAlias.Count() == 0)
-             teamNameDestination = teamNameSource;
-           else
-             teamNameDestination = teamAlias.First().TeamsPlayer.Name;
+      //repo.Setup(t =>
+      //  t.GetAlias(M.It.IsAny<string>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<ExternalSource>(), M.It.IsAny<Sport>()))
+      //   .Returns<string, ExternalSource, ExternalSource>(
+      //   (string teamNameSource, ExternalSource exSource, ExternalSource exDestination) =>
+      //   {
+      //     var teamNameDestination = string.Empty;
+      //     var teamAlias = db.TeamPlayerExternalSourceAlias
+      //                       .Where(a => a.Alias == teamNameSource &&
+      //                                   a.ExternalSource.Source == exSource.Source);
+      //     if (teamAlias.Count() == 0)
+      //       teamNameDestination = teamNameSource;
+      //     else
+      //       teamNameDestination = teamAlias.First().TeamsPlayer.Name;
 
-           return teamNameDestination;
-         });
+      //     return teamNameDestination;
+      //   });
       repo.Setup(t => t.GetTeamOrPlayer(M.It.IsAny<string>())).Returns((string s) => db.TeamsPlayer[s]);
 
       repo.Setup(t => t.GetCompetitionById(M.It.IsInRange<int>(0, 4, M.Range.Inclusive))).Returns((int id) =>

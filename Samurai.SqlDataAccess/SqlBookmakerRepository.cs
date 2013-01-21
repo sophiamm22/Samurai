@@ -127,6 +127,7 @@ namespace Samurai.SqlDataAccess
         CouponURL = couponURL
       };
       Add<TournamentCouponURL>(tournamentCoupon);
+      SaveChanges();
     }
 
     public void SaveChanges()

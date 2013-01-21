@@ -18,6 +18,7 @@ namespace Samurai.Domain.Value
   {
     IEnumerable<TournamentEvent> UpdateTournamentEvents();
     IEnumerable<GenericMatchDetailQuery> UpdateResultsNew(DateTime fixtureDate);
+    APITournamentDetail GetTournamentDetail(string tournament, int year);
   }
 
   public class NewTennisFixtureStrategy : ITennisFixtureStrategy
@@ -92,5 +93,12 @@ namespace Samurai.Domain.Value
       throw new NotImplementedException();
     }
 
+    public APITournamentDetail GetTournamentDetail(string tournament, int year)
+    {
+      var tb365Uri = this.fixtureRepository.GetTennisTournamentLadder(tournament, year);
+      var tournamentDetail = this.webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => Console.WriteLine(s));
+
+      return tournamentDetail;
+    }
   }
 }

@@ -88,7 +88,7 @@ namespace Samurai.SqlDataAccess
       return First<ExternalSource>(g => g.Source == sourceName);
     }
 
-    public string GetAlias(string teamNameSource, ExternalSource source, ExternalSource destination, Sport sport)
+    public TeamPlayer GetAlias(string teamNameSource, ExternalSource source, ExternalSource destination, Sport sport)
     {
       if (sport.SportName == "Football")
         return GetAliasFootball(teamNameSource, source, destination);
@@ -98,31 +98,46 @@ namespace Samurai.SqlDataAccess
         throw new ArgumentException(string.Format("Can't find sport named {0}", sport.SportName));
     }
 
-    private string GetAliasFootball(string teamNameSource, ExternalSource source, ExternalSource destination)
+    public TeamPlayerExternalSourceAlias CreateTeamPlayerExternalAlias(TeamPlayer teamPlayer,
+      ExternalSource source, string alias)
+    {
+      var entity = new TeamPlayerExternalSourceAlias
+      {
+        TeamsPlayer = teamPlayer,
+        ExternalSource = source,
+        Alias = alias
+      };
+      Add<TeamPlayerExternalSourceAlias>(entity);
+      SaveChanges();
+      return entity;
+    }
+
+
+    private TeamPlayer GetAliasFootball(string teamNameSource, ExternalSource source, ExternalSource destination)
     {
       //easy, we will know all of these upfront
-      var teamNameDestination = string.Empty;
+      TeamPlayer teamNameDestination = null;
       var teamAlias = GetQuery<TeamPlayerExternalSourceAlias>()
                         .Include(t => t.TeamsPlayer)
                         .Where(a => a.Alias == teamNameSource &&
                                     a.ExternalSource.Source == source.Source);
 
       if (teamAlias.Count() == 0)
-        teamNameDestination = teamNameSource;
+        teamNameDestination = GetTeamOrPlayer(teamNameSource);
       else
-        teamNameDestination = teamAlias.First().TeamsPlayer.Name;
+        teamNameDestination = teamAlias.First().TeamsPlayer;
 
       return teamNameDestination;
     }
 
-    private string GetAliasTennis(string teamNameSource, ExternalSource source, ExternalSource destination)
+    private TeamPlayer GetAliasTennis(string teamNameSource, ExternalSource source, ExternalSource destination)
     {
       var teamPlayerAliasLookup = GetQuery<TeamPlayerExternalSourceAlias>(t => t.Alias == teamNameSource && t.ExternalSource.Source == source.Source)
                                     .Include(t => t.TeamsPlayer)
                                     .FirstOrDefault();
       if (teamPlayerAliasLookup != null)
       {
-        return teamPlayerAliasLookup.TeamsPlayer.Slug;
+        return teamPlayerAliasLookup.TeamsPlayer;
       }
       else
       {
@@ -132,12 +147,12 @@ namespace Samurai.SqlDataAccess
         if (source.Source == "Best Betting")
         {
           player = First<TeamPlayer>(p => p.FirstName.ToLower().Substring(0, 1) + "-" + p.Name.ToLower().Replace(" ", "-").Replace(".", "") == lookup);
-          if (player == null) return string.Empty;
+          if (player == null) return null;
         }
         else if (source.Source == "Odds Checker Web" || source.Source == "Odds Checker Mobi")
         {
           player = First<TeamPlayer>(p => p.FirstName.ToLower().Replace(" ", "-").Replace(".", "") + "-" + p.Name.Replace(" ", "-").Replace(".", "").ToLower() == lookup);
-          if (player == null) return string.Empty;
+          if (player == null) return null;
         }
         else
         {
@@ -153,7 +168,7 @@ namespace Samurai.SqlDataAccess
 
         Add<TeamPlayerExternalSourceAlias>(teamPlayerAlias);
         SaveChanges();
-        return player.Slug;
+        return player;
       }
     }
 
@@ -189,6 +204,10 @@ namespace Samurai.SqlDataAccess
       return new Uri("http://www.tennisbetting365.com/api/GetTournamentCalendar");
     }
 
+    public Uri GetTennisTournamentLadder(string tournamentName, int year)
+    {
+      return new Uri(string.Format(@"http://www.tennisbetting365.com/api/gettournamentladder/{0}/{1}", tournamentName, year.ToString()));
+    }
     public TeamPlayer GetTeamOrPlayerById(int id)
     {
       var teamOrPlayer = GetByKey<TeamPlayer>(id);

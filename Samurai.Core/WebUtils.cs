@@ -42,6 +42,18 @@ namespace Samurai.Core
       return returnList;
     }
 
+    public static T GetAndConvertSingleJsonWebRequest<T>(Uri uri, Action<string> report,
+      WebProxy proxy = null)
+    {
+      var jsonString = WebUtils.GetWebpages(new Uri[] { uri }, report, s => new StreamReader(s).ReadToEnd(), proxy)
+                      .First();
+
+      var ret = JsonConvert.DeserializeObject<T>(jsonString);
+
+      return ret;
+
+    }
+
     public static IList<T> ParseImage<T>(IEnumerable<Uri> imageURLs, Action<string> report)
       where T : IReadableImage, IRegexableWebsite, new()
     {

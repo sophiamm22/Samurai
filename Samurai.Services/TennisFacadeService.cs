@@ -97,7 +97,12 @@ namespace Samurai.Services
 
     public IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
     {
-      throw new NotImplementedException();
+      return this.tennisFixtureService.GetTournamentLadder(matchDate, tournament);
+    }
+
+    public void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName)
+    {
+      this.tennisFixtureService.AddAlias(source, playerName, valueSamuraiName, valueSamuraiFirstName);
     }
   }
 }

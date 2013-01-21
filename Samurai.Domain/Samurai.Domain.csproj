@@ -78,6 +78,7 @@
     <Compile Include="HtmlElements\BestBettingOdds.cs" />
     <Compile Include="HtmlElements\BestBettingOddsCompetitor.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleDate.cs" />
+    <Compile Include="HtmlElements\BestBettingScheduleInRunning.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleMatch.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleMatchOdds.cs" />
     <Compile Include="HtmlElements\OddsCheckerMobiCompetitionFootball.cs" />
@@ -129,9 +130,7 @@
     <Compile Include="Value\Excel\ExcelTennisOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelTennisPredictionStrategy.cs" />
     <Compile Include="Value\Excel\TennisSpreadsheetData.cs" />
-    <Compile Include="Value\FixtureStrategy.cs" />
     <Compile Include="Value\NewFootballFixtureStrategy.cs" />
-    <Compile Include="Value\IFixturesAndOdds.cs" />
     <Compile Include="Value\OddsStrategy.cs" />
     <Compile Include="Value\OddsStrategyProvider.cs" />
     <Compile Include="Value\PredictionStrategy.cs" />

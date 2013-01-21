@@ -115,7 +115,8 @@ namespace Samurai.Services
         var timeStamp = DateTime.Now;
         foreach (var coupon in getOddsFor)
         {
-          coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
+          if (!coupon.InPlay)
+            coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
         }
       }
       else
@@ -259,7 +260,8 @@ namespace Samurai.Services
           TeamOrPlayerB = teamOrPlayerB.Name,
           FirstNameB = teamOrPlayerB.FirstName,
           TournamentEventName = tournamentEventIDs[match.TournamentEventID],
-          MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString)
+          MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
+          InPlay = match.InPlay
         };
         coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
         coupons.Add(coupon);
@@ -284,6 +286,7 @@ namespace Samurai.Services
           FirstNameB = (!string.IsNullOrEmpty(match.TeamsPlayerB.FirstName)) ? match.TeamsPlayerB.FirstName : null,
           TournamentEventName = match.TournamentEvent.EventName,
           MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
+          InPlay = match.InPlay
         };
         coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
         coupons.Add(coupon);
@@ -305,12 +308,13 @@ namespace Samurai.Services
 
       foreach (var coupon in coupons)
       {
-        var teamPlayerA = this.fixtureRepository.GetTeamOrPlayerFromName(coupon.TeamOrPlayerA);
-        var teamPlayerB = this.fixtureRepository.GetTeamOrPlayerFromName(coupon.TeamOrPlayerB);
+        var teamPlayerA = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(coupon.TeamOrPlayerA, coupon.FirstNameA);
+        var teamPlayerB = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(coupon.TeamOrPlayerB, coupon.FirstNameB);
         var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(teamPlayerA, teamPlayerB, couponDate);
         
         if (persistedMatch == null)
           continue; //won't get added to the return list but needs some reporting to the client
+
 
         var matchCouponURLs = this.bookmakerRepository
                                   .GetMatchCouponURLs(persistedMatch.Id)
@@ -349,11 +353,16 @@ namespace Samurai.Services
 
           var bestAvailableBookmaker = string.Format("{0} Best Available", coupon.Source);
 
-          Func<MatchOutcomeOdd, bool> predicate = o => o.ExternalSource.Source == coupon.Source &&
-                                                       o.Bookmaker.BookmakerName == bestAvailableBookmaker &&
-                                                       o.TimeStamp == coupon.LastChecked;
+          Func<MatchOutcomeOdd, Model.Outcome, bool> predicate =
+            (o, oc) => o.ExternalSource.Source == coupon.Source &&
+                       o.Bookmaker.BookmakerName == bestAvailableBookmaker &&
+                       o.TimeStamp == outcomeOdds.Where(o2 => o.ExternalSource == o2.ExternalSource && o.Bookmaker == o2.Bookmaker)
+                                                 .Select(x=>x.TimeStamp)
+                                                 .DefaultIfEmpty(DateTime.MinValue)
+                                                 .Max() &&
+                       o.Odd == (decimal)coupon.HeadlineOdds[oc];
 
-          if (outcomeOdds.Count(predicate) == 0)
+          if (outcomeOdds.Count(x => predicate(x, outcome)) == 0)
           {
             var matchOutcomeOdd = new MatchOutcomeOdd()
             {
@@ -365,11 +374,6 @@ namespace Samurai.Services
             };
 
             this.bookmakerRepository.AddMatchOutcomeOdd(matchOutcomeOdd);
-          }
-          else //assume the same time and bookmaker is an update
-          {
-            var persistedOdd = outcomeOdds.First(predicate);
-            persistedOdd.Odd = (decimal)coupon.HeadlineOdds[outcome];
           }
         }
 
@@ -383,12 +387,16 @@ namespace Samurai.Services
 
           foreach (var odd in coupon.ActualOdds[outcome])
           {
-            Func<MatchOutcomeOdd, bool> predicate = o => o.ExternalSource.Source == coupon.Source &&
-                                                        (o.Bookmaker == null ||
-                                                         o.Bookmaker.BookmakerName == odd.BookmakerName) &&
-                                                         o.TimeStamp == coupon.LastChecked;
+            Func<MatchOutcomeOdd, Model.Outcome, bool> predicate =
+              (o, oc) => o.ExternalSource.Source == coupon.Source &&
+                        (o.Bookmaker == null || o.Bookmaker.BookmakerName == odd.BookmakerName) &&
+                         o.TimeStamp == outcomeOdds.Where(o2 => o.ExternalSource == o2.ExternalSource && (o.Bookmaker == null || o.Bookmaker == o2.Bookmaker))
+                                                   .Select(x => x.TimeStamp)
+                                                   .DefaultIfEmpty(DateTime.MinValue)
+                                                   .Max() &&
+                         o.Odd == (decimal)odd.DecimalOdds;
 
-            if (outcomeOdds.Count(predicate) == 0)
+            if (outcomeOdds.Count(x => predicate(x, outcome)) == 0)
             {
               var matchOutcomeOdd = new MatchOutcomeOdd()
               {
@@ -397,15 +405,10 @@ namespace Samurai.Services
                 ExternalSource = sources[coupon.Source],
                 Odd = (decimal)odd.DecimalOdds,
                 TimeStamp = odd.TimeStamp,
-                //ClickThroughURL = odd.ClickThroughURL.ToString()
+                ClickThroughURL = odd.ClickThroughURL.ToString()
               };
 
               this.bookmakerRepository.AddMatchOutcomeOdd(matchOutcomeOdd);
-            }
-            else
-            {
-              var persistedOdd = outcomeOdds.First(predicate);
-              persistedOdd.Odd = (decimal)odd.DecimalOdds;
             }
           }
         }

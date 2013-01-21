@@ -16,5 +16,6 @@ namespace Samurai.Services.Contracts
     IEnumerable<TournamentEventViewModel> GetTournamentEvents();
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
     IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
+    void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName);
   }
 }

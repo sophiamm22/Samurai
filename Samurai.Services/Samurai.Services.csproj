@@ -54,7 +54,9 @@
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
     <Compile Include="AutoMapper\TennisCouponDictionaryProfile.cs" />
+    <Compile Include="AutoMapper\TennisCouponViewModelProfile.cs" />
     <Compile Include="AutoMapper\TennisFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TennisLadderViewModelProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\TennisMatchProfile.cs" />
     <Compile Include="AutoMapper\TennisPredictionProfile.cs" />

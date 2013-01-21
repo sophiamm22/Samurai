@@ -14,8 +14,10 @@ namespace Samurai.Domain.HtmlElements
     public string TeamOrPlayerA { get; set; }
     public string TeamOrPlayerB { get; set; }
     public string MatchPartURL { get; set; }
+    public string GameState { get; set; }
 
     public Uri MatchURL { get; set; }
+    public bool InPlay { get; set; }
 
     public int Identifier { get; set; }
 
@@ -25,7 +27,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<a href=æ(?<MatchPartURL>[^æ]+)æ class=æ(mOdd|mEven)æ\>(?<TeamOrPlayerA>[^/]+) v (?<TeamOrPlayerB>[^\</]+)\</a\>")
+          new Regex(@"\<a href=æ(?<MatchPartURL>[^æ]+)æ class=æ(mOdd|mEven)æ\>(?<GameState>(\<[^\>]+\>|))(?<TeamOrPlayerA>[^/]+) v (?<TeamOrPlayerB>[^\</]+)\</a\>")
         };
       }
     }
@@ -36,6 +38,7 @@ namespace Samurai.Domain.HtmlElements
       MatchURL = new Uri(@"http://oddschecker.mobi" + MatchPartURL);
       TeamOrPlayerA = TeamOrPlayerA.Replace("&amp;", "&");
       TeamOrPlayerB = TeamOrPlayerB.Replace("&amp;", "&");
+      InPlay = !string.IsNullOrEmpty(GameState);
     }
 
   }

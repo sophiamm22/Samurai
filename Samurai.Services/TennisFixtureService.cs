@@ -12,7 +12,9 @@ using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value;
+using Samurai.Domain.APIModel;
 using Model = Samurai.Domain.Model;
+using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Services
 {
@@ -56,9 +58,21 @@ namespace Samurai.Services
       return Mapper.Map<IEnumerable<TournamentEvent>, IEnumerable<TournamentEventViewModel>>(tournamentEvents);
     }
 
-    public IEnumerable<Web.ViewModels.Tennis.TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
+    public IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
     {
-      throw new NotImplementedException();
+      var year = matchDate.AddDays(3).Year;
+      var tournamentSlug 
+        = this.fixtureRepository
+              .GetTournament(tournament)
+              .Slug;
+
+      var apiDetails = this.fixtureStrategy.GetTournamentDetail(tournamentSlug, year);
+
+      var apiLadder = apiDetails.TournamentLadders;
+
+      return Mapper.Map<IEnumerable<APITournamentLadder>, IEnumerable<TennisLadderViewModel>>(apiLadder);
+
     }
+
   }
 }

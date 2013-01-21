@@ -24,10 +24,12 @@ namespace Samurai.SqlDataAccess.Contracts
     IEnumerable<Match> GetDaysMatches(DateTime matchDate);
     
     ExternalSource GetExternalSource(string sourceName);
-    string GetAlias(string teamName, ExternalSource source, ExternalSource destination, Sport sport);
+    TeamPlayer GetAlias(string teamName, ExternalSource source, ExternalSource destination, Sport sport);
+    TeamPlayerExternalSourceAlias CreateTeamPlayerExternalAlias(TeamPlayer teamPlayer, ExternalSource source, string alias);
     
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
     Uri GetTennisTournamentCalendar();
+    Uri GetTennisTournamentLadder(string tournamentName, int year);
     
     TeamPlayer GetTeamOrPlayerById(int id);
     TeamPlayer GetTeamOrPlayer(string slug);

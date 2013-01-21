@@ -32,6 +32,7 @@ namespace Samurai.Domain.Model
     public Uri MatchURL { get; set; }
     public string Source { get; set; }
     public DateTime LastChecked { get; set; }
+    public bool InPlay { get; set; }
     public IDictionary<Outcome, double> HeadlineOdds { get; set; }
     public IDictionary<Outcome, IEnumerable<GenericOdd>> ActualOdds { get; set; }
   }

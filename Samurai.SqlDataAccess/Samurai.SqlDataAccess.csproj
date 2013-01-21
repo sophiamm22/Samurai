@@ -86,6 +86,10 @@
     <Compile Include="Mapping\TournamentMap.cs" />
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="Mapping\UserProfileMap.cs" />
+    <Compile Include="Migrations\201301200954586_add-inplay-to-match.cs" />
+    <Compile Include="Migrations\201301200954586_add-inplay-to-match.Designer.cs">
+      <DependentUpon>201301200954586_add-inplay-to-match.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Procedures\GetGenericMatchDetails.cs" />
     <Compile Include="Procedures\GetOddsForEvent.cs" />
@@ -114,6 +118,11 @@
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201301200954586_add-inplay-to-match.resx">
+      <DependentUpon>201301200954586_add-inplay-to-match.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

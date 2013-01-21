@@ -32,7 +32,7 @@ namespace Samurai.Domain.HtmlElements
       get
       {
         var regexs = new List<Regex>();
-        regexs.Add(new Regex(@"\<td class=æfirstColumnæ\>[^\<]+\<a href=æ(?<PartURL>[^æ]+)æ>(?<TeamOrPlayerA>[A-Za-z\.\-, &]+) v (?<TeamOrPlayerB>[A-Za-z\.\-, &]+)\</a\>[^\(]+\((?<TimeString>\d{2}:\d{2})&nbsp;(?<TimeZone>[A-Z]{3})\)[^\<]+\</td\>[^\<]+(?<BestOddsString>(\<td id=æ[^æ]+æ class=æselectionBestOddæ style=æ æ\>[^0-9\.]+[0-9\.]+[^\<]+\</td\>[^\<]+){2,3})\<td id=æ[^æ]+æ class=æbppWidth bppæ\>(?<PayoutString>\d+\.\d+) %\</td\>"));
+        regexs.Add(new Regex(@"\<td class=æfirstColumnæ\>[^\<]+\<a href=æ(?<PartURL>[^æ]+)æ>(?<TeamOrPlayerA>[A-Za-z\.\-, &]+) v (?<TeamOrPlayerB>[A-Za-z\.\-, &]+)\</a\>[^\(]+\((?<TimeString>\d{2}:\d{2})&nbsp;(?<TimeZone>[A-Z]{3})\)[^\<]+\</td\>[^\<]+(?<BestOddsString>(\<td id=æ[^æ]+æ class=æselectionBestOddæ style=æ æ\>[^0-9\.]+[0-9\.]+[^\<]+\</td\>[^\<]+){2,3})\<td id=æ[^æ]+æ class=æbppWidth bppæ\>(?<PayoutString>\d+\.\d+) %\</td\>")); 
         return regexs;
       }
     }

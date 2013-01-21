@@ -74,7 +74,7 @@ namespace Samurai.Domain.Value
         if (oddsToken is BestBettingOddsCompetitor)
         {
           var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination, this.sport);
-          currentOutcome = playerLookup[currentOutcomeLocal];
+          currentOutcome = playerLookup[currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -137,7 +137,7 @@ namespace Samurai.Domain.Value
         if (oddsToken is OddsCheckerMobiCompetitor)
         {
           var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerMobiCompetitor)oddsToken).Outcome, source, destination, sport);
-          currentOutcome = playerLookup[currentOutcomeLocal];
+          currentOutcome = playerLookup[currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -223,7 +223,7 @@ namespace Samurai.Domain.Value
         if (oddsToken is OddsCheckerWebCompetitor)
         {
           var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerWebCompetitor)oddsToken).Outcome, source, destination, sport);
-          currentOutcome = playerLookup[currentOutcomeLocal];
+          currentOutcome = playerLookup[currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);

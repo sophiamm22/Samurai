@@ -8,7 +8,7 @@ namespace Samurai.Web.ViewModels.Tennis
 {
   public class TennisLadderViewModel
   {
-    public int LadderPosition { get; set; }
+    public int Position { get; set; }
     public string PlayerFirstName { get; set; }
     public string PlayerSurname { get; set; }
     public int? Seed { get; set; }

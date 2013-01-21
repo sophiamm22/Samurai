@@ -40,9 +40,11 @@ namespace Samurai.Services
       //check URL's exist first
       var urlCheck =
         tournaments.SelectMany(t => oddsSources.Where(s => this.bookmakerRepository.GetTournamentCouponUrl(t, s) == null)
-                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }));
+                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }))
+                   .ToList();
+
       if (urlCheck.Count() > 0)
-        throw new TournamentCouponURLMissingException(urlCheck, "Tournament coupons missing");
+        throw new TournamentCouponURLMissingException(urlCheck.ToList(), "Tournament coupons missing");
 
 
       foreach (var tournament in tournaments.Select(t => t.TournamentName))

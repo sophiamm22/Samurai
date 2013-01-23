@@ -115,7 +115,8 @@
     <Compile Include="MVCMembership\MVCMembershipProvider.cs" />
     <Compile Include="MVCMembership\MVCRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IWebRepository.cs" />
+    <Compile Include="Repository\WebRepository.cs" />
+    <Compile Include="Repository\WebRepositoryProvider.cs" />
     <Compile Include="Value\CouponStrategy.cs" />
     <Compile Include="Value\CouponStrategyProvider.cs" />
     <Compile Include="Value\Excel\ExcelFootballCouponStrategy.cs" />

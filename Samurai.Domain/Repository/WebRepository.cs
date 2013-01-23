@@ -18,7 +18,8 @@ namespace Samurai.Domain.Repository
     IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null);
     IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null);
-    T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null);
+    T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
+    T GetJsonObject<T>(string jsonString, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
     string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null);
     IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
   }
@@ -26,13 +27,11 @@ namespace Samurai.Domain.Repository
   public class WebRepository : IWebRepository
   {
     protected WebProxy _proxy;
-    public WebRepository()
+    protected readonly string basePath;
+    public WebRepository(string basePath)
     {
+      this.basePath = basePath;
       _proxy = null;
-    }
-    public WebRepository(WebProxy proxy)
-    {
-      _proxy = proxy;
     }
 
     protected string GetPath(string folderName, string fileName)
@@ -63,8 +62,15 @@ namespace Samurai.Domain.Repository
     }
 
     public virtual T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
+      where T : IRegexableWebsite, new()
     {
       return WebUtils.GetAndConvertSingleJsonWebRequest<T>(uri, report, _proxy);
+    }
+
+    public virtual T GetJsonObject<T>(string jsonString, Action<string> report, string identifier = null)
+      where T : IRegexableWebsite, new()
+    {
+      return WebUtils.GetAndConvertSingleJsonWebRequest<T>(jsonString, report);
     }
 
     public virtual IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null)
@@ -82,25 +88,16 @@ namespace Samurai.Domain.Repository
     {
       return WebUtils.ParseJson<T>(jsonURL, report);
     }
+
   }
 
   public class WebRepositoryTestData : WebRepository
   {
     private string _competitionFolderName;
 
-    public WebRepositoryTestData() //hack need to learn how to do this properly with DI -> I think it's property injection
+    public WebRepositoryTestData(string basePath)
+      :base(basePath)
     {
-      _competitionFolderName = "Tennis/" + (new DateTime(1981, 06, 29)).ToShortDateString().Replace("/", "-");
-    }
-
-    public WebRepositoryTestData(string competitionFolderName)
-    {
-      _competitionFolderName = competitionFolderName;
-    }
-    public WebRepositoryTestData(string tournamentFolderName, WebProxy proxy)
-      : this(tournamentFolderName)
-    {
-      _proxy = proxy;
     }
 
     public override IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
@@ -141,6 +138,30 @@ namespace Samurai.Domain.Repository
         return base.GetJsonObjects<T>(tr.ReadToEnd(), report);
       }
     }
+
+    public override IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null)
+    {
+      return base.GetJsonObjects<T>(jsonString, report, identifier);
+    }
+
+    public override T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
+    {
+      var fileName = GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      report(string.Format("Streaming saved URL from:{0}", fileName));
+
+      using (TextReader tr = new StreamReader(fileName))
+      {
+        return base.GetJsonObject<T>(uri, report, identifier);
+
+      }
+    }
+
+    public override T GetJsonObject<T>(string jsonString, Action<string> report, string identifier = null)
+    {
+      return base.GetJsonObject<T>(jsonString, report, identifier);
+    }
+
+
     public override string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null)
     {
       var fileName = GetPath(_competitionFolderName, postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
@@ -168,20 +189,9 @@ namespace Samurai.Domain.Repository
   {
     private string _competitionFolderName;
 
-    public WebRepositorySaveTestData()
+    public WebRepositorySaveTestData(string basePath)
+      :base(basePath)
     {
-      _competitionFolderName = "Tennis/" + (new DateTime(1981, 06, 29)).ToShortDateString().Replace("/", "-");
-    }
-
-    public WebRepositorySaveTestData(string competitionFolderName)
-    {
-      _competitionFolderName = competitionFolderName;
-    }
-
-    public WebRepositorySaveTestData(string competitionFolderName, WebProxy proxy)
-      : base(proxy)
-    {
-      _competitionFolderName = competitionFolderName;
     }
 
     public override IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
@@ -219,6 +229,30 @@ namespace Samurai.Domain.Repository
       }
       return base.GetJsonObjects<T>(jsonString, report);
     }
+
+    public override IEnumerable<T> GetJsonObjects<T>(string jsonString, Action<string> report, string identifier = null)
+    {
+      return base.GetJsonObjects<T>(jsonString, report, identifier);
+    }
+
+    public override T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
+    {
+      var jsonString = WebUtils.GetWebpages(new Uri[] { uri }, report, s => new StreamReader(s).ReadToEnd(), _proxy)
+                               .First();
+
+      using (TextWriter jsonWriter = new StreamWriter(GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
+      {
+        jsonWriter.Write(jsonString);
+      }
+
+      return base.GetJsonObject<T>(jsonString, report, identifier);
+    }
+
+    public override T GetJsonObject<T>(string jsonString, Action<string> report, string identifier = null)
+    {
+      return base.GetJsonObject<T>(jsonString, report, identifier);
+    }
+
     public override string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null)
     {
       var postString = WebUtils.FormPost(postURL, referer, content, contentType);

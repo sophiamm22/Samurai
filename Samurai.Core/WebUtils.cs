@@ -54,6 +54,14 @@ namespace Samurai.Core
 
     }
 
+    public static T GetAndConvertSingleJsonWebRequest<T>(string jsonString, Action<string> report,
+      WebProxy proxy = null)
+    {
+      var ret = JsonConvert.DeserializeObject<T>(jsonString);
+
+      return ret;
+    }
+
     public static IList<T> ParseImage<T>(IEnumerable<Uri> imageURLs, Action<string> report)
       where T : IReadableImage, IRegexableWebsite, new()
     {
@@ -119,6 +127,11 @@ namespace Samurai.Core
       }
     }
 
+    public static T ParseJson<T>(string jsonString, Action<string> report)
+      where T : IRegexableWebsite, new()
+    {
+      return JsonConvert.DeserializeObject<T>(jsonString);
+    }
 
     public static IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report)
       where T : IRegexableWebsite, new()

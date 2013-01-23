@@ -18,7 +18,9 @@ namespace Samurai.Services.AutoMapper
         x.AddProfile<FootballFixtureMatchProfile>();
         x.AddProfile<FootballFixtureViewModelProfile>();
         x.AddProfile<FootballPredictionViewModelProfile>();
+        x.AddProfile<GenericMatchCouponProfile>();
         x.AddProfile<GenericMatchDetailProfile>();
+        x.AddProfile<GenericOddProfile>();
         x.AddProfile<OddsSourceProfile>();
         x.AddProfile<SportProfile>();
         x.AddProfile<TennisCouponDictionaryProfile>();

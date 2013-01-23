@@ -147,7 +147,7 @@ namespace Samurai.Sandbox
     {
       Console.WriteLine(string.Format("Select a player from the list by ladder position (1-{0})", tournamentLadder.Count()));
       tournamentLadder.ToList()
-                      .ForEach(x => Console.WriteLine(string.Format("{0}\t{2},{3}", x.Position, x.PlayerSurname.ToUpper(), x.PlayerFirstName)));
+                      .ForEach(x => Console.WriteLine(string.Format("{0}\t{1},{2}", x.Position, x.PlayerSurname.ToUpper(), x.PlayerFirstName)));
       Console.WriteLine(string.Format("..or enter the player's local name in for the form 'Surname, FirstName' for {0} via {1}", playerName, source));
       var response = Console.ReadLine();
       if (Regex.IsMatch(response, @"\d+"))

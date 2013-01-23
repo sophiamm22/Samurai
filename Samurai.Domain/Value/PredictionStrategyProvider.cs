@@ -19,26 +19,26 @@ namespace Samurai.Domain.Value
   {
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     public PredictionStrategyProvider(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository,
-      IWebRepository webRepository)
+      IWebRepositoryProvider webRepositoryProvider)
     {
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (webRepositoryProvider == null) throw new ArgumentNullException("webRepository");
 
       this.predictionRepository = predictionRepository;
       this.fixtureRepository = fixtureRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
 
     public IPredictionStrategy CreatePredictionStrategy(Sport sport)
     {
       if (sport.SportName == "Football")
-        return new FootballFinkTankPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
+        return new FootballFinkTankPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else if (sport.SportName == "Tennis")
-        return new TennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepository);
+        return new TennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else
         throw new ArgumentException("Sport not recognised");
     }

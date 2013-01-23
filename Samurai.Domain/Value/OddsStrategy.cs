@@ -16,40 +16,40 @@ namespace Samurai.Domain.Value
 {
   public interface IOddsStrategy
   {
-    IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp);
+    IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp);
   }
 
   public abstract class AbstractOddsStrategy : IOddsStrategy
   {
     protected readonly Sport sport;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
     protected readonly IBookmakerRepository bookmakerRepository;
     protected readonly IFixtureRepository fixtureRepository;
 
     public AbstractOddsStrategy(Sport sport, IBookmakerRepository bookmakerRepository, 
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
     {
       if (sport == null) throw new ArgumentNullException("sport");
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (webRepositoryProvider == null) throw new ArgumentNullException("webRepository");
 
       this.sport = sport;
       this.bookmakerRepository = bookmakerRepository;
       this.fixtureRepository = fixtureRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
-    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp);
+    public abstract IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp);
   }
 
   public class BestBettingOddsStrategy : AbstractOddsStrategy
   {
     public BestBettingOddsStrategy(Sport sport, IBookmakerRepository bookmakerRepository,
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
-      : base(sport, bookmakerRepository, fixtureRepository, webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
+      : base(sport, bookmakerRepository, fixtureRepository, webRepositoryProvider)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
@@ -62,6 +62,9 @@ namespace Samurai.Domain.Value
       var destination = this.fixtureRepository.GetExternalSource("Value Samurai");
 
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
+
       var oddsHTML = webRepository.GetHTML(new Uri[] { matchCoupon.MatchURL }, s => Console.WriteLine(s)).First();
       var oddsTokens = WebUtils.ParseWebsite<BestBettingOddsCompetitor, BestBettingOdds>(
         oddsHTML, s => Console.WriteLine(s));
@@ -105,11 +108,11 @@ namespace Samurai.Domain.Value
   public class OddsCheckerMobiOddsStrategy : AbstractOddsStrategy
   {
     public OddsCheckerMobiOddsStrategy(Sport sport, IBookmakerRepository bookmakerRepository,
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
-      : base(sport, bookmakerRepository, fixtureRepository, webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
+      : base(sport, bookmakerRepository, fixtureRepository, webRepositoryProvider)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
@@ -123,8 +126,10 @@ namespace Samurai.Domain.Value
 
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
 
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
+
       var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => Console.WriteLine(s), matchCoupon.MatchURL.ToString())
-                               .First();
+                              .First();
 
       var oddsTokens = WebUtils.ParseWebsite<OddsCheckerMobiCompetitor, OddsCheckerMobiOdds>(
         html, s => Console.WriteLine(s));
@@ -168,11 +173,11 @@ namespace Samurai.Domain.Value
   public class OddsCheckerWebOddsStrategy : AbstractOddsStrategy
   {
     public OddsCheckerWebOddsStrategy(Sport sport, IBookmakerRepository bookmakerRepository,
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
-      : base(sport, bookmakerRepository, fixtureRepository, webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
+      : base(sport, bookmakerRepository, fixtureRepository, webRepositoryProvider)
     { }
 
-    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public override IDictionary<Outcome, IEnumerable<GenericOdd>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
       var playerLookup = new Dictionary<string, Outcome>()
       {
@@ -186,8 +191,10 @@ namespace Samurai.Domain.Value
 
       var outcomeDictionary = new Dictionary<Outcome, IEnumerable<GenericOdd>>();
 
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
+
       var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => Console.WriteLine(s), matchCoupon.MatchURL.ToString())
-                               .First();
+                              .First();
 
       var oddsTokens = new List<IRegexableWebsite>();
 

@@ -27,6 +27,9 @@ namespace Samurai.Sandbox
   {
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
+      var repositoryType = "SaveTestData";
+      var basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\";
+
       container.AddFacility<TypedFactoryFacility>();
 
       container.Register(Component
@@ -38,8 +41,14 @@ namespace Samurai.Sandbox
                         .ImplementedBy<ValueSamuraiContext>());
 
       container.Register(Component
-                        .For<IWebRepository>()
-                        .ImplementedBy<WebRepository>());
+                        .For<IWebRepositoryProvider>()
+                        .ImplementedBy<WebRepositoryProvider>()
+                        .DependsOn(new
+                        {
+                          repositoryType = repositoryType,
+                          basePath = basePath
+                        }
+                        ));
 
       container.Register(Component
                         .For<IBus>()

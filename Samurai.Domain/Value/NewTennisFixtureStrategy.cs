@@ -25,21 +25,24 @@ namespace Samurai.Domain.Value
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     public NewTennisFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
-      IWebRepository webRepository)
+      IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
       this.storedProcRepository = storedProcRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
 
     public IEnumerable<TournamentEvent> UpdateTournamentEvents()
     {
       var ret = new List<TournamentEvent>();
       var tb365Uri = this.fixtureRepository.GetTennisTournamentCalendar();
-      var tournamentEvents = this.webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => Console.WriteLine(s));
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
+
+      var tournamentEvents = webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => Console.WriteLine(s));
 
       foreach (var tournamentEvent in tournamentEvents)
       {
@@ -96,7 +99,9 @@ namespace Samurai.Domain.Value
     public APITournamentDetail GetTournamentDetail(string tournament, int year)
     {
       var tb365Uri = this.fixtureRepository.GetTennisTournamentLadder(tournament, year);
-      var tournamentDetail = this.webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => Console.WriteLine(s));
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
+
+      var tournamentDetail = webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => Console.WriteLine(s));
 
       return tournamentDetail;
     }

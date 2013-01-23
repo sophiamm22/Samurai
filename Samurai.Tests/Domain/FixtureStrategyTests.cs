@@ -16,7 +16,7 @@ namespace Samurai.Tests.Domain
   public class when_working_with_the_football_fixture_strategy : Specification
   {
     protected NewFootballFixtureStrategy footballFixtureStrategy;
-    protected IWebRepository webRepository;
+    protected IWebRepositoryProvider webRepositoryProvider;
     protected M.Mock<IStoredProceduresRepository> storedProcRepository;
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected List<Match> fixtures;
@@ -38,8 +38,8 @@ namespace Samurai.Tests.Domain
       base.Establish_context();
       this.couponDate = new DateTime(2012, 10, 21);
 
-      this.webRepository = new WebRepositoryTestData("Football/" + this.couponDate.ToShortDateString().Replace("/", "-"));
-      this.footballFixtureStrategy = new NewFootballFixtureStrategy(fixtureRepository.Object, storedProcRepository.Object, webRepository);
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
+      this.footballFixtureStrategy = new NewFootballFixtureStrategy(fixtureRepository.Object, storedProcRepository.Object, webRepositoryProvider);
 
       this.fixtureRepository.HasNoPersistedMatches();
     }
@@ -69,8 +69,8 @@ namespace Samurai.Tests.Domain
       base.Establish_context();
       this.couponDate = new DateTime(2012, 10, 20);
 
-      this.webRepository = new WebRepositoryTestData("Football/" + this.couponDate.ToShortDateString().Replace("/", "-"));
-      this.footballFixtureStrategy = new NewFootballFixtureStrategy(this.fixtureRepository.Object, this.storedProcRepository.Object, webRepository);
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
+      this.footballFixtureStrategy = new NewFootballFixtureStrategy(this.fixtureRepository.Object, this.storedProcRepository.Object, webRepositoryProvider);
 
       this.fixtureRepository.HasPersistedMatches();
     }

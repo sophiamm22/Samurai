@@ -19,14 +19,14 @@ namespace Samurai.Domain.Value
   {
     protected readonly IBookmakerRepository bookmakerRepository;
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     public CouponStrategyProvider(IBookmakerRepository bookmakerService, 
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
     {
       this.bookmakerRepository = bookmakerService;
       this.fixtureRepository = fixtureRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
 
     public ICouponStrategy CreateCouponStrategy(IValueOptions valueOptions)
@@ -35,10 +35,10 @@ namespace Samurai.Domain.Value
       {
         if (valueOptions.Sport.SportName == "Football")
           return new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository, 
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else if (valueOptions.Sport.SportName == "Tennis")
           return new BestBettingCouponStrategy<BestBettingCompetitionTennis>(this.bookmakerRepository,
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else
           throw new ArgumentException("Sport not recognised");
       }
@@ -46,10 +46,10 @@ namespace Samurai.Domain.Value
       {
         if (valueOptions.Sport.SportName == "Football")
           return new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository,
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else if (valueOptions.Sport.SportName == "Tennis")
           return new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionTennis>(this.bookmakerRepository,
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else
           throw new ArgumentException("Sport not recognised");
       }
@@ -57,10 +57,10 @@ namespace Samurai.Domain.Value
       {
         if (valueOptions.Sport.SportName == "Football")
           return new OddsCheckerWebCouponStrategy<OddsCheckerWebCompetitionFootball>(this.bookmakerRepository,
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else if (valueOptions.Sport.SportName == "Tennis")
           return new OddsCheckerWebCouponStrategy<OddsCheckerWebCompetitionTennis>(this.bookmakerRepository,
-            this.fixtureRepository, this.webRepository, valueOptions);
+            this.fixtureRepository, this.webRepositoryProvider, valueOptions);
         else
           throw new ArgumentException("Sport not recognised");
       }

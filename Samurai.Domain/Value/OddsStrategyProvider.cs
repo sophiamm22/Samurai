@@ -16,30 +16,30 @@ namespace Samurai.Domain.Value
 
   public class OddsStrategyProvider : IOddsStrategyProvider
   {
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
     protected readonly IBookmakerRepository bookmakerRepository;
     protected readonly IFixtureRepository fixtureRepository;
 
     public OddsStrategyProvider(IBookmakerRepository bookmakerRepository,
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
     {
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (webRepositoryProvider == null) throw new ArgumentNullException("webRepository");
 
       this.bookmakerRepository = bookmakerRepository;
       this.fixtureRepository = fixtureRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
 
     public IOddsStrategy CreateOddsStrategy(IValueOptions valueOptions)
     {
       if (valueOptions.OddsSource.Source == "Best Betting")
-        return new BestBettingOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new BestBettingOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepositoryProvider);
       else if (valueOptions.OddsSource.Source == "Odds Checker Mobi")
-        return new OddsCheckerMobiOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new OddsCheckerMobiOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepositoryProvider);
       else if (valueOptions.OddsSource.Source == "Odds Checker Web")
-        return new OddsCheckerWebOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepository);
+        return new OddsCheckerWebOddsStrategy(valueOptions.Sport, this.bookmakerRepository, this.fixtureRepository, this.webRepositoryProvider);
       else
         throw new ArgumentException("Odds Source not recognised");
     }

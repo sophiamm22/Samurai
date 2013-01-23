@@ -17,30 +17,32 @@ namespace Samurai.Domain.Value
   {
     IEnumerable<GenericMatchDetailQuery> UpdateFixtures(DateTime fixtureDate);
     IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate);
-
   }
 
   public class NewFootballFixtureStrategy : IFootballFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     protected string storedHTML = "";
 
 
     public NewFootballFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
-      IWebRepository webRepository)
+      IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
       this.storedProcRepository = storedProcRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
 
     public IEnumerable<GenericMatchDetailQuery> UpdateFixtures(DateTime fixtureDate)
     {
       var fixturesURL = this.fixtureRepository.GetSkySportsFootballFixturesOrResults(fixtureDate);
-      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? this.webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(fixtureDate);
+      
+      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
       var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
                                    .Cast<ISkySportsFixture>();
 
@@ -66,7 +68,10 @@ namespace Samurai.Domain.Value
     public IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate)
     {
       var fixturesURL = this.fixtureRepository.GetSkySportsFootballFixturesOrResults(fixtureDate);
-      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? this.webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(fixtureDate);
+
+      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
       var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
                                    .Cast<ISkySportsFixture>();
 

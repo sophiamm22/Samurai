@@ -32,7 +32,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new BestBettingOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new BestBettingOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider);
     }
 
     protected override void Because_of()
@@ -41,7 +41,7 @@ namespace Samurai.Tests.Domain
       foreach (var match in this.premCoupon.Where(m => m.MatchDate.Date == this.couponDate && m.TeamOrPlayerA.ToLower().IndexOf("swansea") < 0))//no idea why but swansea vs. wigan was missing
       {
         var matchIdentifier = string.Format("{0} vs. {1}", match.TeamOrPlayerA, match.TeamOrPlayerB);
-        var odds = oddsStrategy.GetOdds(match, DateTime.Now);
+        var odds = oddsStrategy.GetOdds(match, DateTime.Now.Date, DateTime.Now);
         this.returnedOdds.Add(matchIdentifier, odds);
       }
     }
@@ -70,7 +70,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new OddsCheckerMobiOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new OddsCheckerMobiOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider);
     }
 
     protected override void Because_of()
@@ -79,7 +79,7 @@ namespace Samurai.Tests.Domain
       foreach (var match in this.premCoupon.Where(m => m.MatchDate.Date == this.couponDate))
       {
         var matchIdentifier = string.Format("{0} vs. {1}", match.TeamOrPlayerA, match.TeamOrPlayerB);
-        var odds = oddsStrategy.GetOdds(match, DateTime.Now);
+        var odds = oddsStrategy.GetOdds(match, DateTime.Now.Date, DateTime.Now);
         this.returnedOdds.Add(matchIdentifier, odds);
       }
     }
@@ -107,7 +107,7 @@ namespace Samurai.Tests.Domain
     protected override void Establish_context()
     {
       base.Establish_context();
-      oddsStrategy = new OddsCheckerWebOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      oddsStrategy = new OddsCheckerWebOddsStrategy(this.valueOptions.Object.Sport, this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider);
     }
 
     protected override void Because_of()
@@ -116,7 +116,7 @@ namespace Samurai.Tests.Domain
       foreach (var match in this.premCoupon.Where(m => m.MatchDate.Date == this.couponDate))
       {
         var matchIdentifier = string.Format("{0} vs. {1}", match.TeamOrPlayerA, match.TeamOrPlayerB);
-        var odds = oddsStrategy.GetOdds(match, DateTime.Now);
+        var odds = oddsStrategy.GetOdds(match, DateTime.Now.Date, DateTime.Now);
         this.returnedOdds.Add(matchIdentifier, odds);
       }
     }

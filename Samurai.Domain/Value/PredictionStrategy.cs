@@ -20,18 +20,18 @@ namespace Samurai.Domain.Value
   {
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IWebRepository webRepository;
+    protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     public AbstractPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository,
-      IWebRepository webRepository)
+      IWebRepositoryProvider webRepositoryProvider)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
       if (predictionRepository == null) throw new ArgumentNullException("preictionRepository");
-      if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (webRepositoryProvider == null) throw new ArgumentNullException("webRepository");
 
       this.predictionRepository = predictionRepository;
       this.fixtureRepository = fixtureRepository;
-      this.webRepository = webRepository;
+      this.webRepositoryProvider = webRepositoryProvider;
     }
     public abstract IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
   }
@@ -39,8 +39,8 @@ namespace Samurai.Domain.Value
   public class TennisPredictionStrategy : AbstractPredictionStrategy
   {
     public TennisPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, 
-      IWebRepository webRepository)
-      : base(predictionRepository, fixtureRepository, webRepository)
+      IWebRepositoryProvider webRepositoryProvider)
+      : base(predictionRepository, fixtureRepository, webRepositoryProvider)
     {
     }
 
@@ -50,14 +50,16 @@ namespace Samurai.Domain.Value
 
       var atp = "ATP";
 
-      var jsonTennisMatches = this.webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
+
+      var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
         s => Console.WriteLine(s), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
         var predictionURL = new Uri(jsonTennisMatch.ToString());
 
-        var jsonTennisPrediction = (APITennisPrediction)this.webRepository.ParseJson<APITennisPrediction>(
+        var jsonTennisPrediction = (APITennisPrediction)webRepository.ParseJson<APITennisPrediction>(
           predictionURL, s => Console.WriteLine(s));
         jsonTennisPrediction.StartTime = jsonTennisMatch.MatchDate;
 
@@ -115,8 +117,8 @@ namespace Samurai.Domain.Value
   public class FootballFinkTankPredictionStrategy : AbstractPredictionStrategy
   {
     public FootballFinkTankPredictionStrategy(IPredictionRepository predictionRepository, 
-      IFixtureRepository fixtureRepository, IWebRepository webRepository)
-      : base(predictionRepository, fixtureRepository, webRepository)
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
+      : base(predictionRepository, fixtureRepository, webRepositoryProvider)
     {
     }
 
@@ -125,6 +127,8 @@ namespace Samurai.Domain.Value
       var gameWeek = this.fixtureRepository.GetDaysMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
       var footballTeams = new List<TeamPlayer>();
       var predictions = new List<Model.GenericPrediction>();
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       foreach (var game in gameWeek)
       {
@@ -142,7 +146,7 @@ namespace Samurai.Domain.Value
 
         var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
 
-        var jsonFootballPredicton = (APIFootballPrediction)this.webRepository.ParseJson<APIFootballPrediction>(
+        var jsonFootballPredicton = (APIFootballPrediction)webRepository.ParseJson<APIFootballPrediction>(
           predictionURL, s => Console.WriteLine(s), string.Format("{0}-{1}", 
           valueOptions.Tournament.TournamentName.Replace(" ",""), valueOptions.CouponDate.ToShortDateString()));
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));

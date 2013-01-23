@@ -18,9 +18,9 @@ namespace Samurai.Domain.Value.Excel
       this.spreadsheetData = spreadsheetData;
     }
 
-    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime timeStamp)
+    public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
-      return this.spreadsheetData.GetOdds(matchCoupon, timeStamp);
+      throw new NotImplementedException();
     }
   }
 }

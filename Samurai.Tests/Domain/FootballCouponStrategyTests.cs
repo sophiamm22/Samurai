@@ -18,7 +18,7 @@ namespace Samurai.Tests.Domain
   public class when_working_with_the_football_coupon_strategy : Specification
   {
     protected AbstractCouponStrategy couponStrategy;
-    protected IWebRepository webRepository;
+    protected IWebRepositoryProvider webRepositoryProvider;
     protected M.Mock<IBookmakerRepository> bookmakerRepository;
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IValueOptions> valueOptions;
@@ -42,7 +42,7 @@ namespace Samurai.Tests.Domain
       this.bookmakerRepository.HasBasicMethods(this.db);
       this.fixtureRepository.HasBasicMethods(this.db);
 
-      this.webRepository = new WebRepositoryTestData("Football/" + this.couponDate.ToShortDateString().Replace("/", "-"));
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
     }
   }
 
@@ -55,13 +55,13 @@ namespace Samurai.Tests.Domain
       this.valueOptions.Setup(t => t.OddsSource).Returns(this.db.ExternalSource["Odds Checker Web"]);
       //need to override this, don't have data from 20th October..
       this.couponDate = new DateTime(2012, 11, 3);
-      this.webRepository = new WebRepositoryTestData("Football/" + this.couponDate.ToShortDateString().Replace("/", "-"));
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
     }
 
     protected override void Because_of()
     {
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Premier League"]);
-      this.couponStrategy = new OddsCheckerWebCouponStrategy<OddsCheckerWebCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new OddsCheckerWebCouponStrategy<OddsCheckerWebCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.premCoupon = this.couponStrategy.GetMatches();
       
     }
@@ -101,19 +101,19 @@ namespace Samurai.Tests.Domain
     protected override void Because_of()
     {
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Premier League"]);
-      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.premCoupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Championship"]);
-      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.champCoupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League One"]);
-      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.league1Coupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League Two"]);
-      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new OddsCheckerMobiCouponStrategy<OddsCheckerMobiCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.league2Coupon = this.couponStrategy.GetMatches();
 
     }
@@ -151,19 +151,19 @@ namespace Samurai.Tests.Domain
     protected override void Because_of()
     {
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Premier League"]);
-      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.premCoupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Championship"]);
-      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.champCoupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League One"]);
-      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.league1Coupon = this.couponStrategy.GetMatches();
 
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["League Two"]);
-      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepository, this.valueOptions.Object);
+      this.couponStrategy = new BestBettingCouponStrategy<BestBettingCompetitionFootball>(this.bookmakerRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider, this.valueOptions.Object);
       this.league2Coupon = this.couponStrategy.GetMatches();
 
     }

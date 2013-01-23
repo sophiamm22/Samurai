@@ -116,7 +116,7 @@ namespace Samurai.Services
         foreach (var coupon in getOddsFor)
         {
           if (!coupon.InPlay)
-            coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
+            coupon.ActualOdds = oddsStrategy.GetOdds(coupon, valueOptions.CouponDate, timeStamp);
         }
       }
       else
@@ -162,7 +162,7 @@ namespace Samurai.Services
         var timeStamp = DateTime.Now;
         foreach (var coupon in getOddsFor)
         {
-          coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
+          coupon.ActualOdds = oddsStrategy.GetOdds(coupon, valueOptions.CouponDate, timeStamp);
         }
       }
       else
@@ -263,7 +263,7 @@ namespace Samurai.Services
           MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
           InPlay = match.InPlay
         };
-        coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
+        coupon.ActualOdds = oddsStrategy.GetOdds(coupon, valueOptions.CouponDate, timeStamp);
         coupons.Add(coupon);
       }
       var matchesReturn = PersistCoupons(coupons, valueOptions.CouponDate, valueOptions.Tournament.TournamentName);
@@ -288,7 +288,7 @@ namespace Samurai.Services
           MatchURL = new Uri(match.MatchCouponURLs.First(m => m.ExternalSource.Source == valueOptions.OddsSource.Source).MatchCouponURLString),
           InPlay = match.InPlay
         };
-        coupon.ActualOdds = oddsStrategy.GetOdds(coupon, timeStamp);
+        coupon.ActualOdds = oddsStrategy.GetOdds(coupon, valueOptions.CouponDate, timeStamp);
         coupons.Add(coupon);
       }
       var matchesReturn = PersistCoupons(coupons, valueOptions.CouponDate, valueOptions.Tournament.TournamentName);
@@ -308,6 +308,8 @@ namespace Samurai.Services
 
       foreach (var coupon in coupons)
       {
+        var retCoupon = Mapper.Map<Model.GenericMatchCoupon, Model.GenericMatchCoupon>(coupon);
+
         var teamPlayerA = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(coupon.TeamOrPlayerA, coupon.FirstNameA);
         var teamPlayerB = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(coupon.TeamOrPlayerB, coupon.FirstNameB);
         var persistedMatch = this.fixtureRepository.GetMatchFromTeamSelections(teamPlayerA, teamPlayerB, couponDate);
@@ -362,7 +364,9 @@ namespace Samurai.Services
                                                  .Max() &&
                        o.Odd == (decimal)coupon.HeadlineOdds[oc];
 
-          if (outcomeOdds.Count(x => predicate(x, outcome)) == 0)
+          var persisistedOdd = outcomeOdds.FirstOrDefault(x => predicate(x, outcome));
+
+          if (persisistedOdd == null)
           {
             var matchOutcomeOdd = new MatchOutcomeOdd()
             {
@@ -374,6 +378,12 @@ namespace Samurai.Services
             };
 
             this.bookmakerRepository.AddMatchOutcomeOdd(matchOutcomeOdd);
+            retCoupon.HeadlineOdds.Add(outcome, coupon.HeadlineOdds[outcome]);
+          }
+          else
+          {
+            if (!retCoupon.HeadlineOdds.ContainsKey(outcome))
+              retCoupon.HeadlineOdds.Add(outcome, (double)persisistedOdd.Odd);//dubious
           }
         }
 
@@ -385,6 +395,7 @@ namespace Samurai.Services
                                  .GetMatchOutcomeOdds(probForOutcome.Id)
                                  .ToList();
 
+          var newActualOdds = new List<Model.GenericOdd>();
           foreach (var odd in coupon.ActualOdds[outcome])
           {
             Func<MatchOutcomeOdd, Model.Outcome, bool> predicate =
@@ -396,7 +407,9 @@ namespace Samurai.Services
                                                    .Max() &&
                          o.Odd == (decimal)odd.DecimalOdds;
 
-            if (outcomeOdds.Count(x => predicate(x, outcome)) == 0)
+            var persisistedOdd = outcomeOdds.FirstOrDefault(x => predicate(x, outcome));
+
+            if (persisistedOdd == null)
             {
               var matchOutcomeOdd = new MatchOutcomeOdd()
               {
@@ -409,10 +422,26 @@ namespace Samurai.Services
               };
 
               this.bookmakerRepository.AddMatchOutcomeOdd(matchOutcomeOdd);
+              if (!retCoupon.ActualOdds.ContainsKey(outcome))
+                retCoupon.ActualOdds.Add(outcome, new List<Model.GenericOdd>());
+              newActualOdds.Add(odd);
+            }
+            else
+            {
+              if (!retCoupon.ActualOdds.ContainsKey(outcome))
+                retCoupon.ActualOdds.Add(outcome, new List<Model.GenericOdd>());
+
+              var equivalentOdd = Mapper.Map<Model.GenericOdd, Model.GenericOdd>(odd);
+              
+              equivalentOdd.TimeStamp = persisistedOdd.TimeStamp;
+              equivalentOdd.OddsBeforeCommission = (double)persisistedOdd.Odd;
+
+              newActualOdds.Add(equivalentOdd);
             }
           }
+          retCoupon.ActualOdds[outcome] = newActualOdds;
         }
-        ret.Add(coupon);
+        ret.Add(retCoupon);
       }
       this.fixtureRepository.SaveChanges();
 

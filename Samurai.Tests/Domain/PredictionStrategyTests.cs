@@ -17,7 +17,7 @@ namespace Samurai.Tests.Domain
   public class when_working_with_a_prediction_strategy : Specification
   {
     protected AbstractPredictionStrategy predictionStrategy;
-    protected IWebRepository webRepository;
+    protected IWebRepositoryProvider webRepositoryProvider;
     protected M.Mock<IPredictionRepository> predictionRepository;
     protected M.Mock<IFixtureRepository> fixtureRepository;
     protected M.Mock<IValueOptions> valueOptions;
@@ -56,8 +56,8 @@ namespace Samurai.Tests.Domain
       this.valueOptions.Setup(t => t.OddsSource).Returns(this.db.ExternalSource["Fink Tank (dectech)"]);
       this.valueOptions.Setup(t => t.Sport).Returns(this.db.Sport["Football"]);
 
-      this.webRepository = new WebRepositoryTestData("Football/" + this.couponDate.ToShortDateString().Replace("/", "-"));
-      this.predictionStrategy = new FootballFinkTankPredictionStrategy(this.predictionRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
+      this.predictionStrategy = new FootballFinkTankPredictionStrategy(this.predictionRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider);
 
     }
 
@@ -120,8 +120,8 @@ namespace Samurai.Tests.Domain
       this.valueOptions.Setup(t => t.Sport).Returns(this.db.Sport["Tennis"]);
       this.valueOptions.Setup(t => t.Tournament).Returns(this.db.Tournament["Western & Southern Open"]);
 
-      this.webRepository = new WebRepositoryTestData("Tennis/" + this.couponDate.ToShortDateString().Replace("/", "-"));
-      this.predictionStrategy = new TennisPredictionStrategy(this.predictionRepository.Object, this.fixtureRepository.Object, this.webRepository);
+      this.webRepositoryProvider = new WebRepositoryProvider("TestData", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\");
+      this.predictionStrategy = new TennisPredictionStrategy(this.predictionRepository.Object, this.fixtureRepository.Object, this.webRepositoryProvider);
 
     }
 

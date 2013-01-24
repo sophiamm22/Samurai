@@ -234,37 +234,44 @@ namespace Samurai.Domain.Value
       var html = webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                               .First();
 
-      var matchTokens = WebUtils.ParseWebsite<OddsCheckerMobiGenericMatch>(html, s => Console.WriteLine(s))
-        .Cast<OddsCheckerMobiGenericMatch>()
+      var matchTokens = WebUtils.ParseWebsite<OddsCheckerMobiGenericMatch, OddsCheckerMobiScheduleHeading>(html, s => Console.WriteLine(s))
         .ToList();
 
       var lastChecked = DateTime.Now;
 
       var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
 
-      foreach (var match in matchTokens)
+      var currentHeading = string.Empty;
+      foreach (var token in matchTokens)
       {
-        var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
-        var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
-
-        if (CheckPlayers(teamOrPlayerA, teamOrPlayerB, match.TeamOrPlayerA, match.TeamOrPlayerB)) continue;
-
-        var matchData = new GenericMatchCoupon
+        if (token is OddsCheckerMobiScheduleHeading)
         {
-          MatchURL = match.MatchURL,
-          TeamOrPlayerA = teamOrPlayerA.Name,
-          FirstNameA = teamOrPlayerA.FirstName,
-          TeamOrPlayerB = teamOrPlayerB.Name,
-          FirstNameB = teamOrPlayerB.FirstName,
-          Source = this.valueOptions.OddsSource.Source,
-          LastChecked = lastChecked,
-          InPlay = match.InPlay
-        };
-        returnMatches.Add(matchData);
-      }
-      if (this.missingAlias.Count > 0)
-        throw new MissingTeamPlayerAliasException(this.missingAlias, "Missing team or player alias");
+          currentHeading = ((OddsCheckerMobiScheduleHeading)token).Heading;
+        }
+        else if (token is OddsCheckerMobiGenericMatch && currentHeading == "Matches")
+        {
+          var match = (OddsCheckerMobiGenericMatch)token;
+          var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
+          var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 
+          if (CheckPlayers(teamOrPlayerA, teamOrPlayerB, match.TeamOrPlayerA, match.TeamOrPlayerB)) continue;
+
+          var matchData = new GenericMatchCoupon
+          {
+            MatchURL = match.MatchURL,
+            TeamOrPlayerA = teamOrPlayerA.Name,
+            FirstNameA = teamOrPlayerA.FirstName,
+            TeamOrPlayerB = teamOrPlayerB.Name,
+            FirstNameB = teamOrPlayerB.FirstName,
+            Source = this.valueOptions.OddsSource.Source,
+            LastChecked = lastChecked,
+            InPlay = match.InPlay
+          };
+          returnMatches.Add(matchData);
+        }
+        if (this.missingAlias.Count > 0)
+          throw new MissingTeamPlayerAliasException(this.missingAlias, "Missing team or player alias");
+      }
       return returnMatches;
     }
   }
@@ -286,13 +293,14 @@ namespace Samurai.Domain.Value
 
       var html = webRepository.GetHTML(new[] { competitionURL }, s => Console.WriteLine(s), competitionURL.ToString())
                               .First();
-      var matchTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleDate, OddsCheckerWebScheduleMatch>(html,
+      var matchTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleDate, OddsCheckerWebScheduleMatch, OddsCheckerWebScheduleHeading>(html,
         s => Console.WriteLine(s));
 
       var currentDate = DateTime.Now.Date;
       var lastChecked = DateTime.Now;
 
       var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
+      var currentHeading = string.Empty;
 
       foreach (var token in matchTokens)
       {
@@ -300,7 +308,11 @@ namespace Samurai.Domain.Value
         {
           currentDate = ((OddsCheckerWebScheduleDate)token).ScheduleDate;
         }
-        else if (token is OddsCheckerWebScheduleMatch)
+        else if (token is OddsCheckerWebScheduleHeading)
+        {
+          currentHeading = ((OddsCheckerWebScheduleHeading)token).Heading;
+        }
+        else if (token is OddsCheckerWebScheduleMatch && currentHeading == "Mens Matches")
         {
           var match = ((OddsCheckerWebScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');

@@ -86,6 +86,7 @@
     <Compile Include="HtmlElements\OddsCheckerMobiCompetitor.cs" />
     <Compile Include="HtmlElements\OddsCheckerMobiGenericMatch.cs" />
     <Compile Include="HtmlElements\OddsCheckerMobiOdds.cs" />
+    <Compile Include="HtmlElements\OddsCheckerMobiScheduleHeading.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCard.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCompetitionFootball.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebCompetitionTennis.cs" />
@@ -93,10 +94,12 @@
     <Compile Include="HtmlElements\OddsCheckerWebMarketID.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebOdds.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebScheduleDate.cs" />
+    <Compile Include="HtmlElements\OddsCheckerWebScheduleHeading.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebScheduleMatch.cs" />
     <Compile Include="HtmlElements\OddsCheckerWebScheduleMatchOdds.cs" />
     <Compile Include="HtmlElements\SkySportsFootballFixture.cs" />
     <Compile Include="HtmlElements\SkySportsFootballResult.cs" />
+    <Compile Include="Infrastructure\ProgressReporter.cs" />
     <Compile Include="Model\GenericMatchDetail.cs" />
     <Compile Include="Model\IBestBettingCompetition.cs" />
     <Compile Include="Model\Enums.cs" />
@@ -159,9 +162,7 @@
   <ItemGroup>
     <Content Include="Lib\Jint.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

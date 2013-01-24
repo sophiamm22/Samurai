@@ -27,9 +27,9 @@ namespace Samurai.Domain.Repository
     public WebRepository CreateWebRepository(DateTime repositoryDate)
     {
       if (this.repositoryType == "SaveTestData")
-        return new WebRepositorySaveTestData(repositoryDate.ToShortDateString().Replace("/", "-"));
+        return new WebRepositorySaveTestData(basePath + @"\" + repositoryDate.ToString("yyyyMMdd"));
       else if (this.repositoryType == "TestData")
-        return new WebRepositoryTestData(repositoryDate.ToShortDateString().Replace("/", "-"));
+        return new WebRepositoryTestData(basePath + @"\" + repositoryDate.ToString("yyyyMMdd"));
       else
         return new WebRepository(basePath);
     }

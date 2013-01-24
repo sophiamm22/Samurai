@@ -27,8 +27,8 @@ namespace Samurai.Sandbox
   {
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
-      var repositoryType = "SaveTestData";
-      var basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\ValueSamurai\";
+      var repositoryType = "TestData";
+      var basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\value-samurai\";
 
       container.AddFacility<TypedFactoryFacility>();
 
@@ -78,14 +78,6 @@ namespace Samurai.Sandbox
                         .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService
                         .AllInterfaces());
-
-      //container.Register(Component
-      //                  .For<ISpreadsheetData>()
-      //                  .ImplementedBy<TennisSpreadsheetData>());
-
-      //container.Register(Component
-      //                  .For<ISpreadsheetData>()
-      //                  .ImplementedBy<SpreadsheetData>());
 
       container.Register(Component
                         .For<IMessageHandlerFactory>()

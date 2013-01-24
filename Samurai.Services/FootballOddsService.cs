@@ -418,7 +418,7 @@ namespace Samurai.Services
                 ExternalSource = sources[coupon.Source],
                 Odd = (decimal)odd.DecimalOdds,
                 TimeStamp = odd.TimeStamp,
-                ClickThroughURL = odd.ClickThroughURL.ToString()
+                ClickThroughURL = odd.ClickThroughURL == null ? null : odd.ClickThroughURL.ToString()
               };
 
               this.bookmakerRepository.AddMatchOutcomeOdd(matchOutcomeOdd);

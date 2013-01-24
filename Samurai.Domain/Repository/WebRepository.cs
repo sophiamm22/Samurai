@@ -34,16 +34,14 @@ namespace Samurai.Domain.Repository
       _proxy = null;
     }
 
-    protected string GetPath(string folderName, string fileName)
+    protected string GetPath(string fileName)
     {
-      var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-      path = path + @"\VS\" + folderName;
-      if (!Directory.Exists(path))
-        Directory.CreateDirectory(path);
+      if (!Directory.Exists(this.basePath + fileName))
+        Directory.CreateDirectory(this.basePath);
 
-      return path + @"\" + fileName.Replace("/", "æ")
-                                   .Replace("?", "^")
-                                   .Replace(":", "~");
+      return this.basePath + @"\" + fileName.Replace("/", "æ")
+                                            .Replace("?", "^")
+                                            .Replace(":", "~");
     }
 
     public virtual IEnumerable<string> GetHTMLRaw(IEnumerable<Uri> uris, Action<string> report, string identifier = null)
@@ -93,7 +91,6 @@ namespace Samurai.Domain.Repository
 
   public class WebRepositoryTestData : WebRepository
   {
-    private string _competitionFolderName;
 
     public WebRepositoryTestData(string basePath)
       :base(basePath)
@@ -112,7 +109,7 @@ namespace Samurai.Domain.Repository
       {
         foreach (var uri in uris)
         {
-          var fileName = GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : identifier)) + ".txt";
+          var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : identifier)) + ".txt";
           report(string.Format("Streaming saved URL from:{0}", fileName));
 
           using (TextReader tr = new StreamReader(fileName))
@@ -130,7 +127,7 @@ namespace Samurai.Domain.Repository
     }
     public override IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
       report(string.Format("Streaming saved URL from:{0}", fileName));
 
       using (TextReader tr = new StreamReader(fileName))
@@ -146,7 +143,7 @@ namespace Samurai.Domain.Repository
 
     public override T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
       report(string.Format("Streaming saved URL from:{0}", fileName));
 
       using (TextReader tr = new StreamReader(fileName))
@@ -164,7 +161,7 @@ namespace Samurai.Domain.Repository
 
     public override string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null)
     {
-      var fileName = GetPath(_competitionFolderName, postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      var fileName = GetPath(postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
       report(string.Format("Streaming saved URL from:{0}", fileName));
 
       using (TextReader tr = new StreamReader(fileName))
@@ -174,7 +171,7 @@ namespace Samurai.Domain.Repository
     }
     public override IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(_competitionFolderName, jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      var fileName = GetPath(jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
       report(string.Format("Streaming saved URL from:{0}", fileName));
 
       using (TextReader tr = new StreamReader(fileName))
@@ -187,8 +184,6 @@ namespace Samurai.Domain.Repository
 
   public class WebRepositorySaveTestData : WebRepository
   {
-    private string _competitionFolderName;
-
     public WebRepositorySaveTestData(string basePath)
       :base(basePath)
     {
@@ -199,7 +194,7 @@ namespace Samurai.Domain.Repository
       var htmls = base.GetHTMLRaw(uris, report);
       foreach (var html in htmls.Zip(uris.Select(u => u.PathAndQuery), (h, u) => new { HTML = h, UriString = u }))
       {
-        using (TextWriter htmlWriter = new StreamWriter(GetPath(_competitionFolderName, html.UriString + (identifier == null ? string.Empty : identifier)) + ".txt"))
+        using (TextWriter htmlWriter = new StreamWriter(GetPath(html.UriString + (identifier == null ? string.Empty : identifier)) + ".txt"))
         {
           htmlWriter.Write(html.HTML);
         }
@@ -212,7 +207,7 @@ namespace Samurai.Domain.Repository
       var htmls = base.GetHTML(uris, report);
       foreach (var html in htmls.Zip(uris.Select(u => u.PathAndQuery), (h, u) => new { HTML = h, UriString = u }))
       {
-        using (TextWriter htmlWriter = new StreamWriter(GetPath(_competitionFolderName, html.UriString + (identifier == null ? string.Empty : identifier)) + ".txt"))
+        using (TextWriter htmlWriter = new StreamWriter(GetPath(html.UriString + (identifier == null ? string.Empty : identifier)) + ".txt"))
         {
           htmlWriter.Write(html.HTML);
         }
@@ -223,7 +218,7 @@ namespace Samurai.Domain.Repository
     {
       var jsonString = WebUtils.GetWebpages(new Uri[] { uri }, report, s => new StreamReader(s).ReadToEnd(), _proxy)
                                .First();
-      using (TextWriter jsonWriter = new StreamWriter(GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
+      using (TextWriter jsonWriter = new StreamWriter(GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
       {
         jsonWriter.Write(jsonString);
       }
@@ -240,7 +235,7 @@ namespace Samurai.Domain.Repository
       var jsonString = WebUtils.GetWebpages(new Uri[] { uri }, report, s => new StreamReader(s).ReadToEnd(), _proxy)
                                .First();
 
-      using (TextWriter jsonWriter = new StreamWriter(GetPath(_competitionFolderName, uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
+      using (TextWriter jsonWriter = new StreamWriter(GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
       {
         jsonWriter.Write(jsonString);
       }
@@ -256,7 +251,7 @@ namespace Samurai.Domain.Repository
     public override string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null)
     {
       var postString = WebUtils.FormPost(postURL, referer, content, contentType);
-      using (TextWriter postWriter = new StreamWriter(GetPath(_competitionFolderName, postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
+      using (TextWriter postWriter = new StreamWriter(GetPath(postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt")))
       {
         postWriter.Write(postString);
       }
@@ -264,7 +259,7 @@ namespace Samurai.Domain.Repository
     }
     public override IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(_competitionFolderName, jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
+      var fileName = GetPath(jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
       var jsonString = WebUtils.GetWebpages(new Uri[] { jsonURL }, report, s => new StreamReader(s).ReadToEnd(), _proxy)
                                .First();
       using (TextWriter jsonWriter = new StreamWriter(fileName))

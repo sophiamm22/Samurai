@@ -98,7 +98,7 @@ namespace Samurai.SqlDataAccess
       var bstanleybet = new Bookmaker { BookmakerName = "Stanleybet", Slug = "stanleybet", IsExchange = false, BookmakerURL = "http://web.stanleybet.ro/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 37 };
       var bsporting_odds = new Bookmaker { BookmakerName = "Sporting Odds", Slug = "sporting-odds", IsExchange = false, BookmakerURL = "www.sportingodds.co.uk", CurrentCommission = null, OddsCheckerShortID = null, Priority = 38 };
       var bexpekt = new Bookmaker { BookmakerName = "Expekt", Slug = "expekt", IsExchange = false, BookmakerURL = "http://www.expekt.com", CurrentCommission = null, OddsCheckerShortID = null, Priority = 39 };
-      var bbetway = new Bookmaker { BookmakerName = "Betway", Slug = "betway", IsExchange = false, BookmakerURL = "http://new.betway.com/en/sports/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 40 };
+      var bbetway = new Bookmaker { BookmakerName = "Betway", Slug = "betway", IsExchange = false, BookmakerURL = "http://new.betway.com/en/sports/", CurrentCommission = null, OddsCheckerShortID = "WA", Priority = 40 };
       //sport
       var football = new Sport { SportName = "Football" };
       var tennis = new Sport { SportName = "Tennis" };

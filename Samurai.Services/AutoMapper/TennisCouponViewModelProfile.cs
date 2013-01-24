@@ -42,7 +42,7 @@ namespace Samurai.Services.AutoMapper
 
       var actualOutcome = this.outcome == Outcome.Draw ? "Draw" : (this.outcome == Outcome.HomeWin ? source.TeamOrPlayerA : source.TeamOrPlayerB);
 
-      var bestOddsAvailable = source.HeadlineOdds[this.outcome];
+      var bestOddsAvailable = source.ActualOdds[this.outcome].Max(x => x.DecimalOdds);
       ret.Add(new OddViewModel
       {
         IsBetable = false,
@@ -69,7 +69,7 @@ namespace Samurai.Services.AutoMapper
           TimeStamp = x.TimeStamp,
           Bookmaker = x.BookmakerName,
           OddsSource = x.Source,
-          ClickThroughURL = x.ClickThroughURL.ToString(),
+          ClickThroughURL = x.ClickThroughURL == null ? null : x.ClickThroughURL.ToString(),
           Priority = x.Priority
         }));
 

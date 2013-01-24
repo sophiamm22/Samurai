@@ -21,7 +21,7 @@ namespace Samurai.Sandbox
       container.Install(new SamuraiSandboxWindsorInstaller());
 
       var tennisService = container.Resolve<ITennisFacadeService>();
-      var testNewTennisServiceFacade = new FullTennisDownload(tennisService, new DateTime(2013, 01, 23));
+      var testNewTennisServiceFacade = new FullTennisDownload(tennisService, new DateTime(2013, 01, 24));
       //testNewTennisServiceFacade.Get2013Calendar();
       testNewTennisServiceFacade.PopulateDatabaseNew();
 

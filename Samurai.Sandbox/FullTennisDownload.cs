@@ -60,24 +60,6 @@ namespace Samurai.Sandbox
       var events = tennisService.GetTournamentEvents();
     }
 
-    //public void PopulateDatabase()
-    //{
-    //  GetPredictions();
-    //  GetOdds();
-    //}
-
-    //private void GetPredictions()
-    //{
-    //  var predictionService = this.container.Resolve<ITennisPredictionService>();
-    //  var predictions = predictionService.FetchTennisPredictions(this.date);
-    //}
-
-    //private void GetOdds()
-    //{
-    //  var oddsService = this.container.Resolve<ITennisOddsService>();
-    //  var fullFixtureDetails = oddsService.FetchAllTennisOdds(this.date);
-    //}
-
     private void AddTournamentCouponURLs(IEnumerable<MissingTournamentCouponURL> missingURLs)
     {
       missingURLs.ToList().ForEach(x =>

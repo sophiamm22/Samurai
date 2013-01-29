@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Web.ViewModels.Tennis

@@ -123,7 +123,7 @@ namespace Samurai.SqlDataAccess
                                     a.ExternalSource.Source == source.Source);
 
       if (teamAlias.Count() == 0)
-        teamNameDestination = GetTeamOrPlayer(teamNameSource);
+        teamNameDestination = GetTeamOrPlayerFromName(teamNameSource);
       else
         teamNameDestination = teamAlias.First().TeamsPlayer;
 
@@ -392,6 +392,29 @@ namespace Samurai.SqlDataAccess
         SaveChanges();
       }
       return teamOrPlayer;
+    }
+
+    public IQueryable<TeamPlayer> GetLeagueLadder(string leagueName, DateTime date)
+    {
+      var ret = new Dictionary<string, TeamPlayer>();
+
+      var tournamentEvent =
+        GetQuery<TournamentEvent>(x => x.Tournament.TournamentName == leagueName &&
+                                       EntityFunctions.AddDays(x.StartDate, -10) >= date &&
+                                       EntityFunctions.AddDays(x.EndDate, 10) <= date);
+      GetQuery<Match>(x => x.TournamentEvent == tournamentEvent)
+        .Include(x => x.TeamsPlayerA)
+        .Include(x => x.TeamsPlayerB)
+        .ToList()
+        .ForEach(x =>
+          {
+            if (!ret.ContainsKey(x.TeamsPlayerA.Name))
+              ret.Add(x.TeamsPlayerA.Slug, x.TeamsPlayerA);
+            if (!ret.ContainsKey(x.TeamsPlayerB.Name))
+              ret.Add(x.TeamsPlayerB.Slug, x.TeamsPlayerB);
+          });
+
+      return ret.Values.AsQueryable();      
     }
 
     public void AddMatch(Match match)

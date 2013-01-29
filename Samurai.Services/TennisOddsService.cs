@@ -29,6 +29,45 @@ namespace Samurai.Services
       this.sport = "Tennis";
     }
 
+    public IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
+    {
+      var ret = new List<TennisCouponViewModel>();
+
+      var oddsSources = 
+        this.bookmakerRepository
+            .GetActiveOddsSources()
+            .ToList();
+
+      foreach (var fixture in fixtures)
+      {
+        var relatedOdds = new List<TennisCouponViewModel>();
+        foreach (var oddsSource in oddsSources)
+        {
+
+          var oddsForEvent =
+            this.storedProcedureRepository
+                .GetLatestOddsForEvent(date,
+                                       oddsSource.Source,
+                                       fixture.PlayerASurname,
+                                       fixture.PlayerBSurname,
+                                       fixture.PlayerAFirstName,
+                                       fixture.PlayerBFirstName)
+                .ToList();
+
+          var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponViewModel>(oddsForEvent);
+          asCouponVM.MatchIdentifier = fixture.MatchIdentifier;
+          asCouponVM.CouponURL = new Dictionary<string, string>();
+          if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
+            asCouponVM.CouponURL.Add(oddsSource.Source, oddsForEvent.First().MatchCouponURL);
+
+          relatedOdds.Add(asCouponVM);
+        }
+        ret.Add(Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds));
+      }
+
+      return ret;
+    }
+
     public IEnumerable<TennisCouponViewModel> FetchAllTennisOddsNew(DateTime date)
     {
       var matchCoupons = new List<TennisCouponViewModel>();

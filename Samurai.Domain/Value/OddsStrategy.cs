@@ -76,8 +76,10 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is BestBettingOddsCompetitor)
         {
-          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination, this.sport);
-          currentOutcome = playerLookup[currentOutcomeLocal.Name];
+          var competitor = ((BestBettingOddsCompetitor)oddsToken).Competitor;
+
+          var currentOutcomeLocal = competitor == "Draw" ? null : this.fixtureRepository.GetAlias(((BestBettingOddsCompetitor)oddsToken).Competitor, source, destination, this.sport);
+          currentOutcome = playerLookup[competitor == "Draw" ? competitor : currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -141,8 +143,9 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerMobiCompetitor)
         {
-          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerMobiCompetitor)oddsToken).Outcome, source, destination, sport);
-          currentOutcome = playerLookup[currentOutcomeLocal.Name];
+          var competitor = ((OddsCheckerMobiCompetitor)oddsToken).Outcome;
+          var currentOutcomeLocal = competitor == "Draw" ? null : this.fixtureRepository.GetAlias(competitor, source, destination, sport);
+          currentOutcome = playerLookup[competitor == "Draw" ? competitor : currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);
@@ -229,8 +232,9 @@ namespace Samurai.Domain.Value
       {
         if (oddsToken is OddsCheckerWebCompetitor)
         {
-          var currentOutcomeLocal = this.fixtureRepository.GetAlias(((OddsCheckerWebCompetitor)oddsToken).Outcome, source, destination, sport);
-          currentOutcome = playerLookup[currentOutcomeLocal.Name];
+          var competitor = ((OddsCheckerWebCompetitor)oddsToken).Outcome;
+          var currentOutcomeLocal = competitor == "Draw" ? null : this.fixtureRepository.GetAlias(competitor, source, destination, sport);
+          currentOutcome = playerLookup[competitor == "Draw" ? competitor : currentOutcomeLocal.Name];
 
           oddsForOutcome = new List<GenericOdd>();
           outcomeDictionary.Add(currentOutcome, oddsForOutcome);

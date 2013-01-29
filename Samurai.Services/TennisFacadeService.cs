@@ -31,6 +31,36 @@ namespace Samurai.Services
       this.tennisOddsService = tennisOddsService;
     }
 
+    public IEnumerable<TennisFixtureViewModel> GetDaysSchedule(DateTime fixtureDate)
+    {
+      var ret = new List<TennisFixtureViewModel>();
+      var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
+
+      var tennisFixtures = new List<TennisFixtureViewModel>();
+      tennisFixtures.AddRange(this.tennisPredictionService.GetTennisPredictions(fixtureDate));
+      
+      var tennisOdds = 
+        this.tennisOddsService
+            .GetAllTennisOdds(fixtureDate, tennisFixtures);
+
+      foreach (var coupon in tennisOdds)
+      {
+        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponViewModel>());
+        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
+      }
+
+      var flatCoupons = Mapper.Map<Dictionary<string, List<TennisCouponViewModel>>, Dictionary<string, TennisCouponViewModel>>(groupedCoupons);
+
+      foreach (var tennisFixture in tennisFixtures)
+      {
+        TennisCouponViewModel oddsDecider;
+        oddsDecider = flatCoupons.ContainsKey(tennisFixture.MatchIdentifier) ? flatCoupons[tennisFixture.MatchIdentifier] : null;
+        ret.Add(TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider));
+      }
+      return ret;
+    }
+
     public IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
       var ret = new List<TennisFixtureViewModel>();

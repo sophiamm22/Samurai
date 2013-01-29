@@ -46,6 +46,7 @@
     <Compile Include="AccountViewModels.cs" />
     <Compile Include="Football\FootballCouponViewModel.cs" />
     <Compile Include="Football\FootballFixtureViewModel.cs" />
+    <Compile Include="Football\FootballLadderViewModel.cs" />
     <Compile Include="Football\FootballPredictionViewModel.cs" />
     <Compile Include="Tennis\TennisCouponViewModel.cs" />
     <Compile Include="Tennis\TennisFixtureViewModel.cs" />

@@ -94,7 +94,10 @@ namespace Samurai.Services
       var couponStrategy = this.couponProvider.CreateCouponStrategy(valueOptions);
       var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(date, tournament);
 
-      var coupons = couponStrategy.GetMatches().ToList();
+      var coupons = 
+        couponStrategy.GetMatches()
+                      .ToList();
+
       coupons.ForEach(x => x.TournamentEventName = tournamentEvent.EventName);
       //for odds checker mobile - no dates
       var todaysCoupons = coupons.Any(x => x.MatchDate == null || x.MatchDate == new DateTime()) ? coupons.ToList() : coupons.Where(x => x.MatchDate.Date == date.Date).ToList();

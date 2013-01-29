@@ -53,8 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FootballDownloadScheduler.cs" />
-    <Compile Include="FullFootballDownload.cs" />
-    <Compile Include="FullTennisDownload.cs" />
+    <Compile Include="FootballConsole.cs" />
+    <Compile Include="SamuraiConsole.cs" />
+    <Compile Include="TennisConsole.cs" />
     <Compile Include="Populate20112012PremierLeagueSeasonOdds.cs" />
     <Compile Include="Populate2012TennisSeasonOdds.cs" />
     <Compile Include="Program.cs" />

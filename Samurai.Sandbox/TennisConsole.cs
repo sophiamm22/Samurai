@@ -15,31 +15,74 @@ using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Sandbox
 {
-  public class FullTennisDownload
+  public class TennisConsole
   {
     private readonly ITennisFacadeService tennisService;
-    private readonly DateTime date;
 
     public IEnumerable<TennisFixtureViewModel> Fixtures { get; set; }
 
-    public FullTennisDownload(ITennisFacadeService tennisService, DateTime date)
+    public TennisConsole(ITennisFacadeService tennisService)
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
-      if (date == null) throw new ArgumentNullException("date");
 
       this.tennisService = tennisService;
-      this.date = date;
     }
 
-    public void PopulateDatabaseNew()
+    public void TennisMenu()
     {
       while (true)
       {
+        Console.WriteLine("Value-Samurai -- Tennis Menu");
+        Console.WriteLine("Select from the list below..");
+        Console.WriteLine("----------------------------");
+        Console.WriteLine("1.\tGet Calendar");
+        Console.WriteLine("2.\tFetch Day's Schedule");
+        Console.WriteLine("3.\tGet Day's Schedule");
+        Console.WriteLine("");
+        Console.WriteLine("4.\tReturn to main menu");
+        Console.WriteLine("----------------------------");
+        var numberString = Console.ReadLine();
+        int number;
+        if (!int.TryParse(numberString, out number))
+        {
+          Console.WriteLine("You fucking moron!");
+        }
+        else
+        {
+          if (number == 1)
+            Get2013Calendar();
+          else if (number == 2)
+            FetchTennisSchedule();
+          else if (number == 3)
+            GetTennisSchedule();
+          else
+            break;
+        }
+      }
+    }
+
+    private void Get2013Calendar()
+    {
+      var events = tennisService.GetTournamentEvents();
+    }
+
+    private void FetchTennisSchedule()
+    {
+      while (true)
+      {
+        Console.WriteLine("Enter the date to fetch full tennis schedule (dd/mm/yy)");
+        var dateString = Console.ReadLine();
+        DateTime date;
+        if (!DateTime.TryParse(dateString, out date))
+        {
+          Console.WriteLine("You fucking moron!");
+          break;
+        }
         var missingURLs = new List<MissingTournamentCouponURL>();
         var missingAlias = new List<MissingAlias>();
         try
         {
-          Fixtures = tennisService.UpdateDaysSchedule(this.date);
+          Fixtures = tennisService.UpdateDaysSchedule(date);
           break;
         }
         catch (TournamentCouponURLMissingException tcmEx)
@@ -51,13 +94,28 @@ namespace Samurai.Sandbox
           missingAlias.AddRange(mtpaEx.MissingAlias);
         }
         AddTournamentCouponURLs(missingURLs);
-        AddMissingAlias(missingAlias);
+        AddMissingAlias(missingAlias, date);
       }
     }
 
-    public void Get2013Calendar()
+    private void GetTennisSchedule()
     {
-      var events = tennisService.GetTournamentEvents();
+      Console.WriteLine("Enter the date to get full tennis schedule (dd/mm/yy)");
+      var dateString = Console.ReadLine();
+      DateTime date;
+      if (!DateTime.TryParse(dateString, out date))
+      {
+        Console.WriteLine("You fucking moron!");
+        return;
+      }
+      try
+      {
+        Fixtures = tennisService.GetDaysSchedule(date);
+      }
+      catch (Exception ex)
+      {
+        throw ex;
+      }
     }
 
     private void AddTournamentCouponURLs(IEnumerable<MissingTournamentCouponURL> missingURLs)
@@ -91,7 +149,7 @@ namespace Samurai.Sandbox
       throw new ArgumentException("url");
     }
 
-    private void AddMissingAlias(IEnumerable<MissingAlias> missingAlias)
+    private void AddMissingAlias(IEnumerable<MissingAlias> missingAlias, DateTime date)
     {
       var groupedAlias =
         (from alias in missingAlias
@@ -111,7 +169,7 @@ namespace Samurai.Sandbox
         .ToList();
       groupedAlias.ForEach(x =>
         {
-          var tournamentLadder = this.tennisService.GetTournamentLadder(this.date, x.Tournament);
+          var tournamentLadder = this.tennisService.GetTournamentLadder(date, x.Tournament);
           foreach (var externalSourceGroup in x.ExternalSourceGroups)
           {
             foreach (var teamOrPlayer in externalSourceGroup.TeamsOrPlayers)

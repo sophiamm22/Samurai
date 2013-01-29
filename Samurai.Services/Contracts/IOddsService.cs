@@ -21,6 +21,7 @@ namespace Samurai.Services.Contracts
 
   public interface ITennisOddsService : IOddsService
   {
+    IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures);
     IEnumerable<TennisMatchViewModel> FetchAllTennisOdds(DateTime date);
     IEnumerable<TennisCouponViewModel> FetchAllTennisOddsNew(DateTime date);
   }

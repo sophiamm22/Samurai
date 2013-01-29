@@ -28,6 +28,7 @@ namespace Samurai.Services.Contracts
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateLeague(DateTime fixtureDate, string league);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByGameweek(int gameWeek, string league);
+    IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }
 
   public interface ITennisFixtureService : IFixtureService

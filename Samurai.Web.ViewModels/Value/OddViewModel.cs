@@ -11,7 +11,7 @@ namespace Samurai.Web.ViewModels.Value
     public bool IsBetable { get; set; }
     public string Outcome { get; set; }
     public double OddBeforeCommission { get; set; }
-    public double CommissionPct { get; set; }
+    public double? CommissionPct { get; set; }
     public double DecimalOdd { get; set; }
     public DateTime TimeStamp { get; set; }
     public string Bookmaker { get; set; }

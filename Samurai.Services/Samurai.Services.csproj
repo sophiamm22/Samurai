@@ -49,6 +49,7 @@
     <Compile Include="AutoMapper\FootballFixtureMatchProfile.cs" />
     <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
     <Compile Include="AutoMapper\FootballFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\FootballLadderViewModelProfile.cs" />
     <Compile Include="AutoMapper\FootballPredictionViewModelProfile.cs" />
     <Compile Include="AutoMapper\GenericMatchCouponProfile.cs" />
     <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />

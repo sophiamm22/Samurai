@@ -137,5 +137,17 @@ namespace Samurai.Services
     {
       throw new NotImplementedException();
     }
+
+    public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
+    {
+      var teams
+        = this.fixtureRepository
+              .GetLeagueLadder(tournament, matchDate)
+              .OrderBy(x => x.Name)
+              .ToList();
+
+      return Mapper.Map<IEnumerable<TeamPlayer>, IEnumerable<FootballLadderViewModel>>(teams);
+    }
+
   }
 }

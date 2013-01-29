@@ -122,7 +122,7 @@ namespace Samurai.Sandbox
         }
       });
     }
-    private string GetMissingAlias(IEnumerable<TennisLadderViewModel> tournamentLadder, string source, string playerName)
+    private string GetMissingAlias(IEnumerable<FootballLadderViewModel> tournamentLadder, string source, string playerName)
     {
       Console.WriteLine(string.Format("Select a player from the list by ladder position (1-{0})", tournamentLadder.Count()));
       tournamentLadder.ToList()

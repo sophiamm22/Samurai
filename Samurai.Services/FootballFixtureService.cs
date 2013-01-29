@@ -146,6 +146,7 @@ namespace Samurai.Services
               .OrderBy(x => x.Name)
               .ToList();
 
+
       return Mapper.Map<IEnumerable<TeamPlayer>, IEnumerable<FootballLadderViewModel>>(teams);
     }
 

@@ -9,9 +9,9 @@ namespace Samurai.Domain.Exceptions
   [Serializable]
   public class MissingTeamPlayerAliasException : Exception
   {
-    public IEnumerable<MissingAlias> MissingAlias { get; private set; }
+    public IEnumerable<MissingTeamPlayerAlias> MissingAlias { get; private set; }
 
-    public MissingTeamPlayerAliasException(IEnumerable<MissingAlias> missingAlias, string message)
+    public MissingTeamPlayerAliasException(IEnumerable<MissingTeamPlayerAlias> missingAlias, string message)
       :base(message)
     {
       MissingAlias = missingAlias;
@@ -19,7 +19,7 @@ namespace Samurai.Domain.Exceptions
   }
 
   [Serializable]
-  public class MissingAlias
+  public class MissingTeamPlayerAlias
   {
     public string TeamOrPlayerName { get; set; }
     public string Tournament { get; set; }

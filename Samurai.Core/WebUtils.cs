@@ -66,7 +66,7 @@ namespace Samurai.Core
       where T : IReadableImage, IRegexableWebsite, new()
     {
       var imageReader = new ImageReader<T>();
-      var siteImages = WebScreenScrape<T>.GetWebpages(imageURLs, report, s => Image.FromStream(s));
+      var siteImages = WebScreenScrape<T>.GetWebpages(imageURLs, s => Image.FromStream(s));
 
       var returnList = new List<T>();
 
@@ -136,7 +136,7 @@ namespace Samurai.Core
     public static IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report)
       where T : IRegexableWebsite, new()
     {
-      var jsonObject = WebScreenScrape<T>.GetWebpages<T>(new List<Uri>() { jsonURL }, report,
+      var jsonObject = WebScreenScrape<T>.GetWebpages<T>(new List<Uri>() { jsonURL },
         s =>
         {
           using (StreamReader sr = new StreamReader(s, Encoding.UTF8))
@@ -154,12 +154,12 @@ namespace Samurai.Core
       where U : IRegexableWebsite, new()
       where V : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURI, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURI);
       initialScreenscrape.PopulateData();
       var html = initialScreenscrape.RootURLText;
-      var secondScreenScrape = new WebScreenScrape<U>(html, report);
+      var secondScreenScrape = new WebScreenScrape<U>(html);
       secondScreenScrape.PopulateData();
-      var thirdScreenScrape = new WebScreenScrape<V>(html, report);
+      var thirdScreenScrape = new WebScreenScrape<V>(html);
       thirdScreenScrape.PopulateData();
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -179,10 +179,10 @@ namespace Samurai.Core
       where T : IRegexableWebsite, new()
       where U : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURI, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURI);
       initialScreenscrape.PopulateData(cookies);
       var html = initialScreenscrape.RootURLText;
-      var secondScreenScrape = new WebScreenScrape<U>(html, report);
+      var secondScreenScrape = new WebScreenScrape<U>(html);
       secondScreenScrape.PopulateData(cookies);
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -200,7 +200,7 @@ namespace Samurai.Core
     public static IList<IRegexableWebsite> ParseWebsite<T>(Uri rootURI, Action<string> report, CookieContainer cookies = null)
       where T : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURI, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURI);
       initialScreenscrape.PopulateData(cookies);
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -219,11 +219,11 @@ namespace Samurai.Core
       where U : IRegexableWebsite, new()
       where V : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURLText, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURLText);
       initialScreenscrape.PopulateData();
-      var secondScreenScrape = new WebScreenScrape<U>(rootURLText, report);
+      var secondScreenScrape = new WebScreenScrape<U>(rootURLText);
       secondScreenScrape.PopulateData();
-      var thirdScreenScrape = new WebScreenScrape<V>(rootURLText, report);
+      var thirdScreenScrape = new WebScreenScrape<V>(rootURLText);
       thirdScreenScrape.PopulateData();
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -243,9 +243,9 @@ namespace Samurai.Core
       where T : IRegexableWebsite, new()
       where U : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURLText, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURLText);
       initialScreenscrape.PopulateData();
-      var secondScreenScrape = new WebScreenScrape<U>(rootURLText, report);
+      var secondScreenScrape = new WebScreenScrape<U>(rootURLText);
       secondScreenScrape.PopulateData();
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -263,7 +263,7 @@ namespace Samurai.Core
     public static IList<IRegexableWebsite> ParseWebsite<T>(string rootURLText, Action<string> report)
       where T : IRegexableWebsite, new()
     {
-      var initialScreenscrape = new WebScreenScrape<T>(rootURLText, report);
+      var initialScreenscrape = new WebScreenScrape<T>(rootURLText);
       initialScreenscrape.PopulateData();
 
       var allRegexables = new List<IRegexableWebsite>();
@@ -280,9 +280,6 @@ namespace Samurai.Core
     public static IEnumerable<U> GetWebpages<U>(IEnumerable<Uri> uris, Action<string> progress,
       Func<Stream, U> convert, WebProxy proxy = null)
     {
-      //proxy = new WebProxy("webproxy.int.westgroup.com", 80);
-      //proxy.Credentials = new NetworkCredential("u0158158", "Jellytots2");
-
       var runningTasks = new List<Task<U>>();
       foreach (var uri in uris)
       {
@@ -347,6 +344,7 @@ namespace Samurai.Core
 
       return results;
     }
+
     public static double RowSum(this double[,] value, int index)
     {
       double result = 0;

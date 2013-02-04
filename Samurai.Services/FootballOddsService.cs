@@ -99,8 +99,10 @@ namespace Samurai.Services
                       .ToList();
 
       coupons.ForEach(x => x.TournamentEventName = tournamentEvent.EventName);
-      //for odds checker mobile - no dates
-      var todaysCoupons = coupons.Any(x => x.MatchDate == null || x.MatchDate == new DateTime()) ? coupons.ToList() : coupons.Where(x => x.MatchDate.Date == date.Date).ToList();
+
+      var todaysCoupons = GetTodaysCoupons(date, tournamentEvent, coupons);
+      if (coupons.Count == 0) 
+        return Enumerable.Empty<Model.GenericMatchCoupon>(); //get out ASAP
 
       IEnumerable<Model.GenericMatchCoupon> getOddsFor = null;
       IEnumerable<Model.GenericMatchCoupon> dontGetOddsFor = null;
@@ -137,6 +139,39 @@ namespace Samurai.Services
       matches.AddRange(matchesOdds);
       matches.AddRange(matchesNoOdds);
       return matches;
+    }
+
+    private List<Model.GenericMatchCoupon> GetTodaysCoupons(DateTime date, TournamentEvent tournamentEvent, IEnumerable<Model.GenericMatchCoupon> coupons)
+    {
+      var couponsDic =
+        coupons.ToDictionary(x =>
+        {
+          if (string.IsNullOrEmpty(x.FirstNameA) && string.IsNullOrEmpty(x.FirstNameB))
+            return string.Format("{0}|{1}", x.TeamOrPlayerA, x.TeamOrPlayerB);
+          else
+            return string.Format("{0},{1}|{2},{3}", x.TeamOrPlayerA, x.FirstNameA, x.TeamOrPlayerB, x.FirstNameB);
+        });
+
+      var tournamentEventID = tournamentEvent.Id;
+
+      var persistedFixtures =
+        this.fixtureRepository
+            .GetDaysMatchesWithTeamsTournaments(date, sport)
+            .Where(x => x.TournamentEventID == tournamentEventID)
+            .ToList();
+      var todaysCoupons = new List<Model.GenericMatchCoupon>();
+
+      foreach (var pf in persistedFixtures)
+      {
+        var lookup = string.Empty;
+        if (string.IsNullOrEmpty(pf.TeamsPlayerA.FirstName) && string.IsNullOrEmpty(pf.TeamsPlayerB.FirstName))
+          lookup = string.Format("{0}|{1}", pf.TeamsPlayerA.Name, pf.TeamsPlayerB.Name);
+        else
+          lookup = string.Format("{0},{1}|{2},{3}", pf.TeamsPlayerA.Name, pf.TeamsPlayerA.FirstName, pf.TeamsPlayerB.Name, pf.TeamsPlayerB.FirstName);
+        if (couponsDic.ContainsKey(lookup))
+          todaysCoupons.Add(couponsDic[lookup]);
+      }
+      return todaysCoupons;
     }
 
     //a total mess but going forward I will be getting all odds anyway so this is just for backwards compatability with my persisted data...

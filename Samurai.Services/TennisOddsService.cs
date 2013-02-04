@@ -71,7 +71,7 @@ namespace Samurai.Services
     public IEnumerable<TennisCouponViewModel> FetchAllTennisOddsNew(DateTime date)
     {
       var matchCoupons = new List<TennisCouponViewModel>();
-      var missingAlias = new List<MissingAlias>();
+      var missingAlias = new List<MissingTeamPlayerAlias>();
 
       var tournaments = DaysTournaments(date, this.sport);
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
@@ -108,7 +108,7 @@ namespace Samurai.Services
     public IEnumerable<TennisMatchViewModel> FetchAllTennisOdds(DateTime date)
     {
       var matchCoupons = new List<TennisMatchViewModel>();
-      var missingAlias = new List<MissingAlias>();
+      var missingAlias = new List<MissingTeamPlayerAlias>();
 
       var tournaments = DaysTournaments(date, this.sport).ToList();
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 using Castle.Windsor;
 
@@ -10,6 +10,7 @@ using Samurai.Domain.Exceptions;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Domain.Entities;
 
 namespace Samurai.Sandbox
 {
@@ -61,7 +62,7 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Enter the date to fetch full tennis schedule (dd/mm/yy)");
+        Console.WriteLine("Enter the date to fetch full football schedule (dd/mm/yy)");
         var dateString = Console.ReadLine();
         DateTime date;
         if (!DateTime.TryParse(dateString, out date))
@@ -71,7 +72,8 @@ namespace Samurai.Sandbox
         }
         
         var missingURLs = new List<MissingTournamentCouponURL>();
-        var missingAlias = new List<MissingAlias>();
+        var missingTeamPlayerAlias = new List<MissingTeamPlayerAlias>();
+        var missingBookmakerAlias = new List<MissingBookmakerAlias>();
         try
         {
           Fixtures = this.footballService.UpdateDaysSchedule(date);
@@ -83,12 +85,20 @@ namespace Samurai.Sandbox
         }
         catch (MissingTeamPlayerAliasException mtpaEx)
         {
-          missingAlias.AddRange(mtpaEx.MissingAlias);
+          missingTeamPlayerAlias.AddRange(mtpaEx.MissingAlias);
         }
+        catch (MissingBookmakerAliasException mbaEx)
+        {
+          missingBookmakerAlias.AddRange(mbaEx.MissingAlias);
+          throw new NotImplementedException();
+        }
+
+        AddMissingAlias(missingTeamPlayerAlias, date);
       }
     }
 
-    private void AddMissingAlias(IEnumerable<MissingAlias> missingAlias, DateTime date)
+
+    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAlias> missingAlias, DateTime date)
     {
       var groupedAlias =
         (from alias in missingAlias
@@ -113,26 +123,29 @@ namespace Samurai.Sandbox
         {
           foreach (var teamOrPlayer in externalSourceGroup.TeamsOrPlayers)
           {
-            var playerFullName = GetMissingAlias(tournamentLadder, externalSourceGroup.ExternalSource, teamOrPlayer);
-            var playerNames = playerFullName.Split(',').Select(y => y.Trim());
+            var team = GetMissingAlias(tournamentLadder, externalSourceGroup.ExternalSource, teamOrPlayer);
 
-            this.footballService.AddAlias(externalSourceGroup.ExternalSource, teamOrPlayer,
-              playerNames.ElementAt(0), playerNames.ElementAt(1));
+            this.footballService.AddAlias(externalSourceGroup.ExternalSource, teamOrPlayer, team);
           }
         }
       });
     }
     private string GetMissingAlias(IEnumerable<FootballLadderViewModel> tournamentLadder, string source, string playerName)
     {
-      Console.WriteLine(string.Format("Select a player from the list by ladder position (1-{0})", tournamentLadder.Count()));
+      Console.WriteLine(string.Format("Select a team from the list of {0}", tournamentLadder.Count()));
+      var count = 1;
       tournamentLadder.ToList()
-                      .ForEach(x => Console.WriteLine(string.Format("{0}\t{1},{2}", x.Position, x.PlayerSurname.ToUpper(), x.PlayerFirstName)));
-      Console.WriteLine(string.Format("..or enter the player's local name in for the form 'Surname, FirstName' for {0} via {1}", playerName, source));
+                      .ForEach(x => 
+                      {
+                        Console.WriteLine(string.Format("{0}\t{1}", count, x.TeamName));
+                        count++;
+                      });
+      Console.WriteLine(string.Format("..or enter the team's local name for {0} via {1}", playerName, source));
       var response = Console.ReadLine();
       if (Regex.IsMatch(response, @"\d+"))
       {
-        var player = tournamentLadder.First(x => x.Position == int.Parse(response));
-        return string.Format("{0}, {1}", player.PlayerSurname, player.PlayerFirstName);
+        var player = tournamentLadder.ElementAt(int.Parse(response) - 1);
+        return player.TeamName;
       }
       else
         return response;

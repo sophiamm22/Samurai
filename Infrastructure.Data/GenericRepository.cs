@@ -9,6 +9,8 @@ using System.Data;
 using System.Data.Entity.Infrastructure;
 using System.Data.Metadata.Edm;
 
+using Samurai.Domain.Entities;
+
 namespace Infrastructure.Data
 {
   /// <summary>
@@ -54,7 +56,7 @@ namespace Infrastructure.Data
       _context = new DbContext(context, true);
     }
 
-    public TEntity GetByKey<TEntity>(object keyValue) where TEntity : class
+    public TEntity GetByKey<TEntity>(object keyValue) where TEntity : BaseEntity
     {
       EntityKey key = GetEntityKey<TEntity>(keyValue);
 
@@ -66,7 +68,7 @@ namespace Infrastructure.Data
       return default(TEntity);
     }
 
-    public IQueryable<TEntity> GetQuery<TEntity>() where TEntity : class
+    public IQueryable<TEntity> GetQuery<TEntity>() where TEntity : BaseEntity
     {
       /* 
        * From CTP4, I could always safely call this to return an IQueryable on DbContext 
@@ -87,17 +89,17 @@ namespace Infrastructure.Data
       return ((IObjectContextAdapter)DbContext).ObjectContext.CreateQuery<TEntity>(entityName);
     }
 
-    public IQueryable<TEntity> GetQuery<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : class
+    public IQueryable<TEntity> GetQuery<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().Where(predicate);
     }
 
-    public IQueryable<TEntity> GetQuery<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public IQueryable<TEntity> GetQuery<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntitiesFrom(GetQuery<TEntity>());
     }
 
-    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : class
+    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : BaseEntity
     {
       if (sortOrder == SortOrder.Ascending)
       {
@@ -106,7 +108,7 @@ namespace Infrastructure.Data
       return GetQuery<TEntity>().OrderByDescending(orderBy).Skip((pageIndex - 1) * pageSize).Take(pageSize).AsEnumerable();
     }
 
-    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(Expression<Func<TEntity, bool>> criteria, Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : class
+    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(Expression<Func<TEntity, bool>> criteria, Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : BaseEntity
     {
       if (sortOrder == SortOrder.Ascending)
       {
@@ -115,7 +117,7 @@ namespace Infrastructure.Data
       return GetQuery<TEntity>(criteria).OrderByDescending(orderBy).Skip((pageIndex - 1) * pageSize).Take(pageSize).AsEnumerable();
     }
 
-    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(ISpecification<TEntity> specification, Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : class
+    public IEnumerable<TEntity> Get<TEntity, TOrderBy>(ISpecification<TEntity> specification, Expression<Func<TEntity, TOrderBy>> orderBy, int pageIndex, int pageSize, SortOrder sortOrder = SortOrder.Ascending) where TEntity : BaseEntity
     {
       if (sortOrder == SortOrder.Ascending)
       {
@@ -124,27 +126,27 @@ namespace Infrastructure.Data
       return specification.SatisfyingEntitiesFrom(GetQuery<TEntity>()).OrderByDescending(orderBy).Skip((pageIndex - 1) * pageSize).Take(pageSize).AsEnumerable();
     }
 
-    public TEntity Single<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class
+    public TEntity Single<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().SingleOrDefault<TEntity>(criteria);
     }
 
-    public TEntity Single<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public TEntity Single<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntityFrom(GetQuery<TEntity>());
     }
 
-    public TEntity First<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : class
+    public TEntity First<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().FirstOrDefault(predicate);
     }
 
-    public TEntity First<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public TEntity First<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntitiesFrom(GetQuery<TEntity>()).FirstOrDefault();
     }
 
-    public void Add<TEntity>(TEntity entity) where TEntity : class
+    public void Add<TEntity>(TEntity entity) where TEntity : BaseEntity
     {
       if (entity == null)
       {
@@ -153,7 +155,7 @@ namespace Infrastructure.Data
       DbContext.Set<TEntity>().Add(entity);
     }
 
-    public void Attach<TEntity>(TEntity entity) where TEntity : class
+    public void Attach<TEntity>(TEntity entity) where TEntity : BaseEntity
     {
       if (entity == null)
       {
@@ -163,7 +165,7 @@ namespace Infrastructure.Data
       DbContext.Set<TEntity>().Attach(entity);
     }
 
-    public void Delete<TEntity>(TEntity entity) where TEntity : class
+    public void Delete<TEntity>(TEntity entity) where TEntity : BaseEntity
     {
       if (entity == null)
       {
@@ -172,7 +174,7 @@ namespace Infrastructure.Data
       DbContext.Set<TEntity>().Remove(entity);
     }
 
-    public void Delete<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class
+    public void Delete<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : BaseEntity
     {
       IEnumerable<TEntity> records = Find<TEntity>(criteria);
 
@@ -182,7 +184,7 @@ namespace Infrastructure.Data
       }
     }
 
-    public void Delete<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public void Delete<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       IEnumerable<TEntity> records = Find<TEntity>(criteria);
       foreach (TEntity record in records)
@@ -191,19 +193,19 @@ namespace Infrastructure.Data
       }
     }
 
-    public IEnumerable<TEntity> GetAll<TEntity>() where TEntity : class
+    public IEnumerable<TEntity> GetAll<TEntity>() where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().AsEnumerable();
     }
 
-    public TEntity Save<TEntity>(TEntity entity) where TEntity : class
+    public TEntity Save<TEntity>(TEntity entity) where TEntity : BaseEntity
     {
       Add<TEntity>(entity);
       DbContext.SaveChanges();
       return entity;
     }
 
-    public void Update<TEntity>(TEntity entity) where TEntity : class
+    public void Update<TEntity>(TEntity entity) where TEntity : BaseEntity
     {
       var fqen = GetEntityName<TEntity>();
 
@@ -215,37 +217,37 @@ namespace Infrastructure.Data
       }
     }
 
-    public IEnumerable<TEntity> Find<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class
+    public IEnumerable<TEntity> Find<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().Where(criteria);
     }
 
-    public TEntity FindOne<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class
+    public TEntity FindOne<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().Where(criteria).FirstOrDefault();
     }
 
-    public TEntity FindOne<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public TEntity FindOne<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntityFrom(GetQuery<TEntity>());
     }
 
-    public IEnumerable<TEntity> Find<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public IEnumerable<TEntity> Find<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntitiesFrom(GetQuery<TEntity>()).AsEnumerable();
     }
 
-    public int Count<TEntity>() where TEntity : class
+    public int Count<TEntity>() where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().Count();
     }
 
-    public int Count<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class
+    public int Count<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : BaseEntity
     {
       return GetQuery<TEntity>().Count(criteria);
     }
 
-    public int Count<TEntity>(ISpecification<TEntity> criteria) where TEntity : class
+    public int Count<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity
     {
       return criteria.SatisfyingEntitiesFrom(GetQuery<TEntity>()).Count();
     }
@@ -262,12 +264,12 @@ namespace Infrastructure.Data
       }
     }
 
-    public DbSet<TEntity> DbSet<TEntity>() where TEntity : class
+    public DbSet<TEntity> DbSet<TEntity>() where TEntity : BaseEntity
     {
       return DbContext.Set<TEntity>();
     }
 
-    private EntityKey GetEntityKey<TEntity>(object keyValue) where TEntity : class
+    private EntityKey GetEntityKey<TEntity>(object keyValue) where TEntity : BaseEntity
     {
       var entitySetName = GetEntityName<TEntity>();
       var objectSet = ((IObjectContextAdapter)DbContext).ObjectContext.CreateObjectSet<TEntity>();
@@ -276,7 +278,7 @@ namespace Infrastructure.Data
       return entityKey;
     }
 
-    private string GetEntityName<TEntity>() where TEntity : class
+    private string GetEntityName<TEntity>() where TEntity : BaseEntity
     {
       // PluralizationService pluralizer = PluralizationService.CreateService(CultureInfo.GetCultureInfo("en"));
       // return string.Format("{0}.{1}", ((IObjectContextAdapter)DbContext).ObjectContext.DefaultContainerName, pluralizer.Pluralize(typeof(TEntity).Name));

@@ -52,6 +52,16 @@ namespace Samurai.Services
       return ret;
     }
 
+    public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
+    {
+      return this.footballFixtureService.GetTournamentLadder(matchDate, tournament);
+    }
+
+    public void AddAlias(string source, string playerName, string valueSamuraiName)
+    {
+      this.footballFixtureService.AddAlias(source, playerName, valueSamuraiName);
+    }
+
     private IEnumerable<FootballFixtureViewModel> UpdateDaysFixtures(DateTime fixtureDate)
     {
       var footballFixtures = new List<FootballFixtureViewModel>();
@@ -97,6 +107,7 @@ namespace Samurai.Services
 
       return ret;
     }
+
 
   }
 }

@@ -71,6 +71,7 @@
     <Compile Include="APIModel\APITournamentDetails.cs" />
     <Compile Include="APIModel\APITournamentLadder.cs" />
     <Compile Include="Contracts\IAccountContainer.cs" />
+    <Compile Include="Exceptions\MissingBookmakerAliasException.cs" />
     <Compile Include="Exceptions\MissingTeamPlayerAliasException.cs" />
     <Compile Include="Exceptions\TournamentCouponURLMissingException.cs" />
     <Compile Include="HtmlElements\BestBettingCompetitionFootball.cs" />

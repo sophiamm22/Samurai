@@ -10,6 +10,8 @@ namespace Samurai.Services.Contracts
 {
   public interface IFootballFacadeService
   {
+    void AddAlias(string source, string playerName, string valueSamuraiName);
     IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate);
+    IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }
 }

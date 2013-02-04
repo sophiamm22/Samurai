@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Samurai.Domain.Entities
 {
-  public class Role
+  public class Role : BaseEntity
   {
     public Role()
     {

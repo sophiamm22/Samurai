@@ -1,0 +1,643 @@
+{
+   "Sta" : "OK",
+   "NameA" : "Sunderland",
+   "ExpGD" : 0.187389,
+   "AtkCurA" : "1.30734",
+   "maxGoalsSeeked" : 15,
+   "gameType" : "0",
+   "ExpPt" : {
+      "diff" : 0.264684,
+      "away" : 1.235279,
+      "home" : 1.499963
+   },
+   "AtkMaxH" : "1.546949744",
+   "chances" : {
+      "awaywin" : 0.323507,
+      "draw" : 0.264758,
+      "homewin" : 0.411735
+   },
+   "DefDefaultA" : "0.759609",
+   "AtkCurH" : "1.37807",
+   "DefMaxH" : "0.927276611",
+   "whichDiv" : "0",
+   "AtkMaxA" : "1.436456203",
+   "AtkDefaultH" : "1.37807",
+   "DefMinA" : "0.69603014\r",
+   "DefMaxA" : "0.834596038",
+   "NameH" : "Reading",
+   "AtkMinH" : "1.243270516",
+   "DefMinH" : "0.741560876\r",
+   "AtkMinA" : "1.070183635",
+   "DefCurH" : "0.908391",
+   "DefDefaultH" : "0.908391",
+   "DefCurA" : "0.759609",
+   "goals" : [
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 0,
+         "chance" : 0.077109
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 1,
+         "chance" : 0.091572
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 2,
+         "chance" : 0.054375
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 3,
+         "chance" : 0.021525
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 4,
+         "chance" : 0.006391
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 5,
+         "chance" : 0.001518
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 6,
+         "chance" : 0.0003
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 7,
+         "chance" : 5.1e-05
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 8,
+         "chance" : 8e-06
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 9,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 0,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 0,
+         "chance" : 0.106022
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 1,
+         "chance" : 0.125909
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 2,
+         "chance" : 0.074763
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 3,
+         "chance" : 0.029596
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 4,
+         "chance" : 0.008787
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 5,
+         "chance" : 0.002087
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 6,
+         "chance" : 0.000413
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 7,
+         "chance" : 7e-05
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 8,
+         "chance" : 1e-05
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 9,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 1,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 0,
+         "chance" : 0.072888
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 1,
+         "chance" : 0.08656
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 2,
+         "chance" : 0.051398
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 3,
+         "chance" : 0.020346
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 4,
+         "chance" : 0.006041
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 5,
+         "chance" : 0.001435
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 6,
+         "chance" : 0.000284
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 7,
+         "chance" : 4.8e-05
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 8,
+         "chance" : 7e-06
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 9,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 2,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 0,
+         "chance" : 0.033406
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 1,
+         "chance" : 0.039672
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 2,
+         "chance" : 0.023557
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 3,
+         "chance" : 0.009325
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 4,
+         "chance" : 0.002769
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 5,
+         "chance" : 0.000658
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 6,
+         "chance" : 0.00013
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 7,
+         "chance" : 2.2e-05
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 8,
+         "chance" : 3e-06
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 3,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 0,
+         "chance" : 0.011483
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 1,
+         "chance" : 0.013637
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 2,
+         "chance" : 0.008097
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 3,
+         "chance" : 0.003205
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 4,
+         "chance" : 0.000952
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 5,
+         "chance" : 0.000226
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 6,
+         "chance" : 4.5e-05
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 7,
+         "chance" : 8e-06
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 8,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 4,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 0,
+         "chance" : 0.003158
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 1,
+         "chance" : 0.00375
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 2,
+         "chance" : 0.002227
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 3,
+         "chance" : 0.000881
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 4,
+         "chance" : 0.000262
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 5,
+         "chance" : 6.2e-05
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 6,
+         "chance" : 1.2e-05
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 7,
+         "chance" : 2e-06
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 5,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 0,
+         "chance" : 0.000724
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 1,
+         "chance" : 0.000859
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 2,
+         "chance" : 0.00051
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 3,
+         "chance" : 0.000202
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 4,
+         "chance" : 6e-05
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 5,
+         "chance" : 1.4e-05
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 6,
+         "chance" : 3e-06
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 7,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 6,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 0,
+         "chance" : 0.000142
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 1,
+         "chance" : 0.000169
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 2,
+         "chance" : 0.0001
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 3,
+         "chance" : 4e-05
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 4,
+         "chance" : 1.2e-05
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 5,
+         "chance" : 3e-06
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 6,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 7,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 7,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 0,
+         "chance" : 2.4e-05
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 1,
+         "chance" : 2.9e-05
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 2,
+         "chance" : 1.7e-05
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 3,
+         "chance" : 7e-06
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 4,
+         "chance" : 2e-06
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 5,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 6,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 7,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 8,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 0,
+         "chance" : 4e-06
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 1,
+         "chance" : 4e-06
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 2,
+         "chance" : 3e-06
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 3,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 4,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 5,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 6,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 7,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 9,
+         "awayGoal" : 10,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 0,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 1,
+         "chance" : 1e-06
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 2,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 3,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 4,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 5,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 6,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 7,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 8,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 9,
+         "chance" : -0
+      },
+      {
+         "homeGoal" : 10,
+         "awayGoal" : 10,
+         "chance" : -0
+      }
+   ],
+   "AtkDefaultA" : "1.30734",
+   "neutralBonus" : "1.3135\r"
+}

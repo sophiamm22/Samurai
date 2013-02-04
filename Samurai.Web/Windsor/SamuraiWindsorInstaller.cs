@@ -16,6 +16,8 @@ using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
 using Samurai.WebPresentationModel.Messaging;
 using Samurai.Services;
+using Samurai.Domain;
+
 
 using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
 

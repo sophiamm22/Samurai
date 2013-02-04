@@ -15,7 +15,7 @@ namespace Samurai.Services.Contracts
     int GetCountOfDaysMatches(DateTime fixtureDate, string sport);
     TournamentViewModel GetTournament(string slug);
     TeamPlayerViewModel GetTeamOrPlayer(string slug);
-    void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName);
+    void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName = null);
 
   }
 

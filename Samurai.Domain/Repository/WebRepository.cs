@@ -34,7 +34,7 @@ namespace Samurai.Domain.Repository
       _proxy = null;
     }
 
-    protected string GetPath(string fileName)
+    protected virtual string GetPath(string fileName)
     {
       if (!Directory.Exists(this.basePath + fileName))
         Directory.CreateDirectory(this.basePath);
@@ -109,10 +109,7 @@ namespace Samurai.Domain.Repository
       {
         foreach (var uri in uris)
         {
-          var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : identifier)) + ".txt";
-          report(string.Format("Streaming saved URL from:{0}", fileName));
-
-          using (TextReader tr = new StreamReader(fileName))
+          using (TextReader tr = StreamFromPathQueryIdentifier(uri.PathAndQuery + (identifier == null ? string.Empty : identifier) + ".txt", report))
           {
             htmls.Add(tr.ReadToEnd());
           }
@@ -127,10 +124,7 @@ namespace Samurai.Domain.Repository
     }
     public override IEnumerable<T> GetJsonObjects<T>(Uri uri, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
-      report(string.Format("Streaming saved URL from:{0}", fileName));
-
-      using (TextReader tr = new StreamReader(fileName))
+      using (TextReader tr = StreamFromPathQueryIdentifier(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt", report))
       {
         return base.GetJsonObjects<T>(tr.ReadToEnd(), report);
       }
@@ -143,13 +137,9 @@ namespace Samurai.Domain.Repository
 
     public override T GetJsonObject<T>(Uri uri, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
-      report(string.Format("Streaming saved URL from:{0}", fileName));
-
-      using (TextReader tr = new StreamReader(fileName))
+      using (TextReader tr = StreamFromPathQueryIdentifier(uri.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt", report))
       {
         return base.GetJsonObject<T>(uri, report, identifier);
-
       }
     }
 
@@ -161,25 +151,27 @@ namespace Samurai.Domain.Repository
 
     public override string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null)
     {
-      var fileName = GetPath(postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
-      report(string.Format("Streaming saved URL from:{0}", fileName));
-
-      using (TextReader tr = new StreamReader(fileName))
+      using (TextReader tr = StreamFromPathQueryIdentifier(postURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt", report))
       {
         return tr.ReadToEnd();
       }
     }
     public override IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null)
     {
-      var fileName = GetPath(jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt");
-      report(string.Format("Streaming saved URL from:{0}", fileName));
-
-      using (TextReader tr = new StreamReader(fileName))
+      using (TextReader tr = StreamFromPathQueryIdentifier(jsonURL.PathAndQuery + (identifier == null ? string.Empty : " ID - " + identifier) + ".txt", report))
       {
         var str = tr.ReadToEnd();
         return JsonConvert.DeserializeObject<T>(str);
       }
     }
+
+    protected virtual StreamReader StreamFromPathQueryIdentifier(string pathQueryAndIdentifier, Action<string> report)
+    {
+      var fileName = GetPath(pathQueryAndIdentifier);
+      report(string.Format("Streaming saved URL from:{0}", fileName));
+      return new StreamReader(fileName);
+    }
+
   }
 
   public class WebRepositorySaveTestData : WebRepository

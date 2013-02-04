@@ -18,6 +18,7 @@ using Samurai.Services;
 using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
+using Samurai.Domain.Entities;
 
 using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
 
@@ -27,7 +28,7 @@ namespace Samurai.Sandbox
   {
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
-      var repositoryType = "TestData";
+      var repositoryType = "SaveTestData";
       var basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\value-samurai\";
 
       container.AddFacility<TypedFactoryFacility>();

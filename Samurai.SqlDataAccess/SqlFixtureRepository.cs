@@ -64,8 +64,6 @@ namespace Samurai.SqlDataAccess
 
     public IEnumerable<Match> GetDaysMatches(DateTime matchDate)
     {
-      var seasonStartYear = matchDate.Month >= 6 ? matchDate.Year : (matchDate.Year - 1);
-
       return GetQuery<Match>(m => EntityFunctions.TruncateTime(m.MatchDate) == matchDate.Date)
                 .Include(m => m.TournamentEvent.Tournament)
                 .ToList();
@@ -400,17 +398,18 @@ namespace Samurai.SqlDataAccess
 
       var tournamentEvent =
         GetQuery<TournamentEvent>(x => x.Tournament.TournamentName == leagueName &&
-                                       EntityFunctions.AddDays(x.StartDate, -10) >= date &&
-                                       EntityFunctions.AddDays(x.EndDate, 10) <= date);
-      GetQuery<Match>(x => x.TournamentEvent == tournamentEvent)
+                                       EntityFunctions.AddDays(x.StartDate, -10) <= date &&
+                                       date <= EntityFunctions.AddDays(x.EndDate, 10))
+                                 .FirstOrDefault();
+      GetQuery<Match>(x => x.TournamentEvent.EventName == tournamentEvent.EventName)
         .Include(x => x.TeamsPlayerA)
         .Include(x => x.TeamsPlayerB)
         .ToList()
         .ForEach(x =>
           {
-            if (!ret.ContainsKey(x.TeamsPlayerA.Name))
+            if (!ret.ContainsKey(x.TeamsPlayerA.Slug))
               ret.Add(x.TeamsPlayerA.Slug, x.TeamsPlayerA);
-            if (!ret.ContainsKey(x.TeamsPlayerB.Name))
+            if (!ret.ContainsKey(x.TeamsPlayerB.Slug))
               ret.Add(x.TeamsPlayerB.Slug, x.TeamsPlayerB);
           });
 

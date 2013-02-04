@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Samurai.Domain.Entities
 {
-  public class User
+  public class User : BaseEntity
   {
     public User()
     {

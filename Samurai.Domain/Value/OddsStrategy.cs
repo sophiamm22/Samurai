@@ -6,10 +6,11 @@ using System.Text;
 using Jint;
 
 using Samurai.Core;
-using Samurai.Domain.Repository;
-using Samurai.Domain.Model;
-using Samurai.Domain.HtmlElements;
 using Samurai.Domain.Entities;
+using Samurai.Domain.Exceptions;
+using Samurai.Domain.HtmlElements;
+using Samurai.Domain.Model;
+using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
 
 namespace Samurai.Domain.Value
@@ -71,6 +72,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
+      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -89,6 +91,15 @@ namespace Samurai.Domain.Value
           var odd = (BestBettingOdds)oddsToken;
           var bookmakerName = this.bookmakerRepository.GetAlias(odd.Bookmaker, source, destination);
           var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
+          if (bookmaker == null)
+          {
+            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            {
+              Bookmaker = odd.Bookmaker,
+              ExternalSource = source.Source
+            });
+            continue;
+          }
 
           oddsForOutcome.Add(new BestBettingOdd()
           {
@@ -103,6 +114,9 @@ namespace Samurai.Domain.Value
           });
         }
       }
+      if (missingBookmakerAlias.Count() != 0)
+        throw new MissingBookmakerAliasException(missingBookmakerAlias, "Missing bookmaker alias");
+
       return outcomeDictionary;
     }
   }
@@ -138,6 +152,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
+      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -155,6 +170,15 @@ namespace Samurai.Domain.Value
           var odd = (OddsCheckerMobiOdds)oddsToken;
           var bookmakerName = this.bookmakerRepository.GetAlias(odd.Bookmaker, source, destination);
           var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
+          if (bookmaker == null)
+          {
+            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            {
+              Bookmaker = odd.Bookmaker,
+              ExternalSource = source.Source
+            });
+            continue;
+          }
 
           oddsForOutcome.Add(new OddsCheckerOdd()
           {
@@ -169,6 +193,9 @@ namespace Samurai.Domain.Value
           });
         }
       }
+      if (missingBookmakerAlias.Count() != 0) 
+        throw new MissingBookmakerAliasException(missingBookmakerAlias, "Missing bookmaker alias");
+
       return outcomeDictionary;
     }
   }
@@ -227,6 +254,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
+      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -245,6 +273,16 @@ namespace Samurai.Domain.Value
           if (odd.BookmakerID == "SI")
             continue;
           var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.BookmakerID);
+          if (bookmaker == null)
+          {
+            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            {
+              Bookmaker = odd.BookmakerID,
+              ExternalSource = source.Source
+            });
+            continue;
+          }
+          
           var clickThroughURL = string.Format("http://www.oddschecker.com/betslip?bk={0}&mkid={1}&pid={2}&cardId={3}&bestBookies={4}",
             odd.BookmakerID, webMarketID, odd.OddsCheckerID, webCard, bestBookies[odd.OddsCheckerID]);
           //var bSlip = string.Format("www.oddschecker.com{0}", jint.CallFunction("bSlip", odd.BookmakerID, odd.MarketIDOne, odd.MarketIDTwo, odd.OddsText).ToString());
@@ -262,6 +300,9 @@ namespace Samurai.Domain.Value
           });
         }
       }
+      if (missingBookmakerAlias.Count() != 0)
+        throw new MissingBookmakerAliasException(missingBookmakerAlias, "Missing bookmaker alias");
+
       return outcomeDictionary;
     }
   }

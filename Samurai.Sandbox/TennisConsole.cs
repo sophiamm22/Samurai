@@ -79,7 +79,7 @@ namespace Samurai.Sandbox
           break;
         }
         var missingURLs = new List<MissingTournamentCouponURL>();
-        var missingAlias = new List<MissingAlias>();
+        var missingAlias = new List<MissingTeamPlayerAlias>();
         try
         {
           Fixtures = tennisService.UpdateDaysSchedule(date);
@@ -149,7 +149,7 @@ namespace Samurai.Sandbox
       throw new ArgumentException("url");
     }
 
-    private void AddMissingAlias(IEnumerable<MissingAlias> missingAlias, DateTime date)
+    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAlias> missingAlias, DateTime date)
     {
       var groupedAlias =
         (from alias in missingAlias

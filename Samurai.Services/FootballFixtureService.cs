@@ -52,7 +52,7 @@ namespace Samurai.Services
       return Mapper.Map<TeamPlayer, TeamPlayerViewModel>(teamEntity);
     }
 
-    public void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName)
+    public void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName = null)
     {
       var player
         = this.fixtureRepository

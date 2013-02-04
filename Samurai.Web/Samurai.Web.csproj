@@ -356,6 +356,10 @@
       <Project>{83ce8910-37aa-415a-954b-3e36f9701d17}</Project>
       <Name>Infrastructure.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain.Entities\Samurai.Domain.Entities.csproj">
+      <Project>{805325f9-8997-4247-b5c7-36476609f616}</Project>
+      <Name>Samurai.Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samurai.Domain\Samurai.Domain.csproj">
       <Project>{47f48263-b575-4254-ae3f-fbd8925ade86}</Project>
       <Name>Samurai.Domain</Name>

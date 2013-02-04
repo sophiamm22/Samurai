@@ -17,33 +17,29 @@ namespace Samurai.Core
 {
   public class WebScreenScrape<T> where T : IRegexableWebsite, new()
   {
-    private Action<string> _progress { get; set; }
     private int _currentIdentifier = -1;
 
     public List<T> SiteData { get; set; }
     public Uri RootURI { get; private set; }
     public string RootURLText { get; private set; }
 
-    public WebScreenScrape(string rootURL, Action<string> progress)
+    public WebScreenScrape(string rootURL)
     {
       SiteData = new List<T>();
-      _progress = progress;
       RootURLText = rootURL;
       RootURI = null;
     }
 
-    public WebScreenScrape(Uri rootURI, Action<string> progress)
+    public WebScreenScrape(Uri rootURI)
     {
       SiteData = new List<T>();
-      _progress = progress;
       RootURI = rootURI;
     }
 
     public void PopulateData(CookieContainer cookies = null)
     {
       if (RootURI != null)
-        RootURLText = GetWebpages(new Uri[] { RootURI }, _progress, s => new StreamReader(s).ReadToEnd().Trim().Replace("\"", "æ"), cookies).First();
-      _progress(string.Format("Begin parsing website for type {0}", typeof(T).ToString()));
+        RootURLText = GetWebpages(new Uri[] { RootURI }, s => new StreamReader(s).ReadToEnd().Trim().Replace("\"", "æ"), cookies).First();
 
       var regexs = (new T()).Regexs;
 
@@ -136,7 +132,7 @@ namespace Samurai.Core
     }
 
 
-    public static IEnumerable<U> GetWebpages<U>(IEnumerable<Uri> uris, Action<string> progress,
+    public static IEnumerable<U> GetWebpages<U>(IEnumerable<Uri> uris,
       Func<Stream, U> convert, CookieContainer cookies = null)
     {
       var runningTasks = new List<Task<U>>();
@@ -148,10 +144,6 @@ namespace Samurai.Core
         if (cookies != null)
           wreq.CookieContainer = cookies;
 
-        //WebProxy proxy = new WebProxy("webproxy.int.westgroup.com", true);
-        //proxy.Credentials = new NetworkCredential("u0158158", "Jellytots2");
-        //wreq.Proxy = proxy;
-        //wreq.Proxy = null;
         wreq.Timeout = 1000000;
 
         var taskResp = Task.Factory.FromAsync<WebResponse>(wreq.BeginGetResponse, wreq.EndGetResponse, null);
@@ -159,8 +151,6 @@ namespace Samurai.Core
           = taskResp.ContinueWith(
           tsk =>
           {
-            progress(string.Format("Downloaded stream for URL:{0}", URLforThis));
-
             Stream webStream = tsk.Result.GetResponseStream();
             return convert(webStream);
           });
@@ -172,16 +162,6 @@ namespace Samurai.Core
       return results;
     }
 
-    private static void SerializeStream<V>(IEnumerable<V> streams)
-    {
-      //come back to
-      using (var fileStream = new FileStream(string.Format("IEnumerable(Stream) From IRegexable={0}.dat",
-        typeof(T).ToString()), FileMode.OpenOrCreate, FileAccess.Write))
-      {
-        var binaryFormatter = new BinaryFormatter();
-        binaryFormatter.Serialize(fileStream, streams);
-      }
-    }
   }
 
 }

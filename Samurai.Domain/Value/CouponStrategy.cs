@@ -26,7 +26,7 @@ namespace Samurai.Domain.Value
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
     protected readonly IValueOptions valueOptions;
-    protected List<MissingAlias> missingAlias;
+    protected List<MissingTeamPlayerAlias> missingAlias;
 
     public AbstractCouponStrategy(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider, 
@@ -42,7 +42,7 @@ namespace Samurai.Domain.Value
       this.webRepositoryProvider = webRepositoryProvider;
       this.valueOptions = valueOptions;
 
-      this.missingAlias = new List<MissingAlias>();
+      this.missingAlias = new List<MissingTeamPlayerAlias>();
     }
 
     public abstract IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
@@ -62,12 +62,12 @@ namespace Samurai.Domain.Value
       bool @continue = false;
       if (teamOrPlayerA == null)
       {
-        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerALookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingTeamPlayerAlias { TeamOrPlayerName = teamOrPlayerALookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
       if (teamOrPlayerB == null)
       {
-        this.missingAlias.Add(new MissingAlias { TeamOrPlayerName = teamOrPlayerBLookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingTeamPlayerAlias { TeamOrPlayerName = teamOrPlayerBLookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
       return @continue;
@@ -300,7 +300,7 @@ namespace Samurai.Domain.Value
       var lastChecked = DateTime.Now;
 
       var valSam = this.fixtureRepository.GetExternalSource("Value Samurai");
-      var currentHeading = string.Empty;
+      var firstHeading = "Not set"; 
 
       foreach (var token in matchTokens)
       {
@@ -310,9 +310,9 @@ namespace Samurai.Domain.Value
         }
         else if (token is OddsCheckerWebScheduleHeading)
         {
-          currentHeading = ((OddsCheckerWebScheduleHeading)token).Heading;
+          firstHeading = firstHeading == "Not set" ? "1st heading" : "Not 1st heading";
         }
-        else if (token is OddsCheckerWebScheduleMatch && currentHeading == "Mens Matches")
+        else if (token is OddsCheckerWebScheduleMatch && firstHeading == "1st heading")
         {
           var match = ((OddsCheckerWebScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');

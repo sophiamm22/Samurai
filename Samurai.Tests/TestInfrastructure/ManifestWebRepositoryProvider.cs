@@ -10,7 +10,13 @@ namespace Samurai.Tests.TestInfrastructure
 {
   public class ManifestWebRepositoryProvider : IWebRepositoryProvider
   {
-    
+    public ManifestWebRepositoryProvider()
+    {
+    }
 
+    public WebRepository CreateWebRepository(DateTime repositoryDate)
+    {
+      return new ManifestWebRepository(repositoryDate.ToString("yyyyMMdd"));
+    }
   }
 }

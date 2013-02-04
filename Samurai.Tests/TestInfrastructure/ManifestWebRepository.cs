@@ -13,14 +13,20 @@ namespace Samurai.Tests.TestInfrastructure
 {
   public class ManifestWebRepository : WebRepositoryTestData
   {
-    public ManifestWebRepository()
+    protected readonly string repositoryDate;
+
+    public ManifestWebRepository(string basePath)
       : base("Irrelevant")
     {
+      this.repositoryDate = basePath;
     }
 
     protected override StreamReader StreamFromPathQueryIdentifier(string pathQueryAndIdentifier, Action<string> report)
     {
-      var fileName = pathQueryAndIdentifier.Replace("/", "æ").Replace("?", "^").Replace(":", "~");
+      var fileName = 
+        pathQueryAndIdentifier.Replace("/", "æ")
+                              .Replace("?", "^")
+                              .Replace(":", "~");
 
       var manifest = Assembly.GetExecutingAssembly().GetManifestResourceStream("Samurai.Tests.TestData." + fileName);
       report(string.Format("Streaming saved URL from:{0}", manifest));

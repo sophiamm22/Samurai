@@ -35,5 +35,10 @@ namespace Samurai.Domain.Model
     public bool InPlay { get; set; }
     public IDictionary<Outcome, double> HeadlineOdds { get; set; }
     public IDictionary<Outcome, IEnumerable<GenericOdd>> ActualOdds { get; set; }
+
+    public override string ToString()
+    {
+      return MatchIdentifier;
+    }
   }
 }

@@ -143,14 +143,21 @@ namespace Samurai.Services
 
     private List<Model.GenericMatchCoupon> GetTodaysCoupons(DateTime date, TournamentEvent tournamentEvent, IEnumerable<Model.GenericMatchCoupon> coupons)
     {
-      var couponsDic =
-        coupons.ToDictionary(x =>
-        {
-          if (string.IsNullOrEmpty(x.FirstNameA) && string.IsNullOrEmpty(x.FirstNameB))
-            return string.Format("{0}|{1}", x.TeamOrPlayerA, x.TeamOrPlayerB);
-          else
-            return string.Format("{0},{1}|{2},{3}", x.TeamOrPlayerA, x.FirstNameA, x.TeamOrPlayerB, x.FirstNameB);
-        });
+
+      var couponsDic = new Dictionary<string, Model.GenericMatchCoupon>();
+
+      foreach (var coupon in coupons)
+      {
+        var key = string.Empty;
+
+        if (string.IsNullOrEmpty(coupon.FirstNameA) && string.IsNullOrEmpty(coupon.FirstNameB))
+          key = string.Format("{0}|{1}", coupon.TeamOrPlayerA, coupon.TeamOrPlayerB);
+        else
+          key = string.Format("{0},{1}|{2},{3}", coupon.TeamOrPlayerA, coupon.FirstNameA, coupon.TeamOrPlayerB, coupon.FirstNameB);
+
+        if (!couponsDic.ContainsKey(key))
+          couponsDic.Add(key, coupon);
+      }
 
       var tournamentEventID = tournamentEvent.Id;
 

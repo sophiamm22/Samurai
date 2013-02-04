@@ -29,7 +29,7 @@ namespace Samurai.Sandbox
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
       var repositoryType = "SaveTestData";
-      var basePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\value-samurai\";
+      var basePath = @"C:\value-samurai\";
 
       container.AddFacility<TypedFactoryFacility>();
 

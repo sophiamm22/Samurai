@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookmakerRepositoryHelper.cs" />
+    <Compile Include="DomainStrategies\FootballFixtureStrategyTests.cs" />
     <Compile Include="DomainStrategies\TennisFixtureStrategyTests.cs" />
     <Compile Include="Domain\FootballCouponStrategyTests.cs" />
     <Compile Include="Domain\FixtureStrategyTests.cs" />
@@ -92,6 +93,9 @@
     <Compile Include="StartUp\AppStartUpTests.cs" />
     <Compile Include="TestHelper.cs" />
     <Compile Include="TestInfrastructure\ManifestWebRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildFixtureRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepositoryProvider.cs" />
     <Compile Include="TestInfrastructure\SafeCollection.cs" />
     <Compile Include="TestInfrastructure\ManifestWebRepositoryProvider.cs" />
   </ItemGroup>

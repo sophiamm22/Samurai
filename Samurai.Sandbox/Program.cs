@@ -17,6 +17,7 @@ namespace Samurai.Sandbox
   {
     static void Main(string[] args)
     {
+
       AutoMapperManualConfiguration.Configure();
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());

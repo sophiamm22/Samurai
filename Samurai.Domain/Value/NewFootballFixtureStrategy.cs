@@ -70,8 +70,6 @@ namespace Samurai.Domain.Value
       var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
                                    .Cast<ISkySportsFixture>();
 
-      var returnMatches = new List<GenericMatchDetailQuery>();
-
       var matchAndToken = ConvertFixtures(fixtureDate, fixturesTokens).Zip(fixturesTokens, (m, t) => new { Match = m, Token = t }).ToList();
 
       foreach (var mt in matchAndToken)

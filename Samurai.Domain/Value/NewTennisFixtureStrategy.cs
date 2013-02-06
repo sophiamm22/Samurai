@@ -24,14 +24,12 @@ namespace Samurai.Domain.Value
   public class NewTennisFixtureStrategy : ITennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
 
-    public NewTennisFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
+    public NewTennisFixtureStrategy(IFixtureRepository fixtureRepository,
       IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
-      this.storedProcRepository = storedProcRepository;
       this.webRepositoryProvider = webRepositoryProvider;
     }
 
@@ -40,9 +38,11 @@ namespace Samurai.Domain.Value
       var ret = new List<TournamentEvent>();
       var tb365Uri = this.fixtureRepository.GetTennisTournamentCalendar();
 
-      var webRepository = this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
+      var webRepository = 
+        this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
 
-      var tournamentEvents = webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => Console.WriteLine(s));
+      var tournamentEvents = 
+        webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => Console.WriteLine(s));
 
       foreach (var tournamentEvent in tournamentEvents)
       {
@@ -54,7 +54,7 @@ namespace Samurai.Domain.Value
           {
             TournamentName = nameWithoutYear,
             CompetitionID = this.fixtureRepository.GetCompetition("ATP").Id,
-            Slug = tournamentEvent.TournamentName.RemoveDiacritics().ToHyphenated(),
+            Slug = nameWithoutYear.RemoveDiacritics().ToHyphenated(),
             Location = "Add later"
           };
           this.fixtureRepository.CreateTournament(tournament);

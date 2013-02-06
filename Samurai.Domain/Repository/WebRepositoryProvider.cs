@@ -8,7 +8,7 @@ namespace Samurai.Domain.Repository
 {
   public interface IWebRepositoryProvider
   {
-    WebRepository CreateWebRepository(DateTime repositoryDate);
+    IWebRepository CreateWebRepository(DateTime repositoryDate);
   }
 
   public class WebRepositoryProvider : IWebRepositoryProvider
@@ -24,7 +24,7 @@ namespace Samurai.Domain.Repository
       this.basePath = basePath;
     }
 
-    public WebRepository CreateWebRepository(DateTime repositoryDate)
+    public IWebRepository CreateWebRepository(DateTime repositoryDate)
     {
       if (this.repositoryType == "SaveTestData")
         return new WebRepositorySaveTestData(basePath + @"\" + repositoryDate.ToString("yyyyMMdd"));

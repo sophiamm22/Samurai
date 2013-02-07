@@ -52,6 +52,11 @@ namespace Samurai.Services
       return ret;
     }
 
+    public IEnumerable<FootballFixtureViewModel> UpdateDaysResults(DateTime fixtureDate)
+    {
+      return this.footballFixtureService.FetchSkySportsFootballResultsNew(fixtureDate);
+    }
+
     public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
     {
       return this.footballFixtureService.GetTournamentLadder(matchDate, tournament);

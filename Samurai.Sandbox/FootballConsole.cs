@@ -35,8 +35,9 @@ namespace Samurai.Sandbox
         Console.WriteLine("Select from the list below..");
         Console.WriteLine("------------------------------");
         Console.WriteLine("1.\tFetch Day's Schedule");
+        Console.WriteLine("2.\tFetch Day's Results");
         Console.WriteLine("");
-        Console.WriteLine("2.\tReturn to main menu");
+        Console.WriteLine("3.\tReturn to main menu");
         Console.WriteLine("------------------------------");
         var numberString = Console.ReadLine();
         int number;
@@ -51,13 +52,28 @@ namespace Samurai.Sandbox
             FetchFootballSchedule();
             break;
           }
+          else if (number == 2)
+          {
+            FetchFootballResults();
+          }
           else
             break;
         }
       }
     }
 
-
+    private void FetchFootballResults()
+    {
+      Console.WriteLine("Enter the date to fetch football results (dd/mm/yy)");
+      var dateString = Console.ReadLine();
+      DateTime date;
+      if (!DateTime.TryParse(dateString, out date))
+      {
+        Console.WriteLine("You fucking moron!");
+        return;
+      }
+      Fixtures = this.footballService.UpdateDaysResults(date);
+    }
     private void FetchFootballSchedule()
     {
       while (true)

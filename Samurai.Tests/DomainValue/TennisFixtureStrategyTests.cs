@@ -13,7 +13,7 @@ using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Repository;
 using Samurai.Tests.TestInfrastructure.MockBuilders;
 
-namespace Samurai.Tests.DomainStrategies
+namespace Samurai.Tests.DomainValue
 {
   public class TennisFixtureStrategyTests
   {

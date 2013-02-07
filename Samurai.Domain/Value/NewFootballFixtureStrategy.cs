@@ -66,7 +66,7 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(fixtureDate);
 
-      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
+      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s), "results").First() : this.storedHTML;
       var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
                                    .Cast<ISkySportsFixture>();
 
@@ -75,11 +75,18 @@ namespace Samurai.Domain.Value
       foreach (var mt in matchAndToken)
       {
         var match = mt.Match;
-        match.ObservedOutcomes.Add(new ObservedOutcome()
+        if (match.ObservedOutcomes.Count() == 0)
         {
-          Match = match,
-          ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore)
-        });
+          match.ObservedOutcomes.Add(new ObservedOutcome()
+          {
+            Match = match,
+            ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore)
+          });
+        }
+        else
+        {
+          match.ObservedOutcomes.First().ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore);
+        }
       }
       this.fixtureRepository.SaveChanges();
       return this.storedProcRepository

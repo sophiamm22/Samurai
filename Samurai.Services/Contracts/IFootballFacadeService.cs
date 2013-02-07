@@ -12,6 +12,7 @@ namespace Samurai.Services.Contracts
   {
     void AddAlias(string source, string playerName, string valueSamuraiName);
     IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate);
+    IEnumerable<FootballFixtureViewModel> UpdateDaysResults(DateTime fixtureDate);
     IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }
 }

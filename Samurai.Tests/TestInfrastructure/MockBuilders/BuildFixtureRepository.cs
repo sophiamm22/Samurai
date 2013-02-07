@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Moq;
 
 using Samurai.SqlDataAccess.Contracts;
+using Samurai.Domain.Model;
 using E = Samurai.Domain.Entities;
 
 namespace Samurai.Tests.TestInfrastructure.MockBuilders
@@ -17,6 +18,31 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
       return new Mock<IFixtureRepository>();
     }
 
+    public static Mock<IFixtureRepository> HasPersistedMatches(this Mock<IFixtureRepository> repo, IList<E.Match> matches)
+    {
+      repo.Setup(x => x.GetMatchFromTeamSelections(It.IsAny<E.TeamPlayer>(), It.IsAny<E.TeamPlayer>(), It.IsAny<DateTime>()))
+          .Returns((E.TeamPlayer teamA, E.TeamPlayer teamB, DateTime startDate) =>
+            {
+              return matches.FirstOrDefault(x => x.TeamsPlayerA.Name == teamA.Name && x.TeamsPlayerB.Name == teamB.Name);
+            });
+      return repo;
+    }
+
+    public static Mock<IFixtureRepository> CanReturnScoreOutcome(this Mock<IFixtureRepository> repo)
+    {
+      repo.Setup(x => x.GetScoreOutcome(It.IsAny<int>(), It.IsAny<int>()))
+          .Returns((int a, int b) =>
+            {
+              return new E.ScoreOutcome
+              {
+                TeamAScore = a,
+                TeamBScore = b
+              };
+            });
+
+      return repo;
+    }
+
     public static Mock<IFixtureRepository> HasTheSkySportsURL(this Mock<IFixtureRepository> repo, DateTime fixtureDate)
     {
       repo.Setup(x => x.GetSkySportsFootballFixturesOrResults(It.IsAny<DateTime>()))
@@ -25,7 +51,21 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
       return repo;
     }
 
-    public static Mock<IFixtureRepository> GetAliasReturnsItself(this Mock<IFixtureRepository> repo)
+    public static Mock<IFixtureRepository> HasFootballTournamentEvents(this Mock<IFixtureRepository> repo)
+    {
+      repo.Setup(x => x.GetFootballTournamentEvent(It.IsInRange(1, 4, Range.Inclusive), It.IsAny<DateTime>()))
+          .Returns((int e, DateTime date) =>
+            {
+              return new E.TournamentEvent
+              {
+                Id = e,
+                EventName = Enum.GetName(typeof(LeagueEnum), e)
+              };
+            });
+      return repo;
+    }
+
+    public static Mock<IFixtureRepository> HasGetAliasWhichReturnsItself(this Mock<IFixtureRepository> repo)
     {
       repo.Setup(x => x.GetAlias(It.IsAny<string>(), It.IsAny<E.ExternalSource>(), It.IsAny<E.ExternalSource>(), It.IsAny<E.Sport>()))
           .Returns((string name, E.ExternalSource source, E.ExternalSource destination, E.Sport sport) =>
@@ -38,10 +78,18 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
       return repo;
     }
 
-    public static Mock<IFixtureRepository> CanAddMatches(this Mock<IFixtureRepository> repo, IList<E.Match> matches)
+    public static Mock<IFixtureRepository> CanAddOrUpdateMatches(this Mock<IFixtureRepository> repo, IList<E.Match> matches)
     {
       repo.Setup(x => x.AddMatch(It.IsAny<E.Match>()))
-          .Callback((E.Match m) => matches.Add(m));
+          .Callback((E.Match m) =>
+            {
+              var persistedMatch = matches.FirstOrDefault(x => x.TeamsPlayerA.Name == m.TeamsPlayerA.Name &&
+                                                               x.TeamsPlayerB.Name == m.TeamsPlayerB.Name);
+              if (persistedMatch == null)
+                matches.Add(m);
+              else
+                persistedMatch.MatchDate = m.MatchDate;
+            });
 
       return repo;
     }

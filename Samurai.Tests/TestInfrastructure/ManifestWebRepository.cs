@@ -28,9 +28,13 @@ namespace Samurai.Tests.TestInfrastructure
                               .Replace("?", "^")
                               .Replace(":", "~");
 
-      var manifest = Assembly.GetExecutingAssembly().GetManifestResourceStream("Samurai.Tests.TestData." + fileName);
-      report(string.Format("Streaming saved URL from:{0}", manifest));
+      //I seem to have issues with upper/lower case.  No idea why but this will fix it.
+      var all = Assembly.GetExecutingAssembly().GetManifestResourceNames();
+      var thisOne = all.FirstOrDefault(x => string.Compare(string.Format("Samurai.Tests.TestData._{0}.{1}", this.repositoryDate, fileName), x, true) == 0);
 
+      var manifest = Assembly.GetExecutingAssembly().GetManifestResourceStream(thisOne);
+      report(string.Format("Streaming saved URL from:{0}", manifest));
+      //Samurai.Tests.TestData._20130202.æfootballæfixtures-resultsæ02-february-2013.txt
       return new StreamReader(manifest);
     }
 

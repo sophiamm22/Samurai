@@ -18,6 +18,30 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
       return new Mock<IFixtureRepository>();
     }
 
+    public static Mock<IFixtureRepository> CanGetTournamentEventFromTournamentAndDate(this Mock<IFixtureRepository> repo)
+    {
+      repo.Setup(x => x.GetTournamentEventFromTournamentAndDate(It.IsAny<DateTime>(), It.IsAny<string>()))
+          .Returns((DateTime date, string tournament) =>
+            {
+              return new E.TournamentEvent()
+              {
+                EventName = string.Format("{0} near to {1}", tournament, date.ToShortDateString())
+              };
+            });
+      return repo;
+    }
+
+    public static Mock<IFixtureRepository> HasFullDaysMatchesByCompetition(this Mock<IFixtureRepository> repo, IList<E.Match> matches)
+    {
+      repo.Setup(x => x.GetDaysMatches(It.IsAny<string>(), It.IsAny<DateTime>()))
+          .Returns((string tournament, DateTime couponDate) =>
+            {
+              return matches.Where(x => x.TournamentEvent.Tournament.TournamentName == tournament)
+                            .Where(x => x.MatchDate.Date == couponDate.Date);
+            });
+      return repo;
+    }
+
     public static Mock<IFixtureRepository> HasPersistedMatches(this Mock<IFixtureRepository> repo, IList<E.Match> matches)
     {
       repo.Setup(x => x.GetMatchFromTeamSelections(It.IsAny<E.TeamPlayer>(), It.IsAny<E.TeamPlayer>(), It.IsAny<DateTime>()))

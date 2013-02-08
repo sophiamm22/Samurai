@@ -1,0 +1,1674 @@
+<!doctype HTML><html lang=æenæ>
+   <head>
+      <meta http-equiv=æContent-Typeæ content=ætext/html; charset=UTF-8æ>
+      <title>English League 1 Betting Odds | Football Betting | Oddschecker</title>
+      <meta name=ædescriptionæ content=æBetting on the 2012/3 English football League One. View all available outright and match odds, plus get tips, stats, money-back offers and free betsæ>
+      <meta name=ækeywordsæ content=æFootball, English, League 1, Sports Bettingæ>
+      <meta property=æfb:adminsæ content=æ100000703711809æ>
+      <meta property=æog:titleæ content=æEnglish League 1 Betting Odds | Football Bettingæ>
+      <meta property=æog:typeæ content=æsportæ>
+      <meta property=æog:imageæ content=æhttp://cdn.oddschecker.com/OC/i/OC/facebook/2.jpgæ>
+      <meta property=æog:descriptionæ content=æBetting on the 2012/3 English football League One. View all available outright and match odds, plus get tips, stats, money-back offers and free betsæ>
+      <meta property=æog:urlæ content=æhttp://www.oddschecker.com/football/english/league-1æ>
+      <meta property=æog:site_nameæ content=æOddschecker.comæ>
+      <link rel=æshortcut iconæ href=æhttp://cdn.oddschecker.com/OC/i/OC/layout/favicon.pngæ>
+      <link rel=æapple-touch-iconæ href=æhttp://cdn.oddschecker.com/OC/i/OC/layout/iphone-icon.pngæ>
+      <base href=æhttp://www.oddschecker.com/æ>
+      <link rel=æstylesheetæ type=ætext/cssæ href=æhttp://cdn.oddschecker.com/OC/css/compiled/OC/cards/default.cssæ>
+      <link href=æhttp://cdn.oddschecker.com/OC/css/compiled/OC/print.cssæ type=ætext/cssæ rel=æstylesheetæ media=æprintæ><script type=ætext/javascriptæ src=æhttp://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.jsæ></script><script type=ætext/javascriptæ src=æhttp://cdn.oddschecker.com/OC/js/shadowbox.jsæ></script><script type=ætext/javascriptæ src=æhttp://service.maxymiser.net/cdn/oddschecker/js/mmcore.jsæ></script><script type=ætext/javascriptæ src=æhttp://cdn.oddschecker.com/OC/js/preLoad.jsæ></script><script type=ætext/javascriptæ>Shadowbox.init({skipSetup: true});oc.repub = æOCæ;oc.lang = æENæ;oc.staticServer = æhttp://cdn.oddschecker.com/OC/æ;oc.capableBrowser = true;oc.upgradeBrowser = false;oc.showSocialMedia = true;oc.showTwitterWidgets = true;oc.showSportAuthority = false;oc.deviceName = æwindowsæ;oc.isTouchable = false;oc.showUtilityBar = true;oc.basketUrlTranslation = æbet-basketæ;oc.ssl = false;oc.mainUrl = æhttp://www.oddschecker.com/æ;oc.mainUrlSsl = æhttps://secure.oddschecker.com/æ;oc.urlPath = æ/football/english/league-1æ;oc.cardId = æcard_80æ;oc.oddsType = ætraditionalæ;oc.view = æcards/defaultæ;oc.text = new Array();oc.text.change = æChangeæ;oc.text.cancel = æCancelæ;oc.text.removeFromBetBasket = æRemove %1 from bet basketæ;oc.text.addToBetBasket = æAdd %1 to bet basketæ;oc.skySportsBulletin = ætrueæ;oc.currencySymbol = æ&pound;æ;oc.sport = æUK Footballæ;oc.categoryGroupId = æ2æ;oc.defaultPopupWidth = 800;oc.defaultPopupHeight = 600;oc.cookieDomain = æoddschecker.comæ;oc.showBetBasket = ææ;oc.isHandicap = false;oc.takeoverClickout = ææ;oc.bookiesToPopUp = [ æB3æ,æBDæ,æBSæ,æBWæ,æEEæ,æPPæ,æSOæ];var SKY_TRACKING = {site: æsky/sbandg/oddscheckeræ, section: æbet/football/english/league-1æ, headline: æLeague 1æ, contentType: ææ, account: æbskybocukbetting,bskybnetworkglobalæ};</script><script type=ætext/javascriptæ src=æhttp://cdn.oddschecker.com/OC/js/LAB-2.0.3.min.jsæ></script><script type=ætext/javascriptæ src=æhttp://cdn.oddschecker.com/OC/js/manager.jsæ></script></head>
+   <body class=æno-js hoverableæ><script>$('body').removeClass('no-js').addClass('js');</script><div id=æouter-containeræ class=ææ>
+         <div id=æpage-centre-containeræ>
+            <div id=æcontaineræ>
+               <header>
+                  <div id=æheaderæ>
+                     <div id=æbrandæ><a id=ælogoæ href=æhttp://www.oddschecker.com/æ title=æOddschecker Betting Homeæ data-track=æ&amp;lid=head&amp;lpos=logoæ><img src=æhttp://cdn.oddschecker.com/OC/i/OC/layout/logo.pngæ width=æ203æ height=æ50æ alt=æOddschecker Betting Homeæ></a></div>
+                     <div id=æbanneræ>
+                        <aside>
+                           <div id=æad-container-banneræ></div>
+                        </aside>
+                     </div>
+                     <ul id=ælogin-tabsæ>
+                        <li id=æsign-up-tabæ><a id=æsign-upæ href=æhttps://secure.oddschecker.com/myoddschecker/registeræ data-track=æ&amp;lid=head&amp;lpos=signæ>Sign Up<span class=æarrow arrow-fff-15æ></span></a></li>
+                        <li id=ælog-in-tabæ><a id=ælog-inæ href=æhttps://secure.oddschecker.com/myoddschecker/loginæ data-track=æ&amp;lid=head&amp;lpos=homeæ>Log In<span class=æarrow arrow-000-15æ></span></a></li>
+                     </ul>
+                     <div id=ælog-in-panelæ class=æhideæ>
+                        <form action=æhttps://secure.oddschecker.com/myoddschecker/loginæ id=æheader-login-formæ method=æPOSTæ>
+                           <div id=ælogin-inputsæ><input type=æemailæ class=æemailæ name=æemailæ placeholder=æe-mailæ><input type=æpasswordæ class=æpasswordæ name=æpasswordæ placeholder=æpasswordæ></div><button class=æsubmit button button-080-10æ data-track=æ&amp;lid=head&amp;lpos=loginæ>Go<span class=æarrowæ></span></button><label for=æremember-meæ class=æremember-me-labelæ>Remember me</label><input type=æcheckboxæ id=æremember-meæ name=æremember-meæ class=æremember-meæ value=ætrueæ checked></form>
+                     </div><a id=æbet-basket-signpostæ href=æjavascript:void(0);æ title=æShow Bet Basketæ class=æpsuedo-utility-bar-openæ data-panel=æbet-basketæ data-track=æ&amp;lid=head&amp;lpos=bet-basketæ><span class=æbet-basket-icon bet-basket-icon-emptyæ><span class=æbet-basket-num-of-betsæ></span></span></a><div id=ætop-navæ>
+                        <nav>
+                           <ul id=ætop-menuæ>
+                              <li id=æsports-navæ class=ætop-menu-item navæ><span class=ætop-menu-item-link  pulseæ>Sports A-Z<span id=æsports-arrowæ></span></span><ul class=ænav-contentæ>
+                                    <li class=ænav-content-item first æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Football</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Football</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/footballæ class=ænav-linkæ>Football Centre</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/football-coupons/major-leagues-cupsæ class=ænav-linkæ>Football Coupons</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/football-specialsæ class=ænav-linkæ>Football Specials</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ></p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/english/premier-leagueæ class=ænav-linkæ>English</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/scottish/splæ class=ænav-linkæ>Scottish</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/elite-couponæ class=ænav-linkæ>European</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/worldæ class=ænav-linkæ>World</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ></p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/champions-leagueæ class=ænav-linkæ>Champions League</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/europa-leagueæ class=ænav-linkæ>Europa League</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ></p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/world-cup/matchesæ class=ænav-linkæ>International</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/womens-couponæ class=ænav-linkæ>Womens</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Big Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/english/premier-leagueæ class=ænav-linkæ>Premier League</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-primeraæ class=ænav-linkæ>La Liga</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/english/premier-league/next-manager-to-leave-postæ class=ænav-linkæ>Next Manager Out</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/international-friendliesæ class=ænav-linkæ>Internationals</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/african-nations-cupæ class=ænav-linkæ>Africa Cup of Nations</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/football/football-specials/nottingham-forest-specials/next-permanent-manageræ class=ænav-linkæ>Next Nottm Forest Manager</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ></p>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class=æcontentæ id=æmn5-footballæ style=æbackground-image:url(http://cdn.oddschecker.com/OC/i/content/MN5/football.png); width:500px; height:322px; left:0px; bottom:0px;æ><a href=æ/live-in-play-bettingæ style=æbottom:10px; left:10px; width:340px; height:80px; display:block; position:absolute;
+                                                text-indent:-9999px;æ>Dedicated in-play section with real time odds</a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Horse Racing</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Horse Racing</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <ul>
+                                                         <li class=æinner-nav-content-rowæ>
+                                                            <p class=æseparatoræ>Today's Racing</p>
+                                                         </li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-bettingæ class=ænav-linkæ>Racing Centre</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/southwellæ class=ænav-linkæ>Southwell</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/ludlowæ class=ænav-linkæ>Ludlow</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/carlisleæ class=ænav-linkæ>Carlisle</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/kemptonæ class=ænav-linkæ>Kempton</a></li>
+                                                         <li class=æinner-nav-content-rowæ>
+                                                            <p class=æseparatoræ></p>
+                                                         </li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/europe/fra-cagnes-sur-meræ class=ænav-linkæ>International</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/racing-couponæ class=ænav-linkæ>Racing Coupon</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/horse-list/a-dæ class=ænav-linkæ>Horse List</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <ul class=æpromotionæ>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-bettingæ class=ænav-linkæ>View Tomorrow's Racing</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Ante-Post Racing</p>
+                                                      <ul>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/ante-post-racing/national-huntæ class=ænav-linkæ>National Hunt</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/ante-post-racing/flatæ class=ænav-linkæ>Flat</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/ante-post-racing/cheltenham-festivalæ class=ænav-linkæ>Cheltenham Festival</a></li>
+                                                         <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/grand-national-betting-odds/winneræ class=ænav-linkæ>Grand National</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ></p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/horse-racing-betting/racing-specials/long-termæ class=ænav-linkæ>Racing Specials</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/stats/market-reports/horse-racingæ class=ænav-linkæ>Market Moves</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tipping-centre/horse-racing-betting-tipsæ class=ænav-linkæ>Racing Tips</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æcontentæ id=æmn5-horse-racingæ style=æbackground-image:url(http://cdn.oddschecker.com/OC/i/content/MN5/horse-racing.png); width:500px; height:322px; left:-1px; bottom:-1px;æ><a href=æ/horse-racing-betting/ante-post-racing/cheltenham-festivalæ style=æbottom:-1px; left:-1px; position:absolute;display:block;width:342px;height:80px;text-decoration:none;æ>
+                                                <span style=ætop: 26px;position: relative;left: 18px;display:block;font-size: 14px;æ>
+                                                Cheltenham Festival
+                                                </span>
+                                                <span style=ætop: 30px;position: relative;left: 18px;display:block;æ>
+                                                Odds | Guides | Tips
+                                                </span>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Golf</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Golf</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>This Week</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/joburg-openæ class=ænav-linkæ>Joburg Open</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/att-pebble-beach-nationalæ class=ænav-linkæ>AT&amp;T Pebble Beach National</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/allianz-championshipæ class=ænav-linkæ>Allianz Championship</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/new-zealand-womens-openæ class=ænav-linkæ>New Zealand Womens Open</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/tournament-matches-specials/2-3-ballsæ class=ænav-linkæ>Tournament Matches &amp; Specials</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Long Term</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/us-mastersæ class=ænav-linkæ>US Masters</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/us-openæ class=ænav-linkæ>US Open</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/open-championshipæ class=ænav-linkæ>Open Championship</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/uspga-championshipæ class=ænav-linkæ>USPGA Championship</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/ryder-cupæ class=ænav-linkæ>Ryder Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/solheim-cupæ class=ænav-linkæ>Solheim Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/walker-cupæ class=ænav-linkæ>Walker Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/golf/season-specialsæ class=ænav-linkæ>Season Betting</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>More</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tipping-centre/golf-betting-tipsæ class=ænav-linkæ>Golf Tips</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æcontentæ id=æmn5-golfæ style=æbackground-image:url(http://cdn.oddschecker.com/OC/i/content/MN5/golf.png); width:500px; height:322px; left:0px; bottom:0px;æ><a href=æ/golf/golf-coupons/2-3-balls?show-bet-basket=trueæ style=æbottom:0; left:82px; width:330px; height:90px; display:block;
+                                                position:absolute; text-indent:-9999px;æ>Use our bet basket to get the best odds on your multiples</a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Tennis</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Tennis</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>This Week</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/atp-montpellieræ class=ænav-linkæ>Mens Tour</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/itf-touræ class=ænav-linkæ>Womens Tour</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/match-couponæ class=ænav-linkæ>Match Coupon</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Grand Slams</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/french-open/mensæ class=ænav-linkæ>French Open</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/wimbledon/mensæ class=ænav-linkæ>Wimbledon</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/us-open/mensæ class=ænav-linkæ>US Open</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/australian-open/mensæ class=ænav-linkæ>Australian Open</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Other Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/davis-cupæ class=ænav-linkæ>Davis Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/fed-cupæ class=ænav-linkæ>Fed Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Tennis Specials</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tennis/seasonæ class=ænav-linkæ>Specials</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æcontentæ id=æmn5-tennisæ style=æbackground-image:url(http://cdn.oddschecker.com/OC/i/content/MN5/tennis.png); width:500px; height:322px; left:-2px; bottom:0px;æ><a href=æ/live-in-play-bettingæ style=æbottom:0; left:10px; width:340px; height:80px; display:block; position:absolute; text-indent:-9999px;æ>Dedicated
+                                                in-play section with real time odds</a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=æmenu-separatoræ></span></li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>American Football</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>American Football</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/nflæ class=ænav-linkæ>NFL</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/nfl-specialsæ class=ænav-linkæ>NFL Specials</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/point-spread-couponæ class=ænav-linkæ>Point Spread Coupon</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/college-footballæ class=ænav-linkæ>College Football</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/college-football-specialsæ class=ænav-linkæ>College Football Specials</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/american-football/cflæ class=ænav-linkæ>Other</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Baseball</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Baseball</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/baseball/mlbæ class=ænav-linkæ>USA</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/baseball/australiaæ class=ænav-linkæ>Rest of the World</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/baseball/world-baseball-classicæ class=ænav-linkæ>World Baseball Classic</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Basketball</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Basketball</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/basketball-couponæ class=ænav-linkæ>Basketball Coupon</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/nbaæ class=ænav-linkæ>NBA</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/ncaabæ class=ænav-linkæ>NCAAB</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/wnbaæ class=ænav-linkæ>WNBA</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/rest-of-the-worldæ class=ænav-linkæ>Rest Of The World</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/basketball/eurobasketæ class=ænav-linkæ>International</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Boxing/MMA</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Boxing/MMA</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/boxingæ class=ænav-linkæ>Boxing</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/ufc-mmaæ class=ænav-linkæ>UFC/MMA</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/boxing-specialsæ class=ænav-linkæ>Boxing Specials</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul></ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Cricket</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Cricket</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Current Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/australia-v-west-indies/odi-seriesæ class=ænav-linkæ>Australia v West Indies</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/south-africa-v-pakistan/test-seriesæ class=ænav-linkæ>South Africa v Pakistan</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/new-zealand-v-england/t20-seriesæ class=ænav-linkæ>New Zealand v England</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/india-v-australia/test-seriesæ class=ænav-linkæ>India v Australia</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/womens-world-cupæ class=ænav-linkæ>Womens World Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Domestic Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/bangladesh-premier-leagueæ class=ænav-linkæ>Asia</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/caribbean-t20æ class=ænav-linkæ>Caribbean</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/ryobi-cupæ class=ænav-linkæ>Australasia</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/cb40-leagueæ class=ænav-linkæ>England</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Future Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/t20-world-cupæ class=ænav-linkæ>T20 World Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/champions-trophyæ class=ænav-linkæ>Champions Trophy</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/icc-cricket-world-cupæ class=ænav-linkæ>ICC Cricket World Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/ashesæ class=ænav-linkæ>Ashes</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/womens/internationalsæ class=ænav-linkæ>Womens</a></li>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Specials</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cricket/specialsæ class=ænav-linkæ>Specials</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Darts</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Darts</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/darts/premier-leagueæ class=ænav-linkæ>Premier League</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/darts/dubai-mastersæ class=ænav-linkæ>Dubai Masters</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/darts/uk-openæ class=ænav-linkæ>UK Open</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/darts/pdc-world-championshipæ class=ænav-linkæ>PDC World Championship</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/darts/bdo-world-championshipæ class=ænav-linkæ>BDO World Championship</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Greyhounds</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Greyhounds</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/greyhounds/ante-postæ class=ænav-linkæ>Ante Post</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/greyhounds/hall-green-bagsæ class=ænav-linkæ>Daily Racing</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/greyhounds/greyhound-couponæ class=ænav-linkæ>Greyhound Coupon</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/greyhounds/daily-specialsæ class=ænav-linkæ>Daily Specials</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Motorsport</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Motorsport</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/formula-oneæ class=ænav-linkæ>Formula 1</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/motogpæ class=ænav-linkæ>Moto GP</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/speedway/britishæ class=ænav-linkæ>Speedway</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/world-superbikesæ class=ænav-linkæ>Superbikes</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/nascaræ class=ænav-linkæ>Other</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Big Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/motorsport/formula-one/drivers-championshipæ class=ænav-linkæ>F1 Drivers Champs</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Rugby League</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Rugby League</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-league/world-cupæ class=ænav-linkæ>International</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-league/super-leagueæ class=ænav-linkæ>Club</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-league/rugby-league-specialsæ class=ænav-linkæ>Rugby League Specials</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-league/handicaps-couponæ class=ænav-linkæ>Handicaps Coupon</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Big Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-league/super-leagueæ class=ænav-linkæ>Super League</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Rugby Union</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Rugby Union</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/six-nationsæ class=ænav-linkæ>International</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/heineken-cupæ class=ænav-linkæ>Club</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/rugby-specialsæ class=ænav-linkæ>Rugby Specials</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/handicaps-couponæ class=ænav-linkæ>Handicaps Coupon</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Big Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/six-nationsæ class=ænav-linkæ>Six Nations</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/heineken-cupæ class=ænav-linkæ>Heineken Cup</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rugby-union/rugby-world-cupæ class=ænav-linkæ>Rugby World Cup</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Snooker</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Snooker</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/championship-leagueæ class=ænav-linkæ>Championship League</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/welsh-openæ class=ænav-linkæ>Welsh Open</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/world-openæ class=ænav-linkæ>World Open</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/players-tour-championshipæ class=ænav-linkæ>Players Tour Championship</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/world-championshipæ class=ænav-linkæ>World Championship</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/the-mastersæ class=ænav-linkæ>The Masters</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/uk-championshipæ class=ænav-linkæ>UK Championship</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/snooker/specialsæ class=ænav-linkæ>Specials</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Winter Sports</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Winter Sports</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/alpine-skiingæ class=ænav-linkæ>Alpine Skiing</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/biathlonæ class=ænav-linkæ>Biathlon</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/cross-country-skiingæ class=ænav-linkæ>Cross Country Skiing</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/curlingæ class=ænav-linkæ>Curling</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/nordic-combinedæ class=ænav-linkæ>Nordic Combined</a></li>
+                                             <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/winter-sports/ski-jumpingæ class=ænav-linkæ>Ski Jumping</a></li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  æ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>Other Sports</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>Other Sports</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/athletics/world-championshipsæ class=ænav-linkæ>Athletics</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/aussie-rules/aflæ class=ænav-linkæ>Aussie Rules</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/badmintonæ class=ænav-linkæ>Badminton</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/bandy/bandy-couponæ class=ænav-linkæ>Bandy</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/bowls/international-openæ class=ænav-linkæ>Bowls</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/cycling/tour-of-qataræ class=ænav-linkæ>Cycling</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/equestrianæ class=ænav-linkæ>Equestrian</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/floorball/sweden/mens-swedish-superliganæ class=ænav-linkæ>Floorball</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/futsal/futsal-couponæ class=ænav-linkæ>Futsal</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/gaelic-games/gaelic-footballæ class=ænav-linkæ>Gaelic Games</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/handball/handball-couponæ class=ænav-linkæ>Handball</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/hockey/all-matchesæ class=ænav-linkæ>Hockey</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/ice-hockey/ice-hockey-couponæ class=ænav-linkæ>Ice Hockey</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/lacrosse/major-league-lacrosseæ class=ænav-linkæ>Lacrosse</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/olympics/olympic-specialsæ class=ænav-linkæ>Olympics</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/poker/world-series-of-pokeræ class=ænav-linkæ>Poker</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/pool/mosconi-cupæ class=ænav-linkæ>Pool</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rink-hockey/spain/liga-okæ class=ænav-linkæ>Rink Hockey</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/surfingæ class=ænav-linkæ>Surfing</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/rowing/the-boat-raceæ class=ænav-linkæ>Rowing</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/swimming/mens-world-championshipsæ class=ænav-linkæ>Swimming</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/table-tennisæ class=ænav-linkæ>Table Tennis</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/trotting/swedenæ class=ænav-linkæ>Trotting</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/volleyball/volleyball-couponæ class=ænav-linkæ>Volleyball</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/water-polo/mens-european-championshipæ class=ænav-linkæ>Water Polo</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <li class=ænav-content-item  lastæ><span class=ænav-link moreæ><span class=æfake-arrowæ></span>TV and Specials</span><div class=æinner-nav-containeræ>
+                                          <div class=æfirstæ><span class=ænav-linkæ><span class=ædivideræ>TV and Specials</span></span></div>
+                                          <ul class=æinner-nav-contentæ>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>All Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tv/dancing-on-iceæ class=ænav-linkæ>TV</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/awards/oscarsæ class=ænav-linkæ>Awards</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/politics-and-electionæ class=ænav-linkæ>Politics and Election</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/christmasæ class=ænav-linkæ>Christmas</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/new-yearæ class=ænav-linkæ>New Year</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/noveltyæ class=ænav-linkæ>Novelty</a></li>
+                                                </ul>
+                                             </li>
+                                             <li class=æinner-nav-content-colæ>
+                                                <ul>
+                                                   <li class=æinner-nav-content-rowæ>
+                                                      <p class=æseparatoræ>Big Events</p>
+                                                   </li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/tv/dancing-on-iceæ class=ænav-linkæ>Dancing On Ice</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/politics-and-election/eastleigh/winning-partyæ class=ænav-linkæ>Eastleigh By-Election</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/awards/oscarsæ class=ænav-linkæ>Oscars</a></li>
+                                                   <li class=æinner-nav-content-rowæ><a href=æhttp://www.oddschecker.com/novelty/william-and-kate/name-of-babyæ class=ænav-linkæ>Royal Baby</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class=ætop-menu-item æ><a href=æhttp://www.oddschecker.com/free-bets.htmlæ class=ætop-menu-item-linkæ data-track=æ&amp;lid=head&amp;lpos=fbetsæ>free bets</a></li>
+                              <li class=ætop-menu-item æ><a href=æhttp://www.oddschecker.com/live-in-play-bettingæ class=ætop-menu-item-linkæ data-track=æ&amp;lid=head&amp;lpos=liveæ>in-play</a></li>
+                              <li class=ætop-menu-item æ><a href=æhttp://www.oddschecker.com/statsæ class=ætop-menu-item-linkæ data-track=æ&amp;lid=head&amp;lpos=statsæ>stats</a></li>
+                              <li class=ætop-menu-item æ><a href=æhttp://www.oddschecker.com/tipping-centreæ class=ætop-menu-item-linkæ data-track=æ&amp;lid=head&amp;lpos=tipæ>tips</a></li>
+                              <li class=ætop-menu-item æ><a href=æhttp://www.oddschecker.com/gamingæ class=ætop-menu-item-linkæ data-track=æ&amp;lid=head&amp;lpos=tipæ>gaming</a></li>
+                           </ul>
+                        </nav>
+                        <p id=æhelpæ><a id=æhelp-linkæ class=æbutton button-080-15æ href=æhttp://www.oddschecker.com/helpæ data-track=æ&amp;lid=head&amp;lpos=helpæ><span class=æhelp-textæ>Help</span><span id=æhelp-iconæ></span></a></p>
+                        <div id=æsearchæ>
+                           <form id=æsearch-boxæ action=æsite-search.htmlæ>
+                              <fieldset>
+                                 <legend>Search this site</legend><input type=æhiddenæ name=æcxæ value=æ004543349344698601113:sq1ewddwukkæ><input type=æhiddenæ name=æcofæ value=æFORID:10æ><input type=æhiddenæ name=æieæ value=æUTF-8æ><input id=æsearch-keywordæ type=æsearchæ name=æqæ maxlength=æ40æ><input id=æsearch-submitæ type=æsubmitæ value=æsubmitæ></fieldset>
+                           </form><script type=ætext/javascriptæ src=æhttps://www.google.com/cse/brand?form=search-box&amp;lang=EN&amp;sitesearch=trueæ></script></div>
+                     </div>
+                  </div>
+               </header>
+               <div id=æwrapperæ class=æfootball football-english football-english-league-1 æ>
+                  <div id=æwrapper-inneræ class=ææ>
+                     <div id=æcampaign-containeræ style=ætext-align: center; clear: both; padding: 4px 0;æ><a id=ætv-banneræ style=ædisplay: block; width: 830px; height: 120px; margin: 0 auto;æ href=æ/welcome-centreæ data-track=æ&amp;lid=welcome-tv&amp;lpos=cardsæ><img alt=æGo to Welcome Centreæ width=æ830æ height=æ120æ title=æGo to Welcome Centreæ src=æhttp://cdn.oddschecker.com/OC/i/OC/layout/tv-campaign.pngæ></a><a data-track=æ&amp;lid=welcome&amp;lpos=close_btnæ style=æcursor: pointer; float: right; margin-top: -15px; margin-right: 10px;æ id=æcampaign-close-btnæ><img alt=æCloseæ src=æhttp://cdn.oddschecker.com/OC/i/OC/layout/info-bar-close.gifæ></a><script type=ætext/javascriptæ>
+			$(document).ready(function() {
+				$('#campaign-close-btn').click(function(){
+					$.cookie('show_tv_campaign', 'no', {path: '/', expires: 50, domain: oc.cookieDomain});
+					$.cookie('show_welcome_campaign', 'no', {path: '/', expires: 365, domain: oc.cookieDomain});
+					$('#campaign-container').addClass(æhideæ);
+				});
+			});
+			</script></div>
+                     <div id=ælhcæ>
+                        <ul id=æhome-navæ class=ænavæ>
+                           <li class=ænav-content-itemæ><a class=ænav-header-textæ href=æhttp://www.oddschecker.com/æ><span id=æhome-iconæ></span>Home</a></li>
+                        </ul>
+                        <ul id=æsport-navæ class=ænavæ>
+                           <li><span class=ænav-header-textæ>Football</span><ul class=ænav-contentæ>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ>All Events</p>
+                                 </li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/footballæ class=ænav-linkæ>Football Centre</a></li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>Football Coupons</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/football-coupons/major-leagues-cupsæ class=ænav-linkæ>Major Leagues & Cups</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/ukæ class=ænav-linkæ>UK</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/internationalæ class=ænav-linkæ>International</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/bumper-couponæ class=ænav-linkæ>Bumper Coupon</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/over-under-0.5æ class=ænav-linkæ>Over/Under 0.5</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/over-under-1.5æ class=ænav-linkæ>Over/Under 1.5</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/over-under-2.5æ class=ænav-linkæ>Over/Under 2.5</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/double-chanceæ class=ænav-linkæ>Double Chance</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-coupons/both-teams-to-scoreæ class=ænav-linkæ>Both Teams To Score</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>Football Specials</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/football-specialsæ class=ænav-linkæ>Football Specials</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/matchday-specialsæ class=ænav-linkæ>Matchday Specials</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/season-match-betsæ class=ænav-linkæ>Season Match Bets</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ></p>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more lessæ>English</span><ul class=æinner-nav-contentæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/english/premier-leagueæ class=ænav-linkæ>Premier League</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/championshipæ class=ænav-linkæ>Championship</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/league-1æ class=ænav-link selectedæ><span class=æfake-arrowæ></span>League 1</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/league-2æ class=ænav-linkæ>League 2</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/fa-cupæ class=ænav-linkæ>FA Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/league-cupæ class=ænav-linkæ>League Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/football-league-trophyæ class=ænav-linkæ>Football League Trophy</a></li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>Non League</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/english/non-league/blue-square-premieræ class=ænav-linkæ>Blue Square Premier</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/blue-square-northæ class=ænav-linkæ>Blue Square North</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/blue-square-southæ class=ænav-linkæ>Blue Square South</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/ryman-leagueæ class=ænav-linkæ>Ryman League</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/southern-leagueæ class=ænav-linkæ>Southern League</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/northern-leagueæ class=ænav-linkæ>Northern League</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/fa-trophyæ class=ænav-linkæ>FA Trophy</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/fa-vaseæ class=ænav-linkæ>FA Vase</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/non-league/reservesæ class=ænav-linkæ>Reserves</a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>Scottish</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/scottish/splæ class=ænav-linkæ>SPL</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/division-1æ class=ænav-linkæ>Division 1</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/division-2æ class=ænav-linkæ>Division 2</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/division-3æ class=ænav-linkæ>Division 3</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/fa-cupæ class=ænav-linkæ>FA Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/league-cupæ class=ænav-linkæ>League Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/challenge-cupæ class=ænav-linkæ>Challenge Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/non-leagueæ class=ænav-linkæ>Non League</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/scottish/highland-leagueæ class=ænav-linkæ>Highland League</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>European</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/elite-couponæ class=ænav-linkæ>Elite Coupon</a></li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>France</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/france/ligue-1æ class=ænav-linkæ>Ligue 1</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/ligue-2æ class=ænav-linkæ>Ligue 2</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/nationalæ class=ænav-linkæ>National</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/cfaæ class=ænav-linkæ>CFA</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/coupe-de-franceæ class=ænav-linkæ>Coupe de France</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/coupe-de-la-ligueæ class=ænav-linkæ>Coupe de la Ligue</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/france/super-cupæ class=ænav-linkæ>Super Cup</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>Germany</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/germany/bundesligaæ class=ænav-linkæ>Bundesliga</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/bundesliga-2æ class=ænav-linkæ>Bundesliga 2</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/3rd-ligaæ class=ænav-linkæ>3rd Liga</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/dfb-pokalæ class=ænav-linkæ>DFB Pokal</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/liga-pokalæ class=ænav-linkæ>Liga Pokal</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/regionalligaæ class=ænav-linkæ>Regionalliga</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/lower-leaguesæ class=ænav-linkæ>Lower Leagues</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/youthæ class=ænav-linkæ>Youth</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/germany/season-match-betsæ class=ænav-linkæ>Season Match Bets</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>Italy</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/italy/serie-aæ class=ænav-linkæ>Serie A</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/serie-bæ class=ænav-linkæ>Serie B</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/coppa-italiaæ class=ænav-linkæ>Coppa Italia</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/super-cupæ class=ænav-linkæ>Super Cup</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/lega-proæ class=ænav-linkæ>Lega Pro</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/lega-pro-coppaæ class=ænav-linkæ>Lega Pro Coppa</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/serie-dæ class=ænav-linkæ>Serie D</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/campionato-primaveraæ class=ænav-linkæ>Campionato Primavera</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/italy/season-match-betsæ class=ænav-linkæ>Season Match Bets</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>Spain</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-primeraæ class=ænav-linkæ>La Liga Primera</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-segundaæ class=ænav-linkæ>La Liga Segunda</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/copa-del-reyæ class=ænav-linkæ>Copa del Rey</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-segunda-bæ class=ænav-linkæ>La Liga Segunda B</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-terceraæ class=ænav-linkæ>La Liga Tercera</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/super-cupæ class=ænav-linkæ>Super Cup</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/youthæ class=ænav-linkæ>Youth</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/season-match-betsæ class=ænav-linkæ>Season Match Bets</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/otheræ class=ænav-linkæ>Other</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/friendliesæ class=ænav-linkæ>Friendlies</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/nextgen-seriesæ class=ænav-linkæ>NextGen Series</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/worldæ class=ænav-linkæ>World</a></li>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ></p>
+                                 </li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/champions-leagueæ class=ænav-linkæ>Champions League</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/europa-leagueæ class=ænav-linkæ>Europa League</a></li>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ></p>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>International</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ælevel-3 nav-content-item more-li firstæ><span class=ænav-link more æ>World Cup</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/world-cup/matchesæ class=ænav-linkæ>Matches</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/world-cup/outrightsæ class=ænav-linkæ>Outrights</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/world-cup/team-specialsæ class=ænav-linkæ>Team Specials</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/euro-2016æ class=ænav-linkæ>Euro 2016</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international-friendliesæ class=ænav-linkæ>International Friendlies</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/african-nations-cupæ class=ænav-linkæ>African Nations Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/confederations-cupæ class=ænav-linkæ>Confederations Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/east-asian-championshipæ class=ænav-linkæ>East Asian Championship</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/west-asian-championshipæ class=ænav-linkæ>West Asian Championship</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/gulf-cupæ class=ænav-linkæ>Gulf Cup</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/africa-cecafa-cupæ class=ænav-linkæ>Africa CECAFA Cup</a></li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>Youth</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/youth/u23æ class=ænav-linkæ>U23</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u22æ class=ænav-linkæ>U22</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u21æ class=ænav-linkæ>U21</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u20æ class=ænav-linkæ>U20</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u19æ class=ænav-linkæ>U19</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u18æ class=ænav-linkæ>U18</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u17æ class=ænav-linkæ>U17</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/youth/u16æ class=ænav-linkæ>U16</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/new-nodeæ class=ænav-linkæ>New node</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ælevel-2 nav-content-item more-liæ><span class=ænav-link more æ>Womens</span><ul class=æinner-nav-content hideæ>
+                                       <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/womens-couponæ class=ænav-linkæ>Womens Coupon</a></li>
+                                       <li class=ælevel-3 nav-content-item more-liæ><span class=ænav-link more æ>International</span><ul class=æinner-nav-content hideæ>
+                                             <li class=ænav-content-item firstæ><a href=æhttp://www.oddschecker.com/football/international/world-cupæ class=ænav-linkæ>World Cup</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/euro-champsæ class=ænav-linkæ>Euro Champs</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/internationalsæ class=ænav-linkæ>Internationals</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/u23æ class=ænav-linkæ>U23</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/u20æ class=ænav-linkæ>U20</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/u19æ class=ænav-linkæ>U19</a></li>
+                                             <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international/u17æ class=ænav-linkæ>U17</a></li>
+                                          </ul>
+                                       </li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/clubæ class=ænav-linkæ>Club</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ>Big Events</p>
+                                 </li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/premier-leagueæ class=ænav-linkæ>Premier League</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/spain/la-liga-primeraæ class=ænav-linkæ>La Liga</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/english/premier-league/next-manager-to-leave-postæ class=ænav-linkæ>Next Manager Out</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/international-friendliesæ class=ænav-linkæ>Internationals</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/african-nations-cupæ class=ænav-linkæ>Africa Cup of Nations</a></li>
+                                 <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/football/football-specials/nottingham-forest-specials/next-permanent-manageræ class=ænav-linkæ>Next Nottm Forest Manager</a></li>
+                                 <li class=ænav-content-itemæ>
+                                    <p class=ænav-link separatoræ></p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <section>
+                           <div id=æsite-settingsæ class=æmoduleæ>
+                              <header>
+                                 <h2 class=ætitleæ>Site Settings<span class=æsettings-imageæ></span></h2>
+                              </header>
+                              <div class=æcontentæ>
+                                 <div class=æinner-contentæ>
+                                    <ul class=ænav-contentæ>
+                                       <li class=ænav-content-itemæ><span id=æexchange-traditionalæ class=æexchange-input button button-ccc-10 submit selectedæ data-value=ætraditionalæ>Fractional</span></li>
+                                       <li class=ænav-content-itemæ><span id=æexchange-decimalæ class=æexchange-input button button-ccc-10 submit æ data-value=ædecimalæ>Decimal</span></li>
+                                       <li class=ænav-content-itemæ><span id=æexchange-usæ class=æexchange-input button button-ccc-10 submit æ data-value=æusæ>U.S.</span></li>
+                                       <li class=ænav-content-itemæ>
+                                          <div id=æwinningsæ><span id=æexchange-winningsæ class=æexchange-input button button-ccc-10 submit æ data-value=æwinningsæ>Winnings</span><div id=æwinnings-calculatoræ><label for=æbet-stakeæ>Bet Stake</label><select id=æbet-stakeæ class=æbet-stakeæ>
+                                                   <option value=æ1æ>&pound;1</option>
+                                                   <option value=æ2æ>&pound;2</option>
+                                                   <option value=æ5æ>&pound;5</option>
+                                                   <option value=æ10æ selected>&pound;10</option></select><a href=æjavascript:void(0);æ class=æbutton button-f60-10æ>Apply<span class=æarrowæ></span></a></div>
+                                          </div>
+                                       </li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/exchange-settingsæ class=æexchange-settings nav-linkæ>Exchange Settings</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section>
+                           <div id=ætoolsæ class=æmoduleæ>
+                              <header>
+                                 <h2 class=ætitleæ>Tools &amp; Calculators<span class=æsettings-imageæ></span></h2>
+                              </header>
+                              <div class=æcontentæ>
+                                 <div class=æinner-contentæ>
+                                    <ul class=ætools-contentæ>
+                                       <li class=ænav-content-itemæ><a href=æjavascript:void(0);æ class=æbet-basket nav-link psuedo-utility-bar-openæ data-panel=æbet-basketæ data-track=æ&amp;lid=betBasket&amp;lpos=top_menuæ>Bet Basket</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/stats/market-reportsæ class=ænav-linkæ data-track=æ&amp;lid=MarketReports&amp;lpos=top_menuæ>Market Reports</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/tv-sports-calendaræ class=ænav-linkæ data-track=æ&amp;lid=TvCalendar&amp;lpos=top_menuæ>TV Calendar</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/sport-authorityæ class=ænav-linkæ data-track=æ&amp;lid=sport-authority&amp;lpos=top_menuæ>Video Tips</a></li>
+                                       <li class=ænav-content-itemæ><a href=æhttp://www.oddschecker.com/sports-radioæ class=ænav-link popupæ data-track=æ&amp;lid=Radio&amp;lpos=top_menuæ>Radio</a></li>
+                                       <li id=ænav-calculatorsæ class=ænav-content-item more-liæ><span class=ænav-link moreæ>Calculators</span><ul class=æinner-nav-containeræ>
+                                             <li><a class=ænav-link popup calculatoræ href=æbetting-tools/dutching-calculator.htmlæ title=æDutching Calculatoræ>Dutching</a></li>
+                                             <li><a class=ænav-link popup calculatoræ href=æbetting-tools/hutching-calculator.htmlæ title=æHutching Calculatoræ>Hutching</a></li>
+                                             <li><a class=ænav-link popup calculatoræ href=æbetting-tools/hedging-calculator.htmlæ title=æHedging Calculatoræ>Hedging</a></li>
+                                             <li><a class=ænav-link popup calculatoræ href=æbetting-tools/bet-calculator.htmlæ title=æBet Calculatoræ>Bet Calculator</a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                     <div id=æwrapper-contentæ>
+                        <div id=æmain-contentæ>
+                           <div id=ætopæ>
+                              <section>
+                                 <div class=æpg1 moduleæ>
+                                    <header>
+                                       <div id=æsocial-mediaæ>
+                                          <div id=ætwitter-btnæ><a href=æhttps://twitter.com/shareæ class=ætwitter-share-buttonæ data-text=æLatest English League 1 Best Odds @Oddschecker | #Football #Bettingæ data-count=ænoneæ data-url=æhttp://www.oddschecker.com/football/english/league-1æ>Tweet</a></div>
+                                          <div id=ægoogle-plusone-btnæ>
+                                             <div class=æg-plusoneæ data-annotation=ænoneæ data-size=æmediumæ data-href=æhttp://www.oddschecker.com/football/english/league-1æ></div>
+                                          </div>
+                                          <div id=æfacebook-btnæ>
+                                             <div id=æfb-rootæ></div>
+                                             <div class=æfb-likeæ data-href=æhttp://www.oddschecker.com/football/english/league-1æ data-send=æfalseæ data-layout=æbutton_countæ data-width=æ100æ data-show-faces=æfalseæ data-font=ælucida grandeæ></div>
+                                          </div>
+                                       </div>
+                                       <h1>English League 1 Betting Odds</h1>
+                                    </header>
+                                    <div class=æcontentæ>
+                                       <div class=æinner-contentæ>
+                                          <p class=ætextæ>The 2012/3 season of League One sees Doncaster, Coventry and Portsmouth drop down from The Championship while Swindon, Shrewsbury,
+                                             Crawley and Crewe are promoted from League Two.
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </section>
+                           </div>
+                           <div id=æmcæ>
+                              <section>
+                                 <div id=æfixturesæ class=æfixtures moduleæ>
+                                    <header>
+                                       <h2 class=ætitleæ>League 1 Matches </h2>
+                                    </header>
+                                    <div class=æcontent-4æ>
+                                       <table>
+                                          <thead>
+                                             <tr>
+                                                <th class=ætimeæ>Time</th>
+                                                <th>Home</th>
+                                                <th>Draw</th>
+                                                <th>Away</th>
+                                                <th class=æbettingæ>Betting</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr class=ædate firstæ>
+                                                <td class=ædayæ colspan=æ5æ>
+                                                   <p>9 February 2013</p>
+                                                </td>
+                                             </tr>
+                                             <tr data-market-id=æ861904106æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565886533æ>
+                                                   <p><span title=æAdd Bournemouth to bet basketæ class=æadd-to-bet-basketæ data-name=æBournemouthæ></span><span class=æfixtures-bet-nameæ>Bournemouth</span><span class=æoddsæ> (3/10)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565886530æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (5)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565886527æ>
+                                                   <p><span title=æAdd Portsmouth to bet basketæ class=æadd-to-bet-basketæ data-name=æPortsmouthæ></span><span class=æfixtures-bet-nameæ>Portsmouth</span><span class=æoddsæ> (9)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Bournemouth v Portsmouthæ class=æbutton button-f60-10æ href=æ/football/english/league-1/bournemouth-v-portsmouth/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861908543æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565913377æ>
+                                                   <p><span title=æAdd Brentford to bet basketæ class=æadd-to-bet-basketæ data-name=æBrentfordæ></span><span class=æfixtures-bet-nameæ>Brentford</span><span class=æoddsæ> (8/13)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565913380æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (29/9)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565913383æ>
+                                                   <p><span title=æAdd Bury to bet basketæ class=æadd-to-bet-basketæ data-name=æBuryæ></span><span class=æfixtures-bet-nameæ>Bury</span><span class=æoddsæ> (11/2)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Brentford v Buryæ class=æbutton button-f60-10æ href=æ/football/english/league-1/brentford-v-bury/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861928568æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4566031355æ>
+                                                   <p><span title=æAdd Carlisle to bet basketæ class=æadd-to-bet-basketæ data-name=æCarlisleæ></span><span class=æfixtures-bet-nameæ>Carlisle</span><span class=æoddsæ> (11/8)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4566031361æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (5/2)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4566031352æ>
+                                                   <p><span title=æAdd Stevenage to bet basketæ class=æadd-to-bet-basketæ data-name=æStevenageæ></span><span class=æfixtures-bet-nameæ>Stevenage</span><span class=æoddsæ> (31/14)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Carlisle v Stevenageæ class=æbutton button-f60-10æ href=æ/football/english/league-1/carlisle-v-stevenage/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861886178æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565821805æ>
+                                                   <p><span title=æAdd Colchester to bet basketæ class=æadd-to-bet-basketæ data-name=æColchesteræ></span><span class=æfixtures-bet-nameæ>Colchester</span><span class=æoddsæ> (29/18)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565821811æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (17/7)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565821799æ>
+                                                   <p><span title=æAdd Preston to bet basketæ class=æadd-to-bet-basketæ data-name=æPrestonæ></span><span class=æfixtures-bet-nameæ>Preston</span><span class=æoddsæ> (15/8)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Colchester v Prestonæ class=æbutton button-f60-10æ href=æ/football/english/league-1/colchester-v-preston/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861904535æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565889491æ>
+                                                   <p><span title=æAdd Coventry to bet basketæ class=æadd-to-bet-basketæ data-name=æCoventryæ></span><span class=æfixtures-bet-nameæ>Coventry</span><span class=æoddsæ> (11/10)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565889494æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (77/29)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565889488æ>
+                                                   <p><span title=æAdd Yeovil to bet basketæ class=æadd-to-bet-basketæ data-name=æYeovilæ></span><span class=æfixtures-bet-nameæ>Yeovil</span><span class=æoddsæ> (3)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Coventry v Yeovilæ class=æbutton button-f60-10æ href=æ/football/english/league-1/coventry-v-yeovil/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861914303æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565951318æ>
+                                                   <p><span title=æAdd Doncaster to bet basketæ class=æadd-to-bet-basketæ data-name=æDoncasteræ></span><span class=æfixtures-bet-nameæ>Doncaster</span><span class=æoddsæ> (13/12)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565951321æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (13/5)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565951312æ>
+                                                   <p><span title=æAdd Walsall to bet basketæ class=æadd-to-bet-basketæ data-name=æWalsallæ></span><span class=æfixtures-bet-nameæ>Walsall</span><span class=æoddsæ> (3)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Doncaster v Walsallæ class=æbutton button-f60-10æ href=æ/football/english/league-1/doncaster-v-walsall/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861875552æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565759126æ>
+                                                   <p><span title=æAdd Leyton Orient to bet basketæ class=æadd-to-bet-basketæ data-name=æLeyton Orientæ></span><span class=æfixtures-bet-nameæ>Leyton Orient</span><span class=æoddsæ> (5/3)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565759144æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (5/2)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565759132æ>
+                                                   <p><span title=æAdd Tranmere to bet basketæ class=æadd-to-bet-basketæ data-name=æTranmereæ></span><span class=æfixtures-bet-nameæ>Tranmere</span><span class=æoddsæ> (35/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Leyton Orient v Tranmereæ class=æbutton button-f60-10æ href=æ/football/english/league-1/leyton-orient-v-tranmere/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861910748æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565927675æ>
+                                                   <p><span title=æAdd Notts Co to bet basketæ class=æadd-to-bet-basketæ data-name=æNotts Coæ></span><span class=æfixtures-bet-nameæ>Notts Co</span><span class=æoddsæ> (24/23)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565927681æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (31/12)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565927687æ>
+                                                   <p><span title=æAdd Crewe to bet basketæ class=æadd-to-bet-basketæ data-name=æCreweæ></span><span class=æfixtures-bet-nameæ>Crewe</span><span class=æoddsæ> (37/13)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Notts Co v Creweæ class=æbutton button-f60-10æ href=æ/football/english/league-1/notts-co-v-crewe/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861902024æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565870201æ>
+                                                   <p><span title=æAdd Oldham to bet basketæ class=æadd-to-bet-basketæ data-name=æOldhamæ></span><span class=æfixtures-bet-nameæ>Oldham</span><span class=æoddsæ> (22/9)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565870207æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (11/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565870204æ>
+                                                   <p><span title=æAdd MK Dons to bet basketæ class=æadd-to-bet-basketæ data-name=æMK Donsæ></span><span class=æfixtures-bet-nameæ>MK Dons</span><span class=æoddsæ> (7/5)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Oldham v MK Donsæ class=æbutton button-f60-10æ href=æ/football/english/league-1/oldham-v-mk-dons/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861925241æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4566017474æ>
+                                                   <p><span title=æAdd Scunthorpe to bet basketæ class=æadd-to-bet-basketæ data-name=æScunthorpeæ></span><span class=æfixtures-bet-nameæ>Scunthorpe</span><span class=æoddsæ> (17/10)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4566017486æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (13/5)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4566017480æ>
+                                                   <p><span title=æAdd Crawley to bet basketæ class=æadd-to-bet-basketæ data-name=æCrawleyæ></span><span class=æfixtures-bet-nameæ>Crawley</span><span class=æoddsæ> (9/5)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Scunthorpe v Crawleyæ class=æbutton button-f60-10æ href=æ/football/english/league-1/scunthorpe-v-crawley/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861891476æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565840978æ>
+                                                   <p><span title=æAdd Shrewsbury to bet basketæ class=æadd-to-bet-basketæ data-name=æShrewsburyæ></span><span class=æfixtures-bet-nameæ>Shrewsbury</span><span class=æoddsæ> (45/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565840981æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (12/5)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565840987æ>
+                                                   <p><span title=æAdd Sheffield Utd to bet basketæ class=æadd-to-bet-basketæ data-name=æSheffield Utdæ></span><span class=æfixtures-bet-nameæ>Sheffield Utd</span><span class=æoddsæ> (6/4)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Shrewsbury v Sheffield Utdæ class=æbutton button-f60-10æ href=æ/football/english/league-1/shrewsbury-v-sheffield-utd/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ861906650æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>15:00</p>
+                                                </td>
+                                                <td data-participant-id=æ4565899958æ>
+                                                   <p><span title=æAdd Swindon to bet basketæ class=æadd-to-bet-basketæ data-name=æSwindonæ></span><span class=æfixtures-bet-nameæ>Swindon</span><span class=æoddsæ> (4/9)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565899961æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (54/13)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4565899955æ>
+                                                   <p><span title=æAdd Hartlepool to bet basketæ class=æadd-to-bet-basketæ data-name=æHartlepoolæ></span><span class=æfixtures-bet-nameæ>Hartlepool</span><span class=æoddsæ> (233/29)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Swindon v Hartlepoolæ class=æbutton button-f60-10æ href=æ/football/english/league-1/swindon-v-hartlepool/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr class=ædate firstæ>
+                                                <td class=ædayæ colspan=æ5æ>
+                                                   <p>12 February 2013</p>
+                                                </td>
+                                             </tr>
+                                             <tr data-market-id=æ867829817æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598603339æ>
+                                                   <p><span title=æAdd Brentford to bet basketæ class=æadd-to-bet-basketæ data-name=æBrentfordæ></span><span class=æfixtures-bet-nameæ>Brentford</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598603342æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598603318æ>
+                                                   <p><span title=æAdd Stevenage to bet basketæ class=æadd-to-bet-basketæ data-name=æStevenageæ></span><span class=æfixtures-bet-nameæ>Stevenage</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Brentford v Stevenageæ class=æbutton button-f60-10æ href=æ/football/english/league-1/brentford-v-stevenage/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867839789æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598692931æ>
+                                                   <p><span title=æAdd Bury to bet basketæ class=æadd-to-bet-basketæ data-name=æBuryæ></span><span class=æfixtures-bet-nameæ>Bury</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598692919æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598692925æ>
+                                                   <p><span title=æAdd Sheffield Utd to bet basketæ class=æadd-to-bet-basketæ data-name=æSheffield Utdæ></span><span class=æfixtures-bet-nameæ>Sheffield Utd</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Bury v Sheffield Utdæ class=æbutton button-f60-10æ href=æ/football/english/league-1/bury-v-sheffield-utd/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867822569æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598542460æ>
+                                                   <p><span title=æAdd Crewe to bet basketæ class=æadd-to-bet-basketæ data-name=æCreweæ></span><span class=æfixtures-bet-nameæ>Crewe</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598542445æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598542454æ>
+                                                   <p><span title=æAdd Bournemouth to bet basketæ class=æadd-to-bet-basketæ data-name=æBournemouthæ></span><span class=æfixtures-bet-nameæ>Bournemouth</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Crewe v Bournemouthæ class=æbutton button-f60-10æ href=æ/football/english/league-1/crewe-v-bournemouth/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867836030æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598665946æ>
+                                                   <p><span title=æAdd Doncaster to bet basketæ class=æadd-to-bet-basketæ data-name=æDoncasteræ></span><span class=æfixtures-bet-nameæ>Doncaster</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598665958æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598665952æ>
+                                                   <p><span title=æAdd MK Dons to bet basketæ class=æadd-to-bet-basketæ data-name=æMK Donsæ></span><span class=æfixtures-bet-nameæ>MK Dons</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Doncaster v MK Donsæ class=æbutton button-f60-10æ href=æ/football/english/league-1/doncaster-v-mk-dons/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867842507æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598713883æ>
+                                                   <p><span title=æAdd Hartlepool to bet basketæ class=æadd-to-bet-basketæ data-name=æHartlepoolæ></span><span class=æfixtures-bet-nameæ>Hartlepool</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598713889æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598713886æ>
+                                                   <p><span title=æAdd Portsmouth to bet basketæ class=æadd-to-bet-basketæ data-name=æPortsmouthæ></span><span class=æfixtures-bet-nameæ>Portsmouth</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Hartlepool v Portsmouthæ class=æbutton button-f60-10æ href=æ/football/english/league-1/hartlepool-v-portsmouth/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867817802æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598507582æ>
+                                                   <p><span title=æAdd Scunthorpe to bet basketæ class=æadd-to-bet-basketæ data-name=æScunthorpeæ></span><span class=æfixtures-bet-nameæ>Scunthorpe</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598507591æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598507585æ>
+                                                   <p><span title=æAdd Carlisle to bet basketæ class=æadd-to-bet-basketæ data-name=æCarlisleæ></span><span class=æfixtures-bet-nameæ>Carlisle</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Scunthorpe v Carlisleæ class=æbutton button-f60-10æ href=æ/football/english/league-1/scunthorpe-v-carlisle/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                             <tr data-market-id=æ867844931æ class=æmatch-onæ>
+                                                <td class=ætimeæ>
+                                                   <p>19:45</p>
+                                                </td>
+                                                <td data-participant-id=æ4598731826æ>
+                                                   <p><span title=æAdd Yeovil to bet basketæ class=æadd-to-bet-basketæ data-name=æYeovilæ></span><span class=æfixtures-bet-nameæ>Yeovil</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598731829æ>
+                                                   <p><span title=æAdd Draw to bet basketæ class=æadd-to-bet-basketæ data-name=æDrawæ></span><span class=æfixtures-bet-nameæ>Draw</span><span class=æoddsæ> (1/4)</span></p>
+                                                </td>
+                                                <td data-participant-id=æ4598731823æ>
+                                                   <p><span title=æAdd Preston to bet basketæ class=æadd-to-bet-basketæ data-name=æPrestonæ></span><span class=æfixtures-bet-nameæ>Preston</span><span class=æoddsæ> (1/19)</span></p>
+                                                </td>
+                                                <td class=æbettingæ><a title=æGo to Yeovil v Prestonæ class=æbutton button-f60-10æ href=æ/football/english/league-1/yeovil-v-preston/winneræ>All Odds<span class=æarrowæ></span></a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </section>
+                              <section>
+                                 <div id=æoutrightsæ class=æoutrights moduleæ>
+                                    <header>
+                                       <h2 class=ætitleæ>League 1 Outrights</h2>
+                                    </header>
+                                    <div class=æmain-outrightæ>
+                                       <div class=æcontent-4 minitable æ>
+                                          <h3 class=æminitable-headeræ>Winner</h3>
+                                          <table data-market-id=æ648963644æ>
+                                             <thead>
+                                                <tr>
+                                                   <th>Participant name</th>
+                                                   <th>Odds</th>
+                                                   <th>Bookie</th>
+                                                   <th>All odds</th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <tr class=æminitable-rowæ data-participant-id=æ3544550078æ>
+                                                   <td class=æminitable-nameæ>
+                                                      <p>Bournemouth</p>
+                                                   </td>
+                                                   <td class=æminitable-oddsæ>
+                                                      <p><a class=æodds coæ href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=oddsæ data-bk=æSJæ>11/4</a></p>
+                                                   </td>
+                                                   <td class=æminitable-bookie-logoæ><a href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=bookieLogoæ data-bk=æSJæ class=æbSJ0 bk-logo-clickæ title=æStan Jamesæ></a></td>
+                                                   <td class=æminitable-view-all-oddsæ>
+                                                      <p><a class=æarrow arrow-hide-text arrow-666-f60-15 coæ href=æjavascript:void(0);æ data-bk=æSJæ>View all odds</a></p>
+                                                   </td>
+                                                </tr>
+                                                <tr class=æminitable-rowæ data-participant-id=æ3544550102æ>
+                                                   <td class=æminitable-nameæ>
+                                                      <p>Doncaster</p>
+                                                   </td>
+                                                   <td class=æminitable-oddsæ>
+                                                      <p><a class=æodds coæ href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=oddsæ data-bk=æCEæ>5</a></p>
+                                                   </td>
+                                                   <td class=æminitable-bookie-logoæ><a href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=bookieLogoæ data-bk=æCEæ class=æbCE0 bk-logo-clickæ title=æCoralæ></a></td>
+                                                   <td class=æminitable-view-all-oddsæ>
+                                                      <p><a class=æarrow arrow-hide-text arrow-666-f60-15 coæ href=æjavascript:void(0);æ data-bk=æCEæ>View all odds</a></p>
+                                                   </td>
+                                                </tr>
+                                                <tr class=æminitable-rowæ data-participant-id=æ3544542326æ>
+                                                   <td class=æminitable-nameæ>
+                                                      <p>Swindon</p>
+                                                   </td>
+                                                   <td class=æminitable-oddsæ>
+                                                      <p><a class=æodds coæ href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=oddsæ data-bk=æB3æ>11/2</a></p>
+                                                   </td>
+                                                   <td class=æminitable-bookie-logoæ><a href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=bookieLogoæ data-bk=æB3æ class=æbB30 bk-logo-clickæ title=æbet365æ></a></td>
+                                                   <td class=æminitable-view-all-oddsæ>
+                                                      <p><a class=æarrow arrow-hide-text arrow-666-f60-15 coæ href=æjavascript:void(0);æ data-bk=æB3æ>View all odds</a></p>
+                                                   </td>
+                                                </tr>
+                                                <tr class=æminitable-rowæ data-participant-id=æ3544550138æ>
+                                                   <td class=æminitable-nameæ>
+                                                      <p>Tranmere</p>
+                                                   </td>
+                                                   <td class=æminitable-oddsæ>
+                                                      <p><a class=æodds coæ href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=oddsæ data-bk=æBFæ>7</a></p>
+                                                   </td>
+                                                   <td class=æminitable-bookie-logoæ><a href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=bookieLogoæ data-bk=æBFæ class=æbBF0 bk-logo-clickæ title=æBetfairæ></a></td>
+                                                   <td class=æminitable-view-all-oddsæ>
+                                                      <p><a class=æarrow arrow-hide-text arrow-666-f60-15 coæ href=æjavascript:void(0);æ data-bk=æBFæ>View all odds</a></p>
+                                                   </td>
+                                                </tr>
+                                                <tr class=æminitable-rowæ data-participant-id=æ3544550081æ>
+                                                   <td class=æminitable-nameæ>
+                                                      <p>Brentford</p>
+                                                   </td>
+                                                   <td class=æminitable-oddsæ>
+                                                      <p><a class=æodds coæ href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=oddsæ data-bk=æVCæ>8</a></p>
+                                                   </td>
+                                                   <td class=æminitable-bookie-logoæ><a href=æjavascript:void(0);æ data-track=æ&amp;lid=Minitable&amp;lpos=bookieLogoæ data-bk=æVCæ class=æbVC0 bk-logo-clickæ title=æBet Victoræ></a></td>
+                                                   <td class=æminitable-view-all-oddsæ>
+                                                      <p><a class=æarrow arrow-hide-text arrow-666-f60-15 coæ href=æjavascript:void(0);æ data-bk=æVCæ>View all odds</a></p>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                          <div class=æminitable-footeræ>
+                                             <p><a title=æGo to League 1 Winneræ class=æbutton button-f60-10æ href=æhttp://www.oddschecker.com/football/english/league-1/league-1/winneræ>View all odds<span class=æarrowæ></span></a></p>
+                                          </div>
+                                       </div>
+                                       <div class=æother-outrightsæ>
+                                          <h3>Other Outright Betting Markets</h3>
+                                          <ul>
+                                             <li class=æoutright rowæ><a class=æoutright-text arrow-row æ href=æ/football/english/league-1/promotionæ><span class=æarrow arrow-hide-text arrow-666-f60-15æ>View all odds</span><span class=æodds-titleæ>Promotion</span><p class=æodds-textæ>Bournemouth (11/10), Swindon (5/4), Doncaster (6/4), Tranm&hellip;</p></a></li>
+                                             <li class=æoutright rowæ><a class=æoutright-text arrow-row æ href=æ/football/english/league-1/relegationæ><span class=æarrow arrow-hide-text arrow-666-f60-15æ>View all odds</span><span class=æodds-titleæ>Relegation</span><p class=æodds-textæ>Portsmouth (1/100), Hartlepool (1/12), Bury (4/5), Colches&hellip;</p></a></li>
+                                             <li class=æoutright last rowæ><a class=æoutright-text arrow-row æ href=æ/football/english/league-1/top-goalscoreræ><span class=æarrow arrow-hide-text arrow-666-f60-15æ>View all odds</span><span class=æodds-titleæ>Top Goalscorer</span><p class=æodds-textæ>L Clarke (15/8), Leon Clarke (5/2), Clayton Donaldson (4),&hellip;</p></a></li>
+                                          </ul>
+                                       </div>
+                                       <ul class=æmore-outrights 1æ>
+                                          <li class=æoutright rowæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/handicapsæ><span class=æodds-titleæ>Handicaps</span></a></li>
+                                          <li class=æoutrightæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-6-finishæ><span class=æodds-titleæ>Top 6 Finish</span></a></li>
+                                          <li class=æoutrightæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-midlands-clubæ><span class=æodds-titleæ>Top Midlands Club</span></a></li>
+                                          <li class=æoutright rowæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-newcomeræ><span class=æodds-titleæ>Top Newcomer</span></a></li>
+                                          <li class=æoutrightæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-northern-clubæ><span class=æodds-titleæ>Top Northern Club</span></a></li>
+                                          <li class=æoutrightæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-relegated-teamæ><span class=æodds-titleæ>Top Relegated Team</span></a></li>
+                                          <li class=æoutright last rowæ><a class=æoutright-text arrow-row no-oddsæ href=æ/football/english/league-1/top-southern-clubæ><span class=æodds-titleæ>Top Southern Club</span></a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </section>
+                           </div>
+                           <div id=ærhcæ>
+                              <section>
+                                 <div id=æfind-a-betæ class=æmoduleæ>
+                                    <header>
+                                       <h2 class=ætitleæ>Slider Of Fortune | Find A Bet </h2>
+                                    </header>
+                                    <div class=æcontentæ>
+                                       <div class=æinner-contentæ>
+                                          <div id=æstake-amountæ>
+                                             <h3>Stake<span class=æcurrencyæ>&pound;<span id=æstake-slider-valueæ></span></span></h3>
+                                             <div id=æstake-slideræ class=æslideræ></div>
+                                          </div>
+                                          <div id=æwin-amountæ>
+                                             <h3>I want to win<span class=æcurrencyæ>&pound;<span id=æwin-slider-valueæ></span></span></h3>
+                                             <div id=æwin-slideræ class=æslideræ></div>
+                                          </div><a id=æfind-a-bet-goæ class=æbutton button-f60-20æ data-cgid=æ2æ data-cid=æ2æ href=æhttp://www.oddschecker.com/find-a-betæ>Show me the bets<span class=æarrowæ></span></a></div>
+                                    </div>
+                                 </div>
+                              </section>
+                              <section>
+                                 <div class=æmoduleæ>
+                                    <header>
+                                       <h2 class=ætitleæ>News</h2>
+                                    </header>
+                                    <div id=ænewsæ class=æcontent-2æ>
+                                       <div class=æinner-content-2æ>
+                                          <article>
+                                             <div class=ænews firstæ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474681%2Fbalotelli-at-centre-of-racism-stormæ>Balotelli at centre of racism storm</a></h3>
+                                                <p>Mario Balotelli is at the centre of a racism storm after a shocking public remark by AC Milan vice-president Paolo Berlusconi.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474784%2Fbale-could-play-up-front-for-walesæ>Bale could play up front for Wales</a></h3>
+                                                <p>Chris Coleman is prepared to play Gareth Bale as a striker in a bid to end Wales' chronic goal shortage.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474409%2Fdebrecen-reds-game-investigatedæ>Debrecen: Reds game investigated</a></h3>
+                                                <p>Hungarian club Debrecen have confirmed their 2009 Champions League game with Liverpool was part of a match-fixing investigation.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474528%2Fengland-can-blunt-brazilæ>England can blunt Brazil</a></h3>
+                                                <p>Chris Hammer believes England can hold Brazil to a draw as he previews Wednesday's international action.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Flive%2Fmatch-preview%2F274567%2Fcole-to-win-100th-cap-hodgsonæ>Cole to win 100th cap - Hodgson</a></h3>
+                                                <p>England coach Roy Hodgson has confirmed Ashley Cole will start Wednesday's friendly against Brazil and earn his 100th cap.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8473099%2Fmcleish-leaves-nottingham-forestæ>McLeish leaves Nottingham Forest</a></h3>
+                                                <p>Alex McLeish has parted company with Nottingham Forest after little over a month at the helm of the Championship side.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Flive%2Fmatch-report%2F281651%2Feasy-for-england-as-ince-starsæ>Easy for England as Ince stars</a></h3>
+                                                <p>Thomas Ince was the star of the show as England Under 21s thrashed Sweden 4-0 at the Banks's Stadium on Tuesday.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474491%2Fswindon-close-on-promotion-spotsæ>Swindon close on promotion spots</a></h3>
+                                                <p>A review of Tuesday's action in npower League One, where Swindon won away at Colchester.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Fnews%2Farticle%2F165%2F8474501%2Fthree-and-easy-for-port-valeæ>Three and easy for Port Vale</a></h3>
+                                                <p>A review of Tuesday's action in npower League Two, where Port Vale eased to victory over AFC Wimbledon.</p>
+                                             </div>
+                                          </article>
+                                          <article>
+                                             <div class=ænews æ>
+                                                <h3><a target=æ_blankæ rel=ænofollowæ class=ænews-titleæ href=æ/clickout.htm?type=news&amp;burl=http%3A%2F%2Fwww.sportinglife.com%2Ffootball%2Flive%2Fmatch-reaction%2F281651%2Fpearce-delight-at-impressive-winæ>Pearce delight at impressive win</a></h3>
+                                                <p>Stuart Pearce admitted his England Under-21s had exceeded his expectations after a 4-0 friendly victory over Sweden.</p>
+                                             </div>
+                                          </article>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </section>
+                              <div id=æleague-tableæ class=æmoduleæ>
+                                 <header>
+                                    <h2 class=ætitleæ>League Table</h2>
+                                 </header>
+                                 <div id=æleague-table-collectionæ>
+                                    <table class=ætab-tableæ>
+                                       <thead>
+                                          <tr>
+                                             <th class=æpositionæ>Position</th>
+                                             <th class=ææ>Team</th>
+                                             <th class=ææ>Pts</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>1</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Tranmere</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>56</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>2</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Doncaster</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>56</p>
+                                             </td>
+                                          </tr>
+                                          <tr class=ædivideræ>
+                                             <td>3</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Swindon</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>54</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>4</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Bournemouth</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>52</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>5</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Brentford</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>50</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>6</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Sheffield Utd</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>48</p>
+                                             </td>
+                                          </tr>
+                                          <tr class=ædivideræ>
+                                             <td>7</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Yeovil</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>48</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>8</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Coventry</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>47</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>9</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Walsall</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>44</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>10</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Notts County</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>43</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>11</td>
+                                             <td class=ætd-teamæ>
+                                                <p>MK Dons</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>43</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>12</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Stevenage</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>43</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>13</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Crewe</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>43</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>14</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Leyton Orient</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>43</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>15</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Crawley Town</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>42</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>16</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Carlisle</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>36</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>17</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Preston</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>35</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>18</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Shrewsbury</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>34</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>19</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Colchester</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>29</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>20</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Scunthorpe</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>29</p>
+                                             </td>
+                                          </tr>
+                                          <tr class=ædivideræ>
+                                             <td>21</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Oldham</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>27</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>22</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Bury</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>26</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>23</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Portsmouth</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>21</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>24</td>
+                                             <td class=ætd-teamæ>
+                                                <p>Hartlepool</p>
+                                             </td>
+                                             <td class=ææ>
+                                                <p>19</p>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id=æbottomæ>
+                              <aside>
+                                 <div id=æad-container-leaderboardæ></div>
+                              </aside>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <footer>
+                  <div id=æfooteræ>
+                     <div id=ænav-footeræ>
+                        <ul>
+                           <li class=æfirst sectionæ>
+                              <p class=ætitleæ>Featured Events</p>
+                              <ul>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/footballæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FeaturedEventsæ>Football Betting</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/football/english/premier-leagueæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FeaturedEventsæ>Barclays Premier League Betting</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/grand-national-betting-odds/winneræ data-track=æ&amp;lid=MiscFooter&amp;lpos=FeaturedEventsæ>Grand National Betting</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/horse-racing-betting/ante-post-racing/cheltenham-festivalæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FeaturedEventsæ>Cheltenham Festival Betting</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/football/champions-leagueæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FeaturedEventsæ>Champions League Betting</a></li>
+                              </ul>
+                           </li>
+                           <li class=æsectionæ>
+                              <p class=ætitleæ>Latest Big Events</p>
+                              <ul>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/football/international-friendlies/england-v-brazil/winneræ data-track=æ&amp;lid=MiscFooter&amp;lpos=LatestEventsæ>England v Brazil Odds</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/darts/premier-leagueæ data-track=æ&amp;lid=MiscFooter&amp;lpos=LatestEventsæ>Premier League Darts Odds</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/awards/oscarsæ data-track=æ&amp;lid=MiscFooter&amp;lpos=LatestEventsæ>Oscars Betting Odds</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/rugby-union/six-nationsæ data-track=æ&amp;lid=MiscFooter&amp;lpos=LatestEventsæ>Six Nations Betting</a></li>
+                                 <li><a class=æfooter-linkæ href=æhttp://www.oddschecker.com/tv/dancing-on-iceæ data-track=æ&amp;lid=MiscFooter&amp;lpos=LatestEventsæ>Dancing On Ice Betting</a></li>
+                              </ul>
+                           </li>
+                           <li class=ælast sectionæ>
+                              <p class=ætitleæ>Recently Viewed</p>
+                              <ul>
+                                 <li>
+                                    <p class=æfooter-textæ>No pages viewed yet</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <div id=æother-countriesæ>
+                           <p class=ætitleæ>Select Language</p>
+                           <ul id=æcountriesæ>
+                              <li class=æflagæ><a class=æit countryæ href=æhttp://www.confrontaquote.itæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FlagITæ>italiano</a></li>
+                              <li class=æflagæ><a class=ædk countryæ href=æhttp://www.oddschecker.dkæ data-track=æ&amp;lid=MiscFooter&amp;lpos=FlagDKæ>danske</a></li>
+                           </ul>
+                        </div><a id=ægam-careæ href=æhttp://www.oddschecker.com/online-gambling-support.htmlæ><span id=ægam-care-iconæ></span>Bet responsibly</a></div>
+                     <div id=æbookendæ>
+                        <p class=ætitleæ>Oddschecker</p>
+                        <ul>
+                           <li><a href=æhttp://www.oddschecker.com/help/about-us/oddschecker-online-betting-odds-comparisonæ class=æfooter-link æ data-track=æ&amp;lid=MiscFooter&amp;lpos=AboutUsæ>About Us</a></li>
+                           <li>·<a href=æmailto:marketing@oddschecker.comæ class=æfooter-link æ data-track=æ&amp;lid=MiscFooter&amp;lpos=Advertisingæ>Advertising</a></li>
+                           <li>·<a href=æhttp://www.oddschecker.com/feedbackæ class=æfooter-link popupæ data-track=æ&amp;lid=MiscFooter&amp;lpos=Feedbackæ>Contact Us</a></li>
+                           <li>·<a href=æhttp://www.oddschecker.com/helpæ class=æfooter-link æ data-track=æ&amp;lid=Help&amp;lpos=Footeræ>Help</a></li>
+                           <li>·<a href=æhttp://poker.oddschecker.comæ class=æfooter-link æ data-track=æ&amp;lid=Poker&amp;lpos=Footeræ target=æ_blankæ rel=ænofollowæ>Poker</a></li>
+                           <li>·<a href=æhttp://casino.oddschecker.comæ class=æfooter-link æ data-track=æ&amp;lid=Casino&amp;lpos=Footeræ target=æ_blankæ rel=ænofollowæ>Casinos </a></li>
+                           <li>·<a href=æhttp://www.onlinebingochecker.comæ class=æfooter-link æ data-track=æ&amp;lid=Bingo&amp;lpos=Footeræ target=æ_blankæ rel=ænofollowæ>Bingo</a></li>
+                           <li>·<a href=æ/jobs.htmlæ class=æfooter-link æ data-track=æ&amp;lid=Jobs&amp;lpos=Footeræ>Jobs</a></li>
+                           <li>·<a href=æ/myoddschecker/cookiesæ class=æfooter-link æ data-track=æ&amp;lid=PrivacyCookies&amp;lpos=Footeræ>Privacy & Cookies</a></li>
+                        </ul>
+                        <p id=æmedia-group-365æ><a href=æ#_æ class=æfooter-linkæ>Part of 365 Media Group</a></p>
+                        <div id=ælinks-365æ class=æhideæ>
+                           <ul id=ænew-line-365æ>
+                              <li><a href=æhttp://www.teamtalk.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>TEAMtalk.com</a></li>
+                              <li>·<a href=æhttp://www.bettingzone.co.ukæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Betting Zone</a></li>
+                              <li>·<a href=æhttp://www.football365.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Football 365</a></li>
+                              <li>·<a href=æhttp://www.golf365.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Golf 365</a></li>
+                              <li>·<a href=æhttp://www.cricket365.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Cricket 365</a></li>
+                              <li>·<a href=æhttp://www.planet-rugby.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Planet Rugby</a></li>
+                              <li>·<a href=æhttp://www.planetf1.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Planet F1</a></li>
+                              <li>·<a href=æhttp://www.skysports.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Sky Sports</a></li>
+                              <li>·<a href=æhttp://www.skypoker.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Sky Poker</a></li>
+                              <li>·<a href=æhttp://www.skyvegas.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Sky Vegas</a></li>
+                              <li>·<a href=æhttp://www.skybingo.comæ class=æfooter-link æ target=æ_blankæ rel=ænofollowæ>Sky Bingo</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </footer><script type=ætext/javascriptæ>
+				oc.charts.push({ ætypeæ: æpieæ, æcontaineræ: æmy_chartæ, ædataæ: [[æSheffield Utd (12/1)æ,1078],[æSwindon (11/2)æ,728],[æBournemouth (11/4)æ,673],[æMK Dons (25/1)æ,656],[æPreston North End (500/1)æ,444],[æDoncaster (5/1)æ,409],[æBrentford (8/1)æ,395],[æTranmere (13/2)æ,375],[æCoventry (28/1)æ,345],[æNotts Co (250/1)æ,304],[æStevenage (125/1)æ,113],[æCrawley (100/1)æ,94],[æCrewe (200/1)æ,89],[æPortsmouth (200/1)æ,85],[æYeovil (50/1)æ,56],[æWalsall (400/1)æ,54],[æShrewsbury (200/1)æ,47],[æCarlisle (300/1)æ,47],[æOldham (200/1)æ,43],[æScunthorpe (200/1)æ,41],[æColchester (200/1)æ,40],[æHartlepool (200/1)æ,39],[æLeyton Orient (350/1)æ,39],[æBury (200/1)æ,13]]});
+			</script><div id=æutility-baræ>
+                  <div id=æutility-bar-menuæ data-panel=æbet-basketæ data-track=æ&amp;lid=fillerOpen&amp;lpos=utilityBaræ>
+                     <div id=æutility-bar-tab-containeræ>
+                        <div class=æutility-bar-tabæ id=æbet-basket-tabæ data-panel=æbet-basketæ data-track=æ&amp;lid=betBasket&amp;lpos=utilityBaræ><span class=æutility-bar-tab-arrowæ></span><span class=æbet-basket-icon bet-basket-icon-emptyæ><span class=æbet-basket-num-of-betsæ></span></span><span class=æutility-bar-tab-titleæ>Bet Basket Multiples</span></div>
+                        <div class=æutility-bar-tab æ id=æin-play-tabæ data-panel=æin-playæ data-track=æ&amp;lid=inPlay&amp;lpos=utilityBaræ><span class=æutility-bar-tab-arrowæ></span><span class=æutility-bar-tab-titleæ>in-play</span></div>
+                        <div class=æutility-bar-tabæ id=ætrends-tabæ data-panel=ætrendsæ data-track=æ&amp;lid=trends&amp;lpos=utilityBaræ><span class=æutility-bar-tab-arrowæ></span><span class=æutility-bar-tab-titleæ>Trends</span></div><img class=æutility-bar-icon bet-basket-brand-logoæ src=æhttp://cdn.oddschecker.com/OC/i/OC/bet-basket/brand-logo.pngæ alt=æOddscheckeræ width=æ44æ height=æ44æ title=æOddscheckeræ><img class=æutility-bar-icon bet-basket-arrow-upæ src=æhttp://cdn.oddschecker.com/OC/i/bet-basket/bar-black-arrow-up.pngæ alt=æOpenæ width=æ15æ height=æ11æ title=æOpenæ><img class=æutility-bar-icon bet-basket-arrow-down invisibleæ src=æhttp://cdn.oddschecker.com/OC/i/bet-basket/bar-black-arrow-down.pngæ alt=æCloseæ width=æ15æ height=æ11æ title=æCloseæ></div>
+                  </div>
+                  <div id=æbet-basket-panelæ class=æutility-panel hideæ></div>
+                  <div id=æin-play-panelæ class=æutility-panel hideæ></div>
+                  <div id=ætrends-panelæ class=æutility-panel hideæ></div>
+                  <div id=æwelcome-panelæ class=æutility-panel hideæ></div>
+               </div>
+               <ul id=æoverhangæ>
+                  <li class=æoverhang-itemæ><a href=æhttp://www.facebook.com/OddscheckerBettingæ id=æoverhang-facebookæ data-track=æ&amp;lid=head&amp;lpos=fbæ target=æ_blankæ rel=ænofollowæ></a></li>
+                  <li class=æoverhang-itemæ><a href=æhttp://twitter.com/oddscheckeræ id=æoverhang-twitteræ data-track=æ&amp;lid=head&amp;lpos=tæ target=æ_blankæ rel=ænofollowæ></a></li>
+                  <li class=æoverhang-itemæ><a href=æhttps://plus.google.com/111460372243244520161æ id=æoverhang-googleæ data-track=æ&amp;lid=head&amp;lpos=google+æ target=æ_blankæ>Google+</a></li>
+                  <li class=æoverhang-itemæ><a href=æhttp://www.oddschecker.com/rss/oddschecker_rss.xmlæ id=æoverhang-rssæ data-track=æ&amp;lid=head&amp;lpos=rssæ target=æ_blankæ></a></li>
+                  <li id=ænav-bookmarksæ class=æoverhang-item nav-content-item more-liæ><a href=æjavascript:void(0)æ id=æoverhang-bookmarksæ class=ænav-link moreæ>Bookmarks</a><ul class=æinner-nav-containeræ>
+                        <li><a class=ænav-linkæ href=æhttps://secure.oddschecker.com/myoddschecker/loginæ>You must be logged in to add a bookmark</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div><script type=ætext/javascriptæ>oc.ads.types.push('banner');oc.ads.types.push('leaderboard');oc.ads.types.push('mpu');oc.ads.types.push('rectangle');oc.ads.types.push('stripper');</script><div id=æad-banneræ class=æhideæ><script type='text/javascript' src='http://ads.oddschecker.com/adjs.php?what=ukfootball-league1,_width:468|ukfootball,_width:468|football,_width:468|global,_width:468|global,_width:468&amp;target=_blank&amp;exclude=,&amp;nolog=0'></script></div>
+      <div id=æad-leaderboardæ class=æhideæ><script type='text/javascript' src='http://ads.oddschecker.com/adjs.php?what=ukfootball-league1,_width:728|ukfootball,_width:728|football,_width:728|def-leaderboard,_width:728|global,_width:728&amp;target=_blank&amp;exclude=,&amp;nolog=1'></script></div>
+      <div id=æad-mpuæ class=æhideæ><script type='text/javascript' src='http://ads.oddschecker.com/adjs.php?what=ukfootball-league1,_width:300|ukfootball,_width:300|football,_width:300|def-mpu,_width:300|global,_width:300&amp;target=_blank&amp;exclude=,&amp;nolog=1'></script></div>
+      <div id=æad-rectangleæ class=æhideæ><script type='text/javascript' src='http://ads.oddschecker.com/adjs.php?what=ukfootball-league1,_width:220|ukfootball,_width:220|football,_width:220|def-rectangle,_width:220|global,_width:220&amp;target=_blank&amp;exclude=,&amp;nolog=1'></script></div>
+      <div id=æad-stripperæ class=æhideæ><script type='text/javascript' src='http://ads.oddschecker.com/adjs.php?what=ukfootball-league1,_width:500|ukfootball,_width:500|football,_width:500|def-stripper,_width:500|global,_width:500&amp;target=_blank&amp;exclude=,&amp;nolog=1'></script></div>
+   </body>
+</html>

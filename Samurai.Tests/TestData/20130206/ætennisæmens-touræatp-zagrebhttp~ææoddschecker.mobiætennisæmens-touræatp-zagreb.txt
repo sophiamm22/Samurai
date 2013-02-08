@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC æ-//WAPFORUM//DTD XHTML Mobile 1.2//ENæ æhttp://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æen-GBæ><head><title>ATP Zagreb</title><meta name=ædescriptionæ content=æATP Zagreb Betting Oddsæ/><meta name=ækeywordsæ content=æTennis, Mens Tour, ATP Zagreb, Sports Bettingæ/><meta http-equiv=æcontent-typeæ content=æapplication/xhtml+xml; charset=UTF-8æ/><meta name=æHandheldFriendlyæ content=ætrueæ/><link rel=æshortcut iconæ href=æhttp://oddschecker.mobi/i/favicon.icoæ type=æimage/x-iconæ/><base href=æhttp://oddschecker.mobi/æ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/common.cssæ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/card.cssæ/></head><body><div id=æheaderæ><img src=æi/logo.gifæ alt=æmobi logoæ class=æmobileLogoæ width=æ240æ height=æ53æ/><div id=æhBCæ><a href=æ/tennisæ>Tennis</a> » <a href=æ/tennis/mens-touræ>Mens Tour</a></div><img alt=ææ width=æ1æ height=æ1æ src=æhttp://ehg-bskyb.hitbox.com/HG?whbx=1&amp;hv=6&amp;ce=y&amp;hb=DM570217A5VD84EN3&amp;cd=1&amp;vcon=CONTENT+CATEGORY&amp;n=MO.ATP+Zagrebæ/></div><div id=æmainæ><h1>ATP Zagreb</h1><div id=æorangeBandæ><input type=æhiddenæ name=æfixæ/></div><div id=æmenuæ><span id=æmatchesæ/><div class=æmGHæ><h2>Matches</h2></div><a href=æ/tennis/mens-tour/atp-zagreb/lukas-lacko-v-flavio-cipolla/winneræ class=æmOddæ>Lukas Lacko v Flavio Cipolla</a><a href=æ/tennis/mens-tour/atp-zagreb/philipp-marx-florin-mergea-v-marin-cilic-marin-draganja/winneræ class=æmEvenæ>Philipp Marx/Florin Mergea v Marin Cilic/Marin Draganja</a><a href=æ/tennis/mens-tour/atp-zagreb/jurgen-melzer-philipp-petzschner-v-mikhail-elgin-igor-zelenay/winneræ class=æmOddæ>Jurgen Melzer/Philipp Petzschner v Mikhail Elgin/Igor Zelenay</a><a href=æ/tennis/mens-tour/atp-zagreb/antonio-veic-v-robin-haase/winneræ class=æmEvenæ>Antonio Veic v Robin Haase</a><a href=æ/tennis/mens-tour/atp-zagreb/toni-androic-dino-marcan-v-julian-knowle-filip-polasek/winneræ class=æmOddæ>Toni Androic/Dino Marcan v Julian Knowle/Filip Polasek</a><a href=æ/tennis/mens-tour/atp-zagreb/tobias-kamke-v-marcos-baghdatis/winneræ class=æmEvenæ>Tobias Kamke v Marcos Baghdatis</a><a href=æ/tennis/mens-tour/atp-zagreb/ivo-karlovic-frank-moser-v-martin-klizan-andreas-seppi/winneræ class=æmOddæ>Ivo Karlovic/Frank Moser v Martin Klizan/Andreas Seppi</a><a href=æ/tennis/mens-tour/atp-zagreb/lukas-lacko-jaroslav-levinsky-v-mate-delic-franco-skugor/winneræ class=æmEvenæ>Lukas Lacko/Jaroslav Levinsky v Mate Delic/Franco Skugor</a><a href=æ/tennis/mens-tour/atp-zagreb/ivan-dodig-v-benjamin-becker/winneræ class=æmOddæ>Ivan Dodig v Benjamin Becker</a><a href=æ/tennis/mens-tour/atp-zagreb/benjamin-becker-lukas-rosol-v-santiago-gonzalez-scott-lipsky/winneræ class=æmEvenæ>Benjamin Becker/Lukas Rosol v Santiago Gonzalez/Scott Lipsky</a><a href=æ/tennis/mens-tour/atp-zagreb/mikhail-youzhny-v-igor-sijsling/winneræ class=æmOddæ>Mikhail Youzhny v Igor Sijsling</a><a href=æ/tennis/mens-tour/atp-zagreb/philipp-petzschner-v-andreas-seppi/winneræ class=æmEvenæ>Philipp Petzschner v Andreas Seppi</a><a href=æ/tennis/mens-tour/atp-zagreb/somdev-devvarman-v-jurgen-melzer/winneræ class=æmOddæ>Somdev Devvarman v Jurgen Melzer</a><span id=æothersæ/><div class=æmGHæ><h2>Others</h2><a class=æmGHlæ href=æ/tennis/mens-tour/atp-zagreb#matchesæ>go to matches</a></div><a href=æ/tennis/mens-tour/atp-zagreb/atp-pbz-zagreb-indoors/winneræ class=æmOddæ>ATP PBZ Zagreb Indoors</a></div></div><div id=æfooteræ><h3>Oddschecker</h3><ul><li><a href=æ/æ>Home</a></li><li><a href=æ/options.htmlæ>Options</a></li><li><a href=æ/mobile-free-bets.htmlæ>Free Bets</a></li></ul><ul><li><a href=æ/contact-us.htmlæ>Contact Us</a></li><li><a href=æ/help.htmlæ>Help</a></li></ul></div><script language=æJavaScriptæ type=ætext/javascriptæ>
+if(document.location.href.indexOf(æhttp://oddschecker.mobiæ) >= 0){
+	dev = '';
+}else{
+	dev = 'dev';
+}
+var SKY_TRACKING = {
+site: æsky/sbandg/oddscheckeræ,
+section: æmobile/tennis/mens-tour/atp-zagreb/æ,
+headline: æATP Zagrebæ,
+contentType: ææ,
+account: æbskybocukmobileæ + dev + æ,bskybnetworkglobalæ
+}
+</script><script language=æJavaScriptæ type=ætext/javascriptæ src=æhttp://oddschecker.mobi/js/omniture.jsæ/><script language=æJavaScriptæ type=ætext/javascriptæ>
+
+browser = navigator.appName;
+var x = document.getElementsByTagName('a');
+for (var i=0 ; i &lt; x.length ; i++) {
+	if(browser.indexOf('Microsoft') &gt;= 0){
+		x[i].attachEvent('onclick',trackClick);
+	}else{
+		x[i].addEventListener('click',trackClick,false);
+	}
+}
+</script></body></html>

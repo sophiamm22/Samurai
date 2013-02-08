@@ -26,7 +26,7 @@ namespace Samurai.Tests.DomainValue
       private Mock<IStoredProceduresRepository> mockStoredProcRepository;
       private List<E.Match> matches;
 
-      [Test]
+      [Test, Category("FootballFixtureStrategyTests.UpdateFixtures")]
       public void CreatesANewCollectionOfMatches()
       {
         //Arrange
@@ -65,7 +65,7 @@ namespace Samurai.Tests.DomainValue
         Assert.AreEqual(1, this.matches.Count(x => x.TeamsPlayerA.Name == "Cheltenham" && x.TeamsPlayerB.Name == "Torquay"));
       }
 
-      [Test]
+      [Test, Category("FootballFixtureStrategyTests.UpdateFixtures")]
       public void UpdatesAnExistingMatch()
       {
         //Arrange
@@ -113,7 +113,7 @@ namespace Samurai.Tests.DomainValue
       private Mock<IStoredProceduresRepository> mockStoredProcRepository;
       private List<E.Match> matches;
 
-      [Test]
+      [Test, Category("FootballFixtureStrategyTests.UpdateResults")]
       public void CreatesANewCollectionOfMatchesWithResults()
       {
         //Arrange
@@ -161,7 +161,7 @@ namespace Samurai.Tests.DomainValue
         Assert.AreEqual("2-1", cheltenhamTorquay.FirstOrDefault().ObservedOutcomes.First().ScoreOutcome.ToString());
       }
 
-      [Test]
+      [Test, Category("FootballFixtureStrategyTests.UpdateResults")]
       public void AddScoresToAnExistingFixture()
       {
         //Arrange

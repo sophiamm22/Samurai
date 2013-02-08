@@ -9,7 +9,7 @@ namespace Samurai.Tests.StartUp
 {
   public class StartUp
   {
-    [Test]
+    [Test, Category("StatUp")]
     public void AutoMapperConfiguration()
     {
       Mapper.AssertConfigurationIsValid();

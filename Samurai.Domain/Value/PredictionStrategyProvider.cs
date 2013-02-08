@@ -36,7 +36,7 @@ namespace Samurai.Domain.Value
     public IPredictionStrategy CreatePredictionStrategy(Sport sport)
     {
       if (sport.SportName == "Football")
-        return new FootballFinkTankPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
+        return new FootballPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else if (sport.SportName == "Tennis")
         return new TennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else

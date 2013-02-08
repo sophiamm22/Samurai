@@ -31,7 +31,10 @@ namespace Samurai.Tests.TestInfrastructure
       //I seem to have issues with upper/lower case.  No idea why but this will fix it.
       var all = Assembly.GetExecutingAssembly().GetManifestResourceNames();
       var thisOne = all.FirstOrDefault(x => string.Compare(string.Format("Samurai.Tests.TestData._{0}.{1}", this.repositoryDate, fileName), x, true) == 0);
-
+      
+      if (thisOne == null) 
+        return StreamReader.Null;
+      
       var manifest = Assembly.GetExecutingAssembly().GetManifestResourceStream(thisOne);
       report(string.Format("Streaming saved URL from:{0}", manifest));
       //Samurai.Tests.TestData._20130202.æfootballæfixtures-resultsæ02-february-2013.txt

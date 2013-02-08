@@ -36,6 +36,76 @@ namespace Samurai.Domain.Value
     public abstract IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
   }
 
+  public class FootballPredictionStrategy : AbstractPredictionStrategy
+  {
+    public FootballPredictionStrategy(IPredictionRepository predictionRepository,
+      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
+      : base(predictionRepository, fixtureRepository, webRepositoryProvider)
+    {
+    }
+
+    public override IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
+    {
+      var gameWeek = this.fixtureRepository.GetDaysMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
+      var footballTeams = new List<TeamPlayer>();
+      var predictions = new List<Model.GenericPrediction>();
+
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
+
+      foreach (var game in gameWeek)
+      {
+        var homeTeam = game.TeamsPlayerA;
+        var awayTeam = game.TeamsPlayerB;
+
+        footballTeams.Add(homeTeam);
+        footballTeams.Add(awayTeam);
+      }
+
+      for (int i = 0; i < footballTeams.Count(); i += 2)
+      {
+        var homeTeamID = footballTeams[i].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i].ExternalID);
+        var awayTeamID = footballTeams[i + 1].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i + 1].ExternalID);
+
+        var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
+
+        var jsonFootballPredicton = (APIFootballPrediction)webRepository.ParseJson<APIFootballPrediction>(
+          predictionURL, s => Console.WriteLine(s), string.Format("{0}-{1}",
+          valueOptions.Tournament.TournamentName.Replace(" ", ""), valueOptions.CouponDate.ToShortDateString()));
+        predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
+      }
+      return predictions;
+    }
+
+    private Model.GenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
+    {
+      var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(date, tournament.TournamentName);
+
+      var footballPrediction = new Model.FootballPrediction()
+      {
+        TournamentName = tournament.TournamentName,
+        TournamentEventName = tournamentEvent.EventName,
+        TeamOrPlayerA = apiPrediction.HomeTeam,
+        TeamOrPlayerB = apiPrediction.AwayTeam,
+        MatchDate = date,
+        MatchIdentifier = string.Format("{0}/vs/{1}/{2}/{3}", apiPrediction.HomeTeam, apiPrediction.AwayTeam,
+          tournamentEvent.EventName, date.ToShortDateString().Replace("/", "-"))
+      };
+
+      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.ExpectedProbabilities.HomeWinProb);
+      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.Draw, apiPrediction.ExpectedProbabilities.DrawProb);
+      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.AwayWin, apiPrediction.ExpectedProbabilities.AwayWinProb);
+
+      foreach (var scoreLine in apiPrediction.ScoreProbabilities)
+      {
+        var key = string.Format("{0}-{1}", scoreLine.HomeGoals.ToString(), scoreLine.AwayGoals.ToString());
+        if (!footballPrediction.ScoreLineProbabilities.ContainsKey(key))
+          footballPrediction.ScoreLineProbabilities.Add(key, scoreLine.Probability);
+      }
+      return footballPrediction;
+    }
+
+  }
+
   public class TennisPredictionStrategy : AbstractPredictionStrategy
   {
     public TennisPredictionStrategy(IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, 
@@ -113,77 +183,5 @@ namespace Samurai.Domain.Value
       return tennisPrediction;
     }
   }
-
-  public class FootballFinkTankPredictionStrategy : AbstractPredictionStrategy
-  {
-    public FootballFinkTankPredictionStrategy(IPredictionRepository predictionRepository, 
-      IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider)
-      : base(predictionRepository, fixtureRepository, webRepositoryProvider)
-    {
-    }
-
-    public override IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
-    {
-      var gameWeek = this.fixtureRepository.GetDaysMatches(valueOptions.Tournament.TournamentName, valueOptions.CouponDate);
-      var footballTeams = new List<TeamPlayer>();
-      var predictions = new List<Model.GenericPrediction>();
-
-      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
-
-      foreach (var game in gameWeek)
-      {
-        var homeTeam = game.TeamsPlayerA;
-        var awayTeam = game.TeamsPlayerB;
-
-        footballTeams.Add(homeTeam);
-        footballTeams.Add(awayTeam);
-      }
-
-      for (int i = 0; i < footballTeams.Count(); i += 2)
-      {
-        var homeTeamID = footballTeams[i].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i].ExternalID);
-        var awayTeamID = footballTeams[i + 1].ExternalID == string.Empty ? 0 : int.Parse(footballTeams[i + 1].ExternalID);
-
-        var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
-
-        var jsonFootballPredicton = (APIFootballPrediction)webRepository.ParseJson<APIFootballPrediction>(
-          predictionURL, s => Console.WriteLine(s), string.Format("{0}-{1}", 
-          valueOptions.Tournament.TournamentName.Replace(" ",""), valueOptions.CouponDate.ToShortDateString()));
-        predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
-      }
-      return predictions;
-    }
-
-    private Model.GenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
-    {
-      var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(date, tournament.TournamentName);
-
-      var footballPrediction = new Model.FootballPrediction()
-      {
-        TournamentName = tournament.TournamentName,
-        TournamentEventName = tournamentEvent.EventName,
-        TeamOrPlayerA = apiPrediction.HomeTeam,
-        TeamOrPlayerB = apiPrediction.AwayTeam,
-        MatchDate = date,
-        MatchIdentifier = string.Format("{0}/vs/{1}/{2}/{3}", apiPrediction.HomeTeam, apiPrediction.AwayTeam,
-          tournamentEvent.EventName, date.ToShortDateString().Replace("/","-"))
-      };
-
-      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.ExpectedProbabilities.HomeWinProb);
-      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.Draw, apiPrediction.ExpectedProbabilities.DrawProb);
-      footballPrediction.OutcomeProbabilities.Add(Model.Outcome.AwayWin, apiPrediction.ExpectedProbabilities.AwayWinProb);
-
-      foreach (var scoreLine in apiPrediction.ScoreProbabilities)
-      {
-        var key = string.Format("{0}-{1}", scoreLine.HomeGoals.ToString(), scoreLine.AwayGoals.ToString());
-        if (!footballPrediction.ScoreLineProbabilities.ContainsKey(key))
-          footballPrediction.ScoreLineProbabilities.Add(key, scoreLine.Probability);
-      }
-      return footballPrediction;
-    }
-
-  }
-
-
 
 }

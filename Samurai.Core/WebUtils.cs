@@ -127,7 +127,7 @@ namespace Samurai.Core
       }
     }
 
-    public static T ParseJson<T>(string jsonString, Action<string> report)
+    public static IRegexableWebsite ParseJson<T>(string jsonString, Action<string> report)
       where T : IRegexableWebsite, new()
     {
       return JsonConvert.DeserializeObject<T>(jsonString);

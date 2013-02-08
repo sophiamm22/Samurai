@@ -25,7 +25,7 @@ namespace Samurai.Tests.DomainValue
       protected Mock<IWebRepositoryProvider> webRepositoryProvider;
       protected Mock<IFixtureRepository> fixtureRepository;
 
-      [Test]
+      [Test, Category("TennisFixtureStrategyTests.UpdateTournamentEvents")]
       public void CreatesNewListOfTournamentEvents()
       {
         //Arrange
@@ -73,7 +73,7 @@ namespace Samurai.Tests.DomainValue
  
       }
 
-      [Test]
+      [Test, Category("TennisFixtureStrategyTests.UpdateTournamentEvents")]
       public void UpdatesOldListOfTournamentEvents()
       {
         //Arrange

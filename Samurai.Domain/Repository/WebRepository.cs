@@ -22,6 +22,7 @@ namespace Samurai.Domain.Repository
     T GetJsonObject<T>(string jsonString, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
     string FormPost(Uri postURL, Action<string> report, string referer, string content, string contentType, string identifier = null);
     IRegexableWebsite ParseJson<T>(Uri jsonURL, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
+    IRegexableWebsite ParseJson<T>(string jsonString, Action<string> report, string identifier = null) where T : IRegexableWebsite, new();
   }
 
   public class WebRepository : IWebRepository
@@ -85,6 +86,12 @@ namespace Samurai.Domain.Repository
       where T : IRegexableWebsite, new()
     {
       return WebUtils.ParseJson<T>(jsonURL, report);
+    }
+
+    public virtual IRegexableWebsite ParseJson<T>(string jsonString, Action<string> report, string identifier = null)
+      where T : IRegexableWebsite, new()
+    {
+      return WebUtils.ParseJson<T>(jsonString, report);
     }
 
   }

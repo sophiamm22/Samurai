@@ -71,8 +71,8 @@ namespace Samurai.SqlDataAccess
 
     public IEnumerable<Tournament> GetDaysTournaments(DateTime matchDate, string sport)
     {
-      var tournaments = GetQuery<TournamentEvent>(t => EntityFunctions.AddDays(t.StartDate, -2) <= matchDate &&
-                                                      EntityFunctions.AddDays(t.EndDate, 2) >= matchDate &&
+      var tournaments = GetQuery<TournamentEvent>(t => EntityFunctions.AddDays(t.StartDate, 0) <= matchDate &&
+                                                      EntityFunctions.AddDays(t.EndDate, 0) >= matchDate &&
                                                       t.Tournament.Competition.Sport.SportName == sport
         /* &&
         t.TournamentInProgress*/)

@@ -8,6 +8,23 @@ For more information and past performance please visit the [Value Samurai](http:
 
 ## Contributing
 
-* **Coding styles:** do as I do, unless what I do is stupid. In which case, please tell me why I am stupid.
-* **Admins:** if you are better at this than me, please offer your services as an admin.
-* **Unit tests:** please try and do a better job at unit testing than me.
+### Finger wagging
+
+I'd appreciate some help! But, please consider...
+
+* **Coding styles:** do as I do, unless what I do is stupid. In which case, please tell me why I am stupid
+* **Unit tests:** please try and do a better job at unit testing than me
+* **Admins:** if you are better at this than me, please offer your services as an admin
+
+### Wish-list
+
+If you are interested in contributing, please read (and add to) my wish-list for version x+1...
+
+* Build a collection of strategies, deriving from the abstract CouponStrategies class, to provide odds for all bookmakers with an XML/API feed #cutoutthemiddleman
+* ..and do so asynchronously.  One thing sorely lacking from the current implementation.
+
+### Thanks
+
+The following have already unwittedly contributed, and deserve praise...
+
+* Some names..

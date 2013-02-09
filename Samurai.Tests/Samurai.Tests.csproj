@@ -56,9 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainValue\CouponStrategyTests.cs" />
     <Compile Include="DomainValue\FootballFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\OddsStrategyTests.cs" />
     <Compile Include="DomainValue\FootballPredictionStrategyTests.cs" />
     <Compile Include="DomainValue\TennisFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\TennisOddsStrategyTests.cs" />
     <Compile Include="DomainValue\TennisPredictionStrategyTests.cs" />
     <Compile Include="TestInfrastructure\FakeUnitOfWork.cs" />
     <Compile Include="TestInfrastructure\FakeRepository.cs" />

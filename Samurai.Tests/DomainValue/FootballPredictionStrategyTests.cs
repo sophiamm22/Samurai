@@ -134,7 +134,5 @@ namespace Samurai.Tests.DomainValue
         Assert.AreEqual(genericPredictionsLeague2.Count(), 10);
       }
     }
-  }
-
-  
+  } 
 }

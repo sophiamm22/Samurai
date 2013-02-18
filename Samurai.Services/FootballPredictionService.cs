@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Reg = System.Text.RegularExpressions;
 
 using AutoMapper;
 
@@ -56,7 +57,9 @@ namespace Samurai.Services
         var match = this.fixtureRepository.GetMatchFromTeamSelections(teamA, teamB, prediction.MatchDate);
         if (match == null)
         {
-          var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(prediction.MatchDate, prediction.TournamentName);
+          var tournamentName = Reg.Regex.Replace(prediction.TournamentName, @" 20\d{2}", "");
+
+          var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(prediction.MatchDate, tournamentName);
           match = this.fixtureRepository.CreateMatch(teamA, teamB, prediction.MatchDate, tournamentEvent);
         }
         matchIDs.Add(match.Id);

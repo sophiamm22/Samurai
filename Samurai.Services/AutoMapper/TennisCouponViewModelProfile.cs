@@ -27,8 +27,6 @@ namespace Samurai.Services.AutoMapper
         { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
 
       Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>().IgnoreAllNonExisting();
-      //Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>().ForMember(x => x, opt =>
-      //  { opt.ResolveUsing<TennisCouponOddsForEventResolver>(); });
     }
   }
 

@@ -267,7 +267,11 @@
     <Content Include="Scripts\app\coffee\kelly.js">
       <DependentUpon>kelly.coffee</DependentUpon>
     </Content>
+    <Content Include="Scripts\app\coffee\predictions.coffee" />
     <None Include="Scripts\jquery-1.8.3.intellisense.js" />
+    <Content Include="Scripts\app\coffee\predictions.js">
+      <DependentUpon>predictions.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.9.2.js" />

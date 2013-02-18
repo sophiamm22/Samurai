@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Data.Objects;
 using System.Data.Objects.SqlClient;
+using RegEx = System.Text.RegularExpressions;
 
 using Infrastructure.Data;
 using Samurai.Domain.Entities;

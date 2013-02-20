@@ -19,7 +19,7 @@ namespace Samurai.Domain.Value
     IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate);
   }
 
-  public class NewFootballFixtureStrategy : IFootballFixtureStrategy
+  public class FootballFixtureStrategy : IFootballFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;
@@ -28,7 +28,7 @@ namespace Samurai.Domain.Value
     protected string storedHTML = "";
 
 
-    public NewFootballFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
+    public FootballFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
       IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;

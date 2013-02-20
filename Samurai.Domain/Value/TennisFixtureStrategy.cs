@@ -17,16 +17,16 @@ namespace Samurai.Domain.Value
   public interface ITennisFixtureStrategy
   {
     IEnumerable<TournamentEvent> UpdateTournamentEvents();
-    IEnumerable<GenericMatchDetailQuery> UpdateResultsNew(DateTime fixtureDate);
+    IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate);
     APITournamentDetail GetTournamentDetail(string tournament, int year);
   }
 
-  public class NewTennisFixtureStrategy : ITennisFixtureStrategy
+  public class TennisFixtureStrategy : ITennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
 
-    public NewTennisFixtureStrategy(IFixtureRepository fixtureRepository,
+    public TennisFixtureStrategy(IFixtureRepository fixtureRepository,
       IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
@@ -91,7 +91,7 @@ namespace Samurai.Domain.Value
     }
 
 
-    public IEnumerable<GenericMatchDetailQuery> UpdateResultsNew(DateTime fixtureDate)
+    public IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate)
     {
       throw new NotImplementedException();
     }

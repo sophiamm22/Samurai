@@ -11,14 +11,16 @@ using Model = Samurai.Domain.Model;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
+using Samurai.Domain.Entities.ComplexTypes;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public interface ISpreadsheetData
+  public interface IFootballSpreadsheetData
   {
     DateTime CouponDate { get; set; }
     void ReadData();
-    IEnumerable<Match> UpdateResults(DateTime fixtureDate);
+
+    IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate);
     IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament);
     IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL);
     IEnumerable<Model.GenericMatchCoupon> GetMatches();
@@ -27,11 +29,12 @@ namespace Samurai.Domain.Value.Excel
 
   }
 
-  public class FootballSpreadsheetData : ISpreadsheetData
+  public class FootballSpreadsheetData : IFootballSpreadsheetData
   {
     private readonly IBookmakerRepository bookmakerRepository;
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
+    private readonly IStoredProceduresRepository storedProcRepository;
 
     private List<Model.GenericPrediction> genericPredictions;
 
@@ -39,7 +42,7 @@ namespace Samurai.Domain.Value.Excel
     public IDictionary<int, EnumerableRowCollection<DataRow>> Predictions { get; set; }
     public EnumerableRowCollection<DataRow> FixturesCouponsOdds { get; set; }
 
-   public FootballSpreadsheetData(IBookmakerRepository bookmakerRepository,
+    public FootballSpreadsheetData(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IPredictionRepository predictionRepository)
     {
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
@@ -157,9 +160,8 @@ namespace Samurai.Domain.Value.Excel
       }
     }
 
-    public IEnumerable<Match> UpdateResults(DateTime fixtureDate)
+    public IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate)
     {
-      var returnMatches = new List<Match>();
       FixturesCouponsOdds.Where(x => 
                                 x.Field<DateTime>("Date").Date == fixtureDate.Date)
                                  .ToList()
@@ -185,17 +187,12 @@ namespace Samurai.Domain.Value.Excel
                                        Match = newMatch,
                                        ScoreOutcome = this.fixtureRepository.GetScoreOutcome((int)x.Field<double>("FTHG"), (int)x.Field<double>("FTAG"))
                                      });
-                                     returnMatches.Add(newMatch);
                                      this.fixtureRepository.AddMatch(newMatch);
-                                   }
-                                   else //can't be bothered to do properly, this will always be run by me only
-                                   {
-                                     returnMatches.Add(persistedMatch);
                                    }
                                  });
       
       this.fixtureRepository.SaveChanges();
-      return returnMatches;
+      return this.storedProcRepository.GetGenericMatchDetails(fixtureDate, "Football");
     }
 
     public IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament)

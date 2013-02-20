@@ -12,32 +12,12 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelTennisFixtureStrategy : ITennisFixtureStrategy
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly ITennisSpreadsheetData spreadsheetData;
 
-    public ExcelTennisFixtureStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelTennisFixtureStrategy(ITennisSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;
-    }
-
-    public IEnumerable<GenericMatchDetailQuery> UpdateFixturesNew(DateTime fixtureDate)
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<Match> UpdateFixtures(DateTime fixtureDate)
-    {
-      return UpdateResults(fixtureDate);
-    }
-
-    public IEnumerable<GenericMatchDetailQuery> UpdateResultsNew(DateTime fixtureDate)
-    {
-      throw new NotImplementedException();
-    }    
-    
-    public IEnumerable<Match> UpdateResults(DateTime fixtureDate, string reusedHTML = "")
-    {
-      return this.spreadsheetData.UpdateResults(fixtureDate);
     }
 
     public IEnumerable<TournamentEvent> UpdateTournamentEvents()
@@ -45,7 +25,10 @@ namespace Samurai.Domain.Value.Excel
       throw new NotImplementedException();
     }
 
-
+    public IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate)
+    {
+      return this.spreadsheetData.UpdateResults(fixtureDate);
+    }
 
     public APITournamentDetail GetTournamentDetail(string tournament, int year)
     {

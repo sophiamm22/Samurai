@@ -132,7 +132,7 @@ namespace Samurai.Tests.DomainValue
     }
   }
 
-  public class TestableTennisFixtureStrategy : NewTennisFixtureStrategy
+  public class TestableTennisFixtureStrategy : TennisFixtureStrategy
   {
     public Mock<IFixtureRepository> MockedFixtureRepository { get; private set; }
     public Mock<IWebRepositoryProvider> MockedWebRepositoryProvider { get; private set; }

@@ -14,6 +14,7 @@ namespace Samurai.Domain.Value
   public interface IPredictionStrategy
   {
     IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
+    IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions);
   }
 
   public abstract class AbstractPredictionStrategy : IPredictionStrategy
@@ -34,6 +35,7 @@ namespace Samurai.Domain.Value
       this.webRepositoryProvider = webRepositoryProvider;
     }
     public abstract IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
+    public abstract IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions);
   }
 
   public class FootballPredictionStrategy : AbstractPredictionStrategy
@@ -74,6 +76,11 @@ namespace Samurai.Domain.Value
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
       }
       return predictions;
+    }
+
+    public override IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions)
+    {
+      throw new NotImplementedException();
     }
 
     private Model.GenericPrediction ConvertAPIToGeneric(APIFootballPrediction apiPrediction, Tournament tournament, DateTime date, Uri predictionURL)
@@ -117,9 +124,7 @@ namespace Samurai.Domain.Value
     public override IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
     {
       var predictions = new List<Model.GenericPrediction>();
-
       var atp = "ATP";
-
       var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
@@ -134,6 +139,29 @@ namespace Samurai.Domain.Value
         jsonTennisPrediction.StartTime = jsonTennisMatch.MatchDate;
 
         predictions.Add(ConvertAPIToGeneric(jsonTennisPrediction, predictionURL));
+      }
+
+      return predictions;
+    }
+
+    public override IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions)
+    {
+      var predictions = new List<Model.GenericPrediction>();
+      var atp = "ATP";
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
+
+      var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
+        s => Console.WriteLine(s), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
+
+      foreach (var jsonTennisMatch in jsonTennisMatches)
+      {
+        predictions.Add(new Model.TennisPrediction()
+        {
+          PlayerAFirstName = jsonTennisMatch.PlayerAFirstName,
+          TeamOrPlayerA = jsonTennisMatch.PlayerASurname,
+          PlayerBFirstName = jsonTennisMatch.PlayerBSurname,
+          TeamOrPlayerB = jsonTennisMatch.PlayerBSurname,
+        });
       }
 
       return predictions;

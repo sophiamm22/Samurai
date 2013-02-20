@@ -10,15 +10,21 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelFootballPredictionStrategy : IPredictionStrategy
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData spreadsheetData;
 
-    public ExcelFootballPredictionStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballPredictionStrategy(IFootballSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;
     }
 
     public IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions)
+    {
+      return this.spreadsheetData.GetPredictions(valueOptions);
+    }
+
+
+    public IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions)
     {
       return this.spreadsheetData.GetPredictions(valueOptions);
     }

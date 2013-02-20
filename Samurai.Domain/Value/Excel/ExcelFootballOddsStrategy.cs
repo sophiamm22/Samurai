@@ -10,9 +10,9 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelFootballOddsStrategy : IOddsStrategy
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData spreadsheetData;
 
-    public ExcelFootballOddsStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballOddsStrategy(IFootballSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;
@@ -20,7 +20,7 @@ namespace Samurai.Domain.Value.Excel
 
     public IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
-      throw new NotImplementedException();
+      return this.spreadsheetData.GetOdds(matchCoupon, timeStamp);
     }
   }
 }

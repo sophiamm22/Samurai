@@ -13,15 +13,31 @@ using Samurai.Domain.Repository;
 using Samurai.Domain.APIModel;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Core;
+using Samurai.Domain.Entities.ComplexTypes;
 
 namespace Samurai.Domain.Value.Excel
 {
-  public class TennisSpreadsheetData : ISpreadsheetData
+
+  public interface ITennisSpreadsheetData
+  {
+    DateTime CouponDate { get; set; }
+    void ReadData();
+    IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate);
+    IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament);
+    IEnumerable<Model.GenericMatchCoupon> GetMatches(Uri tournamentURL);
+    IEnumerable<Model.GenericMatchCoupon> GetMatches();
+    IDictionary<Model.Outcome, IEnumerable<Model.GenericOdd>> GetOdds(Model.GenericMatchCoupon matchCoupon, DateTime timeStamp);
+    IEnumerable<Model.GenericPrediction> GetPredictions(Model.IValueOptions valueOptions);
+
+  }
+
+  public class TennisSpreadsheetData : ITennisSpreadsheetData
   {
     private readonly IBookmakerRepository bookmakerRepository;
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
     private readonly IWebRepository webRepository;
+    private readonly IStoredProceduresRepository storedProcRepository;
 
     private EnumerableRowCollection<DataRow> excelMatches;
 
@@ -30,17 +46,20 @@ namespace Samurai.Domain.Value.Excel
 
     public TennisSpreadsheetData(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IPredictionRepository predictionRepository,
-      IWebRepository webRepository)
+      IWebRepository webRepository, IStoredProceduresRepository storedProcRepository)
     {
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
       if (webRepository == null) throw new ArgumentNullException("webRepository");
+      if (storedProcRepository == null) throw new ArgumentNullException("storedProcRepository");
 
       this.bookmakerRepository = bookmakerRepository;
       this.fixtureRepository = fixtureRepository;
       this.predictionRepository = predictionRepository;
       this.webRepository = webRepository;
+      this.storedProcRepository = storedProcRepository;
+
       this.predictions = new Dictionary<string, Model.GenericPrediction>();
     }
 
@@ -68,9 +87,8 @@ namespace Samurai.Domain.Value.Excel
       }
     }
 
-    public IEnumerable<Match> UpdateResults(DateTime fixtureDate)
+    public IEnumerable<GenericMatchDetailQuery> UpdateResults(DateTime fixtureDate)
     {
-      var returnMatches = new List<Match>();
       this.excelMatches.Where(x =>
                             x.Field<DateTime>("DateToTake").Date == fixtureDate.Date)
                               .ToList()
@@ -106,17 +124,14 @@ namespace Samurai.Domain.Value.Excel
                                     Match = newMatch,
                                     ScoreOutcome = this.fixtureRepository.GetScoreOutcome(scores.Count(s => s == 1), scores.Count(s => s == -1)) //TODO <- this is bullshit, retirie's will get a null returned
                                   });
-                                  returnMatches.Add(newMatch);
                                   this.fixtureRepository.AddMatch(newMatch);
-                                }
-                                else //can't be bothered to do properly, this will always be run by me only
-                                {
-                                  returnMatches.Add(persistedMatch);
                                 }
                               });
 
       this.fixtureRepository.SaveChanges();
-      return returnMatches;
+
+      return this.storedProcRepository
+                 .GetGenericMatchDetails(fixtureDate, "Tennis");
     }
 
     public IEnumerable<Model.IGenericTournamentCoupon> GetTournaments(Model.OddsDownloadStage stage = Model.OddsDownloadStage.Tournament)

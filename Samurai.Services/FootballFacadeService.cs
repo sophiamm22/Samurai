@@ -54,7 +54,7 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> UpdateDaysResults(DateTime fixtureDate)
     {
-      return this.footballFixtureService.FetchSkySportsFootballResultsNew(fixtureDate);
+      return this.footballFixtureService.FetchSkySportsFootballResults(fixtureDate);
     }
 
     public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
@@ -72,9 +72,9 @@ namespace Samurai.Services
       var footballFixtures = new List<FootballFixtureViewModel>();
       var daysMatchCount = this.footballFixtureService.GetCountOfDaysMatches(fixtureDate, "Football");
       if (daysMatchCount == 0)
-        footballFixtures.AddRange(this.footballFixtureService.FetchSkySportsFootballFixturesNew(fixtureDate));
+        footballFixtures.AddRange(this.footballFixtureService.FetchSkySportsFootballFixtures(fixtureDate));
       else
-        footballFixtures.AddRange(this.footballFixtureService.GetFootballFixturesByDateNew(fixtureDate));
+        footballFixtures.AddRange(this.footballFixtureService.GetFootballFixturesByDate(fixtureDate));
 
       if (footballFixtures.Count == 0)
         return Enumerable.Empty<FootballFixtureViewModel>();
@@ -100,7 +100,7 @@ namespace Samurai.Services
     {
       var groupedCoupons = new Dictionary<string, List<FootballCouponViewModel>>();
 
-      var daysCoupons = this.footballOddsService.FetchAllFootballOddsNew(fixtureDate).ToList();
+      var daysCoupons = this.footballOddsService.FetchAllFootballOdds(fixtureDate).ToList();
       foreach (var coupon in daysCoupons)
       {
         if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))

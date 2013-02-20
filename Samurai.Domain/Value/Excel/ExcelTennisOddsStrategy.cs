@@ -10,9 +10,9 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelTennisOddsStrategy : IOddsStrategy
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData spreadsheetData;
 
-    public ExcelTennisOddsStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelTennisOddsStrategy(IFootballSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

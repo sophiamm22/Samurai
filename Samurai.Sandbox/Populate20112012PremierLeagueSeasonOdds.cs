@@ -35,7 +35,7 @@ namespace Samurai.Sandbox
 
     private void GetFixtures()
     {
-      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+      var spreadsheetData = this.container.Resolve<IFootballSpreadsheetData>();
       spreadsheetData.ReadData();
 
       var fixtureService = this.container.Resolve<IFootballFixtureService>();
@@ -46,7 +46,7 @@ namespace Samurai.Sandbox
       {
         spreadsheetData.CouponDate = date;
 
-        var fixtures = fixtureService.FetchSkySportsFootballResultsNew(date)
+        var fixtures = fixtureService.FetchSkySportsFootballResults(date)
                                      .ToList();
         if (fixtures.Count == 0)
           Console.WriteLine(string.Format("No fixtures on {0}", date.ToShortDateString()));
@@ -68,7 +68,7 @@ namespace Samurai.Sandbox
     private void GetOdds()
     {
       var oddsService = this.container.Resolve<IFootballOddsService>();
-      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+      var spreadsheetData = this.container.Resolve<IFootballSpreadsheetData>();
 
       var dates = this.fixtures.Select(f => f.MatchDate.Date).Distinct().ToList();
       foreach (var date in dates)

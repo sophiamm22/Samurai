@@ -223,7 +223,7 @@ namespace Samurai.Tests.DomainValue
     }
   }
 
-  public class TestableFootballFixtureStrategy : NewFootballFixtureStrategy
+  public class TestableFootballFixtureStrategy : FootballFixtureStrategy
   {
     public TestableFootballFixtureStrategy(Mock<IFixtureRepository> mockFixtureRepository,
       Mock<IStoredProceduresRepository> mockStoredProcRepository, IWebRepositoryProvider webRepositoryProvider)

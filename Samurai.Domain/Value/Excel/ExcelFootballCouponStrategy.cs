@@ -13,9 +13,9 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelFootballCouponStrategy : ICouponStrategy
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData spreadsheetData;
 
-    public ExcelFootballCouponStrategy(ISpreadsheetData spreadsheetData)
+    public ExcelFootballCouponStrategy(IFootballSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

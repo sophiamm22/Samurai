@@ -135,13 +135,13 @@
     <Compile Include="Value\Excel\ExcelTennisOddsStrategy.cs" />
     <Compile Include="Value\Excel\ExcelTennisPredictionStrategy.cs" />
     <Compile Include="Value\Excel\TennisSpreadsheetData.cs" />
-    <Compile Include="Value\NewFootballFixtureStrategy.cs" />
+    <Compile Include="Value\FootballFixtureStrategy.cs" />
     <Compile Include="Value\OddsStrategy.cs" />
     <Compile Include="Value\OddsStrategyProvider.cs" />
     <Compile Include="Value\PredictionStrategy.cs" />
     <Compile Include="Value\PredictionStrategyProvider.cs" />
     <Compile Include="Value\Excel\FootballSpreadsheetData.cs" />
-    <Compile Include="Value\NewTennisFixtureStrategy.cs" />
+    <Compile Include="Value\TennisFixtureStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

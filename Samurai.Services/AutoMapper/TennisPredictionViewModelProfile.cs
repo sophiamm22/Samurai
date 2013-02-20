@@ -49,7 +49,7 @@ namespace Samurai.Services.AutoMapper
 
     protected override OutcomeProbabilityViewModel ResolveCore(TennisPrediction source)
     {
-      var probability = source.OutcomeProbabilities[this.outcome];
+      var probability = source.OutcomeProbabilities.Count() == 0 ? 0.0 : source.OutcomeProbabilities[this.outcome];
       return new OutcomeProbabilityViewModel
       {
         Outcome = this.outcome.ToString(),

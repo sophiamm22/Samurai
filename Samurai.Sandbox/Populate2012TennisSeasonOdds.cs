@@ -25,7 +25,7 @@ namespace Samurai.Sandbox
 
     public void Populate()
     {
-      var spreadsheetData = this.container.Resolve<ISpreadsheetData>();
+      var spreadsheetData = this.container.Resolve<IFootballSpreadsheetData>();
       spreadsheetData.ReadData();
 
       var dates = Enumerable.Range(0, 365)

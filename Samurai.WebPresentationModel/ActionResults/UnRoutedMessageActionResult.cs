@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using Samurai.WebPresentationModel.Messaging;
 
-
 namespace Samurai.WebPresentationModel.ActionResults
 {
   public class UnRoutedMessageActionResult<TRequest, TReply> : ActionResult

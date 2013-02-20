@@ -37,8 +37,8 @@ class CoordinateBuilder
 				x.push if existing then existing else new Coordinate(order, aServes, j, i - j, 0)
 				order++
 				j++
-		i++
-		x
+			i++
+			x
 
 init = [
 	new Coordinate(0, true, 0, 0, 0.5),

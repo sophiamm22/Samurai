@@ -12,20 +12,25 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelCouponStrategyProvider : ICouponStrategyProvider
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData footballSpreadsheetData;
+    private readonly ITennisSpreadsheetData tennisSpreadsheetData;
 
-    public ExcelCouponStrategyProvider(ISpreadsheetData spreadsheetData)
+    public ExcelCouponStrategyProvider(IFootballSpreadsheetData footballSpreadsheetData,
+      ITennisSpreadsheetData tennisSpreadsheetData)
     {
-      if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
-      this.spreadsheetData = spreadsheetData;
+      if (footballSpreadsheetData == null) throw new ArgumentNullException("footballSpreadsheetData");
+      if (tennisSpreadsheetData == null) throw new ArgumentNullException("tennisSpreadsheetData");
+
+      this.footballSpreadsheetData = footballSpreadsheetData;
+      this.tennisSpreadsheetData = tennisSpreadsheetData;
     }
 
     public ICouponStrategy CreateCouponStrategy(IValueOptions valueOptions)
     {
       if (valueOptions.Sport.SportName == "Football")
-        return new ExcelFootballCouponStrategy(this.spreadsheetData);
+        return new ExcelFootballCouponStrategy(this.footballSpreadsheetData);
       else if (valueOptions.Sport.SportName == "Tennis")
-        return new ExcelTennisCouponStrategy(this.spreadsheetData);
+        return new ExcelTennisCouponStrategy(this.tennisSpreadsheetData);
       else
         throw new ArgumentException("valueOptions.Sport.SportName");
     }

@@ -64,10 +64,11 @@
     }
 
     CoordinateBuilder.prototype.build = function(aServes) {
-      var existing, i, j, order, x;
+      var existing, i, j, order, x, _results;
       x = new Array();
       i = 0;
       order = 0;
+      _results = [];
       while (i < (2 * this.size - 1)) {
         j = 0;
         while (j <= i) {
@@ -81,9 +82,10 @@
           order++;
           j++;
         }
+        i++;
+        _results.push(x);
       }
-      i++;
-      return x;
+      return _results;
     };
 
     return CoordinateBuilder;

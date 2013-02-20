@@ -10,9 +10,9 @@ namespace Samurai.Domain.Value.Excel
 {
   public class ExcelPredictionStrategyProvider : IPredictionStrategyProvider
   {
-    private readonly ISpreadsheetData spreadsheetData;
+    private readonly IFootballSpreadsheetData spreadsheetData;
 
-    public ExcelPredictionStrategyProvider(ISpreadsheetData spreadsheetData)
+    public ExcelPredictionStrategyProvider(IFootballSpreadsheetData spreadsheetData)
     {
       if (spreadsheetData == null) throw new ArgumentNullException("spreadsheetData");
       this.spreadsheetData = spreadsheetData;

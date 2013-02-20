@@ -46,7 +46,7 @@ namespace Samurai.Services
 
     public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
     {
-      var fixtures = this.fixtureStrategy.UpdateResultsNew(matchDate);
+      var fixtures = this.fixtureStrategy.UpdateResults(matchDate);
 
       return Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<TennisMatchViewModel>>(fixtures);
     }

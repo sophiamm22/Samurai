@@ -22,9 +22,8 @@ namespace Samurai.Services.Contracts
   public interface IFootballFixtureService : IFixtureService
   {
     FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam);
-    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixturesNew(DateTime fixtureDate);
-    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResultsNew(DateTime fixtureDate);
-    IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateNew(DateTime fixtureDate);
+    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate);
+    IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResults(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateLeague(DateTime fixtureDate, string league);
     IEnumerable<FootballFixtureViewModel> GetFootballFixturesByGameweek(int gameWeek, string league);

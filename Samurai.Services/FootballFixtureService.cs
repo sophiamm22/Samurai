@@ -88,7 +88,7 @@ namespace Samurai.Services
       return Mapper.Map<Match, FootballFixtureViewModel>(match);
     }
 
-    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixturesNew(DateTime fixtureDate)
+    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate)
     {
       var fixtures = this.fixtureStrategy.UpdateFixtures(fixtureDate);
 
@@ -96,7 +96,7 @@ namespace Samurai.Services
       return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
     }
 
-    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResultsNew(DateTime fixtureDate)
+    public IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballResults(DateTime fixtureDate)
     {
       var fixtures = this.fixtureStrategy.UpdateResults(fixtureDate);
 
@@ -104,7 +104,7 @@ namespace Samurai.Services
       return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
     }
 
-    public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateNew(DateTime fixtureDate)
+    public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate)
     {
       var fixtures = this.storedProcRepository
                          .GetGenericMatchDetails(fixtureDate, "Football")
@@ -116,16 +116,6 @@ namespace Samurai.Services
         var fixturesDTO = Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<Model.GenericMatchDetail>>(fixtures);
         return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
       }
-    }
-
-    public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate)
-    {
-      var fixtures = this.fixtureRepository.GetDaysMatchesWithTeamsTournaments(fixtureDate, "Football")
-        .ToList();
-      if (fixtures.Count == 0)
-        return Enumerable.Empty<FootballFixtureViewModel>();
-      else
-        return Mapper.Map<IEnumerable<Match>, IEnumerable<FootballFixtureViewModel>>(fixtures);
     }
 
     public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateLeague(DateTime fixtureDate, string league)

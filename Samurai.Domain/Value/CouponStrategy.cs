@@ -317,6 +317,9 @@ namespace Samurai.Domain.Value
           var match = ((OddsCheckerWebScheduleMatch)token);
           var matchTime = match.TimeString.Split(':');
 
+          if (match.TeamOrPlayerA.IndexOf('/') > -1 || match.TeamOrPlayerB.IndexOf('/') > -1)
+            continue;
+
           var teamOrPlayerA = this.fixtureRepository.GetAlias(match.TeamOrPlayerA, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
           var teamOrPlayerB = this.fixtureRepository.GetAlias(match.TeamOrPlayerB, this.valueOptions.OddsSource, valSam, this.valueOptions.Sport);
 

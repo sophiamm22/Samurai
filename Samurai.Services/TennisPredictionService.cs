@@ -79,7 +79,7 @@ namespace Samurai.Services
       return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
     }
 
-    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictionsNew(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictions(DateTime matchDate)
     {
       var predictions = FetchGenericTennisPredictions(matchDate);
       var combinedStats = PersistTennisPredictions(predictions, matchDate);
@@ -87,12 +87,38 @@ namespace Samurai.Services
       return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
     }
 
-    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictions(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisPredictionCoupons(DateTime matchDate)
     {
-      var predictions = FetchGenericTennisPredictions(matchDate);
-      PersistTennisPredictions(predictions, matchDate);
+      var predictions = FetchGenericTennisPredictionCoupons(matchDate);
+      var predictionsWrapped =
+        predictions.Select(x => new TennisMatchDetail
+        {
+          TennisPrediction = x
+        });
 
-      return Mapper.Map<IEnumerable<TennisPrediction>, IEnumerable<TennisFixtureViewModel>>(predictions);
+      return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(predictionsWrapped);
+    }
+
+    private IEnumerable<TennisPrediction> FetchGenericTennisPredictionCoupons(DateTime matchDate)
+    {
+      var sport = this.fixtureRepository.GetSport("Tennis");
+      var tournament = this.fixtureRepository.GetTournament("ATP");
+      var couponDate = matchDate.Date;
+      var source = this.fixtureRepository.GetExternalSource("Tennis Betting 365");
+
+      var valueOptions = new ValueOptions
+      {
+        Tournament = tournament,
+        Sport = sport,
+        CouponDate = matchDate,
+        OddsSource = source
+      };
+
+      var predictionStrategy = this.predictionProvider.CreatePredictionStrategy(sport);
+      var tennisPredictions = predictionStrategy.FetchPredictionsCoupon(valueOptions)
+                                                .Cast<TennisPrediction>()
+                                                .ToList();
+      return tennisPredictions;
     }
 
     private IEnumerable<TennisPrediction> FetchGenericTennisPredictions(DateTime matchDate)

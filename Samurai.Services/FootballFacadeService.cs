@@ -9,6 +9,8 @@ using AutoMapper;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Domain.Infrastructure;
+using Samurai.Domain.Model;
 
 namespace Samurai.Services
 {
@@ -32,6 +34,8 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+
       var ret = new List<FootballFixtureViewModel>();
 
       var footballFixtures = UpdateDaysFixtures(fixtureDate);
@@ -54,6 +58,8 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> UpdateDaysResults(DateTime fixtureDate)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Results for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+
       return this.footballFixtureService.FetchSkySportsFootballResults(fixtureDate);
     }
 

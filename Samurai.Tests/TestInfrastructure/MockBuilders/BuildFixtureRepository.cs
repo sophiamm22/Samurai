@@ -168,6 +168,15 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
       return repo;
     }
 
+    public static Mock<IFixtureRepository> CanGetExternalSource(this Mock<IFixtureRepository> repo)
+    {
+      repo.Setup(x => x.GetExternalSource(It.IsAny<string>()))
+          .Returns((string sourceName) =>
+          {
+            return new E.ExternalSource() { Source = sourceName };
+          });
+      return repo;
+    }
 
   }
 }

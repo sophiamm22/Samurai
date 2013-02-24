@@ -100,7 +100,7 @@
     <Compile Include="HtmlElements\OddsCheckerWebScheduleMatchOdds.cs" />
     <Compile Include="HtmlElements\SkySportsFootballFixture.cs" />
     <Compile Include="HtmlElements\SkySportsFootballResult.cs" />
-    <Compile Include="Infrastructure\ProgressReporter.cs" />
+    <Compile Include="Infrastructure\ProgressReporterProvider.cs" />
     <Compile Include="Model\GenericMatchDetail.cs" />
     <Compile Include="Model\IBestBettingCompetition.cs" />
     <Compile Include="Model\Enums.cs" />

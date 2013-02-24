@@ -10,6 +10,8 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
+using Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 
 namespace Samurai.Services
 {
@@ -33,6 +35,8 @@ namespace Samurai.Services
 
     public IEnumerable<TennisFixtureViewModel> GetDaysSchedule(DateTime fixtureDate)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Tennis Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+
       var ret = new List<TennisFixtureViewModel>();
       var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
 
@@ -82,6 +86,8 @@ namespace Samurai.Services
 
     public IEnumerable<TournamentEventViewModel> GetTournamentEvents()
     {
+      ProgressReporterProvider.Current.ReportProgress("Getting Tournament Events From Tennis Betting 365", ReporterImportance.High);
+
       return this.tennisFixtureService.GetTournamentEvents();
     }
 

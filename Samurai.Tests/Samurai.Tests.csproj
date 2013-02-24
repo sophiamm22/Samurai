@@ -68,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartUp\AppStartUpTests.cs" />
     <Compile Include="TestInfrastructure\ManifestWebRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildBookmakerRepository.cs" />
     <Compile Include="TestInfrastructure\MockBuilders\BuildFixtureRepository.cs" />
     <Compile Include="TestInfrastructure\MockBuilders\BuildPredictionRepository.cs" />
     <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepository.cs" />

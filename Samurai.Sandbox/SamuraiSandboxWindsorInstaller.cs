@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Threading.Tasks;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
@@ -19,7 +20,7 @@ using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
 using Samurai.Domain.Entities;
-
+using Samurai.Domain.Infrastructure;
 using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
 
 namespace Samurai.Sandbox
@@ -87,6 +88,8 @@ namespace Samurai.Sandbox
       container.Register(Component
                         .For<ICommandHandlerFactory>()
                         .AsFactory());
+
+      ProgressReporterProvider.Current = new ConsoleProgressReporterProvider();
     }
   }
 }

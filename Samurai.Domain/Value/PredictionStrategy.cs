@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Model = Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
@@ -71,7 +72,7 @@ namespace Samurai.Domain.Value
         var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
 
         var jsonFootballPredicton = (APIFootballPrediction)webRepository.ParseJson<APIFootballPrediction>(
-          predictionURL, s => Console.WriteLine(s), string.Format("{0}-{1}",
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Medium), string.Format("{0}-{1}",
           valueOptions.Tournament.TournamentName.Replace(" ", ""), valueOptions.CouponDate.ToShortDateString()));
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
       }
@@ -128,14 +129,14 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => Console.WriteLine(s), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
+        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Medium), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
         var predictionURL = new Uri(jsonTennisMatch.ToString());
 
         var jsonTennisPrediction = (APITennisPrediction)webRepository.ParseJson<APITennisPrediction>(
-          predictionURL, s => Console.WriteLine(s));
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Medium));
         jsonTennisPrediction.StartTime = jsonTennisMatch.MatchDate;
 
         predictions.Add(ConvertAPIToGeneric(jsonTennisPrediction, predictionURL));
@@ -151,7 +152,7 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => Console.WriteLine(s), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
+        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Medium), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {

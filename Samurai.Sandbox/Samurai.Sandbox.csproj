@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleReporterProvider.cs" />
     <Compile Include="FootballDownloadScheduler.cs" />
     <Compile Include="FootballConsole.cs" />
     <Compile Include="SamuraiConsole.cs" />

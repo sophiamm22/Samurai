@@ -10,6 +10,8 @@ using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Core;
 using Samurai.Domain.HtmlElements;
+using Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 
 namespace Samurai.Domain.Value
 {
@@ -43,10 +45,10 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(fixtureDate);
       
       var fixturesHTML = 
-        string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s)).First() : this.storedHTML;
+        string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium)).First() : this.storedHTML;
 
       var fixturesTokens = 
-        WebUtils.ParseWebsite<SkySportsFootballFixture>(fixturesHTML, s => Console.WriteLine(s))
+        WebUtils.ParseWebsite<SkySportsFootballFixture>(fixturesHTML, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium))
                 .Cast<ISkySportsFixture>();
 
       var returnMatches = new List<GenericMatchDetailQuery>();
@@ -66,8 +68,8 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(fixtureDate);
 
-      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => Console.WriteLine(s), "results").First() : this.storedHTML;
-      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => Console.WriteLine(s))
+      var fixturesHTML = string.IsNullOrEmpty(this.storedHTML) ? webRepository.GetHTML(new Uri[] { fixturesURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium), "results").First() : this.storedHTML;
+      var fixturesTokens = WebUtils.ParseWebsite<SkySportsFootballResult>(fixturesHTML, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium))
                                    .Cast<ISkySportsFixture>();
 
       var matchAndToken = ConvertFixtures(fixtureDate, fixturesTokens).Zip(fixturesTokens, (m, t) => new { Match = m, Token = t }).ToList();

@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.OleDb;
 
 using Model = Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Repository;
 using Samurai.Domain.APIModel;
@@ -78,7 +79,7 @@ namespace Samurai.Domain.Value.Excel
       {
         var predictionURL = new Uri(match.Field<string>("URL").Replace(".", "").Replace("’", "").Replace("'", "").Replace("&", "").Replace(",", "").RemoveDiacritics());
         var jsonTennisPrediction = (APITennisPrediction)this.webRepository.ParseJson<APITennisPrediction>(
-          predictionURL, s => Console.WriteLine(s));
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Medium));
 
         var genericPrediction = TennisPredictionStrategy.ConvertAPIToGeneric(jsonTennisPrediction, predictionURL);
         genericPrediction.MatchDate = match.Field<DateTime>("DateToTake").Date;

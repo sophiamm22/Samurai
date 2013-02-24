@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 
 using Samurai.Core;
 using Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 
 namespace Samurai.Domain.HtmlElements
 {
@@ -46,7 +47,7 @@ namespace Samurai.Domain.HtmlElements
       //url
       MatchURL = new Uri("http://www.oddschecker.com" + PartURL);
 
-      var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleMatchOdds>(BestOddsString, s => Console.WriteLine(s))
+      var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium))
                                .Cast<OddsCheckerWebScheduleMatchOdds>();
 
       if (oddsTokens.Count() == 3)

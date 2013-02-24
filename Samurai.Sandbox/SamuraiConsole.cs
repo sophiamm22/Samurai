@@ -10,7 +10,8 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Web.ViewModels.Tennis;
-
+using Samurai.Domain.Model;
+using Samurai.Domain.Infrastructure;
 
 namespace Samurai.Sandbox
 {
@@ -33,7 +34,8 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Value-Samurai -- Main Menu");
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High);
+
         Console.WriteLine("Select from the list below..");
         Console.WriteLine("----------------------------");
         Console.WriteLine("1.\tTennis console");

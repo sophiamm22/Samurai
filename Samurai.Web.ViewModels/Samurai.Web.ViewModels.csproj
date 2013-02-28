@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountViewModels.cs" />
+    <Compile Include="API\ErrorModel.cs" />
     <Compile Include="Football\FootballCouponViewModel.cs" />
     <Compile Include="Football\FootballFixtureViewModel.cs" />
     <Compile Include="Football\FootballLadderViewModel.cs" />

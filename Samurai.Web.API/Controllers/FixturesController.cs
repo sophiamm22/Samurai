@@ -6,8 +6,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-using Samurai.Web.Messaging.Infrastructure;
-using Samurai.Web.Messaging.TennisSchedule;
+using Samurai.Web.API.Infrastructure;
+using Samurai.Web.API.Messaging.TennisSchedule;
 
 namespace Samurai.Web.API.Controllers
 {
@@ -21,6 +21,7 @@ namespace Samurai.Web.API.Controllers
       this.bus = bus;
     }
 
+    [ActionName("gettennisschedule")]
     public HttpResponseMessage GetTennisSchedule(int year, int month, int day)
     {
       var request = new GetTennisScheduleRequest(Request) { Year = year, Month = month, Day = day };

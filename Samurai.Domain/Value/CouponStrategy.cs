@@ -174,7 +174,8 @@ namespace Samurai.Domain.Value
         }
         else if (token is BestBettingScheduleInRunning)
         {
-          returnMatches.Last().InPlay = true;
+          if (returnMatches.Count != 0)
+            returnMatches.Last().InPlay = true;
         }
       }
       if (this.missingAlias.Count > 0)

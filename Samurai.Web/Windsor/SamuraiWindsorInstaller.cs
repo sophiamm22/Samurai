@@ -10,16 +10,16 @@ using Castle.Facilities.TypedFactory;
 using System.Data.Entity;
 
 using Infrastructure.Data;
-using Samurai.WebPresentationModel.Controllers;
+using Samurai.Web.API.Controllers;
 using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
-using Samurai.WebPresentationModel.Messaging;
+using Samurai.Web.API.Messaging;
 using Samurai.Services;
 using Samurai.Domain;
+using Samurai.Web.API.Messaging.TennisSchedule;
 
-
-using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
+using Samurai.Web.API.Infrastructure;
 
 namespace Samurai.Web.Windsor
 {
@@ -39,10 +39,10 @@ namespace Samurai.Web.Windsor
                         .ImplementedBy<MessageBus>()
                         .LifeStyle.PerWebRequest);
 
-      container.Register(AllTypes
-                        .FromAssemblyContaining<AccountController>()
-                        .BasedOn<IController>()
-                        .LifestylePerWebRequest());
+      //container.Register(AllTypes
+      //                  .FromAssemblyContaining<AccountController>()
+      //                  .BasedOn<IController>()
+      //                  .LifestylePerWebRequest());
 
       container.Register(AllTypes
                         .FromAssemblyContaining<SqlFixtureRepository>()
@@ -60,7 +60,7 @@ namespace Samurai.Web.Windsor
                         .LifestylePerWebRequest());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<IndexFootballFixturesHandler>()
+                        .FromAssemblyContaining<GetTennisScheduleHandler>()
                         .Where(t => t.Name.EndsWith("Handler"))
                         .WithService
                         .AllInterfaces()

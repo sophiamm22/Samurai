@@ -45,6 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FixturesController.cs" />
+    <Compile Include="Infrastructure\Extensions.cs" />
+    <Compile Include="Infrastructure\HttpRequestExtensions.cs" />
+    <Compile Include="Infrastructure\ICommandHandler.cs" />
+    <Compile Include="Infrastructure\ICommandHandlerFactory.cs" />
+    <Compile Include="Infrastructure\IMessageHandler.cs" />
+    <Compile Include="Infrastructure\IMessageHandlerFactory.cs" />
+    <Compile Include="Infrastructure\MessageBus.cs" />
+    <Compile Include="Infrastructure\QueryStringCollection.cs" />
+    <Compile Include="Infrastructure\Request.cs" />
+    <Compile Include="Messaging\TennisSchedule\GetTennisScheduleHandler.cs" />
+    <Compile Include="Messaging\TennisSchedule\GetTennisScheduleRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,10 +66,6 @@
     <ProjectReference Include="..\Samurai.Services\Samurai.Services.csproj">
       <Project>{7118d25c-f41f-4b1e-8f3b-739d25d86321}</Project>
       <Name>Samurai.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samurai.Web.Messaging\Samurai.Web.Messaging.csproj">
-      <Project>{265a4e8a-c2e6-4c60-980b-d607c59ccec3}</Project>
-      <Name>Samurai.Web.Messaging</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
       <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>

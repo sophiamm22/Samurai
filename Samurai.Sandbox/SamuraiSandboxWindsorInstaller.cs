@@ -10,18 +10,17 @@ using Castle.Facilities.TypedFactory;
 using System.Data.Entity;
 
 using Infrastructure.Data;
-using Samurai.WebPresentationModel.Controllers;
 using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
-using Samurai.WebPresentationModel.Messaging;
 using Samurai.Services;
 using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Infrastructure;
-using Samurai.WebPresentationModel.Messaging.Fixtures.CommandHandlers;
+using Samurai.Web.API.Infrastructure;
+using Samurai.Web.API.Messaging.TennisSchedule;
 
 namespace Samurai.Sandbox
 {
@@ -70,7 +69,7 @@ namespace Samurai.Sandbox
                         .AllInterfaces());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<IndexFootballFixturesHandler>()
+                        .FromAssemblyContaining<GetTennisScheduleHandler>()
                         .Where(t => t.Name.EndsWith("Handler"))
                         .WithService
                         .AllInterfaces());

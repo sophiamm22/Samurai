@@ -41,7 +41,6 @@ namespace Samurai.Web.Messaging.TennisSchedule
       }
 
       return request.RequestMessage.CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
-
     }
 
   }

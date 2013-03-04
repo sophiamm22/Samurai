@@ -11,6 +11,8 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Domain.Entities;
+using Samurai.Domain.Infrastructure;
+using Samurai.Domain.Model;
 
 namespace Samurai.Sandbox
 {
@@ -31,14 +33,12 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Value-Samurai -- Football Menu");
-        Console.WriteLine("Select from the list below..");
-        Console.WriteLine("------------------------------");
-        Console.WriteLine("1.\tFetch Day's Schedule");
-        Console.WriteLine("2.\tFetch Day's Results");
-        Console.WriteLine("");
-        Console.WriteLine("3.\tReturn to main menu");
-        Console.WriteLine("------------------------------");
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Football Menu", ReporterImportance.High);
+        ProgressReporterProvider.Current.ReportProgress("1.\tFetch Day's Schedule", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Results", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("3.\tReturn to main menu", ReporterImportance.Low);
+
         var numberString = Console.ReadLine();
         int number;
         if (!int.TryParse(numberString, out number))
@@ -64,7 +64,8 @@ namespace Samurai.Sandbox
 
     private void FetchFootballResults()
     {
-      Console.WriteLine("Enter the date to fetch football results (dd/mm/yy)");
+      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football results (dd/mm/yy)", ReporterImportance.High);
+
       var dateString = Console.ReadLine();
       DateTime date;
       if (!DateTime.TryParse(dateString, out date))
@@ -78,7 +79,7 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Enter the date to fetch full football schedule (dd/mm/yy)");
+        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football schedule (dd/mm/yy)", ReporterImportance.High);
         var dateString = Console.ReadLine();
         DateTime date;
         if (!DateTime.TryParse(dateString, out date))
@@ -148,15 +149,19 @@ namespace Samurai.Sandbox
     }
     private string GetMissingAlias(IEnumerable<FootballLadderViewModel> tournamentLadder, string source, string playerName)
     {
-      Console.WriteLine(string.Format("Select a team from the list of {0}", tournamentLadder.Count()));
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Select a team from the list of {0}", tournamentLadder.Count()), ReporterImportance.High);
+
+      Console.WriteLine();
       var count = 1;
       tournamentLadder.ToList()
                       .ForEach(x => 
                       {
-                        Console.WriteLine(string.Format("{0}\t{1}", count, x.TeamName));
+                        ProgressReporterProvider.Current.ReportProgress(string.Format("{0}\t{1}", count, x.TeamName), ReporterImportance.Medium);
+
                         count++;
                       });
-      Console.WriteLine(string.Format("..or enter the team's local name for {0} via {1}", playerName, source));
+      ProgressReporterProvider.Current.ReportProgress(string.Format("..or enter the team's local name for {0} via {1}", playerName, source), ReporterImportance.Medium);
+      Console.WriteLine();
       var response = Console.ReadLine();
       if (Regex.IsMatch(response, @"\d+"))
       {

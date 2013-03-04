@@ -103,7 +103,7 @@ namespace Samurai.Domain.Value
       var tb365Uri = this.fixtureRepository.GetTennisTournamentLadder(tournament, year);
       var webRepository = this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
 
-      var tournamentDetail = webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium));
+      var tournamentDetail = webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low));
 
       return tournamentDetail;
     }

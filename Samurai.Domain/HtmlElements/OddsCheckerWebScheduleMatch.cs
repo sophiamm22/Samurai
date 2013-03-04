@@ -47,7 +47,7 @@ namespace Samurai.Domain.HtmlElements
       //url
       MatchURL = new Uri("http://www.oddschecker.com" + PartURL);
 
-      var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium))
+      var oddsTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low))
                                .Cast<OddsCheckerWebScheduleMatchOdds>();
 
       if (oddsTokens.Count() == 3)

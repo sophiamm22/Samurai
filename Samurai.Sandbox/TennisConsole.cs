@@ -12,6 +12,8 @@ using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
+using Samurai.Domain.Infrastructure;
+using Samurai.Domain.Model;
 
 namespace Samurai.Sandbox
 {
@@ -32,15 +34,13 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Value-Samurai -- Tennis Menu");
-        Console.WriteLine("Select from the list below..");
-        Console.WriteLine("----------------------------");
-        Console.WriteLine("1.\tGet Calendar");
-        Console.WriteLine("2.\tFetch Day's Schedule");
-        Console.WriteLine("3.\tGet Day's Schedule");
-        Console.WriteLine("");
-        Console.WriteLine("4.\tReturn to main menu");
-        Console.WriteLine("----------------------------");
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High);
+        ProgressReporterProvider.Current.ReportProgress("1.\tGet Calendar", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Schedule", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("3.\tGet Day's Schedule", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("4.\tReturn to main menu", ReporterImportance.Low);
+
         var numberString = Console.ReadLine();
         int number;
         if (!int.TryParse(numberString, out number))
@@ -70,7 +70,8 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        Console.WriteLine("Enter the date to fetch full tennis schedule (dd/mm/yy)");
+        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High);
+
         var dateString = Console.ReadLine();
         DateTime date;
         if (!DateTime.TryParse(dateString, out date))
@@ -100,7 +101,8 @@ namespace Samurai.Sandbox
 
     private void GetTennisSchedule()
     {
-      Console.WriteLine("Enter the date to get full tennis schedule (dd/mm/yy)");
+      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High);
+
       var dateString = Console.ReadLine();
       DateTime date;
       if (!DateTime.TryParse(dateString, out date))

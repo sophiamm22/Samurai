@@ -67,7 +67,7 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
 
-      var oddsHTML = webRepository.GetHTML(new Uri[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium)).First();
+      var oddsHTML = webRepository.GetHTML(new Uri[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low)).First();
       var oddsTokens = WebUtils.ParseWebsite<BestBettingOddsCompetitor, BestBettingOdds>(
         oddsHTML, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium));
 
@@ -145,11 +145,11 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
 
-      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium), matchCoupon.MatchURL.ToString())
+      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), matchCoupon.MatchURL.ToString())
                               .First();
 
       var oddsTokens = WebUtils.ParseWebsite<OddsCheckerMobiCompetitor, OddsCheckerMobiOdds>(
-        html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium));
+        html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low));
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
@@ -224,13 +224,13 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(couponDate);
 
-      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium), matchCoupon.MatchURL.ToString())
+      var html = webRepository.GetHTML(new[] { matchCoupon.MatchURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), matchCoupon.MatchURL.ToString())
                               .First();
 
       var oddsTokens = new List<IRegexableWebsite>();
 
-      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebMarketID, OddsCheckerWebCard>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium)));
-      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebCompetitor, OddsCheckerWebOdds>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium)));
+      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebMarketID, OddsCheckerWebCard>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low)));
+      oddsTokens.AddRange(WebUtils.ParseWebsite<OddsCheckerWebCompetitor, OddsCheckerWebOdds>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low)));
 
       #region deprecated
       //deprecated - redirection used to be handled by javascript.  We now get an easy to hack URL

@@ -46,7 +46,7 @@ namespace Samurai.Domain.HtmlElements
       MatchURL = new Uri("http://odds.bestbetting.com" + PartURL);
       
       //Best Odds
-      var oddsTokens = WebUtils.ParseWebsite<BestBettingScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium))
+      var oddsTokens = WebUtils.ParseWebsite<BestBettingScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low))
                                .Cast<BestBettingScheduleMatchOdds>();
 
       if (oddsTokens.Count() == 3)

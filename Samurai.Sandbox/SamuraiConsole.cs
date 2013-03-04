@@ -35,15 +35,13 @@ namespace Samurai.Sandbox
       while (true)
       {
         ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High);
+        ProgressReporterProvider.Current.ReportProgress("1.\tTennis console", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFootball console", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
+        ProgressReporterProvider.Current.ReportProgress("3.\tExit", ReporterImportance.Low);
 
-        Console.WriteLine("Select from the list below..");
-        Console.WriteLine("----------------------------");
-        Console.WriteLine("1.\tTennis console");
-        Console.WriteLine("2.\tFootball console");
-        Console.WriteLine("");
-        Console.WriteLine("3.\tExit");
-        Console.WriteLine("----------------------------");
         var numberString = Console.ReadLine();
+
         int number;
         if (!int.TryParse(numberString, out number))
         {

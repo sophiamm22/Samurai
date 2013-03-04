@@ -67,6 +67,8 @@ namespace Samurai.Services
 
     public IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Updating Days Tennis Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+
       var ret = new List<TennisFixtureViewModel>();
 
       var tennisFixturesAndPredictions = UpdateDaysFixturesAndPredicitons(fixtureDate);
@@ -93,6 +95,8 @@ namespace Samurai.Services
 
     public void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Adding tournament coupon for {0}", viewModel.Tournament), ReporterImportance.High);
+
       this.tennisOddsService.AddTournamentCouponURL(viewModel);
     }
 

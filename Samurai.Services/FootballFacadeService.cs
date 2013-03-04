@@ -65,11 +65,15 @@ namespace Samurai.Services
 
     public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Tournament Ladder for {0} on {1}", tournament, matchDate.ToShortDateString()), ReporterImportance.High);
+
       return this.footballFixtureService.GetTournamentLadder(matchDate, tournament);
     }
 
     public void AddAlias(string source, string playerName, string valueSamuraiName)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Adding alias for {0} at {1}", playerName, source), ReporterImportance.High);
+
       this.footballFixtureService.AddAlias(source, playerName, valueSamuraiName);
     }
 

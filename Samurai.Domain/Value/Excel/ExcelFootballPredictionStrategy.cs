@@ -28,5 +28,11 @@ namespace Samurai.Domain.Value.Excel
     {
       return this.spreadsheetData.GetPredictions(valueOptions);
     }
+
+
+    public Model.GenericPrediction FetchSinglePrediction(Entities.TeamPlayer teamPlayerA, Entities.TeamPlayer teamPlayerB, Entities.Tournament tournament, Model.IValueOptions valueOptions)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

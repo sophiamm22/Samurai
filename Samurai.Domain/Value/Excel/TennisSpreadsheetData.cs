@@ -79,7 +79,7 @@ namespace Samurai.Domain.Value.Excel
       {
         var predictionURL = new Uri(match.Field<string>("URL").Replace(".", "").Replace("’", "").Replace("'", "").Replace("&", "").Replace(",", "").RemoveDiacritics());
         var jsonTennisPrediction = (APITennisPrediction)this.webRepository.ParseJson<APITennisPrediction>(
-          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low));
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin));
 
         var genericPrediction = TennisPredictionStrategy.ConvertAPIToGeneric(jsonTennisPrediction, predictionURL);
         genericPrediction.MatchDate = match.Field<DateTime>("DateToTake").Date;

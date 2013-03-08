@@ -16,17 +16,50 @@ using Samurai.Domain.Value;
 using Samurai.Domain.Exceptions;
 using Model = Samurai.Domain.Model;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public class TennisOddsService : OddsService, ITennisOddsService
+  public class TennisOddsAdminService : OddsService, ITennisOddsAdminService
   {
-    public TennisOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
+    public TennisOddsAdminService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
       IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
       ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
       : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository, 
       couponProvider, oddsProvider)
     {
       this.sport = "Tennis";
+    }
+
+    public TennisCouponViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture)
+    {
+      var oddsSources =
+        this.bookmakerRepository
+            .GetActiveOddsSources()
+            .ToList(); //shit, this is time dependent!
+
+      var relatedOdds = new List<TennisCouponViewModel>();
+
+      foreach (var oddsSource in oddsSources)
+      {
+        var oddsForEvent =
+          this.storedProcedureRepository
+              .GetLatestOddsForEvent(date,
+                                     oddsSource.Source,
+                                     fixture.PlayerASurname,
+                                     fixture.PlayerBSurname,
+                                     fixture.PlayerAFirstName,
+                                     fixture.PlayerBFirstName)
+              .ToList();
+
+        var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponViewModel>(oddsForEvent);
+        asCouponVM.MatchIdentifier = fixture.MatchIdentifier;
+        asCouponVM.CouponURL = new Dictionary<string, string>();
+        if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
+          asCouponVM.CouponURL.Add(oddsSource.Source, oddsForEvent.First().MatchCouponURL);
+
+        relatedOdds.Add(asCouponVM);
+      }
+
+      return Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds);
     }
 
     public IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
@@ -40,29 +73,7 @@ namespace Samurai.Services
 
       foreach (var fixture in fixtures)
       {
-        var relatedOdds = new List<TennisCouponViewModel>();
-        foreach (var oddsSource in oddsSources)
-        {
-
-          var oddsForEvent =
-            this.storedProcedureRepository
-                .GetLatestOddsForEvent(date,
-                                       oddsSource.Source,
-                                       fixture.PlayerASurname,
-                                       fixture.PlayerBSurname,
-                                       fixture.PlayerAFirstName,
-                                       fixture.PlayerBFirstName)
-                .ToList();
-
-          var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponViewModel>(oddsForEvent);
-          asCouponVM.MatchIdentifier = fixture.MatchIdentifier;
-          asCouponVM.CouponURL = new Dictionary<string, string>();
-          if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
-            asCouponVM.CouponURL.Add(oddsSource.Source, oddsForEvent.First().MatchCouponURL);
-
-          relatedOdds.Add(asCouponVM);
-        }
-        ret.Add(Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds));
+        ret.Add(GetSingleTennisOdds(date, fixture));
       }
 
       return ret;

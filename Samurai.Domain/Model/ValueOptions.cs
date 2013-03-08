@@ -22,5 +22,6 @@ namespace Samurai.Domain.Model
     public ExternalSource OddsSource { get; set; }
     public Sport Sport { get; set; }
     public Tournament Tournament { get; set; }
+    public bool DontUpdateTennisStats { get; set; } //will take the default false in 99% of cases
   }
 }

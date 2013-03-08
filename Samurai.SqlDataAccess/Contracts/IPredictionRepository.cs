@@ -13,6 +13,7 @@ namespace Samurai.SqlDataAccess.Contracts
     void AddOrUpdateTennisPredictionsStats(TennisPredictionStat stat);
     Uri GetFootballAPIURL(int teamAID, int teamBID);
     Uri GetTodaysMatchesURL();
+    Uri GetTennisPredictionURL(TeamPlayer playerA, TeamPlayer playerB, Tournament tournament, DateTime date);
     string GetTournamentAlias(string tournamentName, ExternalSource source);
     int GetGamesRequiredForBet(string competitionName);
     decimal GetOverroundRequired(string competitionName);

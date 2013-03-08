@@ -10,16 +10,17 @@ using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Services.Contracts
 {
-  public interface IFixtureService
+  public interface IFixtureAdminService
   {
     int GetCountOfDaysMatches(DateTime fixtureDate, string sport);
-    TournamentViewModel GetTournament(string slug);
+    TournamentViewModel GetTournamentFromSlug(string slug);
+    TournamentViewModel GetTournament(string tournamentName);
     TeamPlayerViewModel GetTeamOrPlayer(string slug);
     void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName = null);
 
   }
 
-  public interface IFootballFixtureService : IFixtureService
+  public interface IFootballFixtureAdminService : IFixtureAdminService
   {
     FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam);
     IEnumerable<FootballFixtureViewModel> FetchSkySportsFootballFixtures(DateTime fixtureDate);
@@ -30,7 +31,7 @@ namespace Samurai.Services.Contracts
     IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }
 
-  public interface ITennisFixtureService : IFixtureService
+  public interface ITennisFixtureAdminService : IFixtureAdminService
   {
     IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
     TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);

@@ -18,15 +18,16 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>().ForMember(x => x.CouponURL, opt =>
-        { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); });
-      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>().ForMember(x => x.PlayerAOdds, opt =>
-        { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>().ForMember(x => x.PlayerBOdds, opt =>
-        { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
+      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>()
+        .IgnoreAllNonExisting()
+        .ForMember(x => x.CouponURL, opt => { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
+        .ForMember(x => x.PlayerAOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); })
+        .ForMember(x => x.PlayerBOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
 
-      Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>().IgnoreAllNonExisting();
+      Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>()
+        .IgnoreAllNonExisting()
+        .ForMember(x => x.PlayerAOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
+        .ForMember(x => x.PlayerBOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
     }
   }
 
@@ -80,22 +81,24 @@ namespace Samurai.Services.AutoMapper
     }
   }
 
-  public class TennisCouponOddsForEventResolver : ValueResolver<IEnumerable<OddsForEvent>, TennisCouponViewModel>
+  public class TennisCouponOddsForEventResolver : ValueResolver<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>
   {
-    protected override TennisCouponViewModel ResolveCore(IEnumerable<OddsForEvent> source)
+    private readonly Outcome outcome;
+
+    public TennisCouponOddsForEventResolver(Outcome outcome)
+    {
+      this.outcome = outcome;
+    }
+
+    protected override IEnumerable<OddViewModel> ResolveCore(IEnumerable<OddsForEvent> source)
     {
       var ret = new TennisCouponViewModel();
 
-      var playerAWins =
-        source.Where(x => x.Outcome == "Home Win")
-              .ToList();
-      var playerBWins =
-        source.Where(x => x.Outcome == "Away Win")
+      var playerOdds =
+        source.Where(x => x.Outcome.Replace(" ", "") == Enum.GetName(typeof(Outcome), outcome))
               .ToList();
 
-      ret.PlayerAOdds = ConvertToViewModel(playerAWins);
-      ret.PlayerBOdds = ConvertToViewModel(playerBWins);
-      return ret;
+      return ConvertToViewModel(playerOdds);
     }
 
     private IEnumerable<OddViewModel> ConvertToViewModel(IEnumerable<OddsForEvent> oddsForEvent)

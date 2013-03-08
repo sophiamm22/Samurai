@@ -16,6 +16,7 @@ namespace Samurai.Domain.Value
   {
     IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
     IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions);
+    Model.GenericPrediction FetchSinglePrediction(TeamPlayer teamPlayerA, TeamPlayer teamPlayerB, Tournament tournament, Model.IValueOptions valueOptions);
   }
 
   public abstract class AbstractPredictionStrategy : IPredictionStrategy
@@ -37,6 +38,7 @@ namespace Samurai.Domain.Value
     }
     public abstract IEnumerable<Model.GenericPrediction> FetchPredictions(Model.IValueOptions valueOptions);
     public abstract IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions);
+    public abstract Model.GenericPrediction FetchSinglePrediction(TeamPlayer teamPlayerA, TeamPlayer teamPlayerB, Tournament tournament, Model.IValueOptions valueOptions);
   }
 
   public class FootballPredictionStrategy : AbstractPredictionStrategy
@@ -72,7 +74,7 @@ namespace Samurai.Domain.Value
         var predictionURL = this.predictionRepository.GetFootballAPIURL(homeTeamID, awayTeamID);
 
         var jsonFootballPredicton = (APIFootballPrediction)webRepository.ParseJson<APIFootballPrediction>(
-          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low), string.Format("{0}-{1}",
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin), string.Format("{0}-{1}",
           valueOptions.Tournament.TournamentName.Replace(" ", ""), valueOptions.CouponDate.ToShortDateString()));
         predictions.Add(ConvertAPIToGeneric(jsonFootballPredicton, valueOptions.Tournament, valueOptions.CouponDate, predictionURL));
       }
@@ -80,6 +82,11 @@ namespace Samurai.Domain.Value
     }
 
     public override IEnumerable<Model.GenericPrediction> FetchPredictionsCoupon(Model.IValueOptions valueOptions)
+    {
+      throw new NotImplementedException();
+    }
+
+    public override Model.GenericPrediction FetchSinglePrediction(TeamPlayer teamPlayerA, TeamPlayer teamPlayerB, Tournament tournament, Model.IValueOptions valueOptions)
     {
       throw new NotImplementedException();
     }
@@ -129,14 +136,14 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
+        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
         var predictionURL = new Uri(jsonTennisMatch.ToString());
 
         var jsonTennisPrediction = (APITennisPrediction)webRepository.ParseJson<APITennisPrediction>(
-          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low));
+          predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin));
         jsonTennisPrediction.StartTime = jsonTennisMatch.MatchDate;
 
         predictions.Add(ConvertAPIToGeneric(jsonTennisPrediction, predictionURL));
@@ -152,7 +159,7 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
 
       var jsonTennisMatches = webRepository.GetJsonObjects<APITennisMatch>(this.predictionRepository.GetTodaysMatchesURL(),
-        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
+        s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin), string.Format("{0}-{1}", atp, valueOptions.CouponDate.ToShortDateString()));
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
@@ -166,6 +173,19 @@ namespace Samurai.Domain.Value
       }
 
       return predictions;
+    }
+
+    public override Model.GenericPrediction FetchSinglePrediction(TeamPlayer teamPlayerA, TeamPlayer teamPlayerB, Tournament tournament, Model.IValueOptions valueOptions)
+    {
+      var webRepository = this.webRepositoryProvider.CreateWebRepository(valueOptions.CouponDate);
+
+      var predictionURL = this.predictionRepository.GetTennisPredictionURL(teamPlayerA, teamPlayerB, tournament, valueOptions.CouponDate);
+      
+      var jsonTennisPrediction = (APITennisPrediction)webRepository.ParseJson<APITennisPrediction>(
+        predictionURL, s => ProgressReporterProvider.Current.ReportProgress(s, Model.ReporterImportance.Low, Model.ReporterAudience.Admin));
+      jsonTennisPrediction.StartTime = valueOptions.CouponDate;
+
+      return ConvertAPIToGeneric(jsonTennisPrediction, predictionURL);
     }
 
     public static Model.GenericPrediction ConvertAPIToGeneric(APITennisPrediction apiPrediction, Uri predictionURL)

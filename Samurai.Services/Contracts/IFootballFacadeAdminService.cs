@@ -8,7 +8,7 @@ using Samurai.Web.ViewModels.Football;
 
 namespace Samurai.Services.Contracts
 {
-  public interface IFootballFacadeService
+  public interface IFootballFacadeAdminService
   {
     void AddAlias(string source, string playerName, string valueSamuraiName);
     IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate);

@@ -96,7 +96,6 @@
     <Compile Include="Procedures\GetOutcomeProbabilitiesForSport.cs" />
     <Compile Include="Procedures\SqlStoredProceduresRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PredictionRepository.cs" />
     <Compile Include="SeedData.cs" />
     <Compile Include="SqlBookmakerRepository.cs" />
     <Compile Include="SqlFixtureRepository.cs" />

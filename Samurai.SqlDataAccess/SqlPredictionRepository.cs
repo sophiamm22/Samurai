@@ -47,6 +47,19 @@ namespace Samurai.SqlDataAccess
       return new Uri("http://www.tennisbetting365.com/api/gettodaysmatches");
     }
 
+    public Uri GetTennisPredictionURL(TeamPlayer playerA, TeamPlayer playerB, Tournament tournament, DateTime date)
+    {
+      return new Uri(
+        string.Format("http://www.tennisbetting365.com/api/getprediction/{0}/{1}/{2}/{3}/vs/{4}/{5}",
+        tournament.Slug,
+        date.Year,
+        playerA.FirstName.RemoveDiacritics().ToLower().Replace(' ','-'),
+        playerA.Name.RemoveDiacritics().ToLower().Replace(' ', '-'),
+        playerB.FirstName.RemoveDiacritics().ToLower().Replace(' ', '-'),
+        playerB.Name.RemoveDiacritics().ToLower().Replace(' ', '-'))
+        );
+
+    }
 
     public string GetTournamentAlias(string tournamentName, ExternalSource externalSource)
     {

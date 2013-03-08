@@ -9,7 +9,8 @@ using Samurai.Domain.Model;
 
 namespace Samurai.Domain.Infrastructure
 {
-  //an ambient context as seen in Dependency Injection in .Net - probably not the correct thing to do!
+  //an ambient context as seen in Dependency Injection in .Net - 
+  //probably not the correct thing to do but the alternative was to wire up all my services with a reporter
   public abstract class ProgressReporterProvider
   {
     private static ProgressReporterProvider current;
@@ -28,14 +29,15 @@ namespace Samurai.Domain.Infrastructure
         ProgressReporterProvider.current = value;
       }
     }
-    public abstract void ReportProgress(string message, ReporterImportance importance);
+    public abstract void ReportProgress(string message, ReporterImportance importance, ReporterAudience audience);
   }
 
   public class DefaultProgressReporterProvider : ProgressReporterProvider
   {
-    public override void ReportProgress(string message, ReporterImportance importance)
+    public override void ReportProgress(string message, ReporterImportance importance, ReporterAudience audience)
     {
-      Debug.Print(message);
+      Debug.Print(string.Format("Audience: {0}\tImportance: {1}\tMessage: {2}",
+        Enum.GetName(typeof(ReporterAudience), audience), Enum.GetName(typeof(ReporterImportance), importance), message));
     }
   }
 }

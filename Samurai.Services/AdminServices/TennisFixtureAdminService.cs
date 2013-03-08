@@ -16,13 +16,13 @@ using Samurai.Domain.APIModel;
 using Model = Samurai.Domain.Model;
 using Samurai.Web.ViewModels.Tennis;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public class TennisFixtureService : FixtureService, ITennisFixtureService
+  public class TennisFixtureAdminService : FixtureService, ITennisFixtureAdminService
   {
     protected readonly ITennisFixtureStrategy fixtureStrategy;
 
-    public TennisFixtureService(IFixtureRepository fixtureRepository,
+    public TennisFixtureAdminService(IFixtureRepository fixtureRepository,
       ITennisFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
       : base(fixtureRepository, storedProcRepository)
     {

@@ -17,10 +17,10 @@ namespace Samurai.Sandbox
 {
   public class SamuraiConsole
   {
-    private readonly IFootballFacadeService footballService;
-    private readonly ITennisFacadeService tennisService;
+    private readonly IFootballFacadeAdminService footballService;
+    private readonly ITennisFacadeAdminService tennisService;
 
-    public SamuraiConsole(IFootballFacadeService footballService, ITennisFacadeService tennisService)
+    public SamuraiConsole(IFootballFacadeAdminService footballService, ITennisFacadeAdminService tennisService)
     {
       if (footballService == null) throw new ArgumentNullException("footballService");
       if (tennisService == null) throw new ArgumentNullException("tennisService");
@@ -34,11 +34,11 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High);
-        ProgressReporterProvider.Current.ReportProgress("1.\tTennis console", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("2.\tFootball console", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("3.\tExit", ReporterImportance.Low);
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("1.\tTennis console", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFootball console", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("3.\tExit", ReporterImportance.Low, ReporterAudience.Admin);
 
         var numberString = Console.ReadLine();
 

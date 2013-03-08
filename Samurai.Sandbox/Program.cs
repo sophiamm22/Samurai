@@ -22,8 +22,8 @@ namespace Samurai.Sandbox
       var container = new WindsorContainer();
       container.Install(new SamuraiSandboxWindsorInstaller());
 
-      var footballService = container.Resolve<IFootballFacadeService>();
-      var tennisService = container.Resolve<ITennisFacadeService>();
+      var footballService = container.Resolve<IFootballFacadeAdminService>();
+      var tennisService = container.Resolve<ITennisFacadeAdminService>();
 
       var samuraiConsole = new SamuraiConsole(footballService, tennisService);
       samuraiConsole.SamuraiMenu();

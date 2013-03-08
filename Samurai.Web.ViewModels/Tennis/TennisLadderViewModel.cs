@@ -11,6 +11,8 @@ namespace Samurai.Web.ViewModels.Tennis
     public int Position { get; set; }
     public string PlayerFirstName { get; set; }
     public string PlayerSurname { get; set; }
+    public string PlayerFirstNameSlug { get; set; }
+    public string PlayerSurnameSlug { get; set; }
     public int? Seed { get; set; }
     public string Meta { get; set; }
   }

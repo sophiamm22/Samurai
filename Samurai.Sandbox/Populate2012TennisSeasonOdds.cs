@@ -43,19 +43,19 @@ namespace Samurai.Sandbox
 
     private void GetFixtures(DateTime date)
     {
-      var fixtureService = this.container.Resolve<ITennisFixtureService>();
+      var fixtureService = this.container.Resolve<ITennisFixtureAdminService>();
       fixtureService.FetchTennisResults(date);
     }
 
     private void GetPredictions(DateTime date)
     {
-      var predictionService = this.container.Resolve<ITennisPredictionService>();
+      var predictionService = this.container.Resolve<ITennisPredictionAdminService>();
       var predictions = predictionService.FetchTennisPredictions(date);
     }
 
     private void GetOdds(DateTime date)
     {
-      var oddsService = this.container.Resolve<ITennisOddsService>();
+      var oddsService = this.container.Resolve<ITennisOddsAdminService>();
       var fullFixtureDetails = oddsService.FetchAllTennisOdds(date);
     }
 

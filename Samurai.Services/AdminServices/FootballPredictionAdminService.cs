@@ -15,9 +15,9 @@ using Samurai.Domain.Entities;
 using Samurai.Domain.Value;
 using Samurai.Domain.Model;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public abstract class PredictionService : IPredictionService
+  public abstract class PredictionService : IPredictionAdminService
   {
     protected readonly IPredictionStrategyProvider predictionProvider;
     protected readonly IPredictionRepository predictionRepository;
@@ -116,9 +116,9 @@ namespace Samurai.Services
     }
   }
 
-  public class FootballPredictionService : PredictionService, IFootballPredictionService
+  public class FootballPredictionAdminService : PredictionService, IFootballPredictionAdminService
   {
-    public FootballPredictionService(IPredictionStrategyProvider predictionProvider,
+    public FootballPredictionAdminService(IPredictionStrategyProvider predictionProvider,
       IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }

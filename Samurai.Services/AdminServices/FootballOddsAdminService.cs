@@ -16,9 +16,9 @@ using Samurai.Domain.Value;
 using Model = Samurai.Domain.Model;
 using Samurai.Web.ViewModels.Value;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public abstract class OddsService : IOddsService
+  public abstract class OddsService : IOddsAdminService
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IBookmakerRepository bookmakerRepository;
@@ -440,9 +440,9 @@ namespace Samurai.Services
     }
   }
 
-  public class FootballOddsService : OddsService, IFootballOddsService
+  public class FootballOddsAdminService : OddsService, IFootballOddsAdminService
   {
-    public FootballOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
+    public FootballOddsAdminService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
       IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
       ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
       : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository,

@@ -14,9 +14,9 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
 {
   public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleRequest>
   {
-    private readonly ITennisFacadeService tennisService;
+    private readonly ITennisFacadeAdminService tennisService;
 
-    public GetTennisScheduleHandler(ITennisFacadeService tennisService)
+    public GetTennisScheduleHandler(ITennisFacadeAdminService tennisService)
       :base()
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");

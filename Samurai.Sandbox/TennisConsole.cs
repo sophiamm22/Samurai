@@ -19,11 +19,11 @@ namespace Samurai.Sandbox
 {
   public class TennisConsole
   {
-    private readonly ITennisFacadeService tennisService;
+    private readonly ITennisFacadeAdminService tennisService;
 
     public IEnumerable<TennisFixtureViewModel> Fixtures { get; set; }
 
-    public TennisConsole(ITennisFacadeService tennisService)
+    public TennisConsole(ITennisFacadeAdminService tennisService)
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
 
@@ -34,12 +34,13 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High);
-        ProgressReporterProvider.Current.ReportProgress("1.\tGet Calendar", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Schedule", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("3.\tGet Day's Schedule", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("4.\tReturn to main menu", ReporterImportance.Low);
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("1.\tGet Calendar", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Schedule", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("3.\tGet Day's Schedule", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("4.\tCalculate Ladder Challenge", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("5.\tReturn to main menu", ReporterImportance.Low, ReporterAudience.Admin);
 
         var numberString = Console.ReadLine();
         int number;
@@ -55,6 +56,8 @@ namespace Samurai.Sandbox
             FetchTennisSchedule();
           else if (number == 3)
             GetTennisSchedule();
+          else if (number == 4)
+            GetTournamentLadderChallenge();
           else
             break;
         }
@@ -70,7 +73,7 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High);
+        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
 
         var dateString = Console.ReadLine();
         DateTime date;
@@ -101,7 +104,7 @@ namespace Samurai.Sandbox
 
     private void GetTennisSchedule()
     {
-      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
 
       var dateString = Console.ReadLine();
       DateTime date;
@@ -118,6 +121,50 @@ namespace Samurai.Sandbox
       {
         throw ex;
       }
+    }
+
+    private void GetTournamentLadderChallenge()
+    {
+      ProgressReporterProvider.Current.ReportProgress("Enter the tournament name", ReporterImportance.High, ReporterAudience.Admin);
+      var tournamentString = Console.ReadLine();
+      ProgressReporterProvider.Current.ReportProgress("Enter the tournament year", ReporterImportance.High, ReporterAudience.Admin);
+      var tournamentYearString = Console.ReadLine();
+
+      var viewModel = new CalculateTournamentLadderChallengeViewModel
+      {
+        Tournament = tournamentString,
+        StartDate = new DateTime(int.Parse(tournamentYearString), 06, 29),
+        AllowRecalculation = false
+      };
+
+      var challengeLadders = this.tennisService.CalculateTournamentLadderChallenge(viewModel);
+
+      int round = 0;
+      int playerCount = 0;
+      int maxLengthWinner = 0;
+      int maxLengthLoser = 0;
+      foreach (var challengeLadder in challengeLadders)
+      {
+        if (round != challengeLadder.RoundNumber)
+        {
+          maxLengthWinner = 5 + challengeLadders.Max(x => x.ExpectedWinner.Length);
+          maxLengthLoser = 5 + challengeLadders.Max(x => x.ExpectedLoser.Length);
+          round++;
+          if (!(round == 1 && playerCount == 0))
+            Console.ReadLine();
+          ProgressReporterProvider.Current.ReportProgress(string.Format("Round {0}", challengeLadder.RoundNumber), ReporterImportance.High, ReporterAudience.Admin);
+       }
+        else if (playerCount % 16 == 0)
+        {
+          ProgressReporterProvider.Current.ReportProgress(new String(' ', 10), ReporterImportance.High, ReporterAudience.Admin);
+          Console.ReadLine();
+        }
+        ProgressReporterProvider.Current.ReportProgress(
+          string.Format("{0}bt.\t{1}with probability {2}", challengeLadder.ExpectedWinner.PadRight(maxLengthWinner, ' '), challengeLadder.ExpectedLoser.PadRight(maxLengthLoser, ' '), challengeLadder.Probability.ToString("###.00%").PadLeft(10)), 
+          ReporterImportance.Medium, ReporterAudience.Admin);
+        playerCount++;
+      }
+      Console.ReadLine();
     }
 
     private void AddTournamentCouponURLs(IEnumerable<MissingTournamentCouponURL> missingURLs)

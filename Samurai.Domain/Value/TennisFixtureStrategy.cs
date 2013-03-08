@@ -44,7 +44,7 @@ namespace Samurai.Domain.Value
         this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
 
       var tournamentEvents = 
-        webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium));
+        webRepository.GetJsonObjects<APITennisTourCalendar>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium, ReporterAudience.Admin));
 
       foreach (var tournamentEvent in tournamentEvents)
       {
@@ -103,7 +103,7 @@ namespace Samurai.Domain.Value
       var tb365Uri = this.fixtureRepository.GetTennisTournamentLadder(tournament, year);
       var webRepository = this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
 
-      var tournamentDetail = webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low));
+      var tournamentDetail = webRepository.GetJsonObject<APITournamentDetail>(tb365Uri, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin));
 
       return tournamentDetail;
     }

@@ -15,9 +15,9 @@ using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value;
 using Model = Samurai.Domain.Model;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public abstract class FixtureService : IFixtureService
+  public abstract class FixtureService : IFixtureAdminService
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;
@@ -37,9 +37,17 @@ namespace Samurai.Services
       return count;
     }
 
-    public TournamentViewModel GetTournament(string slug)
+    public TournamentViewModel GetTournamentFromSlug(string slug)
     {
       var tournament = this.fixtureRepository.GetTournamentFromSlug(slug);
+      if (tournament == null) return null;
+
+      return Mapper.Map<Tournament, TournamentViewModel>(tournament);
+    }
+
+    public TournamentViewModel GetTournament(string tournamentName)
+    {
+      var tournament = this.fixtureRepository.GetTournament(tournamentName);
       if (tournament == null) return null;
 
       return Mapper.Map<Tournament, TournamentViewModel>(tournament);
@@ -66,11 +74,11 @@ namespace Samurai.Services
     }
   }
 
-  public class FootballFixtureService : FixtureService, IFootballFixtureService
+  public class FootballFixtureAdminService : FixtureService, IFootballFixtureAdminService
   {
     protected readonly IFootballFixtureStrategy fixtureStrategy;
 
-    public FootballFixtureService(IFixtureRepository fixtureRepository,
+    public FootballFixtureAdminService(IFixtureRepository fixtureRepository,
       IFootballFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
       : base(fixtureRepository, storedProcRepository)
     {

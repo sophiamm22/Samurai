@@ -10,12 +10,13 @@ using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.Contracts
 {
-  public interface ITennisFacadeService
+  public interface ITennisFacadeAdminService
   {
     IEnumerable<TennisFixtureViewModel> GetDaysSchedule(DateTime fixtureDate);
     IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate);
     IEnumerable<TournamentEventViewModel> GetTournamentEvents();
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
+    IEnumerable<ShowTournamentLadderChallengeViewModel> CalculateTournamentLadderChallenge(CalculateTournamentLadderChallengeViewModel viewModel);
     IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
     void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName);
   }

@@ -92,11 +92,11 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(this.valueOptions.CouponDate);
 
       var html = webRepository.GetHTML(new[] { this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource) },
-        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium), 
+        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Medium, ReporterAudience.Admin), 
         string.Format("{0} BestBetting Coupon", this.valueOptions.CouponDate.ToShortDateString()))
         .First();
 
-      var bestbettingCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low))
+      var bestbettingCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin))
         .Cast<TCompetition>()
         .Where(c => c.CompetitionType == this.valueOptions.Tournament.TournamentName)
         .ToList();
@@ -129,11 +129,11 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(this.valueOptions.CouponDate);
 
-      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), competitionURL.ToString())
+      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin), competitionURL.ToString())
                               .First();
 
       var matchTokens = WebUtils.ParseWebsite<BestBettingScheduleDate, BestBettingScheduleMatch, BestBettingScheduleInRunning>(html,
-        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low)).ToList();
+        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin)).ToList();
 
       var currentDate = DateTime.Now.Date;
       var lastChecked = DateTime.Now;
@@ -201,10 +201,10 @@ namespace Samurai.Domain.Value
       var webRepository = this.webRepositoryProvider.CreateWebRepository(this.valueOptions.CouponDate);
 
       var html = webRepository.GetHTML(new[] { this.bookmakerRepository.GetTournamentCouponUrl(this.valueOptions.Tournament, this.valueOptions.OddsSource) },
-        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), string.Format("{0} OddsChecker Coupon", this.valueOptions.CouponDate.ToShortDateString()))
+        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin), string.Format("{0} OddsChecker Coupon", this.valueOptions.CouponDate.ToShortDateString()))
         .First();
 
-      var oddscheckerCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low))
+      var oddscheckerCompetitions = WebUtils.ParseWebsite<TCompetition>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin))
         .Cast<TCompetition>()
         .Where(c => c.CompetitionType == this.valueOptions.Tournament.TournamentName)
         .ToList();
@@ -234,10 +234,10 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(this.valueOptions.CouponDate);
 
-      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), competitionURL.ToString())
+      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin), competitionURL.ToString())
                               .First();
 
-      var matchTokens = WebUtils.ParseWebsite<OddsCheckerMobiGenericMatch, OddsCheckerMobiScheduleHeading>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low))
+      var matchTokens = WebUtils.ParseWebsite<OddsCheckerMobiGenericMatch, OddsCheckerMobiScheduleHeading>(html, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin))
         .ToList();
 
       var lastChecked = DateTime.Now;
@@ -294,10 +294,10 @@ namespace Samurai.Domain.Value
 
       var webRepository = this.webRepositoryProvider.CreateWebRepository(this.valueOptions.CouponDate);
 
-      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low), competitionURL.ToString())
+      var html = webRepository.GetHTML(new[] { competitionURL }, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin), competitionURL.ToString())
                               .First();
       var matchTokens = WebUtils.ParseWebsite<OddsCheckerWebScheduleDate, OddsCheckerWebScheduleMatch, OddsCheckerWebScheduleHeading>(html,
-        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low));
+        s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin));
 
       var currentDate = DateTime.Now.Date;
       var lastChecked = DateTime.Now;

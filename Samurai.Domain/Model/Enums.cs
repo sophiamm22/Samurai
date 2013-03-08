@@ -50,4 +50,9 @@ namespace Samurai.Domain.Model
     Error,
     Completed
   }
+  public enum ReporterAudience
+  {
+    Admin,
+    Everyone
+  }
 }

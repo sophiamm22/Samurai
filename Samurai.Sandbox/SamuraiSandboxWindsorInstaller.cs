@@ -13,7 +13,7 @@ using Infrastructure.Data;
 using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
-using Samurai.Services;
+using Samurai.Services.AdminServices;
 using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
@@ -63,7 +63,7 @@ namespace Samurai.Sandbox
                         .AllInterfaces());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<FootballFixtureService>()
+                        .FromAssemblyContaining<FootballFixtureAdminService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces());

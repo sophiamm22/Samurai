@@ -15,7 +15,7 @@ using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
 using Samurai.Web.API.Messaging;
-using Samurai.Services;
+using Samurai.Services.AdminServices;
 using Samurai.Domain;
 using Samurai.Web.API.Messaging.TennisSchedule;
 
@@ -53,7 +53,7 @@ namespace Samurai.Web.Windsor
                         .LifestylePerWebRequest());
 
       container.Register(AllTypes
-                        .FromAssemblyContaining<FootballFixtureService>()
+                        .FromAssemblyContaining<FootballFixtureAdminService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces()

@@ -12,16 +12,16 @@ using Samurai.Web.ViewModels.Football;
 using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Model;
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public class FootballFacadeService : IFootballFacadeService
+  public class FootballFacadeAdminService : IFootballFacadeAdminService
   {
-    protected readonly IFootballFixtureService footballFixtureService;
-    protected readonly IFootballPredictionService footballPredictionService;
-    protected readonly IFootballOddsService footballOddsService;
+    protected readonly IFootballFixtureAdminService footballFixtureService;
+    protected readonly IFootballPredictionAdminService footballPredictionService;
+    protected readonly IFootballOddsAdminService footballOddsService;
 
-    public FootballFacadeService(IFootballFixtureService footballFixtureService,
-      IFootballPredictionService footballPredictionService, IFootballOddsService footballOddsService)
+    public FootballFacadeAdminService(IFootballFixtureAdminService footballFixtureService,
+      IFootballPredictionAdminService footballPredictionService, IFootballOddsAdminService footballOddsService)
     {
       if (footballFixtureService == null) throw new ArgumentNullException("footballFixtureService");
       if (footballPredictionService == null) throw new ArgumentNullException("footballPredictionService");
@@ -34,7 +34,7 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate)
     {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
 
       var ret = new List<FootballFixtureViewModel>();
 
@@ -58,21 +58,21 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> UpdateDaysResults(DateTime fixtureDate)
     {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Results for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Football Results for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
 
       return this.footballFixtureService.FetchSkySportsFootballResults(fixtureDate);
     }
 
     public IEnumerable<FootballLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament)
     {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Tournament Ladder for {0} on {1}", tournament, matchDate.ToShortDateString()), ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Tournament Ladder for {0} on {1}", tournament, matchDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
 
       return this.footballFixtureService.GetTournamentLadder(matchDate, tournament);
     }
 
     public void AddAlias(string source, string playerName, string valueSamuraiName)
     {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Adding alias for {0} at {1}", playerName, source), ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Adding alias for {0} at {1}", playerName, source), ReporterImportance.High, ReporterAudience.Admin);
 
       this.footballFixtureService.AddAlias(source, playerName, valueSamuraiName);
     }

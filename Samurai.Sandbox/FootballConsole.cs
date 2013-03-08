@@ -18,11 +18,11 @@ namespace Samurai.Sandbox
 {
   public class FootballConsole
   {
-    private readonly IFootballFacadeService footballService;
+    private readonly IFootballFacadeAdminService footballService;
 
     public IEnumerable<FootballFixtureViewModel> Fixtures { get; set; }
 
-    public FootballConsole(IFootballFacadeService footballService)
+    public FootballConsole(IFootballFacadeAdminService footballService)
     {
       if (footballService == null) throw new ArgumentNullException("footballService");
 
@@ -33,11 +33,11 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Football Menu", ReporterImportance.High);
-        ProgressReporterProvider.Current.ReportProgress("1.\tFetch Day's Schedule", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Results", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium);
-        ProgressReporterProvider.Current.ReportProgress("3.\tReturn to main menu", ReporterImportance.Low);
+        ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Football Menu", ReporterImportance.High, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("1.\tFetch Day's Schedule", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Results", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("3.\tReturn to main menu", ReporterImportance.Low, ReporterAudience.Admin);
 
         var numberString = Console.ReadLine();
         int number;
@@ -64,7 +64,7 @@ namespace Samurai.Sandbox
 
     private void FetchFootballResults()
     {
-      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football results (dd/mm/yy)", ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football results (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
 
       var dateString = Console.ReadLine();
       DateTime date;
@@ -79,7 +79,7 @@ namespace Samurai.Sandbox
     {
       while (true)
       {
-        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football schedule (dd/mm/yy)", ReporterImportance.High);
+        ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch football schedule (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
         var dateString = Console.ReadLine();
         DateTime date;
         if (!DateTime.TryParse(dateString, out date))
@@ -149,18 +149,18 @@ namespace Samurai.Sandbox
     }
     private string GetMissingAlias(IEnumerable<FootballLadderViewModel> tournamentLadder, string source, string playerName)
     {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Select a team from the list of {0}", tournamentLadder.Count()), ReporterImportance.High);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Select a team from the list of {0}", tournamentLadder.Count()), ReporterImportance.High, ReporterAudience.Admin);
 
       Console.WriteLine();
       var count = 1;
       tournamentLadder.ToList()
                       .ForEach(x => 
                       {
-                        ProgressReporterProvider.Current.ReportProgress(string.Format("{0}\t{1}", count, x.TeamName), ReporterImportance.Medium);
+                        ProgressReporterProvider.Current.ReportProgress(string.Format("{0}\t{1}", count, x.TeamName), ReporterImportance.Medium, ReporterAudience.Admin);
 
                         count++;
                       });
-      ProgressReporterProvider.Current.ReportProgress(string.Format("..or enter the team's local name for {0} via {1}", playerName, source), ReporterImportance.Medium);
+      ProgressReporterProvider.Current.ReportProgress(string.Format("..or enter the team's local name for {0} via {1}", playerName, source), ReporterImportance.Medium, ReporterAudience.Admin);
       Console.WriteLine();
       var response = Console.ReadLine();
       if (Regex.IsMatch(response, @"\d+"))

@@ -15,11 +15,11 @@ using Samurai.Domain.Value;
 using Samurai.Domain.Model;
 
 
-namespace Samurai.Services
+namespace Samurai.Services.AdminServices
 {
-  public class TennisPredictionService : PredictionService, ITennisPredictionService
+  public class TennisPredictionAdminService : PredictionService, ITennisPredictionAdminService
   {
-    public TennisPredictionService(IPredictionStrategyProvider predictionProvider,
+    public TennisPredictionAdminService(IPredictionStrategyProvider predictionProvider,
       IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
@@ -85,6 +85,40 @@ namespace Samurai.Services
       var combinedStats = PersistTennisPredictions(predictions, matchDate);
 
       return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
+    }
+
+    public TennisFixtureViewModel GetSingleTennisPrediction(string playerASurname, string playerAFirstname, string playerBSurname, string playerBFirstname, int year, string tournamentSlug, bool updateStats = true)
+    {
+      var sport = this.fixtureRepository.GetSport("Tennis");
+      var tournament = this.fixtureRepository.GetTournamentFromSlug(tournamentSlug);
+      var playerA = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(playerASurname, playerAFirstname);
+      var playerB = this.fixtureRepository.GetTeamOrPlayerFromNameAndMaybeFirstName(playerBSurname, playerBFirstname);
+      var safeDate = new DateTime(year, 06, 29);
+      var valueOptions = new ValueOptions
+      {
+        CouponDate = safeDate,
+        Tournament = tournament,
+        DontUpdateTennisStats = !updateStats
+      };
+
+      var provider = this.predictionProvider.CreatePredictionStrategy(sport);
+      var prediction = (TennisPrediction)provider.FetchSinglePrediction(playerA, playerB, tournament, valueOptions);
+
+      var tennisPredictionStat = new TennisPredictionStat
+      {
+        PlayerAGames = prediction.PlayerAGames,
+        PlayerBGames = prediction.PlayerBGames,
+        EPoints = (decimal?)prediction.EPoints,
+        EGames = (decimal?)prediction.EGames,
+        ESets = (decimal?)prediction.ESets
+      };
+      var tennisMatchDetail = new TennisMatchDetail()
+      {
+        TennisPredictionStat = tennisPredictionStat,
+        TennisPrediction = prediction
+      };
+
+      return Mapper.Map<TennisMatchDetail, TennisFixtureViewModel>(tennisMatchDetail); //no idea what HydrateFullTennisMatchDetails was for in the first place, I only need predictions and number of games for now
     }
 
     public IEnumerable<TennisFixtureViewModel> FetchTennisPredictionCoupons(DateTime matchDate)

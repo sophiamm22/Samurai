@@ -11,10 +11,10 @@ namespace Samurai.Sandbox
 {
   public class ConsoleProgressReporterProvider : ProgressReporterProvider
   {
-    public override void ReportProgress(string message, ReporterImportance importance)
+    public override void ReportProgress(string message, ReporterImportance importance, ReporterAudience audience)
     {
-      if (Console.WindowWidth != 141) 
-        Console.WindowWidth = 141;
+      if (Console.WindowWidth != 145) 
+        Console.WindowWidth = 145;
 
       if (importance == ReporterImportance.High)
       {

@@ -11,7 +11,7 @@ using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.Contracts
 {
-  public interface IOddsService
+  public interface IOddsAdminService
   {
     OddsSourceViewModel FindOddsSource(string slug);
     SportViewModel FindSport(string slug);
@@ -19,13 +19,14 @@ namespace Samurai.Services.Contracts
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
   }
 
-  public interface ITennisOddsService : IOddsService
+  public interface ITennisOddsAdminService : IOddsAdminService
   {
+    TennisCouponViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture);
     IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures);
     IEnumerable<TennisCouponViewModel> FetchAllTennisOdds(DateTime date);
   }
 
-  public interface IFootballOddsService : IOddsService
+  public interface IFootballOddsAdminService : IOddsAdminService
   {
     IEnumerable<FootballCouponViewModel> FetchAllFootballOdds(DateTime date);
     IEnumerable<FootballCouponViewModel> FetchAllPreScreenedFootballOdds(DateTime date);

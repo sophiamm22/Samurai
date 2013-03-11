@@ -59,17 +59,14 @@ namespace Samurai.Services.AdminServices
         relatedOdds.Add(asCouponVM);
       }
 
-      return Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds);
+      var singleCouponVM = Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds);
+      singleCouponVM.MatchIdentifier = relatedOdds.First().MatchIdentifier;
+      return singleCouponVM;
     }
 
     public IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
     {
       var ret = new List<TennisCouponViewModel>();
-
-      var oddsSources = 
-        this.bookmakerRepository
-            .GetActiveOddsSources()
-            .ToList();
 
       foreach (var fixture in fixtures)
       {

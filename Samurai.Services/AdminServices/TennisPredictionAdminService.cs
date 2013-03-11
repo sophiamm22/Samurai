@@ -66,11 +66,11 @@ namespace Samurai.Services.AdminServices
 
       foreach (var id in matches.Select(x => x.Id))
       {
-        var footballPrediction = tennisPredictionsDic[id];
+        var tennisPrediction = tennisPredictionsDic[id];
 
-        footballPrediction.OutcomeProbabilities = outcomePredictions[id].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability);
+        tennisPrediction.OutcomeProbabilities = outcomePredictions[id].ToDictionary(o => (Outcome)o.MatchOutcomeID, o => (double)o.MatchOutcomeProbability);
         if (scoreLinePredictions.ContainsKey(id))
-          footballPrediction.ScoreLineProbabilities = scoreLinePredictions[id].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability);
+          tennisPrediction.ScoreLineProbabilities = scoreLinePredictions[id].ToDictionary(o => string.Format("{0}-{1}", o.ScoreOutcome.TeamAScore, o.ScoreOutcome.TeamBScore), o => (double?)o.ScoreOutcomeProbability);
       }
 
       var combinedStats = HydrateFullTennisMatchDetails(matchDate, tennisPredictionsDic,

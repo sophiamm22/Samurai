@@ -17,7 +17,7 @@ namespace Samurai.Web.Client
       // jQuery
       bundles.Add(new ScriptBundle("~/bundles/jquery",
           "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-          .Include("~/Scripts/lib/jquery-{version}.js"));
+          .Include("~/Scripts/jquery-{version}.js"));
 
 
       bundles.Add(

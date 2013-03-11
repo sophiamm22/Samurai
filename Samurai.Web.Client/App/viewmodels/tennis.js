@@ -1,14 +1,14 @@
 ﻿define(['services/logger'], function (logger) {
     var vm = {
         activate: activate,
-        title: 'Details View'
+        title: 'Tennis'
     };
 
     return vm;
 
     //#region Internal Methods
     function activate() {
-        logger.log('Details View Activated', null, 'details', true);
+        logger.log('Tennis View Activated', null, 'tennis', true);
         return true;
     }
     //#endregion

@@ -14,9 +14,9 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
 {
   public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleRequest>
   {
-    private readonly ITennisFacadeAdminService tennisService;
+    private readonly ITennisFixtureClientService tennisService;
 
-    public GetTennisScheduleHandler(ITennisFacadeAdminService tennisService)
+    public GetTennisScheduleHandler(ITennisFixtureClientService tennisService)
       :base()
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
@@ -39,7 +39,6 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
       {
         return request.RequestMessage.CreateErrorMessage(HttpStatusCode.NotFound, ex.Message);
       }
-
       return request.RequestMessage.CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
     }
 

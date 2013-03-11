@@ -13,9 +13,10 @@
         }
 
         function boot() {
-            router.mapNav('home');
-            router.mapNav('details');
-            log('Hot Towel SPA Loaded!', null, true);
+          router.mapNav('home');
+            router.mapNav('football')
+            router.mapNav('tennis');
+            log('Value Samurai loaded!', null, true);
             return router.activate('home');
         }
 

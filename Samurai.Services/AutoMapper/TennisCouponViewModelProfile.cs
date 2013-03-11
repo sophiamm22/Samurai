@@ -28,6 +28,7 @@ namespace Samurai.Services.AutoMapper
         .IgnoreAllNonExisting()
         .ForMember(x => x.PlayerAOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
         .ForMember(x => x.PlayerBOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
+
     }
   }
 

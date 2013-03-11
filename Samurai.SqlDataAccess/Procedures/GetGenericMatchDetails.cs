@@ -53,6 +53,7 @@ namespace Samurai.SqlDataAccess.Procedures
                 ScoreAHack = scoreOutcome != null ? scoreOutcome.TeamAScore : -1,
                 ScoreBHack = scoreOutcome != null ? scoreOutcome.TeamBScore : -1
               };
+
       return matches;
 
     }

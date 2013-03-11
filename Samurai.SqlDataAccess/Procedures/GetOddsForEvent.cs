@@ -36,7 +36,8 @@ namespace Samurai.SqlDataAccess.Procedures
               join matchOdd in DbSet<MatchOutcomeOdd>() on probability.Id equals matchOdd.MatchOutcomeProbabilitiesInMatchID
               join bookmaker in DbSet<Bookmaker>() on matchOdd.BookmakerID equals bookmaker.Id
               join source in DbSet<ExternalSource>() on matchOdd.ExternalSourceID equals source.Id
-              join matchCouponURL in DbSet<MatchCouponURL>() on match.Id equals matchCouponURL.MatchID
+              join matchCouponURL in DbSet<MatchCouponURL>() on new { MatchID = match.Id, SourceID = source.Id } equals new { MatchID = matchCouponURL.MatchID, SourceID = matchCouponURL.ExternalSourceID }
+
 
               where (homeTeam.Name == teamA &&
                      homeTeam.FirstName == firstNameA &&
@@ -51,7 +52,7 @@ namespace Samurai.SqlDataAccess.Procedures
                            .DefaultIfEmpty(DateTime.MinValue)
                            .Max()
 
-              where (takeAll && source.Source == oddsSource) || matchOdd.TimeStamp == latestTimeStampForBookmaker
+              where (takeAll || source.Source == oddsSource) && matchOdd.TimeStamp == latestTimeStampForBookmaker
 
               select new OddsForEvent
               {
@@ -59,7 +60,7 @@ namespace Samurai.SqlDataAccess.Procedures
                 Outcome = outcome.MatchOutcomeString,
                 OddBeforeCommission = matchOdd.Odd,
                 CommissionPct = bookmaker.CurrentCommission.HasValue ? (double?)bookmaker.CurrentCommission : new Nullable<double>(),
-                DecimalOdd = ((double)matchOdd.Odd) * (bookmaker.CurrentCommission == null ? 1.0 : (1.0 + (double)bookmaker.CurrentCommission.Value)), 
+                DecimalOdd = ((double)matchOdd.Odd) * (bookmaker.CurrentCommission == null ? 1.0 : (1.0 + (double)bookmaker.CurrentCommission.Value)),
                 TimeStamp = matchOdd.TimeStamp,
                 Bookmaker = bookmaker.BookmakerName,
                 OddsSource = source.Source,
@@ -67,7 +68,7 @@ namespace Samurai.SqlDataAccess.Procedures
                 Priority = bookmaker.Priority,
 
                 MatchCouponURL = matchCouponURL.MatchCouponURLString,
-                BookmakerID = bookmaker.Id, 
+                BookmakerID = bookmaker.Id,
                 Edge = probability.MatchOutcomeProbability * matchOdd.Odd - 1,
                 Probability = probability.MatchOutcomeProbability
               };

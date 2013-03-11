@@ -1,7 +1,7 @@
 using System.Web.Mvc;
 
 [assembly: WebActivator.PreApplicationStartMethod(
-    typeof(Samurai.Web.Client.App_Start.HotTowelRouteConfig), "RegisterHotTowelPreStart", Order = 2)]
+    typeof(Samurai.Web.Client.App_Start.MVCRouteConfig), "RegisterHotTowelPreStart", Order = 2)]
 
 namespace Samurai.Web.Client.App_Start {
   ///<summary>
@@ -12,17 +12,17 @@ namespace Samurai.Web.Client.App_Start {
   /// This class is discovered and run during startup
   /// http://blogs.msdn.com/b/davidebb/archive/2010/10/11/light-up-your-nupacks-with-startup-code-and-webactivator.aspx
   ///</remarks>
-  public static class HotTowelRouteConfig {
+  public static class MVCRouteConfig {
 
     public static void RegisterHotTowelPreStart() {
 
       // Preempt standard default MVC page routing to go to HotTowel Sample
       System.Web.Routing.RouteTable.Routes.MapRoute(
-          name: "HotTowelMvc",
+          name: "Mvc",
           url: "{controller}/{action}/{id}",
           defaults: new
           {
-              controller = "HotTowel",
+              controller = "Home",
               action = "Index",
               id = UrlParameter.Optional
           }

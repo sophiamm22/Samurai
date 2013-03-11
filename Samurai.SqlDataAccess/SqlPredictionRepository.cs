@@ -124,7 +124,7 @@ namespace Samurai.SqlDataAccess
 
     public IDictionary<int, IEnumerable<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
     {
-      var selection = from scoreProbs in GetQuery<ScoreOutcomeProbabilitiesInMatch>()
+      var selection = (from scoreProbs in GetQuery<ScoreOutcomeProbabilitiesInMatch>()
                                           .Include(s => s.ScoreOutcome)
                       where ids.Contains(scoreProbs.MatchID)
                       group scoreProbs by scoreProbs.MatchID into groupedScoreProbs
@@ -132,13 +132,13 @@ namespace Samurai.SqlDataAccess
                       {
                         ID = groupedScoreProbs.Key,
                         Probs = groupedScoreProbs
-                      };
+                      }).ToList();
       return selection.ToDictionary(s => s.ID, s => s.Probs.AsEnumerable());
     }
 
     public IDictionary<int, IEnumerable<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
     {
-      var selection = from matchProbs in GetQuery<MatchOutcomeProbabilitiesInMatch>()
+      var selection = (from matchProbs in GetQuery<MatchOutcomeProbabilitiesInMatch>()
                       where ids.Contains(matchProbs.MatchID)
                       group matchProbs by matchProbs.MatchID into groupedMatchProbs
 
@@ -146,7 +146,7 @@ namespace Samurai.SqlDataAccess
                       {
                         ID = groupedMatchProbs.Key,
                         Probs = groupedMatchProbs
-                      };
+                      }).ToList();
       return selection.ToDictionary(s => s.ID, s => s.Probs.AsEnumerable());
     }
 

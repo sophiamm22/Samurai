@@ -39,13 +39,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+    <Reference Include="Breeze.WebApi, Version=1.2.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.WebApi.1.2.1\lib\Breeze.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\packages\Castle.Windsor.3.2.0\lib\net45\Castle.Windsor.dll</HintPath>
+    <Reference Include="Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.WebApi.1.2.1\lib\Irony.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
@@ -54,12 +64,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -120,6 +139,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Thinktecture.IdentityModel">
+      <HintPath>..\packages\Thinktecture.IdentityModel.2.3.2\lib\net45\Thinktecture.IdentityModel.dll</HintPath>
+    </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -139,14 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Added for HotTowel SPA Template -->
-    <Reference Include="Breeze.WebApi, Version=1.2.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Breeze.WebApi.1.1.2\lib\Breeze.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Breeze.WebApi.1.1.2\lib\Irony.dll</HintPath>
-    </Reference>
     <Reference Include="WebActivator">
       <Private>True</Private>
       <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
@@ -157,17 +171,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AppConfig.cs" />
+    <Compile Include="App_Start\HotTowelConfig.cs" />
+    <Compile Include="App_Start\HotTowelRouteConfig.cs" />
     <Compile Include="App_Start\MVCRouteConfig.cs" />
-    <Compile Include="App_Start\IOCConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\AssetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotTowelController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windsor\SamuraiWebWindsorInstaller.cs" />
-    <Compile Include="Windsor\WindsorAPIControllerActivator.cs" />
+    <Compile Include="ViewModels\UsersLogInModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\durandal\amd\almond-custom.js" />
@@ -192,16 +209,18 @@
     <Content Include="App\durandal\widget.js" />
     <Content Include="App\main.js" />
     <Content Include="App\services\logger.js" />
+    <Content Include="App\viewmodels\details.js" />
     <Content Include="App\viewmodels\football.js" />
-    <Content Include="App\viewmodels\tennis.js" />
     <Content Include="App\viewmodels\home.js" />
+    <Content Include="App\viewmodels\tennis.js" />
     <Content Include="App\viewmodels\shell.js" />
+    <Content Include="App\views\details.html" />
     <Content Include="App\views\football.html" />
+    <Content Include="App\views\home.html" />
+    <Content Include="App\views\shell.html" />
     <Content Include="App\views\tennis.html" />
     <Content Include="App\views\footer.html" />
-    <Content Include="App\views\home.html" />
     <Content Include="App\views\nav.html" />
-    <Content Include="App\views\shell.html" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
@@ -216,7 +235,15 @@
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\App\kelly.js">
+      <DependentUpon>kelly.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\predictions.coffee" />
+    <Content Include="Scripts\App\kelly.coffee" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\App\predictions.js">
+      <DependentUpon>predictions.coffee</DependentUpon>
+    </Content>
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -244,13 +271,14 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Views\Web.config" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Home\_splash.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\HotTowel\index.cshtml" />
+    <Content Include="Views\HotTowel\_splash.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\App\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -275,10 +303,6 @@
     <ProjectReference Include="..\Samurai.SqlDataAccess\Samurai.SqlDataAccess.csproj">
       <Project>{d118c841-b535-480a-9eff-be652cd6b116}</Project>
       <Name>Samurai.SqlDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samurai.Web.API\Samurai.Web.API.csproj">
-      <Project>{842da32e-deb3-4181-ae5a-7c85a43e8c10}</Project>
-      <Name>Samurai.Web.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
       <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>

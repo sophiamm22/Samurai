@@ -44,6 +44,7 @@ namespace Samurai.Services.AdminServices
       return Mapper.Map<Match, TennisMatchViewModel>(match);
     }
 
+    //Decorate with SignalR reporter
     public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
     {
       var fixtures = this.fixtureStrategy.UpdateResults(matchDate);

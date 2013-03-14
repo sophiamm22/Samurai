@@ -79,6 +79,7 @@ namespace Samurai.Services.AdminServices
       return Mapper.Map<IEnumerable<TennisMatchDetail>, IEnumerable<TennisFixtureViewModel>>(combinedStats);
     }
 
+    //Decorate with SignalR reporter
     public IEnumerable<TennisFixtureViewModel> FetchTennisPredictions(DateTime matchDate)
     {
       var predictions = FetchGenericTennisPredictions(matchDate);

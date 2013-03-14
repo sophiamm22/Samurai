@@ -22,9 +22,9 @@ namespace Samurai.Web.API.Controllers
     }
 
     [ActionName("gettennisschedule")]
-    public HttpResponseMessage GetTennisSchedule(int day, int month, int year)
+    public HttpResponseMessage GetTennisSchedule(GetTennisScheduleArgs requestArgs)
     {
-      var request = new GetTennisScheduleRequest(Request) { Year = year, Month = month, Day = day };
+      var request = new RequestWrapper<GetTennisScheduleArgs>(Request, requestArgs);
       return this.bus.RequestReply(request);
     }
 

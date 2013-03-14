@@ -55,26 +55,26 @@ namespace Samurai.Sandbox
                         .For<IBus>()
                         .ImplementedBy<MessageBus>());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<SqlPredictionRepository>()
                         .Where(t => t.Name.StartsWith("Sql") &&
                                     t.Name.EndsWith("Repository"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<FootballFixtureAdminService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<GetTennisScheduleHandler>()
                         .Where(t => t.Name.EndsWith("Handler"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<PredictionStrategyProvider>()
                         .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService

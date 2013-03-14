@@ -12,23 +12,22 @@ using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Web.API.Messaging.TennisSchedule
 {
-  public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleRequest>
+  public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleArgs>
   {
     private readonly ITennisFixtureClientService tennisService;
 
     public GetTennisScheduleHandler(ITennisFixtureClientService tennisService)
-      :base()
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
       this.tennisService = tennisService;
     }
 
-    public HttpResponseMessage Handle(GetTennisScheduleRequest request)
+    public HttpResponseMessage Handle(RequestWrapper<GetTennisScheduleArgs> requestWrapper)
     {
-      if (!Extensions.IsValidDate(request.Year, request.Month, request.Day))
-        return request.RequestMessage.CreateErrorMessage(HttpStatusCode.BadRequest, "not a valid date");
+      if (!Extensions.IsValidDate(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day))
+        return requestWrapper.RequestMessage.CreateErrorMessage(HttpStatusCode.BadRequest, "not a valid date");
 
-      var fixtureDate = new DateTime(request.Year, request.Month, request.Day);
+      var fixtureDate = new DateTime(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day);
 
       IEnumerable<TennisFixtureViewModel> tennisFixtures;
       try
@@ -37,9 +36,9 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
       }
       catch (Exception ex)
       {
-        return request.RequestMessage.CreateErrorMessage(HttpStatusCode.NotFound, ex.Message);
+        return requestWrapper.RequestMessage.CreateErrorMessage(HttpStatusCode.NotFound, ex.Message);
       }
-      return request.RequestMessage.CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
+      return requestWrapper.RequestMessage.CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
     }
 
   }

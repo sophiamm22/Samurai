@@ -12,8 +12,8 @@ namespace Samurai.Web.API.Infrastructure
   public interface IBus
   {
     void Send<TMessage>(TMessage message);
-    HttpResponseMessage RequestReply<TRequest>(TRequest request)
-      where TRequest : class, IRequest;
+    HttpResponseMessage RequestReply<TRequest>(RequestWrapper<TRequest> request)
+      where TRequest : class;
   }
 
   public class MessageBus : IBus
@@ -33,8 +33,8 @@ namespace Samurai.Web.API.Infrastructure
       throw new NotImplementedException();
     }
 
-    public HttpResponseMessage RequestReply<TRequest>(TRequest request) 
-      where TRequest : class, IRequest
+    public HttpResponseMessage RequestReply<TRequest>(RequestWrapper<TRequest> request) 
+      where TRequest : class
     {
       var handler = this.messageHandlerFactory.Create<IMessageHandler<TRequest>>();
       if (handler == null)

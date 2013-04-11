@@ -21,14 +21,19 @@ namespace Samurai.Services.Contracts
 
   public interface ITennisOddsAdminService : IOddsAdminService
   {
+    
     TennisCouponViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture);
     IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures);
+
     IEnumerable<TennisCouponViewModel> FetchAllTennisOdds(DateTime date);
+    IEnumerable<TennisCouponViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
+    IEnumerable<TennisCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
   }
 
   public interface IFootballOddsAdminService : IOddsAdminService
   {
     IEnumerable<FootballCouponViewModel> FetchAllFootballOdds(DateTime date);
+    IEnumerable<FootballCouponViewModel> FetchFootballOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
     IEnumerable<FootballCouponViewModel> FetchAllPreScreenedFootballOdds(DateTime date);
     IEnumerable<FootballCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
   }

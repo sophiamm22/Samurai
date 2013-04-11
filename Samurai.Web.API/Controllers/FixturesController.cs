@@ -8,6 +8,9 @@ using System.Web.Http;
 
 using Samurai.Web.API.Infrastructure;
 using Samurai.Web.API.Messaging.TennisSchedule;
+using Samurai.Web.API.Hubs;
+
+using Breeze.WebApi;
 
 namespace Samurai.Web.API.Controllers
 {
@@ -21,10 +24,18 @@ namespace Samurai.Web.API.Controllers
       this.bus = bus;
     }
 
-    [ActionName("gettennisschedule")]
-    public HttpResponseMessage GetTennisSchedule(GetTennisScheduleArgs requestArgs)
+    [HttpPut]
+    public void FetchTennisSchedules(TennisScheduleArgs commandArgs)
     {
-      var request = new RequestWrapper<GetTennisScheduleArgs>(Request, requestArgs);
+      var command = new RequestWrapper<TennisScheduleArgs>(Request, commandArgs);
+      this.bus.SendWithSignalRCallback<TennisScheduleArgs, OddsHub>(command);
+    }
+
+    [HttpGet]
+    [ActionName("TennisSchedules")]
+    public HttpResponseMessage GetTennisSchedules(TennisScheduleArgs requestArgs)
+    {
+      var request = new RequestWrapper<TennisScheduleArgs>(Request, requestArgs);
       return this.bus.RequestReply(request);
     }
 

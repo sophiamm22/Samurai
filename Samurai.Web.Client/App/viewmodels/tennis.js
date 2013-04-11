@@ -1,15 +1,23 @@
-﻿define(['services/logger'], function (logger) {
-    var vm = {
-        activate: activate,
-        title: 'Tennis'
-    };
+﻿define(['services/datacontext'], function (datacontext) {
+  var tennisSchedules = ko.observableArray();
+  var initialised = false;
+  var vm = {
+    activate: activate,
+    tennisSchedules: tennisSchedules,
+    title: 'Tennis',
+    refresh: refresh
+  };
+  return vm;
 
-    return vm;
 
-    //#region Internal Methods
-    function activate() {
-        logger.log('Tennis View Activated', null, 'tennis', true);
-        return true;
-    }
-    //#endregion
+  function activate() {
+    if (initialised) { return; }
+    initialised = true;
+    return refresh();
+  }
+
+  function refresh() {
+    return datacontext.getTennisSchedule(tennisSchedules);
+  }
+   
 });

@@ -80,8 +80,8 @@ namespace Samurai.Services.AdminServices
         TennisCouponViewModel oddsDecider;
 
         oddsDecider = tennisOdds.ContainsKey(tennisFixture.MatchIdentifier) ? tennisOdds[tennisFixture.MatchIdentifier] : null;
-
-        ret.Add(TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider));
+        var tennisFixtureViewModel = TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider);
+        ret.Add(tennisFixtureViewModel);
       }
 
       return ret;

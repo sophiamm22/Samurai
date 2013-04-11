@@ -307,4 +307,5 @@ namespace Samurai.Domain.Value
       return outcomeDictionary;
     }
   }
+
 }

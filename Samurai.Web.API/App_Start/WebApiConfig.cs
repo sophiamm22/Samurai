@@ -28,9 +28,9 @@ namespace Samurai.Web.API
     {
       var authConfig = new AuthenticationConfiguration
       {
-        DefaultAuthenticationScheme = "Basic",
+        //DefaultAuthenticationScheme = "Basic",
         EnableSessionToken = true,
-        SendWwwAuthenticateResponseHeader = true,
+        //SendWwwAuthenticateResponseHeader = true,
         RequireSsl = false
       };
 

@@ -1,27 +1,32 @@
-﻿define(['durandal/system', 'durandal/plugins/router', 'services/logger'],
-    function (system, router, logger) {
-        var shell = {
-            activate: activate,
-            router: router
-        };
-        
-        return shell;
+﻿define(['durandal/system', 'durandal/plugins/router', 'services/logger', 'config', 'services/datacontext'],
+    function (system, router, logger, config, datacontext) {
+      var shell = {
+        activate: activate,
+        router: router
+      };
 
-        //#region Internal Methods
-        function activate() {
-            return boot();
-        }
+      return shell;
 
-        function boot() {
-          router.mapNav('home');
-            router.mapNav('football')
-            router.mapNav('tennis');
-            log('Value Samurai loaded!', null, true);
-            return router.activate('home');
-        }
+      //#region Internal Methods
+      function activate() {
+        return datacontext.primeData()
+          .then(boot)
+          .fail(failedIntialisation);
+      }
 
-        function log(msg, data, showToast) {
-            logger.log(msg, data, system.getModuleId(shell), showToast);
-        }
-        //#endregion
+      function boot() {
+        log('Value Samurai loaded!', null, system.getModuleId(shell), true);
+        router.map(config.routes);
+        return router.activate(config.startModule);
+      }
+
+      function failedIntialisation(error) {
+        var msg = 'App initialisation failed: ' + error.message;
+        logger.logError(msg, error, system.getModuleId(shell), true);
+      }
+
+      function log(msg, data, showToast) {
+        logger.log(msg, data, system.getModuleId(shell), showToast);
+      }
+      //#endregion
     });

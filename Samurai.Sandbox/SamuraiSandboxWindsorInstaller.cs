@@ -51,10 +51,6 @@ namespace Samurai.Sandbox
                         }
                         ));
 
-      container.Register(Component
-                        .For<IBus>()
-                        .ImplementedBy<MessageBus>());
-
       container.Register(Classes
                         .FromAssemblyContaining<SqlPredictionRepository>()
                         .Where(t => t.Name.StartsWith("Sql") &&

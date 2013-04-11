@@ -68,7 +68,7 @@ namespace Samurai.Services.AdminServices
 
         foreach (var outcome in prediction.OutcomeProbabilities)
         {
-          var persistedOutcome = persistedOutcomes.FirstOrDefault(p => p.MatchOutcomeID == (int)outcome.Key); //match.MatchOutcomeProbabilitiesInMatches.FirstOrDefault(o => o.MatchOutcome.Id == (int)outcome.Key);
+          var persistedOutcome = persistedOutcomes.FirstOrDefault(p => p.MatchOutcomeID == (int)outcome.Key); 
 
           if (persistedOutcome == null)
           {

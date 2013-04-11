@@ -6,13 +6,12 @@ using System.Net;
 using System.Net.Http;
 
 using Samurai.Web.API.Infrastructure;
-using Samurai.Web.API.Messaging.TennisSchedule;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Web.API.Messaging.TennisSchedule
 {
-  public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleArgs>
+  public class GetTennisScheduleHandler : IMessageHandler<TennisScheduleArgs>
   {
     private readonly ITennisFixtureClientService tennisService;
 
@@ -22,17 +21,20 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
       this.tennisService = tennisService;
     }
 
-    public HttpResponseMessage Handle(RequestWrapper<GetTennisScheduleArgs> requestWrapper)
+    public HttpResponseMessage Handle(RequestWrapper<TennisScheduleArgs> requestWrapper)
     {
       if (!Extensions.IsValidDate(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day))
         return requestWrapper.RequestMessage.CreateErrorMessage(HttpStatusCode.BadRequest, "not a valid date");
 
       var fixtureDate = new DateTime(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day);
 
-      IEnumerable<TennisFixtureViewModel> tennisFixtures;
+      IQueryable<TennisFixtureViewModel> tennisFixtures;
       try
       {
-        tennisFixtures = this.tennisService.GetDaysSchedule(fixtureDate);
+        tennisFixtures = 
+          this.tennisService
+              .GetDaysSchedule(fixtureDate)
+              .AsQueryable();
       }
       catch (Exception ex)
       {

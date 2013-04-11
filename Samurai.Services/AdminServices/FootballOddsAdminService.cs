@@ -473,18 +473,26 @@ namespace Samurai.Services.AdminServices
       return matchCoupons;
     }
 
+    public IEnumerable<FootballCouponViewModel> FetchFootballOddsForTournamentSource(
+      DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
+    {
+      return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
+    }
+
     public IEnumerable<FootballCouponViewModel> FetchAllFootballOdds(DateTime date)
     {
       var coupons = new List<FootballCouponViewModel>();
 
-      var tournaments = DaysTournaments(date, this.sport);
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().Select(o => o.Source);
+      var tournaments = DaysTournaments(date, this.sport).ToList();
+      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
 
-      foreach (var tournament in tournaments.Select(t => t.TournamentName))
+      foreach (var tournament in tournaments)
       {
         foreach (var source in oddsSources)
         {
-          coupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, false));
+          var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName };
+          var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source };
+          coupons.AddRange(FetchFootballOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
         }
       }
       return coupons;

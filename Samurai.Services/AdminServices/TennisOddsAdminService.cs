@@ -9,6 +9,7 @@ using AutoMapper;
 using Samurai.Services.Contracts;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Tennis;
+using Samurai.Web.ViewModels.Value;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
@@ -34,7 +35,7 @@ namespace Samurai.Services.AdminServices
       var oddsSources =
         this.bookmakerRepository
             .GetActiveOddsSources()
-            .ToList(); //shit, this is time dependent!
+            .ToList(); 
 
       var relatedOdds = new List<TennisCouponViewModel>();
 
@@ -76,13 +77,28 @@ namespace Samurai.Services.AdminServices
       return ret;
     }
 
+    public IEnumerable<TennisCouponViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
+    {
+      var urlCheck = this.bookmakerRepository.GetTournamentCouponUrl(tournament.TournamentName, oddsSource.Source);
+      if (urlCheck == null)
+      {
+        //will have already been checked for the FetchAllTennisOddsVersion
+        var missingURL = new MissingTournamentCouponURL { ExternalSource = oddsSource.Source, Tournament = tournament.TournamentName };
+        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURL[] { missingURL }, "Tournament coupons missing");
+      }
+      return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
+    }
+
     public IEnumerable<TennisCouponViewModel> FetchAllTennisOdds(DateTime date)
     {
       var matchCoupons = new List<TennisCouponViewModel>();
       var missingAlias = new List<MissingTeamPlayerAlias>();
 
       var tournaments = DaysTournaments(date, this.sport);
-      var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
+      var oddsSources = 
+        this.bookmakerRepository
+            .GetActiveOddsSources()
+            .ToList();
 
       //check URL's exist first
       var urlCheck =
@@ -93,14 +109,15 @@ namespace Samurai.Services.AdminServices
       if (urlCheck.Count() > 0)
         throw new TournamentCouponURLMissingException(urlCheck.ToList(), "Tournament coupons missing");
 
-
-      foreach (var tournament in tournaments.Select(t => t.TournamentName))
+      foreach (var tournament in tournaments)
       {
-        foreach (var source in oddsSources.Select(o => o.Source))
+        foreach (var source in oddsSources)
         {
           try
           {
-            matchCoupons.AddRange(FetchCoupons(date, tournament, source, this.sport, true, false));
+            var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName };
+            var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source };
+            matchCoupons.AddRange(FetchTennisOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
           }
           catch (MissingTeamPlayerAliasException mtpaEx)
           {

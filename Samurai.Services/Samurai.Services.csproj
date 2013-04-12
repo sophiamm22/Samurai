@@ -43,6 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="AdminServices\Async\AsyncFootballFacadeAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncFootballFixtureAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncFootballOddsAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncFootballPredictionAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncTennisFacadeAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncTennisFixtureAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncTennisOddsAdminService.cs" />
+    <Compile Include="AdminServices\Async\AsyncTennisPredictionAdminService.cs" />
     <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
     <Compile Include="AutoMapper\FootballCouponDictionaryProfile.cs" />
     <Compile Include="AutoMapper\FootballCouponViewModelProfile.cs" />
@@ -67,6 +75,11 @@
     <Compile Include="AutoMapper\TournamentEventViewModelProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
     <Compile Include="ClientServices\TennisFixtureClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFixtureAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFootballFacadeAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncPredictionAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncOddsAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncTennisFacadeAdminService.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
     <Compile Include="Contracts\IFixtureAdminService.cs" />
     <Compile Include="Contracts\IFootballFacadeAdminService.cs" />

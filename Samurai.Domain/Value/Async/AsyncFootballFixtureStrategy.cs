@@ -13,13 +13,13 @@ using Samurai.Core;
 
 namespace Samurai.Domain.Value.Async
 {
-  public interface IFootballFixtureStrategy
+  public interface IAsyncFootballFixtureStrategy
   {
     Task<IEnumerable<GenericMatchDetailQuery>> UpdateFixtures(DateTime fixtureDate);
     Task<IEnumerable<GenericMatchDetailQuery>> UpdateResults(DateTime fixtureDate);
   }
 
-  public class AsyncFootballFixtureStrategy : IFootballFixtureStrategy
+  public class AsyncFootballFixtureStrategy : IAsyncFootballFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IStoredProceduresRepository storedProcRepository;

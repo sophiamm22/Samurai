@@ -14,14 +14,14 @@ using Samurai.Core;
 
 namespace Samurai.Domain.Value.Async
 {
-  public interface IAsyncTennisFixtureStategy
+  public interface IAsyncTennisFixtureStrategy
   {
     Task<IEnumerable<TournamentEvent>> UpdateTournamentEvents();
     Task<IEnumerable<GenericMatchDetailQuery>> UpdateResults(DateTime fixtureDate);
     Task<APITournamentDetail> GetTournamentDetail(string tournament, int year);
   }
 
-  public class AsyncTennisFixtureStrategy : IAsyncTennisFixtureStategy
+  public class AsyncTennisFixtureStrategy : IAsyncTennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepositoryProviderAsync webRepositoryProvider;
@@ -41,8 +41,8 @@ namespace Samurai.Domain.Value.Async
       var webRepository =
         this.webRepositoryProvider.CreateWebRepository(DateTime.Now.Date);
 
-      var tournamentEvents =
-        await webRepository.ParseJsonEnumerable<APITennisTourCalendar>(tb365Uri);
+      var tournamentEvents = await 
+        webRepository.ParseJsonEnumerable<APITennisTourCalendar>(tb365Uri);
 
       foreach (var tournamentEvent in tournamentEvents)
       {

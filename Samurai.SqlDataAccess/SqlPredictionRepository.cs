@@ -122,7 +122,7 @@ namespace Samurai.SqlDataAccess
                                                              m.Match.TournamentEvent.Tournament.Competition.Sport.SportName == sport);
     }
 
-    public IDictionary<int, IEnumerable<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
+    public IDictionary<int, List<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
     {
       var selection = (from scoreProbs in GetQuery<ScoreOutcomeProbabilitiesInMatch>()
                                           .Include(s => s.ScoreOutcome)
@@ -133,10 +133,10 @@ namespace Samurai.SqlDataAccess
                         ID = groupedScoreProbs.Key,
                         Probs = groupedScoreProbs
                       }).ToList();
-      return selection.ToDictionary(s => s.ID, s => s.Probs.AsEnumerable());
+      return selection.ToDictionary(s => s.ID, s => s.Probs.ToList());
     }
 
-    public IDictionary<int, IEnumerable<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
+    public IDictionary<int, List<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids)
     {
       var selection = (from matchProbs in GetQuery<MatchOutcomeProbabilitiesInMatch>()
                       where ids.Contains(matchProbs.MatchID)
@@ -147,7 +147,7 @@ namespace Samurai.SqlDataAccess
                         ID = groupedMatchProbs.Key,
                         Probs = groupedMatchProbs
                       }).ToList();
-      return selection.ToDictionary(s => s.ID, s => s.Probs.AsEnumerable());
+      return selection.ToDictionary(s => s.ID, s => s.Probs.ToList());
     }
 
     public IQueryable<TennisPredictionStat> GetTennisPredictionStatByMatchIDs(IEnumerable<int> ids)

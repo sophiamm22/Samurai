@@ -6,7 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+
 using Samurai.Web.API.App_Start;
+using Samurai.Services.AutoMapper;
 
 namespace Samurai.Web.API
 {
@@ -17,8 +19,10 @@ namespace Samurai.Web.API
   {
     protected void Application_Start()
     {
+      AutoMapperManualConfiguration.Configure();
       IOCConfig.RegisterIOC();
       WebApiConfig.Register(GlobalConfiguration.Configuration);
+      
     }
   }
 }

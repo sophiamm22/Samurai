@@ -1,32 +1,31 @@
-﻿define(['services/logger', 'durandal/system', 'services/model', 'config'],
-  function (logger, system, model, config) {
+﻿define(['services/logger', 'durandal/system', 'services/model', 'config', 'services/jsonResultsAdapter'],
+  function (logger, system, model, config, jsonResultsAdapter) {
 
     var EntityQuery = breeze.EntityQuery,
         manager = configureBreezeManager();
 
-    var getTennisSchedule = function (tennisScheduleObservable) {
-      var query = EntityQuery.from('TennisSchedules')
-        .orderBy('matchDate');
+    var getTodaysFootballSchedule = function (footballScheduleObservable) {
+      var query = EntityQuery.from('fixtures/todays-football-schedule');
 
       return manager.executeQuery(query)
         .then(querySucceeded)
         .fail(queryFailed);
       
       function querySucceeded(data) {
-        if (tennisScheduleObservable) {
-          tennisScheduleObservable(data.results);
+        if (footballScheduleObservable) {
+          footballScheduleObservable(data.results);
         }
-        log('Retrieved tennis schedules from remote data source',
+        log('Retrieved todays football schedule from remote data source',
           data, true);
       }
     };
 
     var primeData = function () {
-      return Q.all([getTennisSchedule()]);
+      return Q.all([]);
     };
 
     var datacontext = {
-      getTennisSchedule: getTennisSchedule,
+      getTodaysFootballSchedule: getTodaysFootballSchedule,
       primeData: primeData
     };
 
@@ -42,8 +41,13 @@
     }
 
     function configureBreezeManager() {
-      breeze.NamingConvention.camelCase.setAsDefault();
-      var mgr = new breeze.EntityManager(config.remoteServiceName);
+      var dataService = new breeze.DataService({
+        serviceName: config.remoteServiceName,
+        hasServerMetadata: false,
+        jsonResultsAdapter: jsonResultsAdapter
+      });
+
+      var mgr = new breeze.EntityManager({ dataService: dataService });
       model.configureMetadataStore(mgr.metadataStore);
       return mgr;
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Threading.Tasks;
 
 using Samurai.Web.API.Infrastructure;
 using Samurai.Services.Contracts;
@@ -10,7 +11,7 @@ using Samurai.Web.API.Hubs;
 
 namespace Samurai.Web.API.Messaging.TennisSchedule
 {
-  public class FetchTennisScheduleHandler : CommandHandlerWithSignalRHub<TennisScheduleArgs, OddsHub>
+  public class FetchTennisScheduleHandler : CommandHandlerWithSignalRHub<TennisScheduleDateArgs, OddsHub>
   {
     private readonly ITennisFacadeAdminService tennisService;
 
@@ -21,7 +22,7 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
       this.tennisService = tennisService;
     }
 
-    public override void Handle(RequestWrapper<TennisScheduleArgs> commandWrapper)
+    public override async Task Handle(RequestWrapper<TennisScheduleDateArgs> commandWrapper)
     {
       throw new NotImplementedException();
     }

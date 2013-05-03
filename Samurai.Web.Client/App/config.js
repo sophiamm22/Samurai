@@ -3,6 +3,11 @@
   toastr.options.positionClass = 'toaster-bottom-right';
 
   var routes = [{
+    url: 'today',
+    moduleId: 'viewmodels/today',
+    name: 'Today',
+    visible: true
+  }, {
     url: 'home',
     moduleId: 'viewmodels/home',
     name: 'Home',
@@ -21,7 +26,7 @@
 
   var startModule = 'home';
 
-  var remoteServiceName = 'api';
+  var remoteServiceName = 'http://localhost:3600/api';
 
   return {
     routes: routes,

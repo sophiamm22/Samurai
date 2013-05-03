@@ -13,8 +13,8 @@ using Castle.Facilities.TypedFactory;
 using Infrastructure.Data;
 using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
+using Samurai.Services;
 using Samurai.SqlDataAccess.Mapping;
-using Samurai.Services.AdminServices;
 using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
@@ -78,7 +78,7 @@ namespace Samurai.Web.API.Windsor
                         .LifestylePerWebRequest());
 
       container.Register(Classes
-                        .FromAssemblyContaining<FootballFixtureAdminService>()
+                        .FromAssemblyContaining<FootballFixtureService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces()

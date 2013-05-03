@@ -14,17 +14,17 @@ namespace Samurai.Web.API.Infrastructure
   // uses a service locator though, so swapped in the TypedFactoryFacility
   public interface IBus
   {
-    void Send<TCommand>(RequestWrapper<TCommand> command)
+    Task Send<TCommand>(RequestWrapper<TCommand> command)
       where TCommand : class;
 
-    void SendWithSignalRCallback<TCommand, THub>(RequestWrapper<TCommand> command)
+    Task SendWithSignalRCallback<TCommand, THub>(RequestWrapper<TCommand> command)
       where TCommand : class
       where THub : IHub;
 
-    HttpResponseMessage RequestReply<TRequest>(RequestWrapper<TRequest> request)
+    Task<HttpResponseMessage> RequestReply<TRequest>(RequestWrapper<TRequest> request)
       where TRequest : class;
 
-    HttpResponseMessage RequestReplyWithSignalRCallback<TRequest, THub>(RequestWrapper<TRequest> request)
+    Task<HttpResponseMessage> RequestReplyWithSignalRCallback<TRequest, THub>(RequestWrapper<TRequest> request)
       where TRequest : class
       where THub : IHub;
   }
@@ -41,17 +41,17 @@ namespace Samurai.Web.API.Infrastructure
       this.commandHandlerFactory = commandHandlerFactory;
     }
 
-    public void Send<TCommand>(RequestWrapper<TCommand> message)
+    public async Task Send<TCommand>(RequestWrapper<TCommand> message)
       where TCommand : class
     {
       var handler = this.commandHandlerFactory.Create<ICommandHandler<TCommand>>();
       if (handler == null)
         throw new ArgumentNullException(string.Format("commandHandler<{0}>", typeof(TCommand).Name));
 
-      handler.Handle(message);
+      await handler.Handle(message);
     }
 
-    public void SendWithSignalRCallback<TCommand, THub>(RequestWrapper<TCommand> message)
+    public async Task SendWithSignalRCallback<TCommand, THub>(RequestWrapper<TCommand> message)
       where TCommand : class
       where THub : IHub
     {
@@ -59,23 +59,23 @@ namespace Samurai.Web.API.Infrastructure
       if (handler == null)
         throw new ArgumentNullException(string.Format("commandHandler<{0}, {1}>", typeof(TCommand).Name, typeof(THub).Name));
 
-      handler.Handle(message);
+      await handler.Handle(message);
     }
 
-    public HttpResponseMessage RequestReply<TRequest>(RequestWrapper<TRequest> request) 
+    public async Task<HttpResponseMessage> RequestReply<TRequest>(RequestWrapper<TRequest> request) 
       where TRequest : class
     {
       var handler = this.messageHandlerFactory.Create<IMessageHandler<TRequest>>();
       if (handler == null)
         throw new ArgumentNullException(string.Format("messageHandler<{0}>", typeof(TRequest).Name));
 
-      var reply = handler.Handle(request);
+      var reply = await handler.Handle(request);
       this.messageHandlerFactory.Release(handler);
 
       return reply;
     }
 
-    public HttpResponseMessage RequestReplyWithSignalRCallback<TRequest, THub>(RequestWrapper<TRequest> request)
+    public async Task<HttpResponseMessage> RequestReplyWithSignalRCallback<TRequest, THub>(RequestWrapper<TRequest> request)
       where TRequest : class
       where THub : IHub
     {
@@ -83,7 +83,7 @@ namespace Samurai.Web.API.Infrastructure
       if (handler == null)
         throw new ArgumentNullException(string.Format("MessageHandlerWithSignalRHub<{0}, {1}>", typeof(TRequest).Name, typeof(THub).Name));
 
-      var reply = handler.Handle(request);
+      var reply = await handler.Handle(request);
       this.messageHandlerFactory.Release(handler);
 
       return reply;

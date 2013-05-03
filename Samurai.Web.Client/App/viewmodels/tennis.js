@@ -9,7 +9,6 @@
   };
   return vm;
 
-
   function activate() {
     if (initialised) { return; }
     initialised = true;

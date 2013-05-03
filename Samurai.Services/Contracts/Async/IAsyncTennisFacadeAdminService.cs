@@ -12,11 +12,11 @@ namespace Samurai.Services.Contracts.Async
 {
   public interface IAsyncTennisFacadeAdminService
   {
-    IEnumerable<TennisFixtureViewModel> GetDaysSchedule(DateTime fixtureDate);
+    Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate);
     Task<IEnumerable<TennisFixtureViewModel>> UpdateDaysSchedule(DateTime fixtureDate);
-    IEnumerable<TournamentEventViewModel> GetTournamentEvents();
+    Task<IEnumerable<TournamentEventViewModel>> FetchTournamentEvents();
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
-    IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
+    Task<IEnumerable<TennisLadderViewModel>> FetchTournamentLadder(DateTime matchDate, string tournament);
     void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName);
   }
 }

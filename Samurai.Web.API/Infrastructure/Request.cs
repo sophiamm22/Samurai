@@ -22,7 +22,7 @@ namespace Samurai.Web.API.Infrastructure
     public RequestWrapper(HttpRequestMessage request, T args)
     {
       if (request == null) throw new ArgumentNullException("request");
-      if (args == null) throw new ArgumentNullException("args");
+
       RequestMessage = request;
       RequestArguments = args;
     }

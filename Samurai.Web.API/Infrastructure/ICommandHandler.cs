@@ -10,14 +10,14 @@ namespace Samurai.Web.API.Infrastructure
   public interface ICommandHandler<TCommand>
     where TCommand : class
   {
-    void Handle(RequestWrapper<TCommand> commandWrapper);
+    Task Handle(RequestWrapper<TCommand> commandWrapper);
   }
 
   public interface ICommandHandlerWithSignalRHub<TCommand, THub>
     where TCommand : class
     where THub : IHub
   {
-    void Handle(RequestWrapper<TCommand> commandWrapper);
+    Task Handle(RequestWrapper<TCommand> commandWrapper);
   }
 
 }

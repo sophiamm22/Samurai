@@ -5,10 +5,12 @@ using System.Text;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Threading.Tasks;
 
 using Samurai.Web.API.Infrastructure;
-using Samurai.Web.API.Messaging.TennisSchedule;
 using Samurai.Web.API.Hubs;
+using Samurai.Web.API.Messaging.FootballSchedule;
+using Samurai.Web.API.Messaging.TennisSchedule;
 
 using Breeze.WebApi;
 
@@ -25,18 +27,49 @@ namespace Samurai.Web.API.Controllers
     }
 
     [HttpPut]
-    public void FetchTennisSchedules(TennisScheduleArgs commandArgs)
+    public async Task FetchTennisSchedules(TennisScheduleDateArgs commandArgs)
     {
-      var command = new RequestWrapper<TennisScheduleArgs>(Request, commandArgs);
-      this.bus.SendWithSignalRCallback<TennisScheduleArgs, OddsHub>(command);
+      var command = new RequestWrapper<TennisScheduleDateArgs>(Request, commandArgs);
+      await this.bus
+                .SendWithSignalRCallback<TennisScheduleDateArgs, OddsHub>(command);
     }
 
     [HttpGet]
-    [ActionName("TennisSchedules")]
-    public HttpResponseMessage GetTennisSchedules(TennisScheduleArgs requestArgs)
+    [ActionName("todays-tennis-schedule")]
+    public async Task<HttpResponseMessage> GetTodaysTennisSchedule()
     {
-      var request = new RequestWrapper<TennisScheduleArgs>(Request, requestArgs);
-      return this.bus.RequestReply(request);
+      TennisScheduleDateArgs requestArgs = null;
+      var request = new RequestWrapper<TennisScheduleDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
+    [ActionName("tennis-schedule-from")]
+    public async Task<HttpResponseMessage> GetTodaysTennisSchedulesFromDate([FromUri]TennisScheduleDateArgs requestArgs)
+    {
+      var request = new RequestWrapper<TennisScheduleDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
+    [ActionName("todays-football-schedule")]
+    public async Task<HttpResponseMessage> GetTodaysFootballSchedule()
+    {
+      FootballScheduleDateArgs requestArgs = new FootballScheduleDateArgs { Day = 27, Month = 4, Year = 2013 }; //null;
+      var request = new RequestWrapper<FootballScheduleDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
+    [ActionName("football-schedule-from")]
+    public async Task<HttpResponseMessage> GetTodaysFootballSchedulesFromDate([FromUri]FootballScheduleDateArgs requestArgs)
+    {
+      var request = new RequestWrapper<FootballScheduleDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
     }
 
   }

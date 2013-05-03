@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.OData;
+using System.Web.Http.OData.Builder;
 using Newtonsoft.Json.Serialization;
 using Thinktecture.IdentityModel.Http.Cors;
 using Thinktecture.IdentityModel.Http.Cors.WebApi;
 using Thinktecture.IdentityModel.Tokens.Http;
+using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Tennis;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Web.API
 {
@@ -16,9 +21,9 @@ namespace Samurai.Web.API
     public static void Register(HttpConfiguration config)
     {
       config.ApplyTo(
-          ConfigureAuth,
+          //ConfigureAuth,
           ConfigureCors,
-          ConfigureFilters,
+          //ConfigureFilters,
           ConfigureFormatters,
           ConfigureRoutes
       );
@@ -88,5 +93,6 @@ namespace Samurai.Web.API
         target(source);
       }
     }
+
   }
 }

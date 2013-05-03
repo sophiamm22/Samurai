@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Net.Http;
+using System.Threading.Tasks;
+
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 
@@ -19,6 +21,6 @@ namespace Samurai.Web.API.Infrastructure
 
     protected IHubContext Hub { get { return this.hub.Value; } }
 
-    public abstract HttpResponseMessage Handle(RequestWrapper<TRequest> requestWrapper);
+    public abstract Task<HttpResponseMessage> Handle(RequestWrapper<TRequest> requestWrapper);
   }
 }

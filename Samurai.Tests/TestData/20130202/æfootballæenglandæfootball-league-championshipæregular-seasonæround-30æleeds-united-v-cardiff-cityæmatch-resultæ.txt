@@ -1,0 +1,3532 @@
+<!DOCTYPE html PUBLIC æ-//W3C//DTD XHTML 1.0 Transitional//ENæ æhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æenæ>
+<!--googleoff: index-->
+<head><meta http-equiv=æContent-Languageæ content=æENæ /><meta http-equiv=æContent-Typeæ content=æUTF-8æ /><meta name=æauthoræ content=æcontactus@betgenius.comæ /><meta name=æverify-v1æ content=ævr0HJ2q/eSuzDhXVTn9h6hQ9LnTaSRs+q6SAvH1q0SY=æ /><link rel=æsearchæ href=æhttp://odds.bestbetting.com/provider.xmlæ type=æapplication/opensearchdescription+xmlæ title=æbestbetting.comæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/favicon.icoæ rel=æshortcut iconæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ rel=æimage_srcæ /><meta name=ækeywordsæ content=æOdds comparison, betting odds, best odds, compare best odds, In play odds and betting, live betting odds, In Running betting odds, Premiership Odds, Premier League odds, Champions League odds, free bets, horse racing betting and odds, antepost betting, horse racing results, football odds, football betting, tennis betting, snooker betting, GAA betting, grand national betting, cheltenham betting, darts betting, greyhound betting, Wales, France, New Zealand, Australia, King George, PDC World dartsæ /><meta name=ædescriptionæ content=æBestbetting compares odds from the leading internet bookmakers, ensuring that you always get the best value from your bets. Find odds on horse racing, football, golf, tennis, NFL, snooker, darts, cricket and more.æ /><meta name=ærobotsæ content=æFOLLOW,INDEXæ /><link href=æhttp://cdn3.resources.bestbetting.com/com.bestbetting/css/core.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/Odds.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/TVListings.css?89æ rel=æstylesheetæ type=ætext/cssæ /><script type=ætext/javascriptæ src=æ/djs/localiser/en?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/Betgenius_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/com.bestbetting/javascript/odds_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/market.js?89æ></script>
+<title>
+	Bestbetting > Football > European Leagues > England > Npower Football League Championship > 2012-2013 > Regular Season > Round 30 > Leeds United v Cardiff City > Match Result
+</title></head>
+<!--googleon: index-->
+<body>
+    <table class=æsiteContaineræ cellpadding=æ0æ cellspacing=æ0æ>
+        <tr>
+            <td>
+				<!--googleoff: index-->
+                <div class=æinnerBaræ>
+                	
+                    <div id=æclockPanelæ>
+                        <span id=æserverTimeæ>
+                            Fri 01, February 2013 11:44:08
+                        </span>
+                        GMT
+                    </div>
+                    
+                    <p>
+                        bestbetting.com | <a href=æhttp://odds.bestbetting.com/æ>UK</a> |
+                        
+                        <a href=æhttp://eu.bestbetting.com/æ>EU</a> | <a href=æhttp://int.bestbetting.com/æ>INT</a>
+                        | <a href=æhttp://free-bets.com/æ>Free Bets</a>
+                            <span id=æsearchEngineContaineræ></span>                        
+                            </p>
+                </div>
+                <div class=æheaderContaineræ>
+                    <div class=æleaderboardContaineræ>
+                        <a href=æhttp://betway.com/sports-betting/?s=wgs26825æ title=æBetway Sportsæ><img src=æhttp://www.wagershare.com/affiliate_media/b6b419c47cad2481.gif?13000æalt=æBetway Sportsæ /></a>
+                    </div>
+                    <a href=æ/æ>
+                        <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ class=ælogoæ width=æ230æ height=æ60æ
+                            alt=æBestbetting odds comparison | Premier League football odds | Horse Racing odds | Free Bets | FA Cup | Super Bowl XLVI |  6 Nationsæ /></a>
+                </div>
+                <div class=ætopNavContaineræ>
+                     <div class=æoddsFormatContaineræ>
+                        <ul>
+                            <li><a href=æ#æ class=ænavLink fractional-odds setOddsFormat selectedæ>Fractional</a></li>
+                            <li><a href=æ#æ class=ænavLink european-odds setOddsFormatæ>Decimal</a></li>
+                            <li><a href=æ#æ class=ænavLink american-odds setOddsFormatæ>American</a></li>
+                        </ul>
+                    </div>
+                    <form class=æsearchContaineræ action=æ/searchæ method=ægetæ>
+                    <input type=æhiddenæ name=æsearchFromæ value=æbbæ />
+                    <input type=æhiddenæ name=æactionæ value=æsearchæ />
+                    <input type=æhiddenæ name=æquickSearchæ value=ætrueæ />
+                    <fieldset>
+                        <input class=ætextæ type=ætextæ name=æsearchæ value=ææ size=æ30æ />
+                        <input class=æsubmitBtnæ type=æsubmitæ value=æSearchæ />
+                    </fieldset>
+                    </form>
+                    <ul class=ælinksæ>
+                        <li><a href=æ/æ class=ænavLink navLinkNBæ>Home</a></li>
+                        <li><a href=æhttp://www.free-bets.com/æ class=ænavLinkæ target=æ_blankæ>Free Bets</a></li>
+                        <li><a href=æ/steamersæ class=ænavLink navLinkLæ>Steamers</a></li>
+                    </ul>
+                    <div class=æcleaneræ>&nbsp;</div>
+                </div>
+                <!--googleon: index-->
+                <div class=æbodyContaineræ>
+                    <table cellpadding=æ0æ cellspacing=æ0æ>
+                        <tr>
+                            <td id=ænavContaineræ>
+                                <!-- Force Left Nav Width -->
+                                <img class=æcleaneræ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ width=æ158æ height=æ1æ />
+                                
+	
+<!--googleoff: index-->
+
+		<div class=ætopMenu æ>
+			<a class=æicon-s100557æ href=æ/alpine-skiing/æ>Alpine Skiing</a>
+			<div class=æsubMenu s100557æ>
+			
+					<a href=æ/alpine-skiing/world-cup/æ id=ærf219æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s17æ href=æ/american-football/æ>American Football</a>
+			<div class=æsubMenu s17æ>
+			
+					<a href=æ/american-football/nfl/æ id=ærf39æ>NFL</a>
+				
+					<a href=æ/american-football/cfl/æ id=ærf147æ>CFL</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4021954æ href=æ/archery/æ>Archery</a>
+			<div class=æsubMenu s4021954æ>
+			
+					<a href=æ/archery/world/æ id=æs4021954reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s1æ href=æ/athletics/æ>Athletics</a>
+			<div class=æsubMenu s1æ>
+			
+					<a href=æ/athletics/world/æ id=æs1reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s2æ href=æ/australian-rules/æ>Australian Rules</a>
+			<div class=æsubMenu s2æ>
+			
+					<a href=æ/australian-rules/afl/æ id=ærf19æ>AFL</a>
+				
+					<a href=æ/austrailian-rules/afl/nab-cup/æ id=ærf146æ>NAB Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s271554æ href=æ/badminton/æ>Badminton</a>
+			<div class=æsubMenu s271554æ>
+			
+					<a href=æ/badminton/world/æ id=æs271554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s3æ href=æ/baseball/æ>Baseball</a>
+			<div class=æsubMenu s3æ>
+			
+					<a href=æ/baseball/major-league-baseball/æ id=ærf38æ>MLB</a>
+				
+					<a href=æ/baseball/world/æ id=æs3reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4æ href=æ/basketball/æ>Basketball</a>
+			<div class=æsubMenu s4æ>
+			
+					<a href=æ/basketball/nba/æ id=ærf126æ>NBA</a>
+				
+					<a href=æ/basketball/ncaa/æ id=ærf127æ>NCAA</a>
+				
+					<a href=æ/basketball/eurochallenge/æ id=ærf153æ>EuroChallenge</a>
+				
+					<a href=æ/basketball/eurocup/æ id=ærf155æ>Eurocup</a>
+				
+					<a href=æ/basketball/euroleague/æ id=ærf154æ>Euroleague</a>
+				
+					<a href=æ/basketball/other-leagues/æ id=ærf129æ>Other Leagues</a>
+				
+					<a href=æ/basketball/european-leagues/æ id=ærf128æ>European Leagues</a>
+				
+					<a href=æ/basketball/eurobasket/æ id=ærf152æ>EuroBasket</a>
+				
+					<a href=æ/basketball/asia/æ id=æs4reg5æ>Asia</a>
+				
+					<a href=æ/basketball/mexico/æ id=æs4reg119æ>Mexico</a>
+				
+					<a href=æ/basketball/usa/æ id=æs4reg140æ>USA</a>
+				
+					<a href=æ/basketball/euroleague-women/æ id=ærf379æ>Euroleague Women</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s102842æ href=æ/biathlon/æ>Biathlon</a>
+			<div class=æsubMenu s102842æ>
+			
+					<a href=æ/biathlon/world-cup/æ id=ærf234æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8554æ href=æ/bowls/æ>Bowls</a>
+			<div class=æsubMenu s8554æ>
+			
+					<a href=æ/bowls/world/æ id=æs8554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s5æ href=æ/boxing/æ>Boxing</a>
+			<div class=æsubMenu s5æ>
+			
+					<a href=æ/boxing/professional-boxing/æ id=ærf90æ>Professional</a>
+				
+					<a href=æ/boxing/world/æ id=æs5reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022228æ href=æ/canoeing-kayaking/æ>Canoeing/Kayaking</a>
+			<div class=æsubMenu s4022228æ>
+			
+					<a href=æ/canoeing-kayaking/world/æ id=æs4022228reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6æ href=æ/cricket/æ>Cricket</a>
+			<div class=æsubMenu s6æ>
+			
+					<a href=æ/cricket/ICC-Champions-Trophy/æ id=ærf259æ>ICC Champions Trophy</a>
+				
+					<a href=æ/cricket/icc-test-championship/æ id=ærf115æ>Test Series</a>
+				
+					<a href=æ/cricket/indian-premier-league/æ id=ærf139æ>IPL</a>
+				
+					<a href=æ/cricket/english-domestic/æ id=ærf122æ>English Domestic</a>
+				
+					<a href=æ/cricket/icc-odi-championship/æ id=ærf116æ>ODI Series</a>
+				
+					<a href=æ/cricket/the-ashes/æ id=ærf110æ>The Ashes</a>
+				
+					<a href=æ/cricket/twenty20-internationals/æ id=ærf137æ>Twenty20 Internationals</a>
+				
+					<a href=æ/cricket/twenty20-world-cup/æ id=ærf117æ>Twenty20 World Cup</a>
+				
+					<a href=æ/cricket/world-cup/æ id=ærf138æ>World Cup</a>
+				
+					<a href=æ/cricket/australian-domestic/æ id=ærf121æ>Australian Domestic</a>
+				
+					<a href=æ/cricket/bangladesh/æ id=æs6reg154æ>Bangladesh</a>
+				
+					<a href=æ/cricket/world/æ id=æs6reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7æ href=æ/cycling/æ>Cycling</a>
+			<div class=æsubMenu s7æ>
+			
+					<a href=æ/cycling/le-tour-de-france/æ id=ærf140æ>Le Tour de France</a>
+				
+					<a href=æ/cycling/belgium/æ id=æs7reg235æ>Belgium</a>
+				
+					<a href=æ/cycling/milano-sanremo/æ id=ærf285æ>Milano-Sanremo</a>
+				
+					<a href=æ/cycling/paris-roubaix/æ id=ærf321æ>Paris Roubaix</a>
+				
+					<a href=æ/cycling/ronde-van-vlaanderen/æ id=ærf157æ>Ronde Van Vlaanderen</a>
+				
+					<a href=æ/cycling/world/æ id=æs7reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8æ href=æ/darts/æ>Darts</a>
+			<div class=æsubMenu s8æ>
+			
+					<a href=æ/darts/pdc-world-cup/æ id=æcomp3063æ>Betfair World Cup of Darts</a>
+				
+					<a href=æ/darts/bdo-world-championships/æ id=æcomp438æ>Lakeside World Professional Darts Championship</a>
+				
+					<a href=æ/darts/premier-league/æ id=ærf125æ>Premier League</a>
+				
+					<a href=æ/darts/pdc-world-championships/æ id=ærf193æ>PDC World Championships</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022299æ href=æ/diving/æ>Diving</a>
+			<div class=æsubMenu s4022299æ>
+			
+					<a href=æ/diving/world/æ id=æs4022299reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s70679æ href=æ/equestrian/æ>Equestrian</a>
+			<div class=æsubMenu s70679æ>
+			
+					<a href=æ/equestrian/world/æ id=æs70679reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022341æ href=æ/fencing/æ>Fencing</a>
+			<div class=æsubMenu s4022341æ>
+			
+					<a href=æ/fencing/world/æ id=æs4022341reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu navActiveæ>
+			<a class=æicon-s10æ href=æ/football/æ>Football</a>
+			<div class=æsubMenu s10æ>
+			
+					<a href=æ/football/england/æ id=æs10reg3795032æ>England</a>
+				
+					<a href=æ/football/scotland/æ id=æs10reg3795035æ>Scotland</a>
+				
+					<a href=æ/football/italy/æ id=æs10reg225æ>Italy</a>
+				
+					<a href=æ/football/spain/æ id=æs10reg232æ>Spain</a>
+				
+					<a href=æ/football/germany/æ id=æs10reg237æ>Germany</a>
+				
+					<a href=æ/football/france/æ id=æs10reg236æ>France</a>
+				
+					<a href=æ/football/african-cup-of-nations/æ id=ærf316æ>African Cup of Nations</a>
+				
+					<a href=æ/football/european-leagues/æ id=ærf2æ>European Leagues</a>
+				
+					<a href=æ/football/champions-league/æ id=ærf3æ>Champions League</a>
+				
+					<a href=æ/football/uefa-europa-league/æ id=ærf211æ>UEFA Europa League</a>
+				
+					<a href=æ/football/international-friendlies/æ id=ærf7æ>International Friendlies</a>
+				
+					<a href=æ/football/latin-american-leagues/æ id=ærf5æ>Latin American Leagues</a>
+				
+					<a href=æ/football/uefa-euro-2016/æ id=ærf442æ>UEFA Euro 2016</a>
+				
+					<a href=æ/football/other-leagues/æ id=ærf6æ>Other Leagues</a>
+				
+					<a href=æ/football/world-cup-qualification/æ id=ærf441æ>World Cup Qualifiers</a>
+				
+					<a href=æ/football/world-cup/æ id=ærf8æ>World Cup 2014</a>
+				
+					<a href=æ/football/youth/æ id=ærf11æ>Youth</a>
+				
+					<a href=æ/football/concacaf-champions-league/æ id=ærf267æ>CONCACAF Champions League</a>
+				
+					<a href=æ/football/club-friendlies/æ id=ærf237æ>Club Friendlies</a>
+				
+					<a href=æ/football/world/æ id=æs10reg2æ>World</a>
+				
+					<a href=æ/football/europe/æ id=æs10reg6æ>Europe</a>
+				
+					<a href=æ/football/panama/æ id=æs10reg121æ>Panama</a>
+				
+					<a href=æ/football/specials/æ id=æcomp1837æ>Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s491393æ href=æ/futsal/æ>Futsal</a>
+			<div class=æsubMenu s491393æ>
+			
+					<a href=æ/futsal/czech-republic/æ id=æs491393reg193æ>Czech Republic</a>
+				
+					<a href=æ/futsal/italy/æ id=æs491393reg225æ>Italy</a>
+				
+					<a href=æ/futsal/spain/æ id=æs491393reg232æ>Spain</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf199æ href=æ/gaa/æ>GAA</a>
+			<div class=æsubMenu rf199æ>
+			
+					<a href=æ/gaelic-football/æ id=æs6463040æ>Gaelic Football</a>
+				
+					<a href=æ/hurling/æ id=æs6463041æ>Hurling</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s12æ href=æ/golf/æ>Golf</a>
+			<div class=æsubMenu s12æ>
+			
+					<a href=æ/golf/the-open-championship/æ id=ærf198æ>the Open</a>
+				
+					<a href=æ/golf/the-presidents-cup/æ id=æcomp505æ>The Presidents Cup</a>
+				
+					<a href=æ/golf/omega-dubai-desert-classic/æ id=æcomp578æ>Omega Dubai Desert Classic</a>
+				
+					<a href=æ/golf/waste-management-phoenix-open/æ id=æcomp460æ>Waste Management Phoenix Open</a>
+				
+					<a href=æ/golf/solheim-cup/æ id=æcomp472æ>Solheim Cup</a>
+				
+					<a href=æ/golf/money-list/æ id=ærf82æ>Money List</a>
+				
+					<a href=æ/golf/ryder-cup/æ id=ærf87æ>Ryder Cup</a>
+				
+					<a href=æ/golf/masters-tournament/æ id=ærf83æ>US Masters</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s13æ href=æ/greyhounds/æ>Greyhounds</a>
+			<div class=æsubMenu s13æ>
+			
+					<a href=æ/greyhounds/uk-friday/æ id=ærf204æ>UK Friday</a>
+				
+					<a href=æ/greyhounds/virtual/2013/æ id=æcomp1951æ>Virtual</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022394æ href=æ/gymnastics/æ>Gymnastics</a>
+			<div class=æsubMenu s4022394æ>
+			
+					<a href=æ/gymnastics/world/æ id=æs4022394reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s99614æ href=æ/handball/æ>Handball</a>
+			<div class=æsubMenu s99614æ>
+			
+					<a href=æ/handball/european-leagues/æ id=ærf93æ>European Leagues</a>
+				
+					<a href=æ/handball/ehf-champions-league/æ id=ærf96æ>Champions League</a>
+				
+					<a href=æ/handball/europe/æ id=æs99614reg6æ>Europe</a>
+				
+					<a href=æ/handball/greece/æ id=æs99614reg223æ>Greece</a>
+				
+					<a href=æ/handball/world/æ id=æs99614reg2æ>World</a>
+				
+					<a href=æ/handball/women's/æ id=ærf268æ>Women's</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s208627æ href=æ/hockey/æ>Hockey</a>
+			<div class=æsubMenu s208627æ>
+			
+					<a href=æ/hockey/world/æ id=æs208627reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s14æ href=æ/horse-racing/æ>Horse Racing</a>
+			<div class=æsubMenu s14æ>
+			
+					<a href=æ/horse-racing/nexthorserace/æ id=ærf62æ>Next Horse Race</a>
+				
+					<a href=æ/horse-racing/todayæ id=ærf41æ>Today</a>
+				
+					<a href=æ/horse-racing/tomorrowæ id=ærf42æ>Tomorrow</a>
+				
+					<a href=æ/horse-racing/antepost/æ id=ærf130æ>Antepost</a>
+				
+					<a href=æ/horse-racing/international-racing/æ id=ærf94æ>International</a>
+				
+					<a href=æ/horse-racing/calendar/æ id=ærf136æ>Calendar</a>
+				
+					<a href=æ/steamersæ id=ærf214æ>Steamers</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s15æ href=æ/ice-hockey/æ>Ice Hockey</a>
+			<div class=æsubMenu s15æ>
+			
+					<a href=æ/ice-hockey/nhl/æ id=ærf101æ>NHL</a>
+				
+					<a href=æ/ice-hockey/european-leagues/æ id=ærf98æ>European Leagues</a>
+				
+					<a href=æ/ice-hockey/ahl/æ id=ærf99æ>AHL</a>
+				
+					<a href=æ/ice-hockey/world-championship/æ id=ærf102æ>World Championship</a>
+				
+					<a href=æ/ice-hockey/canada/æ id=æs15reg137æ>Canada</a>
+				
+					<a href=æ/ice-hockey/europe/æ id=æs15reg6æ>Europe</a>
+				
+					<a href=æ/ice-hockey/world/æ id=æs15reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022554æ href=æ/judo/æ>Judo</a>
+			<div class=æsubMenu s4022554æ>
+			
+					<a href=æ/judo/world/æ id=æs4022554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s300115æ href=æ/martial-arts-ufc/æ>Martial Arts/UFC</a>
+			<div class=æsubMenu s300115æ>
+			
+					<a href=æ/martial-arts-ufc/ultimate-fighting-championship/æ id=ærf165æ>UFC</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022615æ href=æ/modern-pentathlon/æ>Modern Pentathlon</a>
+			<div class=æsubMenu s4022615æ>
+			
+					<a href=æ/modern-pentathlon/world/æ id=æs4022615reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s16æ href=æ/motor-sport/æ>Motor Sport</a>
+			<div class=æsubMenu s16æ>
+			
+					<a href=æ/motor-sport/formula-1/æ id=ærf15æ>Formula 1</a>
+				
+					<a href=æ/motor-sport/nascar/æ id=ærf18æ>NASCAR</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf14æ href=æ/olympics/æ>Olympics</a>
+			<div class=æsubMenu rf14æ>
+			
+					<a href=æ/olympics/outrights/æ id=ærf417æ>Outrights</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s78155æ href=æ/politics/æ>Politics</a>
+			<div class=æsubMenu s78155æ>
+			
+					<a href=æ/politics/united-kingdom/æ id=ærf149æ>UK</a>
+				
+					<a href=æ/politics/australia/æ id=æs78155reg243æ>Australia</a>
+				
+					<a href=æ/politics/italy/æ id=æs78155reg225æ>Italy</a>
+				
+					<a href=æ/politics/sweden/æ id=æs78155reg216æ>Sweden</a>
+				
+					<a href=æ/politics/usa/æ id=æs78155reg140æ>USA</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s62969æ href=æ/rowing/æ>Rowing</a>
+			<div class=æsubMenu s62969æ>
+			
+					<a href=æ/rowing/world/æ id=æs62969reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73743æ href=æ/rugby-league/æ>Rugby League</a>
+			<div class=æsubMenu s73743æ>
+			
+					<a href=æ/rugby-league/england/æ id=ærf132æ>English Domestic</a>
+				
+					<a href=æ/rugby-league/australia/æ id=ærf131æ>Australian Domestic</a>
+				
+					<a href=æ/rugby-league/rugby-league-world-cup/æ id=ærf133æ>World Cup</a>
+				
+					<a href=æ/rugby-league/world-club-challenge/æ id=ærf134æ>World Cup Challenge</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73744æ href=æ/rugby-union/æ>Rugby Union</a>
+			<div class=æsubMenu s73744æ>
+			
+					<a href=æ/rugby-union/england/æ id=æs73744reg3795032æ>England</a>
+				
+					<a href=æ/rugby-union/british-and-irish-lions/æ id=ærf168æ>British & Irish Lions</a>
+				
+					<a href=æ/rugby-union/tri-nations/æ id=ærf172æ>Tri Nations</a>
+				
+					<a href=æ/rugby-union/six-nations-championship/æ id=ærf167æ>Six Nations</a>
+				
+					<a href=æ/rugby-union/magners-league/æ id=ærf174æ>Magners League</a>
+				
+					<a href=æ/rugby-union/european-leagues/æ id=ærf176æ>European Leagues</a>
+				
+					<a href=æ/rugby-union/other-leagues/æ id=ærf177æ>Other Leagues</a>
+				
+					<a href=æ/rugby-union/european-rugby-cup/æ id=ærf169æ>Heineken Cup</a>
+				
+					<a href=æ/rugby-union/european-challenge-cup/æ id=ærf170æ>Challenge Cup</a>
+				
+					<a href=æ/rugby-union/super-14/æ id=ærf171æ>Super 14</a>
+				
+					<a href=æ/rugby-union/world-cup/æ id=ærf173æ>World Cup</a>
+				
+					<a href=æ/rugby-union/seven-world-series/æ id=ærf338æ>Seven World Series</a>
+				
+					<a href=æ/rugby-union/six-nations-u20/æ id=ærf345æ>Six Nations U20</a>
+				
+					<a href=æ/rugby-union/super-15/æ id=ærf381æ>Super 15</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022667æ href=æ/sailing/æ>Sailing</a>
+			<div class=æsubMenu s4022667æ>
+			
+					<a href=æ/sailing/world/æ id=æs4022667reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022691æ href=æ/shooting/æ>Shooting</a>
+			<div class=æsubMenu s4022691æ>
+			
+					<a href=æ/shooting/world/æ id=æs4022691reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s100558æ href=æ/ski-jumping/æ>Ski Jumping</a>
+			<div class=æsubMenu s100558æ>
+			
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s22æ href=æ/snooker/æ>Snooker</a>
+			<div class=æsubMenu s22æ>
+			
+					<a href=æ/snooker/championship-league-snooker/æ id=æcomp1490æ>Championship League Snooker</a>
+				
+					<a href=æ/snooker/german-masters/æ id=æcomp3115æ>German Masters</a>
+				
+					<a href=æ/snooker/haikou-world-open/æ id=æcomp1099æ>Haikou World Open</a>
+				
+					<a href=æ/snooker/welsh-open/æ id=æcomp440æ>Welsh Open</a>
+				
+					<a href=æ/snooker/world-championship/æ id=ærf142æ>World Championship</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s550153æ href=æ/swimming/æ>Swimming</a>
+			<div class=æsubMenu s550153æ>
+			
+					<a href=æ/swimming/world/æ id=æs550153reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s269467æ href=æ/table-tennis/æ>Table Tennis</a>
+			<div class=æsubMenu s269467æ>
+			
+					<a href=æ/table-tennis/world/æ id=æs269467reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022858æ href=æ/taekwondo/æ>Taekwondo</a>
+			<div class=æsubMenu s4022858æ>
+			
+					<a href=æ/taekwondo/world/æ id=æs4022858reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf190æ href=æ/tennis/æ>Tennis</a>
+			<div class=æsubMenu rf190æ>
+			
+					<a href=æ/tennis/paris-open/æ id=æcomp385æ>Open GDF Suez</a>
+				
+					<a href=æ/tennis/pattaya-women's-open/æ id=æcomp386æ>WTA, Pattaya</a>
+				
+					<a href=æ/tennis/wta-tour/æ id=ærf180æ>WTA Tour</a>
+				
+					<a href=æ/tennis/davis-cup/æ id=ærf150æ>Davis Cup</a>
+				
+					<a href=æ/tennis/us-open/æ id=ærf74æ>US Open</a>
+				
+					<a href=æ/tennis/french-open/æ id=ærf78æ>French Open</a>
+				
+					<a href=æ/tennis/wimbledon/æ id=ærf1æ>Wimbledon</a>
+				
+					<a href=æ/tennis/player-specials/æ id=æcomp1821æ>Player Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022991æ href=æ/triathlon/æ>Triathlon</a>
+			<div class=æsubMenu s4022991æ>
+			
+					<a href=æ/triathlon/world/æ id=æs4022991reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6230056æ href=æ/tv--film--music/æ>TV / Film & Music</a>
+			<div class=æsubMenu s6230056æ>
+			
+					<a href=æ/tv--film--music/oscars/æ id=ærf109æ>Oscars</a>
+				
+					<a href=æ/tv--film--music/x-factor/æ id=ærf45æ>X Factor</a>
+				
+					<a href=æ/tv--film--music/baftas/æ id=ærf188æ>BAFTAs</a>
+				
+					<a href=æ/tv-film-music/brit-awards/æ id=ærf311æ>Brit Awards</a>
+				
+					<a href=æ/tv--film--music/sports-personality-of-the-year/æ id=ærf66æ>Sports Personality of the Year</a>
+				
+					<a href=æ/tv--film--music/united-kingdom/æ id=æs6230056reg217æ>UK</a>
+				
+					<a href=æ/tv--film--music/usa/american-idol/æ id=ærf189æ>American Idol</a>
+				
+					<a href=æ/tv--film--music/usa/æ id=æs6230056reg140æ>USA</a>
+				
+					<a href=æ/tv--film--music/dancing-on-ice/æ id=ærf107æ>Dancing On Ice</a>
+				
+					<a href=æ/tv-film-music/dancing-with-the-stars/æ id=ærf341æ>Dancing with the Stars</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s91189æ href=æ/volleyball/æ>Volleyball</a>
+			<div class=æsubMenu s91189æ>
+			
+					<a href=æ/volleyball/world/æ id=æs91189reg2æ>World</a>
+				
+					<a href=æ/volleyball/brazil/æ id=æs91189reg124æ>Brazil</a>
+				
+					<a href=æ/volleyball/korea-rep/æ id=æs91189reg152æ>Korea Rep</a>
+				
+					<a href=æ/volleyball/cev-champions-league/æ id=ærf111æ>Champions League</a>
+				
+					<a href=æ/volleyball/european-leagues/æ id=ærf114æ>European Leagues</a>
+				
+					<a href=æ/volleyball/fivb-world-league/æ id=ærf196æ>FIVB World League</a>
+				
+					<a href=æ/volleyball/mevza-middle-league/æ id=ærf324æ>Mevza Middle League</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s276032æ href=æ/water-polo/æ>Water Polo</a>
+			<div class=æsubMenu s276032æ>
+			
+					<a href=æ/water-polo/world/æ id=æs276032reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s729926æ href=æ/weightlifting/æ>Weightlifting</a>
+			<div class=æsubMenu s729926æ>
+			
+					<a href=æ/weightlifting/world/æ id=æs729926reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4023055æ href=æ/wrestling/æ>Wrestling</a>
+			<div class=æsubMenu s4023055æ>
+			
+					<a href=æ/wrestling/world/æ id=æs4023055reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7950337æ href=æ/beach-volleyball/æ>Beach Volleyball</a>
+			<div class=æsubMenu s7950337æ>
+			
+					<a href=æ/beach-volleyball/world/æ id=æs7950337reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+
+<script type=ætext/javascriptæ>
+    var lastMenu = 's10';
+	collapseMenu();
+</script>
+<!--googleon: index-->
+
+                            </td>
+                            <td class=æcontentContaineræ>
+                                <!-- Force Minimum Height -->
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ height=æ1æ width=æ672æ class=æminHeightFixeræ />
+                                <div class=æinneræ>
+                                    <div id=æbreadCrumbsContaineræ>
+                                        
+	
+		<a href=æ/æ>Home</a> &#187; 
+
+		<a href=æ/football/æ>Football</a> &#187; 
+
+		<a href=æ/football/european-leagues/æ>European Leagues</a> &#187; 
+
+		<a href=æ/football/england/æ>England</a> &#187; 
+
+		<a href=æ/football/england/football-league-championship/æ>Npower Football League Championship</a> &#187; 
+
+		<a href=æ/football/england/football-league-championship/regular-season/æ>Regular Season</a> &#187; 
+
+		<a href=æ/football/england/football-league-championship/regular-season/round-30/æ>Round 30</a> &#187; 
+
+		<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/æ>Leeds United v Cardiff City</a> &#187; 
+
+		<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/æ>Match Result</a> &#187; 
+
+
+                                    </div>
+                                    
+	
+<!--
+	MID: 50502617
+	-->
+
+<!--googleoff: index-->
+<div>
+    <div id=æpopupMoreEventsContaineræ class=æpopupMoreEventsContaineræ>
+        <h4 id=æctl00_MainContent_ctl00_ctl01_moreBetsButtonæ>More Bets &#187;</h4>
+	    <h1><span>&nbsp;</span>Leeds United v Cardiff City: Match Result
+		    
+	    </h1>
+	    <div style=ædisplay: none;æ class=æsubContaineræ>
+	        <div>
+	            
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Related Markets
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/æ>Match Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/asian-handicap/æ>Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/over-under/æ>Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-full-time/æ>Half-time/Full-time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/correct-score/æ>Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goalscorer/æ>First Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/anytime-goalscorer/æ>Anytime Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-goalscorer/æ>Last Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/0--70-minute-total-goals-over-under/æ>0 - 70 Minute Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-asian-handicap/æ>2nd Half Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-away-team-no-bet/æ>2nd Half Away Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-away-team-total-goals/æ>2nd Half Away Team Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-both-teams-to-score-yes-no/æ>2nd Half Both Teams To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-clean-sheet/æ>2nd Half Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-correct-score/æ>2nd Half Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-double-chance/æ>2nd Half Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-draw-no-bet/æ>2nd Half Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-first-goal-time/æ>2nd Half First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-first-team-to-score/æ>2nd Half First Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-handicap/æ>2nd Half Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-home-team-no-bet/æ>2nd Half Home Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-home-team-total-goals-numbers/æ>2nd Half Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-number-of-teams-to-score/æ>2nd Half Number of Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-odd-or-even-total-goals/æ>2nd Half Odd or Even Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-penalty-scored/æ>2nd Half Penalty Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-result/æ>2nd Half Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-to-win-to-nil/æ>2nd Half To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-total-goals-numbers/æ>2nd Half Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-totals-over-under/æ>2nd Half Totals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-clean-sheet/æ>Away Team Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time/æ>Away Team First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time-bands/æ>Away Team First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time-over-under/æ>Away Team First Goal Time Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-half-of-1st-goal/æ>Away Team Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-highest-scoring-half/æ>Away Team Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-0-15-minutes-yes-no/æ>Away Team To Score 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-16-30-minutes-yes-no/æ>Away Team To Score 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-2-/æ>Away Team To Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-3-/æ>Away Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-31-45-minutes-yes-no/æ>Away Team To Score 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-4-/æ>Away Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-46-60-minutes-yes-no/æ>Away Team To Score 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-5-/æ>Away Team To Score 5+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-61-75-minutes-yes-no/æ>Away Team To Score 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-76-90-minutes-yes-no/æ>Away Team To Score 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-yes-no/æ>Away Team To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-win-to-nil/æ>Away Team To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-numbers/æ>Away Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-odd-or-even/æ>Away Team Total Goals Odd or Even</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-over-under/æ>Away Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/both-teams-to-score/æ>Both Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/clean-sheet/æ>Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/double-chance/æ>Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-from-behind/æ>Draw From Behind</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-no-bet/æ>Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-v-no-draw/æ>Draw v No Draw</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-method/æ>First Goal Method</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time/æ>First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time-bands/æ>First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time-over-under/æ>First Goal Time Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-to-be-own-goal/æ>First Goal To Be Own Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goalscorer-(insurebet)/æ>First Goalscorer (Insurebet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-team-to-score/æ>First Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-team-to-score-(no-goal-no-bet)/æ>First Team to Score (No Goal No Bet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-0-15-minutes-yes-no/æ>Goal Scored in 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-16-30-minutes-yes-no/æ>Goal Scored in 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-31-45-minutes-yes-no/æ>Goal Scored in 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-46-60-minutes-yes-no/æ>Goal Scored in 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-61-75-minutes-yes-no/æ>Goal Scored in 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-76-90-minutes-yes-no/æ>Goal Scored in 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-81-90-minutes-yes-no/æ>Goal Scored in 81-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-86-90-minutes-yes-no/æ>Goal Scored in 86-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-90-minutes-yes-no/æ>Goal Scored in 90+ Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-of-1st-goal/æ>Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-asian-handicap/æ>Half-time Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-no-bet/æ>Half-Time Away Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-total-goals-numbers/æ>Half-time Away Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-total-goals-over-under/æ>Half-time Away Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-both-teams-to-score-yes-no/æ>Half-time Both Teams To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-clean-sheet/æ>Half-time Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-correct-score/æ>Half-time Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-double-chance/æ>Half-time Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-draw-no-bet/æ>Half-time Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-first-goal-time/æ>Half-time First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-first-team-to-score/æ>Half-time First Team To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-handicap/æ>Half-time Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-no-bet/æ>Half-Time Home Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-total-goals-numbers/æ>Half-time Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-total-goals-over-under/æ>Half-time Home Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-lead--fail-to-win/æ>Half-time Lead & Fail to Win</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-number-of-teams-to-score/æ>Half-time Number of Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-odd-or-even-total/æ>Half-time Odd or Even Total</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-penalty-scored/æ>Half-time Penalty Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-result/æ>Half-time Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-result-full-time-result/æ>Half-time Result/Full-time Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-to-win-to-nil/æ>Half-time To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-total-goals-numbers/æ>Half-time Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-totals-over-under/æ>Half-time Totals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/handicap/æ>Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/highest-scoring-half/æ>Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-clean-sheet/æ>Home Team Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-first-goal-time-bands/æ>Home Team First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-half-of-1st-goal/æ>Home Team Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-highest-scoring-half/æ>Home Team Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score/æ>Home Team To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-0-15-minutes-yes-no/æ>Home Team To Score 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-16-30-minutes-yes-no/æ>Home Team To Score 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-2-/æ>Home Team To Score 2+</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-3-/æ>Home Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-31-45-minutes-yes-no/æ>Home Team To Score 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-4-/æ>Home Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-46-60-minutes-yes-no/æ>Home Team To Score 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-61-75-minutes-yes-no/æ>Home Team To Score 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-76-90-minutes-yes-no/æ>Home Team To Score 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-win-to-nil/æ>Home Team To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-numbers/æ>Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-odd-or-even/æ>Home Team Total Goals Odd or Even</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-over-under/æ>Home Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-goal-time-bands/æ>Last Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-team-to-score/æ>Last Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-team-to-score-(no-goal-no-bet)/æ>Last Team to Score (No Goal No Bet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-15-minutes/æ>Most Goals Scored in 0-15 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-30-minutes/æ>Most Goals Scored in 0-30 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-60-minutes/æ>Most Goals Scored in 0-60 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-75-minutes/æ>Most Goals Scored in 0-75 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-16-30-minutes/æ>Most Goals Scored in 16-30 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-31-45-minutes/æ>Most Goals Scored in 31-45 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-46-60-minutes/æ>Most Goals Scored in 46-60 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-61-75-minutes/æ>Most Goals Scored in 61-75 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-76-90-minutes/æ>Most Goals Scored in 76-90 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/number-of-teams-to-score-(alternative)/æ>Number of Teams To Score (Alternative)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/odd-or-even-total/æ>Odd or Even Total</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/own-goal-scored-yes-no/æ>Own Goal Scored Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/penalty-awarded/æ>Penalty Awarded</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/penalty-missed/æ>Penalty Missed</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/player-to-score-2-/æ>Player to Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/race-to-2-goals/æ>Race To 2 Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/race-to-3-goals/æ>Race To 3 Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/score-in-both-halves/æ>Score in Both Halves</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/second-team-to-score/æ>Second Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-goals-in-match/æ>Team Goals in Match</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-2-/æ>Team To Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-3-/æ>Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-4-/æ>Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-5-/æ>Team To Score 5+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-3rd-goal/æ>Team To Score the 3rd Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-4th-goal/æ>Team To Score the 4th Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-5th-goal/æ>Team To Score the 5th Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-score-a-hat-trick/æ>To score a Hat-trick</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-score-in-both-halves-yes-no/æ>To Score in Both Halves Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-win-to-nil/æ>To Win to Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goal-minutes/æ>Total Goal Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals/æ>Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals-bands/æ>Total Goals Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals-numbers/æ>Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/will-a-penalty-be-scored/æ>Will A Penalty Be Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-both-halves/æ>Win Both Halves</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-either-half/æ>Win Either Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-from-behind/æ>Win From Behind</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-or-draw-from-behind/æ>Win or Draw From Behind</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+	            <p class=æcloseButtonæ><a href=æ#æ id=æpopupMoreEventsContainerCloseButtonæ>Close</a></p>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!--googleon: index-->
+<div class=æpaddingTopæ>
+	<p class=æraceTimeContaineræ>
+		Saturday 2 February 2013 - 15:00 GMT
+	</p>
+</div>
+
+
+<div id=æupdateAreaæ>
+	
+<div class=ætabContaineræ>
+	<ul>
+		
+		<li>
+			
+					<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/best-oddsæ onclick=ædisplayPage(this, 'best-odds'); return false;æ>Best Odds</a>	
+				
+		</li>	
+		
+		<li class=æactiveæ>
+			
+			<span>All Odds</span>
+			
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/exchangesæ onclick=ædisplayPage(this, 'exchanges'); return false;æ>Exchanges</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/historic-oddsæ onclick=ædisplayPage(this, 'historic-odds', true); return false;æ>Historic Odds</a>	
+				
+		</li>	
+		
+	</ul>
+</div>
+<div class=ædisplayBlockæ></div>
+<div class=æoddsTableæ>
+	<table id=æouterFrameæ>
+		<tr>
+		    <td class=æoddsTableContaineræ align=æcenteræ>
+				
+<div class=æoddsTableFormatteræ>
+    <img class=ælabelæ src=æhttp://cdn1.resources.bestbetting.com/default/images/oddsformat_lbl.gifæ alt=æOdds Formatæ />
+    <a class=æfractional-odds-onæ href=æ#æ>Fractional</a>
+    <a class=æeuropean-odds setOddsFormatæ href=æ#æ>Decimal</a>
+    <a class=æamerican-odds setOddsFormatæ href=æ#æ>American</a>
+</div>
+
+<img class=æoddsKeyæ src=æhttp://cdn1.resources.bestbetting.com/default/images/oddschange_lbl.gifæ alt=æLast Odds Change Keyæ />
+
+<div class=æcleaneræ>&nbsp;</div>
+<div id=æoddsContaineræ>
+<table cellspacing=æ1æ cellpadding=æ0æ class=æodds allOddsæ>
+	<colgroup></colgroup>
+	<thead id=æbookmakerListContaineræ>
+	<tr>
+		<th></th><th>
+<table cellpadding=æ0æ cellspacing=æ0æ class=æSortLinksæ>
+    <tr>
+        <td class=æsortLinkLeftæ>
+            <a class=æSortAvBOnæ href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/bvaæ title=æSort by Teamæ onclick=ædisplayPage(this, 'bva', true); return false;æ>
+                &nbsp;
+            </a>
+        </td>
+        <td class=æsortLinkRightæ>
+            <a class=æSortFavOffæ title=æSort by Oddsæ href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/odds-ascæ onclick=ædisplayPage(this, 'odds-asc', true); return false;æ>
+                &nbsp;
+            </a>
+        </td>
+    </tr>
+</table></th>
+		
+	<th>
+		<a href=æ#æ onclick=æa(1,6122,50502617,0,1,6122);æ title=æBet with 10Betæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6122.gifæ 
+				 title=æBet with 10Betæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6303,50502617,0,1,6303);æ title=æBet with 32Red betæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6303.gifæ 
+				 title=æBet with 32Red betæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6218,50502617,0,1,6218);æ title=æBet with 888 Sportæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6218.gifæ 
+				 title=æBet with 888 Sportæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,15,50502617,0,1,15);æ title=æBet with Bet 365æ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -240px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6074,50502617,0,1,6074);æ title=æBet with Betfredæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -144px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6139,50502617,0,1,6139);æ title=æBet with Betinternetæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -192px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6001,50502617,0,1,6001);æ title=æBet with BetVictoræ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -368px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,1,50502617,0,1,1);æ title=æBet with Blue Squareæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -64px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6041,50502617,0,1,6041);æ title=æBet with Bodogæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6041.gifæ 
+				 title=æBet with Bodogæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6169,50502617,0,1,6169);æ title=æBet with Boylesportsæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: 0px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6006,50502617,0,1,6006);æ title=æBet with Coralæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -32px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6296,50502617,0,1,6296);æ title=æBet with Corbettsæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6296.gifæ 
+				 title=æBet with Corbettsæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,2,50502617,0,1,2);æ title=æBet with Ladbrokesæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -128px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6312,50502617,0,1,6312);æ title=æBet with Marathonbet.co.ukæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6312.gifæ 
+				 title=æBet with Marathonbet.co.ukæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,3,50502617,0,1,3);æ title=æBet with Paddy Poweræ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -272px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6033,50502617,0,1,6033);æ title=æBet with Pinnacle Sportsæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6033.gifæ 
+				 title=æBet with Pinnacle Sportsæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6002,50502617,0,1,6002);æ title=æBet with Skybetæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -16px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,10,50502617,0,1,10);æ title=æBet with Sportingbetæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -48px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6318,50502617,0,1,6318);æ title=æBet with Spreadexæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6318.gifæ 
+				 title=æBet with Spreadexæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6018,50502617,0,1,6018);æ title=æBet with Stan Jamesæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -256px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,502,50502617,0,1,502);æ title=æBet with totesportæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -288px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,4,50502617,0,1,4);æ title=æBet with William Hillæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -320px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6173,50502617,0,1,6173);æ title=æBet with youwinæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6173.gifæ 
+				 title=æBet with youwinæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6005,50502617,0,1,6005);æ title=æBet with BETDAQæ>
+	
+		<div class=æverticalBookmakerImageMapæ style=æbackground-position: -304px -80pxæ>&nbsp;</div>
+	
+		</a>
+	</th>
+
+	<th>
+		<a href=æ#æ onclick=æa(1,6355,50502617,0,1,6355);æ title=æBet with Matchbook.comæ>
+	
+			<img height=æ75æ width=æ16æ src=æhttp://cdn2.resources.bestbetting.com/global/bookmakers/v6355.gifæ 
+				 title=æBet with Matchbook.comæ alt=ææ />
+		</a>
+	
+		</a>
+	</th>
+
+	</tr>
+	</thead>
+	<tbody class=æcontentsæ>
+	
+	
+		<tr class=æAO0æ>
+			
+			<td class=æChartFormButtonsæ>
+				
+
+<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/historic-odds?chartType=bookmakers&amp;selections=228524629æ class=æChartButtonæ onclick=ædisplayPage(this, 'historic-odds'); return false;æ>
+	<img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/market/chart_off.gifæ alt=ææ title=æOdds History Leeds Unitedæ />
+</a>
+			</td>
+			
+			<td class=æCompetitoræ>
+			    
+				Leeds United
+				
+			</td>
+			
+					<td title=æ10Betæ class=æcellOdd O Uæ onclick=æa(0,1330867433,2,1,0,6122); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æ32Red betæ class=æcellOdd O Uæ onclick=æa(0,1329493643,99,50,1,6303); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æ888 Sportæ class=æcellOdd O Uæ onclick=æa(0,1328732887,7,4,0,6218); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/4
+					</td>
+				
+					<td title=æBet 365æ class=æcellOdd O Dæ onclick=æa(0,1327815552,2,1,1,15); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æBetfredæ class=æcellOdd O Uæ onclick=æa(0,1328697173,15,8,0,6074); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						15/8
+					</td>
+				
+					<td title=æBetinternetæ class=æcellOdd Oæ onclick=æa(0,1327975718,19,10,1,6139); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						19/10
+					</td>
+				
+					<td title=æBetVictoræ class=æcellOdd Oæ onclick=æa(0,1327820722,2,1,1,6001); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æBlue Squareæ class=æcellOdd O Uæ onclick=æa(0,1328732887,7,4,0,1); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/4
+					</td>
+				
+					<td title=æBodogæ class=æcellOdd O Dæ onclick=æa(0,1327831267,19,10,1,6041); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						19/10
+					</td>
+				
+					<td title=æBoylesportsæ class=æcellOdd O Uæ onclick=æa(0,1325121271,2,1,0,6169); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æCoralæ class=æcellOdd O Uæ onclick=æa(0,1328605113,9,5,1,6006); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						9/5
+					</td>
+				
+					<td title=æCorbettsæ class=æcellOdd Oæ onclick=æa(0,1330325829,7,4,0,6296); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/4
+					</td>
+				
+					<td title=æLadbrokesæ class=æcellOdd O Uæ onclick=æa(0,1328525827,17,10,1,2); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						17/10
+					</td>
+				
+					<td title=æMarathonbet.co.ukæ class=æcellOdd O Dæ onclick=æa(0,1330325264,41,20,0,6312); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æPaddy Poweræ class=æcellOdd Oæ onclick=æa(0,1328534069,2,1,0,3); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æPinnacle Sportsæ class=æcellOdd B Uæ onclick=æa(0,1329570386,43,20,0,6033); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						21/10
+					</td>
+				
+					<td title=æSkybetæ class=æcellOdd O Uæ onclick=æa(0,1326945110,2,1,0,6002); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æSportingbetæ class=æcellOdd O Uæ onclick=æa(0,1329706255,7,4,0,10); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/4
+					</td>
+				
+					<td title=æSpreadexæ class=æcellOdd Oæ onclick=æa(0,1331115572,21,10,0,6318); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						21/10
+					</td>
+				
+					<td title=æStan Jamesæ class=æcellOdd Oæ onclick=æa(0,1328218300,15,8,1,6018); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						15/8
+					</td>
+				
+					<td title=ætotesportæ class=æcellOdd O Uæ onclick=æa(0,1328925056,15,8,0,502); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						15/8
+					</td>
+				
+					<td title=æWilliam Hillæ class=æcellOdd O Dæ onclick=æa(0,1328709452,9,5,1,4); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						9/5
+					</td>
+				
+					<td title=æyouwinæ class=æcellOdd O Uæ onclick=æa(0,1328800366,2,1,0,6173); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æBETDAQæ class=æcellOdd O Xæ onclick=æa(0,1329488550,41,20,1,6005); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						2
+					</td>
+				
+					<td title=æMatchbook.comæ class=æcellOdd O Xæ onclick=æa(0,1331334055,-1,-1,0,6355); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						NQ
+					</td>
+				
+		</tr>
+	
+		<tr class=æAO1æ>
+			
+			<td class=æChartFormButtonsæ>
+				
+
+<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/historic-odds?chartType=bookmakers&amp;selections=228524630æ class=æChartButtonæ onclick=ædisplayPage(this, 'historic-odds'); return false;æ>
+	<img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/market/chart_off.gifæ alt=ææ title=æOdds History Drawæ />
+</a>
+			</td>
+			
+			<td class=æCompetitoræ>
+			    
+				Draw
+				
+			</td>
+			
+					<td title=æ10Betæ class=æcellOdd O Uæ onclick=æa(0,1330867435,47,20,0,6122); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/3
+					</td>
+				
+					<td title=æ32Red betæ class=æcellOdd O Uæ onclick=æa(0,1329493645,23,10,1,6303); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æ888 Sportæ class=æcellOdd Oæ onclick=æa(0,1328732888,23,10,0,6218); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æBet 365æ class=æcellOdd O Dæ onclick=æa(0,1327815553,12,5,1,15); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æBetfredæ class=æcellOdd Oæ onclick=æa(0,1328697174,12,5,0,6074); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æBetinternetæ class=æcellOdd Oæ onclick=æa(0,1327975719,23,10,1,6139); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æBetVictoræ class=æcellOdd Oæ onclick=æa(0,1327820721,12,5,1,6001); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æBlue Squareæ class=æcellOdd Oæ onclick=æa(0,1328732888,23,10,0,1); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æBodogæ class=æcellOdd O Dæ onclick=æa(0,1327831268,23,10,1,6041); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æBoylesportsæ class=æcellOdd O Uæ onclick=æa(0,1325121272,12,5,0,6169); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æCoralæ class=æcellOdd O Uæ onclick=æa(0,1328605114,12,5,1,6006); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æCorbettsæ class=æcellOdd Oæ onclick=æa(0,1330325830,9,4,0,6296); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						9/4
+					</td>
+				
+					<td title=æLadbrokesæ class=æcellOdd O Uæ onclick=æa(0,1328525828,12,5,1,2); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æMarathonbet.co.ukæ class=æcellOdd Oæ onclick=æa(0,1330325265,49,20,0,6312); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æPaddy Poweræ class=æcellOdd Oæ onclick=æa(0,1328534070,23,10,0,3); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æPinnacle Sportsæ class=æcellOdd B Uæ onclick=æa(0,1329570388,5,2,0,6033); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						5/2
+					</td>
+				
+					<td title=æSkybetæ class=æcellOdd O Uæ onclick=æa(0,1326945111,12,5,0,6002); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æSportingbetæ class=æcellOdd Oæ onclick=æa(0,1329706257,23,10,0,10); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						23/10
+					</td>
+				
+					<td title=æSpreadexæ class=æcellOdd Oæ onclick=æa(0,1331115575,9,4,0,6318); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						9/4
+					</td>
+				
+					<td title=æStan Jamesæ class=æcellOdd Oæ onclick=æa(0,1328218301,9,4,1,6018); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						9/4
+					</td>
+				
+					<td title=ætotesportæ class=æcellOdd Oæ onclick=æa(0,1328925057,12,5,0,502); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æWilliam Hillæ class=æcellOdd Oæ onclick=æa(0,1328709454,11,5,1,4); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						11/5
+					</td>
+				
+					<td title=æyouwinæ class=æcellOdd O Uæ onclick=æa(0,1328800367,12,5,0,6173); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æBETDAQæ class=æcellOdd O Xæ onclick=æa(0,1329488552,12,5,1,6005); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						12/5
+					</td>
+				
+					<td title=æMatchbook.comæ class=æcellOdd O X Dæ onclick=æa(0,1331334056,59,25,0,6355); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/3
+					</td>
+				
+		</tr>
+	
+		<tr class=æAO0æ>
+			
+			<td class=æChartFormButtonsæ>
+				
+
+<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/match-result/historic-odds?chartType=bookmakers&amp;selections=228524631æ class=æChartButtonæ onclick=ædisplayPage(this, 'historic-odds'); return false;æ>
+	<img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/market/chart_off.gifæ alt=ææ title=æOdds History Cardiff Cityæ />
+</a>
+			</td>
+			
+			<td class=æCompetitoræ>
+			    
+				Cardiff City
+				
+			</td>
+			
+					<td title=æ10Betæ class=æcellOdd O Dæ onclick=æa(0,1330867438,13,10,0,6122); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+					<td title=æ32Red betæ class=æcellOdd O Uæ onclick=æa(0,1329493644,141,100,1,6303); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=æ888 Sportæ class=æcellOdd Bæ onclick=æa(0,1328732889,6,4,0,6218); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æBet 365æ class=æcellOdd B Uæ onclick=æa(0,1327815554,6,4,1,15); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æBetfredæ class=æcellOdd O Uæ onclick=æa(0,1328697175,11,8,0,6074); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						11/8
+					</td>
+				
+					<td title=æBetinternetæ class=æcellOdd Oæ onclick=æa(0,1327975720,13,10,1,6139); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+					<td title=æBetVictoræ class=æcellOdd B Uæ onclick=æa(0,1327820720,3,2,1,6001); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æBlue Squareæ class=æcellOdd Bæ onclick=æa(0,1328732889,6,4,0,1); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æBodogæ class=æcellOdd O Dæ onclick=æa(0,1327831269,7,5,1,6041); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=æBoylesportsæ class=æcellOdd O Uæ onclick=æa(0,1325121273,7,5,0,6169); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=æCoralæ class=æcellOdd Oæ onclick=æa(0,1328605116,7,5,1,6006); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=æCorbettsæ class=æcellOdd Oæ onclick=æa(0,1330325831,11,8,0,6296); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						11/8
+					</td>
+				
+					<td title=æLadbrokesæ class=æcellOdd Bæ onclick=æa(0,1328525829,6,4,1,2); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æMarathonbet.co.ukæ class=æcellOdd O Uæ onclick=æa(0,1330325266,29,20,0,6312); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						29/20
+					</td>
+				
+					<td title=æPaddy Poweræ class=æcellOdd Oæ onclick=æa(0,1328534071,13,10,0,3); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+					<td title=æPinnacle Sportsæ class=æcellOdd O Dæ onclick=æa(0,1329570387,137,100,0,6033); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						11/8
+					</td>
+				
+					<td title=æSkybetæ class=æcellOdd O Dæ onclick=æa(0,1326945112,13,10,0,6002); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+					<td title=æSportingbetæ class=æcellOdd O Uæ onclick=æa(0,1329706256,29,20,0,10); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						29/20
+					</td>
+				
+					<td title=æSpreadexæ class=æcellOdd Oæ onclick=æa(0,1331115577,13,10,0,6318); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+					<td title=æStan Jamesæ class=æcellOdd Oæ onclick=æa(0,1328218302,7,5,1,6018); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=ætotesportæ class=æcellOdd O Uæ onclick=æa(0,1328925058,11,8,0,502); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						11/8
+					</td>
+				
+					<td title=æWilliam Hillæ class=æcellOdd B Uæ onclick=æa(0,1328709456,6,4,1,4); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						6/4
+					</td>
+				
+					<td title=æyouwinæ class=æcellOdd O Dæ onclick=æa(0,1328800368,7,5,0,6173); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						7/5
+					</td>
+				
+					<td title=æBETDAQæ class=æcellOdd O Xæ onclick=æa(0,1329488551,29,20,1,6005); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						29/20
+					</td>
+				
+					<td title=æMatchbook.comæ class=æcellOdd O X Dæ onclick=æa(0,1331334057,13,10,0,6355); return false;æ onmouseover=æcellEnter(this);æ onmouseout=æcellExit(this);æ>
+						
+						13/10
+					</td>
+				
+		</tr>
+	
+	
+	
+	</tbody>
+</table>
+</div>
+<div id=æfloatAreaæ></div>
+<div class=æoddsFooterContaineræ>
+    
+<p class=æoddsTableFooteræ title=æThis figure gives an indication of the bookmakers margin on the event. However, they do not take account of commissions that may be charged.æ>
+	Best Price Percentage: <strong>100.3%</strong>
+</p>
+</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script type=ætext/javascriptæ>
+//<![CDATA[
+if(typeof(_gat)!='object')document.write('<sc'+'ript src=æhttp'+
+(document.location.protocol=='https:'?'s://ssl':'://www')+
+'.google-analytics.com/ga.jsæ></sc'+'ript>')</script>
+<script type=ætext/javascriptæ>
+try {
+var pageTracker=_gat._getTracker(æUA-6884644-1æ);
+pageTracker._trackPageview(æ/3294194923/goalæ);
+}catch(err){}
+//]]>
+</script>
+</div>
+
+<a id=æoffersæ></a>
+
+
+
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Related Markets
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<strong>Match Result</strong>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/asian-handicap/æ>Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/over-under/æ>Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-full-time/æ>Half-time/Full-time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/correct-score/æ>Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goalscorer/æ>First Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/anytime-goalscorer/æ>Anytime Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-goalscorer/æ>Last Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/0--70-minute-total-goals-over-under/æ>0 - 70 Minute Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-asian-handicap/æ>2nd Half Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-away-team-no-bet/æ>2nd Half Away Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-away-team-total-goals/æ>2nd Half Away Team Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-both-teams-to-score-yes-no/æ>2nd Half Both Teams To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-clean-sheet/æ>2nd Half Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-correct-score/æ>2nd Half Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-double-chance/æ>2nd Half Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-draw-no-bet/æ>2nd Half Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-first-goal-time/æ>2nd Half First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-first-team-to-score/æ>2nd Half First Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-handicap/æ>2nd Half Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-home-team-no-bet/æ>2nd Half Home Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-home-team-total-goals-numbers/æ>2nd Half Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-number-of-teams-to-score/æ>2nd Half Number of Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-odd-or-even-total-goals/æ>2nd Half Odd or Even Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-penalty-scored/æ>2nd Half Penalty Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-result/æ>2nd Half Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-to-win-to-nil/æ>2nd Half To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-total-goals-numbers/æ>2nd Half Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/2nd-half-totals-over-under/æ>2nd Half Totals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-clean-sheet/æ>Away Team Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time/æ>Away Team First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time-bands/æ>Away Team First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-first-goal-time-over-under/æ>Away Team First Goal Time Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-half-of-1st-goal/æ>Away Team Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-highest-scoring-half/æ>Away Team Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-0-15-minutes-yes-no/æ>Away Team To Score 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-16-30-minutes-yes-no/æ>Away Team To Score 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-2-/æ>Away Team To Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-3-/æ>Away Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-31-45-minutes-yes-no/æ>Away Team To Score 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-4-/æ>Away Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-46-60-minutes-yes-no/æ>Away Team To Score 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-5-/æ>Away Team To Score 5+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-61-75-minutes-yes-no/æ>Away Team To Score 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-76-90-minutes-yes-no/æ>Away Team To Score 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-score-yes-no/æ>Away Team To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-to-win-to-nil/æ>Away Team To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-numbers/æ>Away Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-odd-or-even/æ>Away Team Total Goals Odd or Even</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/away-team-total-goals-over-under/æ>Away Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/both-teams-to-score/æ>Both Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/clean-sheet/æ>Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/double-chance/æ>Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-from-behind/æ>Draw From Behind</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-no-bet/æ>Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/draw-v-no-draw/æ>Draw v No Draw</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-method/æ>First Goal Method</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time/æ>First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time-bands/æ>First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-time-over-under/æ>First Goal Time Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goal-to-be-own-goal/æ>First Goal To Be Own Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-goalscorer-(insurebet)/æ>First Goalscorer (Insurebet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-team-to-score/æ>First Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/first-team-to-score-(no-goal-no-bet)/æ>First Team to Score (No Goal No Bet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-0-15-minutes-yes-no/æ>Goal Scored in 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-16-30-minutes-yes-no/æ>Goal Scored in 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-31-45-minutes-yes-no/æ>Goal Scored in 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-46-60-minutes-yes-no/æ>Goal Scored in 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-61-75-minutes-yes-no/æ>Goal Scored in 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-76-90-minutes-yes-no/æ>Goal Scored in 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-81-90-minutes-yes-no/æ>Goal Scored in 81-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-86-90-minutes-yes-no/æ>Goal Scored in 86-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/goal-scored-in-90-minutes-yes-no/æ>Goal Scored in 90+ Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-of-1st-goal/æ>Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-asian-handicap/æ>Half-time Asian Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-no-bet/æ>Half-Time Away Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-total-goals-numbers/æ>Half-time Away Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-away-team-total-goals-over-under/æ>Half-time Away Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-both-teams-to-score-yes-no/æ>Half-time Both Teams To Score Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-clean-sheet/æ>Half-time Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-correct-score/æ>Half-time Correct Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-double-chance/æ>Half-time Double Chance</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-draw-no-bet/æ>Half-time Draw No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-first-goal-time/æ>Half-time First Goal Time</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-first-team-to-score/æ>Half-time First Team To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-handicap/æ>Half-time Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-no-bet/æ>Half-Time Home Team No Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-total-goals-numbers/æ>Half-time Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-home-team-total-goals-over-under/æ>Half-time Home Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-lead--fail-to-win/æ>Half-time Lead & Fail to Win</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-number-of-teams-to-score/æ>Half-time Number of Teams To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-odd-or-even-total/æ>Half-time Odd or Even Total</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-penalty-scored/æ>Half-time Penalty Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-result/æ>Half-time Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-result-full-time-result/æ>Half-time Result/Full-time Result</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-to-win-to-nil/æ>Half-time To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-total-goals-numbers/æ>Half-time Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/half-time-totals-over-under/æ>Half-time Totals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/handicap/æ>Handicap</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/highest-scoring-half/æ>Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-clean-sheet/æ>Home Team Clean Sheet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-first-goal-time-bands/æ>Home Team First Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-half-of-1st-goal/æ>Home Team Half of 1st Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-highest-scoring-half/æ>Home Team Highest Scoring Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score/æ>Home Team To Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-0-15-minutes-yes-no/æ>Home Team To Score 0-15 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-16-30-minutes-yes-no/æ>Home Team To Score 16-30 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-2-/æ>Home Team To Score 2+</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-3-/æ>Home Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-31-45-minutes-yes-no/æ>Home Team To Score 31-45 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-4-/æ>Home Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-46-60-minutes-yes-no/æ>Home Team To Score 46-60 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-61-75-minutes-yes-no/æ>Home Team To Score 61-75 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-score-76-90-minutes-yes-no/æ>Home Team To Score 76-90 Minutes Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-to-win-to-nil/æ>Home Team To Win To Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-numbers/æ>Home Team Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-odd-or-even/æ>Home Team Total Goals Odd or Even</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/home-team-total-goals-over-under/æ>Home Team Total Goals Over/Under</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-goal-time-bands/æ>Last Goal Time Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-team-to-score/æ>Last Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/last-team-to-score-(no-goal-no-bet)/æ>Last Team to Score (No Goal No Bet)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-15-minutes/æ>Most Goals Scored in 0-15 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-30-minutes/æ>Most Goals Scored in 0-30 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-60-minutes/æ>Most Goals Scored in 0-60 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-0-75-minutes/æ>Most Goals Scored in 0-75 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-16-30-minutes/æ>Most Goals Scored in 16-30 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-31-45-minutes/æ>Most Goals Scored in 31-45 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-46-60-minutes/æ>Most Goals Scored in 46-60 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-61-75-minutes/æ>Most Goals Scored in 61-75 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/most-goals-scored-in-76-90-minutes/æ>Most Goals Scored in 76-90 Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/number-of-teams-to-score-(alternative)/æ>Number of Teams To Score (Alternative)</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/odd-or-even-total/æ>Odd or Even Total</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/own-goal-scored-yes-no/æ>Own Goal Scored Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/penalty-awarded/æ>Penalty Awarded</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/penalty-missed/æ>Penalty Missed</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/player-to-score-2-/æ>Player to Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/race-to-2-goals/æ>Race To 2 Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/race-to-3-goals/æ>Race To 3 Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/score-in-both-halves/æ>Score in Both Halves</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/second-team-to-score/æ>Second Team to Score</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-goals-in-match/æ>Team Goals in Match</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-2-/æ>Team To Score 2+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-3-/æ>Team To Score 3+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-4-/æ>Team To Score 4+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-5-/æ>Team To Score 5+</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-3rd-goal/æ>Team To Score the 3rd Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-4th-goal/æ>Team To Score the 4th Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/team-to-score-the-5th-goal/æ>Team To Score the 5th Goal</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-score-a-hat-trick/æ>To score a Hat-trick</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-score-in-both-halves-yes-no/æ>To Score in Both Halves Yes/No</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/to-win-to-nil/æ>To Win to Nil</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goal-minutes/æ>Total Goal Minutes</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals/æ>Total Goals</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals-bands/æ>Total Goals Bands</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/total-goals-numbers/æ>Total Goals Numbers</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/will-a-penalty-be-scored/æ>Will A Penalty Be Scored</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-both-halves/æ>Win Both Halves</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-either-half/æ>Win Either Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-from-behind/æ>Win From Behind</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/football-league-championship/regular-season/round-30/leeds-united-v-cardiff-city/win-or-draw-from-behind/æ>Win or Draw From Behind</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+
+<!--googleoff: index-->
+
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>Other Matches</h2>
+	<div class=ærelatedEventsæ>
+		
+		<table cellpadding=æ0æ cellspacing=æ0æ summary=æRelated Marketsæ>
+			<tbody>
+				<tr>
+					<td class=æeventGroupæ>
+						
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							    
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/millwall-v-hull-city/match-result/æ>Millwall v Hull City</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/peterborough-united-v-burnley/match-result/æ>Peterborough United v Burnley</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/birmingham-city-v-nottingham-forest/match-result/æ>Birmingham City v Nottingham Forest</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/crystal-palace-v-charlton-athletic/match-result/æ>Crystal Palace v Charlton Athletic</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/huddersfield-town-v-cardiff-city/match-result/æ>Huddersfield Town v Cardiff City</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/sheffield-wednesday-v-derby-county/match-result/æ>Sheffield Wednesday v Derby County</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/blackburn-rovers-v-ipswich-town/match-result/æ>Blackburn Rovers v Ipswich Town</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/brighton--hove-albion-v-hull-city/match-result/æ>Brighton & Hove Albion v Hull City</a></td></tr>
+							
+							    
+							</table>
+							
+						
+					</td>
+					<td class=æeventGroupæ>
+						
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							    
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/watford-v-bolton-wanderers/match-result/æ>Watford v Bolton Wanderers</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/blackpool-v-barnsley/match-result/æ>Blackpool v Barnsley</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/ipswich-town-v-middlesbrough/match-result/æ>Ipswich Town v Middlesbrough</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/peterborough-united-v-leicester-city/match-result/æ>Peterborough United v Leicester City</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/wolverhampton-wanderers-v-leeds-united/match-result/æ>Wolverhampton Wanderers v Leeds United</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/bolton-wanderers-v-burnley/match-result/æ>Bolton Wanderers v Burnley</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/charlton-athletic-v-birmingham-city/match-result/æ>Charlton Athletic v Birmingham City</a></td></tr>
+							
+							
+							</table>
+							
+					</td>
+					<td class=æeventGroupæ>
+						
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							    
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/sheffield-wednesday-v-brighton--hove-albion/match-result/æ>Sheffield Wednesday v Brighton & Hove Albion</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/blackburn-rovers-v-bristol-city/match-result/æ>Blackburn Rovers v Bristol City</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-30/derby-county-v-huddersfield-town/match-result/æ>Derby County v Huddersfield Town</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/middlesbrough-v-barnsley/match-result/æ>Middlesbrough v Barnsley</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/watford-v-crystal-palace/match-result/æ>Watford v Crystal Palace</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/blackpool-v-millwall/match-result/æ>Blackpool v Millwall</a></td></tr>
+							
+								<tr><td class=æeventæ><a href=æ/football/england/football-league-championship/regular-season/round-31/bristol-city-v-nottingham-forest/match-result/æ>Bristol City v Nottingham Forest</a></td></tr>
+							
+							
+							</table>
+							
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+
+
+<div style=ædisplay: noneæ>
+   	
+</div>
+
+<!--googleon: index-->
+<script type=ætext/javascriptæ>
+	marketId = 50502617;
+	initialTab = 'all-odds';
+
+</script>
+<p class=ædisclaimerContaineræ>
+	While every effort is made to ensure that the Football betting information displayed here is correct and up to date, 
+	we are not liable for any errors and it is your responsibility to check the Football odds with the bookmaker before placing a bet.
+</p>
+<noscript>
+    <div id=ænoJavascriptæ>
+        <p class=ærobots-nocontentæ>Your browser does not support Javascript or you have Javascript disabled. Some features of this site will be unavailable.</p>
+    </div>
+</noscript>
+
+                                </div>
+                            </td>
+                            <td class=ærightNavContaineræ>
+                                <!-- Force Right Nav Width -->
+                                <img class=æfixed-imageæ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    width=æ162æ height=æ0æ alt=ææ />
+                                
+                                
+	
+
+                                
+	
+
+                                <div class=ærightMenuBannerContaineræ>
+                                    
+	<a href=æhttp://betway.com/sports-betting/?s=wgs26825æ title=æBetway Sportsæ><img src=æhttp://www.wagershare.com/affiliate_media/fd4a08081d2c68a5.gif?12999æ alt=æBetway Sportsæ /></a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class=æclearBaræ>
+                    </div>
+                </div>
+                <!--googleoff: index-->
+                <div class=æfooterContaineræ>
+                    <div class=æftoplinksæ>
+                        <a href=æ/aboutæ>
+                            About Us</a> | <a href=æ/helpæ>
+                                Help</a> | <a href=æ/featuresæ>
+                                        Features</a> | <a href=æ/bookmakersæ>
+                                            Bookmakers</a> | 
+                                            <a href=æ/steamersæ>
+                                            Steamers</a> | 
+                                            <a href=æ/help/glossaryæ>
+                                                Glossary</a> | <a href=æ/rssæ class=ærsslinkæ>
+                                                    RSS</a>
+                    </div>
+                    <div class=æfmiddlelinksæ>
+                        <ul class=ætodaysRaceCoursesæ>
+                            <li><a href=æ/horse-racing/todayæ><strong>Todays Racing</strong></a></li>
+                            
+                                    <li><a href=æ/horse-racing/2013-02-01/wolverhampton/æ>
+                                        Wolverhampton</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/dundalk/æ>
+                                        Dundalk</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/lingfield-park/æ>
+                                        Lingfield Park</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/catterick-bridge/æ>
+                                        Catterick Bridge</a></li>
+                                
+                            <li><a href=æhttp://www.turftrax.comæ>In depth racing<br />at TurfTrax.com</a></li>
+                        </ul>
+					    <ul class=æcontactæ>
+					        <li><a href=æ/contactæ><strong>Contact</strong></a></li>
+                            <li><a href=æmailto:advertising@betgenius.comæ>Advertising</a></li>
+                            <li><a href=æhttp://www.betgenius.com/careers/æ>Jobs</a></li>
+                        </ul>
+                        <ul class=æbetgeniusæ>
+                                <li><a href=æhttp://www.betgenius.com/products/æ><strong>Betgenius Products</strong></a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/customer-marketing/connextra/æ>Connextra</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/æ>Sportsbook Management</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/sportsbook-manager/æ>Sportsbook Manager</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/inplay-manager/æ>InPlay Manager</a></li>
+                        </ul>
+                    </div>
+                    <div class=æfbottomlinksæ>
+                        <p>
+                            <a href=æhttp://betgenius.comæ>
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/poweredbyBetgenius.gifæ
+                                    alt=æPowered by Betgeniusæ style=æfloat: leftæ /></a>
+                        </p>
+                        <p>
+                            Bestbetting - Sports betting odds comparison &#169; Copyright
+                            2013
+                            <a href=æhttp://betgenius.com/?originsite=bestbetting&amp;origintype=footeræ target=æ_blankæ>
+                                Betgenius Limited</a> | <a href=æ/help/tosæ>
+                                    Terms of Service</a><br />
+                            Please <a href=æ/contactæ>contact us</a> for any further information, including
+                            advertising or commercial terms.
+			    <img src='http://ff.connextra.com/BETDAQGBE/selector/image?client=BETDAQGBE&placement=oddstable_marketpagelink_0x0' border='0' width='0' height='0' />
+			    <a href='http://ff.connextra.com/PaddyPower/selector/click?client=PaddyPower&placement=oddstable_textlink_0x0' target='_blank'><img src='http://ff.connextra.com/PaddyPower/selector/image?client=PaddyPower&placement=oddstable_textlink_0x0' border='0' width='0' height='0' /></a>
+                        </p>
+                        <p>
+							Served by: VM-BBWEB1
+                        </p>
+                    </div>
+                </div>
+				<!--googleon: index-->
+            </td>
+        </tr>
+    </table>
+    <script src=æhttp://www.google-analytics.com/urchin.jsæ type=ætext/javascriptæ></script>
+    <script type=ætext/javascriptæ defer=ædeferæ>
+		    //<![CDATA[
+			_uacct = æUA-425479-2æ;
+			urchinTracker();
+			
+	
+
+			culture = 'en';
+			var serverTimeZone = 'GMT';
+		    //]]>
+    </script>
+</body>
+</html>

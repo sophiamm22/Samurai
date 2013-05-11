@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang=æenæ>
+<head class=æno-jsæ>
+    <title>Football Fixtures & Results | Sky Sports Football</title>
+	<meta charset=æUTF-8æ />
+	<meta name=ædescriptionæ content=æAll the latest football fixtures and results from the Premier League, Championship, Champions League and International matches with Sky Sportsæ/>
+	<meta name=ækeywordsæ content=æSky, Sports, Fixtures, Results, Manchester United, Man Utd, Arsenal, Liverpool, Premier, Champions, League, Championship, World Cup, Euros, Chelsea, Leeds, Footballæ/>
+	<meta name=æRevisit-afteræ content=æ2 daysæ />
+    <meta name=æapplication-nameæ content=æSkySportsæ />
+	              
+    	<meta name=æmsapplication-tooltipæ content=æSkySportsæ />
+<meta name=æmsapplication-windowæ content=æwidth=1024;height=768æ />
+<meta name=æmsapplication-taskæ content=æname=Home Page;action-uri=http://www.skysports.com;icon-uri=http://www.skysports.com/favicon_new.icoæ/>
+<meta name=æmsapplication-taskæ content=æname=Score Centre;action-uri=http://live.skysports.com;icon-uri=http://www.skysports.com/favicon_new.icoæ/>
+<meta name=æmsapplication-taskæ content=æname=Events Centre;action-uri=http://www.skysports.com/eventscentre;icon-uri=http://www.skysports.com/favicon_new.icoæ/>
+<meta name=æmsapplication-taskæ content=æname=Video Clips;action-uri=http://www.skysports.com/video/clips;icon-uri=http://www.skysports.com/favicon_new.icoæ/>    
+        <script src=æ/static/39cb496eeb2d8881b739a0012e6a9f1e52a01bc8.jsæ type=ætext/javascriptæ ></script>
+    	<script type=ætext/javascriptæ>
+        var skyIdDomain = æskyid.sky.comæ;	
+	</script>	
+    <!-- CDN hosted jQuery -->
+    <script src=æhttp://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.jsæ></script>
+    <!-- Local jQuery fallback if CDN version is down -->
+    <script>window.jQuery || document.write('<script src=æ/static/d35b9b2d79cfe2fb460d73b1b6d18f6ae720f6fc.jsæ>\x3C/script>')</script>
+
+			<link rel=æstylesheetæ href=æ/static/95a67bd83f72f7a3650421a37aa7a495ebb608ac.cssæ type=ætext/cssæ media=æallæ title=ædefaultæ />
+			<link rel=æstylesheetæ href=æ/static/575af2ddaa43b18fdf765b81afa6a918f64937de.cssæ type=ætext/cssæ media=æallæ title=ædefaultæ />
+	        
+			<meta name=ægoogle-site-verificationæ content=æ3m3Hz_sOmLvjQxhUejq04XwET80D-GX81kVBaDPv6AYæ />
+	<meta name='robots' content=æNOODPæ />
+    
+	
+    <link rel=æsearchæ type=æapplication/opensearchdescription+xmlæ href=æhttp://www.skysports.com/opensearch_desc/0,23068,,00.xmlæ title=æSkySports.comæ />
+    <link rel=æshortcut iconæ href=æhttp://www.skysports.com/favicon.icoæ type=æimage/x-iconæ />
+	<link rel=æapple-touch-icon-precomposedæ href=æhttp://www.skysports.com/apple-touch-icon-precomposed.pngæ />
+    
+    
+	<meta property='fb:page_id' content='10911153761' />
+	
+	<!-- REVENUE SCIENCE AD TAG CODE -->
+<script type=ætext/javascriptæ language=æJavaScriptæ charset=æutf-8æ>
+<!--
+var rsi_segs = [];
+var segs_beg=document.cookie.indexOf('rsi_segs=');
+if(segs_beg>=0){
+ segs_beg=document.cookie.indexOf('=',segs_beg)+1;
+ if(segs_beg>0){
+  var segs_end=document.cookie.indexOf(';',segs_beg);
+  if(segs_end==-1)segs_end=document.cookie.length;
+  rsi_segs=document.cookie.substring(segs_beg,segs_end).split('|');
+}}
+var segLen=20
+var segQS=ææ,segArr=new Array()
+if (rsi_segs.length<segLen){segLen=rsi_segs.length}
+for (var i=0;i<segLen;i++){
+	segArr=rsi_segs[i].split(æ_æ)
+	if (segArr.length>1) segQS+=(ærsiæ+æ=æ+segArr[1]+æ+æ) } //-->
+</script>
+<!-- END REVENUE SCIENCE AD TAG CODE -->    
+      
+</head>
+<body >
+	<div class=æv5-wrapæ>
+		<div class=æbase-head-t1æ>
+	<span id=æss-head-skybaræ></span>
+
+				<div id=æskycomGlobalNavæ>
+    <div id=æskycomGlobalNavWrapperæ>
+        <ul>
+
+                <li class=æfirstæ><a target='_top' href=æhttp://www.sky.com/æ name=æskycomHomeGNæ>Sky.com Home</a></li>
+
+                <li><a target='_top' href=æhttp://www.sky.com/findandwatch/æ name=æfindWatchTvGNæ>Find &amp; Watch TV</a></li>
+
+                <li><a target='_top' href=æhttp://www.sky.com/products/æ name=æskyProductsGNæ>Sky Products</a></li>
+
+                <li><a target='_top' href=æhttp://www.sky.com/shop/æ name=æshopGNæ>Shop</a></li>
+
+                <li><a target='_top' href=æhttp://www.sky.com/mysky/æ name=æmySkyGNæ>My Sky</a></li>
+
+                <li><a target='_top' href=æhttp://www.sky.com/helpcentre/æ name=æhelpSupportGNæ>Help &amp; Support</a></li>
+
+        </ul>
+    </div>
+</div>		<div id=æbanneræ class=æss-ad-banneræ>
+		<!-- adAgencyPlaceId = 1395886 -->
+<!-- heliosBasketId = 11065 -->
+<script language=æjavascriptæ type=ætext/javascriptæ>
+    <!--
+    if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+    }
+    document.write('<scr'+'ipt language=æjavascript1.1æ src=æhttp://adserver.adtech.de/addyn|3.0|500|1395886|0|1|ADTECH;cookie=info;loc=100;target=_blank;key=key=key1+key2+key3+key4+'+segQS+';grp='+window.adgroupid+';misc='+new Date().getTime()+'æ></scri'+'pt>');
+//-->
+</script>
+<noscript><a href=æhttp://adserver.adtech.de/adlink|3.0|500|1395886|0|1|ADTECH;cookie=info;loc=300;key=key=key1+key2+key3+key4+'+segQS+'æ target=æ_blankæ><img src=æhttp://adserver.adtech.de/adserv|3.0|500|1395886|0|1|ADTECH;loc=300;key=+'+segQS+'æ border=æ0æ></a></noscript>
+<!--End of JavaScript Tag -->
+	</div>
+			<div class=æbase-search-head search-googleæ  id=æsearchBox-SKYæ> 
+		<form id=æss-form-searchæ action=æhttp://www.skysports.com/search/atom/1,30262,,00.htmlæ> 
+			<label for=æsite-searchæ><input name=æsearchtypeæ data-action=æhttp://www.skysports.com/search/atom/1,30262,,00.htmlæ value=æthe siteæ checked=æcheckedæ id=æsite-searchæ type=æradioæ />Sky Sports.com</label>
+			<label for=æsearch-googleæ><input name=æsearchtypeæ data-action=æhttp://origin.skysports.com/google/start_search/1,20208,,00.htmlæ value=æthe webæ id=æsearch-googleæ type=æradioæ />Google</label>
+			<input class=æbase-search-inputæ id=æss-searchFieldæ type=ætextæ name=æqæ /> 
+			<button value=æSearchæ type=æsubmitæ>Search</button> 
+		</form> 				
+	</div> 
+
+	
+	</div>		<div class=æbase-head-t2æ>
+	<p class=æbase-site-logoæ><a href=æ/æ><span>Sky Sports.com</span></a></p>
+	<ul class=æss-head-boxesæ>
+		                		<li class=æss-head-tab1æ>
+			<a href=æhttp://www1.skysports.com/footballleague/æ>								<span><img src=æhttp://e0.365dm.com/12/11/60x54/Football-League-Video-Highlights-Promo-Panel_2867986.jpgæ></span>
+								<h4>Video highlights</h4>
+				<p>Watch all the highlights from every Football League match</p>
+			</a>
+		</li>
+                		                		<li class=æss-head-tab2æ>
+			<a href='http://www.sky.com/mysky/upgrade/sports/?DCMP=afc-shop:ec_upgrade|promopodupgrade' target='_blank' class='instorylink'>								<span><img src=æhttp://e2.365dm.com/13/01/60x54/SergioAgueroNorwichManchesterCityPremier_2880789.jpgæ></span>
+								<h4>Get Sky Sports</h4>
+				<p>Got Sky TV? Upgrade for &#163;5 off your first bill </p>
+			</a>
+		</li>
+                			</ul>
+	<div class=æbase-site-loginæ></div>
+</div>
+		<div options=ælowlight=yesæ class=æbase-nav-t1 nav-enableæ>
+
+
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www.skysports.com/æ><span class=ænav-link-iconæ><span>home</span></span>+</a>
+			<div class=æbase-nav-dropæ style=æwidth: 706px;æ>
+	<h3 class=æcol-headæ>Today on Sky Sports.com</h3>
+			<div class=æbase-boxæ>
+		<a href=æhttp://www.skysports.com/video/inline/0,,18232_8474026,00.htmlæ><img width=æ128æ height=æ67æ src=æhttp://e2.365dm.com/13/01/128x67/Paul-Merson_2893518.jpgæ></a>
+		<h4><a href=æhttp://www.skysports.com/video/inline/0,,18232_8474026,00.htmlæ>Sporting Chapters</a></h4>
+		<p>Paul Merson talks about his career which was blighted by drink and drugs problems, and his new role as a Sky Sports pundit</p>
+	</div>
+				<div class=æbase-boxæ>
+		<a href='http://www.skysports.com/football/papertalk/0,21673,12709,00.html'><img width=æ128æ height=æ67æ src=æhttp://e0.365dm.com/12/03/128x67/Todays-Paper-Talk-1024_2737604.jpgæ></a>
+		<h4><a href='http://www.skysports.com/football/papertalk/0,21673,12709,00.html'>Paper Talk</a></h4>
+		<p>Follow the latest from the written press with gossip and speculation from the national papers.</p>
+	</div>
+				<div class=æbase-boxæ>
+		<a href=æhttp://www.skysports.com/video/inline/0,,18232_8470973,00.htmlæ><img width=æ128æ height=æ67æ src=æhttp://e1.365dm.com/13/02/128x67/SUPERBOWLuse_SkyPlayer_330x235.jpgæ></a>
+		<h4><a href=æhttp://www.skysports.com/video/inline/0,,18232_8470973,00.htmlæ>Super Bowl XLVII </a></h4>
+		<p>Watch highlights from Super Bowl XLVII between the Baltimore Ravens and the San Francisco 49ers.</p>
+	</div>
+				<div class=æbase-boxæ>
+		<a href=æhttp://www1.skysports.com/footballleague/æ><img width=æ128æ height=æ67æ src=æhttp://e2.365dm.com/12/11/128x67/Football-League-Video-Highlights-Promo-Panel_2867944.jpgæ></a>
+		<h4><a href=æhttp://www1.skysports.com/footballleague/æ>Video highlights</a></h4>
+		<p>Watch all the goals from this weekend's Football League</p>
+	</div>
+				<div class=æbase-boxæ>
+		<a href='http://www1.skysports.com/formula1/gallery/12837/8464714/sauber-launch-the-c32' class='instorylink'><img width=æ128æ height=æ67æ src=æhttp://e0.365dm.com/13/02/128x67/Nico-Hulkenberg-Esteban-Gutierrez_2894893.jpgæ></a>
+		<h4><a href='http://www1.skysports.com/formula1/gallery/12837/8464714/sauber-launch-the-c32' class='instorylink'>Revealing the C32</a></h4>
+		<p>New boys Esteban Gutierrez and Nico Hulkenberg unveil a very different-looking Sauber for the 2013 season.</p>
+	</div>
+		</div>
+	
+	</li>
+
+ <li class=æbase-nav-item onæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/footballæ>Football+</a>
+	
+			
+		<div class=æbase-nav-drop nav-drop-footballæ >
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>Quick Links</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14300æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/æ>Football Home</a></li>
+                        					                                                    <li id=ædrop-link-14301æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/news-wire/11065æ>News</a></li>
+                        					                                                    <li id=ædrop-link-14505æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/fixtures-resultsæ>Fixtures & Results</a></li>
+                        					                                                    <li id=ædrop-link-14506æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/football/leagues/0,19772,11065,00.htmlæ>Tables</a></li>
+                        					                                                    <li id=ædrop-link-14507æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://live.skysports.com/ScoreCentre/football.htmlæ>Score Centre</a></li>
+                        					                                                    <li id=ædrop-link-35974æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/footballonskysportsæ>Football on Sky </a></li>
+                        					                        					                                                    <li id=ædrop-link-14509æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/inline/0,26691,12606,00.htmlæ>Video</a></li>
+                        					                                                    <li id=ædrop-link-14510æ class=ænav-drop-linkæ><a   href=æhttp://fantasyfootball.skysports.com/æ>Fantasy Football</a></li>
+                        					                                                    <li id=ædrop-link-14511æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/transfer-centre/æ>Transfer Centre</a></li>
+                        										</ul>
+							</div>
+								<div class=æcol-group-2æ>
+				<h3 class=æcol-headæ>Leagues & Competitions</h3>
+															<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-14320æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/premier-leagueæ>Premier League</a></li>
+                                															                                                                    <li id=ædrop-link-14322æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/championsleagueæ>Champions League</a></li>
+                                															                                                                    <li id=ædrop-link-14321æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/championshipæ>Championship</a></li>
+                                															                                                                    <li id=ædrop-link-14324æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/leagueoneæ>League One</a></li>
+                                															                                                                    <li id=ædrop-link-14325æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/leaguetwoæ>League Two</a></li>
+                                															                                                                    <li id=ædrop-link-14326æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/scottishpremieræ>Scottish Football</a></li>
+                                															                                                                    <li id=ædrop-link-29934æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/capital-one-cupæ>Capital One Cup</a></li>
+                                															                                                                    <li id=ædrop-link-14327æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/domestic-cupsæ>Domestic Cups</a></li>
+                                															                                                                    <li id=ædrop-link-14329æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/europa-leagueæ>Europa League</a></li>
+                                														</ul>
+						</div>
+											<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-14330æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/primeradivisionæ>Primera Liga</a></li>
+                                															                                                                    <li id=ædrop-link-14331æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/serieaæ>Serie A</a></li>
+                                															                                                                    <li id=ædrop-link-14332æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/bundesligaæ>Bundesliga</a></li>
+                                															                                                                    <li id=ædrop-link-14333æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/ligue1æ>Ligue 1</a></li>
+                                															                                                                    <li id=ædrop-link-14334æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/eredivisieæ>Eredivisie</a></li>
+                                															                                                                    <li id=ædrop-link-14323æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/worldcupæ>World Cup</a></li>
+                                															                                                                    <li id=ædrop-link-14328æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/internationalsæ>Internationals</a></li>
+                                															                                                                    <li id=ædrop-link-18174æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/football/competitions/euro2012æ>Euro 2012</a></li>
+                                														</ul>
+						</div>
+												</div>
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>Teams</h3>
+									<ul class=ænav-drop-linksæ id=æteam-selector-footballæ >
+					                                                    <li id=ædrop-link-14380æ class=ænav-drop-linkæ><a class='base-button-t1'  href=æ/skysports/common/Menu_Team_Selector?class=TB_chromeless&width=600&height=450&modal=trueæ>Find your team</a></li>
+                        										</ul>
+							</div>
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>On Sky Sports</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14514æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,12942,00.htmlæ>Live on Sky Sports</a></li>
+                        					                        					                                                    <li id=ædrop-link-29795æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/Xtraæ>Sky Sports Xtra</a></li>
+                        					                                                    <li id=ædrop-link-14515æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.socceram.com/æ>Soccer AM</a></li>
+                        					                                                    <li id=ædrop-link-14519æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12383,00.htmlæ>Soccer Saturday</a></li>
+                        					                                                    <li id=ædrop-link-29794æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/FantasyFCæ>Fantasy Football Club</a></li>
+                        					                                                    <li id=ædrop-link-14516æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12384,00.htmlæ>Goals on Sunday</a></li>
+                        					                                                    <li id=ædrop-link-14518æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12385,00.htmlæ>Revista</a></li>
+                        					                                                    <li id=ædrop-link-14520æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12382,00.htmlæ>Sunday Supplement</a></li>
+                        										</ul>
+							</div>
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>Experts</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-18016æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,18932,00.htmlæ>Jamie Redknapp</a></li>
+                        					                                                    <li id=ædrop-link-14382æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,15205,00.htmlæ>Paul Merson</a></li>
+                        					                                                    <li id=ædrop-link-14383æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,12038,00.htmlæ>Martin Tyler</a></li>
+                        					                                                    <li id=ædrop-link-18015æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,12086,00.htmlæ>Chris Kamara</a></li>
+                        					                                                    <li id=ædrop-link-14385æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,15231,00.htmlæ>Peter Beagrie</a></li>
+                        					                                                    <li id=ædrop-link-14386æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,12087,00.htmlæ>Guillem Balague</a></li>
+                        					                                                    <li id=ædrop-link-24194æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,23064,00.htmlæ>Ray Wilkins</a></li>
+                        					                                                    <li id=ædrop-link-14387æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/opinion/0,25219,12037,00.htmlæ>More...</a></li>
+                        										</ul>
+							</div>
+								<div class=æcol lastæ>
+				<h3 class=æcol-headæ>Don't Miss</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14388æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/transfer-centre/æ>Transfer Centre</a></li>
+                        					                                                    <li id=ædrop-link-14389æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/eventscentreæ>Events Centre</a></li>
+                        					                                                    <li id=ædrop-link-14391æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/looktothefuture/0,28750,19688,00.htmlæ>Look to the Future</a></li>
+                        					                                                    <li id=ædrop-link-14392æ class=ænav-drop-linkæ><a   href=æhttp://skysports.stats.football365.com/æ>Stats</a></li>
+                        					                                                    <li id=ædrop-link-14393æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/news-wire/11065/featuresæ>Features</a></li>
+                        					                                                    <li id=ædrop-link-14394æ class=ænav-drop-linkæ><a   href=æhttp://super6.skysports.com/æ>Super 6</a></li>
+                        					                                                    <li id=ædrop-link-14395æ class=ænav-drop-linkæ><a   href=æhttp://go.sky.comæ>Sky Go</a></li>
+                        					                                                    <li id=ædrop-link-14396æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/fun_games/æ>Fun & Games</a></li>
+                        										</ul>
+							</div>
+				</div>
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/formula1æ>F1</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/cricketæ>Cricket</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/rugbyunionæ>Rugby U</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/rugbyleagueæ>Rugby L</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/golfæ>Golf</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/boxingæ>Boxing</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/tennisæ>Tennis</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/cyclingæ>Cycling</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=æhttp://www1.skysports.com/racingæ>Racing</a>
+	
+	</li>
+
+ <li class=æbase-nav-itemæ>
+	<a class=æbase-nav-linkæ href=ææ>More+</a>
+	
+			
+		<div class=æbase-nav-drop nav-drop-sportsæ >
+								<div class=æcol-group-3 lastæ>
+				<h3 class=æcol-headæ>Sport Sections</h3>
+															<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-18114æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/dartsæ>Darts</a></li>
+                                															                                                                    <li id=ædrop-link-17216æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/nflæ>NFL</a></li>
+                                															                                                                    <li id=ædrop-link-17217æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/motorsportæ>Motor Sport</a></li>
+                                															                                                                    <li id=ædrop-link-17218æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/snooker/æ>Snooker</a></li>
+                                															                                                                    <li id=ædrop-link-17219æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/icehockey/æ>Ice Hockey</a></li>
+                                															                                                                    <li id=ædrop-link-23395æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/olympicsæ>Olympics</a></li>
+                                															                                                                    <li id=ædrop-link-17223æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/speedway/æ>Speedway</a></li>
+                                															                                                                    <li id=ædrop-link-18362æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/ufcæ>UFC</a></li>
+                                															                                                                    <li id=ædrop-link-17220æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/inbrief/æ>In Brief</a></li>
+                                														</ul>
+						</div>
+											<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-17224æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/wwe/æ>WWE</a></li>
+                                															                                                                    <li id=ædrop-link-24423æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/basketballæ>Basketball</a></li>
+                                															                                                                    <li id=ædrop-link-24654æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/calendar/æ>Sports Calendar</a></li>
+                                															                                                                    <li id=ædrop-link-17235æ class=ænav-drop-linkæ><a class='col-head'  href=ææ>Special sections:</a></li>
+                                															                                                                    <li id=ædrop-link-18234æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/dwp?dcmp=DWP_navlinkæ>Workplace Pensions</a></li>
+                                															                                                                    <li id=ædrop-link-26819æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/getinvolvedæ>Get Involved</a></li>
+                                															                                                                    <li id=ædrop-link-18780æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/scholarshipsæ>Scholarships</a></li>
+                                															                                                                    <li id=ædrop-link-19260æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/xtraæ>Sky Sports Xtra</a></li>
+                                															                                                                    <li id=ædrop-link-19014æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/podcastæ>Podcasts</a></li>
+                                														</ul>
+						</div>
+											<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-17236æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/transfer-centre/æ>Transfer Centre</a></li>
+                                															                                                                    <li id=ædrop-link-17997æ class=ænav-drop-linkæ><a   href=æhttp://fantasyfootball.skysports.com/æ>Fantasy Football</a></li>
+                                															                                                                    <li id=ædrop-link-17998æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/coachingæ>Coaching the Coaches</a></li>
+                                															                                                                    <li id=ædrop-link-17999æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.teamsky.com/æ>Team Sky</a></li>
+                                															                                                                    <li id=ædrop-link-19134æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,18232_7036640,00.htmlæ>Locker room</a></li>
+                                															                                                                    <li id=ædrop-link-18001æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.goskyride.com/æ>Sky Ride</a></li>
+                                															                                                                    <li id=ædrop-link-19534æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.skysports.com/myspecialdayæ>My Special Day</a></li>
+                                														</ul>
+						</div>
+												</div>
+				</div>
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=æhttp://www.skybet.com/completely-free-bet?aff=2405&dcmp=ss_main_navæ>Sky Bet</a>
+	
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=æhttp://live.skysports.com/æ>Scores</a>
+	
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=æhttp://www.skysports.com/opinion/0,25219,12054,00.htmlæ>Opinion</a>
+	
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=æhttp://www.skysports.com/video/0,20285,,00.htmlæ>Video</a>
+	
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=æhttp://www.skysports.com/radioæ>Radio</a>
+	
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=ææ>TV+</a>
+	
+			
+		<div class=æbase-nav-drop nav-drop-tvæ >
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>QUICK LINKS</h3>
+									<ul class=ænav-drop-linksæ  >
+					                        					                                                    <li id=ædrop-link-14490æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv_guide/0,23973,,00.htmlæ>TV Guide</a></li>
+                        					                                                    <li id=ædrop-link-14484æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,1,00.htmlæ>Sky Sports 1</a></li>
+                        					                                                    <li id=ædrop-link-14485æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,2,00.htmlæ>Sky Sports 2</a></li>
+                        					                                                    <li id=ædrop-link-14486æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,3,00.htmlæ>Sky Sports 3</a></li>
+                        					                                                    <li id=ædrop-link-14478æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,4,00.htmlæ>Sky Sports 4</a></li>
+                        					                                                    <li id=ædrop-link-14479æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/skysportsnewsæ>Sky Sports News</a></li>
+                        					                                                    <li id=ædrop-link-26098æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,6,00.htmlæ>Sky Sports F1</a></li>
+                        					                                                    <li id=ædrop-link-18154æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/video/tv/0,25316,7,00.htmlæ>Sky Sports Xtra</a></li>
+                        					                                                    <li id=ædrop-link-14481æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://skyplayer.sky.com/vod/page/default/home.doæ>Sky Go</a></li>
+                        										</ul>
+							</div>
+								<div class=æcol-group-2 lastæ>
+				<h3 class=æcol-headæ>SKY SPORTS SHOWS</h3>
+															<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-14492æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/skysportsnewsæ>Sky Sports News</a></li>
+                                															                                                                    <li id=ædrop-link-14496æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12383,00.htmlæ>Soccer Saturday</a></li>
+                                															                                                                    <li id=ædrop-link-14491æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.socceram.comæ>Soccer AM</a></li>
+                                															                                                                    <li id=ædrop-link-18754æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/FantasyFCæ>Fantasy Football Club</a></li>
+                                															                                                                    <li id=ædrop-link-14493æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12384,00.htmlæ>Goals on Sunday</a></li>
+                                															                                                                    <li id=ædrop-link-14495æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12385,00.htmlæ>Revista</a></li>
+                                															                                                                    <li id=ædrop-link-14497æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12382,00.htmlæ>Sunday Supplement</a></li>
+                                															                                                                    <li id=ædrop-link-29834æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/thefootballersfootballshowæ>The FF Show</a></li>
+                                															                                                                    <li id=ædrop-link-14498æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12380,00.htmlæ>Rugby Club</a></li>
+                                														</ul>
+						</div>
+											<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-26035æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/supertriesæ>Super Tries</a></li>
+                                															                                                                    <li id=ædrop-link-18814æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/ringsideæ>Ringside</a></li>
+                                															                                                                    <li id=ædrop-link-14500æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12387,00.htmlæ>Boots 'N' All</a></li>
+                                															                                                                    <li id=ædrop-link-25834æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/supermenæ>Supermen</a></li>
+                                															                                                                    <li id=ædrop-link-14494æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/fanzone/æ>FanZone</a></li>
+                                															                                                                    <li id=ædrop-link-21219æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/specialreportæ>Special Report</a></li>
+                                															                                                                    <li id=ædrop-link-24714æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/getinvolvedæ>Get Involved</a></li>
+                                															                                                                    <li id=ædrop-link-14499æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12976,00.htmlæ>Tight Lines</a></li>
+                                															                                                                    <li id=ædrop-link-14501æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/tv_guide/show/0,20143,12389,00.htmlæ>Cricket AM</a></li>
+                                														</ul>
+						</div>
+												</div>
+				</div>
+	</li>
+
+ <li class=æbase-nav-item rightæ>
+	<a class=æbase-nav-linkæ href=ææ>More+</a>
+	
+			
+		<div class=æbase-nav-drop nav-drop-moreæ >
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>FUN & GAMES</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14421æ class=ænav-drop-linkæ><a   href=æhttp://super6.skysports.com/æ>Super 6</a></li>
+                        					                                                    <li id=ædrop-link-14422æ class=ænav-drop-linkæ><a   href=æhttp://fantasyfootball.skysports.com/æ>Fantasy Football</a></li>
+                        					                                                    <li id=ædrop-link-14423æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/fun_games/0,20338,12655,00.htmlæ>Sky Games</a></li>
+                        					                                                    <li id=ædrop-link-14424æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/competitions/æ>Competitions</a></li>
+                        					                                                    <li id=ædrop-link-14426æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/poll/resultsæ>Polls</a></li>
+                        					                                                    <li id=ædrop-link-14427æ class=ænav-drop-linkæ><a   href=ææ>Sky Sports debate</a></li>
+                        					                                                    <li id=ædrop-link-19394æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/wallpapersæ>Wallpapers</a></li>
+                        										</ul>
+							</div>
+								<div class=æcol-group-2æ>
+				<h3 class=æcol-headæ>SERVICES & INFORMATION</h3>
+															<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-17996æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.sky.com/shop/sports/home/?DCMP=DMC-JUL10_sports_SK_skysportsæ>Sky Sports on Sky</a></li>
+                                															                                                                    <li id=ædrop-link-14430æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/mobile/æ>Sky Mobile</a></li>
+                                															                                                                    <li id=ædrop-link-14432æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://skyplayer.sky.com/vod/page/64/home.doæ>Sky Go</a></li>
+                                															                                                                    <li id=ædrop-link-14433æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/sportzine/0,20143,12975,00.htmlæ>Sky Sportzine</a></li>
+                                															                                                                    <li id=ædrop-link-14431æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,12942,00.htmlæ>Sky Football Fixtures</a></li>
+                                															                                                                    <li id=ædrop-link-14435æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://skyticker.sky.com/æ>Sky Ticker</a></li>
+                                															                                                                    <li id=ædrop-link-14434æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/rss_home/0,20366,,00.htmlæ>RSS Feeds</a></li>
+                                															                                                                    <li id=ædrop-link-14436æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://twitter.com/SKYSPORTSæ>Twitter</a></li>
+                                															                                                                    <li id=ædrop-link-14437æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.facebook.com/SkySports?v=infoæ>Facebook</a></li>
+                                														</ul>
+						</div>
+											<div class=æcolæ>
+							<ul class=ænav-drop-linksæ>
+															                                                                    <li id=ædrop-link-14454æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://live.skysports.com/ScoreCentre/live.htmlæ>Score Centre</a></li>
+                                															                                                                    <li id=ædrop-link-14456æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://packages.sky.comæ>Home Packages</a></li>
+                                															                                                                    <li id=ædrop-link-14457æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.sky.com/businessæ>Commercial Packages</a></li>
+                                															                                                                    <li id=ædrop-link-14460æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,12654_2443208,00.htmlæ>Accessibility</a></li>
+                                															                                                                    <li id=ædrop-link-17815æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://pubfinder.sky.com/æ>Pub Finder</a></li>
+                                															                                                                    <li id=ædrop-link-14462æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.sky.com/portal/site/skycom/privacyæ>Privacy Notice</a></li>
+                                															                                                                    <li id=ædrop-link-14459æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/contactus/0,20299,,00.htmlæ>Contact Us</a></li>
+                                															                                                                    <li id=ædrop-link-14461æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,12073_2443211,00.htmlæ>Terms & conditions</a></li>
+                                														</ul>
+						</div>
+												</div>
+								<div class=æcolæ>
+				<h3 class=æcol-headæ>FEATURES</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14473æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/Xtraæ>Sky Sports Xtra</a></li>
+                        					                                                    <li id=ædrop-link-14470æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/eventscentreæ>Events Centre</a></li>
+                        					                                                    <li id=ædrop-link-19015æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/podcastæ>Podcasts</a></li>
+                        					                                                    <li id=ædrop-link-30661æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/other-sports/news/11979/8452673/Sporting-Chaptersæ>Sporting Chapters</a></li>
+                        					                                                    <li id=ædrop-link-14469æ class=ænav-drop-linkæ><a   href=æhttp://www1.skysports.com/transfer-centre/æ>Transfer Centre</a></li>
+                        					                        					                                                    <li id=ædrop-link-14472æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/interactive/top_tens/æ>Top Tens</a></li>
+                        					                                                    <li id=ædrop-link-14474æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/fanzone/æ>Fanzone</a></li>
+                        					                                                    <li id=ædrop-link-18236æ class=ænav-drop-linkæ><a   href=æhttp://www.skysports.com/story/0,19528,18232_7036640,00.htmlæ>Locker Room</a></li>
+                        										</ul>
+							</div>
+								<div class=æcol lastæ>
+				<h3 class=æcol-headæ>Other sites</h3>
+									<ul class=ænav-drop-linksæ  >
+					                                                    <li id=ædrop-link-14464æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.teamsky.com/æ>Team Sky</a></li>
+                        					                                                    <li id=ædrop-link-14465æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.skybet.com/completely-free-bet?aff=2405&dcmp=ss_main_navæ>Sky Bet</a></li>
+                        					                                                    <li id=ædrop-link-14466æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://www.sky.com/æ>Sky.com</a></li>
+                        					                                                    <li id=ædrop-link-14467æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://news.sky.com/skynewsæ>Sky News</a></li>
+                        					                                                    <li id=ædrop-link-14468æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://movies.sky.com/æ>Sky Movies</a></li>
+                        					                                                    <li id=ædrop-link-18000æ class=ænav-drop-linkæ><a   href=æhttp://www.goskyride.com/æ>Sky Ride</a></li>
+                        					                                                    <li id=ædrop-link-22994æ class=ænav-drop-linkæ><a  target=æ_blankæ href=æhttp://livingforsport.skysports.com/æ>Living for Sport</a></li>
+                        										</ul>
+							</div>
+				</div>
+	</li>
+</div>
+
+
+    <!--HB_PERFORMANCE:
+<script type=ætext/javascriptæ>
+	navBuild();
+</script>
+    -->		
+    <div class=æbase-nav-t2æ>
+        <ul>
+                            <li><a href=æhttp://www1.skysports.com/footballæ  >Home</a></li>
+                            <li><a href=æhttp://www.skysports.com/video/inline/0,26691,12606,00.htmlæ  >Video</a></li>
+                            <li><a href=æhttp://www1.skysports.com/news-wire/11065æ  >News</a></li>
+                            <li><a href=æhttp://www1.skysports.com/football/fixtures-resultsæ  >Fixtures & Results</a></li>
+                            <li><a href=æhttp://www.skysports.com/football/leaguesæ  >Tables</a></li>
+                            <li><a href=æhttp://www.skysports.com/opinion/0,25219,12037,00.htmlæ  >Experts</a></li>
+                            <li><a href=æhttp://www1.skysports.com/news-wire/11065/featuresæ  >Features</a></li>
+                            <li><a href=æhttp://www.skysports.com/story/0,19528,12942,00.htmlæ  >Live on Sky</a></li>
+                            <li><a href=æhttp://live.skysports.com/ScoreCentre/football.htmlæ target=æ_blankæ >Score Centre</a></li>
+                            <li><a href=æhttp://www1.skysports.com/football/photosæ  >Photos</a></li>
+                            <li><a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&dcmp=ss_sub_navæ target=æ_blankæ >Sky Bet</a></li>
+                    </ul>     
+             
+    <div class=æv5-select enable-selectæ options=æhadrian=trueæ id=æselect-football-teamæ >
+        <h3 class=æselect-headæ>Select a Team</h3>
+        <ul class=æselect-bodyæ tabindex=æ-1æ>
+            <li tabindex=æ-1æ class=æselect-headæ>Select a Team</li>
+                                                <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/premier-leagueæ>Premier League</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/arsenalæ>Arsenal</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/astonvillaæ>Aston Villa</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/chelseaæ>Chelsea</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/evertonæ>Everton</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fulhamæ>Fulham</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/liverpoolæ>Liverpool</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/manchestercityæ>Manchester City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/manchesterunitedæ>Manchester United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/newcastleunitedæ>Newcastle United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/norwichcityæ>Norwich City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/queensparkrangersæ>Queens Park Rangers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/readingæ>Reading</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/southamptonæ>Southampton</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/stokecityæ>Stoke City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sunderlandæ>Sunderland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/swanseacityæ>Swansea City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/tottenhamhotspuræ>Tottenham Hotspur</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/westbromwichalbionæ>West Bromwich Albion</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/westhamunitedæ>West Ham United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/wiganathleticæ>Wigan Athletic</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/championshipæ>Championship</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/barnsleyæ>Barnsley</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/birminghamcityæ>Birmingham City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/blackburnroversæ>Blackburn Rovers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/blackpoolæ>Blackpool</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/boltonwanderersæ>Bolton Wanderers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/brightonandhovealbionæ>Brighton</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bristolcityæ>Bristol City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/burnleyæ>Burnley</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/cardiffcityæ>Cardiff City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/charltonathleticæ>Charlton Athletic</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/crystalpalaceæ>Crystal Palace</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/derbycountyæ>Derby County</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/huddersfieldtownæ>Huddersfield Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hullcityæ>Hull City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ipswichtownæ>Ipswich Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/leedsunitedæ>Leeds United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/leicestercityæ>Leicester City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/middlesbroughæ>Middlesbrough</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/millwallæ>Millwall</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nottinghamforestæ>Nottingham Forest</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/peterboroughunitedæ>Peterborough United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sheffieldwednesdayæ>Sheffield Wednesday</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/watfordæ>Watford</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/wolverhamptonwanderersæ>Wolverhampton</a></li>
+                                                                                                                <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/scottishpremieræ>Scottish Football</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/aberdeenæ>Aberdeen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/celticæ>Celtic</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/dundeeæ>Dundee</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/dundeeunitedæ>Dundee United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/dunfermline-athleticæ>Dunfermline Athletic</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/falkirkæ>Falkirk</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hamilton-academicalæ>Hamilton Academical</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/heartofmidlothianæ>Heart of Midlothian</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hibernianæ>Hibernian</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/invernesscaledonianthistleæ>Inverness Caledonian Thistle</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/kilmarnockæ>Kilmarnock</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/motherwellæ>Motherwell</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rangersæ>Rangers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ross-countyæ>Ross County</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/stjohnstoneæ>St Johnstone</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/stmirrenæ>St Mirren</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/leagueoneæ>League One</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bournemouthæ>Bournemouth</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/brentfordæ>Brentford</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/buryæ>Bury</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/carlisleunitedæ>Carlisle United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/colchesterunitedæ>Colchester United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/coventrycityæ>Coventry City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/crawleytownæ>Crawley Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/crewealexandraæ>Crewe Alexandra</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/doncasterroversæ>Doncaster</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hartlepoolunitedæ>Hartlepool United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/leytonorientæ>Leyton Orient</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/miltonkeynesdonsæ>Milton Keynes Dons</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nottscountyæ>Notts County</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/oldhamathleticæ>Oldham Athletic</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/portsmouthæ>Portsmouth</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/prestonnorthendæ>Preston North End</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/scunthorpeunitedæ>Scunthorpe United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sheffieldunitedæ>Sheffield United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/shrewsburytownæ>Shrewsbury Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/stevenageboroughæ>Stevenage</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/swindontownæ>Swindon Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/tranmereroversæ>Tranmere Rovers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/walsallæ>Walsall</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/yeoviltownæ>Yeovil Town</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/leaguetwoæ>League Two</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/afcwimbledonæ>AFC Wimbledon</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/accringtonstanleyæ>Accrington Stanley</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/aldershottownæ>Aldershot</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/barnetfcæ>Barnet FC</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bradfordcityæ>Bradford City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bristolroversæ>Bristol Rovers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/burtonalbionæ>Burton Albion</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/cheltenhamtownæ>Cheltenham Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/chesterfieldæ>Chesterfield</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/dagandredæ>Dagenham and Redbridge</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/exetercityæ>Exeter City</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fleetwood-townæ>Fleetwood Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/gillinghamæ>Gillingham</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/morecambeæ>Morecambe</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/northamptontownæ>Northampton Town</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/oxfordunitedæ>Oxford Utd</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/plymouthargyleæ>Plymouth Argyle</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/portvaleæ>Port Vale</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rochdaleæ>Rochdale</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rotherhamunitedæ>Rotherham United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/southendunitedæ>Southend United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/torquayunitedæ>Torquay United</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/wycombewanderersæ>Wycombe Wanderers</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/york-cityæ>York City</a></li>
+                                                                                                                <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/internationalsæ>Internationals</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/argentinaæ>Argentina</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/australiaæ>Australia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bosnia-herzegovinaæ>Bosnia-Herzegovina</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/brazilæ>Brazil</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/cameroonæ>Cameroon</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/chileæ>Chile</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/croatiaæ>Croatia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/czechrepublicæ>Czech Republic</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/denmarkæ>Denmark</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/englandæ>England</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/estoniaæ>Estonia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/franceæ>France</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/germanyæ>Germany</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/greeceæ>Greece</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hondurasæ>Honduras</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/italyæ>Italy</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/japanæ>Japan</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/koreadpræ>Korea DPR</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/mexicoæ>Mexico</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/montenegroæ>Montenegro</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/netherlandsæ>Netherlands</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/newzealandæ>New Zealand</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nigeriaæ>Nigeria</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/northernirelandæ>Northern Ireland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/paraguayæ>Paraguay</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/polandæ>Poland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/portugalæ>Portugal</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/republicofirelandæ>Republic of Ireland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/romaniaæ>Romania</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/russiaæ>Russia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/scotlandæ>Scotland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/serbiaæ>Serbia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/slovakiaæ>Slovakia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sloveniaæ>Slovenia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/southafricaæ>South Africa</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/southkoreaæ>South Korea</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/spainæ>Spain</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/swedenæ>Sweden</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/switzerlandæ>Switzerland</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/turkeyæ>Turkey</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/usaæ>USA</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ukraineæ>Ukraine</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/uruguayæ>Uruguay</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/walesæ>Wales</a></li>
+                                                                                                                                            <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/primeradivisionæ>Primera Liga</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/athleticbilbaoæ>Athletic Bilbao</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/atleticomadridæ>Atletico Madrid</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/barcelonaæ>Barcelona</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/celta-vigoæ>Celta Vigo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/deportivo-la-corunaæ>Deportivo La Coruna</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/espanyolæ>Espanyol</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/getafeæ>Getafe</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/granadaæ>Granada</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/levanteæ>Levante</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/malagaæ>Malaga</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/osasunaæ>Osasuna</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rayovallecanoæ>Rayo Vallecano</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/realbetisæ>Real Betis</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/realmadridæ>Real Madrid</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/realmallorcaæ>Real Mallorca</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/realsociedadæ>Real Sociedad</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/real-valladolidæ>Real Valladolid</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/realzaragozaæ>Real Zaragoza</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sevillaæ>Sevilla</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/valenciaæ>Valencia</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/serieaæ>Serie A</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/acmilanæ>AC Milan</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/atalantaæ>Atalanta</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bolognaæ>Bologna</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/cagliariæ>Cagliari</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/cataniaæ>Catania</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/chievoæ>Chievo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fiorentinaæ>Fiorentina</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/genoaæ>Genoa</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/intermilanæ>Inter Milan</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/juventusæ>Juventus</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/lazioæ>Lazio</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/napoliæ>Napoli</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/palermoæ>Palermo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/parmaæ>Parma</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/pescaraæ>Pescara</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/romaæ>Roma</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sampdoriaæ>Sampdoria</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sienaæ>Siena</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/torinoæ>Torino</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/udineseæ>Udinese</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/africannationsæ>African Nations</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/algeriaæ>Algeria</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/angolaæ>Angola</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/burkinafasoæ>Burkina Faso </a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/capeverdeæ>Cape Verde</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/congodræ>Congo DR</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ethiopiaæ>Ethiopia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ghanaæ>Ghana</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ivorycoastæ>Ivory Coast</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/maliæ>Mali</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/morrocoæ>Morocco</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nigeræ>Niger</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nigeriaæ>Nigeria</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/southafricaæ>South Africa</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/togoæ>Togo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/tunisiaæ>Tunisia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/zambiaæ>Zambia</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/bundesligaæ>Bundesliga</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bayerleverkusenæ>Bayer Leverkusen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bayernmunichæ>Bayern Munich</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/borussiadortmundæ>Borussia Dortmund</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/borussiamonchengladbachæ>Borussia Monchengladbach</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/eintracht-frankfurtæ>Eintracht Frankfurt</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fcaugsbergæ>FC Augsburg</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fcnurnbergæ>FC Nurnberg</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fcschalke04æ>FC Schalke 04</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fsv-mainz-05æ>FSV Mainz 05</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fortuna-dusseldorfæ>Fortuna Dusseldorf</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/greuther-furthæ>Greuther Furth</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hamburgersvæ>Hamburger SV</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hannover96æ>Hannover 96</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/freiburgæ>SC Freiburg</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/hoffenheimæ>TSG Hoffenheim</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/vfbstuttgartæ>VfB Stuttgart</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/werderbremenæ>Werder Bremen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/wolfsburgæ>Wolfsburg</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/ligue1æ>Ligue 1</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ajaccioæ>Ajaccio</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/bastiaæ>Bastia</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/brestæ>Brest</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/eviantgæ>Evian TG</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/girondinsbordeauxæ>Girondins Bordeaux</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/lilleæ>Lille</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/lorientæ>Lorient</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/montpellieræ>Montpellier</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nancyæ>Nancy</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/niceæ>Nice</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/olympiquelyonnaiseæ>Olympique Lyonnais</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/olympiquemarseilleæ>Olympique Marseille</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/parisstgermainæ>Paris St Germain</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/reimsæ>Reims</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/sochauxæ>Sochaux</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/stetienneæ>St Etienne</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/staderennesæ>Stade Rennes</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/toulouseæ>Toulouse</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/troyesæ>Troyes</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/valenciennesæ>Valenciennes</a></li>
+                                                                                    <li tabindex=æ-1æ  class=æselect-groupæ><a href=æ/football/competitions/eredivisieæ>Eredivisie</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/adodenhaagæ>ADO Den Haag</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/azalkmaaræ>AZ Alkmaar</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/ajaxæ>Ajax</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fcgroningenæ>FC Groningen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fctwenteæ>FC Twente</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fcutrechtæ>FC Utrecht</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/fc-zwolleæ>FC Zwolle</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/feyenoordæ>Feyenoord</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/heerenveenæ>Heerenveen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/heraclesalmeloæ>Heracles Almelo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/nacbredaæ>NAC Breda</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/necnijmegenæ>NEC Nijmegen</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/psveindhovenæ>PSV Eindhoven</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rkcwaalwijkæ>RKC Waalwijk</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/rodajckerkæ>Roda JC Kerk</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/vvvvenloæ>VVV Venlo</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/vitessearnhemæ>Vitesse Arnhem</a></li>
+                                            <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/teams/willemiitilbæ>Willem II Tilb</a></li>
+                                                                                                                </ul>
+    </div>
+        
+        
+    <div class=æv5-select enable-selectæ id=æselect-football-leagueæ >
+        <h3 class=æselect-headæ>Select a League</h3>
+        <ul class=æselect-bodyæ tabindex=æ-1æ>
+            <li tabindex=æ-1æ class=æselect-headæ>Select a League</li>
+                                                <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/premier-leagueæ>Premier League</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/championshipæ>Championship</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/championsleagueæ>Champions League</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/scottishpremieræ>Scottish Football</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/leagueoneæ>League One</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/leaguetwoæ>League Two</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/capital-one-cupæ>Capital One Cup</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/internationalsæ>Internationals</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/worldcupæ>World Cup</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/europa-leagueæ>Europa League</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/primeradivisionæ>Primera Liga</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/serieaæ>Serie A</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/africannationsæ>African Nations</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/bundesligaæ>Bundesliga</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/ligue1æ>Ligue 1</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/eredivisieæ>Eredivisie</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/euro2012æ>Euro 2012</a></li>
+                                                               <li tabindex=æ-1æ class=æselect-itemæ><a href=æ/football/competitions/domestic-cupsæ>Domestic Cups</a></li>
+                                   </ul>
+    </div>
+
+    </div>
+
+<div class=æv5-content v5-content-t2æ id=æmain=contentæ>
+    
+    <ul class=æv5-nav-bc nav-enableæ>
+	<li class=æbase-nav-itemæ id=ætier-1æ>
+		<a class=æbase-nav-linkæ href=æ/calendaræ>Fixtures & Results</a>
+	</li>
+	<li class=æbase-nav-item æ id=ætier-2æ>
+		<a class=æbase-nav-linkæ href=æ/football/fixtures-resultsæ>Football</a>
+		<div class=æbase-nav-dropæ>
+			<ul class=ænav-drop-links colæ>
+							<li><a href=æ/calendaræ>All Sports</a></li>
+							<li><a href=æ/football/fixtures-resultsæ>Football</a></li>
+							<li><a href=æhttp://www.skysports.com/cricket/calendaræ>Cricket</a></li>
+							<li><a href=æhttp://www.skysports.com/rugbyunion/calendaræ>Rugby Union</a></li>
+							<li><a href=æhttp://www.skysports.com/rugbyleague/calendaræ>Rugby League</a></li>
+							<li><a href=æ/tennis/fixtures-resultsæ>Tennis</a></li>
+							<li><a href=æ/formula1/grandprix/resultsæ>Formula 1</a></li>
+							<li><a href=æ/nfl/fixtures-resultsæ>NFL</a></li>
+							<li><a href=æ/icehockey/fixtures-resultsæ>Ice Hockey</a></li>
+							<li><a href=æ/basketball/fixtures-resultsæ>Basketball</a></li>
+							<li><a href=æ/darts/scheduleæ>Darts</a></li>
+						</ul>
+		</div><!-- base-nav-drop -->
+	</li><!-- base-nav-item -->
+	
+	<li class=æbase-nav-item lastæ id=ætier-3æ>
+		<a class=æbase-nav-linkæ href=æ/football/fixtures-resultsæ>All Competitions</a>
+		<div class=æbase-nav-dropæ>
+			<h3 class=æcol-headæ><a href=æ/football/fixtures-resultsæ>All Competitions</a></h3>
+			<ul class=ænav-drop-links colæ>
+							<li><a href=æ/football/competitions/premier-league/fixtures-resultsæ>Premier League</a></li>
+											<li><a href=æ/football/competitions/championship/fixtures-resultsæ>Championship</a></li>
+											<li><a href=æ/football/competitions/leagueone/fixtures-resultsæ>League One</a></li>
+											<li><a href=æ/football/competitions/leaguetwo/fixtures-resultsæ>League Two</a></li>
+											<li><a href=æ/football/competitions/scottishpremier/fixtures-resultsæ>Scottish Premier</a></li>
+											<li><a href=æ/football/competitions/ligue1/fixtures-resultsæ>Ligue 1</a></li>
+											<li><a href=æ/football/competitions/primeradivision/fixtures-resultsæ>Primera Liga</a></li>
+											<li><a href=æ/football/competitions/seriea/fixtures-resultsæ>Serie A</a></li>
+											<li><a href=æ/football/competitions/bundesliga/fixtures-resultsæ>Bundesliga</a></li>
+											<li><a href=æ/football/competitions/eredivisie/fixtures-resultsæ>Eredivisie</a></li>
+							</ul>
+			<ul class=ænav-drop-links colæ>
+											<li><a href=æ/football/competitions/capital-one-cup/fixtures-resultsæ>Capital One Cup</a></li>
+											<li><a href=æ/football/competitions/championsleague/fixtures-resultsæ>Champions League</a></li>
+											<li><a href=æ/football/competitions/europa-league/fixtures-resultsæ>Europa League</a></li>
+											<li><a href=æ/football/competitions/internationals/fixtures-resultsæ>Internationals</a></li>
+											<li><a href=æ/football/competitions/worldcup/fixtures-resultsæ>World Cup</a></li>
+											<li><a href=æ/football/competitions/euro2012/fixtures-resultsæ>Euro 2012</a></li>
+											<li><a href=æ/football/competitions/africannations/fixtures-resultsæ>African Nations</a></li>
+											<li><a href=æ/football/competitions/scottish-first-division/fixtures-resultsæ>Scottish First Division</a></li>
+											<li><a href=æ/football/competitions/scottish-second-division/fixtures-resultsæ>Scottish Second Division</a></li>
+											<li><a href=æ/football/competitions/scottish-third-division/fixtures-resultsæ>Scottish Third Division</a></li>
+							</ul>
+			<ul class=ænav-drop-links colæ>
+											<li><a href=æ/football/competitions/blue-sq-premier/fixtures-resultsæ>BlueSQ Premier</a></li>
+											<li><a href=æ/football/competitions/mls/fixtures-resultsæ>MLS</a></li>
+											<li><a href=æ/football/competitions/fa-cup/fixtures-resultsæ>FA Cup</a></li>
+											<li><a href=æ/football/competitions/johnstones-paint-trophy/fixtures-resultsæ>Johnstone's Paint Trophy</a></li>
+											<li><a href=æ/football/competitions/olympics-mens/fixtures-resultsæ>Olympic Men's</a></li>
+										</ul>
+		</div><!-- base-nav-drop -->
+	</li><!-- base-nav-item -->
+</ul>    
+        <ul class=æv5-tab-nav v5-font-embedæ>
+        <li class=æonæ><a href=æ/football/fixtures-resultsæ>Today</a></li>            </ul>
+        
+    <div class=æv5-2col-t5æ>
+        <div class=æcol1æ>            
+                    <h3 class=æfix-head-t1 v5-hdr-6æ id=æ20130206æ>Wednesday 6th February 2013</h3>
+                    <h4 class=æfix-head-t2æ>Africa Cup of Nations</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æhttp://www1.skysports.com/football/live/match/282595/previewæ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>15:00</div>
+                    <div class=æscore-compæ>
+                        Africa Cup of Nations - Semi Final                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Mali                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Nigeria                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282595æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æhttp://www1.skysports.com/football/live/match/282595/previewæ class=æscore-report-icon enable-tooltipæ title=æMatch Previewæ>Match Preview</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æhttp://www1.skysports.com/football/live/match/282596/previewæ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:30</div>
+                    <div class=æscore-compæ>
+                        Africa Cup of Nations - Semi Final                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Burkina                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Ghana                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282596æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æhttp://www1.skysports.com/football/live/match/282596/previewæ class=æscore-report-icon enable-tooltipæ title=æMatch Previewæ>Match Preview</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            <h4 class=æfix-head-t2æ>International Match</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280241æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>10:20</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Japan                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Latvia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280241æ bid=æ280241æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280241&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280241æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280241æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280466æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>14:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Azerbaijan                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Liechtenstein                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280466æ bid=æ280466æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280466&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280466æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280466æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281548æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>14:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Croatia                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        South Korea                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281548æ bid=æ281548æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281548&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281548æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281548æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281550æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>15:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Kazakhstan                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Moldova                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281550æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281550æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281643æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>16:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Cyprus                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Serbia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281643æ bid=æ281643æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281643&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281643æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281643æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281645æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>16:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Hungary                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Belarus                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281645æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281645æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281601æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>17:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Chile                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Egypt                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281601æ bid=æ281601æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281601&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281601æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281601æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280464æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>17:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Norway                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Ukraine                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280464æ bid=æ280464æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280464&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280464æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280464æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281549æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>17:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Slovenia                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Bosnia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281549æ bid=æ281549æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281549&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281549æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281549æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281644æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Albania                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Georgia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281644æ bid=æ281644æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281644&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281644æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281644æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280238æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Israel                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Finland                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280238æ bid=æ280238æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280238&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280238æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280238æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æhttp://www1.skysports.com/football/live/match/280465/previewæ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Spain                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Uruguay                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280465æ bid=æ280465æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280465&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280465æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æhttp://www1.skysports.com/football/live/match/280465/previewæ class=æscore-report-icon enable-tooltipæ title=æMatch Previewæ>Match Preview</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274732æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:15</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Turkey                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Czech Rep                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274732æ bid=æ274732æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274732&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274732æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274732æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281551æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Macedonia                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Denmark                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281551æ bid=æ281551æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281551&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281551æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281551æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280367æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>18:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Malta                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        N Ireland                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280367æ bid=æ280367æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280367&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280367æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280367æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274567æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        England                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Brazil                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274567æ bid=æ274567æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274567&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274567æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274567æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274733æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Greece                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Switzerland                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274733æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274733æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281552æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Iceland                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Russia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281552æ bid=æ281552æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281552&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281552æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281552æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274729æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Netherlands                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Italy                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274729æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274729æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280239æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Sweden                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Argentina                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280239æ bid=æ280239æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280239&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280239æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280239æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274730æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Belgium                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Slovakia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274730æ bid=æ274730æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274730&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274730æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274730æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274735æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Rep Ireland                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Poland                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                        <li class=æscore-tvæ><img src=æhttp://e0.365dm.com/tvlogos/pixel/ss2hd.gifæ title=æExpected to be shown on Sky Sports 2 HDæ></li>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274735æ bid=æ274735æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274735&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274735æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274735æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281607æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Romania                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Australia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281607æ bid=æ281607æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281607&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281607æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281607æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274734æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Scotland                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Estonia                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                        <li class=æscore-tvæ><img src=æhttp://e2.365dm.com/tvlogos/pixel/ss1hd.gifæ title=æExpected to be shown on Sky Sports 1 HDæ></li>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274734æ bid=æ274734æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274734&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274734æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274734æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/274948æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Wales                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Austria                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                        <li class=æscore-tvæ><img src=æhttp://e2.365dm.com/tvlogos/pixel/ss3hd.gifæ title=æExpected to be shown on Sky Sports 3 HDæ></li>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-274948æ bid=æ274948æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-274948&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/274948æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/274948æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æhttp://www1.skysports.com/football/live/match/280226/previewæ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>20:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        France                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Germany                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280226æ bid=æ280226æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280226&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280226æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æhttp://www1.skysports.com/football/live/match/280226/previewæ class=æscore-report-icon enable-tooltipæ title=æMatch Previewæ>Match Preview</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281744æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>20:30</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Paraguay                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        El Salvador                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-281744æ bid=æ281744æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-281744&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281744æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281744æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/280661æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>20:45</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Portugal                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Ecuador                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-280661æ bid=æ280661æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-280661&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/280661æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/280661æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            <h4 class=æfix-head-t2æ>Under-21 International</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281511æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>13:00</div>
+                    <div class=æscore-compæ>
+                        U-21 International                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Greece U21                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Scotland U21                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281511æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281511æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/282097æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>13:00</div>
+                    <div class=æscore-compæ>
+                        U-21 International                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Rep Ire U21                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Holland U21                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282097æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/282097æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/281650æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>15:00</div>
+                    <div class=æscore-compæ>
+                        U-21 International                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Wales U21                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Iceland U21                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/281650æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/281650æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            <h4 class=æfix-head-t2æ>The FA Carlsberg Trophy</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/282550æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        The FA Carlsberg Trophy - 4th Rnd                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Dartford                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        FC Halifx                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282550æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/282550æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            <h4 class=æfix-head-t2æ>Evo-Stik Northern Premier League</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/282333æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        Evo-Stik Northern Prem                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Worksop                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Frickley                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282333æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/282333æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            <h4 class=æfix-head-t2æ>Blue Square North</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/282463æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>19:45</div>
+                    <div class=æscore-compæ>
+                        Blue Sq North                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Oxford City                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Histon                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ class=æbet sublink score-bet-iconæ>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282463æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/282463æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+        <h3 class=æfix-head-t1 v5-hdr-6æ id=æ20130207æ>Thursday 7th February 2013</h3>
+                    <h4 class=æfix-head-t2æ>International Match</h4>
+            <ul class=æfix-blockæ>
+                    
+                <li class=æfix-baræ> 
+                                        <a href=æ/football/live/match/282312æ class=æscore-linkbaræ>&nbsp;</a>
+                                        <div class=æscore-subæ>00:00</div>
+                    <div class=æscore-compæ>
+                        International Match                    </div>
+                    <div class=æscore-side score-side1æ>
+                        Trinidad and Tobago                                            </div>
+                                        <div class=æscore-status æ>vs</div>
+                    <div class=æscore-side score-side2æ>
+                        Peru                                            </div>
+                    <ul class=æscore-sublinksæ>
+                                                    <li class=æscore-betæ>                            
+                                <a href=æhttp://www.skybet.com/completely-free-bet?aff=2405&SS_FixResæ target=æ_blankæ type=æFootballæ id=æbetLink-282312æ bid=æ282312æ class=æbet sublink enable-tooltip score-bet-iconæ options='content=#bet-282312&addclass=bet-tooltip&ajax=true'>bet</a>
+                            </li>
+                                                    <li class=æscore-calæ>
+                                <a href=æ/football/match/add-to-calendar/282312æ class=æscore-calendar-icon enable-thickbox enable-tooltipæ title=æAdd fixture to calendaræ options=æwidth=500&amp;height=300æ>Add to Calendar</a>
+                            </li>
+                                                    <li class=æscore-repæ><a href=æ/football/live/match/282312æ class=æscore-stat-icon enable-tooltipæ title=æMatch Statsæ>Match Stats</a></li>
+                                            </ul>
+                                    </li>
+                            </ul>
+            
+        </div>        
+        <div class=æcol2æ>
+			    <div class=æv5-nav-t4æ>
+        <h3>This Week</h3>
+        <ul class=ænav-itemsæ>
+                        <li><a href=æ/football/fixtures-results/05-february-2013æ>Yesterday</a></li>
+                        <li><a href=æ/football/fixtures-results/06-february-2013æ class='on'>Today</a></li>
+                        <li><a href=æ/football/fixtures-results/07-february-2013æ>Tomorrow</a></li>
+                        <li><a href=æ/football/fixtures-results/08-february-2013æ>Fri 8th Feb</a></li>
+                        <li><a href=æ/football/fixtures-results/09-february-2013æ>Sat 9th Feb</a></li>
+                        <li><a href=æ/football/fixtures-results/10-february-2013æ>Sun 10th Feb</a></li>
+                        <li><a href=æ/football/fixtures-results/11-february-2013æ>Mon 11th Feb</a></li>
+                        <li><a href=æ/football/fixtures-results/12-february-2013æ>Tue 12th Feb</a></li>
+                </ul>
+    </div>
+            	<div class=æv5-dpckr enable-datepickeræ></div>
+	<script>
+		$(function($){
+			var fixtures = [ '2012-6-7','2012-6-8','2012-6-9','2012-6-10','2012-6-11','2012-6-12','2012-6-13','2012-6-14','2012-6-15','2012-6-16','2012-6-17','2012-6-18','2012-6-19','2012-6-21','2012-6-22','2012-6-23','2012-6-24','2012-6-27','2012-6-28','2012-6-30','2012-7-1','2012-7-3','2012-7-4','2012-7-5','2012-7-7','2012-7-8','2012-7-10','2012-7-11','2012-7-12','2012-7-13','2012-7-14','2012-7-15','2012-7-16','2012-7-17','2012-7-18','2012-7-19','2012-7-20','2012-7-21','2012-7-22','2012-7-23','2012-7-24','2012-7-25','2012-7-26','2012-7-27','2012-7-28','2012-7-29','2012-7-30','2012-7-31','2012-8-1','2012-8-2','2012-8-3','2012-8-4','2012-8-5','2012-8-6','2012-8-7','2012-8-8','2012-8-9','2012-8-10','2012-8-11','2012-8-12','2012-8-13','2012-8-14','2012-8-15','2012-8-16','2012-8-17','2012-8-18','2012-8-19','2012-8-20','2012-8-21','2012-8-22','2012-8-23','2012-8-24','2012-8-25','2012-8-26','2012-8-27','2012-8-28','2012-8-29','2012-8-30','2012-8-31','2012-9-1','2012-9-2','2012-9-3','2012-9-4','2012-9-5','2012-9-6','2012-9-7','2012-9-8','2012-9-9','2012-9-11','2012-9-12','2012-9-13','2012-9-14','2012-9-15','2012-9-16','2012-9-17','2012-9-18','2012-9-19','2012-9-20','2012-9-21','2012-9-22','2012-9-23','2012-9-24','2012-9-25','2012-9-26','2012-9-27','2012-9-28','2012-9-29','2012-9-30','2012-10-1','2012-10-2','2012-10-3','2012-10-4','2012-10-5','2012-10-6','2012-10-7','2012-10-8','2012-10-9','2012-10-10','2012-10-11','2012-10-12','2012-10-13','2012-10-14','2012-10-15','2012-10-16','2012-10-17','2012-10-19','2012-10-20','2012-10-21','2012-10-22','2012-10-23','2012-10-24','2012-10-25','2012-10-26','2012-10-27','2012-10-28','2012-10-29','2012-10-30','2012-10-31','2012-11-1','2012-11-2','2012-11-3','2012-11-4','2012-11-5','2012-11-6','2012-11-7','2012-11-8','2012-11-9','2012-11-10','2012-11-11','2012-11-12','2012-11-13','2012-11-14','2012-11-15','2012-11-16','2012-11-17','2012-11-18','2012-11-19','2012-11-20','2012-11-21','2012-11-22','2012-11-23','2012-11-24','2012-11-25','2012-11-26','2012-11-27','2012-11-28','2012-11-29','2012-11-30','2012-12-1','2012-12-2','2012-12-3','2012-12-4','2012-12-5','2012-12-6','2012-12-7','2012-12-8','2012-12-9','2012-12-10','2012-12-11','2012-12-12','2012-12-13','2012-12-14','2012-12-15','2012-12-16','2012-12-17','2012-12-18','2012-12-19','2012-12-20','2012-12-21','2012-12-22','2012-12-23','2012-12-26','2012-12-27','2012-12-28','2012-12-29','2012-12-30','2013-1-1','2013-1-2','2013-1-3','2013-1-4','2013-1-5','2013-1-6','2013-1-7','2013-1-8','2013-1-9','2013-1-10','2013-1-11','2013-1-12','2013-1-13','2013-1-14','2013-1-15','2013-1-16','2013-1-17','2013-1-18','2013-1-19','2013-1-20','2013-1-21','2013-1-22','2013-1-23','2013-1-24','2013-1-25','2013-1-26','2013-1-27','2013-1-28','2013-1-29','2013-1-30','2013-1-31','2013-2-1','2013-2-2','2013-2-3','2013-2-4','2013-2-5','2013-2-6','2013-2-7','2013-2-8','2013-2-9','2013-2-10','2013-2-11','2013-2-12','2013-2-13','2013-2-14','2013-2-15','2013-2-16','2013-2-17','2013-2-18','2013-2-19','2013-2-20','2013-2-21','2013-2-22','2013-2-23','2013-2-24','2013-2-25','2013-2-26','2013-2-27','2013-3-1','2013-3-2','2013-3-3','2013-3-4','2013-3-5','2013-3-6','2013-3-7','2013-3-8','2013-3-9','2013-3-10','2013-3-11','2013-3-12','2013-3-13','2013-3-14','2013-3-15','2013-3-16','2013-3-17','2013-3-18','2013-3-19','2013-3-20','2013-3-21','2013-3-22','2013-3-23','2013-3-24','2013-3-25','2013-3-26','2013-3-27','2013-3-29','2013-3-30','2013-3-31','2013-4-1','2013-4-2','2013-4-3','2013-4-5','2013-4-6','2013-4-7','2013-4-9','2013-4-10','2013-4-12','2013-4-13','2013-4-14','2013-4-16','2013-4-19','2013-4-20','2013-4-21','2013-4-23','2013-4-26','2013-4-27','2013-4-28','2013-5-3','2013-5-4','2013-5-5','2013-5-6','2013-5-8','2013-5-10','2013-5-11','2013-5-12','2013-5-17','2013-5-18','2013-5-19','2013-5-24','2013-5-25','2013-5-26','2013-5-29','2013-6-1','2013-6-5','2013-6-6','2013-6-7','2013-6-8','2013-6-9','2013-6-11','2013-6-12','2013-6-14','2013-6-15','2013-6-18','2013-6-28','2013-6-29','2013-7-5','2013-7-6','2013-7-12','2013-7-13','2013-7-19','2013-7-20','2013-7-26','2013-7-27','2013-8-2','2013-8-3','2013-8-9','2013-8-10','2013-8-16','2013-8-17','2013-8-30','2013-8-31','2013-9-6','2013-9-7','2013-9-10','2013-9-20','2013-9-21','2013-9-27','2013-9-28','2013-10-4','2013-10-5','2013-10-11','2013-10-12','2013-10-15','2013-10-18','2013-10-19','2013-10-25' ];
+
+			$('.enable-datepicker').datepicker({
+				beforeShowDay: getFixtures,
+				onSelect: goToPage,
+				showOtherMonths: true,
+				selectOtherMonths: true
+			});
+
+			// in the component verion
+			function getFixtures(date) {
+				dateString = date.getFullYear() + '-';
+				dateString += date.getMonth()+1 + '-';
+				dateString += date.getDate();
+						
+				if ($.inArray(dateString,fixtures) != -1) {
+					return [true, 'ui-datepicker-days-fixture'];
+				}
+				return [false, ''];
+			}
+			function goToPage(date) {				
+				var dates = date.split(æ/æ);                
+				window.location = æ/football/fixtures-results/æ+dates[1]+æ-æ+getMonth(dates[0])+æ-æ+dates[2];
+			}
+			function getMonth(monthNum) {
+				switch(monthNum) {
+					case '01': return 'january';
+					case '02': return 'february';
+					case '03': return 'march';
+					case '04': return 'april';
+					case '05': return 'may';
+					case '06': return 'june';
+					case '07': return 'july';
+					case '08': return 'august';
+					case '09': return 'september';
+					case '10': return 'october';
+					case '11': return 'november';
+					case '12': return 'december';
+				}
+			}
+		})
+	</script>
+        </div>    
+    </div>
+</div>   
+
+<div class=æss-footeræ>
+	<h3>Around Sky Sports today</h3>
+	<ul class=æss-footer-featuresæ>
+				<li>
+		<span>
+			<img src=æhttp://e1.365dm.com/13/01/68x60/dwppromomaster_2883337.jpgæ alt=ææ width=æ68æ height=æ60æ>
+		</span>
+		<h4>
+		<a href='http://bit.ly/10fJdLb' class='instorylink'>Ultimate Sports Package</a>
+		</h4>
+		<p>Win trips to the FA Cup Final, Wimbledon, Lord's, Silverstone & The Open!</p>
+	</li>
+		<li>
+		<span>
+			<img src=æhttp://e0.365dm.com/12/12/68x60/wgt_2874049.jpgæ alt=ææ width=æ68æ height=æ60æ>
+		</span>
+		<h4>
+		<a href='http://bit.ly/SZ1bNI' class='instorylink'>Wolf Creek Challenge</a>
+		</h4>
+		<p>Play this awesome new course in our great FREE golf game!</p>
+	</li>
+		<li>
+		<span>
+			<img src=æhttp://e2.365dm.com/13/01/68x60/facupball1024_2882179.jpgæ alt=ææ width=æ68æ height=æ60æ>
+		</span>
+		<h4>
+		<a href='http://www1.skysports.com/footballonskysports?DCMP=FootballHub_Footer' target='_blank' class='instorylink'>Football on Sky Sports</a>
+		</h4>
+		<p>Find out more about the big live matches on Sky Sports this weekend.</p>
+	</li>
+		</ul>
+	<div class=æss-footer-sitemapæ>
+											<ul>
+                    <li><h4><a href=æhttp://www1.skysports.com/footballæ title=æFootballæ>Football</a></h4></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/premier-leagueæ title=æPremier Leagueæ>Premier League</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/championshipæ title=æChampionshipæ>Championship</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/scottishpremieræ title=æScottish Premieræ>Scottish Premier</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/championsleagueæ title=æChampions Leagueæ>Champions League</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/leagueoneæ title=æLeague Oneæ>League One</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/leaguetwoæ title=æLeague Twoæ>League Two</a></li>
+									<li><a  href=æhttp://www.skysports.com/story/0,19528,12942,00.htmlæ title=æLive Fixturesæ>Live Fixtures</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/internationalsæ title=æInternationalsæ>Internationals</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/europa-leagueæ title=æEuropa Leagueæ>Europa League</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/primeradivisionæ title=æPrimera Divisionæ>Primera Division</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/serieaæ title=æSerie Aæ>Serie A</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/bundesligaæ title=æBundesligaæ>Bundesliga</a></li>
+									<li><a  href=æhttp://www1.skysports.com/football/competitions/ligue1æ title=æLigue 1æ>Ligue 1</a></li>
+				
+								</ul>
+												<ul>
+                    <li><h4><a href=æhttp://www1.skysports.com/rugbyunionæ title=æRugby Unionæ>Rugby Union</a></h4></li>
+									<li><a  href=æhttp://www1.skysports.com/rugbyunion/competitions/avivapremiershipæ title=æAviva Premiershipæ>Aviva Premiership</a></li>
+									<li><a  href=æhttp://www.skysports.com/rugbyunion/britishandirishlions/æ title=æBritish and Irish Lionsæ>British and Irish Lions</a></li>
+									<li><a  href=æhttp://www1.skysports.com/rugbyunion/competitions/heinekencupæ title=æHeineken Cupæ>Heineken Cup</a></li>
+									<li><a  href=æhttp://www1.skysports.com/rugbyunion/competitions/sixnationsæ title=æInternationalsæ>Internationals</a></li>
+									<li><a  href=æhttp://www1.skysports.com/rugbyunion/competitions/sixnationsæ title=æSix Nationsæ>Six Nations</a></li>
+									<li><a  href=æhttp://www1.skysports.com/rugbyunion/competitions/the-rugby-championshipæ title=æRugby Championshipæ>Rugby Championship</a></li>
+				
+														<li class=æmargintopæ><h4><a href=æhttp://www1.skysports.com/rugbyleagueæ title=æRugby Leagueæ>Rugby League</a></h4></li>
+											<li><a  href=æhttp://www1.skysports.com/rugbyleague/competitions/rugbyleagueworldcupæ title=æRugby World Cupæ>Rugby World Cup</a></li>
+											<li><a  href=æhttp://www.skysports.com/news/weekly_archive/0,21158,11070,00.htmlæ title=æRugby League Newsæ>Rugby League News</a></li>
+											<li><a  href=æhttp://www.skysports.com/rugbyleague/calendar/æ title=æFixtures & Resultsæ>Fixtures & Results</a></li>
+											<li><a  href=æhttp://www.skysports.com/story/0,19528,12944,00.htmlæ title=æRugby Live on Skyæ>Rugby Live on Sky</a></li>
+											<li><a  href=æhttp://www.skysports.com/tv_guide/show/0,20143,12387,00.htmlæ title=æBoots 'N' Allæ>Boots 'N' All</a></li>
+											<li><a  href=æhttp://www.skysports.com/video/clips/0,23791,12780,00.htmlæ title=æRugby League Videosæ>Rugby League Videos</a></li>
+													</ul>
+												<ul>
+                    <li><h4><a href=æhttp://www1.skysports.com/cricketæ title=æCricketæ>Cricket</a></h4></li>
+									<li><a  href=æhttp://www.skysports.com/ashesæ title=æAshesæ>Ashes</a></li>
+									<li><a  href=æhttp://www1.skysports.com/cricket/competitions/domesticæ title=æCounty Cricketæ>County Cricket</a></li>
+									<li><a  href=æhttp://www1.skysports.com/cricket/competitions/internationalæ title=æInternational Cricketæ>International Cricket</a></li>
+									<li><a  href=æhttp://www1.skysports.com/cricket/competitions/indian-premier-leagueæ title=æIndian Premier Leagueæ>Indian Premier League</a></li>
+									<li><a  href=æhttp://www.skysports.com/tv_guide/show/0,20143,12389,00.htmlæ title=æCricket AMæ>Cricket AM</a></li>
+									<li><a  href=æhttp://www.skysports.com/story/0,19528,12943,00.htmlæ title=æLive on Skyæ>Live on Sky</a></li>
+									<li><a  href=æhttp://www.skysports.com/cricket/cwc2011/æ title=æICC World Cupæ>ICC World Cup</a></li>
+				
+														<li class=æmargintopæ><h4><a href=æhttp://www1.skysports.com/golfæ title=æGolfæ>Golf</a></h4></li>
+											<li><a  href=æhttp://www.skysports.com/golf/rydercupæ title=æRyder Cupæ>Ryder Cup</a></li>
+											<li><a  href=æhttp://www1.skysports.com/golf/europeanæ title=æEuropean Touræ>European Tour</a></li>
+											<li><a  href=æhttp://www1.skysports.com/golf/the-open-2012æ title=æOpen Championshipæ>Open Championship</a></li>
+											<li><a  href=æhttp://www1.skysports.com/golf/usæ title=æUS PGA Touræ>US PGA Tour</a></li>
+											<li><a  href=æhttp://www.skysports.com/golf/rankings/0,20135,,00.htmlæ title=æWorld Rankingsæ>World Rankings</a></li>
+													</ul>
+												<ul>
+                    <li><h4><a href=æhttp://www1.skysports.com/tennisæ title=æTennisæ>Tennis</a></h4></li>
+									<li><a  href=æhttp://www.skysports.com/news/weekly_archive/0,21158,12053,00.htmlæ title=æTennis Newsæ>Tennis News</a></li>
+									<li><a  href=æhttp://www.skysports.com/tennis/schedule/0,19800,12053_1,00.htmlæ title=æATP Scheduleæ>ATP Schedule</a></li>
+									<li><a  href=æhttp://www.skysports.com/tennis/schedule/0,19800,12053_2,00.htmlæ title=æWTA Scheduleæ>WTA Schedule</a></li>
+									<li><a  href=æhttp://www.skysports.com/tennis/rankings/0,19801,12053_ATP,00.htmlæ title=æRankingsæ>Rankings</a></li>
+									<li><a  href=æhttp://www.skysports.com/gallery/0,19788,12834,00.htmlæ title=æTennis Photosæ>Tennis Photos</a></li>
+									<li><a  href=æhttp://www.skysports.com/video/clips/0,23791,12611,00.htmlæ title=æTennis Videoæ>Tennis Video</a></li>
+				
+														<li class=æmargintopæ><h4><a href=æhttp://www1.skysports.com/formula1æ title=æFormula Oneæ>Formula One</a></h4></li>
+											<li><a  href=æhttp://www1.skysports.com/formula1/grandprix/æ title=æGrand Prix Scheduleæ>Grand Prix Schedule</a></li>
+											<li><a  href=æhttp://www1.skysports.com/news-wire/12430æ title=æF1 Newsæ>F1 News</a></li>
+											<li><a  href=æhttp://www1.skysports.com/formula1/teamsæ title=æF1 Teams and Driversæ>F1 Teams and Drivers</a></li>
+											<li><a  href=æhttp://www1.skysports.com/formula1/photos/æ title=æF1 Photosæ>F1 Photos</a></li>
+											<li><a  href=æhttp://www1.skysports.com/formula1/opinion/æ title=æF1 Expertsæ>F1 Experts</a></li>
+													</ul>
+																																																																																																																																									
+					<ul>
+                <li><h4>More Sports</h4></li>
+							<li><a href=æhttp://www1.skysports.com/boxing/æ  title=æBoxingæ>Boxing</a></li>
+							<li><a href=æhttp://www1.skysports.com/racingæ  title=æHorse Racingæ>Horse Racing</a></li>
+							<li><a href=æhttp://www1.skysports.com/cyclingæ  title=æCyclingæ>Cycling</a></li>
+							<li><a href=æhttp://www.skysports.com/snookeræ  title=æSnookeræ>Snooker</a></li>
+							<li><a href=æhttp://www.skysports.com/dartsæ  title=æDartsæ>Darts</a></li>
+							<li><a href=æhttp://www1.skysports.com/nflæ  title=æNFLæ>NFL</a></li>
+							<li><a href=æhttp://www.skysports.com/speedwayæ  title=æSpeedwayæ>Speedway</a></li>
+							<li><a href=æhttp://www.skysports.com/motorsportæ  title=æMotor Sportæ>Motor Sport</a></li>
+							<li><a href=æhttp://www1.skysports.com/wwe/æ  title=æWWEæ>WWE</a></li>
+							<li><a href=æhttp://www1.skysports.com/olympicsæ  title=æOlympicsæ>Olympics</a></li>
+							<li><a href=æhttp://www1.skysports.com/calendaræ  title=æSports Calendaræ>Sports Calendar</a></li>
+						</ul>
+			</div>
+    <div class=æss-footer-servicesæ>
+        <h3>Services</h3>
+			<h4><a href='http://pubfinder.sky.com/' class='instorylink'>Sky Sports pub finder</a></h4>
+	<p>Sky has launched a pub finder for eager fans wanting to find a venue to watch Sky Sports.</p>
+	<h4><a href='http://www.skysports.com/livingforsport' target='_blank' class='instorylink'>Sky Sports Living for Sport</a></h4>
+	<p>Get a sports star to visit your old secondary school as part of our free schools initiative.</p>
+	<h4><a href='http://www.sky.com/shop/customer-shop/' target='_blank' class='instorylink'>Get Sky Sports</a></h4>
+	<p>Never miss a moment of the live sporting action on five dedicated channels. </p>
+		<h3>Our Network</h3>
+		<ul class=æss-footer-365æ>
+						<li>
+				<h4>Websites</h4>
+				<ul>
+									<li><a target=æ_blankæ href=æhttp://www.skysports.com/æ>Sky Sports</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.sportinglife.comæ>Sporting Life</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.football365.comæ>Football365</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.teamtalk.comæ>TEAMtalk</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.sportal.comæ>Sportal</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.fixtures365.comæ>Fixtures365</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.teamsky.comæ>Team Sky</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skysports.com/livingforsportæ>Living for Sport</a></li>
+								</ul>
+			</li>
+						<li>
+				<h4>Partners</h4>
+				<ul>
+									<li><a target=æ_blankæ href=æhttp://www.planetrugby.comæ>Planet Rugby</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.golf365.comæ>Golf365</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.planetf1.comæ>Planet F1</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.cricket365.comæ>Cricket365</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.extreme365.comæ>Extreme365</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.football411.comæ>Football411</a></li>
+								</ul>
+			</li>
+						<li>
+				<h4>Betting & Gaming</h4>
+				<ul>
+									<li><a target=æ_blankæ href=æhttp://www.bettingzone.co.uk/æ>Betting Zone</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skybet.comæ>Sky Bet</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skypoker.com/æ>Sky Poker</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skyvegas.com/æ>Sky Vegas</a></li>
+									<li><a  href=æhttp://www.skybingo.com/æ>Sky Bingo</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.oddschecker.com/free-bets.htmlæ>Free Bets</a></li>
+									<li><a  href=æhttp://www.oddschecker.comæ>Oddschecker</a></li>
+								</ul>
+			</li>
+						<li>
+				<h4>Mobile, Fun & Games</h4>
+				<ul>
+									<li><a target=æ_blankæ href=æhttp://games.sky.comæ>Play Online Games</a></li>
+									<li><a target=æ_blankæ href=æhttp://mobile.sky.comæ>Sky on your mobile</a></li>
+									<li><a target=æ_blankæ href=æhttp://super6.skysports.com/æ>Super 6</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skysports.com/fantasyfootballæ>Fantasy Football</a></li>
+									<li><a target=æ_blankæ href=æhttp://www.skybet.com/betting/virtual-football/c10000092.htmlæ>Virtual Football</a></li>
+								</ul>
+			</li>
+			        </ul>
+	 </div><!-- ss-footer-services -->
+	 <ul class=æss-footer-copyæ>
+    <li>&copy; 2013 BSkyB</li>
+    <li><a href=æhttp://www1.skysports.com/accessibilityæ>Accessibility</a></li>
+    <li><a href=æhttp://www.sky.com/portal/site/skycom/privacyæ target=æ_blankæ>Privacy and Cookies Notice</a></li>
+    <li><a href=æhttp://www1.skysports.com/termsæ>Terms and Conditions</a></li>
+            <li><a href=æhttp://www.skysports.com/contactus/0,20299,,00.htmlæ>Contact Us</a></li>
+        <li><a href=æhttp://pulse.sky.comæ target=æ_blankæ>Service Status</a></li>
+    <li><a href=æhttp://www.skysports.com/links/0,25428,,00.htmlæ>Links</a></li>
+</ul></div></div><!--/ss-wrap/-->
+
+<script>
+            window.scriptpath = '/static/';
+        bskyb.map = {
+        accordian : 'f725409f70c47cc05940a4fd9081bb558f52133d.js',
+ateam : '16d370743af4c72731f81f26bab385bfea48ece4.js',
+ajaxload : '1aab67e05bc9ee68e1a05586ab0b5c7d93226866.js',
+badgestrip : 'ba4236719aa897f216d4a7461eaa7ce55bb6589c.js',
+bargraph : '778bbe5399f7957d38ac45e22b9769aa07bd89f4.js',
+brightcoveexperiencesall : '28ef5f536fda16771318714075af804d72a8299d.js',
+canvasgraph : '73a2d91cffffedfb5d745b5005132509d7923323.js',
+carousel : 'fdd7a6911da79722691cce78ef545c90de4e6785.js',
+countdown : '2181bdd472b839b7fdd0f5502bb3afa8368e4e45.js',
+excanvasmin : '367b6955bcaabc71381ee3c8436db71413894257.js',
+formsarticle : 'be60e89aa27f6ed081b54f0c6e47ffd07c901df8.js',
+formguide : 'a40f9c54338c21c8c38f3e41ea72f689dc98e5da.js',
+gallery : '9a40f4d4f252c0f041801b77cae45906393c13d7.js',
+gallerypromo : '67427da2b5a0188c1b0a6102d700fae0a263d919.js',
+infobar : 'd96c12e04e9f70816cb5ab89974de23ff014b625.js',
+inlinegallery : 'cdec612b5b8db5ea8ed0fb8d3a03994a50029ce3.js',
+inlinevideo : 'ed8eb77563dc35d2a720a377ba32b0b7a4a92518.js',
+jqueryflotmin : '901675e3d8da4b33f4506768baa68c0b255c585c.js',
+jqueryuimin : 'e5a09433df12bb82d468ce1398584ab7185cad2f.js',
+jqueryuidatepickermin : 'e008bc056e5723ed7057c06841330b20d56d884f.js',
+jqueryvalidate : '94bc89b9e469dacf2be59cf45b8d8dfd504866cd.js',
+leaguetable : 'ce9b53d445a97609240ae42e23138965d9696aec.js',
+matchtimeline : 'e0ad3230edf4795ce2e63ccba58d0d903ef710ae.js',
+nav : 'fa0063c011ccbb9e0953a96cb094ab03da830c7b.js',
+pod : '5589618b95790ece0d8d002809148930d3a68ce7.js',
+poll : '7fa9a3edf4cf0e78db9192122b93e35cb75c620f.js',
+scroller : 'deab50d92581d0867c3599d2f899fd8e23bb98c6.js',
+scrollto : 'ecab4aef23bdc06bd547c5eda4699d4adf4a09b1.js',
+select : '4c4f74fea87557e15520987623e54c4a8c64b611.js',
+showmore : '586324fa05a5993ee33f8940e7d02ff74021bd5f.js',
+skyid : 'c63a2f273bdae68040a89506231f6df118e059a4.js',
+slider : 'a4fcf0e1f9ef36915da7ced132198c63756367c5.js',
+starteam : '49e7907473e2074ef33560377a1fbb0e7b1f2b51.js',
+table : 'b3f274c880162b24f2a95237dfaf37da4f391f67.js',
+tablefunctions : 'fb125843403e57c250fb9083fa16a7d89b4146de.js',
+tablesorter : '47c730a27a9316c68b65221b58291c734aadaf61.js',
+tabs : '50f534232c75a8c75cdc1d3bf95e0769fcc596f1.js',
+thickbox : 'e5222a2a3685b7711056bfabe912ecabb00ed1d4.js',
+tooltip : '66cedfb4614f4f9d6de1aaa33702ce4dd7a85f80.js',
+    }
+</script>
+<script src=æ/static/660c17b2e8bc3fe76c4d6a41710ce9e42b007bcc.jsæ type=ætext/javascriptæ></script>
+	<script src=æ/common/scripts/min/shared/jquery-ui-1.8.4.datepicker.min.jsæ type=ætext/javascriptæ></script>
+<script type=ætext/javascriptæ>
+
+var SKY_TRACKING = {
+	site: æsky/portal/sportsæ,
+	section: æfootballæ,
+	contentType: æfixturesæ,
+	contentId: ææ, // always having this value printed out, as we might want to reset it later
+		account: æbskybsports,bskybnetworkglobalæ
+}
+</script>
+<script async language=æjavascriptæ src=æ/static/db5bf92b15e90133a724351912049ea484e52c60.jsæ type=ætext/javascriptæ></script>        
+<span id=æss-foot-skybaræ></span>
+
+
+
+<!-- START REVENUE SCIENCE PIXELLING CODE -->
+     <!--<script src=æhttp://js.revsci.net/gateway/gw.js?csid=G07611æ></script>-->
+     <script type=ætext/javascriptæ language=æJavaScriptæ charset=æutf-8æ>
+     <!--
+     if (typeof DM_tag != æundefinedæ) 
+         DM_tag();
+     //-->
+     </script>
+<!-- END REVENUE SCIENCE PIXELLING CODE -->
+
+<iframe src=æjavascript:'';æ id=æecos_iframeæ style=æposition:absolute; left: 0; top: 0; width: 1px; height: 1px; visibility: hidden;æ title=ææ></iframe><iframe src=æjavascript:'';æ id=æecos_iframe2æ style=æposition:absolute; left: 0; top: 0; width: 1px; height: 1px; visibility: hidden;æ title=ææ></iframe><div id=æecos_surveylayeræ style=æposition:absolute; left: 0; top: 0; width: 1px; height: 1px; visibility: hidden;æ title=æVisitor Survey (dynamically generated)æ></div><script language=æJavascriptæ type=ætext/javascriptæ>
+<!--
+/*** eCustomerOpinions survey code v5.0.3 ****/
+/* Copyright (c) 2008 eDigitalResearch Ltd   */
+/* Please refer to our Terms & Conditions    */
+/* for conditions of use.                    */
+/* Do NOT modify this code unless directed   */
+/* to do so by a member of eDigitalResearch  */
+/* staff.                                    */
+/*********************************************/
+
+var cookie_firstparty = true; /* change to 'false' to not use first-party cookies */
+
+var ecos_data = '';
+var ecos_data2 = '';
+var ecos_data3 = '';
+var ecos_test = 0;
+
+var ecos_sid = 588330148;
+var ecos_host = 'ecustomeropinions.com';
+var ecos_vault = '_';
+var ecos_ver = '503';
+var ecos_nc = '';
+var ecos_go = 0;
+var ecos_pu = 0;
+var ecos_hm = 0;
+var ecos_pm = 0;
+var ecos_survey_size_x = 550;
+var ecos_survey_size_y = 400;
+var ecos_jscode = '';
+var ecos_runjs = 'ecos_run();';
+var ecos_proportion = 0.1;
+
+var brok = false;
+if (parseInt(navigator.appVersion.charAt(0)) >= 4)
+	brok = true;
+
+
+function buildurl(destpage) {
+	var ecos_url = ecos_host + '/survey/' + destpage + '.php?sid=' + ecos_sid;
+
+	ecos_url = ((document.location.protocol == 'https:') ? 'https://' : 'http://') + ecos_url;
+
+	if (ecos_test > 0)
+		ecos_url = ecos_url + '&test=1';
+	
+	ecos_url += '&v=' + ecos_ver + '&r=' + Math.round(Math.random() * 100000);
+	if (ecos_vault.index != '_')
+		ecos_url += '&vlt=' + ecos_vault;
+	
+	var myvar2 = '';
+	myvar = window.location.href;
+
+	var icount = 0;
+	for (i=0; i<myvar.length; i++) {
+		if (myvar.charAt(i) == '/')
+			icount++;
+		if (icount >= 3)
+			myvar2 += myvar.charAt(i);
+	};
+
+	if (ecos_data.length > 0)	ecos_url += '&data=' + ecos_data;
+	if (ecos_data2.length > 0)	ecos_url += '&data2=' + ecos_data2;
+	if (ecos_data3.length > 0)	ecos_url += '&data3=' + ecos_data3;
+
+	if ((screen.width > 0) && (screen.height > 0))
+		ecos_url += '&xres=' + screen.width + '&yres=' + screen.height;
+
+	if (screen.colordepth > 0)
+		ecos_url += '&depth=' + screen.colordepth;
+	
+	if (ecos_proportion < 1.0) ecos_url += '&mult=' + ecos_proportion;
+	ecos_url += '&url=' + escape(myvar2.substring(0,100));
+	ecos_url += '&referrer=' + escape(document.referrer.substring(0,100));
+	
+	var ck;
+	if (ck = getcookie('ecos'))
+		ecos_url += '&ecos_cookie=' + ck;
+	
+	if (navigator.userAgent.indexOf(æSafariæ) >= 0)
+		ecos_url += '&fullurl=' + escape(window.location.href);
+	
+	return ecos_url;
+};
+
+
+function ecos_popup_popup() {
+	
+	var ua = navigator.userAgent;
+	if ((ua.indexOf('NT 5.1') > 0) && (ua.indexOf(' SV1') > 0))
+		return false;
+
+	var sw = window.open(buildurl('survey'), 'surveywin', 'location=0,toolbar=no,width=' + ecos_survey_size_x + ',height=' + ecos_survey_size_y + ',directories=no,status=no,scrollbars=yes,resizable=yes');
+
+	if ((ecos_pu) && (sw))
+		sw.blur();
+
+	return sw;
+}
+
+
+function ecos_popup_layer() {
+	if (!document.getElementById)
+		return false;
+
+	var url = buildurl('layer') + '&inlayer=1';
+	var t = '<SCR' + 'IPT LANGUAGE=æJavascriptæ SRC=æ' + url + 'æ></SCR' + 'IPT>';
+
+	var b, a = document.getElementById(æecos_iframe2æ);
+	if (a.contentDocument)
+		b = a.contentDocument;
+	else if (a.contentWindow)
+		b = a.contentWindow.document;
+	else if (a.document)
+		b = a.document;
+	else
+		return false;
+
+	b.open();
+	b.write(t);
+	b.close();
+
+	return true;
+}
+
+
+function ecos_layer_run() {
+	eval(ecos_jscode);
+}
+
+function getcookie(name)
+{
+	var cks = document.cookie.split(';');
+	for (var i = 0; i < cks.length; i++)
+	{
+		var c = cks[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(name + '=') == 0) return c.substring(name.length+1, c.length);
+	}
+	return '';
+}
+
+function ecos_layer_gono() {
+	document.getElementById('ecos_surveylayer').style.visibility = 'hidden';
+};
+
+
+function ecos_layer_gosurveysize() {
+	ecos_layer_gono();
+	var full_survey_url = buildurl('survey') + '&doneperm=1';
+	sw = window.open(full_survey_url, 'surveywin',
+		'location=0,toolbar=no,width=' + ecos_survey_size_x + ',height=' + ecos_survey_size_y + ',directories=no,status=no,scrollbars=yes,resizable=yes');
+	if ((ecos_pu) && (sw))
+		sw.blur();
+	return sw;
+};
+
+
+function ecos_layer_golater() {
+	sw = ecos_layer_gosurveysize();
+	if (sw)
+		sw.blur();
+	return sw;
+};
+
+
+var runcounter = 0;
+function ecos_popup() {
+
+	if (document.getElementById)
+		if (!document.getElementById(æecos_iframeæ))
+			if (runcounter < 10) {
+				runcounter++;
+				setTimeout('ecos_popup()', 100);
+				return;
+			};
+
+	if (ecos_go) {
+
+		switch (ecos_pm) {
+		case 0 : ecos_popup_popup(); break;
+		case 1 : ecos_popup_layer(); break;
+		case 2 : if (!ecos_popup_popup()) ecos_popup_layer(); break;
+		case 3 : if (!ecos_popup_layer()) ecos_popup_popup();
+		};
+	};
+};
+
+
+function ecos_run() {
+	if (ecos_go) {
+		if (ecos_hm == 0)
+			ecos_popup();
+		else if ((ecos_hm == 1) && (brok)) {
+			ecos_pm = 0;
+			window.onunload = ecos_popup;
+		};
+	};
+};
+
+
+function ecos_i() {
+	eval(ecos_runjs);
+	var dt = new Date();
+	if (ecos_nc != '' && cookie_firstparty)
+	{
+		var ck = getcookie('ecos');
+		var cksid = ecos_nc.split('-', 2)[0];
+		if (ck.indexOf(cksid) == -1)
+		{
+			if (ck == '')
+				ck = escape(ecos_nc);
+			else
+				ck = ck + '.' + escape(ecos_nc);
+		}
+		dt.setDate(dt.getDate() + 7300);
+		document.cookie = 'ecos=' + ck + ';expires=' + dt.toGMTString();
+	}
+};
+
+
+var runcounter2 = 0;
+function ecos_load() {
+	var a, b;
+	if (!(a = document.getElementById(æecos_iframeæ))) {
+		if (++runcounter2 < 10)
+			setTimeout('ecos_load()', 100);
+		return;
+	};
+
+	var t = '<SCR' + 'IPT LANGUAGE=æJavascriptæ SRC=æ' + buildurl('i') + 'æ></SCR' + 'IPT>';
+	if (a.contentDocument)
+		b = a.contentDocument;
+	else if (a.contentWindow)
+		b = a.contentWindow.document;
+	else if (a.document)
+		b = a.document;
+	if (b) {
+		b.open();
+		b.write(t);
+		b.close();
+	};
+};
+
+var ecos_allow = getcookie('ecos_allow');
+if (ecos_allow.length < 1) {
+	if (ecos_proportion < 1.0) {
+		ecos_allow = (Math.random() < ecos_proportion) ? 'y' : 'n';
+		document.cookie = 'ecos_allow=' + ecos_allow;
+	} else {
+		ecos_allow = 'y';
+	}
+}
+if (ecos_allow == 'y') {
+if ((document.getElementById) && (window.frames)) {
+	ecos_load();
+} else {
+	ecos_img = new Image;
+	ecos_img.src = buildurl('i') + '&nosup=1';
+}}
+
+
+// -->
+</script><noscript><img src=æhttps://ecustomeropinions.com/survey/img.php?sid=588330148&amp;nojs=1æ border=æ0æ width=æ1æ height=æ1æ alt=ææ /><a href=æhttps://ecustomeropinions.com/survey/noscript.php?sid=588330148&amp;nojs=1æ>We would like your feedback, please fill in our survey</a></noscript>
+</body>
+</html>

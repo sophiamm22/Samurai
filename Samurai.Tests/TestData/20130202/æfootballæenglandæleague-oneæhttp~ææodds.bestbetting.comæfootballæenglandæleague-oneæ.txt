@@ -1,0 +1,2058 @@
+<!DOCTYPE html PUBLIC æ-//W3C//DTD XHTML 1.0 Transitional//ENæ æhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æenæ>
+<!--googleoff: index-->
+<head><meta http-equiv=æContent-Languageæ content=æENæ /><meta http-equiv=æContent-Typeæ content=æUTF-8æ /><meta name=æauthoræ content=æcontactus@betgenius.comæ /><meta name=æverify-v1æ content=ævr0HJ2q/eSuzDhXVTn9h6hQ9LnTaSRs+q6SAvH1q0SY=æ /><link rel=æsearchæ href=æhttp://odds.bestbetting.com/provider.xmlæ type=æapplication/opensearchdescription+xmlæ title=æbestbetting.comæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/favicon.icoæ rel=æshortcut iconæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ rel=æimage_srcæ /><meta name=ækeywordsæ content=æOdds comparison, betting odds, best odds, compare best odds, In play odds and betting, live betting odds, In Running betting odds, Premiership Odds, Premier League odds, Champions League odds, free bets, horse racing betting and odds, antepost betting, horse racing results, football odds, football betting, tennis betting, snooker betting, GAA betting, grand national betting, cheltenham betting, darts betting, greyhound betting, Wales, France, New Zealand, Australia, King George, PDC World dartsæ /><meta name=ædescriptionæ content=æBestbetting compares odds from the leading internet bookmakers, ensuring that you always get the best value from your bets. Find odds on horse racing, football, golf, tennis, NFL, snooker, darts, cricket and more.æ /><meta name=ærobotsæ content=æFOLLOW,INDEXæ /><link href=æhttp://cdn3.resources.bestbetting.com/com.bestbetting/css/core.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/coupon.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/odds.css?89æ rel=æstylesheetæ type=ætext/cssæ /><script type=ætext/javascriptæ src=æ/djs/localiser/en?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/Betgenius_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/com.bestbetting/javascript/odds_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/coupon.js?89æ></script>
+<title>
+	Bestbetting > Football > European Leagues > England > Npower Football League One > 2012-2013
+</title></head>
+<!--googleon: index-->
+<body>
+    <table class=æsiteContaineræ cellpadding=æ0æ cellspacing=æ0æ>
+        <tr>
+            <td>
+				<!--googleoff: index-->
+                <div class=æinnerBaræ>
+                	
+                    <div id=æclockPanelæ>
+                        <span id=æserverTimeæ>
+                            Fri 01, February 2013 11:48:31
+                        </span>
+                        GMT
+                    </div>
+                    
+                    <p>
+                        bestbetting.com | <a href=æhttp://odds.bestbetting.com/æ>UK</a> |
+                        
+                        <a href=æhttp://eu.bestbetting.com/æ>EU</a> | <a href=æhttp://int.bestbetting.com/æ>INT</a>
+                        | <a href=æhttp://free-bets.com/æ>Free Bets</a>
+                            <span id=æsearchEngineContaineræ></span>                        
+                            </p>
+                </div>
+                <div class=æheaderContaineræ>
+                    <div class=æleaderboardContaineræ>
+                        <iframe  src='http://ff.connextra.com/Betfair/selector/client?client=Betfair&amp;placement=Generic_Video_728x90&amp;tclk=<mpvc/>http://<mpck/>?mpro=' width='728' height='90' scrolling='no' frameborder='0' style='border-width:0'></iframe>
+
+                    </div>
+                    <a href=æ/æ>
+                        <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ class=ælogoæ width=æ230æ height=æ60æ
+                            alt=æBestbetting odds comparison | Premier League football odds | Horse Racing odds | Free Bets | FA Cup | Super Bowl XLVI |  6 Nationsæ /></a>
+                </div>
+                <div class=ætopNavContaineræ>
+                     <div class=æoddsFormatContaineræ>
+                        <ul>
+                            <li><a href=æ#æ class=ænavLink fractional-odds setOddsFormat selectedæ>Fractional</a></li>
+                            <li><a href=æ#æ class=ænavLink european-odds setOddsFormatæ>Decimal</a></li>
+                            <li><a href=æ#æ class=ænavLink american-odds setOddsFormatæ>American</a></li>
+                        </ul>
+                    </div>
+                    <form class=æsearchContaineræ action=æ/searchæ method=ægetæ>
+                    <input type=æhiddenæ name=æsearchFromæ value=æbbæ />
+                    <input type=æhiddenæ name=æactionæ value=æsearchæ />
+                    <input type=æhiddenæ name=æquickSearchæ value=ætrueæ />
+                    <fieldset>
+                        <input class=ætextæ type=ætextæ name=æsearchæ value=ææ size=æ30æ />
+                        <input class=æsubmitBtnæ type=æsubmitæ value=æSearchæ />
+                    </fieldset>
+                    </form>
+                    <ul class=ælinksæ>
+                        <li><a href=æ/æ class=ænavLink navLinkNBæ>Home</a></li>
+                        <li><a href=æhttp://www.free-bets.com/æ class=ænavLinkæ target=æ_blankæ>Free Bets</a></li>
+                        <li><a href=æ/steamersæ class=ænavLink navLinkLæ>Steamers</a></li>
+                    </ul>
+                    <div class=æcleaneræ>&nbsp;</div>
+                </div>
+                <!--googleon: index-->
+                <div class=æbodyContaineræ>
+                    <table cellpadding=æ0æ cellspacing=æ0æ>
+                        <tr>
+                            <td id=ænavContaineræ>
+                                <!-- Force Left Nav Width -->
+                                <img class=æcleaneræ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ width=æ158æ height=æ1æ />
+                                
+	
+<!--googleoff: index-->
+
+		<div class=ætopMenu æ>
+			<a class=æicon-s100557æ href=æ/alpine-skiing/æ>Alpine Skiing</a>
+			<div class=æsubMenu s100557æ>
+			
+					<a href=æ/alpine-skiing/world-cup/æ id=ærf219æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s17æ href=æ/american-football/æ>American Football</a>
+			<div class=æsubMenu s17æ>
+			
+					<a href=æ/american-football/nfl/æ id=ærf39æ>NFL</a>
+				
+					<a href=æ/american-football/cfl/æ id=ærf147æ>CFL</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4021954æ href=æ/archery/æ>Archery</a>
+			<div class=æsubMenu s4021954æ>
+			
+					<a href=æ/archery/world/æ id=æs4021954reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s1æ href=æ/athletics/æ>Athletics</a>
+			<div class=æsubMenu s1æ>
+			
+					<a href=æ/athletics/world/æ id=æs1reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s2æ href=æ/australian-rules/æ>Australian Rules</a>
+			<div class=æsubMenu s2æ>
+			
+					<a href=æ/australian-rules/afl/æ id=ærf19æ>AFL</a>
+				
+					<a href=æ/austrailian-rules/afl/nab-cup/æ id=ærf146æ>NAB Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s271554æ href=æ/badminton/æ>Badminton</a>
+			<div class=æsubMenu s271554æ>
+			
+					<a href=æ/badminton/world/æ id=æs271554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s3æ href=æ/baseball/æ>Baseball</a>
+			<div class=æsubMenu s3æ>
+			
+					<a href=æ/baseball/major-league-baseball/æ id=ærf38æ>MLB</a>
+				
+					<a href=æ/baseball/world/æ id=æs3reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4æ href=æ/basketball/æ>Basketball</a>
+			<div class=æsubMenu s4æ>
+			
+					<a href=æ/basketball/nba/æ id=ærf126æ>NBA</a>
+				
+					<a href=æ/basketball/ncaa/æ id=ærf127æ>NCAA</a>
+				
+					<a href=æ/basketball/eurochallenge/æ id=ærf153æ>EuroChallenge</a>
+				
+					<a href=æ/basketball/eurocup/æ id=ærf155æ>Eurocup</a>
+				
+					<a href=æ/basketball/euroleague/æ id=ærf154æ>Euroleague</a>
+				
+					<a href=æ/basketball/other-leagues/æ id=ærf129æ>Other Leagues</a>
+				
+					<a href=æ/basketball/european-leagues/æ id=ærf128æ>European Leagues</a>
+				
+					<a href=æ/basketball/eurobasket/æ id=ærf152æ>EuroBasket</a>
+				
+					<a href=æ/basketball/asia/æ id=æs4reg5æ>Asia</a>
+				
+					<a href=æ/basketball/mexico/æ id=æs4reg119æ>Mexico</a>
+				
+					<a href=æ/basketball/usa/æ id=æs4reg140æ>USA</a>
+				
+					<a href=æ/basketball/euroleague-women/æ id=ærf379æ>Euroleague Women</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s102842æ href=æ/biathlon/æ>Biathlon</a>
+			<div class=æsubMenu s102842æ>
+			
+					<a href=æ/biathlon/world-cup/æ id=ærf234æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8554æ href=æ/bowls/æ>Bowls</a>
+			<div class=æsubMenu s8554æ>
+			
+					<a href=æ/bowls/world/æ id=æs8554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s5æ href=æ/boxing/æ>Boxing</a>
+			<div class=æsubMenu s5æ>
+			
+					<a href=æ/boxing/professional-boxing/æ id=ærf90æ>Professional</a>
+				
+					<a href=æ/boxing/world/æ id=æs5reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022228æ href=æ/canoeing-kayaking/æ>Canoeing/Kayaking</a>
+			<div class=æsubMenu s4022228æ>
+			
+					<a href=æ/canoeing-kayaking/world/æ id=æs4022228reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6æ href=æ/cricket/æ>Cricket</a>
+			<div class=æsubMenu s6æ>
+			
+					<a href=æ/cricket/ICC-Champions-Trophy/æ id=ærf259æ>ICC Champions Trophy</a>
+				
+					<a href=æ/cricket/icc-test-championship/æ id=ærf115æ>Test Series</a>
+				
+					<a href=æ/cricket/indian-premier-league/æ id=ærf139æ>IPL</a>
+				
+					<a href=æ/cricket/english-domestic/æ id=ærf122æ>English Domestic</a>
+				
+					<a href=æ/cricket/icc-odi-championship/æ id=ærf116æ>ODI Series</a>
+				
+					<a href=æ/cricket/the-ashes/æ id=ærf110æ>The Ashes</a>
+				
+					<a href=æ/cricket/twenty20-internationals/æ id=ærf137æ>Twenty20 Internationals</a>
+				
+					<a href=æ/cricket/twenty20-world-cup/æ id=ærf117æ>Twenty20 World Cup</a>
+				
+					<a href=æ/cricket/world-cup/æ id=ærf138æ>World Cup</a>
+				
+					<a href=æ/cricket/australian-domestic/æ id=ærf121æ>Australian Domestic</a>
+				
+					<a href=æ/cricket/bangladesh/æ id=æs6reg154æ>Bangladesh</a>
+				
+					<a href=æ/cricket/world/æ id=æs6reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7æ href=æ/cycling/æ>Cycling</a>
+			<div class=æsubMenu s7æ>
+			
+					<a href=æ/cycling/le-tour-de-france/æ id=ærf140æ>Le Tour de France</a>
+				
+					<a href=æ/cycling/belgium/æ id=æs7reg235æ>Belgium</a>
+				
+					<a href=æ/cycling/milano-sanremo/æ id=ærf285æ>Milano-Sanremo</a>
+				
+					<a href=æ/cycling/paris-roubaix/æ id=ærf321æ>Paris Roubaix</a>
+				
+					<a href=æ/cycling/ronde-van-vlaanderen/æ id=ærf157æ>Ronde Van Vlaanderen</a>
+				
+					<a href=æ/cycling/world/æ id=æs7reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8æ href=æ/darts/æ>Darts</a>
+			<div class=æsubMenu s8æ>
+			
+					<a href=æ/darts/pdc-world-cup/æ id=æcomp3063æ>Betfair World Cup of Darts</a>
+				
+					<a href=æ/darts/bdo-world-championships/æ id=æcomp438æ>Lakeside World Professional Darts Championship</a>
+				
+					<a href=æ/darts/premier-league/æ id=ærf125æ>Premier League</a>
+				
+					<a href=æ/darts/pdc-world-championships/æ id=ærf193æ>PDC World Championships</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022299æ href=æ/diving/æ>Diving</a>
+			<div class=æsubMenu s4022299æ>
+			
+					<a href=æ/diving/world/æ id=æs4022299reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s70679æ href=æ/equestrian/æ>Equestrian</a>
+			<div class=æsubMenu s70679æ>
+			
+					<a href=æ/equestrian/world/æ id=æs70679reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022341æ href=æ/fencing/æ>Fencing</a>
+			<div class=æsubMenu s4022341æ>
+			
+					<a href=æ/fencing/world/æ id=æs4022341reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu navActiveæ>
+			<a class=æicon-s10æ href=æ/football/æ>Football</a>
+			<div class=æsubMenu s10æ>
+			
+					<a href=æ/football/england/æ id=æs10reg3795032æ>England</a>
+				
+					<a href=æ/football/scotland/æ id=æs10reg3795035æ>Scotland</a>
+				
+					<a href=æ/football/italy/æ id=æs10reg225æ>Italy</a>
+				
+					<a href=æ/football/spain/æ id=æs10reg232æ>Spain</a>
+				
+					<a href=æ/football/germany/æ id=æs10reg237æ>Germany</a>
+				
+					<a href=æ/football/france/æ id=æs10reg236æ>France</a>
+				
+					<a href=æ/football/african-cup-of-nations/æ id=ærf316æ>African Cup of Nations</a>
+				
+					<a href=æ/football/european-leagues/æ class=ænavItemActiveæ>European Leagues</a>
+				
+					<a href=æ/football/champions-league/æ id=ærf3æ>Champions League</a>
+				
+					<a href=æ/football/uefa-europa-league/æ id=ærf211æ>UEFA Europa League</a>
+				
+					<a href=æ/football/international-friendlies/æ id=ærf7æ>International Friendlies</a>
+				
+					<a href=æ/football/latin-american-leagues/æ id=ærf5æ>Latin American Leagues</a>
+				
+					<a href=æ/football/uefa-euro-2016/æ id=ærf442æ>UEFA Euro 2016</a>
+				
+					<a href=æ/football/other-leagues/æ id=ærf6æ>Other Leagues</a>
+				
+					<a href=æ/football/world-cup-qualification/æ id=ærf441æ>World Cup Qualifiers</a>
+				
+					<a href=æ/football/world-cup/æ id=ærf8æ>World Cup 2014</a>
+				
+					<a href=æ/football/youth/æ id=ærf11æ>Youth</a>
+				
+					<a href=æ/football/concacaf-champions-league/æ id=ærf267æ>CONCACAF Champions League</a>
+				
+					<a href=æ/football/club-friendlies/æ id=ærf237æ>Club Friendlies</a>
+				
+					<a href=æ/football/world/æ id=æs10reg2æ>World</a>
+				
+					<a href=æ/football/europe/æ id=æs10reg6æ>Europe</a>
+				
+					<a href=æ/football/panama/æ id=æs10reg121æ>Panama</a>
+				
+					<a href=æ/football/specials/æ id=æcomp1837æ>Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s491393æ href=æ/futsal/æ>Futsal</a>
+			<div class=æsubMenu s491393æ>
+			
+					<a href=æ/futsal/belgium/æ id=æs491393reg235æ>Belgium</a>
+				
+					<a href=æ/futsal/czech-republic/æ id=æs491393reg193æ>Czech Republic</a>
+				
+					<a href=æ/futsal/italy/æ id=æs491393reg225æ>Italy</a>
+				
+					<a href=æ/futsal/spain/æ id=æs491393reg232æ>Spain</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf199æ href=æ/gaa/æ>GAA</a>
+			<div class=æsubMenu rf199æ>
+			
+					<a href=æ/gaelic-football/æ id=æs6463040æ>Gaelic Football</a>
+				
+					<a href=æ/hurling/æ id=æs6463041æ>Hurling</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s12æ href=æ/golf/æ>Golf</a>
+			<div class=æsubMenu s12æ>
+			
+					<a href=æ/golf/the-open-championship/æ id=ærf198æ>the Open</a>
+				
+					<a href=æ/golf/the-presidents-cup/æ id=æcomp505æ>The Presidents Cup</a>
+				
+					<a href=æ/golf/omega-dubai-desert-classic/æ id=æcomp578æ>Omega Dubai Desert Classic</a>
+				
+					<a href=æ/golf/waste-management-phoenix-open/æ id=æcomp460æ>Waste Management Phoenix Open</a>
+				
+					<a href=æ/golf/solheim-cup/æ id=æcomp472æ>Solheim Cup</a>
+				
+					<a href=æ/golf/money-list/æ id=ærf82æ>Money List</a>
+				
+					<a href=æ/golf/ryder-cup/æ id=ærf87æ>Ryder Cup</a>
+				
+					<a href=æ/golf/masters-tournament/æ id=ærf83æ>US Masters</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s13æ href=æ/greyhounds/æ>Greyhounds</a>
+			<div class=æsubMenu s13æ>
+			
+					<a href=æ/greyhounds/uk-friday/æ id=ærf204æ>UK Friday</a>
+				
+					<a href=æ/greyhounds/virtual/2013/æ id=æcomp1951æ>Virtual</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022394æ href=æ/gymnastics/æ>Gymnastics</a>
+			<div class=æsubMenu s4022394æ>
+			
+					<a href=æ/gymnastics/world/æ id=æs4022394reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s99614æ href=æ/handball/æ>Handball</a>
+			<div class=æsubMenu s99614æ>
+			
+					<a href=æ/handball/european-leagues/æ id=ærf93æ>European Leagues</a>
+				
+					<a href=æ/handball/ehf-champions-league/æ id=ærf96æ>Champions League</a>
+				
+					<a href=æ/handball/europe/æ id=æs99614reg6æ>Europe</a>
+				
+					<a href=æ/handball/greece/æ id=æs99614reg223æ>Greece</a>
+				
+					<a href=æ/handball/world/æ id=æs99614reg2æ>World</a>
+				
+					<a href=æ/handball/women's/æ id=ærf268æ>Women's</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s208627æ href=æ/hockey/æ>Hockey</a>
+			<div class=æsubMenu s208627æ>
+			
+					<a href=æ/hockey/world/æ id=æs208627reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s14æ href=æ/horse-racing/æ>Horse Racing</a>
+			<div class=æsubMenu s14æ>
+			
+					<a href=æ/horse-racing/nexthorserace/æ id=ærf62æ>Next Horse Race</a>
+				
+					<a href=æ/horse-racing/todayæ id=ærf41æ>Today</a>
+				
+					<a href=æ/horse-racing/tomorrowæ id=ærf42æ>Tomorrow</a>
+				
+					<a href=æ/horse-racing/antepost/æ id=ærf130æ>Antepost</a>
+				
+					<a href=æ/horse-racing/international-racing/æ id=ærf94æ>International</a>
+				
+					<a href=æ/horse-racing/calendar/æ id=ærf136æ>Calendar</a>
+				
+					<a href=æ/steamersæ id=ærf214æ>Steamers</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s15æ href=æ/ice-hockey/æ>Ice Hockey</a>
+			<div class=æsubMenu s15æ>
+			
+					<a href=æ/ice-hockey/nhl/æ id=ærf101æ>NHL</a>
+				
+					<a href=æ/ice-hockey/european-leagues/æ id=ærf98æ>European Leagues</a>
+				
+					<a href=æ/ice-hockey/ahl/æ id=ærf99æ>AHL</a>
+				
+					<a href=æ/ice-hockey/world-championship/æ id=ærf102æ>World Championship</a>
+				
+					<a href=æ/ice-hockey/canada/æ id=æs15reg137æ>Canada</a>
+				
+					<a href=æ/ice-hockey/europe/æ id=æs15reg6æ>Europe</a>
+				
+					<a href=æ/ice-hockey/world/æ id=æs15reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022554æ href=æ/judo/æ>Judo</a>
+			<div class=æsubMenu s4022554æ>
+			
+					<a href=æ/judo/world/æ id=æs4022554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s300115æ href=æ/martial-arts-ufc/æ>Martial Arts/UFC</a>
+			<div class=æsubMenu s300115æ>
+			
+					<a href=æ/martial-arts-ufc/ultimate-fighting-championship/æ id=ærf165æ>UFC</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022615æ href=æ/modern-pentathlon/æ>Modern Pentathlon</a>
+			<div class=æsubMenu s4022615æ>
+			
+					<a href=æ/modern-pentathlon/world/æ id=æs4022615reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s16æ href=æ/motor-sport/æ>Motor Sport</a>
+			<div class=æsubMenu s16æ>
+			
+					<a href=æ/motor-sport/formula-1/æ id=ærf15æ>Formula 1</a>
+				
+					<a href=æ/motor-sport/nascar/æ id=ærf18æ>NASCAR</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf14æ href=æ/olympics/æ>Olympics</a>
+			<div class=æsubMenu rf14æ>
+			
+					<a href=æ/olympics/outrights/æ id=ærf417æ>Outrights</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s78155æ href=æ/politics/æ>Politics</a>
+			<div class=æsubMenu s78155æ>
+			
+					<a href=æ/politics/united-kingdom/æ id=ærf149æ>UK</a>
+				
+					<a href=æ/politics/australia/æ id=æs78155reg243æ>Australia</a>
+				
+					<a href=æ/politics/italy/æ id=æs78155reg225æ>Italy</a>
+				
+					<a href=æ/politics/sweden/æ id=æs78155reg216æ>Sweden</a>
+				
+					<a href=æ/politics/usa/æ id=æs78155reg140æ>USA</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s62969æ href=æ/rowing/æ>Rowing</a>
+			<div class=æsubMenu s62969æ>
+			
+					<a href=æ/rowing/world/æ id=æs62969reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73743æ href=æ/rugby-league/æ>Rugby League</a>
+			<div class=æsubMenu s73743æ>
+			
+					<a href=æ/rugby-league/england/æ id=ærf132æ>English Domestic</a>
+				
+					<a href=æ/rugby-league/australia/æ id=ærf131æ>Australian Domestic</a>
+				
+					<a href=æ/rugby-league/rugby-league-world-cup/æ id=ærf133æ>World Cup</a>
+				
+					<a href=æ/rugby-league/world-club-challenge/æ id=ærf134æ>World Cup Challenge</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73744æ href=æ/rugby-union/æ>Rugby Union</a>
+			<div class=æsubMenu s73744æ>
+			
+					<a href=æ/rugby-union/england/æ id=æs73744reg3795032æ>England</a>
+				
+					<a href=æ/rugby-union/british-and-irish-lions/æ id=ærf168æ>British & Irish Lions</a>
+				
+					<a href=æ/rugby-union/tri-nations/æ id=ærf172æ>Tri Nations</a>
+				
+					<a href=æ/rugby-union/six-nations-championship/æ id=ærf167æ>Six Nations</a>
+				
+					<a href=æ/rugby-union/magners-league/æ id=ærf174æ>Magners League</a>
+				
+					<a href=æ/rugby-union/european-leagues/æ id=ærf176æ>European Leagues</a>
+				
+					<a href=æ/rugby-union/other-leagues/æ id=ærf177æ>Other Leagues</a>
+				
+					<a href=æ/rugby-union/european-rugby-cup/æ id=ærf169æ>Heineken Cup</a>
+				
+					<a href=æ/rugby-union/european-challenge-cup/æ id=ærf170æ>Challenge Cup</a>
+				
+					<a href=æ/rugby-union/super-14/æ id=ærf171æ>Super 14</a>
+				
+					<a href=æ/rugby-union/world-cup/æ id=ærf173æ>World Cup</a>
+				
+					<a href=æ/rugby-union/seven-world-series/æ id=ærf338æ>Seven World Series</a>
+				
+					<a href=æ/rugby-union/six-nations-u20/æ id=ærf345æ>Six Nations U20</a>
+				
+					<a href=æ/rugby-union/super-15/æ id=ærf381æ>Super 15</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022667æ href=æ/sailing/æ>Sailing</a>
+			<div class=æsubMenu s4022667æ>
+			
+					<a href=æ/sailing/world/æ id=æs4022667reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022691æ href=æ/shooting/æ>Shooting</a>
+			<div class=æsubMenu s4022691æ>
+			
+					<a href=æ/shooting/world/æ id=æs4022691reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s100558æ href=æ/ski-jumping/æ>Ski Jumping</a>
+			<div class=æsubMenu s100558æ>
+			
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s22æ href=æ/snooker/æ>Snooker</a>
+			<div class=æsubMenu s22æ>
+			
+					<a href=æ/snooker/championship-league-snooker/æ id=æcomp1490æ>Championship League Snooker</a>
+				
+					<a href=æ/snooker/german-masters/æ id=æcomp3115æ>German Masters</a>
+				
+					<a href=æ/snooker/haikou-world-open/æ id=æcomp1099æ>Haikou World Open</a>
+				
+					<a href=æ/snooker/welsh-open/æ id=æcomp440æ>Welsh Open</a>
+				
+					<a href=æ/snooker/world-championship/æ id=ærf142æ>World Championship</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s550153æ href=æ/swimming/æ>Swimming</a>
+			<div class=æsubMenu s550153æ>
+			
+					<a href=æ/swimming/world/æ id=æs550153reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s269467æ href=æ/table-tennis/æ>Table Tennis</a>
+			<div class=æsubMenu s269467æ>
+			
+					<a href=æ/table-tennis/world/æ id=æs269467reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022858æ href=æ/taekwondo/æ>Taekwondo</a>
+			<div class=æsubMenu s4022858æ>
+			
+					<a href=æ/taekwondo/world/æ id=æs4022858reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf190æ href=æ/tennis/æ>Tennis</a>
+			<div class=æsubMenu rf190æ>
+			
+					<a href=æ/tennis/paris-open/æ id=æcomp385æ>Open GDF Suez</a>
+				
+					<a href=æ/tennis/pattaya-women's-open/æ id=æcomp386æ>WTA, Pattaya</a>
+				
+					<a href=æ/tennis/wta-tour/æ id=ærf180æ>WTA Tour</a>
+				
+					<a href=æ/tennis/davis-cup/æ id=ærf150æ>Davis Cup</a>
+				
+					<a href=æ/tennis/us-open/æ id=ærf74æ>US Open</a>
+				
+					<a href=æ/tennis/french-open/æ id=ærf78æ>French Open</a>
+				
+					<a href=æ/tennis/wimbledon/æ id=ærf1æ>Wimbledon</a>
+				
+					<a href=æ/tennis/player-specials/æ id=æcomp1821æ>Player Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022991æ href=æ/triathlon/æ>Triathlon</a>
+			<div class=æsubMenu s4022991æ>
+			
+					<a href=æ/triathlon/world/æ id=æs4022991reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6230056æ href=æ/tv--film--music/æ>TV / Film & Music</a>
+			<div class=æsubMenu s6230056æ>
+			
+					<a href=æ/tv--film--music/oscars/æ id=ærf109æ>Oscars</a>
+				
+					<a href=æ/tv--film--music/x-factor/æ id=ærf45æ>X Factor</a>
+				
+					<a href=æ/tv--film--music/baftas/æ id=ærf188æ>BAFTAs</a>
+				
+					<a href=æ/tv-film-music/brit-awards/æ id=ærf311æ>Brit Awards</a>
+				
+					<a href=æ/tv--film--music/sports-personality-of-the-year/æ id=ærf66æ>Sports Personality of the Year</a>
+				
+					<a href=æ/tv--film--music/united-kingdom/æ id=æs6230056reg217æ>UK</a>
+				
+					<a href=æ/tv--film--music/usa/american-idol/æ id=ærf189æ>American Idol</a>
+				
+					<a href=æ/tv--film--music/usa/æ id=æs6230056reg140æ>USA</a>
+				
+					<a href=æ/tv--film--music/dancing-on-ice/æ id=ærf107æ>Dancing On Ice</a>
+				
+					<a href=æ/tv-film-music/dancing-with-the-stars/æ id=ærf341æ>Dancing with the Stars</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s91189æ href=æ/volleyball/æ>Volleyball</a>
+			<div class=æsubMenu s91189æ>
+			
+					<a href=æ/volleyball/world/æ id=æs91189reg2æ>World</a>
+				
+					<a href=æ/volleyball/brazil/æ id=æs91189reg124æ>Brazil</a>
+				
+					<a href=æ/volleyball/korea-rep/æ id=æs91189reg152æ>Korea Rep</a>
+				
+					<a href=æ/volleyball/cev-champions-league/æ id=ærf111æ>Champions League</a>
+				
+					<a href=æ/volleyball/european-leagues/æ id=ærf114æ>European Leagues</a>
+				
+					<a href=æ/volleyball/fivb-world-league/æ id=ærf196æ>FIVB World League</a>
+				
+					<a href=æ/volleyball/mevza-middle-league/æ id=ærf324æ>Mevza Middle League</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s276032æ href=æ/water-polo/æ>Water Polo</a>
+			<div class=æsubMenu s276032æ>
+			
+					<a href=æ/water-polo/world/æ id=æs276032reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s729926æ href=æ/weightlifting/æ>Weightlifting</a>
+			<div class=æsubMenu s729926æ>
+			
+					<a href=æ/weightlifting/world/æ id=æs729926reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4023055æ href=æ/wrestling/æ>Wrestling</a>
+			<div class=æsubMenu s4023055æ>
+			
+					<a href=æ/wrestling/world/æ id=æs4023055reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7950337æ href=æ/beach-volleyball/æ>Beach Volleyball</a>
+			<div class=æsubMenu s7950337æ>
+			
+					<a href=æ/beach-volleyball/world/æ id=æs7950337reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+
+<script type=ætext/javascriptæ>
+    var lastMenu = 's10';
+	collapseMenu();
+</script>
+<!--googleon: index-->
+
+                            </td>
+                            <td class=æcontentContaineræ>
+                                <!-- Force Minimum Height -->
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ height=æ1æ width=æ672æ class=æminHeightFixeræ />
+                                <div class=æinneræ>
+                                    <div id=æbreadCrumbsContaineræ>
+                                        
+	
+		<a href=æ/æ>Home</a> &#187; 
+
+		<a href=æ/football/æ>Football</a> &#187; 
+
+		<a href=æ/football/european-leagues/æ>European Leagues</a> &#187; 
+
+		<a href=æ/football/england/æ>England</a> &#187; 
+
+		<a href=æ/football/england/league-one/æ>Npower Football League One</a> &#187; 
+
+
+                                    </div>
+                                    
+	
+<div>
+    <div class=æpopupMoreEventsContaineræ>
+		
+        <div style=ædisplay: none;æ>
+            <h4>More Bets &#187;</h4>
+        </div>
+        
+	    <h1>Football: Npower Football League One</h1>
+	    <div style=ædisplay: none;æ class=æsubContaineræ>
+	        <div>
+	            
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Season Bets
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/winner/æ>Winner</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-6/æ>Top 6</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-goalscorer/æ>Top Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/promotion/æ>Promotion</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/relegation/æ>Relegation</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-promoted-team/æ>Top Promoted Team</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-relegated-team/æ>Top Relegated Team</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/to-reach-the-playoffs/æ>To Reach The Playoffs</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-northern-club/æ>Top Northern Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/league-one/top-southern-club/æ>Top Southern Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/league-one/handicap-winner/æ>Handicap Winner</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+	            <p class=æcloseButtonæ><a href=æ#æ class=æpopupMoreEventsContainerCloseButtonæ>Close</a></p>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+<div id=æcouponUpdateAreaæ class=æcouponTableæ>
+	
+<div class=æcouponTabsæ>
+	
+<div class=ætabContaineræ>
+	<ul>
+		
+		<li class=æactiveæ>
+			
+			<span>Match Result</span>
+			
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/league-one/half-time/æ onclick=ædisplayPage(this, ''); return false;æ>Half Time</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/league-one/draw-no-bet/æ onclick=ædisplayPage(this, ''); return false;æ>Draw No Bet</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/league-one/asian-handicap/æ onclick=ædisplayPage(this, ''); return false;æ>Asian Handicap</a>	
+				
+		</li>	
+		
+	</ul>
+</div>
+</div>
+
+
+<div id=æouterFrameæ>
+	<table class=æcouponTableæ>
+		<tbody>
+			
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Friday 1 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/sheffield-united-v-coventry-city/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455132æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/sheffield-united-v-coventry-city/match-result/æ>Sheffield United v Coventry City</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342684æ class=æselectionBestOddæ style=æ æ>
+					11/8
+					</td>
+				
+					<td id=æs228342685æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228342686æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+			<td id=æbpp50455132æ class=æbppWidth bppæ>99.00 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455132æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Saturday 2 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/bury-v-doncaster-rovers/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454918æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/bury-v-doncaster-rovers/match-result/æ>Bury v Doncaster Rovers</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341408æ class=æselectionBestOddæ style=æ æ>
+					23/10
+					</td>
+				
+					<td id=æs228341410æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228341411æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+			<td id=æbpp50454918æ class=æbppWidth bppæ>101.57 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454918æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/crewe-alexandra-v-scunthorpe-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454911æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/crewe-alexandra-v-scunthorpe-united/match-result/æ>Crewe Alexandra v Scunthorpe United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341377æ class=æselectionBestOddæ style=æ æ>
+					29/20
+					</td>
+				
+					<td id=æs228341379æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341381æ class=æselectionBestOddæ style=æ æ>
+					23/10
+					</td>
+				
+			<td id=æbpp50454911æ class=æbppWidth bppæ>99.95 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454911æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/hartlepool-united-v-notts-county/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454916æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/hartlepool-united-v-notts-county/match-result/æ>Hartlepool United v Notts County</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341403æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs228341404æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341407æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+			<td id=æbpp50454916æ class=æbppWidth bppæ>101.18 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454916æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/milton-keynes-dons-v-afc-bournemouth/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454928æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/milton-keynes-dons-v-afc-bournemouth/match-result/æ>Milton Keynes Dons v AFC Bournemouth</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341448æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+					<td id=æs228341449æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341450æ class=æselectionBestOddæ style=æ æ>
+					11/5
+					</td>
+				
+			<td id=æbpp50454928æ class=æbppWidth bppæ>101.25 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454928æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/portsmouth-v-colchester-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454927æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/portsmouth-v-colchester-united/match-result/æ>Portsmouth v Colchester United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341445æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341446æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs228341447æ class=æselectionBestOddæ style=æ æ>
+					5/4
+					</td>
+				
+			<td id=æbpp50454927æ class=æbppWidth bppæ>100.62 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454927æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/preston-north-end-v-shrewsbury-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455128æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/preston-north-end-v-shrewsbury-town/match-result/æ>Preston North End v Shrewsbury Town</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342667æ class=æselectionBestOddæ style=æ æ>
+					1/1
+					</td>
+				
+					<td id=æs228342668æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs228342669æ class=æselectionBestOddæ style=æ æ>
+					7/2
+					</td>
+				
+			<td id=æbpp50455128æ class=æbppWidth bppæ>100.00 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455128æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/stevenage-v-leyton-orient/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455136æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/stevenage-v-leyton-orient/match-result/æ>Stevenage v Leyton Orient</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342701æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+					<td id=æs228342702æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228342703æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+			<td id=æbpp50455136æ class=æbppWidth bppæ>100.93 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455136æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/tranmere-rovers-v-carlisle-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455139æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/tranmere-rovers-v-carlisle-united/match-result/æ>Tranmere Rovers v Carlisle United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342716æ class=æselectionBestOddæ style=æ æ>
+					1/1
+					</td>
+				
+					<td id=æs228342718æ class=æselectionBestOddæ style=æ æ>
+					11/4
+					</td>
+				
+					<td id=æs228342720æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+			<td id=æbpp50455139æ class=æbppWidth bppæ>99.74 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455139æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/walsall-v-oldham-athletic/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455143æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/walsall-v-oldham-athletic/match-result/æ>Walsall v Oldham Athletic</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342733æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+					<td id=æs228342734æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228342735æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+			<td id=æbpp50455143æ class=æbppWidth bppæ>101.80 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455143æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/yeovil-town-v-brentford/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455145æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/yeovil-town-v-brentford/match-result/æ>Yeovil Town v Brentford</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228342738æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs228342739æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228342740æ class=æselectionBestOddæ style=æ æ>
+					6/4
+					</td>
+				
+			<td id=æbpp50455145æ class=æbppWidth bppæ>99.44 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455145æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-31/crawley-town-v-swindon-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50454919æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-31/crawley-town-v-swindon-town/match-result/æ>Crawley Town v Swindon Town</a> 
+				(17:20&nbsp;GMT)
+			</td>
+			
+					<td id=æs228341412æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341413æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228341414æ class=æselectionBestOddæ style=æ æ>
+					13/10
+					</td>
+				
+			<td id=æbpp50454919æ class=æbppWidth bppæ>100.46 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50454919æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Tuesday 5 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-25/colchester-united-v-swindon-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm67701936æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-25/colchester-united-v-swindon-town/match-result/æ>Colchester United v Swindon Town</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs285197286æ class=æselectionBestOddæ style=æ æ>
+					11/4
+					</td>
+				
+					<td id=æs285197287æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs285197288æ class=æselectionBestOddæ style=æ æ>
+					17/20
+					</td>
+				
+			<td id=æbpp67701936æ class=æbppWidth bppæ>107.93 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm67701936æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-30/oldham-athletic-v-yeovil-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm68100495æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-30/oldham-athletic-v-yeovil-town/match-result/æ>Oldham Athletic v Yeovil Town</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs286620872æ class=æselectionBestOddæ style=æ æ>
+					6/4
+					</td>
+				
+					<td id=æs286620873æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs286620874æ class=æselectionBestOddæ style=æ æ>
+					13/8
+					</td>
+				
+			<td id=æbpp68100495æ class=æbppWidth bppæ>108.86 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm68100495æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-29/scunthorpe-united-v-portsmouth/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm68198065æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-29/scunthorpe-united-v-portsmouth/match-result/æ>Scunthorpe United v Portsmouth</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs286966452æ class=æselectionBestOddæ style=æ æ>
+					4/7
+					</td>
+				
+					<td id=æs286966453æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs286966454æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+			<td id=æbpp68198065æ class=æbppWidth bppæ>111.41 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm68198065æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-30/sheffield-united-v-crawley-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm67701814æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-30/sheffield-united-v-crawley-town/match-result/æ>Sheffield United v Crawley Town</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs285196871æ class=æselectionBestOddæ style=æ æ>
+					4/5
+					</td>
+				
+					<td id=æs285196872æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs285196873æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+			<td id=æbpp67701814æ class=æbppWidth bppæ>107.94 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm67701814æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-25/stevenage-v-notts-county/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm68100509æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-25/stevenage-v-notts-county/match-result/æ>Stevenage v Notts County</a> 
+				(19:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs286620920æ class=æselectionBestOddæ style=æ æ>
+					11/8
+					</td>
+				
+					<td id=æs286620921æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs286620922æ class=æselectionBestOddæ style=æ æ>
+					9/5
+					</td>
+				
+			<td id=æbpp68100509æ class=æbppWidth bppæ>108.59 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm68100509æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Saturday 9 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/afc-bournemouth-v-portsmouth/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455465æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/afc-bournemouth-v-portsmouth/match-result/æ>AFC Bournemouth v Portsmouth</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344139æ class=æselectionBestOddæ style=æ æ>
+					3/10
+					</td>
+				
+					<td id=æs228344140æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+					<td id=æs228344141æ class=æselectionBestOddæ style=æ æ>
+					7
+					</td>
+				
+			<td id=æbpp50455465æ class=æbppWidth bppæ>108.47 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455465æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/brentford-v-bury/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455466æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/brentford-v-bury/match-result/æ>Brentford v Bury</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344142æ class=æselectionBestOddæ style=æ æ>
+					4/7
+					</td>
+				
+					<td id=æs228344143æ class=æselectionBestOddæ style=æ æ>
+					11/4
+					</td>
+				
+					<td id=æs228344144æ class=æselectionBestOddæ style=æ æ>
+					9/2
+					</td>
+				
+			<td id=æbpp50455466æ class=æbppWidth bppæ>108.48 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455466æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/carlisle-united-v-stevenage/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455468æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/carlisle-united-v-stevenage/match-result/æ>Carlisle United v Stevenage</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344148æ class=æselectionBestOddæ style=æ æ>
+					13/10
+					</td>
+				
+					<td id=æs228344149æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228344150æ class=æselectionBestOddæ style=æ æ>
+					9/5
+					</td>
+				
+			<td id=æbpp50455468æ class=æbppWidth bppæ>108.60 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455468æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/colchester-united-v-preston-north-end/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455467æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/colchester-united-v-preston-north-end/match-result/æ>Colchester United v Preston North End</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344145æ class=æselectionBestOddæ style=æ æ>
+					11/8
+					</td>
+				
+					<td id=æs228344146æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs228344147æ class=æselectionBestOddæ style=æ æ>
+					9/5
+					</td>
+				
+			<td id=æbpp50455467æ class=æbppWidth bppæ>108.59 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455467æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/coventry-city-v-yeovil-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455469æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/coventry-city-v-yeovil-town/match-result/æ>Coventry City v Yeovil Town</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344151æ class=æselectionBestOddæ style=æ æ>
+					1/1
+					</td>
+				
+					<td id=æs228344152æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs228344153æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+			<td id=æbpp50455469æ class=æbppWidth bppæ>108.55 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455469æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/doncaster-rovers-v-walsall/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455470æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/doncaster-rovers-v-walsall/match-result/æ>Doncaster Rovers v Walsall</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344154æ class=æselectionBestOddæ style=æ æ>
+					4/5
+					</td>
+				
+					<td id=æs228344155æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228344156æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+			<td id=æbpp50455470æ class=æbppWidth bppæ>108.78 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455470æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/leyton-orient-v-tranmere-rovers/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455616æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/leyton-orient-v-tranmere-rovers/match-result/æ>Leyton Orient v Tranmere Rovers</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344722æ class=æselectionBestOddæ style=æ æ>
+					8/5
+					</td>
+				
+					<td id=æs228344725æ class=æselectionBestOddæ style=æ æ>
+					11/5
+					</td>
+				
+					<td id=æs228344727æ class=æselectionBestOddæ style=æ æ>
+					8/5
+					</td>
+				
+			<td id=æbpp50455616æ class=æbppWidth bppæ>108.17 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455616æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/notts-county-v-crewe-alexandra/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455619æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/notts-county-v-crewe-alexandra/match-result/æ>Notts County v Crewe Alexandra</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344739æ class=æselectionBestOddæ style=æ æ>
+					10/11
+					</td>
+				
+					<td id=æs228344740æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228344741æ class=æselectionBestOddæ style=æ æ>
+					14/5
+					</td>
+				
+			<td id=æbpp50455619æ class=æbppWidth bppæ>108.11 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455619æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/oldham-athletic-v-milton-keynes-dons/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455620æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/oldham-athletic-v-milton-keynes-dons/match-result/æ>Oldham Athletic v Milton Keynes Dons</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344742æ class=æselectionBestOddæ style=æ æ>
+					9/5
+					</td>
+				
+					<td id=æs228344743æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228344744æ class=æselectionBestOddæ style=æ æ>
+					13/10
+					</td>
+				
+			<td id=æbpp50455620æ class=æbppWidth bppæ>108.60 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455620æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/scunthorpe-united-v-crawley-town/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455625æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/scunthorpe-united-v-crawley-town/match-result/æ>Scunthorpe United v Crawley Town</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344768æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+					<td id=æs228344771æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs228344773æ class=æselectionBestOddæ style=æ æ>
+					7/4
+					</td>
+				
+			<td id=æbpp50455625æ class=æbppWidth bppæ>108.80 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455625æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/shrewsbury-town-v-sheffield-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455631æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/shrewsbury-town-v-sheffield-united/match-result/æ>Shrewsbury Town v Sheffield United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344790æ class=æselectionBestOddæ style=æ æ>
+					9/5
+					</td>
+				
+					<td id=æs228344791æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+					<td id=æs228344792æ class=æselectionBestOddæ style=æ æ>
+					11/8
+					</td>
+				
+			<td id=æbpp50455631æ class=æbppWidth bppæ>108.59 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455631æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/league-one/regular-season/round-32/swindon-town-v-hartlepool-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50455632æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/league-one/regular-season/round-32/swindon-town-v-hartlepool-united/match-result/æ>Swindon Town v Hartlepool United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228344793æ class=æselectionBestOddæ style=æ æ>
+					2/5
+					</td>
+				
+					<td id=æs228344795æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+					<td id=æs228344797æ class=æselectionBestOddæ style=æ æ>
+					6
+					</td>
+				
+			<td id=æbpp50455632æ class=æbppWidth bppæ>108.79 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50455632æ></td>
+		</tr>
+	
+				
+		</tbody>
+	</table>
+</div>
+
+
+</div>
+
+<a id=æoffersæ></a>
+
+
+
+<div class=ægroupPageContaineræ>
+    <div class=æsportRegionContaineræ>
+	<ul>
+
+        </ul>
+    </div>
+</div>
+
+<table cellspacing=æ0æ cellpadding=æ0æ style=æwidth: 100%æ>
+	<tr>
+		<td style=æwidth: 50%æ>
+	<div class=æsimpleGroupContaineræ>
+		<h2><span>Season Bets</span></h2>
+		<div class=æbodyæ>
+		    <ul>
+		    
+			    <li><a href=æ/football/england/league-one/winner/æ>Winner</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-6/æ>Top 6</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-goalscorer/æ>Top Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/promotion/æ>Promotion</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/relegation/æ>Relegation</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-promoted-team/æ>Top Promoted Team</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-relegated-team/æ>Top Relegated Team</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/to-reach-the-playoffs/æ>To Reach The Playoffs</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-northern-club/æ>Top Northern Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/top-southern-club/æ>Top Southern Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/league-one/handicap-winner/æ>Handicap Winner</a></li>
+ 		    
+ 		    </ul>
+ 		</div>
+	</div> 	
+</td>
+		<td style=æwidth: 50%æ></td>
+	</tr>
+</table>
+
+
+<script type=ætext/javascriptæ>
+	marketId = 0;
+	initialTab = 'all-odds';
+</script>
+<p class=ædisclaimerContaineræ>
+	While every effort is made to ensure that the Football betting information displayed here is correct and up to date, 
+	we are not liable for any errors and it is your responsibility to check the Football odds with the bookmaker before placing a bet.
+</p>
+<noscript>
+    <div id=ænoJavascriptæ>
+        <p class=ærobots-nocontentæ>Your browser does not support Javascript or you have Javascript disabled. Some features of this site will be unavailable.</p>
+    </div>
+</noscript>
+
+                                </div>
+                            </td>
+                            <td class=ærightNavContaineræ>
+                                <!-- Force Right Nav Width -->
+                                <img class=æfixed-imageæ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    width=æ162æ height=æ0æ alt=ææ />
+                                
+                                
+	
+
+                                
+	
+
+                                <div class=ærightMenuBannerContaineræ>
+                                    
+	<a href=æhttp://betway.com/sports-betting/?s=wgs26825æ title=æBetway Sportsæ><img src=æhttp://www.wagershare.com/affiliate_media/fd4a08081d2c68a5.gif?12999æ alt=æBetway Sportsæ /></a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class=æclearBaræ>
+                    </div>
+                </div>
+                <!--googleoff: index-->
+                <div class=æfooterContaineræ>
+                    <div class=æftoplinksæ>
+                        <a href=æ/aboutæ>
+                            About Us</a> | <a href=æ/helpæ>
+                                Help</a> | <a href=æ/featuresæ>
+                                        Features</a> | <a href=æ/bookmakersæ>
+                                            Bookmakers</a> | 
+                                            <a href=æ/steamersæ>
+                                            Steamers</a> | 
+                                            <a href=æ/help/glossaryæ>
+                                                Glossary</a> | <a href=æ/rssæ class=ærsslinkæ>
+                                                    RSS</a>
+                    </div>
+                    <div class=æfmiddlelinksæ>
+                        <ul class=ætodaysRaceCoursesæ>
+                            <li><a href=æ/horse-racing/todayæ><strong>Todays Racing</strong></a></li>
+                            
+                                    <li><a href=æ/horse-racing/2013-02-01/wolverhampton/æ>
+                                        Wolverhampton</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/dundalk/æ>
+                                        Dundalk</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/lingfield-park/æ>
+                                        Lingfield Park</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-01/catterick-bridge/æ>
+                                        Catterick Bridge</a></li>
+                                
+                            <li><a href=æhttp://www.turftrax.comæ>In depth racing<br />at TurfTrax.com</a></li>
+                        </ul>
+					    <ul class=æcontactæ>
+					        <li><a href=æ/contactæ><strong>Contact</strong></a></li>
+                            <li><a href=æmailto:advertising@betgenius.comæ>Advertising</a></li>
+                            <li><a href=æhttp://www.betgenius.com/careers/æ>Jobs</a></li>
+                        </ul>
+                        <ul class=æbetgeniusæ>
+                                <li><a href=æhttp://www.betgenius.com/products/æ><strong>Betgenius Products</strong></a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/customer-marketing/connextra/æ>Connextra</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/æ>Sportsbook Management</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/sportsbook-manager/æ>Sportsbook Manager</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/inplay-manager/æ>InPlay Manager</a></li>
+                        </ul>
+                    </div>
+                    <div class=æfbottomlinksæ>
+                        <p>
+                            <a href=æhttp://betgenius.comæ>
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/poweredbyBetgenius.gifæ
+                                    alt=æPowered by Betgeniusæ style=æfloat: leftæ /></a>
+                        </p>
+                        <p>
+                            Bestbetting - Sports betting odds comparison &#169; Copyright
+                            2013
+                            <a href=æhttp://betgenius.com/?originsite=bestbetting&amp;origintype=footeræ target=æ_blankæ>
+                                Betgenius Limited</a> | <a href=æ/help/tosæ>
+                                    Terms of Service</a><br />
+                            Please <a href=æ/contactæ>contact us</a> for any further information, including
+                            advertising or commercial terms.
+			    <img src='http://ff.connextra.com/BETDAQGBE/selector/image?client=BETDAQGBE&placement=oddstable_marketpagelink_0x0' border='0' width='0' height='0' />
+			    <a href='http://ff.connextra.com/PaddyPower/selector/click?client=PaddyPower&placement=oddstable_textlink_0x0' target='_blank'><img src='http://ff.connextra.com/PaddyPower/selector/image?client=PaddyPower&placement=oddstable_textlink_0x0' border='0' width='0' height='0' /></a>
+                        </p>
+                        <p>
+							Served by: VM-BBWEB3
+                        </p>
+                    </div>
+                </div>
+				<!--googleon: index-->
+            </td>
+        </tr>
+    </table>
+    <script src=æhttp://www.google-analytics.com/urchin.jsæ type=ætext/javascriptæ></script>
+    <script type=ætext/javascriptæ defer=ædeferæ>
+		    //<![CDATA[
+			_uacct = æUA-425479-2æ;
+			urchinTracker();
+			
+	
+
+			culture = 'en';
+			var serverTimeZone = 'GMT';
+		    //]]>
+    </script>
+</body>
+</html>

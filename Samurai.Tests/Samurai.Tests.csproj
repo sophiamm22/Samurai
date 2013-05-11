@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samurai.Tests</RootNamespace>
+    <AssemblyName>Samurai.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainValue\CouponStrategyTests.cs" />
+    <Compile Include="DomainValue\FootballFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\OddsStrategyTests.cs" />
+    <Compile Include="DomainValue\FootballPredictionStrategyTests.cs" />
+    <Compile Include="DomainValue\TennisFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\TennisOddsStrategyTests.cs" />
+    <Compile Include="DomainValue\TennisPredictionStrategyTests.cs" />
+    <Compile Include="TestInfrastructure\FakeUnitOfWork.cs" />
+    <Compile Include="TestInfrastructure\FakeRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUp\AppStartUpTests.cs" />
+    <Compile Include="TestInfrastructure\ManifestWebRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildBookmakerRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildFixtureRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildPredictionRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepository.cs" />
+    <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepositoryProvider.cs" />
+    <Compile Include="TestInfrastructure\SafeCollection.cs" />
+    <Compile Include="TestInfrastructure\ManifestWebRepositoryProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj">
+      <Project>{83ce8910-37aa-415a-954b-3e36f9701d17}</Project>
+      <Name>Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Core\Samurai.Core.csproj">
+      <Project>{8f6d4baf-a8ee-4221-b667-3ee8b4a6849c}</Project>
+      <Name>Samurai.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain.Entities\Samurai.Domain.Entities.csproj">
+      <Project>{805325f9-8997-4247-b5c7-36476609f616}</Project>
+      <Name>Samurai.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain\Samurai.Domain.csproj">
+      <Project>{47f48263-b575-4254-ae3f-fbd8925ade86}</Project>
+      <Name>Samurai.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Services\Samurai.Services.csproj">
+      <Project>{7118d25c-f41f-4b1e-8f3b-739d25d86321}</Project>
+      <Name>Samurai.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.SqlDataAccess\Samurai.SqlDataAccess.csproj">
+      <Project>{d118c841-b535-480a-9eff-be652cd6b116}</Project>
+      <Name>Samurai.SqlDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
+      <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>
+      <Name>Samurai.Web.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013æadrianæungurævsæjulienæbenneteau.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013æarnauæbrugues-daviævsæmikhailækukushkin.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013æbenoitæpaireævsæsteveædarcis.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013æedouardæroger-vasselinævsætatsumaæito.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013ækennyæde-schepperævsæmichaelællodra.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013ænikolayædavydenkoævsæjarkkoænieminen.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæopen-sud-de-franceæ2013æviktorætroickiævsælucasæpouille.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæpbz-zagreb-indoorsæ2013æantonioæveicævsærobinæhaase.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæpbz-zagreb-indoorsæ2013æivanædodigævsæbenjaminæbecker.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæpbz-zagreb-indoorsæ2013ælukasælackoævsæflavioæcipolla.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæpbz-zagreb-indoorsæ2013æmikhailæyouzhnyævsæigoræsijsling.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionæpbz-zagreb-indoorsæ2013ætobiasækamkeævsæmarcosæbaghdatis.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013æalbertæramosævsærogerioædutra-silva.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013æcarlosæberlocqævsæsantiagoægiraldo.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013ægianlucaænasoævsæpaoloælorenzi.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013æguillaumeærufinævsæjuanæmonaco.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013æjoaoæsousaævsædanielægimeno-traver.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægetpredictionævtr-openæ2013ærafaelænadalævsæfedericoædelbonis.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægettodaysmatches ID - ATP-6æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægettournamentladderæpbz-zagreb-indoorsæ2013.txt" />
+    <EmbeddedResource Include="TestData\20130206\æapiægettournamentladderævtr-openæ2013.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglandæfootball-league-championshipæhttp~ææodds.bestbetting.comæfootballæenglandæfootball-league-championshipæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglandæleague-oneæhttp~ææodds.bestbetting.comæfootballæenglandæleague-oneæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglandæleague-twoæhttp~ææodds.bestbetting.comæfootballæenglandæleague-twoæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglandæpremier-leagueæhttp~ææodds.bestbetting.comæfootballæenglandæpremier-leagueæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæchampionshiphttp~ææoddschecker.mobiæfootballæenglishæchampionship.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæchampionshiphttp~ææwww.oddschecker.comæfootballæenglishæchampionship.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæleague-1http~ææoddschecker.mobiæfootballæenglishæleague-1.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæleague-1http~ææwww.oddschecker.comæfootballæenglishæleague-1.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæleague-2http~ææoddschecker.mobiæfootballæenglishæleague-2.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæleague-2http~ææwww.oddschecker.comæfootballæenglishæleague-2.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæpremier-leaguehttp~ææoddschecker.mobiæfootballæenglishæpremier-league.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæenglishæpremier-leaguehttp~ææwww.oddschecker.comæfootballæenglishæpremier-league.txt" />
+    <EmbeddedResource Include="TestData\20130206\æfootballæfixtures-resultsæ06-february-2013.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellierhttp~ææwww.oddschecker.comætennisæatp-montpellier.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellierækenny-de-schepper-v-michael-llodraæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellierækenny-de-schepper-v-michael-llodraæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellierænikolay-davydenko-v-jarkko-nieminenæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellierænikolay-davydenko-v-jarkko-nieminenæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræviktor-troicki-v-lucas-pouilleæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræviktor-troicki-v-lucas-pouilleæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-marhttp~ææwww.oddschecker.comætennisæatp-vina-del-mar.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-maræalbert-ramos-v-rogerio-dutra-silvaæwinnerhttp~ææwww.oddschecker.comætennisæatp-vina-del-maræalbert-ramos-v-rogerio-dutra-silvaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-marægianluca-naso-v-paolo-lorenziæwinnerhttp~ææwww.oddschecker.comætennisæatp-vina-del-marægianluca-naso-v-paolo-lorenziæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-maræguillaume-rufin-v-juan-monacoæwinnerhttp~ææwww.oddschecker.comætennisæatp-vina-del-maræguillaume-rufin-v-juan-monacoæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-maræjoao-sousa-v-daniel-gimeno-traveræwinnerhttp~ææwww.oddschecker.comætennisæatp-vina-del-maræjoao-sousa-v-daniel-gimeno-traveræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vina-del-marærafael-nadal-v-federico-del-bonisæwinnerhttp~ææwww.oddschecker.comætennisæatp-vina-del-marærafael-nadal-v-federico-del-bonisæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæhttp~ææodds.bestbetting.comætennisæatp-vtr-openæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-1ænaso,-g-v-lorenzi,-pæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-1æramos,-a-v-dutra-da-silva,-ræmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-1æsousa,-j-v-gimeno-traver,-dæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-2æberlocq,-c-v-giraldo,-sæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-2ænadal,-r-v-delbonis,-fæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-vtr-openæround-2ærufin,-g-v-monaco,-jæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebhttp~ææwww.oddschecker.comætennisæatp-zagreb.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebæantonio-veic-v-robin-haaseæwinnerhttp~ææwww.oddschecker.comætennisæatp-zagrebæantonio-veic-v-robin-haaseæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebæivan-dodig-v-benjamin-beckeræwinnerhttp~ææwww.oddschecker.comætennisæatp-zagrebæivan-dodig-v-benjamin-beckeræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebælukas-lacko-v-flavio-cipollaæwinnerhttp~ææwww.oddschecker.comætennisæatp-zagrebælukas-lacko-v-flavio-cipollaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebæmikhail-youzhny-v-igor-sijslingæwinnerhttp~ææwww.oddschecker.comætennisæatp-zagrebæmikhail-youzhny-v-igor-sijslingæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæatp-zagrebætobias-kamke-v-marcos-baghdatisæwinnerhttp~ææwww.oddschecker.comætennisæatp-zagrebætobias-kamke-v-marcos-baghdatisæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellierhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellier.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellieræadrian-ungur-v-julien-benneteauæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellieræadrian-ungur-v-julien-benneteauæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellieræbenoit-paire-v-steve-darcisæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellieræbenoit-paire-v-steve-darcisæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellierækenny-de-schepper-v-michael-llodraæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellierækenny-de-schepper-v-michael-llodraæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellierænikolay-davydenko-v-jarkko-nieminenæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellierænikolay-davydenko-v-jarkko-nieminenæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-montpellieræviktor-troicki-v-lucas-pouilleæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-montpellieræviktor-troicki-v-lucas-pouilleæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-vina-del-marhttp~ææoddschecker.mobiætennisæmens-touræatp-vina-del-mar.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-vina-del-maræalbert-ramos-v-rogerio-dutra-silvaæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-vina-del-maræalbert-ramos-v-rogerio-dutra-silvaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-vina-del-marægianluca-naso-v-paolo-lorenziæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-vina-del-marægianluca-naso-v-paolo-lorenziæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-vina-del-maræguillaume-rufin-v-juan-monacoæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-vina-del-maræguillaume-rufin-v-juan-monacoæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-vina-del-maræjoao-sousa-v-daniel-gimeno-traveræwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-vina-del-maræjoao-sousa-v-daniel-gimeno-traveræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebhttp~ææoddschecker.mobiætennisæmens-touræatp-zagreb.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebæantonio-veic-v-robin-haaseæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-zagrebæantonio-veic-v-robin-haaseæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebæivan-dodig-v-benjamin-beckeræwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-zagrebæivan-dodig-v-benjamin-beckeræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebælukas-lacko-v-flavio-cipollaæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-zagrebælukas-lacko-v-flavio-cipollaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebæmikhail-youzhny-v-igor-sijslingæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-zagrebæmikhail-youzhny-v-igor-sijslingæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæmens-touræatp-zagrebætobias-kamke-v-marcos-baghdatisæwinnerhttp~ææoddschecker.mobiætennisæmens-touræatp-zagrebætobias-kamke-v-marcos-baghdatisæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæhttp~ææodds.bestbetting.comætennisæopen-sud-de-franceæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-1æbrugues-davi,-a-v-kukushkin,-mæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-1æde-schepper,-k-v-llodra,-mæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-1æroger-vasselin,-e-v-ito,-tæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-1ætroicki,-v-v-pouille,-læmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-1æungur,-a-v-benneteau,-jæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-2ædavydenko,-n-v-nieminen,-jæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæopen-sud-de-franceæround-2æpaire,-b-v-darcis,-sæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæhttp~ææodds.bestbetting.comætennisæpbz-zagreb-indoorsæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæround-1ædodig,-i-v-becker,-bæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæround-1ækamke,-t-v-baghdatis,-mæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæround-1ælacko,-l-v-cipolla,-fæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæround-1æveic,-a-v-haase,-ræmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130206\ætennisæpbz-zagreb-indoorsæround-2æyouzhny,-m-v-sijsling,-iæmatch-resultæ.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=0&amp;awayType=0&amp;awayID=39&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=14&amp;awayType=0&amp;awayID=6&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=19&amp;awayType=0&amp;awayID=88&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=2&amp;awayType=0&amp;awayID=32&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=2004&amp;awayType=0&amp;awayID=64&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=2015&amp;awayType=0&amp;awayID=79&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=2029&amp;awayType=0&amp;awayID=2002&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=2033&amp;awayType=0&amp;awayID=20&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=24&amp;awayType=0&amp;awayID=5&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=25&amp;awayType=0&amp;awayID=53&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=28&amp;awayType=0&amp;awayID=13&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=3&amp;awayType=0&amp;awayID=47&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=30&amp;awayType=0&amp;awayID=77&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=33&amp;awayType=0&amp;awayID=51&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=34&amp;awayType=0&amp;awayID=86&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=35&amp;awayType=0&amp;awayID=16&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=36&amp;awayType=0&amp;awayID=56&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=38&amp;awayType=0&amp;awayID=21&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=40&amp;awayType=0&amp;awayID=58&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=41&amp;awayType=0&amp;awayID=4&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=42&amp;awayType=0&amp;awayID=69&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=45&amp;awayType=0&amp;awayID=44&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=49&amp;awayType=0&amp;awayID=89&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=52&amp;awayType=0&amp;awayID=85&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=59&amp;awayType=0&amp;awayID=22&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=60&amp;awayType=0&amp;awayID=2005&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=61&amp;awayType=0&amp;awayID=97&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=62&amp;awayType=0&amp;awayID=31&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=65&amp;awayType=0&amp;awayID=73&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=66&amp;awayType=0&amp;awayID=15&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=7&amp;awayType=0&amp;awayID=1&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=71&amp;awayType=0&amp;awayID=95&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=75&amp;awayType=0&amp;awayID=2000&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=76&amp;awayType=0&amp;awayID=57&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=8&amp;awayType=0&amp;awayID=12&amp;homeType=0&amp;neutral=0 ID - PremierLeague-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=83&amp;awayType=0&amp;awayID=50&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=87&amp;awayType=0&amp;awayID=82&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=9&amp;awayType=0&amp;awayID=48&amp;homeType=0&amp;neutral=0 ID - Championship-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=91&amp;awayType=0&amp;awayID=2009&amp;homeType=0&amp;neutral=0 ID - LeagueTwo-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æcgi-binænew_siteæGetEuroIntlSimulatedFast.pl^homeID=96&amp;awayType=0&amp;awayID=46&amp;homeType=0&amp;neutral=0 ID - LeagueOne-2æ02æ2013.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæhttp~ææodds.bestbetting.comæfootballæenglandæfootball-league-championshipæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æbirmingham-city-v-nottingham-forestæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æblackburn-rovers-v-bristol-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æblackpool-v-barnsleyæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æcrystal-palace-v-charlton-athleticæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æderby-county-v-huddersfield-townæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æipswich-town-v-middlesbroughæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æleeds-united-v-cardiff-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æmillwall-v-hull-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æpeterborough-united-v-burnleyæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æsheffield-wednesday-v-brighton--hove-albionæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæfootball-league-championshipæregular-seasonæround-30æwatford-v-bolton-wanderersæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæhttp~ææodds.bestbetting.comæfootballæenglandæleague-oneæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æbury-v-doncaster-roversæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æcrawley-town-v-swindon-townæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æcrewe-alexandra-v-scunthorpe-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æhartlepool-united-v-notts-countyæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æmilton-keynes-dons-v-afc-bournemouthæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æportsmouth-v-colchester-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æpreston-north-end-v-shrewsbury-townæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æstevenage-v-leyton-orientæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31ætranmere-rovers-v-carlisle-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æwalsall-v-oldham-athleticæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-oneæregular-seasonæround-31æyeovil-town-v-brentfordæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæhttp~ææodds.bestbetting.comæfootballæenglandæleague-twoæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æafc-wimbledon-v-burton-albionæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æcheltenham-town-v-torquay-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æexeter-city-v-aldershot-townæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æfleetwood-town-v-bradford-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æplymouth-argyle-v-dagenham--redbridgeæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æport-vale-v-accrington-stanleyæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31ærochdale-v-chesterfieldæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31ærotherham-united-v-northampton-townæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æsouthend-united-v-oxford-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæleague-twoæregular-seasonæround-31æyork-city-v-morecambeæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæhttp~ææodds.bestbetting.comæfootballæenglandæpremier-leagueæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æarsenal-v-stoke-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æeverton-v-aston-villaæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æfulham-v-manchester-unitedæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25ænewcastle-united-v-chelseaæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æqueens-park-rangers-v-norwich-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æreading-v-sunderlandæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æwest-ham-v-swansea-cityæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglandæpremier-leagueæround-25æwigan-athletic-v-southamptonæmatch-resultæ.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshiphttp~ææoddschecker.mobiæfootballæenglishæchampionship.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshiphttp~ææwww.oddschecker.comæfootballæenglishæchampionship.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæbirmingham-v-nottingham-forestæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæbirmingham-v-nottingham-forestæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæbirmingham-v-nottingham-forestæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæbirmingham-v-nottingham-forestæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæblackburn-v-bristol-cityæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæblackburn-v-bristol-cityæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæblackburn-v-bristol-cityæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæblackburn-v-bristol-cityæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæblackpool-v-barnsleyæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæblackpool-v-barnsleyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæblackpool-v-barnsleyæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæblackpool-v-barnsleyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæcrystal-palace-v-charltonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæcrystal-palace-v-charltonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæcrystal-palace-v-charltonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæcrystal-palace-v-charltonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæderby-v-huddersfieldæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæderby-v-huddersfieldæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæderby-v-huddersfieldæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæderby-v-huddersfieldæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæipswich-v-middlesbroughæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæipswich-v-middlesbroughæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæipswich-v-middlesbroughæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæipswich-v-middlesbroughæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæleeds-v-cardiff-cityæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæleeds-v-cardiff-cityæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæleeds-v-cardiff-cityæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæleeds-v-cardiff-cityæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæmillwall-v-hullæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæmillwall-v-hullæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæmillwall-v-hullæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæmillwall-v-hullæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæpeterborough-united-v-burnleyæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæpeterborough-united-v-burnleyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæpeterborough-united-v-burnleyæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæpeterborough-united-v-burnleyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæsheffield-wednesday-v-brightonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæsheffield-wednesday-v-brightonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæsheffield-wednesday-v-brightonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæsheffield-wednesday-v-brightonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæwatford-v-boltonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæchampionshipæwatford-v-boltonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæchampionshipæwatford-v-boltonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæchampionshipæwatford-v-boltonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1http~ææoddschecker.mobiæfootballæenglishæleague-1.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1http~ææwww.oddschecker.comæfootballæenglishæleague-1.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æbury-v-doncasteræwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æbury-v-doncasteræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æbury-v-doncasteræwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æbury-v-doncasteræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æcrawley-v-swindonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æcrawley-v-swindonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æcrawley-v-swindonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æcrawley-v-swindonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æcrewe-v-scunthorpeæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æcrewe-v-scunthorpeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æcrewe-v-scunthorpeæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æcrewe-v-scunthorpeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æhartlepool-v-notts-coæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æhartlepool-v-notts-coæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æhartlepool-v-notts-coæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æhartlepool-v-notts-coæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æmk-dons-v-bournemouthæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æmk-dons-v-bournemouthæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æmk-dons-v-bournemouthæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æmk-dons-v-bournemouthæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æportsmouth-v-colchesteræwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æportsmouth-v-colchesteræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æportsmouth-v-colchesteræwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æportsmouth-v-colchesteræwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æpreston-v-shrewsburyæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æpreston-v-shrewsburyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æpreston-v-shrewsburyæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æpreston-v-shrewsburyæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æstevenage-v-leyton-orientæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æstevenage-v-leyton-orientæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æstevenage-v-leyton-orientæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æstevenage-v-leyton-orientæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1ætranmere-v-carlisleæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1ætranmere-v-carlisleæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1ætranmere-v-carlisleæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1ætranmere-v-carlisleæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æwalsall-v-oldhamæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æwalsall-v-oldhamæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æwalsall-v-oldhamæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æwalsall-v-oldhamæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æyeovil-v-brentfordæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-1æyeovil-v-brentfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-1æyeovil-v-brentfordæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-1æyeovil-v-brentfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2http~ææoddschecker.mobiæfootballæenglishæleague-2.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2http~ææwww.oddschecker.comæfootballæenglishæleague-2.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æafc-wimbledon-v-burtonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æafc-wimbledon-v-burtonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æafc-wimbledon-v-burtonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æafc-wimbledon-v-burtonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æcheltenham-v-torquayæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æcheltenham-v-torquayæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æcheltenham-v-torquayæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æcheltenham-v-torquayæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æexeter-v-aldershotæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æexeter-v-aldershotæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æexeter-v-aldershotæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æexeter-v-aldershotæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æfleetwood-town-v-bradfordæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æfleetwood-town-v-bradfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æfleetwood-town-v-bradfordæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æfleetwood-town-v-bradfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æplymouth-v-dagenham-redbridgeæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æplymouth-v-dagenham-redbridgeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æplymouth-v-dagenham-redbridgeæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æplymouth-v-dagenham-redbridgeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æport-vale-v-accringtonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æport-vale-v-accringtonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æport-vale-v-accringtonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æport-vale-v-accringtonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2ærochdale-v-chesterfieldæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2ærochdale-v-chesterfieldæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2ærochdale-v-chesterfieldæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2ærochdale-v-chesterfieldæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2ærotherham-v-northamptonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2ærotherham-v-northamptonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2ærotherham-v-northamptonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2ærotherham-v-northamptonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æsouthend-v-oxfordæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æsouthend-v-oxfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æsouthend-v-oxfordæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æsouthend-v-oxfordæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æyork-v-morecambeæwinnerhttp~ææoddschecker.mobiæfootballæenglishæleague-2æyork-v-morecambeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæleague-2æyork-v-morecambeæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæleague-2æyork-v-morecambeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leaguehttp~ææoddschecker.mobiæfootballæenglishæpremier-league.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leaguehttp~ææwww.oddschecker.comæfootballæenglishæpremier-league.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæarsenal-v-stokeæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæarsenal-v-stokeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæarsenal-v-stokeæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæarsenal-v-stokeæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæeverton-v-aston-villaæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæeverton-v-aston-villaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæeverton-v-aston-villaæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæeverton-v-aston-villaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæfulham-v-man-utdæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæfulham-v-man-utdæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæfulham-v-man-utdæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæfulham-v-man-utdæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueænewcastle-v-chelseaæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueænewcastle-v-chelseaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueænewcastle-v-chelseaæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueænewcastle-v-chelseaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæqpr-v-norwichæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæqpr-v-norwichæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæqpr-v-norwichæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæqpr-v-norwichæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæreading-v-sunderlandæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæreading-v-sunderlandæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæreading-v-sunderlandæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæreading-v-sunderlandæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæwest-ham-v-swanseaæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæwest-ham-v-swanseaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæwest-ham-v-swanseaæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæwest-ham-v-swanseaæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæwigan-v-southamptonæwinnerhttp~ææoddschecker.mobiæfootballæenglishæpremier-leagueæwigan-v-southamptonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæenglishæpremier-leagueæwigan-v-southamptonæwinnerhttp~ææwww.oddschecker.comæfootballæenglishæpremier-leagueæwigan-v-southamptonæwinner.txt" />
+    <EmbeddedResource Include="TestData\20130202\æfootballæfixtures-resultsæ02-february-2013.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\20130202\æfootballæfixtures-resultsæ02-february-2013results.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

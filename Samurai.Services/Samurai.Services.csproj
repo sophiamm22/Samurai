@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7118D25C-F41F-4B1E-8F3B-739D25D86321}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samurai.Services</RootNamespace>
+    <AssemblyName>Samurai.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountService.cs" />
+    <Compile Include="Async\AsyncFootballFacadeAdminService.cs" />
+    <Compile Include="Async\AsyncFootballFacadeClientService.cs" />
+    <Compile Include="Async\AsyncFootballFixtureService.cs" />
+    <Compile Include="Async\AsyncFootballOddsService.cs" />
+    <Compile Include="Async\AsyncFootballPredictionService.cs" />
+    <Compile Include="Async\AsyncTennisFacadeAdminService.cs" />
+    <Compile Include="Async\AsyncTennisFixtureService.cs" />
+    <Compile Include="Async\AsyncTennisOddsService.cs" />
+    <Compile Include="Async\AsyncTennisPredictionService.cs" />
+    <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
+    <Compile Include="AutoMapper\FootballCouponDictionaryProfile.cs" />
+    <Compile Include="AutoMapper\FootballCouponViewModelProfile.cs" />
+    <Compile Include="AutoMapper\FootballFixtureMatchProfile.cs" />
+    <Compile Include="AutoMapper\AutoMapperExtensions.cs" />
+    <Compile Include="AutoMapper\FootballFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\FootballLadderViewModelProfile.cs" />
+    <Compile Include="AutoMapper\FootballPredictionViewModelProfile.cs" />
+    <Compile Include="AutoMapper\GenericMatchCouponProfile.cs" />
+    <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />
+    <Compile Include="AutoMapper\GenericOddProfile.cs" />
+    <Compile Include="AutoMapper\OddsSourceProfile.cs" />
+    <Compile Include="AutoMapper\SportProfile.cs" />
+    <Compile Include="AutoMapper\TennisCouponDictionaryProfile.cs" />
+    <Compile Include="AutoMapper\TennisCouponViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TennisFixtureViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TennisLadderViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TennisMatchDetailProfile.cs" />
+    <Compile Include="AutoMapper\TennisMatchProfile.cs" />
+    <Compile Include="AutoMapper\TennisPredictionProfile.cs" />
+    <Compile Include="AutoMapper\TennisPredictionViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TournamentEventViewModelProfile.cs" />
+    <Compile Include="AutoMapper\TournamentProfile.cs" />
+    <Compile Include="Async\AsyncTennisFacadeClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFootballFacadeClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncTennisFacadeClientService.cs" />
+    <Compile Include="TennisFixtureClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFixtureService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFootballFacadeAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncPredictionService.cs" />
+    <Compile Include="Contracts\Async\IAsyncOddsService.cs" />
+    <Compile Include="Contracts\Async\IAsyncTennisFacadeAdminService.cs" />
+    <Compile Include="Contracts\IAccountService.cs" />
+    <Compile Include="Contracts\IFixtureService.cs" />
+    <Compile Include="Contracts\IFootballFacadeAdminService.cs" />
+    <Compile Include="Contracts\IOddsService.cs" />
+    <Compile Include="Contracts\IPredictionService.cs" />
+    <Compile Include="Contracts\ITennisFacadeAdminService.cs" />
+    <Compile Include="FootballFacadeAdminService.cs" />
+    <Compile Include="FootballFixtureService.cs" />
+    <Compile Include="FootballOddsService.cs" />
+    <Compile Include="FootballPredictionService.cs" />
+    <Compile Include="Contracts\ITennisFixtureClientService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TennisFacadeService.cs" />
+    <Compile Include="TennisFixtureService.cs" />
+    <Compile Include="TennisOddsService.cs" />
+    <Compile Include="TennisPredictionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samurai.Core\Samurai.Core.csproj">
+      <Project>{8f6d4baf-a8ee-4221-b667-3ee8b4a6849c}</Project>
+      <Name>Samurai.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain.Entities\Samurai.Domain.Entities.csproj">
+      <Project>{805325f9-8997-4247-b5c7-36476609f616}</Project>
+      <Name>Samurai.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Domain\Samurai.Domain.csproj">
+      <Project>{47f48263-b575-4254-ae3f-fbd8925ade86}</Project>
+      <Name>Samurai.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.SqlDataAccess\Samurai.SqlDataAccess.csproj">
+      <Project>{d118c841-b535-480a-9eff-be652cd6b116}</Project>
+      <Name>Samurai.SqlDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
+      <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>
+      <Name>Samurai.Web.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

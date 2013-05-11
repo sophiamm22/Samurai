@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC æ-//WAPFORUM//DTD XHTML Mobile 1.2//ENæ æhttp://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æen-GBæ><head><title>ATP Montpellier</title><meta name=ædescriptionæ content=æATP Montpellier Betting Oddsæ/><meta name=ækeywordsæ content=æTennis, Mens Tour, ATP Montpellier, Sports Bettingæ/><meta http-equiv=æcontent-typeæ content=æapplication/xhtml+xml; charset=UTF-8æ/><meta name=æHandheldFriendlyæ content=ætrueæ/><link rel=æshortcut iconæ href=æhttp://oddschecker.mobi/i/favicon.icoæ type=æimage/x-iconæ/><base href=æhttp://oddschecker.mobi/æ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/common.cssæ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/card.cssæ/></head><body><div id=æheaderæ><img src=æi/logo.gifæ alt=æmobi logoæ class=æmobileLogoæ width=æ240æ height=æ53æ/><div id=æhBCæ><a href=æ/tennisæ>Tennis</a> » <a href=æ/tennis/mens-touræ>Mens Tour</a></div><img alt=ææ width=æ1æ height=æ1æ src=æhttp://ehg-bskyb.hitbox.com/HG?whbx=1&amp;hv=6&amp;ce=y&amp;hb=DM570217A5VD84EN3&amp;cd=1&amp;vcon=CONTENT+CATEGORY&amp;n=MO.ATP+Montpellieræ/></div><div id=æmainæ><h1>ATP Montpellier</h1><div id=æorangeBandæ><input type=æhiddenæ name=æfixæ/></div><div id=æmenuæ><span id=æmatchesæ/><div class=æmGHæ><h2>Matches</h2></div><a href=æ/tennis/mens-tour/atp-montpellier/nikolay-davydenko-v-jarkko-nieminen/winneræ class=æmOddæ>Nikolay Davydenko v Jarkko Nieminen</a><a href=æ/tennis/mens-tour/atp-montpellier/arnau-brugues-davi-v-mikhail-kukushkin/winneræ class=æmEvenæ>Arnau Brugues-Davi v Mikhail Kukushkin</a><a href=æ/tennis/mens-tour/atp-montpellier/viktor-troicki-v-lucas-pouille/winneræ class=æmOddæ>Viktor Troicki v Lucas Pouille</a><a href=æ/tennis/mens-tour/atp-montpellier/edouard-roger-vasselin-v-tatsuma-ito/winneræ class=æmEvenæ>Edouard Roger-Vasselin v Tatsuma Ito</a><a href=æ/tennis/mens-tour/atp-montpellier/adrian-ungur-v-julien-benneteau/winneræ class=æmOddæ>Adrian Ungur v Julien Benneteau</a><a href=æ/tennis/mens-tour/atp-montpellier/florent-serra-gilles-simon-v-james-cerretani-adil-shamasdin/winneræ class=æmEvenæ>Florent Serra/Gilles Simon v James Cerretani/Adil Shamasdin</a><a href=æ/tennis/mens-tour/atp-montpellier/sanchai-ratiwatana-sonchat-ratiwatana-v-treat-conrad-huey-dominic-inglot/winneræ class=æmOddæ>Sanchai Ratiwatana/Sonchat Ratiwatana v Treat Conrad Huey/Dominic Inglot</a><a href=æ/tennis/mens-tour/atp-montpellier/kenny-de-schepper-v-michael-llodra/winneræ class=æmEvenæ>Kenny de Schepper v Michael Llodra</a><a href=æ/tennis/mens-tour/atp-montpellier/benoit-paire-v-steve-darcis/winneræ class=æmOddæ>Benoit Paire v Steve Darcis</a><a href=æ/tennis/mens-tour/atp-montpellier/richard-gasquet-v-gael-monfils/winneræ class=æmEvenæ>Richard Gasquet v Gael Monfils</a><span id=æothersæ/><div class=æmGHæ><h2>Others</h2></div><a href=æ/tennis/mens-tour/atp-montpellier/atp-open-sud-de-france/winneræ class=æmOddæ>ATP Open Sud de France</a></div></div><div id=æfooteræ><h3>Oddschecker</h3><ul><li><a href=æ/æ>Home</a></li><li><a href=æ/options.htmlæ>Options</a></li><li><a href=æ/mobile-free-bets.htmlæ>Free Bets</a></li></ul><ul><li><a href=æ/contact-us.htmlæ>Contact Us</a></li><li><a href=æ/help.htmlæ>Help</a></li></ul></div><script language=æJavaScriptæ type=ætext/javascriptæ>
+if(document.location.href.indexOf(æhttp://oddschecker.mobiæ) >= 0){
+	dev = '';
+}else{
+	dev = 'dev';
+}
+var SKY_TRACKING = {
+site: æsky/sbandg/oddscheckeræ,
+section: æmobile/tennis/mens-tour/atp-montpellier/æ,
+headline: æATP Montpellieræ,
+contentType: ææ,
+account: æbskybocukmobileæ + dev + æ,bskybnetworkglobalæ
+}
+</script><script language=æJavaScriptæ type=ætext/javascriptæ src=æhttp://oddschecker.mobi/js/omniture.jsæ/><script language=æJavaScriptæ type=ætext/javascriptæ>
+
+browser = navigator.appName;
+var x = document.getElementsByTagName('a');
+for (var i=0 ; i &lt; x.length ; i++) {
+	if(browser.indexOf('Microsoft') &gt;= 0){
+		x[i].attachEvent('onclick',trackClick);
+	}else{
+		x[i].addEventListener('click',trackClick,false);
+	}
+}
+</script></body></html>

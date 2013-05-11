@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC æ-//WAPFORUM//DTD XHTML Mobile 1.2//ENæ æhttp://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æen-GBæ><head><title>ATP Vina del Mar</title><meta name=ædescriptionæ content=æATP Vina del Mar Betting Oddsæ/><meta name=ækeywordsæ content=æTennis, Mens Tour, ATP Vina del Mar, Sports Bettingæ/><meta http-equiv=æcontent-typeæ content=æapplication/xhtml+xml; charset=UTF-8æ/><meta name=æHandheldFriendlyæ content=ætrueæ/><link rel=æshortcut iconæ href=æhttp://oddschecker.mobi/i/favicon.icoæ type=æimage/x-iconæ/><base href=æhttp://oddschecker.mobi/æ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/common.cssæ/><link rel=æstylesheetæ type=ætext/cssæ href=æcss/card.cssæ/></head><body><div id=æheaderæ><img src=æi/logo.gifæ alt=æmobi logoæ class=æmobileLogoæ width=æ240æ height=æ53æ/><div id=æhBCæ><a href=æ/tennisæ>Tennis</a> » <a href=æ/tennis/mens-touræ>Mens Tour</a></div><img alt=ææ width=æ1æ height=æ1æ src=æhttp://ehg-bskyb.hitbox.com/HG?whbx=1&amp;hv=6&amp;ce=y&amp;hb=DM570217A5VD84EN3&amp;cd=1&amp;vcon=CONTENT+CATEGORY&amp;n=MO.ATP+Vina+del+Maræ/></div><div id=æmainæ><h1>ATP Vina del Mar</h1><div id=æorangeBandæ><input type=æhiddenæ name=æfixæ/></div><div id=æmenuæ><span id=æmatchesæ/><div class=æmGHæ><h2>Matches</h2></div><a href=æ/tennis/mens-tour/atp-vina-del-mar/albert-ramos-v-rogerio-dutra-silva/winneræ class=æmOddæ>Albert Ramos v Rogerio Dutra Silva</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/joao-sousa-v-daniel-gimeno-traver/winneræ class=æmEvenæ>Joao Sousa v Daniel Gimeno-Traver</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/guillaume-rufin-v-juan-monaco/winneræ class=æmOddæ>Guillaume Rufin v Juan Monaco</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/gianluca-naso-v-paolo-lorenzi/winneræ class=æmEvenæ>Gianluca Naso v Paolo Lorenzi</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/daniele-bracciali-marcelo-melo-v-andrey-kuznetsov-andre-sa/winneræ class=æmOddæ>Daniele Bracciali/Marcelo Melo v Andrey Kuznetsov/Andre Sa</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/dustin-brown-christopher-kas-v-pablo-andujar-pere-riba/winneræ class=æmEvenæ>Dustin Brown/Christopher Kas v Pablo Andujar/Pere Riba</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/rafael-nadal-v-federico-del-bonis/winneræ class=æmOddæ>Rafael Nadal v Federico Del Bonis</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/daniel-gimeno-traver-albert-ramos-v-carlos-berlocq-leonardo-mayer/winneræ class=æmEvenæ>Daniel Gimeno-Traver/Albert Ramos v Carlos Berlocq/Leonardo Mayer</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/nicholas-monroe-simon-stadler-v-oliver-marach-horacio-zeballos/winneræ class=æmOddæ>Nicholas Monroe/Simon Stadler v Oliver Marach/Horacio Zeballos</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/paolo-lorenzi-potito-starace-v-gonzalo-lama-nicolas-massu/winneræ class=æmEvenæ>Paolo Lorenzi/Potito Starace v Gonzalo Lama/Nicolas Massu</a><a href=æ/tennis/mens-tour/atp-vina-del-mar/guillaume-rufin-filippo-volandri-v-juan-monaco-rafael-nadal/winneræ class=æmOddæ>Guillaume Rufin/Filippo Volandri v Juan Monaco/Rafael Nadal</a><span id=æothersæ/><div class=æmGHæ><h2>Others</h2><a class=æmGHlæ href=æ/tennis/mens-tour/atp-vina-del-mar#matchesæ>go to matches</a></div><a href=æ/tennis/mens-tour/atp-vina-del-mar/atp-vtr-open/winneræ class=æmOddæ>ATP VTR Open</a></div></div><div id=æfooteræ><h3>Oddschecker</h3><ul><li><a href=æ/æ>Home</a></li><li><a href=æ/options.htmlæ>Options</a></li><li><a href=æ/mobile-free-bets.htmlæ>Free Bets</a></li></ul><ul><li><a href=æ/contact-us.htmlæ>Contact Us</a></li><li><a href=æ/help.htmlæ>Help</a></li></ul></div><script language=æJavaScriptæ type=ætext/javascriptæ>
+if(document.location.href.indexOf(æhttp://oddschecker.mobiæ) >= 0){
+	dev = '';
+}else{
+	dev = 'dev';
+}
+var SKY_TRACKING = {
+site: æsky/sbandg/oddscheckeræ,
+section: æmobile/tennis/mens-tour/atp-vina-del-mar/æ,
+headline: æATP Vina del Maræ,
+contentType: ææ,
+account: æbskybocukmobileæ + dev + æ,bskybnetworkglobalæ
+}
+</script><script language=æJavaScriptæ type=ætext/javascriptæ src=æhttp://oddschecker.mobi/js/omniture.jsæ/><script language=æJavaScriptæ type=ætext/javascriptæ>
+
+browser = navigator.appName;
+var x = document.getElementsByTagName('a');
+for (var i=0 ; i &lt; x.length ; i++) {
+	if(browser.indexOf('Microsoft') &gt;= 0){
+		x[i].attachEvent('onclick',trackClick);
+	}else{
+		x[i].addEventListener('click',trackClick,false);
+	}
+}
+</script></body></html>

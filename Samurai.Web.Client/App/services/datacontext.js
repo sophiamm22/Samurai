@@ -27,6 +27,7 @@
         .then(querySucceeded)
         .fail(queryFailed);
 
+
       function querySucceeded(data) {
         if (tennisScheduleObservable) {
           tennisScheduleObservable(data.results);

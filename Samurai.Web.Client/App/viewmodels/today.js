@@ -8,8 +8,7 @@
       competitions = ko.computed(function () {
         return groupSchedule.schedulesToHeadings(todaysFootballSchedules(), todaysTennisSchedules());
       });
-
-
+  
   var initialised = false;
   var vm = {
     title: 'Todays fixtures',
@@ -23,11 +22,7 @@
   return vm;
 
   function activate() {
-<<<<<<< HEAD
     
-=======
-    //var routed = router;
->>>>>>> client taking shape
     if (initialised) { return; }
     initialised = true;
     return refresh();

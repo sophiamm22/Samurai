@@ -12,6 +12,7 @@ nav, section, summary, time, mark, audio, video
 
 /* #endregion */
 
+
 /* #region Layout */
 html {
     padding: 0;
@@ -248,6 +249,9 @@ small
 /* #endregion */
 
 /* #region Responsive Design */
+
+/* End Boostrap overrides  */
+/***************************/
 
 @media only screen and (max-width: 979px) {
     .page-splash-message {

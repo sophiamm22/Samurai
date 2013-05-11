@@ -1,4 +1,4 @@
-﻿define(function () {
+﻿﻿define(function () {
   toastr.options.timeOut = 4000;
   toastr.options.positionClass = 'toaster-bottom-right';
 

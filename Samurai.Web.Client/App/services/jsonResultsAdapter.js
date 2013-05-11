@@ -1,4 +1,4 @@
-﻿define(
+﻿﻿define(
   new breeze.JsonResultsAdapter({
     name: "samurai",
 

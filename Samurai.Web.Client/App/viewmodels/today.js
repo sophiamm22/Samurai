@@ -23,7 +23,7 @@
   return vm;
 
   function activate() {
-    //var routed = router;
+    
     if (initialised) { return; }
     initialised = true;
     return refresh();

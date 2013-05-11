@@ -12,6 +12,8 @@ nav, section, summary, time, mark, audio, video
 
 /* #endregion */
 
+
+/* #region Layout */
 html {
     padding: 0;
     color: black;
@@ -27,7 +29,6 @@ body {
 }
 
 h1, h2, h3 {
-    text-transform: uppercase;
     letter-spacing: -1px !important;
     color: #777;
 }
@@ -43,7 +44,7 @@ section.main {
 }
 
 h2.page-title {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .brand .title {
@@ -118,6 +119,15 @@ h2.page-title {
 }
 .navbar-content-center {
     text-align: center;    
+}
+
+.vs {
+  margin-top: 10px;
+}
+
+.route-left {
+  font-weight: bold;
+  color: #119EDA;
 }
 
 footer a {
@@ -195,6 +205,51 @@ footer span {
         background-color: #194D7B \9;
     }
 
+.article-left-content
+{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px rgba(255,255,255,.8);
+    min-height: 150px;
+}
+
+/* End Boostrap overrides  */
+/***************************/
+
+/* #endregion */
+
+/* #region Fonts */
+
+body,
+button,
+input,
+textarea,
+select
+{
+    font-size: 100%;
+    font-family: "Segoe UI Light", "Segoe Light", "Segoe UI", "Helvetica-Light", Arial, Helvetica, sans-serif;
+}
+/* #endregion */
+
+/* #region Elements */
+small 
+{
+  /*text-transform: uppercase;*/
+}
+    small.tips
+    {
+        text-transform: none;
+        font-size: 80%;
+        color: black;
+    }
+    small.right
+    {
+        clear: right;
+        float: right;
+    }
+/* #endregion */
+
+/* #region Responsive Design */
+
 /* End Boostrap overrides  */
 /***************************/
 
@@ -212,3 +267,4 @@ footer span {
 		font-size: 14px;
 	}
 }
+/* #endregion */

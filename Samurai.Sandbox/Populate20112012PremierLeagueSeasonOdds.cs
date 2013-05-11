@@ -38,7 +38,7 @@ namespace Samurai.Sandbox
       var spreadsheetData = this.container.Resolve<IFootballSpreadsheetData>();
       spreadsheetData.ReadData();
 
-      var fixtureService = this.container.Resolve<IFootballFixtureAdminService>();
+      var fixtureService = this.container.Resolve<IFootballFixtureService>();
 
       var dates = Enumerable.Range(0, 280).Select(d => new DateTime(2011, 08, 13).AddDays(d));
 
@@ -61,13 +61,13 @@ namespace Samurai.Sandbox
 
     private void GetPredictions()
     {
-      var predictionService = this.container.Resolve<IFootballPredictionAdminService>();
+      var predictionService = this.container.Resolve<IFootballPredictionService>();
       var matches = predictionService.FetchFootballPredictions(this.fixtures);
     }
 
     private void GetOdds()
     {
-      var oddsService = this.container.Resolve<IFootballOddsAdminService>();
+      var oddsService = this.container.Resolve<IFootballOddsService>();
       var spreadsheetData = this.container.Resolve<IFootballSpreadsheetData>();
 
       var dates = this.fixtures.Select(f => f.MatchDate.Date).Distinct().ToList();

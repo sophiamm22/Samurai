@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +17,10 @@ namespace Samurai.Services.AutoMapper
     protected override void Configure()
     {
       Mapper.CreateMap<GenericMatchDetail, FootballFixtureViewModel>().IgnoreAllNonExisting();
+      Mapper.CreateMap<GenericMatchDetail, FootballFixtureViewModel>().ForMember(x => x.ID, opt =>
+        { opt.MapFrom(x => x.MatchID); });
       Mapper.CreateMap<GenericMatchDetail, FootballFixtureViewModel>().ForMember(x => x.League, opt =>
-        { opt.MapFrom(x => x.TournamentEventName); });
+        { opt.MapFrom(x => x.TournamentName); });
       Mapper.CreateMap<GenericMatchDetail, FootballFixtureViewModel>().ForMember(x => x.HomeTeam, opt =>
         { opt.MapFrom(x => x.TeamOrPlayerA); });
       Mapper.CreateMap<GenericMatchDetail, FootballFixtureViewModel>().ForMember(x => x.AwayTeam, opt =>

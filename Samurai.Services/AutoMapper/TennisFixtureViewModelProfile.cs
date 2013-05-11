@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +18,8 @@ namespace Samurai.Services.AutoMapper
     protected override void Configure()
     {
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().IgnoreAllNonExisting();
+      Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.ID, opt =>
+        { opt.MapFrom(x => x.MatchID); });
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.Tournament, opt =>
         opt.MapFrom(x => x.TournamentName));
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.Year, opt =>

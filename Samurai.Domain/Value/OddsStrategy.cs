@@ -1,9 +1,9 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Jint;
+//using Jint;
 
 using Samurai.Core;
 using Samurai.Domain.Entities;
@@ -271,7 +271,7 @@ namespace Samurai.Domain.Value
         else if (oddsToken is OddsCheckerWebOdds)
         {
           var odd = (OddsCheckerWebOdds)oddsToken;
-          if (odd.BookmakerID == "SI")
+          if (odd.BookmakerID == "SI" || odd.BookmakerID == "SX")
             continue;
           var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.BookmakerID);
           if (bookmaker == null)
@@ -307,4 +307,5 @@ namespace Samurai.Domain.Value
       return outcomeDictionary;
     }
   }
+
 }

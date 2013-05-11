@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,13 +17,15 @@ namespace Samurai.Services.AutoMapper
     protected override void Configure()
     {
       Mapper.CreateMap<TennisPrediction, TennisPredictionViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<TennisPrediction, TennisPredictionViewModel>().ForMember(x => x.PlayerAProbability, opt =>
-        { opt.ResolveUsing<TennisProbabilityResolver>().ConstructedBy(() => new TennisProbabilityResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<TennisPrediction, TennisPredictionViewModel>().ForMember(x => x.PlayerBProbability, opt =>
-        { opt.ResolveUsing<TennisProbabilityResolver>().ConstructedBy(() => new TennisProbabilityResolver(Outcome.AwayWin)); });
+      
+      Mapper.CreateMap<FootballPrediction, TennisPredictionViewModel>().ForMember(x => x.MatchId, opt =>
+      { opt.MapFrom(x => x.MatchID); });
+
+      Mapper.CreateMap<TennisPrediction, TennisPredictionViewModel>().ForMember(x => x.Probabilities, opt =>
+        { opt.ResolveUsing<TennisProbabilityResolver>(); });
+
       Mapper.CreateMap<TennisPrediction, TennisPredictionViewModel>().ForMember(x => x.ScoreLineProbabilities, opt =>
         { opt.ResolveUsing<TennisScoreLineResolver>(); });
-
     }
   }
 
@@ -38,23 +40,16 @@ namespace Samurai.Services.AutoMapper
     }
   }
 
-  public class TennisProbabilityResolver : ValueResolver<TennisPrediction, OutcomeProbabilityViewModel>
+  public class TennisProbabilityResolver : ValueResolver<TennisPrediction, Dictionary<string, double>>
   {
-    private readonly Outcome outcome;
-
-    public TennisProbabilityResolver(Outcome outcome)
+    protected override Dictionary<string, double> ResolveCore(TennisPrediction source)
     {
-      this.outcome = outcome;
-    }
-
-    protected override OutcomeProbabilityViewModel ResolveCore(TennisPrediction source)
-    {
-      var probability = source.OutcomeProbabilities.Count() == 0 ? 0.0 : source.OutcomeProbabilities[this.outcome];
-      return new OutcomeProbabilityViewModel
+      var ret = new Dictionary<string, double>();
+      foreach (var outcomeKVP in source.OutcomeProbabilities)
       {
-        Outcome = this.outcome.ToString(),
-        OutcomeProbability = probability
-      };
+        ret.Add(outcomeKVP.Key.ToString(), outcomeKVP.Value);
+      }
+      return ret;
     }
   }
 }

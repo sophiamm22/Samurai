@@ -30,6 +30,7 @@ namespace Samurai.Web.Client
           .Include("~/scripts/breeze.debug.js")
           .Include("~/scripts/bootstrap.js")
           .Include("~/scripts/moment.js")
+          .Include("~/scripts/underscore.js")
         );
 
       bundles.Add(
@@ -37,6 +38,7 @@ namespace Samurai.Web.Client
           .Include("~/Content/ie10mobile.css")
           .Include("~/Content/bootstrap.css")
           .Include("~/Content/bootstrap-responsive.css")
+          .Include("~/Content/font-awesome.min.css")
           .Include("~/Content/durandal.css")
           .Include("~/Content/toastr.css")
           .Include("~/Content/app.css")

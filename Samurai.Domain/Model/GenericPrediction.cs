@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace Samurai.Domain.Model
       OutcomeProbabilities = new Dictionary<Outcome, double>();
       ScoreLineProbabilities = new Dictionary<string, double?>();
     }
-
+    public int MatchID { get; set; }
     public string MatchIdentifier { get; set; }
 
     public string Sport { get; set; }

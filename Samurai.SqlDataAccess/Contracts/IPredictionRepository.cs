@@ -24,8 +24,8 @@ namespace Samurai.SqlDataAccess.Contracts
     IQueryable<ScoreOutcomeProbabilitiesInMatch> GetScoreOutcomeProbabilities(int matchID);
     void AddScoreOutcomeProbabilities(ScoreOutcomeProbabilitiesInMatch entity);
     IQueryable<MatchOutcomeProbabilitiesInMatch> GetMatchOutcomeProbabiltiesInMatchByDate(DateTime fixtureDate, string sport);
-    IDictionary<int, IEnumerable<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
-    IDictionary<int, IEnumerable<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
+    IDictionary<int, List<ScoreOutcomeProbabilitiesInMatch>> GetScoreOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
+    IDictionary<int, List<MatchOutcomeProbabilitiesInMatch>> GetMatchOutcomeProbabilitiesInMatchByIDs(IEnumerable<int> ids);
     IQueryable<TennisPredictionStat> GetTennisPredictionStatByMatchIDs(IEnumerable<int> ids);
   }
 }

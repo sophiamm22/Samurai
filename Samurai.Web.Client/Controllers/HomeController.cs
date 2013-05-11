@@ -2,12 +2,11 @@ using System.Web.Mvc;
 
 namespace Samurai.Web.Client.Controllers
 {
-    public class HomeController : Controller
+  public class HomeController : Controller
+  {
+    public ActionResult Index()
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+      return View();
     }
+  }
 }

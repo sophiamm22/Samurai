@@ -37,6 +37,16 @@ namespace Samurai.SqlDataAccess
         return new Uri(couponData.CouponURL);
     }
 
+    public Uri GetTournamentCouponUrl(string tournament, string externalSource)
+    {
+      var couponData = GetQuery<TournamentCouponURL>(c => c.Tournament.TournamentName == tournament && c.ExternalSource.Source == externalSource)
+                        .FirstOrDefault();
+      if (couponData == null)
+        return null;
+      else
+        return new Uri(couponData.CouponURL);
+    }
+
     public IEnumerable<ExternalSource> GetActiveOddsSources()
     {
       return GetQuery<ExternalSource>(e => e.UseByDefault && e.OddsSource).OrderByDescending(x => x.PrescreenDecider).ToList();

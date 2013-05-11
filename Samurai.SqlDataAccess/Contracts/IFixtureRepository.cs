@@ -61,6 +61,8 @@ namespace Samurai.SqlDataAccess.Contracts
 
     Sport GetSport(string sport);
 
+    DateTime GetLatestDate();
+
     void SaveChanges();
   }
 }

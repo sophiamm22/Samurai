@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace Samurai.Web.ViewModels.Tennis
   public class TennisFixtureViewModel
   {
     public string MatchIdentifier { get; set; }
-    
+    public int ID { get; set; }
     public string Tournament { get; set; }
     public int Year { get; set; }
     public DateTime MatchDate { get; set; }

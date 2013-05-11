@@ -350,7 +350,7 @@ namespace Samurai.SqlDataAccess
     public Tournament GetTournamentFromTournamentEvent(string tournamentEventName)
     {
       var tournamentEvent = GetQuery<TournamentEvent>(t => t.EventName == tournamentEventName)
-                            .Include(t=>t.Tournament)
+                            .Include(t => t.Tournament)
                             .FirstOrDefault();
 
       if (tournamentEvent == null) return null;
@@ -425,6 +425,11 @@ namespace Samurai.SqlDataAccess
     public Match SaveMatch(Match match)
     {
       return Save<Match>(match);
+    }
+
+    public DateTime GetLatestDate()
+    {
+      return GetQuery<Match>().Max(x => x.MatchDate);
     }
 
     public void SaveChanges()

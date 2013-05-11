@@ -13,6 +13,7 @@ namespace Samurai.SqlDataAccess.Contracts
     int? GetMinGamesForTennisBet();
     void AddMatchOutcomeOdd(MatchOutcomeOdd odd);
     Uri GetTournamentCouponUrl(Tournament tournament, ExternalSource externalSource);
+    Uri GetTournamentCouponUrl(string tournament, string externalSource);
     ExternalSource GetExternalSource(string sourceName);
     ExternalSource GetExternalSourceFromSlug(string slug);
     IEnumerable<ExternalSource> GetActiveOddsSources();

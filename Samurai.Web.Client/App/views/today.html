@@ -1,0 +1,74 @@
+﻿<section id="sessions-view" class="view">
+  <header>
+    <h2 class="page-title" data-bind="text: title"></h2>
+    <div class="article-counter">
+      <address data-bind="text: todaysMatchesCount"></address>
+      <address>found</address>
+    </div>
+  </header>
+  <section id="today">
+    <nav>
+      <ul data-bind="foreach: competitions">
+        <li class="route-left" data-bind="css: {'route-active': isSelected()}">
+          <a data-bind="attr: { href: hash }">
+            <span data-bind="text: caption"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="view-list" data-bind="foreach: todaysFootballSchedules">
+      <article class="article-left-content">
+        <div>
+          <small data-bind="text: league" class="left"></small>
+          <small data-bind="text: matchTime" class="right"></small>
+          <div class="row">
+            <div class="span3 offset1"><h2 data-bind="text: homeTeam" class="text-right page-title"></h2></div>
+            <div class="span2"><p class="text-center vs">vs.</p></div>
+            <div class="span4"><h2 data-bind="text: awayTeam" class="text-left page-title"></h2></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p class="text-right">Home win</p></div>
+            <div class="span2"><p class="text-center">Draw</p></div>
+            <div class="span4"><p class="text-left">Away win</p></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p data-bind="text: homeWinProb" class="text-right"></p></div>
+            <div class="span2"><p data-bind="text: drawProb" class="text-center"></p></div>
+            <div class="span4"><p data-bind="text: awayWinProb" class="text-left"></p></div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="view-list" data-bind="foreach: todaysTennisSchedules">
+      <article class="article-left-content">
+        <div>
+          <small data-bind="text: tournament" class="left"></small>
+          <small data-bind="text: matchTime" class="right"></small>
+          <div class="row">
+            <div class="span3 offset1"><h2 data-bind="text: playerAFullName" class="text-right page-title"></h2></div>
+            <div class="span2"><p class="text-center vs">vs.</p></div>
+            <div class="span4"><h2 data-bind="text: playerBFullName" class="text-left page-title"></h2></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p class="text-right">Player A win</p></div>
+            <div class="span2"><p class="text-center"></p></div>
+            <div class="span4"><p class="text-left">Player B win</p></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p data-bind="text: playerAWinProb" class="text-right"></p></div>
+            <div class="span2"><p></p></div>
+            <div class="span4"><p data-bind="text: playerBWinProb" class="text-left"></p></div>
+          </div>
+        </div>
+      </article>
+    </section>
+=======
+  <section data-bind="foreach: todaysFootballSchedules" class="view-list">
+    <article class="article-container-full-width">
+      <div>
+        <address data-bind="text: matchIdentifier"></address>
+      </div>
+    </article>
+>>>>>>> 77cc2bbd818cf240000601391438cfc7dfc777b2
+  </section>
+</section>

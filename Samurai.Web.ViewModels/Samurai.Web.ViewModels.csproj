@@ -49,6 +49,7 @@
     <Compile Include="Football\FootballFixtureViewModel.cs" />
     <Compile Include="Football\FootballLadderViewModel.cs" />
     <Compile Include="Football\FootballPredictionViewModel.cs" />
+    <Compile Include="Generic\TodaysFixturesViewModel.cs" />
     <Compile Include="Tennis\CalculateTournamentLadderChallengeViewModel.cs" />
     <Compile Include="Tennis\ShowTournamentLadderChallengeViewModel.cs" />
     <Compile Include="Tennis\TennisCouponViewModel.cs" />

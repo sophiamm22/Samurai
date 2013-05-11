@@ -17,10 +17,8 @@ using Samurai.Services.AutoMapper;
     protected void Application_Start()
     {
       AutoMapperManualConfiguration.Configure();
-      IOCConfig.RegisterIOC();
       FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
-      WebApiConfig.Register(GlobalConfiguration.Configuration);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
     }
   }

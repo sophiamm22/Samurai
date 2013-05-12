@@ -128,17 +128,17 @@
 
       footballMatch.homeWinProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs['homeWin']).toFixed(0) + '%');
+        return probs && ((100 * probs.homeWin).toFixed(0) + '%');
       });
 
       footballMatch.drawProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs['draw']).toFixed(0) + '%');
+        return probs && ((100 * probs.draw).toFixed(0) + '%');
       });
 
       footballMatch.awayWinProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
+        return probs && ((100 * probs.awayWin).toFixed(0) + '%');
       });
     }
 
@@ -164,12 +164,12 @@
 
       tennisMatch.playerAWinProb = ko.computed(function () {
         var probs = tennisMatch.predictions().probabilities();
-        return probs && ((100 * probs['homeWin']).toFixed(0) + '%');
+        return probs && ((100 * probs.homeWin).toFixed(0) + '%');
       });
 
       tennisMatch.playerBWinProb = ko.computed(function () {
         var probs = tennisMatch.predictions().probabilities();
-        return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
+        return probs && ((100 * probs.awayWin).toFixed(0) + '%');
       });
     }
 

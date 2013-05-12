@@ -170,16 +170,16 @@ namespace Samurai.Services
             tournamentSlug,
             false /*we don't want to accidentally introduce hindsight*/);
 
-          if (prediction.Predictions.Probabilities["homeWin"] > prediction.Predictions.Probabilities["awayWin"])
+          if (prediction.Predictions.Probabilities["HomeWin"] > prediction.Predictions.Probabilities["AwayWin"])
             playerAGoesThrough = true;
-          else if (prediction.Predictions.Probabilities["homeWin"] < prediction.Predictions.Probabilities["awayWin"])
+          else if (prediction.Predictions.Probabilities["HomeWin"] < prediction.Predictions.Probabilities["AwayWin"])
             playerAGoesThrough = false;
           else
             playerAGoesThrough = prediction.Predictions.PlayerAGames >= prediction.Predictions.PlayerBGames;
 
           shift = playerAGoesThrough ? i : (i + 1);
           loserShift = playerAGoesThrough ? (i + 1) : i;
-          viewModel.Probability = playerAGoesThrough ? prediction.Predictions.Probabilities["homeWin"] : prediction.Predictions.Probabilities["awayWin"];
+          viewModel.Probability = playerAGoesThrough ? prediction.Predictions.Probabilities["HomeWin"] : prediction.Predictions.Probabilities["AwayWin"];
         }
         viewModel.ExpectedWinner = previousRoundMatches[shift].ExpectedWinner;
         viewModel.ExpectedWinnerFirstName = previousRoundMatches[shift].ExpectedWinnerFirstName;

@@ -11,5 +11,6 @@
         logger.log('Home View Activated', null, 'home', true);
         return true;
     }
-    //#endregion
+  //#endregion
+
 });

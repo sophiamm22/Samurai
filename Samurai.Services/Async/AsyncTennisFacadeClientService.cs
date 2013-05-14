@@ -44,6 +44,13 @@ namespace Samurai.Services.Async
       return tennisFixtures;
     }
 
+    public async Task<IEnumerable<TennisCouponViewModel>> GetDaysOdds(DateTime fixtureDate)
+    {
+      return await
+        this.tennisOddsService
+            .GetAllTennisTodaysOdds(fixtureDate);
+    }
+
     public DateTime GetLatestDate()
     {
       return this.tennisFixtureService.GetLatestDate();

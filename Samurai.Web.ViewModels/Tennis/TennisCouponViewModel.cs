@@ -10,17 +10,10 @@ namespace Samurai.Web.ViewModels.Tennis
 {
   public class TennisCouponViewModel
   {
-    private string _matchIdentifier;
-    public string MatchIdentifier 
-    {
-      get { return _matchIdentifier; }
-      set 
-      { 
-        _matchIdentifier = value; 
-      }
-    }
+    public string MatchIdentifier { get; set; }
+    public int MatchId { get; set; }
     public Dictionary<string, string> CouponURL { get; set; }
-    public IEnumerable<OddViewModel> PlayerAOdds { get; set; }
-    public IEnumerable<OddViewModel> PlayerBOdds { get; set; }
+    public IEnumerable<OddViewModel> HomeWin { get; set; }
+    public IEnumerable<OddViewModel> AwayWin { get; set; }
   }
 }

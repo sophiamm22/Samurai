@@ -24,6 +24,42 @@ namespace Samurai.Web.API.Controllers
       this.bus = bus;
     }
 
+    [HttpGet]
+    [ActionName("todays-tennis-odds")]
+    public async Task<HttpResponseMessage> GetTodaysTennisOdds()
+    {
+      TennisOddsDateArgs requestArgs = null;
+      var request = new RequestWrapper<TennisOddsDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
 
+    [HttpGet]
+    [ActionName("tennis-odds-from")]
+    public async Task<HttpResponseMessage> GetTodaysTennisOddsFromDate([FromUri]TennisOddsDateArgs requestArgs)
+    {
+      var request = new RequestWrapper<TennisOddsDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
+    [ActionName("todays-football-odds")]
+    public async Task<HttpResponseMessage> GetTodaysFootballOdds()
+    {
+      FootballOddsDateArgs requestArgs = null;
+      var request = new RequestWrapper<FootballOddsDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
+    [ActionName("football-odds-from")]
+    public async Task<HttpResponseMessage> GetTodaysFootballOddsFromDate([FromUri]FootballOddsDateArgs requestArgs)
+    {
+      var request = new RequestWrapper<FootballOddsDateArgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
   }
 }

@@ -1,9 +1,9 @@
-﻿namespace Samurai.Web.API.Messaging.FootballSchedule
+﻿using Samurai.Web.API.Messaging.Generic;
+
+namespace Samurai.Web.API.Messaging.FootballSchedule
 {
-  public class FootballScheduleDateArgs
+  public class FootballScheduleDateArgs : GenericDateArgs
   {
-    public int Day { get; set; }
-    public int Month { get; set; }
-    public int Year { get; set; }
+
   }
 }

@@ -30,21 +30,32 @@ namespace Samurai.Services.Async
       this.sport = "Tennis";
     }
 
-    public async Task<TennisCouponViewModel> GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture)
+    public async Task<TennisCouponViewModel> GetSingleTennisOdds(int matchID)
     {
-      return await Task.Run(() => GetSingleTennisOddsSync(date, fixture));
+      return await Task.Run(() => GetSingleTennisOddsSync(matchID));
     }
 
-    public async Task<IEnumerable<TennisCouponViewModel>> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
+    public async Task<IEnumerable<TennisCouponViewModel>> GetAllTennisOdds(IEnumerable<int> matchIDs)
     {
       var ret = new List<TennisCouponViewModel>();
 
-      foreach (var fixture in fixtures)
+      foreach (var matchID in matchIDs)
       {
-        ret.Add(await GetSingleTennisOdds(date, fixture));
+        ret.Add(await GetSingleTennisOdds(matchID));
       }
 
       return ret;
+    }
+
+    public async Task<IEnumerable<TennisCouponViewModel>> GetAllTennisTodaysOdds(DateTime fixtureDate)
+    {
+      var ids =
+        this.fixtureRepository
+            .GetDaysMatches(fixtureDate)
+            .Where(x => x.TournamentEvent.Tournament.Competition.Sport.SportName == "Tennis")
+            .Select(x => x.Id);
+
+      return await GetAllTennisOdds(ids);
     }
 
     public async Task<IEnumerable<TennisCouponViewModel>> FetchAllTennisOdds(DateTime date)
@@ -108,11 +119,12 @@ namespace Samurai.Services.Async
       return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<TennisCouponViewModel>>(coupons);
     }
 
-    private TennisCouponViewModel GetSingleTennisOddsSync(DateTime date, TennisFixtureViewModel fixture)
+    private TennisCouponViewModel GetSingleTennisOddsSync(int matchID)
     {
       var oddsSources =
         this.bookmakerRepository
             .GetActiveOddsSources()
+            .Select(s => s.Source)
             .ToList();
 
       var relatedOdds = new List<TennisCouponViewModel>();
@@ -121,26 +133,31 @@ namespace Samurai.Services.Async
       {
         var oddsForEvent =
           this.storedProcedureRepository
-              .GetLatestOddsForEvent(date,
-                                     oddsSource.Source,
-                                     fixture.PlayerASurname,
-                                     fixture.PlayerBSurname,
-                                     fixture.PlayerAFirstName,
-                                     fixture.PlayerBFirstName)
+              .GetBestOddsFromMatchID(matchID, oddsSource)
               .ToList();
 
         var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponViewModel>(oddsForEvent);
-        asCouponVM.MatchIdentifier = fixture.MatchIdentifier;
+
         asCouponVM.CouponURL = new Dictionary<string, string>();
         if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
-          asCouponVM.CouponURL.Add(oddsSource.Source, oddsForEvent.First().MatchCouponURL);
+          asCouponVM.CouponURL.Add(oddsSource, oddsForEvent.First().MatchCouponURL);
 
         relatedOdds.Add(asCouponVM);
       }
 
       var singleCouponVM = Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds);
       singleCouponVM.MatchIdentifier = relatedOdds.First().MatchIdentifier;
-      return singleCouponVM;
+      singleCouponVM.MatchId = matchID;
+
+      var bestOdds = new TennisCouponViewModel()
+      {
+        HomeWin = singleCouponVM.HomeWin.Where(x => x.DecimalOdd == singleCouponVM.HomeWin.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1), //ugly hack to order by the preference Oddschecker.com -> Bestbetting -> Oddschecker.mobi
+        AwayWin = singleCouponVM.AwayWin.Where(x => x.DecimalOdd == singleCouponVM.AwayWin.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1),
+        MatchId = matchID,
+        MatchIdentifier = relatedOdds.First().MatchIdentifier
+      };
+
+      return bestOdds;
     }
   }
 }

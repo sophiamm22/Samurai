@@ -10,16 +10,16 @@
     },
 
     visitNode: function (node, parseContext, nodeContext) {
-      if (node.matchIdentifier && node.homeTeam && node.awayTeam) {
+      if (node.hasOwnProperty('matchIdentifier') && node.hasOwnProperty('homeTeam') && node.hasOwnProperty('awayTeam')) {
         return { entityType: 'FootballMatch' };
       }
-      else if (node.probabilities && node.hasOwnProperty('playerAGames') && node.hasOwnProperty('playerBGames')) {
+      else if (node.hasOwnProperty('probabilities') && node.hasOwnProperty('playerAGames') && node.hasOwnProperty('playerBGames')) {
         return { entityType: 'TennisPrediction' };
       }
-      else if (node.probabilities) {
+      else if (node.hasOwnProperty('probabilities')) {
         return { entityType: 'FootballPrediction' };
       }
-      else if (node.matchIdentifier && node.playerAFirstName && node.playerBFirstName) {
+      else if (node.matchIdentifier && node.hasOwnProperty('playerAFirstName') && node.hasOwnProperty('playerBFirstName')) {
         return { entityType: 'TennisMatch' };
       }
     }

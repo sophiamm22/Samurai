@@ -22,11 +22,11 @@ namespace Samurai.Services.AutoMapper
         x => x.MapFrom(opt => opt.First()));
       Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.CouponURL, opt =>
         { opt.ResolveUsing<FootballCouponURLDictionaryResolver>(); });
-      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.HomeOdds, opt =>
+      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.HomeWin, opt =>
         { opt.ResolveUsing<FootballCouponListToSingleResolver>().ConstructedBy(() => new FootballCouponListToSingleResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.DrawOdds, opt =>
+      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.Draw, opt =>
         { opt.ResolveUsing<FootballCouponListToSingleResolver>().ConstructedBy(() => new FootballCouponListToSingleResolver(Outcome.Draw)); });
-      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.AwayOdds, opt =>
+      Mapper.CreateMap<List<FootballCouponViewModel>, FootballCouponViewModel>().ForMember(x => x.AwayWin, opt =>
         { opt.ResolveUsing<FootballCouponListToSingleResolver>().ConstructedBy(() => new FootballCouponListToSingleResolver(Outcome.AwayWin)); });
 
 
@@ -45,11 +45,11 @@ namespace Samurai.Services.AutoMapper
     {
       var ret = new List<OddViewModel>();
       if (this.outcome == Outcome.HomeWin)
-        source.SelectMany(x => x.HomeOdds).ToList().ForEach(x => ret.Add(x));
+        source.SelectMany(x => x.HomeWin).ToList().ForEach(x => ret.Add(x));
       else if (this.outcome == Outcome.Draw)
-        source.SelectMany(x => x.DrawOdds).ToList().ForEach(x => ret.Add(x));
+        source.SelectMany(x => x.Draw).ToList().ForEach(x => ret.Add(x));
       else if (this.outcome == Outcome.AwayWin)
-        source.SelectMany(x => x.AwayOdds).ToList().ForEach(x => ret.Add(x));
+        source.SelectMany(x => x.AwayWin).ToList().ForEach(x => ret.Add(x));
 
       return ret;
     }

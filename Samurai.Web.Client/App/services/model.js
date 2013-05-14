@@ -36,6 +36,11 @@
             entityTypeName: 'FootballPrediction',
             isScalar: true,
             associationName: 'FootballMatch_FootballPrediction'
+          },
+          odds: {
+            entityTypeName: 'FootballOdds',
+            isScalar: true,
+            associationName: 'FootballMatch_FootballOdds'
           }
         }
       });
@@ -53,6 +58,26 @@
           footballMatch: {
             entityTypeName: 'FootballMatch', isScalar: true,
             associationName: 'FootballMatch_FootballPrediction',
+            foreignKeyNames: ['matchId']
+          }
+        }
+      });
+
+      metadataStore.addEntityType({
+        shortName: 'FootballOdds',
+        namespace: 'Samurai',
+        dataProperties: {
+          matchId: { dataType: DT.Int32, isPartOfKey: true },
+          matchIdentifier: { dataType: DT.String },
+          couponURL: { dataType: DT.Undefined },
+          homeWin: { dataType: DT.Undefined },
+          draw: { dataType: DT.Undefined },
+          awayWin: { dataType: DT.Undefined }
+        },
+        navigationProperties: {
+          footballMatch: {
+            entityTypeName: 'FootballMatch', isScalar: true,
+            associationName: 'FootballMatch_FootballOdds',
             foreignKeyNames: ['matchId']
           }
         }
@@ -107,6 +132,25 @@
           }
         }
       });
+
+      metadataStore.addEntityType({
+        shortName: 'TennisOdds',
+        namespace: 'Samurai',
+        dataProperties: {
+          matchId: { dataType: DT.Int32, isPartOfKey: true },
+          matchIdentifier: { dataType: DT.String },
+          couponURL: { dataType: DT.Undefined },
+          homeWin: { dataType: DT.Undefined },
+          awayWin: { dataType: DT.Undefined }
+        },
+        navigationProperties: {
+          footballMatch: {
+            entityTypeName: 'TennisMatch', isScalar: true,
+            associationName: 'TennisMatch_TennisOdds',
+            foreignKeyNames: ['matchId']
+          }
+        }
+      });
     }
 
     function registerEntityTypeConstructors(metadataStore) {
@@ -128,18 +172,46 @@
 
       footballMatch.homeWinProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs.homeWin).toFixed(0) + '%');
+        return probs && ((100 * probs['homeWin']).toFixed(0) + '%');
       });
 
       footballMatch.drawProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs.draw).toFixed(0) + '%');
+        return probs && ((100 * probs['draw']).toFixed(0) + '%');
       });
 
       footballMatch.awayWinProb = ko.computed(function () {
         var probs = footballMatch.predictions().probabilities();
-        return probs && ((100 * probs.awayWin).toFixed(0) + '%');
+        return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
       });
+    }
+
+    function footballOddsIntialiser(footballOdds) {
+
+      footballOdds.homeWinImplicitProbability = ko.computed(function () {
+        return footballOdds.homeWin().decimalOdds() ? (1 / footballOdds.homeWin().decimalOdds()) : 0.0;
+      });
+
+      footballOdds.drawImplicitProbability = ko.computed(function () {
+        return footballOdds.draw().decimalOdds() ? (1 / footballOdds.draw().decimalOdds()) : 0.0;
+      });
+
+      footballOdds.awayWinImplicitProbability = ko.computed(function () {
+        return footballOdds.awayWin().decimalOdds() ? (1 / footballOdds.awayWin().decimalOdds()) : 0.0;
+      });
+
+      tennisOdds.homeWinImplicitProbabilityText = ko.computed(function () {
+        return (100 * homeWinImplicitProbability()).toFixed(0) + '%';
+      });
+
+      tennisOdds.drawImplicitProbabilityText = ko.computed(function () {
+        return (100 * drawImplicitProbability()).toFixed(0) + '%';
+      });
+
+      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
+        return (100 * awayWinImplicitProbability()).toFixed(0) + '%';
+      });
+
     }
 
     function tennisMatchInitialiser(tennisMatch) {
@@ -164,13 +236,33 @@
 
       tennisMatch.playerAWinProb = ko.computed(function () {
         var probs = tennisMatch.predictions().probabilities();
-        return probs && ((100 * probs.homeWin).toFixed(0) + '%');
+        return probs && ((100 * probs['homeWin']).toFixed(0) + '%');
       });
 
       tennisMatch.playerBWinProb = ko.computed(function () {
         var probs = tennisMatch.predictions().probabilities();
-        return probs && ((100 * probs.awayWin).toFixed(0) + '%');
+        return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
       });
+    }
+
+    function tennisOddsIntialiser(tennisOdds) {
+
+      tennisOdds.homeWinImplicitProbability = ko.computed(function () {
+        return tennisOdds.homeWin().decimalOdds() ? (1 / tennisOdds.homeWin().decimalOdds()) : 0.0;
+      });
+
+      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
+        return tennisOdds.awayWin().decimalOdds() ? (1 / tennisOdds.awayWin().decimalOdds()) : 0.0;
+      });
+
+      tennisOdds.homeWinImplicitProbabilityText = ko.computed(function () {
+        return (100 * homeWinImplicitProbability()).toFixed(0) + '%';
+      });
+
+      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
+        return (100 * awayWinImplicitProbability()).toFixed(0) + '%';
+      });
+
     }
 
 

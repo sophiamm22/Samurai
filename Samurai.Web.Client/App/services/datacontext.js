@@ -20,13 +20,28 @@
       }
     };
 
+    var getTodaysLatestFootballOdds = function (footballOddsObservable) {
+      var query = EntityQuery.from('odds/todays-football-odds');
+
+      return manager.executeQuery(query)
+        .then(querySucceeded)
+        .fail(queryFailed);
+
+      function querySucceeded(data) {
+        if (footballOddsObservable) {
+          footballOddsObservable(data.results);
+        }
+        log('Retrieved todays football odds from remote data source',
+          data, true);
+      }
+    };
+
     var getTodaysTennisSchedule = function (tennisScheduleObservable) {
       var query = EntityQuery.from('fixtures/todays-tennis-schedule');
 
       return manager.executeQuery(query)
         .then(querySucceeded)
         .fail(queryFailed);
-
 
       function querySucceeded(data) {
         if (tennisScheduleObservable) {
@@ -37,13 +52,31 @@
       }
     };
 
+    var getTodaysLatestTennisOdds = function (tennisOddsObservable) {
+      var query = EntityQuery.from('odds/todays-tennis-odds');
+
+      return manager.executeQuery(query)
+        .then(querySucceeded)
+        .fail(queryFailed);
+
+      function querySucceeded(data) {
+        if (tennisOddsObservable) {
+          tennisOddsObservable(data.results);
+        }
+        log('Retrieved todays tennis odds from remote data source',
+          data, true);
+      }
+    };
+
     var primeData = function () {
       return Q.all([]);
     };
 
     var datacontext = {
       getTodaysFootballSchedule: getTodaysFootballSchedule,
+      getTodaysLatestFootballOdds: getTodaysLatestFootballOdds,
       getTodaysTennisSchedule: getTodaysTennisSchedule,
+      getTodaysLatestTennisOdds: getTodaysLatestTennisOdds,
       primeData: primeData
     };
 

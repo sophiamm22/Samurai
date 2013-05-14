@@ -47,7 +47,7 @@ namespace Samurai.Services.Async
 
       var tennisOdds = await
         this.tennisOddsService
-            .GetAllTennisOdds(fixtureDate, tennisFixtures);
+            .GetAllTennisOdds(tennisFixtures.Select(x => x.ID).ToList());
 
       foreach (var coupon in tennisOdds)
       {

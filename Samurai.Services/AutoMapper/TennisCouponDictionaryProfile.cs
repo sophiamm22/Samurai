@@ -22,9 +22,9 @@ namespace Samurai.Services.AutoMapper
         x => x.MapFrom(opt => opt.First()));
       Mapper.CreateMap<List<TennisCouponViewModel>, TennisCouponViewModel>().ForMember(x => x.CouponURL, opt =>
         { opt.ResolveUsing<TennisCouponURLDictionaryResolver>(); });
-      Mapper.CreateMap<List<TennisCouponViewModel>, TennisCouponViewModel>().ForMember(x => x.PlayerAOdds, opt =>
+      Mapper.CreateMap<List<TennisCouponViewModel>, TennisCouponViewModel>().ForMember(x => x.HomeWin, opt =>
         { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<List<TennisCouponViewModel>, TennisCouponViewModel>().ForMember(x => x.PlayerBOdds, opt =>
+      Mapper.CreateMap<List<TennisCouponViewModel>, TennisCouponViewModel>().ForMember(x => x.AwayWin, opt =>
         { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.AwayWin)); });
     }
   }
@@ -41,9 +41,9 @@ namespace Samurai.Services.AutoMapper
     {
       var ret = new List<OddViewModel>();
       if (this.outcome == Outcome.HomeWin)
-        source.SelectMany(x => x.PlayerAOdds).ToList().ForEach(x => ret.Add(x));
+        source.SelectMany(x => x.HomeWin).ToList().ForEach(x => ret.Add(x));
       else if (this.outcome == Outcome.AwayWin)
-        source.SelectMany(x => x.PlayerBOdds).ToList().ForEach(x => ret.Add(x));
+        source.SelectMany(x => x.AwayWin).ToList().ForEach(x => ret.Add(x));
 
       return ret;
     }

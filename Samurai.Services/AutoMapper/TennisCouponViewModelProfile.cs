@@ -21,13 +21,13 @@ namespace Samurai.Services.AutoMapper
       Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>()
         .IgnoreAllNonExisting()
         .ForMember(x => x.CouponURL, opt => { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
-        .ForMember(x => x.PlayerAOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); })
-        .ForMember(x => x.PlayerBOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
+        .ForMember(x => x.HomeWin, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); })
+        .ForMember(x => x.AwayWin, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
 
       Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>()
         .IgnoreAllNonExisting()
-        .ForMember(x => x.PlayerAOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
-        .ForMember(x => x.PlayerBOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
+        .ForMember(x => x.HomeWin, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
+        .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
 
     }
   }
@@ -93,8 +93,6 @@ namespace Samurai.Services.AutoMapper
 
     protected override IEnumerable<OddViewModel> ResolveCore(IEnumerable<OddsForEvent> source)
     {
-      var ret = new TennisCouponViewModel();
-
       var playerOdds =
         source.Where(x => x.Outcome.Replace(" ", "") == Enum.GetName(typeof(Outcome), outcome))
               .ToList();

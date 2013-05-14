@@ -55,6 +55,13 @@ namespace Samurai.Services.Async
       return ret;
     }
 
+    public async Task<IEnumerable<FootballCouponViewModel>> GetDaysOdds(DateTime fixtureDate)
+    {
+      return await 
+        this.footballOddsService
+            .GetAllFootballTodaysOdds(fixtureDate);
+    }
+
     public DateTime GetLatestDate()
     {
       return this.footballFixtureService.GetLatestDate();

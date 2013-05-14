@@ -220,10 +220,15 @@
     <Compile Include="Infrastructure\MessageHandlerWithSignalRHub.cs" />
     <Compile Include="Infrastructure\QueryStringCollection.cs" />
     <Compile Include="Infrastructure\Request.cs" />
+    <Compile Include="Messaging\FootballSchedule\FootballOddsDateArgs.cs" />
     <Compile Include="Messaging\FootballSchedule\FootballScheduleDateArgs.cs" />
+    <Compile Include="Messaging\FootballSchedule\GetFootballOddsHandler.cs" />
     <Compile Include="Messaging\FootballSchedule\GetFootballScheduleHandler.cs" />
+    <Compile Include="Messaging\Generic\GenericDateArgs.cs" />
     <Compile Include="Messaging\TennisSchedule\FetchTennisScheduleHandler.cs" />
+    <Compile Include="Messaging\TennisSchedule\GetTennisOddsHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\GetTennisScheduleHandler.cs" />
+    <Compile Include="Messaging\TennisSchedule\TennisOddsDateArgs.cs" />
     <Compile Include="Messaging\TennisSchedule\TennisScheduleDateArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Windsor\SamuraiWebWindsorInstaller.cs" />
@@ -317,9 +322,7 @@
     </Content>
     <Content Include="Scripts\jquery-2.0.0.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Messaging\Generic\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

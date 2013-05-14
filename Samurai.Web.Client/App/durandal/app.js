@@ -2,7 +2,7 @@
     function(system, viewEngine, composition, widget, modalDialog, Events) {
 
     var app = {
-        title: 'Application',
+        title: 'Value Samurai',
         showModal: function(obj, activationData, context) {
             return modalDialog.show(obj, activationData, context);
         },

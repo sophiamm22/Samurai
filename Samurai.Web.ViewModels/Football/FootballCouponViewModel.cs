@@ -10,9 +10,10 @@ namespace Samurai.Web.ViewModels.Football
   public class FootballCouponViewModel
   {
     public string MatchIdentifier { get; set; }
+    public int MatchId { get; set; }
     public Dictionary<string, string> CouponURL { get; set; }
-    public IEnumerable<OddViewModel> HomeOdds { get; set; }
-    public IEnumerable<OddViewModel> DrawOdds { get; set; }
-    public IEnumerable<OddViewModel> AwayOdds { get; set; }
+    public IEnumerable<OddViewModel> HomeWin { get; set; }
+    public IEnumerable<OddViewModel> Draw { get; set; }
+    public IEnumerable<OddViewModel> AwayWin { get; set; }
   }
 }

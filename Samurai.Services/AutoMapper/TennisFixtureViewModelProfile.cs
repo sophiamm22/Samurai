@@ -18,7 +18,7 @@ namespace Samurai.Services.AutoMapper
     protected override void Configure()
     {
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.ID, opt =>
+      Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.Id, opt =>
         { opt.MapFrom(x => x.MatchID); });
       Mapper.CreateMap<TennisMatchDetail, TennisFixtureViewModel>().ForMember(x => x.Tournament, opt =>
         opt.MapFrom(x => x.TournamentName));

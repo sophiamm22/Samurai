@@ -45,7 +45,7 @@ namespace Samurai.Services
       foreach (var footballFixture in footballFixtures)
       {
         FootballPredictionViewModel predictionDecider;
-        FootballCouponViewModel oddsDecider;
+        FootballCouponOutcomeViewModel oddsDecider;
 
         predictionDecider = footballPredictions.ContainsKey(footballFixture.MatchIdentifier) ? footballPredictions[footballFixture.MatchIdentifier] : null;
         oddsDecider = footballOdds.ContainsKey(footballFixture.MatchIdentifier) ? footballOdds[footballFixture.MatchIdentifier] : null;
@@ -106,19 +106,19 @@ namespace Samurai.Services
       return daysPredictions;
     }
 
-    private Dictionary<string, FootballCouponViewModel> UpdateDaysOdds(DateTime fixtureDate)
+    private Dictionary<string, FootballCouponOutcomeViewModel> UpdateDaysOdds(DateTime fixtureDate)
     {
-      var groupedCoupons = new Dictionary<string, List<FootballCouponViewModel>>();
+      var groupedCoupons = new Dictionary<string, List<FootballCouponOutcomeViewModel>>();
 
       var daysCoupons = this.footballOddsService.FetchAllFootballOdds(fixtureDate).ToList();
       foreach (var coupon in daysCoupons)
       {
         if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<FootballCouponViewModel>());
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<FootballCouponOutcomeViewModel>());
         groupedCoupons[coupon.MatchIdentifier].Add(coupon);
       }
 
-      var ret = Mapper.Map<Dictionary<string, List<FootballCouponViewModel>>, Dictionary<string, FootballCouponViewModel>>(groupedCoupons);
+      var ret = Mapper.Map<Dictionary<string, List<FootballCouponOutcomeViewModel>>, Dictionary<string, FootballCouponOutcomeViewModel>>(groupedCoupons);
 
       return ret;
     }

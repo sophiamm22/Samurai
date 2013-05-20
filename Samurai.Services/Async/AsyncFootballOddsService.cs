@@ -357,14 +357,14 @@ namespace Samurai.Services.Async
       this.sport = "Football";
     }
 
-    public async Task<FootballCouponViewModel> GetSingleFootballOdds(int matchID)
+    public async Task<FootballCouponOutcomeViewModel> GetSingleFootballOdds(int matchID)
     {
       return await Task.Run(() => GetSingleFootballOddsSync(matchID));
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs)
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs)
     {
-      var ret = new List<FootballCouponViewModel>();
+      var ret = new List<FootballCouponOutcomeViewModel>();
 
       foreach (var matchID in matchIDs)
       {
@@ -374,7 +374,7 @@ namespace Samurai.Services.Async
       return ret;
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate)
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate)
     {
       var ids =
         this.fixtureRepository
@@ -384,7 +384,7 @@ namespace Samurai.Services.Async
       return await GetAllFootballOdds(ids);
     }
 
-    private FootballCouponViewModel GetSingleFootballOddsSync(int matchID)
+    private IEnumerable<OddViewModel> GetSingleFootballOddsSync(int matchID)
     {
       var oddsSources =
         this.bookmakerRepository
@@ -392,7 +392,11 @@ namespace Samurai.Services.Async
             .Select(s => s.Source)
             .ToList();
 
-      var relatedOdds = new List<FootballCouponViewModel>();
+      var allOdds = new List<OddsForEvent>();
+      var homeTeamOdds = new List<OddsForEvent>();
+      var drawOdds = new List<OddsForEvent>();
+      var awayTeamOdds = new List<OddsForEvent>();
+
 
       foreach (var oddsSource in oddsSources)
       {
@@ -401,40 +405,29 @@ namespace Samurai.Services.Async
               .GetBestOddsFromMatchID(matchID, oddsSource)
               .ToList();
 
-        var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, FootballCouponViewModel>(oddsForEvent);
-
-        asCouponVM.CouponURL = new Dictionary<string, string>();
-        if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
-          asCouponVM.CouponURL.Add(oddsSource, oddsForEvent.First().MatchCouponURL);
-
-        relatedOdds.Add(asCouponVM);
+        homeTeamOdds.AddRange(oddsForEvent.Where(x => x.Outcome == "Home Win"));
+        drawOdds.AddRange(oddsForEvent.Where(x => x.Outcome == "Draw"));
+        awayTeamOdds.AddRange(oddsForEvent.Where(x => x.Outcome == "Away Win"));
       }
 
-      var singleCouponVM = Mapper.Map<List<FootballCouponViewModel>, FootballCouponViewModel>(relatedOdds);
-      singleCouponVM.MatchIdentifier = relatedOdds.First().MatchIdentifier;
-      singleCouponVM.MatchId = matchID;
+      allOdds.AddRange(homeTeamOdds.Where(x => x.DecimalOdd == homeTeamOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
+      allOdds.AddRange(homeTeamOdds.Where(x => x.DecimalOdd == drawOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));      
+      allOdds.AddRange(awayTeamOdds.Where(x => x.DecimalOdd == awayTeamOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
 
-      var bestOdds = new FootballCouponViewModel()
-      {
-        HomeWin = singleCouponVM.HomeWin.Where(x => x.DecimalOdd == singleCouponVM.HomeWin.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1), //ugly hack to order by the preference Oddschecker.com -> Bestbetting -> Oddschecker.mobi
-        Draw = singleCouponVM.Draw.Where(x => x.DecimalOdd == singleCouponVM.Draw.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1),
-        AwayWin = singleCouponVM.AwayWin.Where(x => x.DecimalOdd == singleCouponVM.AwayWin.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1),
-        MatchId = matchID,
-        MatchIdentifier = relatedOdds.First().MatchIdentifier
-      };
+      return Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds);
 
-      return bestOdds;
+
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> FetchFootballOddsForTournamentSource(
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchFootballOddsForTournamentSource(
       DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
     {
       return await FetchCoupons(date, tournament.TournamentName, oddsSource.Source);
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> FetchAllFootballOdds(DateTime date)
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchAllFootballOdds(DateTime date)
     {
-      var coupons = new List<FootballCouponViewModel>();
+      var coupons = new List<FootballCouponOutcomeViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport).ToList();
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
@@ -451,10 +444,10 @@ namespace Samurai.Services.Async
       return coupons;
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
     {
       var coupons = await FetchMatchCoupons(date, tournament, oddsSource, this.sport);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponViewModel>>(coupons);
+      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponOutcomeViewModel>>(coupons);
     }
   }
 }

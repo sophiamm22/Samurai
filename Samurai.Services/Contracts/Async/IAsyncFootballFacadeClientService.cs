@@ -11,7 +11,7 @@ namespace Samurai.Services.Contracts.Async
   public interface IAsyncFootballFacadeClientService
   {
     Task<IEnumerable<FootballFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate);
-    Task<IEnumerable<FootballCouponViewModel>> GetDaysOdds(DateTime fixtureDate);
+    Task<IEnumerable<FootballCouponOutcomeViewModel>> GetDaysOdds(DateTime fixtureDate);
     DateTime GetLatestDate();
   }
 }

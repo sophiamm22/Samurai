@@ -48,14 +48,14 @@ namespace Samurai.Services.Async
         if (predictions.ContainsKey(fixture.MatchIdentifier))
         {
           fixture.Predictions = predictions[fixture.MatchIdentifier];
-          fixture.Predictions.MatchId = fixture.ID;
+          fixture.Predictions.MatchId = fixture.Id;
         }
         ret.Add(fixture);
       }
       return ret;
     }
 
-    public async Task<IEnumerable<FootballCouponViewModel>> GetDaysOdds(DateTime fixtureDate)
+    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetDaysOdds(DateTime fixtureDate)
     {
       return await 
         this.footballOddsService

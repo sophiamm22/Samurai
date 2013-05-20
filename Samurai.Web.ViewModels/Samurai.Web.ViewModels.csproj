@@ -45,14 +45,14 @@
   <ItemGroup>
     <Compile Include="AccountViewModels.cs" />
     <Compile Include="API\ErrorModel.cs" />
-    <Compile Include="Football\FootballCouponViewModel.cs" />
+    <Compile Include="Football\FootballCouponOutcomeViewModel.cs" />
     <Compile Include="Football\FootballFixtureViewModel.cs" />
     <Compile Include="Football\FootballLadderViewModel.cs" />
     <Compile Include="Football\FootballPredictionViewModel.cs" />
     <Compile Include="Generic\TodaysFixturesViewModel.cs" />
     <Compile Include="Tennis\CalculateTournamentLadderChallengeViewModel.cs" />
     <Compile Include="Tennis\ShowTournamentLadderChallengeViewModel.cs" />
-    <Compile Include="Tennis\TennisCouponViewModel.cs" />
+    <Compile Include="Tennis\TennisCouponOutcomeViewModel.cs" />
     <Compile Include="Tennis\TennisFixtureViewModel.cs" />
     <Compile Include="Tennis\TennisLadderViewModel.cs" />
     <Compile Include="Tennis\TennisPredictionViewModel.cs" />

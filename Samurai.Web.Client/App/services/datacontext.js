@@ -21,6 +21,8 @@
     };
 
     var getTodaysLatestFootballOdds = function (footballOddsObservable) {
+      //footballScheduleObservable.isLoading = true;
+
       var query = EntityQuery.from('odds/todays-football-odds');
 
       return manager.executeQuery(query)

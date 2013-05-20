@@ -39,7 +39,7 @@ namespace Samurai.Services
       ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Tennis Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
 
       var ret = new List<TennisFixtureViewModel>();
-      var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
+      var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();
 
       var tennisFixtures = new List<TennisFixtureViewModel>();
       tennisFixtures.AddRange(this.tennisPredictionService.GetTennisPredictions(fixtureDate));
@@ -51,15 +51,15 @@ namespace Samurai.Services
       foreach (var coupon in tennisOdds)
       {
         if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponViewModel>());
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponOutcomeViewModel>());
         groupedCoupons[coupon.MatchIdentifier].Add(coupon);
       }
 
-      var flatCoupons = Mapper.Map<Dictionary<string, List<TennisCouponViewModel>>, Dictionary<string, TennisCouponViewModel>>(groupedCoupons);
+      var flatCoupons = Mapper.Map<Dictionary<string, List<TennisCouponOutcomeViewModel>>, Dictionary<string, TennisCouponOutcomeViewModel>>(groupedCoupons);
 
       foreach (var tennisFixture in tennisFixtures)
       {
-        TennisCouponViewModel oddsDecider;
+        TennisCouponOutcomeViewModel oddsDecider;
         oddsDecider = flatCoupons.ContainsKey(tennisFixture.MatchIdentifier) ? flatCoupons[tennisFixture.MatchIdentifier] : null;
         ret.Add(TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider));
       }
@@ -77,7 +77,7 @@ namespace Samurai.Services
 
       foreach (var tennisFixture in tennisFixturesAndPredictions)
       {
-        TennisCouponViewModel oddsDecider;
+        TennisCouponOutcomeViewModel oddsDecider;
 
         oddsDecider = tennisOdds.ContainsKey(tennisFixture.MatchIdentifier) ? tennisOdds[tennisFixture.MatchIdentifier] : null;
         var tennisFixtureViewModel = TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider);
@@ -220,9 +220,9 @@ namespace Samurai.Services
       return tennisFixtures;
     }
 
-    private Dictionary<string, TennisCouponViewModel> UpdateDaysOdds(DateTime matchDate)
+    private Dictionary<string, TennisCouponOutcomeViewModel> UpdateDaysOdds(DateTime matchDate)
     {
-      var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
+      var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();
 
       var daysCoupons =
         this.tennisOddsService
@@ -231,11 +231,11 @@ namespace Samurai.Services
       foreach (var coupon in daysCoupons)
       {
         if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponViewModel>());
+          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponOutcomeViewModel>());
         groupedCoupons[coupon.MatchIdentifier].Add(coupon);
       }
 
-      var ret = Mapper.Map<Dictionary<string, List<TennisCouponViewModel>>, Dictionary<string, TennisCouponViewModel>>(groupedCoupons);
+      var ret = Mapper.Map<Dictionary<string, List<TennisCouponOutcomeViewModel>>, Dictionary<string, TennisCouponOutcomeViewModel>>(groupedCoupons);
 
       return ret;
     }

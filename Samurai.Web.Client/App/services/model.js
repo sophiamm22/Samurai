@@ -79,6 +79,44 @@
             entityTypeName: 'FootballMatch', isScalar: true,
             associationName: 'FootballMatch_FootballOdds',
             foreignKeyNames: ['matchId']
+          }//,
+
+          //homeWin: {
+          //  entityTypeName: 'FootballOdd', isScalar: false,
+          //  associationName: 'FootballOdds_FootballOdd'
+          //},
+          //draw: {
+          //  entityTypeName: 'FootballOdd', isScalar: false,
+          //  associationName: 'FootballOdds_FootballOdd'
+          //},
+          //awayWin: {
+          //  entityTypeName: 'FootballOdd', isScalar: false,
+          //  associationName: 'FootballOdds_FootballOdd'
+          //}
+
+        }
+      });
+
+      metadataStore.addEntityType({
+        shortName: 'FootballOdd',
+        namespace: 'Samurai',
+        dataProperties: {
+          matchId: { dataType: DT.Int32 },
+          outcome: { dataType: DT.String },
+          oddsBeforeCommission: { dataType: DT.Decimal },
+          commissionPct: { dataType: DT.Decimal },
+          decimalOdds: { dataType: DT.Decimal },
+          timeStamp: { dataType: DT.DateTime, isPartOfKey: true },
+          bookmaker: { dataType: DT.String, isPartOfKey: true },
+          oddsSource: { dataType: DT.String, isPartOfKey: true },
+          clickThroughURL: { dataType: DT.String },
+          priority: { dataType: DT.Int32 }
+        },
+        navigationProperties: {
+          odds: {
+            entityTypeName: 'FootballOdds', isScalar: true,
+            associationName: 'FootballOdds_FootballOdd',
+            foreignKeyNames: ['matchId']
           }
         }
       });
@@ -105,6 +143,11 @@
             entityTypeName: 'TennisPrediction',
             isScalar: true,
             associationName: 'TennisMatch_TennisPrediction'
+          },
+          odds: {
+            entityTypeName: 'TennisOdds',
+            isScalar: true,
+            associationName: 'TennisMatch_TennisOdds'
           }
         }
       });
@@ -144,22 +187,58 @@
           awayWin: { dataType: DT.Undefined }
         },
         navigationProperties: {
-          footballMatch: {
+          tennisMatch: {
             entityTypeName: 'TennisMatch', isScalar: true,
             associationName: 'TennisMatch_TennisOdds',
+            foreignKeyNames: ['matchId']
+          }//,
+          //homeWin: {
+          //  entityTypeName: 'TennisOdd', isScalar: false,
+          //  associationName: 'TennisOdds_TennisOdd'
+          //},
+          //awayWin: {
+          //  entityTypeName: 'TennisOdd', isScalar: false,
+          //  associationName: 'TennisOdds_TennisOdd'
+          //}
+        }
+      });
+
+      metadataStore.addEntityType({
+        shortName: 'TennisOdd',
+        namespace: 'Samurai',
+        dataProperties: {
+          matchId: { dataType: DT.Int32 },
+          outcome: { dataType: DT.String },
+          oddsBeforeCommission: { dataType: DT.Decimal },
+          commissionPct: { dataType: DT.Decimal },
+          decimalOdds: { dataType: DT.Decimal },
+          timeStamp: { dataType: DT.DateTime, isPartOfKey: true },
+          bookmaker: { dataType: DT.String, isPartOfKey: true },
+          oddsSource: { dataType: DT.String, isPartOfKey: true },
+          clickThroughURL: { dataType: DT.String },
+          priority: { dataType: DT.Int32 }
+        },
+        navigationProperties: {
+          odds: {
+            entityTypeName: 'TennisOdds', isScalar: true,
+            associationName: 'TennisOdds_TennisOdd',
             foreignKeyNames: ['matchId']
           }
         }
       });
+
     }
 
     function registerEntityTypeConstructors(metadataStore) {
 
       metadataStore.registerEntityTypeCtor('TennisMatch', null, tennisMatchInitialiser);
       metadataStore.registerEntityTypeCtor('FootballMatch', null, footballMatchIntitialiser);
+      metadataStore.registerEntityTypeCtor('TennisOdds', null, tennisOddsIntialiser);
+      metadataStore.registerEntityTypeCtor('FootballOdds', null, footballOddsIntialiser);
     }
 
     function footballMatchIntitialiser(footballMatch) {
+
       footballMatch.matchTime = ko.computed(function () {
         var start = footballMatch.matchDate();
         var value = ((start - nulloDate) === 0) ?
@@ -188,33 +267,45 @@
 
     function footballOddsIntialiser(footballOdds) {
 
+      footballOdds.homeWinBestOdds = ko.computed(function () {
+        var x = footballOdds.homeWin()[0];//.decimalOdd;
+        return (x && x.hasOwnProperty('decimalOdd')) ? x.decimalOdd : '';
+      });
+
       footballOdds.homeWinImplicitProbability = ko.computed(function () {
-        return footballOdds.homeWin().decimalOdds() ? (1 / footballOdds.homeWin().decimalOdds()) : 0.0;
+        return footballOdds.homeWin().decimalOdd ? (1 / footballOdds.homeWin().decimalOdd) : 0.0;
       });
 
       footballOdds.drawImplicitProbability = ko.computed(function () {
-        return footballOdds.draw().decimalOdds() ? (1 / footballOdds.draw().decimalOdds()) : 0.0;
+        return footballOdds.draw().decimalOdd ? (1 / footballOdds.draw().decimalOdd) : 0.0;
       });
 
       footballOdds.awayWinImplicitProbability = ko.computed(function () {
-        return footballOdds.awayWin().decimalOdds() ? (1 / footballOdds.awayWin().decimalOdds()) : 0.0;
+        return footballOdds.awayWin().decimalOdd ? (1 / footballOdds.awayWin().decimalOdd) : 0.0;
       });
 
-      tennisOdds.homeWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * homeWinImplicitProbability()).toFixed(0) + '%';
+      footballOdds.homeWinImplicitProbabilityText = ko.computed(function () {
+        return (100 * footballOdds.homeWinImplicitProbability()).toFixed(0) + '%';
       });
 
-      tennisOdds.drawImplicitProbabilityText = ko.computed(function () {
-        return (100 * drawImplicitProbability()).toFixed(0) + '%';
+      footballOdds.drawImplicitProbabilityText = ko.computed(function () {
+        return (100 * footballOdds.drawImplicitProbability()).toFixed(0) + '%';
       });
 
-      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
-        return (100 * awayWinImplicitProbability()).toFixed(0) + '%';
+      footballOdds.awayWinImplicitProbabilityText = ko.computed(function () {
+        return (100 * footballOdds.awayWinImplicitProbability()).toFixed(0) + '%';
       });
 
     }
 
     function tennisMatchInitialiser(tennisMatch) {
+
+      tennisMatch.hasOdds = ko.computed(function () {
+        if (tennisMatch.hasOwnProperty('odds') && tennisMatch.odds()) {
+          var odds = tennisMatch.odds();
+
+        }
+      });
 
       tennisMatch.playerAFullName = ko.computed(function () {
         return tennisMatch.playerASurname() + ', ' + tennisMatch.playerAFirstName();
@@ -248,19 +339,22 @@
     function tennisOddsIntialiser(tennisOdds) {
 
       tennisOdds.homeWinImplicitProbability = ko.computed(function () {
-        return tennisOdds.homeWin().decimalOdds() ? (1 / tennisOdds.homeWin().decimalOdds()) : 0.0;
+        var homeWin = tennisOdds.homeWin()[0];
+        return (homeWin !== undefined && homeWin.decimalOdd) ? (1 / homeWin.decimalOdd) : 0.0;
       });
 
       tennisOdds.awayWinImplicitProbability = ko.computed(function () {
-        return tennisOdds.awayWin().decimalOdds() ? (1 / tennisOdds.awayWin().decimalOdds()) : 0.0;
+        var awayWin = tennisOdds.awayWin()[0];
+        var match = tennisOdds.tennisMatch();
+        return (awayWin !== undefined && awayWin.decimalOdd) ? (1 / awayWin.decimalOdd) : 0.0;
       });
 
       tennisOdds.homeWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * homeWinImplicitProbability()).toFixed(0) + '%';
+        return (100 * tennisOdds.homeWinImplicitProbability()).toFixed(0) + '%';
       });
 
-      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
-        return (100 * awayWinImplicitProbability()).toFixed(0) + '%';
+      tennisOdds.awayWinImplicitProbabilityText = ko.computed(function () {
+        return (100 * tennisOdds.awayWinImplicitProbability()).toFixed(0) + '%';
       });
 
     }

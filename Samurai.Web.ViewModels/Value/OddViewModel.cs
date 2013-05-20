@@ -8,6 +8,8 @@ namespace Samurai.Web.ViewModels.Value
 {
   public class OddViewModel
   {
+    public string Sport { get; set; }
+    public int MatchId { get; set; }
     public bool IsBetable { get; set; }
     public string Outcome { get; set; }
     public double OddBeforeCommission { get; set; }

@@ -42,7 +42,7 @@ namespace Samurai.Web.API.Messaging.TennisSchedule
                                    requestWrapper.RequestArguments.Day);
       }
 
-      IQueryable<TennisCouponViewModel> tennisCoupons;
+      IQueryable<TennisCouponOutcomeViewModel> tennisCoupons;
       try
       {
         tennisCoupons = (await

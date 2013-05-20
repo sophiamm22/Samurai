@@ -5,6 +5,15 @@
       var hashSport = config.hashes.todayBySport;
 
       var sched = [];
+
+      sched.push({
+        caption: 'Today',
+        sport: '',
+        competition: '',
+        hash: config.hashes.today,
+        isSelected: ko.observable()
+      });
+
       if (footballSchedules.length > 0) {
         sched.push({
           caption: 'Football',

@@ -42,7 +42,7 @@ namespace Samurai.Web.API.Messaging.FootballSchedule
                                    requestWrapper.RequestArguments.Day);
       }
 
-      IQueryable<FootballCouponViewModel> footballCoupons;
+      IQueryable<FootballCouponOutcomeViewModel> footballCoupons;
       try
       {
         footballCoupons = (await

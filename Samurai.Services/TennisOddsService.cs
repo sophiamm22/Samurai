@@ -30,14 +30,14 @@ namespace Samurai.Services
       this.sport = "Tennis";
     }
 
-    public TennisCouponViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture)
+    public TennisCouponOutcomeViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture)
     {
       var oddsSources =
         this.bookmakerRepository
             .GetActiveOddsSources()
             .ToList(); 
 
-      var relatedOdds = new List<TennisCouponViewModel>();
+      var relatedOdds = new List<TennisCouponOutcomeViewModel>();
 
       foreach (var oddsSource in oddsSources)
       {
@@ -51,7 +51,7 @@ namespace Samurai.Services
                                      fixture.PlayerBFirstName)
               .ToList();
 
-        var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponViewModel>(oddsForEvent);
+        var asCouponVM = Mapper.Map<IEnumerable<OddsForEvent>, TennisCouponOutcomeViewModel>(oddsForEvent);
         asCouponVM.MatchIdentifier = fixture.MatchIdentifier;
         asCouponVM.CouponURL = new Dictionary<string, string>();
         if (!(oddsForEvent.FirstOrDefault() == null || string.IsNullOrEmpty(oddsForEvent.First().MatchCouponURL)))
@@ -60,14 +60,14 @@ namespace Samurai.Services
         relatedOdds.Add(asCouponVM);
       }
 
-      var singleCouponVM = Mapper.Map<List<TennisCouponViewModel>, TennisCouponViewModel>(relatedOdds);
+      var singleCouponVM = Mapper.Map<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>(relatedOdds);
       singleCouponVM.MatchIdentifier = relatedOdds.First().MatchIdentifier;
       return singleCouponVM;
     }
 
-    public IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
+    public IEnumerable<TennisCouponOutcomeViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures)
     {
-      var ret = new List<TennisCouponViewModel>();
+      var ret = new List<TennisCouponOutcomeViewModel>();
 
       foreach (var fixture in fixtures)
       {
@@ -77,7 +77,7 @@ namespace Samurai.Services
       return ret;
     }
 
-    public IEnumerable<TennisCouponViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
+    public IEnumerable<TennisCouponOutcomeViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
     {
       var urlCheck = this.bookmakerRepository.GetTournamentCouponUrl(tournament.TournamentName, oddsSource.Source);
       if (urlCheck == null)
@@ -89,9 +89,9 @@ namespace Samurai.Services
       return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
     }
 
-    public IEnumerable<TennisCouponViewModel> FetchAllTennisOdds(DateTime date)
+    public IEnumerable<TennisCouponOutcomeViewModel> FetchAllTennisOdds(DateTime date)
     {
-      var matchCoupons = new List<TennisCouponViewModel>();
+      var matchCoupons = new List<TennisCouponOutcomeViewModel>();
       var missingAlias = new List<MissingTeamPlayerAlias>();
 
       var tournaments = DaysTournaments(date, this.sport);
@@ -130,10 +130,10 @@ namespace Samurai.Services
       return matchCoupons;
     }
 
-    public IEnumerable<TennisCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
+    public IEnumerable<TennisCouponOutcomeViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
     {
       var coupons = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<TennisCouponViewModel>>(coupons);
+      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<TennisCouponOutcomeViewModel>>(coupons);
     }
 
     protected override bool QualifiesPredicate(decimal probability, decimal odds, decimal edgeRequired, int gamesPlayed, int? minGamesRequired)

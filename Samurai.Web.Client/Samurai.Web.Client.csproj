@@ -221,6 +221,7 @@
     <Content Include="App\services\logger.js" />
     <Content Include="App\viewmodels\performance.js" />
     <Content Include="App\viewmodels\home.js" />
+    <Content Include="App\viewmodels\schematest.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\today.js" />
     <Content Include="App\views\performance.html" />

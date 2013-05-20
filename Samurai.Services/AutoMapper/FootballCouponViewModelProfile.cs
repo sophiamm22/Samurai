@@ -18,20 +18,20 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>()
+      Mapper.CreateMap<GenericMatchCoupon, FootballCouponOutcomeViewModel>()
         .IgnoreAllNonExisting()
         .ForMember(x => x.CouponURL, opt =>
           { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
-        .ForMember(x => x.HomeWin, opt =>
+        .ForMember(x => x.OddsCollection, opt =>
           { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.HomeWin)); })
         .ForMember(x => x.Draw, opt =>
           { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.Draw)); })
         .ForMember(x => x.AwayWin, opt =>
           { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.AwayWin)); });
 
-      Mapper.CreateMap<IEnumerable<OddsForEvent>, FootballCouponViewModel>()
+      Mapper.CreateMap<IEnumerable<OddsForEvent>, FootballCouponOutcomeViewModel>()
         .IgnoreAllNonExisting()
-        .ForMember(x => x.HomeWin, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.HomeWin)))
+        .ForMember(x => x.OddsCollection, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.HomeWin)))
         .ForMember(x => x.Draw, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.Draw)))
         .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.AwayWin)));
 
@@ -68,6 +68,7 @@ namespace Samurai.Services.AutoMapper
       var bestOddsAvailable = source.HeadlineOdds.Count == 0 ? source.ActualOdds[this.outcome].Max(x => x.DecimalOdds) : source.HeadlineOdds[this.outcome];
       ret.Add(new OddViewModel
       {
+        Sport = "Football",
         IsBetable = false,
         Outcome = actualOutcome,
         OddBeforeCommission = bestOddsAvailable,

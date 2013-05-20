@@ -21,19 +21,19 @@ namespace Samurai.Services.Contracts
 
   public interface ITennisOddsService : IOddsService
   {
-    TennisCouponViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture);
-    IEnumerable<TennisCouponViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures);
+    TennisCouponOutcomeViewModel GetSingleTennisOdds(DateTime date, TennisFixtureViewModel fixture);
+    IEnumerable<TennisCouponOutcomeViewModel> GetAllTennisOdds(DateTime date, IEnumerable<TennisFixtureViewModel> fixtures);
 
-    IEnumerable<TennisCouponViewModel> FetchAllTennisOdds(DateTime date);
-    IEnumerable<TennisCouponViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
-    IEnumerable<TennisCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
+    IEnumerable<TennisCouponOutcomeViewModel> FetchAllTennisOdds(DateTime date);
+    IEnumerable<TennisCouponOutcomeViewModel> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
+    IEnumerable<TennisCouponOutcomeViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
   }
 
   public interface IFootballOddsService : IOddsService
   {
-    IEnumerable<FootballCouponViewModel> FetchAllFootballOdds(DateTime date);
-    IEnumerable<FootballCouponViewModel> FetchFootballOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
-    IEnumerable<FootballCouponViewModel> FetchAllPreScreenedFootballOdds(DateTime date);
-    IEnumerable<FootballCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
+    IEnumerable<FootballCouponOutcomeViewModel> FetchAllFootballOdds(DateTime date);
+    IEnumerable<FootballCouponOutcomeViewModel> FetchFootballOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
+    IEnumerable<FootballCouponOutcomeViewModel> FetchAllPreScreenedFootballOdds(DateTime date);
+    IEnumerable<FootballCouponOutcomeViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen);
   }
 }

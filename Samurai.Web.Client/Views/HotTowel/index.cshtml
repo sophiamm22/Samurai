@@ -20,6 +20,11 @@
             document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
         }
     </script>
+    <script type="text/html" id="odds-template">
+      <div class="row">
+        <div class="span3 offset1"><p data-bind="text: homeWinImplicitProbability ? homeWinImplicitProbability : ''" class="text-right"></p></div>
+      </div>
+    </script>
 </head>
 <body>
     <div id="applicationHost">

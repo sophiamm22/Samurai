@@ -27,6 +27,7 @@
   var remoteServiceName = 'http://localhost:3600/api';
 
   var hashes = {
+    today: '#/today',
     todayByCompetition: '#/today/competition',
     todayBySport: '#/today/sport'
   };

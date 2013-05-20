@@ -13,7 +13,7 @@ namespace Samurai.Web.ViewModels.Tennis
   public class TennisFixtureViewModel
   {
     public string MatchIdentifier { get; set; }
-    public int ID { get; set; }
+    public int Id { get; set; }
     public string Tournament { get; set; }
     public int Year { get; set; }
     public DateTime MatchDate { get; set; }
@@ -26,16 +26,7 @@ namespace Samurai.Web.ViewModels.Tennis
     public string Comment { get; set; }
 
     public TennisPredictionViewModel Predictions { get; set; }
-    public TennisCouponViewModel Coupons { get; set; }
-
-    public static TennisFixtureViewModel CreateCombination(TennisFixtureViewModel fixture,
-      TennisCouponViewModel coupons)
-    {
-      var ret = Mapper.Map<TennisFixtureViewModel, TennisFixtureViewModel>(fixture);
-      ret.Coupons = coupons;
-
-      return ret;
-    }
+    public IEnumerable<OddViewModel> Odds { get; set; }
 
   }
 }

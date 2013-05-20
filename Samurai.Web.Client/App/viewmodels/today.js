@@ -2,6 +2,8 @@
 
   var todaysFootballSchedules = ko.observableArray(),
       todaysTennisSchedules = ko.observableArray(),
+      todaysFootballOdds = ko.observableArray(),
+      todaysTennisOdds = ko.observableArray(),
       todaysMatchesCount = ko.computed(function () {
         return todaysFootballSchedules().length + todaysTennisSchedules().length;
       }),
@@ -15,6 +17,8 @@
     activate: activate,
     todaysFootballSchedules: todaysFootballSchedules,
     todaysTennisSchedules: todaysTennisSchedules,
+    todaysFootballOdds: todaysFootballOdds,
+    todaysTennisOdds: todaysTennisOdds,
     todaysMatchesCount: todaysMatchesCount,
     competitions: competitions,
     refresh: refresh
@@ -30,7 +34,8 @@
 
   function refresh() {
     return datacontext.getTodaysFootballSchedule(todaysFootballSchedules)
-                      .then(datacontext.getTodaysTennisSchedule(todaysTennisSchedules));
+                      .then(datacontext.getTodaysTennisSchedule(todaysTennisSchedules))
+                      .then(datacontext.getTodaysLatestFootballOdds(todaysFootballOdds))
+                      .then(datacontext.getTodaysLatestTennisOdds(todaysTennisOdds));
   }
-
 });

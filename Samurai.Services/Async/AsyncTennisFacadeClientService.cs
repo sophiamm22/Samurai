@@ -36,7 +36,7 @@ namespace Samurai.Services.Async
 
     public async Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate)
     {
-      var groupedCoupons = new Dictionary<string, List<TennisCouponViewModel>>();
+      var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();
       
       var tennisFixtures = new List<TennisFixtureViewModel>();
       tennisFixtures.AddRange(await this.tennisPredictionService.GetTennisPredictions(fixtureDate));
@@ -44,7 +44,7 @@ namespace Samurai.Services.Async
       return tennisFixtures;
     }
 
-    public async Task<IEnumerable<TennisCouponViewModel>> GetDaysOdds(DateTime fixtureDate)
+    public async Task<IEnumerable<TennisCouponOutcomeViewModel>> GetDaysOdds(DateTime fixtureDate)
     {
       return await
         this.tennisOddsService

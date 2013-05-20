@@ -451,9 +451,9 @@ namespace Samurai.Services
       this.sport = "Football";
     }
 
-    public IEnumerable<FootballCouponViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
+    public IEnumerable<FootballCouponOutcomeViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
     {
-      var matchCoupons = new List<FootballCouponViewModel>();
+      var matchCoupons = new List<FootballCouponOutcomeViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport);
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources()
@@ -473,15 +473,15 @@ namespace Samurai.Services
       return matchCoupons;
     }
 
-    public IEnumerable<FootballCouponViewModel> FetchFootballOddsForTournamentSource(
+    public IEnumerable<FootballCouponOutcomeViewModel> FetchFootballOddsForTournamentSource(
       DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
     {
       return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
     }
 
-    public IEnumerable<FootballCouponViewModel> FetchAllFootballOdds(DateTime date)
+    public IEnumerable<FootballCouponOutcomeViewModel> FetchAllFootballOdds(DateTime date)
     {
-      var coupons = new List<FootballCouponViewModel>();
+      var coupons = new List<FootballCouponOutcomeViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport).ToList();
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
@@ -498,10 +498,10 @@ namespace Samurai.Services
       return coupons;
     }
 
-    public IEnumerable<FootballCouponViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
+    public IEnumerable<FootballCouponOutcomeViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
     {
       var coupons = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponViewModel>>(coupons);
+      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponOutcomeViewModel>>(coupons);
     }
   }
 }

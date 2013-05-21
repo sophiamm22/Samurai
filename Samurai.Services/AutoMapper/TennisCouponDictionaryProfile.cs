@@ -17,15 +17,15 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.MatchIdentifier,
-        x => x.MapFrom(opt => opt.First()));
-      Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.CouponURL, opt =>
-        { opt.ResolveUsing<TennisCouponURLDictionaryResolver>(); });
-      Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.OddsCollection, opt =>
-        { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.AwayWin, opt =>
-        { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.AwayWin)); });
+      //Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().IgnoreAllNonExisting();
+      //Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.MatchIdentifier,
+      //  x => x.MapFrom(opt => opt.First()));
+      //Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.CouponURL, opt =>
+      //  { opt.ResolveUsing<TennisCouponURLDictionaryResolver>(); });
+      //Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.OddsCollection, opt =>
+      //  { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.HomeWin)); });
+      //Mapper.CreateMap<List<TennisCouponOutcomeViewModel>, TennisCouponOutcomeViewModel>().ForMember(x => x.AwayWin, opt =>
+      //  { opt.ResolveUsing<TennisCouponListToSingleResolver>().ConstructedBy(() => new TennisCouponListToSingleResolver(Outcome.AwayWin)); });
     }
   }
 
@@ -40,10 +40,10 @@ namespace Samurai.Services.AutoMapper
     protected override IEnumerable<OddViewModel> ResolveCore(List<TennisCouponOutcomeViewModel> source)
     {
       var ret = new List<OddViewModel>();
-      if (this.outcome == Outcome.HomeWin)
-        source.SelectMany(x => x.OddsCollection).ToList().ForEach(x => ret.Add(x));
-      else if (this.outcome == Outcome.AwayWin)
-        source.SelectMany(x => x.AwayWin).ToList().ForEach(x => ret.Add(x));
+      //if (this.outcome == Outcome.HomeWin)
+      //  source.SelectMany(x => x.OddsCollection).ToList().ForEach(x => ret.Add(x));
+      //else if (this.outcome == Outcome.AwayWin)
+      //  source.SelectMany(x => x.AwayWin).ToList().ForEach(x => ret.Add(x));
 
       return ret;
     }
@@ -55,14 +55,14 @@ namespace Samurai.Services.AutoMapper
     protected override Dictionary<string, string> ResolveCore(List<TennisCouponOutcomeViewModel> source)
     {
       var ret = new Dictionary<string, string>();
-      foreach (var urlKVPs in source.Select(x => x.CouponURL))
-      {
-        foreach (var urlKVP in urlKVPs)
-        {
-          if (!ret.ContainsKey(urlKVP.Key))
-            ret.Add(urlKVP.Key, urlKVP.Value);
-        }
-      }
+      //foreach (var urlKVPs in source.Select(x => x.CouponURL))
+      //{
+      //  foreach (var urlKVP in urlKVPs)
+      //  {
+      //    if (!ret.ContainsKey(urlKVP.Key))
+      //      ret.Add(urlKVP.Key, urlKVP.Value);
+      //  }
+      //}
       return ret;
     }
   }

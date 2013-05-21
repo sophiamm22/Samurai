@@ -8,6 +8,7 @@ using AutoMapper;
 
 using Samurai.Services.Contracts.Async;
 using Samurai.Web.ViewModels;
+using Samurai.Web.ViewModels.Value;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Model;
@@ -44,13 +45,16 @@ namespace Samurai.Services.Async
 
       foreach (var footballFixture in footballFixtures)
       {
-        FootballPredictionViewModel predictionDecider;
-        FootballCouponOutcomeViewModel oddsDecider;
+        FootballPredictionViewModel prediction;
+        IEnumerable<OddViewModel> odds;
 
-        predictionDecider = footballPredictions.ContainsKey(footballFixture.MatchIdentifier) ? footballPredictions[footballFixture.MatchIdentifier] : null;
-        oddsDecider = footballOdds.ContainsKey(footballFixture.MatchIdentifier) ? footballOdds[footballFixture.MatchIdentifier] : null;
+        prediction = footballPredictions.ContainsKey(footballFixture.MatchIdentifier) ? footballPredictions[footballFixture.MatchIdentifier] : null;
+        odds = footballOdds.ContainsKey(footballFixture.Id) ? footballOdds[footballFixture.Id] : null;
 
-        ret.Add(FootballFixtureViewModel.CreateCombination(footballFixture, predictionDecider, oddsDecider));
+        footballFixture.Predictions = prediction;
+        footballFixture.Odds = odds;
+
+        ret.Add(footballFixture);
       }
 
       return ret;
@@ -109,22 +113,21 @@ namespace Samurai.Services.Async
       return daysPredictions;
     }
 
-    private async Task<Dictionary<string, FootballCouponOutcomeViewModel>> UpdateDaysOdds(DateTime fixtureDate)
+    private async Task<Dictionary<int, List<OddViewModel>>> UpdateDaysOdds(DateTime fixtureDate)
     {
-      var groupedCoupons = new Dictionary<string, List<FootballCouponOutcomeViewModel>>();
+      var groupedOdds = new Dictionary<int, List<OddViewModel>>();
 
-      var daysCoupons = (await this.footballOddsService
+      var daysOdds = (await this.footballOddsService
             .FetchAllFootballOdds(fixtureDate)).ToList();
-      foreach (var coupon in daysCoupons)
+
+      foreach (var odd in daysOdds)
       {
-        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<FootballCouponOutcomeViewModel>());
-        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
+        if (!groupedOdds.ContainsKey(odd.MatchId))
+          groupedOdds.Add(odd.MatchId, new List<OddViewModel>());
+        groupedOdds[odd.MatchId].Add(odd);
       }
 
-      var ret = Mapper.Map<Dictionary<string, List<FootballCouponOutcomeViewModel>>, Dictionary<string, FootballCouponOutcomeViewModel>>(groupedCoupons);
-
-      return ret;
+      return groupedOdds;
     }
 
   }

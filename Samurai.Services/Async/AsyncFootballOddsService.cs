@@ -273,6 +273,7 @@ namespace Samurai.Services.Async
 
               var equivalentOdd = Mapper.Map<Model.GenericOdd, Model.GenericOdd>(odd);
 
+              equivalentOdd.MatchId = persistedMatch.Id;
               equivalentOdd.TimeStamp = persisistedOdd.TimeStamp;
               equivalentOdd.OddsBeforeCommission = (double)persisistedOdd.Odd;
 
@@ -357,24 +358,24 @@ namespace Samurai.Services.Async
       this.sport = "Football";
     }
 
-    public async Task<FootballCouponOutcomeViewModel> GetSingleFootballOdds(int matchID)
+    public async Task<IEnumerable<OddViewModel>> GetSingleFootballOdds(int matchID)
     {
       return await Task.Run(() => GetSingleFootballOddsSync(matchID));
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs)
+    public async Task<IEnumerable<OddViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs)
     {
-      var ret = new List<FootballCouponOutcomeViewModel>();
+      var ret = new List<OddViewModel>();
 
       foreach (var matchID in matchIDs)
       {
-        ret.Add(await GetSingleFootballOdds(matchID));
+        ret.AddRange(await GetSingleFootballOdds(matchID));
       }
 
       return ret;
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate)
+    public async Task<IEnumerable<OddViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate)
     {
       var ids =
         this.fixtureRepository
@@ -419,15 +420,15 @@ namespace Samurai.Services.Async
 
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchFootballOddsForTournamentSource(
+    public async Task<IEnumerable<OddViewModel>> FetchFootballOddsForTournamentSource(
       DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
     {
       return await FetchCoupons(date, tournament.TournamentName, oddsSource.Source);
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchAllFootballOdds(DateTime date)
+    public async Task<IEnumerable<OddViewModel>> FetchAllFootballOdds(DateTime date)
     {
-      var coupons = new List<FootballCouponOutcomeViewModel>();
+      var odds = new List<OddViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport).ToList();
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
@@ -438,16 +439,16 @@ namespace Samurai.Services.Async
         {
           var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName };
           var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source };
-          coupons.AddRange(await FetchFootballOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
+          odds.AddRange(await FetchFootballOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
         }
       }
-      return coupons;
+      return odds;
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
+    public async Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
     {
       var coupons = await FetchMatchCoupons(date, tournament, oddsSource, this.sport);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponOutcomeViewModel>>(coupons);
+      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons);
     }
   }
 }

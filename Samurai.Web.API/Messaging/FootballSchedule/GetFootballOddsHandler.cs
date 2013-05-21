@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Samurai.Web.API.Infrastructure;
 using Samurai.Services.Contracts.Async;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Web.API.Messaging.FootballSchedule
 {
@@ -42,7 +43,7 @@ namespace Samurai.Web.API.Messaging.FootballSchedule
                                    requestWrapper.RequestArguments.Day);
       }
 
-      IQueryable<FootballCouponOutcomeViewModel> footballCoupons;
+      IQueryable<OddViewModel> footballCoupons;
       try
       {
         footballCoupons = (await

@@ -18,22 +18,22 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponOutcomeViewModel>()
-        .IgnoreAllNonExisting()
-        .ForMember(x => x.CouponURL, opt =>
-          { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
-        .ForMember(x => x.OddsCollection, opt =>
-          { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.HomeWin)); })
-        .ForMember(x => x.Draw, opt =>
-          { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.Draw)); })
-        .ForMember(x => x.AwayWin, opt =>
-          { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.AwayWin)); });
+      //Mapper.CreateMap<GenericMatchCoupon, FootballCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.CouponURL, opt =>
+      //    { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
+      //  .ForMember(x => x.OddsCollection, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.HomeWin)); })
+      //  .ForMember(x => x.Draw, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.Draw)); })
+      //  .ForMember(x => x.AwayWin, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.AwayWin)); });
 
-      Mapper.CreateMap<IEnumerable<OddsForEvent>, FootballCouponOutcomeViewModel>()
-        .IgnoreAllNonExisting()
-        .ForMember(x => x.OddsCollection, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.HomeWin)))
-        .ForMember(x => x.Draw, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.Draw)))
-        .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.AwayWin)));
+      //Mapper.CreateMap<IEnumerable<OddsForEvent>, FootballCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.OddsCollection, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.HomeWin)))
+      //  .ForMember(x => x.Draw, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.Draw)))
+      //  .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.AwayWin)));
 
     }
   }

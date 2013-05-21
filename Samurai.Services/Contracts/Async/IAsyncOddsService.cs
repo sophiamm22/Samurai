@@ -25,20 +25,20 @@ namespace Samurai.Services.Contracts.Async
     Task<IEnumerable<OddViewModel>> GetAllTennisOdds(IEnumerable<int> matchIDs);
     Task<IEnumerable<OddViewModel>> GetAllTennisTodaysOdds(DateTime fixtureDate);
 
-    Task<IEnumerable<TennisCouponOutcomeViewModel>> FetchAllTennisOdds(DateTime date);
-    Task<IEnumerable<TennisCouponOutcomeViewModel>> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
-    Task<IEnumerable<TennisCouponOutcomeViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource);
+    Task<IEnumerable<OddViewModel>> FetchAllTennisOdds(DateTime date);
+    Task<IEnumerable<OddViewModel>> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
+    Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource);
   }
 
   public interface IAsyncFootballOddsService : IAsyncOddsService
   {
-    Task<FootballCouponOutcomeViewModel> GetSingleFootballOdds(int matchID);
-    Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs);
-    Task<IEnumerable<FootballCouponOutcomeViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate);
+    Task<IEnumerable<OddViewModel>> GetSingleFootballOdds(int matchID);
+    Task<IEnumerable<OddViewModel>> GetAllFootballOdds(IEnumerable<int> matchIDs);
+    Task<IEnumerable<OddViewModel>> GetAllFootballTodaysOdds(DateTime fixtureDate);
 
-    Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchAllFootballOdds(DateTime date);
-    Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchFootballOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
-    Task<IEnumerable<FootballCouponOutcomeViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource);
+    Task<IEnumerable<OddViewModel>> FetchAllFootballOdds(DateTime date);
+    Task<IEnumerable<OddViewModel>> FetchFootballOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
+    Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource);
   }
 
 }

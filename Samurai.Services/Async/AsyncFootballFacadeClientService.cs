@@ -9,6 +9,7 @@ using AutoMapper;
 using Samurai.Core;
 using Samurai.Services.Contracts.Async;
 using Samurai.Web.ViewModels.Football;
+using Samurai.Web.ViewModels.Value;
 
 namespace Samurai.Services.Async
 {
@@ -55,7 +56,7 @@ namespace Samurai.Services.Async
       return ret;
     }
 
-    public async Task<IEnumerable<FootballCouponOutcomeViewModel>> GetDaysOdds(DateTime fixtureDate)
+    public async Task<IEnumerable<OddViewModel>> GetDaysOdds(DateTime fixtureDate)
     {
       return await 
         this.footballOddsService

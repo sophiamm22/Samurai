@@ -12,7 +12,6 @@ namespace Samurai.Services.Contracts.Async
 {
   public interface IAsyncTennisFacadeAdminService
   {
-    Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate);
     Task<IEnumerable<TennisFixtureViewModel>> UpdateDaysSchedule(DateTime fixtureDate);
     Task<IEnumerable<TournamentEventViewModel>> FetchTournamentEvents();
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);

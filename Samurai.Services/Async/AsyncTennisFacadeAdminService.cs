@@ -34,39 +34,6 @@ namespace Samurai.Services.Async
       this.tennisOddsService = tennisOddsService;
     }
 
-    //The admin version will get all odds too
-    public async Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate)
-    {
-      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Days Tennis Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
-
-      var ret = new List<TennisFixtureViewModel>();
-      var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();
-
-      var tennisFixtures = new List<TennisFixtureViewModel>();
-      tennisFixtures.AddRange(await this.tennisPredictionService.GetTennisPredictions(fixtureDate));
-
-      var tennisOdds = await
-        this.tennisOddsService
-            .GetAllTennisOdds(tennisFixtures.Select(x => x.Id).ToList());
-
-      foreach (var coupon in tennisOdds)
-      {
-        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponOutcomeViewModel>());
-        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
-      }
-
-      var flatCoupons = Mapper.Map<Dictionary<string, List<TennisCouponOutcomeViewModel>>, Dictionary<string, TennisCouponOutcomeViewModel>>(groupedCoupons);
-
-      foreach (var tennisFixture in tennisFixtures)
-      {
-        TennisCouponOutcomeViewModel oddsDecider;
-        oddsDecider = flatCoupons.ContainsKey(tennisFixture.MatchIdentifier) ? flatCoupons[tennisFixture.MatchIdentifier] : null;
-        ret.Add(TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider));
-      }
-      return ret;
-    }
-
     public async Task<IEnumerable<TennisFixtureViewModel>> UpdateDaysSchedule(DateTime fixtureDate)
     {
       ProgressReporterProvider.Current.ReportProgress(string.Format("Updating Days Tennis Schedule for {0}", fixtureDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);
@@ -81,11 +48,13 @@ namespace Samurai.Services.Async
 
       foreach (var tennisFixture in tennisFixturesAndPredictions)
       {
-        TennisCouponOutcomeViewModel oddsDecider;
+        IEnumerable<OddViewModel> odds;
 
-        oddsDecider = tennisOdds.ContainsKey(tennisFixture.MatchIdentifier) ? tennisOdds[tennisFixture.MatchIdentifier] : null;
-        var tennisFixtureViewModel = TennisFixtureViewModel.CreateCombination(tennisFixture, oddsDecider);
-        ret.Add(tennisFixtureViewModel);
+        odds = tennisOdds.ContainsKey(tennisFixture.Id) ? tennisOdds[tennisFixture.Id] : null;
+
+        tennisFixture.Odds = odds;
+
+        ret.Add(tennisFixture);
       }
 
       return ret;
@@ -210,24 +179,22 @@ namespace Samurai.Services.Async
       return tennisFixtures;
     }
 
-    private async Task<Dictionary<string, TennisCouponOutcomeViewModel>> UpdateDaysOdds(DateTime matchDate)
+    private async Task<Dictionary<int, List<OddViewModel>>> UpdateDaysOdds(DateTime matchDate)
     {
-      var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();
+      var groupedOdds = new Dictionary<int, List<OddViewModel>>();
 
-      var daysCoupons = await
+      var daysOdds = await
         this.tennisOddsService
             .FetchAllTennisOdds(matchDate);
 
-      foreach (var coupon in daysCoupons)
+      foreach (var odd in daysOdds)
       {
-        if (!groupedCoupons.ContainsKey(coupon.MatchIdentifier))
-          groupedCoupons.Add(coupon.MatchIdentifier, new List<TennisCouponOutcomeViewModel>());
-        groupedCoupons[coupon.MatchIdentifier].Add(coupon);
+        if (!groupedOdds.ContainsKey(odd.MatchId))
+          groupedOdds.Add(odd.MatchId, new List<OddViewModel>());
+        groupedOdds[odd.MatchId].Add(odd);
       }
 
-      var ret = Mapper.Map<Dictionary<string, List<TennisCouponOutcomeViewModel>>, Dictionary<string, TennisCouponOutcomeViewModel>>(groupedCoupons);
-
-      return ret;
+      return groupedOdds;
     }
   }
 }

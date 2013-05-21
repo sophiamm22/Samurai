@@ -451,9 +451,9 @@ namespace Samurai.Services
       this.sport = "Football";
     }
 
-    public IEnumerable<FootballCouponOutcomeViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
+    public IEnumerable<OddViewModel> FetchAllPreScreenedFootballOdds(DateTime date)
     {
-      var matchCoupons = new List<FootballCouponOutcomeViewModel>();
+      var odds = new List<OddViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport);
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources()
@@ -466,22 +466,22 @@ namespace Samurai.Services
       {
         foreach (var source in oddsSources)
         {
-          matchCoupons.AddRange(FetchCoupons(date, tournament, source, sport, false, true));
+          odds.AddRange(FetchCoupons(date, tournament, source, sport, false, true));
         }
       }
 
-      return matchCoupons;
+      return odds;
     }
 
-    public IEnumerable<FootballCouponOutcomeViewModel> FetchFootballOddsForTournamentSource(
+    public IEnumerable<OddViewModel> FetchFootballOddsForTournamentSource(
       DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource)
     {
       return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
     }
 
-    public IEnumerable<FootballCouponOutcomeViewModel> FetchAllFootballOdds(DateTime date)
+    public IEnumerable<OddViewModel> FetchAllFootballOdds(DateTime date)
     {
-      var coupons = new List<FootballCouponOutcomeViewModel>();
+      var odds = new List<OddViewModel>();
 
       var tournaments = DaysTournaments(date, this.sport).ToList();
       var oddsSources = this.bookmakerRepository.GetActiveOddsSources().ToList();
@@ -492,16 +492,16 @@ namespace Samurai.Services
         {
           var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName };
           var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source };
-          coupons.AddRange(FetchFootballOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
+          odds.AddRange(FetchFootballOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
         }
       }
-      return coupons;
+      return odds;
     }
 
-    public IEnumerable<FootballCouponOutcomeViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
+    public IEnumerable<OddViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
     {
       var coupons = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<FootballCouponOutcomeViewModel>>(coupons);
+      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons);
     }
   }
 }

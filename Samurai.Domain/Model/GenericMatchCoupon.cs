@@ -23,6 +23,7 @@ namespace Samurai.Domain.Model
         return string.Format("{0}/vs/{1}/{2}/{3}", teamPlayerA, teamPlayerB, TournamentEventName, MatchDate.ToShortDateString().Replace("/", "-"));
       }
     }
+    public int MatchId { get; set; }
     public DateTime MatchDate { get; set; }
     public string TeamOrPlayerA { get; set; }
     public string FirstNameA { get; set; }

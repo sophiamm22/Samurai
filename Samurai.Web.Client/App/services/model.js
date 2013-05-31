@@ -38,9 +38,9 @@
             associationName: 'FootballMatch_FootballPrediction'
           },
           odds: {
-            entityTypeName: 'FootballOdds',
-            isScalar: true,
-            associationName: 'FootballMatch_FootballOdds'
+            entityTypeName: 'FootballOdd',
+            isScalar: false,
+            associationName: 'FootballMatch_FootballOdd'
           }
         }
       });
@@ -64,58 +64,25 @@
       });
 
       metadataStore.addEntityType({
-        shortName: 'FootballOdds',
-        namespace: 'Samurai',
-        dataProperties: {
-          matchId: { dataType: DT.Int32, isPartOfKey: true },
-          matchIdentifier: { dataType: DT.String },
-          couponURL: { dataType: DT.Undefined },
-          homeWin: { dataType: DT.Undefined },
-          draw: { dataType: DT.Undefined },
-          awayWin: { dataType: DT.Undefined }
-        },
-        navigationProperties: {
-          footballMatch: {
-            entityTypeName: 'FootballMatch', isScalar: true,
-            associationName: 'FootballMatch_FootballOdds',
-            foreignKeyNames: ['matchId']
-          }//,
-
-          //homeWin: {
-          //  entityTypeName: 'FootballOdd', isScalar: false,
-          //  associationName: 'FootballOdds_FootballOdd'
-          //},
-          //draw: {
-          //  entityTypeName: 'FootballOdd', isScalar: false,
-          //  associationName: 'FootballOdds_FootballOdd'
-          //},
-          //awayWin: {
-          //  entityTypeName: 'FootballOdd', isScalar: false,
-          //  associationName: 'FootballOdds_FootballOdd'
-          //}
-
-        }
-      });
-
-      metadataStore.addEntityType({
         shortName: 'FootballOdd',
         namespace: 'Samurai',
         dataProperties: {
-          matchId: { dataType: DT.Int32 },
-          outcome: { dataType: DT.String },
+          matchId: { dataType: DT.Int32, isPartOfKey: true },
+          sport: { dataType: DT.String },
+          outcome: { dataType: DT.String, isPartOfKey: true },
           oddsBeforeCommission: { dataType: DT.Decimal },
           commissionPct: { dataType: DT.Decimal },
-          decimalOdds: { dataType: DT.Decimal },
-          timeStamp: { dataType: DT.DateTime, isPartOfKey: true },
-          bookmaker: { dataType: DT.String, isPartOfKey: true },
-          oddsSource: { dataType: DT.String, isPartOfKey: true },
+          decimalOdd: { dataType: DT.Decimal },
+          timeStamp: { dataType: DT.DateTime },
+          bookmaker: { dataType: DT.String },
+          oddsSource: { dataType: DT.String },
           clickThroughURL: { dataType: DT.String },
           priority: { dataType: DT.Int32 }
         },
         navigationProperties: {
-          odds: {
-            entityTypeName: 'FootballOdds', isScalar: true,
-            associationName: 'FootballOdds_FootballOdd',
+          footballMatch: {
+            entityTypeName: 'FootballMatch', isScalar: true,
+            associationName: 'FootballMatch_FootballOdd',
             foreignKeyNames: ['matchId']
           }
         }
@@ -145,9 +112,9 @@
             associationName: 'TennisMatch_TennisPrediction'
           },
           odds: {
-            entityTypeName: 'TennisOdds',
-            isScalar: true,
-            associationName: 'TennisMatch_TennisOdds'
+            entityTypeName: 'TennisOdd',
+            isScalar: false,
+            associationName: 'TennisMatch_TennisOdd'
           }
         }
       });
@@ -157,6 +124,7 @@
         namespace: 'Samurai',
         dataProperties: {
           matchId: { dataType: DT.Int32, isPartOfKey: true },
+          sport: { dataType: DT.String },
           matchIdentifier: { dataType: DT.String },
           predictionURL: { dataType: DT.String },
           playerAGames: { dataType: DT.Double },
@@ -177,51 +145,25 @@
       });
 
       metadataStore.addEntityType({
-        shortName: 'TennisOdds',
-        namespace: 'Samurai',
-        dataProperties: {
-          matchId: { dataType: DT.Int32, isPartOfKey: true },
-          matchIdentifier: { dataType: DT.String },
-          couponURL: { dataType: DT.Undefined },
-          homeWin: { dataType: DT.Undefined },
-          awayWin: { dataType: DT.Undefined }
-        },
-        navigationProperties: {
-          tennisMatch: {
-            entityTypeName: 'TennisMatch', isScalar: true,
-            associationName: 'TennisMatch_TennisOdds',
-            foreignKeyNames: ['matchId']
-          }//,
-          //homeWin: {
-          //  entityTypeName: 'TennisOdd', isScalar: false,
-          //  associationName: 'TennisOdds_TennisOdd'
-          //},
-          //awayWin: {
-          //  entityTypeName: 'TennisOdd', isScalar: false,
-          //  associationName: 'TennisOdds_TennisOdd'
-          //}
-        }
-      });
-
-      metadataStore.addEntityType({
         shortName: 'TennisOdd',
         namespace: 'Samurai',
         dataProperties: {
-          matchId: { dataType: DT.Int32 },
-          outcome: { dataType: DT.String },
+          matchId: { dataType: DT.Int32, isPartOfKey: true },
+          sport: { dataType: DT.String },
+          outcome: { dataType: DT.String, isPartOfKey: true },
           oddsBeforeCommission: { dataType: DT.Decimal },
           commissionPct: { dataType: DT.Decimal },
-          decimalOdds: { dataType: DT.Decimal },
-          timeStamp: { dataType: DT.DateTime, isPartOfKey: true },
-          bookmaker: { dataType: DT.String, isPartOfKey: true },
-          oddsSource: { dataType: DT.String, isPartOfKey: true },
+          decimalOdd: { dataType: DT.Decimal },
+          timeStamp: { dataType: DT.DateTime },
+          bookmaker: { dataType: DT.String },
+          oddsSource: { dataType: DT.String },
           clickThroughURL: { dataType: DT.String },
           priority: { dataType: DT.Int32 }
         },
         navigationProperties: {
-          odds: {
-            entityTypeName: 'TennisOdds', isScalar: true,
-            associationName: 'TennisOdds_TennisOdd',
+          tennisMatch: {
+            entityTypeName: 'TennisMatch', isScalar: true,
+            associationName: 'TennisMatch_TennisOdd',
             foreignKeyNames: ['matchId']
           }
         }
@@ -263,38 +205,54 @@
         var probs = footballMatch.predictions().probabilities();
         return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
       });
+
+      footballMatch.homeWinOdds = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '-' : (odds[0].decimalOdd()).toFixed(2);
+      });
+
+      footballMatch.drawOdds = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '-' : (odds[1].decimalOdd()).toFixed(2);
+      });
+
+      footballMatch.awayWinOdds = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '-' : (odds[2].decimalOdd()).toFixed(2);
+      });
+
+      footballMatch.homeWinClickThrough = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '/' : odds[0].clickThroughURL();
+      });
+
+      footballMatch.drawClickThrough = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '/' : odds[1].clickThroughURL();
+      });
+
+      footballMatch.awayWinClickThrough = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? '/' : odds[2].clickThroughURL();
+      });
+
+      footballMatch.homeWinClickThroughLocation = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? 'No odds' : (odds[0].bookmaker() + ' (' + odds[0].oddsSource() + ')');
+      });
+
+      footballMatch.drawClickThroughLocation = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? 'No odds' : (odds[1].bookmaker() + ' (' + odds[1].oddsSource() + ')');
+      });
+
+      footballMatch.awayWinClickThroughLocation = ko.computed(function () {
+        var odds = footballMatch.odds();
+        return odds.length == 0 ? 'No odds' : (odds[2].bookmaker() + ' (' + odds[2].oddsSource() + ')');
+      });
     }
 
     function footballOddsIntialiser(footballOdds) {
-
-      footballOdds.homeWinBestOdds = ko.computed(function () {
-        var x = footballOdds.homeWin()[0];//.decimalOdd;
-        return (x && x.hasOwnProperty('decimalOdd')) ? x.decimalOdd : '';
-      });
-
-      footballOdds.homeWinImplicitProbability = ko.computed(function () {
-        return footballOdds.homeWin().decimalOdd ? (1 / footballOdds.homeWin().decimalOdd) : 0.0;
-      });
-
-      footballOdds.drawImplicitProbability = ko.computed(function () {
-        return footballOdds.draw().decimalOdd ? (1 / footballOdds.draw().decimalOdd) : 0.0;
-      });
-
-      footballOdds.awayWinImplicitProbability = ko.computed(function () {
-        return footballOdds.awayWin().decimalOdd ? (1 / footballOdds.awayWin().decimalOdd) : 0.0;
-      });
-
-      footballOdds.homeWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * footballOdds.homeWinImplicitProbability()).toFixed(0) + '%';
-      });
-
-      footballOdds.drawImplicitProbabilityText = ko.computed(function () {
-        return (100 * footballOdds.drawImplicitProbability()).toFixed(0) + '%';
-      });
-
-      footballOdds.awayWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * footballOdds.awayWinImplicitProbability()).toFixed(0) + '%';
-      });
 
     }
 
@@ -334,28 +292,43 @@
         var probs = tennisMatch.predictions().probabilities();
         return probs && ((100 * probs['awayWin']).toFixed(0) + '%');
       });
+
+      tennisMatch.homeWinOdds = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? '-' : (odds[0].decimalOdd()).toFixed(2);
+      });
+
+      tennisMatch.awayWinOdds = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? '-' : (odds[1].decimalOdd()).toFixed(2);
+      });
+
+      tennisMatch.homeWinClickThrough = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? '/' : odds[0].clickThroughURL();
+      });
+
+      tennisMatch.awayWinClickThrough = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? '/' : odds[1].clickThroughURL();
+      });
+
+      tennisMatch.homeWinClickThroughLocation = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? 'No odds' : (odds[0].bookmaker() + ' (' + odds[0].oddsSource() + ')');
+      });
+
+      tennisMatch.awayWinClickThroughLocation = ko.computed(function () {
+        var odds = tennisMatch.odds();
+        return odds.length == 0 ? 'No odds' : (odds[1].bookmaker() + ' (' + odds[1].oddsSource() + ')');
+      });
+
     }
 
     function tennisOddsIntialiser(tennisOdds) {
 
-      tennisOdds.homeWinImplicitProbability = ko.computed(function () {
-        var homeWin = tennisOdds.homeWin()[0];
-        return (homeWin !== undefined && homeWin.decimalOdd) ? (1 / homeWin.decimalOdd) : 0.0;
-      });
 
-      tennisOdds.awayWinImplicitProbability = ko.computed(function () {
-        var awayWin = tennisOdds.awayWin()[0];
-        var match = tennisOdds.tennisMatch();
-        return (awayWin !== undefined && awayWin.decimalOdd) ? (1 / awayWin.decimalOdd) : 0.0;
-      });
 
-      tennisOdds.homeWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * tennisOdds.homeWinImplicitProbability()).toFixed(0) + '%';
-      });
-
-      tennisOdds.awayWinImplicitProbabilityText = ko.computed(function () {
-        return (100 * tennisOdds.awayWinImplicitProbability()).toFixed(0) + '%';
-      });
 
     }
 

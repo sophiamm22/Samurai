@@ -291,6 +291,7 @@ namespace Samurai.Services
         if (persistedMatch == null)
           continue; //won't get added to the return list but needs some reporting to the client
 
+        retCoupon.MatchId = persistedMatch.Id;
 
         var matchCouponURLs = this.bookmakerRepository
                                   .GetMatchCouponURLs(persistedMatch.Id)
@@ -501,7 +502,10 @@ namespace Samurai.Services
     public IEnumerable<OddViewModel> FetchCoupons(DateTime date, string tournament, string oddsSource, string sport, bool getOdds, bool prescreen)
     {
       var coupons = FetchMatchCoupons(date, tournament, oddsSource, sport, getOdds, prescreen);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons);
+      var odds = Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons).ToList();
+      odds.ForEach(x => x.Sport = this.sport);
+
+      return odds;
     }
   }
 }

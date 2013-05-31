@@ -116,7 +116,9 @@ namespace Samurai.Services.Async
     public async Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
     {
       var coupons = await FetchMatchCoupons(date, tournament, oddsSource, this.sport);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons);
+      var odds = Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons).ToList();
+      odds.ForEach(x => x.Sport = this.sport);
+      return odds;
     }
 
     private IEnumerable<OddViewModel> GetSingleTennisOddsSync(int matchID)
@@ -145,7 +147,14 @@ namespace Samurai.Services.Async
       allOdds.AddRange(playerAOdds.Where(x => x.DecimalOdd == playerAOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
       allOdds.AddRange(playerBOdds.Where(x => x.DecimalOdd == playerBOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
 
-      return Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds);
+      var ret = Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds).ToList();
+      ret.ForEach(x =>
+        {
+          x.MatchId = matchID;
+          x.Sport = this.sport;
+        });
+
+      return ret;
     }
   }
 }

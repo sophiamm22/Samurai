@@ -22,11 +22,11 @@
       else if (node.matchIdentifier && node.hasOwnProperty('playerAFirstName') && node.hasOwnProperty('playerBFirstName')) {
         return { entityType: 'TennisMatch' };
       }
-      else if (node.hasOwnProperty('couponURL') && node.hasOwnProperty('draw')) {
-        return { entityType: 'FootballOdds' };
+      else if (node.hasOwnProperty('decimalOdd') && node.sport == 'Football') {
+        return { entityType: 'FootballOdd' };
       }
-      else if (node.hasOwnProperty('couponURL') && node.hasOwnProperty('homeWin')) {
-        return { entityType: 'TennisOdds' };
+      else if (node.hasOwnProperty('decimalOdd') && node.sport == 'Tennis') {
+        return { entityType: 'TennisOdd' };
       }
       //else if (node.hasOwnProperty('decimalOdd') && node.sport == 'Football'){
       //  return { entityType: 'FootballOdd' };

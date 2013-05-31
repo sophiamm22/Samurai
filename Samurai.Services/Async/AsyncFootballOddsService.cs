@@ -157,6 +157,7 @@ namespace Samurai.Services.Async
         if (persistedMatch == null)
           continue; //won't get added to the return list but needs some reporting to the client
 
+        retCoupon.MatchId = persistedMatch.Id;
 
         var matchCouponURLs = this.bookmakerRepository
                                   .GetMatchCouponURLs(persistedMatch.Id)
@@ -381,7 +382,8 @@ namespace Samurai.Services.Async
         this.fixtureRepository
             .GetDaysMatches(fixtureDate)
             .Where(x => x.TournamentEvent.Tournament.Competition.Sport.SportName == "Football")
-            .Select(x => x.Id);
+            .Select(x => x.Id)
+            .ToList();
       return await GetAllFootballOdds(ids);
     }
 
@@ -412,12 +414,17 @@ namespace Samurai.Services.Async
       }
 
       allOdds.AddRange(homeTeamOdds.Where(x => x.DecimalOdd == homeTeamOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
-      allOdds.AddRange(homeTeamOdds.Where(x => x.DecimalOdd == drawOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));      
+      allOdds.AddRange(drawOdds.Where(x => x.DecimalOdd == drawOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));      
       allOdds.AddRange(awayTeamOdds.Where(x => x.DecimalOdd == awayTeamOdds.Max(m => m.DecimalOdd)).OrderBy(x => (50 - x.OddsSource.Length) + ((x.OddsSource.Length % 2) * 10)).Take(1));
 
-      return Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds);
-
-
+      var ret = Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds).ToList();
+      ret.ForEach(x=>
+        {
+          x.MatchId = matchID;
+          x.Sport = this.sport;
+        });
+      
+      return ret;
     }
 
     public async Task<IEnumerable<OddViewModel>> FetchFootballOddsForTournamentSource(
@@ -448,7 +455,10 @@ namespace Samurai.Services.Async
     public async Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource)
     {
       var coupons = await FetchMatchCoupons(date, tournament, oddsSource, this.sport);
-      return Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons);
+      var odds = Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons).ToList();
+      odds.ForEach(x => x.Sport = this.sport);
+
+      return odds;
     }
   }
 }

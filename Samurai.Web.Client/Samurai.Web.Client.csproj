@@ -255,11 +255,14 @@
     <Content Include="D3 LICENSE.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\App\kelly.js">
+    <Content Include="App\services\kelly.js">
+      <DependentUpon>kelly.coffee</DependentUpon>
+    </Content>
+    <Content Include="App\services\kelly.min.js">
       <DependentUpon>kelly.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\App\predictions.coffee" />
-    <Content Include="Scripts\App\kelly.coffee" />
+    <Content Include="App\services\kelly.coffee" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.eot" />

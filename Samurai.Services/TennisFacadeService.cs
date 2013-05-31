@@ -68,9 +68,12 @@ namespace Samurai.Services
 
       foreach (var tennisFixture in tennisFixturesAndPredictions)
       {
-        var odds = tennisOdds[tennisFixture.Id];
-        tennisFixture.Odds = odds;
-        ret.Add(tennisFixture);
+        if (tennisOdds.ContainsKey(tennisFixture.Id))
+        {
+          var odds = tennisOdds[tennisFixture.Id];
+          tennisFixture.Odds = odds;
+          ret.Add(tennisFixture);
+        }
       }
 
       return ret;

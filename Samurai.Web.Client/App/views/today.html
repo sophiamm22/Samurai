@@ -36,7 +36,11 @@
             <div class="span2"><p data-bind="text: drawProb" class="text-center"></p></div>
             <div class="span4"><p data-bind="text: awayWinProb" class="text-left"></p></div>
           </div>
-         <div data-bind="template: { name: 'odds-template', data: odds() }"></div>
+          <div class="row">
+            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
+            <div class="span2 text-center"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div>
+            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div>
+          </div>
         </div>
       </article>
     </section>
@@ -51,28 +55,22 @@
             <div class="span4"><h2 data-bind="text: playerBFullName" class="text-left page-title"></h2></div>
           </div>
           <div class="row">
-            <div class="span3 offset1"><p class="text-right">Player A win</p></div>
-            <div class="span2"><p class="text-center"></p></div>
-            <div class="span4"><p class="text-left">Player B win</p></div>
-          </div>
-          <div class="row">
             <div class="span3 offset1"><p data-bind="text: playerAWinProb" class="text-right"></p></div>
             <div class="span2"><p></p></div>
             <div class="span4"><p data-bind="text: playerBWinProb" class="text-left"></p></div>
           </div>
-          <div data-bind="template: { name: 'odds-template', data: odds() }"></div>
-         <div class="row" data-bind="with: odds()">
-            <div class="span3 offset1"><p data-bind="text: homeWinImplicitProbability" class="text-right"></p></div>
-         </div>
+          <div class="row">
+            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
+            <div class="span2 text-center"><p>Best Odds</p></div>
+            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target:'_blank' }, text: awayWinOdds"></a></div>
+          </div>
+          <div class="row" data-bind="with: predictions">
+            <div class="span3 offset1"><p data-bind="text: playerAGames" class="text-right"></p></div>
+            <div class="span2 text-center"><p>Matches (last 18 months)</p></div>
+            <div class="span4"><p data-bind="text: playerBGames" class="text-left"></p></div>
+          </div>
         </div>
       </article>
-    </section>
-    <section class="view-list" data-bind="foreach: todaysFootballOdds">
-      <div class="row">
-        <div class="span3 offset1"><p data-bind="text: homeWinImplicitProbabilityText" class="text-right"></p></div>
-        <div class="span2"><p></p></div>
-        <div class="span4"><p data-bind="text: awayWinImplicitProbabilityText" class="text-left"></p></div>
-      </div>
     </section>
   </section>
 </section>

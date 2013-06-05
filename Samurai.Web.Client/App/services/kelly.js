@@ -43,7 +43,9 @@
     function WhitrowKelly(kellyMultiplier, minEdge, calculatedBets) {
       this.kellyMultiplier = kellyMultiplier;
       this.minEdge = minEdge;
-      this.calculatedBets = calculatedBets != null ? calculatedBets : {};
+      this.calculatedBets = calculatedBets != null ? calculatedBets : [];
+      this.noBets = this.calculatedBets.length;
+      this.singleKellyStakes;
       this.realKellyStakes;
     }
 
@@ -53,10 +55,10 @@
 
     learningSteps = 300;
 
-    WhitrowKelly.calcSingleKellyStakes = function(calculatedBets, kellyMultiplier, minEdge) {
+    WhitrowKelly.prototype.calcSingleKellyStakes = function(calculatedBets, kellyMultiplier, minEdge) {
       return calculatedBets.map(function(bet) {
         if (bet.edge >= minEdge) {
-          return Math.max((Math.pow((bet.odds - 1) * bet.prob, kellyMultiplier) - Math.pow(1 - bet.prob, kellyMultiplier)) / (Math.pow(bet.win * bet.prob, kellyMultiplier) + (bet.odds - 1) * Math.pow(1 - bet.prob, kellyMultiplier)), 0);
+          return Math.max((Math.pow((bet.odds - 1) * bet.prob, kellyMultiplier) - Math.pow(1 - bet.prob, kellyMultiplier)) / (Math.pow((bet.odds - 1) * bet.prob, kellyMultiplier) + (bet.odds - 1) * Math.pow(1 - bet.prob, kellyMultiplier)), 0);
         } else {
           return 0;
         }
@@ -73,9 +75,13 @@
       }
     };
 
+    WhitrowKelly.prototype.sign = function(n) {
+      return n && n / Math.abs(n);
+    };
+
     WhitrowKelly.prototype.normaliseKelly = function(singKellyStakes) {
       var totalStakes;
-      totalStakes = sum(singKellyStakes);
+      totalStakes = this.sum(singKellyStakes);
       return singKellyStakes.map(function(bet) {
         if (totalStakes > 1) {
           return bet / totalStakes;
@@ -85,31 +91,24 @@
       });
     };
 
-    WhitrowKelly.prototype.noBets = function() {
-      if (this.calculatedBets) {
-        return this.calculatedBets.length;
-      }
-    };
-
-    WhitrowKelly.prototype.singleKellyStakes = function() {
-      return this.normaliseKelly(this.calcSingleKellyStakes(this.calculatedBets, 1));
-    };
-
     WhitrowKelly.prototype.learningRate = function(slopePrev, slope, ratePrevious) {
-      return ratePrevious * (Math.sign(slopePrev) === Math.sign(slop) ? 1.05 : 0.95);
+      if (!ratePrevious) {
+        ratePrevious = 0;
+      }
+      return ratePrevious * (this.sign(slopePrev) === this.sign(slope) ? 1.05 : 0.95);
     };
 
     WhitrowKelly.prototype.slopes = function(t, b) {
-      var bet, growthContribution, jointPlusMinus, r, rs, slope, trial, z, zOver, zx, _i, _j, _k;
-      jointPlusMinus = {};
-      rs = {};
-      growthContribution = {};
-      zOver = {};
-      slope = {};
-      for (trial = _i = 0; 0 <= t ? _i < t : _i > t; trial = 0 <= t ? ++_i : --_i) {
-        z = {};
-        zx = {};
-        for (b = _j = 0; 0 <= noBets ? _j < noBets : _j > noBets; b = 0 <= noBets ? ++_j : --_j) {
+      var bet, growthContribution, jointPlusMinus, r, rs, slope, trial, z, zOver, zx, _i, _j, _k, _l, _m, _ref, _ref1, _ref2;
+      jointPlusMinus = [];
+      rs = [];
+      growthContribution = [];
+      zOver = [];
+      slope = [];
+      for (trial = _i = 0; _i < t; trial = _i += 1) {
+        z = [];
+        zx = [];
+        for (b = _j = 0, _ref = this.noBets; _j < _ref; b = _j += 1) {
           r = Math.random();
           bet = this.calculatedBets[b];
           if (r < bet.prob) {
@@ -120,39 +119,55 @@
             zx[b] = -this.realKellyStakes[b];
           }
         }
+        jointPlusMinus[trial] = this.sum(zx);
+        rs[trial] = jointPlusMinus[trial] + 1;
+        growthContribution[trial] = Math.log(rs[trial]) / trials;
+        for (b = _k = 0, _ref1 = this.noBets; _k < _ref1; b = _k += 1) {
+          if (!zOver[trial]) {
+            zOver[trial] = [];
+          }
+          zOver[trial][b] = z[b] / (trials * rs[trial]);
+        }
       }
-      jointPlusMinus[trial] = sum(zx);
-      rs[trial] = jointPlusMinus[trial] + 1;
-      growthContribution[trial] = Math.log(rs[trial]) / trials;
-      for (b = _k = 0; 0 <= noBets ? _k < noBets : _k > noBets; b = 0 <= noBets ? ++_k : --_k) {
-        slope[b] = sum((zOver.transpose())[b]);
+      for (b = _l = 0, _ref2 = this.noBets; _l < _ref2; b = _l += 1) {
+        slope[b] = 0;
+        for (t = _m = 0; _m < trials; t = _m += 1) {
+          slope[b] += zOver[t][b];
+        }
       }
       return slope;
     };
 
     WhitrowKelly.prototype.calculateKelly = function() {
-      var adjustedKellyStake, b, lastRate, lastSlope, proposed, rate, rescaleFactor, run, slope, step, totalProposedStake, update, _i, _j, _k;
-      for (run = _i = 0; 0 <= runs ? _i < runs : _i > runs; run = 0 <= runs ? ++_i : --_i) {
-        lastRate = {};
-        rate = {};
-        step = {};
-        update = {};
-        proposed = {};
-        lastSlope = {};
-        slope = slopes(trials, noBets);
-        for (b = _j = 0; 0 <= noBets ? _j < noBets : _j > noBets; b = 0 <= noBets ? ++_j : --_j) {
-          rate[b] = !run ? 1 : learningRate(lastSlope[b], slope[b], lastSlope[b]);
-          adjustedKellyStake = singleKellyStakes[b];
-          step[b] = singleKellyStakes[b] - adjustedKellyStake;
-          update[b] = Math.sign(slope[b]) * rate[b] * step[b];
-          proposed[b] = adjustedKellyStake + update[b];
-          totalProposedStake = sum(proposed);
-          rescaleFactor = totalProposedStake > 1 ? 0.99 / totalProposedStake : 1;
+      var b, lastRate, lastSlope, proposed, rate, rescaleFactor, run, slope, step, totalProposedStake, update, _i, _j, _k, _l, _ref, _ref1, _ref2;
+      this.singleKellyStakes = this.calcSingleKellyStakes(this.calculatedBets, 1, 0);
+      this.realKellyStakes = this.normaliseKelly(this.singleKellyStakes);
+      lastRate = [];
+      rate = [];
+      step = [];
+      update = [];
+      proposed = [];
+      lastSlope = [];
+      for (run = _i = 0; _i < runs; run = _i += 1) {
+        slope = this.slopes(trials, this.noBets);
+        for (b = _j = 0, _ref = this.noBets; _j < _ref; b = _j += 1) {
+          rate[b] = run === 0 ? 1 : this.learningRate(lastSlope[b], slope[b], lastSlope[b]);
+          step[b] = this.singleKellyStakes[b] - this.realKellyStakes[b];
+          update[b] = this.sign(slope[b]) * rate[b] * step[b];
+          proposed[b] = this.realKellyStakes[b] + update[b];
         }
-        for (b = _k = 0; 0 <= noBets ? _k < noBets : _k > noBets; b = 0 <= noBets ? ++_k : --_k) {
+        totalProposedStake = this.sum(proposed);
+        rescaleFactor = totalProposedStake > 1 ? 0.99 / totalProposedStake : 1;
+        for (b = _k = 0, _ref1 = this.noBets; _k < _ref1; b = _k += 1) {
           this.realKellyStakes[b] = proposed[b] < 0 ? 0 : proposed[b] * rescaleFactor;
         }
         lastRate = rate;
+        lastSlope = slope;
+      }
+      if (this.kellyMultiplier !== 1) {
+        for (b = _l = 0, _ref2 = this.noBets; _l < _ref2; b = _l += 1) {
+          this.realKellyStakes[b] = this.kellyMultiplier * this.realKellyStakes[b];
+        }
       }
       return this.realKellyStakes;
     };
@@ -168,14 +183,14 @@
     function ExhaustiveKelly(kellyMultiplier, minEdge, calculatedBets) {
       this.kellyMultiplier = kellyMultiplier;
       this.minEdge = minEdge;
-      this.calculatedBets = calculatedBets != null ? calculatedBets : {};
+      this.calculatedBets = calculatedBets != null ? calculatedBets : [];
       this.realKellyStakes;
     }
 
     ExhaustiveKelly.prototype.calcSingleKellyStakes = function(calculatedBets, kellyMultiplier, minEdge) {
       if (calculatedBets) {
         return calculatedBets.map(function(bet) {
-          if (bet.edge >= minEdge) {
+          if (!minEdge || bet.edge >= minEdge) {
             return Math.max((Math.pow((bet.odds - 1) * bet.prob, kellyMultiplier) - Math.pow(1 - bet.prob, kellyMultiplier)) / (Math.pow((bet.odds - 1) * bet.prob, kellyMultiplier) + (bet.odds - 1) * Math.pow(1 - bet.prob, kellyMultiplier)), 0);
           } else {
             return 0;
@@ -210,53 +225,50 @@
 
     ExhaustiveKelly.prototype.parlaySize = function(n) {
       return this.toRadix(n, 2).split('').reduce(function(t, s) {
-        return t || 0 + s;
+        return parseInt(t) + parseInt(s);
       });
     };
 
     ExhaustiveKelly.prototype.calculateKelly = function() {
-      var bets, i, ii, k, limit, pSize, parlayMaps, parlayNames, pp, realKellyStakes, s, singleKellyStakes, singles, ss, _i, _j, _k, _l, _m, _n, _o, _ref;
+      var bets, i, ii, k, limit, pSize, parlayMaps, parlayNames, parlayNumber, pp, realKellyStakes, s, singleKellyStakes, singles, ss, ssLimit, _i, _j, _k, _l, _m, _n, _o, _ref;
       singles = calculatedBets.length;
-      bets = Math.pow(2, singles);
-      singleKellyStakes = {};
-      parlayNames = {};
+      bets = Math.pow(2, singles) - 1;
+      singleKellyStakes = [];
+      parlayNames = [];
       parlayMaps = [];
-      realKellyStakes = {};
+      realKellyStakes = [];
       singleKellyStakes = this.calcSingleKellyStakes(this.calculatedBets, this.kellyMultiplier, this.minEdge);
-      for (i = _i = 1; _i <= singles; i = _i += 1) {
+      for (i = _i = 0; _i < singles; i = _i += 1) {
         parlayMaps[i] = [];
       }
       for (i = _j = 1; _j <= bets; i = _j += 1) {
         pSize = parseInt(this.parlaySize(i));
-        if (!parlayMaps[pSize - 1]) {
-          parlayMaps[pSize - 1] = [];
-        }
         parlayMaps[pSize - 1].push(i);
       }
       for (s = _k = singles; _k >= 1; s = _k += -1) {
         limit = parlayMaps[s - 1].length;
         for (i = _l = 0; _l < limit; i = _l += 1) {
-          this.parlayNumber = this.parlayMap[s - 1][i];
-          this.realKellyStakes[parlayNumber] = 1;
-          this.parlayNames[parlayNumber] = "";
-          for (k = _m = 0; _m <= singles; k = _m += 1) {
-            if (Math.pow(this.bitImp(2, k), this.parlayNumber) === -1) {
-              this.realKellyStakes[parlayNumber] *= this.singleKellyStakes[k];
-              this.parlayNames[this.parlayNumber] += (k + 1) + "+";
+          parlayNumber = parlayMaps[s - 1][i];
+          realKellyStakes[parlayNumber] = 1;
+          parlayNames[parlayNumber] = "";
+          for (k = _m = 0; _m < singles; k = _m += 1) {
+            if (this.bitImp(Math.pow(2, k), parlayNumber) === -1) {
+              realKellyStakes[parlayNumber] *= singleKellyStakes[k];
+              parlayNames[parlayNumber] += (k + 1) + "+";
             }
           }
           for (ss = _n = _ref = s + 1; _n <= singles; ss = _n += 1) {
-            this.ssLimit = this.parlayMaps[ss - 1].length;
+            ssLimit = parlayMaps[ss - 1].length;
             for (ii = _o = 0; _o < ssLimit; ii = _o += 1) {
               pp = parlayMaps[ss - 1][ii];
-              if (this.bitImp(parlayNumber, pp === -1)) {
-                this.realKellyStakes[parlayNumber] -= this.realKellyStakes[pp];
+              if (this.bitImp(parlayNumber, pp) === -1) {
+                realKellyStakes[parlayNumber] -= realKellyStakes[pp];
               }
             }
           }
         }
       }
-      return this.realKellyStakes;
+      return realKellyStakes.slice(0, singles);
     };
 
     return ExhaustiveKelly;

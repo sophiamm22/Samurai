@@ -150,6 +150,10 @@
     <Compile Include="Value\Excel\ExcelTennisPredictionStrategy.cs" />
     <Compile Include="Value\Excel\TennisSpreadsheetData.cs" />
     <Compile Include="Value\FootballFixtureStrategy.cs" />
+    <Compile Include="Value\Kelly\ExhaustiveKelly.cs" />
+    <Compile Include="Value\Kelly\IBetable.cs" />
+    <Compile Include="Value\Kelly\KellyStrategyProvider.cs" />
+    <Compile Include="Value\Kelly\WhitrowKelly.cs" />
     <Compile Include="Value\OddsStrategy.cs" />
     <Compile Include="Value\OddsStrategyProvider.cs" />
     <Compile Include="Value\PredictionStrategy.cs" />

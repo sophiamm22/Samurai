@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="DomainValue\CouponStrategyTests.cs" />
     <Compile Include="DomainValue\FootballFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\KellyTests.cs" />
     <Compile Include="DomainValue\OddsStrategyTests.cs" />
     <Compile Include="DomainValue\FootballPredictionStrategyTests.cs" />
     <Compile Include="DomainValue\TennisFixtureStrategyTests.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepositoryProvider.cs" />
     <Compile Include="TestInfrastructure\SafeCollection.cs" />
     <Compile Include="TestInfrastructure\ManifestWebRepositoryProvider.cs" />
+    <Compile Include="TestInfrastructure\TestBetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj">

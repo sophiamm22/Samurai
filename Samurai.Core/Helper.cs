@@ -8,6 +8,7 @@ namespace Samurai.Core
 {
   public static class Helper
   {
+
     public static string ToHyphenated(this string text)
     {
       var rgx = new Regex("[^a-zA-Z0-9_ -]");

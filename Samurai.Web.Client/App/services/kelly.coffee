@@ -114,6 +114,7 @@ class WhitrowKelly extends Kelly
         if @kellyMultiplier isnt 1
             for b in [0...@noBets] by 1
                 @realKellyStakes[b] = @kellyMultiplier * @realKellyStakes[b] 
+
         @realKellyStakes
             
 class ExhaustiveKelly extends Kelly

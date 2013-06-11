@@ -6,12 +6,20 @@
       <address>found</address>
     </div>
   </header>
+  <div class="filter-box-container">
+    <input class="filter-box"
+           data-bind="value: betFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
+           placeholder="filter by team, player, league, competition or sport" type="text" />
+    <a class="clear-text" data-bind="click: clearFilter" title="Clear"></a>
+  </div>
+  <a class="btn btn-info btn-force-refresh pull-right" 
+      data-bind="click: calculateValue" href="#"><i class="icon-refresh"></i> Refresh</a>
   <section id="today">
     <nav>
       <ul data-bind="foreach: competitions">
         <li class="route-left" data-bind="css: {'route-active': isSelected()}">
           <a data-bind="attr: { href: hash }">
-            <span data-bind="text: caption"></span>
+            <span data-bind="text: caption, click: $parent.selectGrouping"></span>
           </a>
         </li>
       </ul>
@@ -50,9 +58,9 @@
           <small data-bind="text: tournament" class="left"></small>
           <small data-bind="text: matchTime" class="right"></small>
           <div class="row">
-            <div class="span3 offset1"><h2 data-bind="text: playerAFullName" class="text-right page-title"></h2></div>
+            <div class="span3 offset1"><h2 data-bind="text: homeTeam" class="text-right page-title"></h2></div>
             <div class="span2"><p class="text-center vs">vs.</p></div>
-            <div class="span4"><h2 data-bind="text: playerBFullName" class="text-left page-title"></h2></div>
+            <div class="span4"><h2 data-bind="text: awayTeam" class="text-left page-title"></h2></div>
           </div>
           <div class="row">
             <div class="span3 offset1"><p data-bind="text: playerAWinProb" class="text-right"></p></div>

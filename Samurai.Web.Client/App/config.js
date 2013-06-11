@@ -32,11 +32,14 @@
     todayBySport: '#/today/sport'
   };
 
+  var throttle = 400;
+
   return {
     routes: routes,
     startModule: startModule,
     remoteServiceName: remoteServiceName,
-    hashes: hashes
+    hashes: hashes,
+    throttle: throttle
   };
 
 });

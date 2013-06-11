@@ -4,8 +4,20 @@
     var EntityQuery = breeze.EntityQuery,
         manager = configureBreezeManager();
 
-    var getTodaysFootballSchedule = function (footballScheduleObservable) {
-      var query = EntityQuery.from('fixtures/todays-football-schedule');
+    var getTodaysFootballSchedule = function (footballScheduleObservable, options) {
+
+      var query = EntityQuery
+        .from('fixtures/todays-football-schedule')
+        .toType('FootballMatch');
+
+      if (!options.forceRefresh) {
+        var f = manager.executeQueryLocally(query);
+        if (f.length > 0) {
+          filterResults(footballScheduleObservable, f, options.filter);
+          //footballScheduleObservable(s);
+          return Q.resolve();
+        }
+      }
 
       return manager.executeQuery(query)
         .then(querySucceeded)
@@ -13,17 +25,27 @@
       
       function querySucceeded(data) {
         if (footballScheduleObservable) {
-          footballScheduleObservable(data.results);
+          filterResults(footballScheduleObservable, data.results, options.filter);
+          //footballScheduleObservable(data.results);
         }
         log('Retrieved todays football schedule from remote data source',
           data, true);
       }
     };
 
-    var getTodaysLatestFootballOdds = function (footballOddsObservable) {
-      //footballScheduleObservable.isLoading = true;
+    var getTodaysLatestFootballOdds = function (footballOddsObservable, options) {
 
-      var query = EntityQuery.from('odds/todays-football-odds');
+      var query = EntityQuery
+        .from('odds/todays-football-odds')
+        .toType('FootballOdd');
+
+      if (!options.forceRefresh) {
+        var o = manager.executeQueryLocally(query);
+        if (o.length > 0) {
+          footballOddsObservable(o);
+          return Q.resolve();
+        }
+      }
 
       return manager.executeQuery(query)
         .then(querySucceeded)
@@ -38,8 +60,20 @@
       }
     };
 
-    var getTodaysTennisSchedule = function (tennisScheduleObservable) {
-      var query = EntityQuery.from('fixtures/todays-tennis-schedule');
+    var getTodaysTennisSchedule = function (tennisScheduleObservable, options) {
+
+      var query = EntityQuery
+        .from('fixtures/todays-tennis-schedule')
+        .toType('TennisMatch');
+
+      if (!options.forceRefresh) {
+        var t = manager.executeQueryLocally(query);
+        if (t.length > 0) {
+          filterResults(tennisScheduleObservable, t, options.filter);
+          //tennisScheduleObservable(t);
+          return Q.resolve();
+        }
+      }
 
       return manager.executeQuery(query)
         .then(querySucceeded)
@@ -47,15 +81,27 @@
 
       function querySucceeded(data) {
         if (tennisScheduleObservable) {
-          tennisScheduleObservable(data.results);
+          filterResults(tennisScheduleObservable, data.results, options.filter);
+          //tennisScheduleObservable(data.results);
         }
         log('Retrieved todays tennis schedule from remote data source',
           data, true);
       }
     };
 
-    var getTodaysLatestTennisOdds = function (tennisOddsObservable) {
-      var query = EntityQuery.from('odds/todays-tennis-odds');
+    var getTodaysLatestTennisOdds = function (tennisOddsObservable, options) {
+
+      var query = EntityQuery
+        .from('odds/todays-tennis-odds')
+        .toType('TennisOdd');
+
+      if (!options.forceRefresh) {
+        var o = manager.executeQueryLocally(query);
+        if (o.length > 0) {
+          tennisOddsObservable(o);
+          return Q.resolve();
+        }
+      }
 
       return manager.executeQuery(query)
         .then(querySucceeded)
@@ -85,6 +131,20 @@
     return datacontext;
 
     //#region Internal methods
+    function getLocal(resource){
+      var query = EntityQuery.from(resource);
+      return manager.executeQueryLocally(query);
+    }
+
+    function filterResults(observable, list, filter) {
+      var filteredList = _.filter(list, function (item) {
+        var match = filter.predicate(filter, item);
+        return match;
+      });
+      observable(filteredList);
+    }
+
+
     function queryFailed(error) {
       var msg = 'Error retreiving data. ' + error.message;
       logger.log(msg,

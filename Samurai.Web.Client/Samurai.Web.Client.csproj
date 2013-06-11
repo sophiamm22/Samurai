@@ -214,11 +214,15 @@
     <Content Include="App\durandal\viewModelBinder.js" />
     <Content Include="App\durandal\widget.js" />
     <Content Include="App\main.js" />
+    <Content Include="App\services\filter.js" />
     <Content Include="App\services\groupSchedule.js" />
     <Content Include="App\services\jsonResultsAdapter.js" />
+    <Content Include="App\services\kellyCalcs.js" />
     <Content Include="App\services\model.js" />
     <Content Include="App\services\datacontext.js" />
     <Content Include="App\services\logger.js" />
+    <Content Include="App\services\utils.js" />
+    <Content Include="App\services\valueCalculator.js" />
     <Content Include="App\viewmodels\performance.js" />
     <Content Include="App\viewmodels\home.js" />
     <Content Include="App\viewmodels\schematest.js" />

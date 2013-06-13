@@ -13,7 +13,7 @@
     <a class="clear-text" data-bind="click: clearFilter" title="Clear"></a>
   </div>
   <a class="btn btn-info btn-force-refresh pull-right" 
-      data-bind="click: calculateValue" href="#"><i class="icon-refresh"></i> Refresh</a>
+      data-bind="click: calculateValue" href="#"><i class="icon-refresh"></i> Calculate Bets</a>
   <section id="today">
     <nav>
       <ul data-bind="foreach: competitions">
@@ -49,6 +49,11 @@
             <div class="span2 text-center"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div>
             <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div>
           </div>
+          <div class="row">
+            <div class="span10 text-center">
+              <span class="advice" data-bind="text: temporaryBetCaption"></span>
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -76,6 +81,11 @@
             <div class="span3 offset1"><p data-bind="text: playerAGames" class="text-right"></p></div>
             <div class="span2 text-center"><p>Matches (last 18 months)</p></div>
             <div class="span4"><p data-bind="text: playerBGames" class="text-left"></p></div>
+          </div>
+          <div class="row">
+            <div class="span10 text-center">
+              <span class="advice" data-bind="text: temporaryBetCaption"></span>
+            </div>
           </div>
         </div>
       </article>

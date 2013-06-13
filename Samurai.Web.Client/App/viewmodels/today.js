@@ -19,7 +19,14 @@
         }),
         
         calculateValue = function(){
-          var x = valueCalculator.calculateValue(todaysFootballSchedules(), todaysTennisSchedules());
+          var betPercentages = valueCalculator.calculateValue(todaysFootballSchedules(), todaysTennisSchedules());
+          var schedules = _.union(todaysFootballSchedules(), todaysTennisSchedules());
+          schedules.forEach(function (schedule) {
+            if (betPercentages[schedule.id()]) {
+              var betPercentage = betPercentages[schedule.id()];
+              schedule.percentBet(betPercentage);
+            }
+          });
         },
 
         clearFilter = function () {

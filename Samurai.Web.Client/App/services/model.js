@@ -181,8 +181,17 @@
 
     function footballMatchIntitialiser(footballMatch) {
 
+      footballMatch.percentBet = ko.observable(0);
+
       footballMatch.sport = ko.computed(function () {
         return 'Football'; //temporary.  needs to come from the API IMHO
+      });
+
+      footballMatch.hasOdds = ko.computed(function () {
+        if (footballMatch.hasOwnProperty('odds') && footballMatch.odds()) {
+          var odds = footballMatch.odds();
+
+        }
       });
 
       footballMatch.tournament = ko.computed(function () {
@@ -308,16 +317,15 @@
         return bestBet > 0.1; //need to have this stored somewhere
       });
 
-      footballMatch.valueOdd = ko.computed(function () {
+      footballMatch.valueOutcome = ko.computed(function () {
         if (footballMatch.hasQualifyingBet()) {
-          return footballMatch.homeWinOddsDbl();
-        }
-      });
+          var bestBet = _.max([footballMatch.homeWinEdge(), footballMatch.drawEdge(), footballMatch.awayWinEdge()]);
 
-      footballMatch.valuePrediction = ko.computed(function () {
-        if (footballMatch.hasQualifyingBet()) {
-          return footballMatch.homeWinProbDbl();
+          if (bestBet === footballMatch.homeWinEdge()) { return 'home-win'; }
+          if (bestBet === footballMatch.drawEdge()) { return 'draw'; }
+          if (bestBet === footballMatch.awayWinEdge()) { return 'away-win'; }
         }
+        return 'no-bet';
       });
 
       footballMatch.valueOdd = ko.computed(function () {
@@ -327,8 +335,8 @@
           if (bestBet === footballMatch.homeWinEdge()) { return footballMatch.homeWinOddsDbl(); }
           if (bestBet === footballMatch.drawEdge()) { return footballMatch.drawOddsDbl(); }
           if (bestBet === footballMatch.awayWinEdge()) { return footballMatch.awayWinOddsDbl(); }
-          return 1.01;
         }
+        return 1.01;
       });
 
       footballMatch.valuePrediction = ko.computed(function () {
@@ -336,10 +344,19 @@
           var bestBet = _.max([footballMatch.homeWinEdge(), footballMatch.awayWinEdge()]);
 
           if (bestBet === footballMatch.homeWinEdge()) { return footballMatch.homeWinProbDbl(); }
-          if (bestBet === footballMatch.DrawEdge()) { return footballMatch.drawProbDbl(); }
+          if (bestBet === footballMatch.drawEdge()) { return footballMatch.drawProbDbl(); }
           if (bestBet === footballMatch.awayWinEdge()) { return footballMatch.homeWinProbDbl(); }
-          return 0.0;
         }
+        return 0.0;
+      });
+
+      footballMatch.temporaryBetCaption = ko.computed(function () {
+        if (footballMatch.hasQualifyingBet() && footballMatch.percentBet() !== 0) {
+          if (footballMatch.valueOutcome() === 'home-win') { return 'Bet £' + (1000.0 * footballMatch.percentBet()).toFixed(2) + ' on ' + footballMatch.homeTeam(); }
+          if (footballMatch.valueOutcome() === 'draw') { return 'Bet £' + (1000.0 * footballMatch.percentBet()).toFixed(2) + ' on draw'; }
+          if (footballMatch.valueOutcome() === 'away-win') { return 'Bet £' + (1000.0 * footballMatch.percentBet()).toFixed(2) + ' on ' + footballMatch.awayTeam(); }
+        }
+        return '';
       });
     }
 
@@ -348,6 +365,8 @@
     }
 
     function tennisMatchInitialiser(tennisMatch) {
+
+      tennisMatch.percentBet = ko.observable(0);
 
       tennisMatch.sport = ko.computed(function () {
         return 'Tennis'; //temporary.  needs to come from the API IMHO
@@ -452,14 +471,24 @@
         return bestBet > 0.1; //need to have this stored somewhere      
       });
 
+      tennisMatch.valueOutcome = ko.computed(function () {
+        if (tennisMatch.hasQualifyingBet()) {
+          var bestBet = _.max([tennisMatch.homeWinEdge(), tennisMatch.awayWinEdge()]);
+
+          if (bestBet === tennisMatch.homeWinEdge()) { return 'home-win'; }
+          if (bestBet === tennisMatch.awayWinEdge()) { return 'away-win'; }
+        }
+        return 'no-bet';
+      });
+
       tennisMatch.valueOdd = ko.computed(function () {
         if (tennisMatch.hasQualifyingBet()) {
           var bestBet = _.max([tennisMatch.homeWinEdge(), tennisMatch.awayWinEdge()]);
 
           if (bestBet === tennisMatch.homeWinEdge()) { return tennisMatch.homeWinOddsDbl(); }
           if (bestBet === tennisMatch.awayWinEdge()) { return tennisMatch.awayWinOddsDbl(); }
-          return 1.01;
         }
+        return 1.01;
       });
 
       tennisMatch.valuePrediction = ko.computed(function () {
@@ -468,15 +497,20 @@
 
           if (bestBet === tennisMatch.homeWinEdge()) { return tennisMatch.playerAWinProbDbl(); }
           if (bestBet === tennisMatch.awayWinEdge()) { return tennisMatch.playerBWinProbDbl(); }
-          return 0.00;
         }
+        return 0.00;
+      });
+
+      tennisMatch.temporaryBetCaption = ko.computed(function () {
+        if (tennisMatch.hasQualifyingBet() && tennisMatch.percentBet() !== 0) {
+          if (tennisMatch.valueOutcome() === 'home-win') { return 'Bet £' + (1000.0 * tennisMatch.percentBet()).toFixed(2) + ' on ' + tennisMatch.homeTeam(); }
+          if (tennisMatch.valueOutcome() === 'away-win') { return 'Bet £' + (1000.0 * tennisMatch.percentBet()).toFixed(2) + ' on ' + tennisMatch.awayTeam(); }
+        }
+        return '';
       });
     }
 
     function tennisOddsIntialiser(tennisOdds) {
-
-
-
 
     }
 

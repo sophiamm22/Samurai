@@ -232,7 +232,7 @@
 
       ExhaustiveKelly.prototype.calculateKelly = function () {
         var bets, i, ii, k, limit, pSize, parlayMaps, parlayNames, parlayNumber, pp, realKellyStakes, s, singleKellyStakes, singles, ss, ssLimit, _i, _j, _k, _l, _m, _n, _o, _ref;
-        singles = calculatedBets.length;
+        singles = this.calculatedBets.length;
         bets = Math.pow(2, singles) - 1;
         singleKellyStakes = [];
         parlayNames = [];
@@ -269,7 +269,8 @@
             }
           }
         }
-        return realKellyStakes.slice(0, singles);
+        var ret = _.filter(_.zip(parlayNames, realKellyStakes), function (kelly) { return kelly[0] && kelly[0].length === 2; });
+        return _.map(ret, function (kelly) { return kelly[1]; });
       };
 
       return ExhaustiveKelly;

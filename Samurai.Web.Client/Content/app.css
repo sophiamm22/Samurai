@@ -125,6 +125,11 @@ h2.page-title {
   margin-top: 10px;
 }
 
+.advice {
+  font-weight: bold;
+  color: #194D7B;
+}
+
 .route-left {
   font-weight: bold;
   color: #119EDA;

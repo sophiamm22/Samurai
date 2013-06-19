@@ -24,12 +24,14 @@ namespace Samurai.Web.API.Controllers
       this.bus = bus;
     }
 
-    [HttpPut]
-    public async Task FetchTennisSchedules(TennisScheduleDateArgs commandArgs)
+    [HttpPost]
+    [ActionName("fetch-tennis-schedule")]
+    public async Task<HttpResponseMessage> FetchTennisSchedules(TennisScheduleDateArgs commandArgs)
     {
       var command = new RequestWrapper<TennisScheduleDateArgs>(Request, commandArgs);
       await this.bus
                 .SendWithSignalRCallback<TennisScheduleDateArgs, OddsHub>(command);
+      return Request.CreateResponse(HttpStatusCode.Accepted);
     }
 
     [HttpGet]

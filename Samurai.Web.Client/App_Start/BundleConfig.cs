@@ -34,6 +34,11 @@ namespace Samurai.Web.Client
         );
 
       bundles.Add(
+        new ScriptBundle("~/scripts/signalr")
+          .Include("~/Scripts/jquery.signalR-{version}.js")
+        );
+
+      bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
           .Include("~/Content/bootstrap.css")

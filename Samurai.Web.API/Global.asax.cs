@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.AspNet.SignalR;
 
 using Samurai.Web.API.App_Start;
 using Samurai.Services.AutoMapper;
@@ -20,6 +21,7 @@ namespace Samurai.Web.API
     protected void Application_Start()
     {
       AutoMapperManualConfiguration.Configure();
+      RouteTable.Routes.MapHubs(new HubConfiguration() { EnableCrossDomain = true });
       IOCConfig.RegisterIOC();
       WebApiConfig.Register(GlobalConfiguration.Configuration);
       

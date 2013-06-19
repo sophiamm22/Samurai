@@ -313,7 +313,7 @@ namespace Samurai.Domain.Value
         }
         else if (token is OddsCheckerWebScheduleHeading)
         {
-          firstHeading = (((OddsCheckerWebScheduleHeading)token).Heading == "Mens Matches") ? "1st heading" : "Not 1st heading";
+          firstHeading = firstHeading == "Not set" ? "1st heading" : "Not 1st heading";
         }
         else if (token is OddsCheckerWebScheduleMatch && firstHeading == "1st heading")
         {

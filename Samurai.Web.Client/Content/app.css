@@ -135,6 +135,20 @@ h2.page-title {
   color: #119EDA;
 }
 
+.inline-label {
+  width: auto;
+  display: inline-block;
+}
+
+.inline-input {
+  width: auto;
+  padding-left: 5px;
+}
+
+.inline-button {
+  vertical-align: top;
+}
+
 footer a {
     font-weight: bold;
 }
@@ -179,7 +193,6 @@ footer span {
 
 .btn {
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .btn-info {
@@ -216,6 +229,14 @@ footer span {
     box-shadow: 0 1px rgba(255,255,255,.8);
     min-height: 150px;
 }
+
+.article-admin-sections {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.08);
+    border-top: solid 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px rgba(255,255,255,.8);
+
+}
+
 
 /* End Boostrap overrides  */
 /***************************/

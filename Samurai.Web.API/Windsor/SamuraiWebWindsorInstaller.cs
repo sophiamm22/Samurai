@@ -108,7 +108,7 @@ namespace Samurai.Web.API.Windsor
                         .AsFactory()
                         .LifestylePerWebRequest());
 
-      //ProgressReporterProvider.Current = new ConsoleProgressReporterProvider();
+      ProgressReporterProvider.Current = new HubProgressReporterProvider();
     }
   }
 }

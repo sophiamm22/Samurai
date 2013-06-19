@@ -9,5 +9,7 @@ namespace Samurai.Web.API.Hubs
 {
   public class OddsHub : Hub
   {
+
+
   }
 }

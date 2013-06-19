@@ -6,12 +6,19 @@
     url: 'today',
     moduleId: 'viewmodels/today',
     name: 'Today',
-    visible: true
+    visible: true,
+    caption: 'Today'
   }, {
     url: 'performance',
     moduleId: 'viewmodels/performance',
     name: 'Performance',
     visible: true
+  }, {
+    url: 'admin',
+    moduleId: 'viewmodels/admin',
+    name: 'Admin',
+    visible: true,
+    settings: { admin: true }
   }, {
     url: 'today/competition/:competition',
     moduleId: 'viewmodels/today',
@@ -26,6 +33,8 @@
 
   var remoteServiceName = 'http://localhost:3600/api';
 
+  var signalrServiceName = 'http://localhost:3600/signalr';
+
   var hashes = {
     today: '#/today',
     todayByCompetition: '#/today/competition',
@@ -39,7 +48,8 @@
     startModule: startModule,
     remoteServiceName: remoteServiceName,
     hashes: hashes,
-    throttle: throttle
+    throttle: throttle,
+    signalrServiceName: signalrServiceName
   };
 
 });

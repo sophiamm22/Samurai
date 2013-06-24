@@ -149,6 +149,10 @@ h2.page-title {
   vertical-align: top;
 }
 
+textarea.big{
+  width: 100%;
+}
+
 footer a {
     font-weight: bold;
 }

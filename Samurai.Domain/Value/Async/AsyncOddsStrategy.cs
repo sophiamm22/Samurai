@@ -11,6 +11,7 @@ using Samurai.SqlDataAccess.Contracts;
 using Samurai.Core;
 using Samurai.Domain.Exceptions;
 using Samurai.Domain.HtmlElements;
+using Samurai.Domain.Infrastructure;
 
 namespace Samurai.Domain.Value.Async
 {
@@ -51,6 +52,7 @@ namespace Samurai.Domain.Value.Async
 
     public override async Task<IDictionary<Outcome, IEnumerable<GenericOdd>>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Best Betting odds for {0} vs. {1}", matchCoupon.TeamOrPlayerA, matchCoupon.TeamOrPlayerB), ReporterImportance.High, ReporterAudience.Admin);
       var playerLookup = new Dictionary<string, Outcome>()
       {
         { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },
@@ -136,6 +138,8 @@ namespace Samurai.Domain.Value.Async
 
     public override async Task<IDictionary<Outcome, IEnumerable<GenericOdd>>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Oddschecker Mobile odds for {0} vs. {1}", matchCoupon.TeamOrPlayerA, matchCoupon.TeamOrPlayerB), ReporterImportance.High, ReporterAudience.Admin);
+
       var playerLookup = new Dictionary<string, Outcome>()
       {
         { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },
@@ -220,6 +224,8 @@ namespace Samurai.Domain.Value.Async
 
     public override async Task<IDictionary<Outcome, IEnumerable<GenericOdd>>> GetOdds(GenericMatchCoupon matchCoupon, DateTime couponDate, DateTime timeStamp)
     {
+      ProgressReporterProvider.Current.ReportProgress(string.Format("Getting Oddschecker Web odds for {0} vs. {1}", matchCoupon.TeamOrPlayerA, matchCoupon.TeamOrPlayerB), ReporterImportance.High, ReporterAudience.Admin);
+
       var playerLookup = new Dictionary<string, Outcome>()
       {
         { matchCoupon.TeamOrPlayerA, Outcome.HomeWin },

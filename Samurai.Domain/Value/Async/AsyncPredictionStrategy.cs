@@ -168,7 +168,7 @@ namespace Samurai.Domain.Value.Async
 
       foreach (var jsonTennisMatch in jsonTennisMatches)
       {
-        predictions.Add(new Model.GenericPrediction()
+        predictions.Add(new Model.TennisPrediction()
         {
           PlayerAFirstName = jsonTennisMatch.PlayerAFirstName,
           TeamOrPlayerA = jsonTennisMatch.PlayerASurname,

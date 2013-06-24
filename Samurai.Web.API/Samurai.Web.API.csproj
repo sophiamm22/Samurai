@@ -247,6 +247,8 @@
     <Compile Include="Infrastructure\ICommandHandlerFactory.cs" />
     <Compile Include="Infrastructure\IMessageHandler.cs" />
     <Compile Include="Infrastructure\IMessageHandlerFactory.cs" />
+    <Compile Include="Infrastructure\ISignalHandler.cs" />
+    <Compile Include="Infrastructure\ISignalHandlerFactory.cs" />
     <Compile Include="Infrastructure\MessageBus.cs" />
     <Compile Include="Infrastructure\MessageHandlerWithSignalRHub.cs" />
     <Compile Include="Infrastructure\QueryStringCollection.cs" />
@@ -256,6 +258,7 @@
     <Compile Include="Messaging\FootballSchedule\GetFootballOddsHandler.cs" />
     <Compile Include="Messaging\FootballSchedule\GetFootballScheduleHandler.cs" />
     <Compile Include="Messaging\Generic\GenericDateArgs.cs" />
+    <Compile Include="Messaging\TennisSchedule\FetchTennisScheduleDateArgs.cs" />
     <Compile Include="Messaging\TennisSchedule\FetchTennisScheduleHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\GetTennisOddsHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\GetTennisScheduleHandler.cs" />
@@ -263,6 +266,7 @@
     <Compile Include="Messaging\TennisSchedule\TennisScheduleDateArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Windsor\SamuraiWebWindsorInstaller.cs" />
+    <Compile Include="Windsor\SignalRDependencyResolver.cs" />
     <Compile Include="Windsor\WindsorAPIControllerActivator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -381,6 +385,10 @@
     <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj">
       <Project>{83ce8910-37aa-415a-954b-3e36f9701d17}</Project>
       <Name>Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samurai.Core\Samurai.Core.csproj">
+      <Project>{8f6d4baf-a8ee-4221-b667-3ee8b4a6849c}</Project>
+      <Name>Samurai.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samurai.Domain.Entities\Samurai.Domain.Entities.csproj">
       <Project>{805325f9-8997-4247-b5c7-36476609f616}</Project>

@@ -9,6 +9,8 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Castle.Facilities.TypedFactory;
+using Microsoft.AspNet.SignalR.Hubs;
+using Microsoft.AspNet.SignalR;
 
 using Infrastructure.Data;
 using Samurai.SqlDataAccess;
@@ -23,6 +25,8 @@ using Samurai.Domain.Infrastructure;
 using Samurai.Web.API.Infrastructure;
 using Samurai.Web.API.Messaging.TennisSchedule;
 using Samurai.Web.API.Controllers;
+using Samurai.Web.API.Hubs;
+using Samurai.Core;
 
 namespace Samurai.Web.API.Windsor
 {
@@ -30,8 +34,8 @@ namespace Samurai.Web.API.Windsor
   {
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
-      var repositoryType = "irrelevant";
-      var basePath = "not telling you";
+      var repositoryType = "SaveTestData";
+      var basePath = @"C:\My Box Files\";
 
       container.AddFacility<TypedFactoryFacility>();
 
@@ -58,8 +62,18 @@ namespace Samurai.Web.API.Windsor
                         {
                           repositoryType = repositoryType,
                           basePath = basePath
-                        }
-                        )
+                        })
+                        .LifeStyle
+                        .PerWebRequest);
+
+      container.Register(Component
+                        .For<IWebRepositoryProviderAsync>()
+                        .ImplementedBy<WebRepositoryProviderAsync>()
+                        .DependsOn(new
+                        {
+                          repositoryType = repositoryType,
+                          basePath = basePath
+                        })
                         .LifeStyle
                         .PerWebRequest);
 
@@ -107,6 +121,20 @@ namespace Samurai.Web.API.Windsor
                         .For<ICommandHandlerFactory>()
                         .AsFactory()
                         .LifestylePerWebRequest());
+
+      container.Register(Component
+                        .For<ISignalHandlerFactory>()
+                        .AsFactory()
+                        .LifestylePerWebRequest());
+
+
+      container.Register(Classes
+                        .FromAssemblyContaining<OddsHub>()
+                        .BasedOn<IHub>()
+                        .LifestylePerWebRequest());
+
+      var signalRDependencyResolver = new SignalRDependencyResolver(container);
+      GlobalHost.DependencyResolver = signalRDependencyResolver;
 
       ProgressReporterProvider.Current = new HubProgressReporterProvider();
     }

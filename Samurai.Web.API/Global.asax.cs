@@ -21,8 +21,8 @@ namespace Samurai.Web.API
     protected void Application_Start()
     {
       AutoMapperManualConfiguration.Configure();
-      RouteTable.Routes.MapHubs(new HubConfiguration() { EnableCrossDomain = true });
       IOCConfig.RegisterIOC();
+      RouteTable.Routes.MapHubs(new HubConfiguration() { EnableCrossDomain = true });
       WebApiConfig.Register(GlobalConfiguration.Configuration);
       
     }

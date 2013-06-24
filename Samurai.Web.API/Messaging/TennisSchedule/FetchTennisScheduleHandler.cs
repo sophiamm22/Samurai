@@ -13,33 +13,31 @@ using Samurai.Web.API.Hubs;
 
 namespace Samurai.Web.API.Messaging.TennisSchedule
 {
-  public class FetchTennisScheduleHandler : CommandHandlerWithSignalRHub<TennisScheduleDateArgs, OddsHub>
+  public class FetchTennisScheduleHandler : ISignalHandler<FetchTennisScheduleDateArgs>
   {
     private readonly IAsyncTennisFacadeAdminService tennisService;
 
     public FetchTennisScheduleHandler(IAsyncTennisFacadeAdminService tennisService)
-      : base()
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
       this.tennisService = tennisService;
     }
 
-    public override async Task Handle(RequestWrapper<TennisScheduleDateArgs> requestWrapper)
+    public async Task Handle(FetchTennisScheduleDateArgs command)
     {
-      if (!Extensions.IsValidDate(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day))
+      if (!Extensions.IsValidDate(command.Year, command.Month, command.Day))
       {
-        Hub.Clients.All.reportProgress("Not a valid date");
+        throw new ArgumentException();
       }
 
       try
       {
-        var fixtureDate = new DateTime(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day);
+        var fixtureDate = new DateTime(command.Year, command.Month, command.Day);
         var tennisFixtures = await this.tennisService.UpdateDaysSchedule(fixtureDate);
-        Hub.Clients.All.reportProgress("done");
       }
       catch (Exception ex)
       {
-        Hub.Clients.All.reportProgress("Oops " + ex.Message);
+
       }
     }
   }

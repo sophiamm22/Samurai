@@ -118,7 +118,8 @@ namespace Samurai.SqlDataAccess
       var bookmakerAlias = GetQuery<BookmakerExternalSourceAlias>()
                               .Include(t => t.Bookmaker)
                               .Where(a => a.Alias == bookmakerNameSource &&
-                                          a.ExternalSource.Source == source.Source);
+                                          a.ExternalSource.Source == source.Source)
+                              .ToList();
 
       if (bookmakerAlias.Count() == 0)
         bookmakerNameDestination = bookmakerNameSource;

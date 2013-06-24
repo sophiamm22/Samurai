@@ -14,6 +14,9 @@ namespace Samurai.Web.API.Infrastructure
   // uses a service locator though, so swapped in the TypedFactoryFacility
   public interface IBus
   {
+    Task SendSignal<TCommand>(TCommand command)
+      where TCommand : class;
+
     Task Send<TCommand>(RequestWrapper<TCommand> command)
       where TCommand : class;
 
@@ -33,13 +36,27 @@ namespace Samurai.Web.API.Infrastructure
   {
     private readonly ICommandHandlerFactory commandHandlerFactory;
     private readonly IMessageHandlerFactory messageHandlerFactory;
+    private readonly ISignalHandlerFactory signalHandlerFactory;
 
     public MessageBus(ICommandHandlerFactory commandHandlerFactory,
-      IMessageHandlerFactory messageHandlerFactory)
+      IMessageHandlerFactory messageHandlerFactory, ISignalHandlerFactory signalHandlerFactory)
     {
       this.messageHandlerFactory = messageHandlerFactory;
       this.commandHandlerFactory = commandHandlerFactory;
+      this.signalHandlerFactory = signalHandlerFactory;
     }
+
+    public async Task SendSignal<TCommand>(TCommand command)
+      where TCommand : class
+    {
+      var handler = this.signalHandlerFactory.Create<ISignalHandler<TCommand>>();
+      if (handler == null)
+        throw new ArgumentNullException(string.Format("signal<{0}>", typeof(TCommand).Name));
+
+      await handler.Handle(command);
+      this.signalHandlerFactory.Release(handler);
+    }
+
 
     public async Task Send<TCommand>(RequestWrapper<TCommand> message)
       where TCommand : class
@@ -49,6 +66,7 @@ namespace Samurai.Web.API.Infrastructure
         throw new ArgumentNullException(string.Format("commandHandler<{0}>", typeof(TCommand).Name));
 
       await handler.Handle(message);
+      this.commandHandlerFactory.Release(handler);
     }
 
     public async Task SendWithSignalRCallback<TCommand, THub>(RequestWrapper<TCommand> message)
@@ -60,6 +78,7 @@ namespace Samurai.Web.API.Infrastructure
         throw new ArgumentNullException(string.Format("commandHandler<{0}, {1}>", typeof(TCommand).Name, typeof(THub).Name));
 
       await handler.Handle(message);
+      this.commandHandlerFactory.Release(handler);
     }
 
     public async Task<HttpResponseMessage> RequestReply<TRequest>(RequestWrapper<TRequest> request) 

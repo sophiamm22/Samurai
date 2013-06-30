@@ -34,6 +34,11 @@ namespace Samurai.Services.Async
       this.tennisOddsService = tennisOddsService;
     }
 
+    public async Task<IEnumerable<OddViewModel>> GetPeriodTennisOdds(DateTime startDate, DateTime endDate)
+    {
+      return await this.tennisOddsService.GetPeriodTennisOdds(startDate, endDate);
+    }
+
     public async Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate)
     {
       var groupedCoupons = new Dictionary<string, List<TennisCouponOutcomeViewModel>>();

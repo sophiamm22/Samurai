@@ -21,6 +21,8 @@ namespace Samurai.Services.Contracts.Async
 
   public interface IAsyncTennisOddsService : IAsyncOddsService
   {
+    Task<IEnumerable<OddViewModel>> GetPeriodTennisOdds(DateTime startDate, DateTime endDate);
+
     Task<IEnumerable<OddViewModel>> GetSingleTennisOdds(int matchID);
     Task<IEnumerable<OddViewModel>> GetAllTennisOdds(IEnumerable<int> matchIDs);
     Task<IEnumerable<OddViewModel>> GetAllTennisTodaysOdds(DateTime fixtureDate);

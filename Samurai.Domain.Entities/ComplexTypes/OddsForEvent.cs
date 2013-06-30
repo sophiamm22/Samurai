@@ -8,7 +8,7 @@ namespace Samurai.Domain.Entities.ComplexTypes
 {
   public class OddsForEvent //bit pointless as this is essentially just a OddViewModel with additional easily calculated fields
   {
-
+    public int MatchId { get; set; }
     public bool IsBetable { get; set; }
     public string Outcome { get; set; }
     public decimal OddBeforeCommission { get; set; }

@@ -25,6 +25,16 @@ namespace Samurai.Web.API.Controllers
     }
 
     [HttpGet]
+    [ActionName("historic-tennis-odds")]
+    public async Task<HttpResponseMessage> GetHistoricTennisOdds()
+    {
+      GetTennisOddsForPeriodAgs requestArgs = null;
+      var request = new RequestWrapper<GetTennisOddsForPeriodAgs>(Request, requestArgs);
+      return await this.bus
+                       .RequestReply(request);
+    }
+
+    [HttpGet]
     [ActionName("todays-tennis-odds")]
     public async Task<HttpResponseMessage> GetTodaysTennisOdds()
     {

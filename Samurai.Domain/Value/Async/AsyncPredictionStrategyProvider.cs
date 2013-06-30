@@ -37,9 +37,9 @@ namespace Samurai.Domain.Value.Async
     public IAsyncPredictionStrategy CreatePredictionStrategy(Sport sport)
     {
       if (sport.SportName == "Football")
-        return new AsyncFootballPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
+        return new FootballAsyncPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else if (sport.SportName == "Tennis")
-        return new AsyncTennisPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
+        return new TennisAsyncPredictionStrategy(this.predictionRepository, this.fixtureRepository, this.webRepositoryProvider);
       else
         throw new ArgumentException("Sport not recognised");
     }

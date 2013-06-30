@@ -14,6 +14,8 @@ namespace Samurai.SqlDataAccess.Contracts
     IEnumerable<OddsForEvent> GetBestOddsFromMatchID(int matchID, string oddsSource);
     IEnumerable<OddsForEvent> GetAllOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA = null, string firstNameB = null);
     IEnumerable<OddsForEvent> GetLatestOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA = null, string firstNameB = null);
+    IEnumerable<OddsForEvent> GetAllOddsForPeriod(DateTime startDate, DateTime endDate, string oddsSource);
+    IEnumerable<OddsForEvent> GetLatestOddsForPeriod(DateTime startDate, DateTime endDate, string oddsSource);
     IEnumerable<OddsForEvent> GetAllOddsFromMatchID(int matchID, string oddsSource);
     IEnumerable<OddsForEvent> GetLatestOddsFromMatchID(int matchID, string oddsSource);
     IEnumerable<OutcomeProbabilitiesForSport> GetOutcomeProbabilitiesForSport(DateTime matchDate, string sportName);

@@ -1,5 +1,9 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Linq.Expressions;
+using System.Linq;
+using System;
+using System.Reflection;
 
 using Samurai.Domain.Entities;
 using Samurai.SqlDataAccess.Mapping;
@@ -11,12 +15,14 @@ namespace Samurai.SqlDataAccess
   {
     static ValueSamuraiContext()
     {
-      Database.SetInitializer<ValueSamuraiContext>(null);
+      //Database.SetInitializer<ValueSamuraiContext>(null);
     }
 
     public ValueSamuraiContext()
       : base("Name=ValueSamuraiContext")
     {
+      //needed for linqpad, for some reason
+      typeof(Database).GetMethod("SetInitializer").MakeGenericMethod(base.GetType()).Invoke(null, new object[] { null });
     }
 
     public DbSet<BettingPAndL> BettingPAndLs { get; set; }

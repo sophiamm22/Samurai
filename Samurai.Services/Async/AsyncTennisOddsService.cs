@@ -30,6 +30,11 @@ namespace Samurai.Services.Async
       this.sport = "Tennis";
     }
 
+    public async Task<IEnumerable<OddViewModel>> GetPeriodTennisOdds(DateTime startDate, DateTime endDate)
+    {
+      return await Task.Run(() => GetPeriodTennisOddsSync(startDate, endDate));
+    }
+
     public async Task<IEnumerable<OddViewModel>> GetSingleTennisOdds(int matchID)
     {
       return await Task.Run(() => GetSingleTennisOddsSync(matchID));
@@ -119,6 +124,26 @@ namespace Samurai.Services.Async
       var odds = Mapper.Map<IEnumerable<Model.GenericMatchCoupon>, IEnumerable<OddViewModel>>(coupons).ToList();
       odds.ForEach(x => x.Sport = this.sport);
       return odds;
+    }
+
+    private IEnumerable<OddViewModel> GetPeriodTennisOddsSync(DateTime startDate, DateTime endDate)
+    {
+      var oddsSources =
+        this.bookmakerRepository
+            .GetActiveOddsSources()
+            .Select(s => s.Source)
+            .ToList();
+
+      var allOdds = new List<OddsForEvent>();
+      var oddsForPeriod =
+        this.storedProcedureRepository
+            .GetAllOddsForPeriod(startDate, endDate, oddsSources.First()) //come back to this
+            .ToList();
+
+      allOdds.AddRange(oddsForPeriod);
+
+      var ret = Mapper.Map<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>(allOdds).ToList();
+      return ret;
     }
 
     private IEnumerable<OddViewModel> GetSingleTennisOddsSync(int matchID)

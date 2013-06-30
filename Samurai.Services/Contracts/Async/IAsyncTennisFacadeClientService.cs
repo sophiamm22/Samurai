@@ -11,6 +11,7 @@ namespace Samurai.Services.Contracts.Async
 {
   public interface IAsyncTennisFacadeClientService
   {
+    Task<IEnumerable<OddViewModel>> GetPeriodTennisOdds(DateTime startDate, DateTime endDate);
     Task<IEnumerable<TennisFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate);
     Task<IEnumerable<OddViewModel>> GetDaysOdds(DateTime fixtureDate);
     DateTime GetLatestDate();

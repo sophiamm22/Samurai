@@ -30,15 +30,25 @@ namespace Samurai.SqlDataAccess.Procedures
 
     public IEnumerable<OddsForEvent> GetAllOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA = null, string firstNameB = null)
     {
-      return GetOddsForEvent(matchDate, oddsSource, teamA, teamB, firstNameA, firstNameB, true).ToList();
+      return GetOddsForEvent(matchDate, matchDate, oddsSource, true).ToList();
     }
 
     public IEnumerable<OddsForEvent> GetLatestOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA = null, string firstNameB = null)
     {
-      return GetOddsForEvent(matchDate, oddsSource, teamA, teamB, firstNameA, firstNameB, false).ToList();
+      return GetOddsForEvent(matchDate, matchDate, oddsSource, false).ToList();
     }
 
-    private IQueryable<OddsForEvent> GetOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA, string firstNameB, bool takeAll)
+    public IEnumerable<OddsForEvent> GetAllOddsForPeriod(DateTime startDate, DateTime endDate, string oddsSource)
+    {
+      return GetOddsForEvent(startDate, endDate, oddsSource, true).ToList();
+    }
+
+    public IEnumerable<OddsForEvent> GetLatestOddsForPeriod(DateTime startDate, DateTime endDate, string oddsSource)
+    {
+      return GetOddsForEvent(startDate, endDate, oddsSource, false).ToList();
+    }
+
+    private IQueryable<OddsForEvent> GetOddsForEvent(DateTime startDate, DateTime endDate, string oddsSource, bool takeAll)
     {
       var matches =
               from match in DbSet<Match>()
@@ -51,26 +61,42 @@ namespace Samurai.SqlDataAccess.Procedures
               join matchOdd in DbSet<MatchOutcomeOdd>() on probability.Id equals matchOdd.MatchOutcomeProbabilitiesInMatchID
               join bookmaker in DbSet<Bookmaker>() on matchOdd.BookmakerID equals bookmaker.Id
               join source in DbSet<ExternalSource>() on matchOdd.ExternalSourceID equals source.Id
-              join matchCouponURL in DbSet<MatchCouponURL>() on new { MatchID = match.Id, SourceID = source.Id } equals new { MatchID = matchCouponURL.MatchID, SourceID = matchCouponURL.ExternalSourceID }
+              //join matchCouponURL in DbSet<MatchCouponURL>() on new { MatchID = match.Id, SourceID = source.Id } equals new { MatchID = matchCouponURL.MatchID, SourceID = matchCouponURL.ExternalSourceID }
 
 
-              where (homeTeam.Name == teamA &&
-                     homeTeam.FirstName == firstNameA &&
-                     awayTeam.Name == teamB &&
-                     awayTeam.FirstName == firstNameB &&
-                     EntityFunctions.TruncateTime(match.MatchDate) == matchDate.Date)
+              where bookmaker.Priority !=0 &&
+                    source.Source == oddsSource &&
+                    match.MatchDate >= startDate && match.MatchDate <= endDate
 
               let latestTimeStampForBookmaker =
                 probability.MatchOutcomeOdds
-                           .Where(x => x.Bookmaker == bookmaker && (x.ExternalSource.Source == oddsSource))
+                           .Where(x => x.Bookmaker == bookmaker &&
+                                       x.ExternalSource.Source == oddsSource)
                            .Select(x => x.TimeStamp)
                            .DefaultIfEmpty(DateTime.MinValue)
                            .Max()
 
-              where (takeAll || source.Source == oddsSource) && matchOdd.TimeStamp == latestTimeStampForBookmaker
+              let bestBookmakerOdd =
+                probability.MatchOutcomeOdds
+                           .Where(x => (x.TimeStamp == latestTimeStampForBookmaker || takeAll) &&
+                                       x.MatchOutcomeProbabilitiesInMatch.MatchOutcome == outcome)
+                           .Select(x => new
+                           {
+                             Bookmaker = x.Bookmaker,
+                             Odd = x.Odd,
+                             Priority = x.Bookmaker.Priority
+                           })
+
+              let bestBookmaker =
+                bestBookmakerOdd.Where(x => x.Odd == bestBookmakerOdd.Max(y => y.Odd))
+                                .OrderBy(x => x.Priority)
+                                .FirstOrDefault()
+
+              where bookmaker == bestBookmaker.Bookmaker
 
               select new OddsForEvent
               {
+                MatchId = match.Id,
                 IsBetable = true,
                 Outcome = outcome.MatchOutcomeString,
                 OddBeforeCommission = matchOdd.Odd,
@@ -82,7 +108,7 @@ namespace Samurai.SqlDataAccess.Procedures
                 ClickThroughURL = matchOdd.ClickThroughURL,
                 Priority = bookmaker.Priority,
 
-                MatchCouponURL = matchCouponURL.MatchCouponURLString,
+                MatchCouponURL = "", // matchCouponURL.MatchCouponURLString,
                 BookmakerID = bookmaker.Id,
                 Edge = probability.MatchOutcomeProbability * matchOdd.Odd - 1,
                 Probability = probability.MatchOutcomeProbability

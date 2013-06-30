@@ -258,8 +258,10 @@
     <Compile Include="Messaging\FootballSchedule\GetFootballOddsHandler.cs" />
     <Compile Include="Messaging\FootballSchedule\GetFootballScheduleHandler.cs" />
     <Compile Include="Messaging\Generic\GenericDateArgs.cs" />
+    <Compile Include="Messaging\TennisSchedule\GetTennisOddsForPeriodAgs.cs" />
     <Compile Include="Messaging\TennisSchedule\FetchTennisScheduleDateArgs.cs" />
     <Compile Include="Messaging\TennisSchedule\FetchTennisScheduleHandler.cs" />
+    <Compile Include="Messaging\TennisSchedule\GetPeriodTennisOddsHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\GetTennisOddsHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\GetTennisScheduleHandler.cs" />
     <Compile Include="Messaging\TennisSchedule\TennisOddsDateArgs.cs" />
@@ -366,7 +368,9 @@
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\q.js" />
     <Content Include="Scripts\q.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

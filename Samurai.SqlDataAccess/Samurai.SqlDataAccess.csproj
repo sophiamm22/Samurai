@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201301200954586_add-inplay-to-match.Designer.cs">
       <DependentUpon>201301200954586_add-inplay-to-match.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201306261122088_some_changes.cs" />
+    <Compile Include="Migrations\201306261122088_some_changes.Designer.cs">
+      <DependentUpon>201306261122088_some_changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Procedures\GetGenericMatchDetails.cs" />
     <Compile Include="Procedures\GetOddsForEvent.cs" />
@@ -127,6 +131,9 @@
     <EmbeddedResource Include="Migrations\201301200954586_add-inplay-to-match.resx">
       <DependentUpon>201301200954586_add-inplay-to-match.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306261122088_some_changes.resx">
+      <DependentUpon>201306261122088_some_changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -33,7 +33,7 @@ namespace Samurai.SqlDataAccess.Migrations
        autoCreateTables: true);
 
 
-      SeedUsersAndRoles();
+      //SeedUsersAndRoles();
       SeedSamurai(context);
 
     }
@@ -56,6 +56,8 @@ namespace Samurai.SqlDataAccess.Migrations
     private void SeedSamurai(ValueSamuraiContext context)
     {
       var seed = new SeedData();
+      if (context.Set<Bookmaker>().Count() != 0)
+        return; //get out as soon as we realise there is already seed data
 
       context.Set<Bookmaker>().AddOrUpdate(seed.Bookmakers);
       context.Set<Sport>().AddOrUpdate(seed.Sports);

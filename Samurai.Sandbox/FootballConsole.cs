@@ -88,9 +88,9 @@ namespace Samurai.Sandbox
           break;
         }
         
-        var missingURLs = new List<MissingTournamentCouponURL>();
-        var missingTeamPlayerAlias = new List<MissingTeamPlayerAlias>();
-        var missingBookmakerAlias = new List<MissingBookmakerAlias>();
+        var missingURLs = new List<MissingTournamentCouponURLObject>();
+        var missingTeamPlayerAlias = new List<MissingTeamPlayerAliasObject>();
+        var missingBookmakerAlias = new List<MissingBookmakerAliasObject>();
         try
         {
           Fixtures = this.footballService.UpdateDaysSchedule(date);
@@ -115,7 +115,7 @@ namespace Samurai.Sandbox
     }
 
 
-    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAlias> missingAlias, DateTime date)
+    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAliasObject> missingAlias, DateTime date)
     {
       var groupedAlias =
         (from alias in missingAlias

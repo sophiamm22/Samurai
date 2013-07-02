@@ -66,6 +66,9 @@
     <Compile Include="Mapping\BookmakerMap.cs" />
     <Compile Include="Mapping\CompetitionCouponURLMap.cs" />
     <Compile Include="Mapping\KeyValuePairMap.cs" />
+    <Compile Include="Mapping\MissingBookmakerExternalSourceAliasMap.cs" />
+    <Compile Include="Mapping\MissingTeamPlayerExternalSourceAliasMap.cs" />
+    <Compile Include="Mapping\MissingTournamentCouponURLMap.cs" />
     <Compile Include="Mapping\TennisPredictionStatMap.cs" />
     <Compile Include="Mapping\TournamentCouponURLMap.cs" />
     <Compile Include="Mapping\CompetitionMap.cs" />
@@ -96,6 +99,10 @@
     <Compile Include="Migrations\201306261122088_some_changes.cs" />
     <Compile Include="Migrations\201306261122088_some_changes.Designer.cs">
       <DependentUpon>201306261122088_some_changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201307020411374_ManuallyUpdatedDatabase.cs" />
+    <Compile Include="Migrations\201307020411374_ManuallyUpdatedDatabase.Designer.cs">
+      <DependentUpon>201307020411374_ManuallyUpdatedDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Procedures\GetGenericMatchDetails.cs" />
@@ -134,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201306261122088_some_changes.resx">
       <DependentUpon>201306261122088_some_changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201307020411374_ManuallyUpdatedDatabase.resx">
+      <DependentUpon>201307020411374_ManuallyUpdatedDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

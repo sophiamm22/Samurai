@@ -29,7 +29,10 @@ namespace Samurai.Domain.Entities
     public virtual ICollection<MatchCouponURL> MatchCouponURLs { get; set; }
     public virtual ICollection<MatchOutcomeOdd> MatchOutcomeOdds { get; set; }
     public virtual ICollection<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
+    public virtual ICollection<MissingTeamPlayerExternalSourceAlias> MissingTeamPlayerExternalSourceAlias { get; set; }
     public virtual ICollection<TournamentExternalSourceAlias> TournamentExternalSourceAlias { get; set; }
     public virtual ICollection<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
+    public virtual ICollection<MissingBookmakerExternalSourceAlias> MissingBookmakerExternalSourceAlias { get; set; }
+    public virtual ICollection<MissingTournamentCouponURL> MissingTournamentCouponURLs { get; set; }
   }
 }

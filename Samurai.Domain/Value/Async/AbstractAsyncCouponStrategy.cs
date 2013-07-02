@@ -27,7 +27,7 @@ namespace Samurai.Domain.Value.Async
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepositoryProviderAsync webRepositoryProvider;
     protected readonly IValueOptions valueOptions;
-    protected List<MissingTeamPlayerAlias> missingAlias;
+    protected List<MissingTeamPlayerAliasObject> missingAlias;
 
     public AbstractAsyncCouponStrategy(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IWebRepositoryProviderAsync webRepositoryProvider, 
@@ -43,7 +43,7 @@ namespace Samurai.Domain.Value.Async
       this.webRepositoryProvider = webRepositoryProvider;
       this.valueOptions = valueOptions;
 
-      this.missingAlias = new List<MissingTeamPlayerAlias>();
+      this.missingAlias = new List<MissingTeamPlayerAliasObject>();
     }
 
     public abstract Task<IEnumerable<IGenericTournamentCoupon>> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
@@ -67,21 +67,25 @@ namespace Samurai.Domain.Value.Async
       bool @continue = false;
       if (teamOrPlayerA == null)
       {
-        this.missingAlias.Add(new MissingTeamPlayerAlias
+        this.missingAlias.Add(new MissingTeamPlayerAliasObject
         {
           TeamOrPlayerName = teamOrPlayerALookup,
           ExternalSource = this.valueOptions.OddsSource.Source,
-          Tournament = this.valueOptions.Tournament.TournamentName
+          ExternalSourceID = this.valueOptions.OddsSource.Id,
+          Tournament = this.valueOptions.Tournament.TournamentName,
+          TournamentID = this.valueOptions.Tournament.Id
         });
         @continue = true;
       }
       if (teamOrPlayerB == null)
       {
-        this.missingAlias.Add(new MissingTeamPlayerAlias
+        this.missingAlias.Add(new MissingTeamPlayerAliasObject
         {
           TeamOrPlayerName = teamOrPlayerBLookup,
           ExternalSource = this.valueOptions.OddsSource.Source,
-          Tournament = this.valueOptions.Tournament.TournamentName
+          ExternalSourceID = this.valueOptions.OddsSource.Id,
+          Tournament = this.valueOptions.Tournament.TournamentName,
+          TournamentID = this.valueOptions.Tournament.Id
         });
         @continue = true;
       }

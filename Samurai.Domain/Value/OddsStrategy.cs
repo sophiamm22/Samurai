@@ -73,7 +73,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
-      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
+      var missingBookmakerAlias = new List<MissingBookmakerAliasObject>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -94,7 +94,7 @@ namespace Samurai.Domain.Value
           var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
           if (bookmaker == null)
           {
-            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            missingBookmakerAlias.Add(new MissingBookmakerAliasObject
             {
               Bookmaker = odd.Bookmaker,
               ExternalSource = source.Source
@@ -153,7 +153,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
-      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
+      var missingBookmakerAlias = new List<MissingBookmakerAliasObject>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -173,7 +173,7 @@ namespace Samurai.Domain.Value
           var bookmaker = this.bookmakerRepository.FindByName(bookmakerName);
           if (bookmaker == null)
           {
-            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            missingBookmakerAlias.Add(new MissingBookmakerAliasObject
             {
               Bookmaker = odd.Bookmaker,
               ExternalSource = source.Source
@@ -255,7 +255,7 @@ namespace Samurai.Domain.Value
 
       var currentOutcome = Outcome.NotAssigned;
       var oddsForOutcome = new List<GenericOdd>();
-      var missingBookmakerAlias = new List<MissingBookmakerAlias>();
+      var missingBookmakerAlias = new List<MissingBookmakerAliasObject>();
 
       foreach (var oddsToken in oddsTokens)
       {
@@ -276,7 +276,7 @@ namespace Samurai.Domain.Value
           var bookmaker = this.bookmakerRepository.FindByOddsCheckerID(odd.BookmakerID);
           if (bookmaker == null)
           {
-            missingBookmakerAlias.Add(new MissingBookmakerAlias
+            missingBookmakerAlias.Add(new MissingBookmakerAliasObject
             {
               Bookmaker = odd.BookmakerID,
               ExternalSource = source.Source

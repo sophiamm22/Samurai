@@ -9,9 +9,9 @@ namespace Samurai.Domain.Exceptions
   [Serializable]
   public class TournamentCouponURLMissingException : Exception
   {
-    public IEnumerable<MissingTournamentCouponURL> MissingData { get; private set; }
+    public IEnumerable<MissingTournamentCouponURLObject> MissingData { get; private set; }
 
-    public TournamentCouponURLMissingException(IEnumerable<MissingTournamentCouponURL> missingData, string message)
+    public TournamentCouponURLMissingException(IEnumerable<MissingTournamentCouponURLObject> missingData, string message)
       : base(message)
     {
       MissingData = missingData;
@@ -19,9 +19,11 @@ namespace Samurai.Domain.Exceptions
   }
 
   [Serializable]
-  public class MissingTournamentCouponURL
+  public class MissingTournamentCouponURLObject
   {
     public string ExternalSource { get; set; }
+    public int ExternalSourceID { get; set; }
     public string Tournament { get; set; }
+    public int TournamentID { get; set; }
   }
 }

@@ -82,8 +82,8 @@ namespace Samurai.Sandbox
           Console.WriteLine("You fucking moron!");
           break;
         }
-        var missingURLs = new List<MissingTournamentCouponURL>();
-        var missingAlias = new List<MissingTeamPlayerAlias>();
+        var missingURLs = new List<MissingTournamentCouponURLObject>();
+        var missingAlias = new List<MissingTeamPlayerAliasObject>();
         try
         {
           Fixtures = tennisService.UpdateDaysSchedule(date);
@@ -167,7 +167,7 @@ namespace Samurai.Sandbox
       Console.ReadLine();
     }
 
-    private void AddTournamentCouponURLs(IEnumerable<MissingTournamentCouponURL> missingURLs)
+    private void AddTournamentCouponURLs(IEnumerable<MissingTournamentCouponURLObject> missingURLs)
     {
       missingURLs.ToList().ForEach(x =>
       {
@@ -198,7 +198,7 @@ namespace Samurai.Sandbox
       throw new ArgumentException("url");
     }
 
-    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAlias> missingAlias, DateTime date)
+    private void AddMissingAlias(IEnumerable<MissingTeamPlayerAliasObject> missingAlias, DateTime date)
     {
       var groupedAlias =
         (from alias in missingAlias

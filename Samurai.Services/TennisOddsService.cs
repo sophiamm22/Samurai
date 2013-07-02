@@ -88,8 +88,8 @@ namespace Samurai.Services
       if (urlCheck == null)
       {
         //will have already been checked for the FetchAllTennisOddsVersion
-        var missingURL = new MissingTournamentCouponURL { ExternalSource = oddsSource.Source, Tournament = tournament.TournamentName };
-        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURL[] { missingURL }, "Tournament coupons missing");
+        var missingURL = new MissingTournamentCouponURLObject { ExternalSource = oddsSource.Source, Tournament = tournament.TournamentName };
+        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
       }
       return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
     }
@@ -97,7 +97,7 @@ namespace Samurai.Services
     public IEnumerable<OddViewModel> FetchAllTennisOdds(DateTime date)
     {
       var odds = new List<OddViewModel>();
-      var missingAlias = new List<MissingTeamPlayerAlias>();
+      var missingAlias = new List<MissingTeamPlayerAliasObject>();
 
       var tournaments = DaysTournaments(date, this.sport);
       var oddsSources = 
@@ -108,7 +108,7 @@ namespace Samurai.Services
       //check URL's exist first
       var urlCheck =
         tournaments.SelectMany(t => oddsSources.Where(s => this.bookmakerRepository.GetTournamentCouponUrl(t, s) == null)
-                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }))
+                                               .Select(s => new MissingTournamentCouponURLObject() { ExternalSource = s.Source, Tournament = t.TournamentName }))
                    .ToList();
 
       if (urlCheck.Count() > 0)

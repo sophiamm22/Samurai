@@ -66,7 +66,7 @@ namespace Samurai.Services.Async
     public async Task<IEnumerable<OddViewModel>> FetchAllTennisOdds(DateTime date)
     {
       var oddsViewModels = new List<OddViewModel>();
-      var missingAlias = new List<MissingTeamPlayerAlias>();
+      var missingAlias = new List<MissingTeamPlayerAliasObject>();
 
       var tournaments = DaysTournaments(date, this.sport);
       var oddsSources =
@@ -77,7 +77,7 @@ namespace Samurai.Services.Async
       //check URL's exist first
       var urlCheck =
         tournaments.SelectMany(t => oddsSources.Where(s => this.bookmakerRepository.GetTournamentCouponUrl(t, s) == null)
-                                               .Select(s => new MissingTournamentCouponURL() { ExternalSource = s.Source, Tournament = t.TournamentName }))
+                                               .Select(s => new MissingTournamentCouponURLObject() { ExternalSource = s.Source, Tournament = t.TournamentName }))
                    .ToList();
 
       if (urlCheck.Count() > 0)
@@ -89,8 +89,8 @@ namespace Samurai.Services.Async
         {
           try
           {
-            var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName };
-            var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source };
+            var tournamentViewModel = new TournamentViewModel { TournamentName = tournament.TournamentName, TournamentID = tournament.Id };
+            var oddsSourceViewModel = new OddsSourceViewModel { Source = source.Source, SourceID = source.Id };
             oddsViewModels.AddRange(await FetchTennisOddsForTournamentSource(date, tournamentViewModel, oddsSourceViewModel));
           }
           catch (MissingTeamPlayerAliasException mtpaEx)
@@ -112,8 +112,14 @@ namespace Samurai.Services.Async
       if (urlCheck == null)
       {
         //will have already been checked for the FetchAllTennisOddsVersion
-        var missingURL = new MissingTournamentCouponURL { ExternalSource = oddsSource.Source, Tournament = tournament.TournamentName };
-        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURL[] { missingURL }, "Tournament coupons missing");
+        var missingURL = new MissingTournamentCouponURLObject 
+        { 
+          ExternalSource = oddsSource.Source, 
+          ExternalSourceID = oddsSource.SourceID,
+          Tournament = tournament.TournamentName,
+          TournamentID = tournament.TournamentID
+        };
+        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
       }
       return await FetchCoupons(date, tournament.TournamentName, oddsSource.Source);
     }

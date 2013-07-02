@@ -81,7 +81,7 @@ namespace Samurai.Services.Async
                    .ToList();
 
       if (urlCheck.Count() > 0)
-        throw new TournamentCouponURLMissingException(urlCheck.ToList(), "Tournament coupons missing");
+        throw new MissingTournamentCouponURLException(urlCheck.ToList(), "Tournament coupons missing");
 
       foreach (var tournament in tournaments)
       {
@@ -119,7 +119,7 @@ namespace Samurai.Services.Async
           Tournament = tournament.TournamentName,
           TournamentID = tournament.TournamentID
         };
-        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
+        throw new MissingTournamentCouponURLException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
       }
       return await FetchCoupons(date, tournament.TournamentName, oddsSource.Source);
     }

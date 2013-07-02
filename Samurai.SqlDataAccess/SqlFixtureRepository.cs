@@ -417,6 +417,24 @@ namespace Samurai.SqlDataAccess
       return ret.Values.AsQueryable();      
     }
 
+    public void AddMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerExternalSourceAlias> aliass)
+    {
+      foreach (var alias in aliass)
+      {
+        var mtp = GetQuery<MissingTeamPlayerExternalSourceAlias>(x => x.ExternalSourceID == alias.Id && x.TournamentID == alias.Id)
+          .FirstOrDefault();
+        if (mtp == null)
+        {
+          Add<MissingTeamPlayerExternalSourceAlias>(alias);
+        }
+        else
+        {
+          mtp.TeamPlayer = alias.TeamPlayer;
+        }
+      }
+      this.SaveChanges();
+    }
+
     public void AddMatch(Match match)
     {
       Add<Match>(match);

@@ -36,6 +36,7 @@ namespace Samurai.SqlDataAccess.Contracts
     TeamPlayer GetTeamOrPlayerFromName(string team);
     TeamPlayer GetTeamOrPlayerFromNameAndMaybeFirstName(string teamSurname, string firstName);
     IQueryable<TeamPlayer> GetLeagueLadder(string leagueName, DateTime date);
+    void AddMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerExternalSourceAlias> aliass);
     
     void AddMatch(Match match);
     

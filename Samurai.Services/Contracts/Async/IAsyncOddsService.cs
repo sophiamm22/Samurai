@@ -8,6 +8,7 @@ using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
+using Samurai.Domain.Exceptions;
 
 namespace Samurai.Services.Contracts.Async
 {
@@ -17,6 +18,7 @@ namespace Samurai.Services.Contracts.Async
     SportViewModel FindSport(string slug);
     TournamentViewModel FindTournament(string slug);
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
+    void RecordMissingTournamentCouponURLs(IEnumerable<MissingTournamentCouponURLObject> urls);
   }
 
   public interface IAsyncTennisOddsService : IAsyncOddsService
@@ -30,6 +32,7 @@ namespace Samurai.Services.Contracts.Async
     Task<IEnumerable<OddViewModel>> FetchAllTennisOdds(DateTime date);
     Task<IEnumerable<OddViewModel>> FetchTennisOddsForTournamentSource(DateTime date, TournamentViewModel tournament, OddsSourceViewModel oddsSource);
     Task<IEnumerable<OddViewModel>> FetchCoupons(DateTime date, string tournament, string oddsSource);
+
   }
 
   public interface IAsyncFootballOddsService : IAsyncOddsService

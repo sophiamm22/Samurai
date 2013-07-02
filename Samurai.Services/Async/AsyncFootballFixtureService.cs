@@ -14,6 +14,7 @@ using Samurai.Services.Contracts.Async;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Domain.Value.Async;
+using Samurai.Domain.Exceptions;
 using Model = Samurai.Domain.Model;
 
 namespace Samurai.Services.Async
@@ -79,6 +80,23 @@ namespace Samurai.Services.Async
       return
         this.fixtureRepository
             .GetLatestDate();
+    }
+
+    public void RecordMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerAliasObject> players)
+    {
+      var missingPlayers = new List<MissingTeamPlayerExternalSourceAlias>();
+      foreach (var player in players)
+      {
+        missingPlayers.Add(new MissingTeamPlayerExternalSourceAlias()
+        {
+          ExternalSourceID = player.ExternalSourceID,
+          TournamentID = player.TournamentID,
+          TeamPlayer = player.TeamOrPlayerName
+        });
+      }
+
+      this.fixtureRepository
+          .AddMissingTeamPlayerAlias(missingPlayers);
     }
   }
 

@@ -141,6 +141,19 @@ namespace Samurai.SqlDataAccess
       SaveChanges();
     }
 
+    public void AddMissingTournamentCouponUrls(IEnumerable<MissingTournamentCouponURL> urls)
+    {
+      foreach (var url in urls)
+      {
+        var mtcu = GetQuery<MissingTournamentCouponURL>(x => x.ExternalSourceID == url.ExternalSourceID && x.TournamentID == url.TournamentID).FirstOrDefault();
+        if (mtcu == null)
+        {
+          Add<MissingTournamentCouponURL>(url);
+        }
+      }
+      this.SaveChanges();
+    }
+
     public void SaveChanges()
     {
       UnitOfWork.SaveChanges();

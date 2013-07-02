@@ -13,6 +13,7 @@ using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
 using Samurai.Domain.Model;
 using Samurai.Domain.Infrastructure;
+using Samurai.Domain.Exceptions;
 
 namespace Samurai.Services.Async
 {
@@ -69,6 +70,16 @@ namespace Samurai.Services.Async
             .FetchTournamentEvents();
     }
 
+    public void RecordMissingTournamentCouponURLs(IEnumerable<MissingTournamentCouponURLObject> urls)
+    {
+      this.tennisOddsService.RecordMissingTournamentCouponURLs(urls);
+    }
+
+    public void RecordMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerAliasObject> players)
+    {
+      this.tennisFixtureService.RecordMissingTeamPlayerAlias(players);
+    }
+    
     public void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel)
     {
       ProgressReporterProvider.Current.ReportProgress(string.Format("Adding tournament coupon for {0}", viewModel.Tournament), ReporterImportance.High, ReporterAudience.Admin);

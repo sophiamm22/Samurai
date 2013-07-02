@@ -12,6 +12,9 @@ using Samurai.Web.API;
 using Samurai.Web.API.Infrastructure;
 using Samurai.Web.API.Messaging.TennisSchedule;
 using Samurai.Services.Contracts.Async;
+using Samurai.Domain.Exceptions;
+using Samurai.Domain.Infrastructure;
+using Samurai.Domain.Model;
 
 namespace Samurai.Web.API.Hubs
 {
@@ -26,34 +29,48 @@ namespace Samurai.Web.API.Hubs
       this.tennisService = tennisService;
     }
 
-    public Task<string> FetchTennisSchedules(string dateString)
+    public Task FetchTennisSchedules(string dateString)
     {
-      var dateParts = dateString.Split('-');
-      int day, month, year;
-      if (int.TryParse(dateParts[0], out year) && int.TryParse(dateParts[1], out month) && int.TryParse(dateParts[2], out day))
-      {
-        if (!Extensions.IsValidDate(year, month, day))
+      return Task.Run(async () =>
         {
-          return Task.Run(() => "Not a valid date");
-        }
-
-        var fixtureDate = new DateTime(year, month, day);
-        
-        return Task.Run(async () =>
+          var dateParts = dateString.Split('-');
+          int day, month, year;
+          if (int.TryParse(dateParts[0], out year) && int.TryParse(dateParts[1], out month) && int.TryParse(dateParts[2], out day))
           {
+            var fixtureDate = new DateTime(year, month, day);
+            if (!Extensions.IsValidDate(year, month, day))
+            {
+              ProgressReporterProvider.Current.ReportProgress(string.Format("Not a valid date ({0}/{1}/{2})", day, month, year), ReporterImportance.Error, ReporterAudience.Admin);
+              return;
+            }
             try
             {
               await this.tennisService.UpdateDaysSchedule(fixtureDate);
             }
+            catch (MissingTournamentCouponURLException mtcEx)
+            {
+              ProgressReporterProvider.Current.ReportProgress("Missing tournament coupon URLs..", ReporterImportance.Error, ReporterAudience.Admin);
+              var missingTournamentCouponsURLs = mtcEx.MissingData;
+              this.tennisService.RecordMissingTournamentCouponURLs(missingTournamentCouponsURLs);
+
+              //update client to query the new missing records
+            }
+            catch (MissingTeamPlayerAliasException mtpaEx)
+            {
+              ProgressReporterProvider.Current.ReportProgress("Missing team or player alias..", ReporterImportance.Error, ReporterAudience.Admin);
+
+              var missingTeamPlayerAliass = mtpaEx.MissingAlias;
+              this.tennisService.RecordMissingTeamPlayerAlias(missingTeamPlayerAliass);
+
+              //update client to query the new missing records
+            }
             catch (Exception ex)
             {
-              return ex.Message;
+              ProgressReporterProvider.Current.ReportProgress(string.Format("Exception thrown\n{0}", ex.Message), ReporterImportance.Error, ReporterAudience.Admin);
             }
-            return "Started getting tennis schedule";
-          });
-      }
-      return Task.Run(() => "Started getting tennis schedule");
+          }
+        });
     }
-
   }
+
 }

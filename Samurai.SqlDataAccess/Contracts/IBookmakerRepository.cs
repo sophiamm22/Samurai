@@ -24,10 +24,14 @@ namespace Samurai.SqlDataAccess.Contracts
     string GetOddsCheckerJavaScript();
     void SetOddsCheckerJavaScript(string javaScript);
     string GetAlias(string bookmakerNameSource, ExternalSource source, ExternalSource destination);
+    
     void AddTournamentCouponURL(ExternalSource source, Tournament tournament, string couponURL);
-    void SaveChanges();
+    void AddMissingTournamentCouponUrls(IEnumerable<MissingTournamentCouponURL> urls);
+
     IQueryable<MatchCouponURL> GetMatchCouponURLs(int matchID);
     void AddMatchCouponURL(MatchCouponURL entity);
     IQueryable<MatchOutcomeOdd> GetMatchOutcomeOdds(int probOutcomeID);
+
+    void SaveChanges();
   }
 }

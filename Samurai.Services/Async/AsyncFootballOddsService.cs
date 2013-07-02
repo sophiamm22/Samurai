@@ -15,6 +15,7 @@ using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.Value.Async;
 using Model = Samurai.Domain.Model;
 using Samurai.Web.ViewModels.Value;
+using Samurai.Domain.Exceptions;
 
 namespace Samurai.Services.Async
 {
@@ -74,6 +75,21 @@ namespace Samurai.Services.Async
       var tournament = this.fixtureRepository.GetTournamentFromSlug(slug);
       if (tournament == null) return null;
       return Mapper.Map<Tournament, TournamentViewModel>(tournament);
+    }
+
+    public void RecordMissingTournamentCouponURLs(IEnumerable<MissingTournamentCouponURLObject> urls)
+    {
+      var missingTournamentCouponURLs = new List<MissingTournamentCouponURL>();
+      foreach (var url in urls)
+      {
+        missingTournamentCouponURLs.Add(new MissingTournamentCouponURL()
+        {
+          ExternalSourceID = url.ExternalSourceID,
+          TournamentID = url.TournamentID
+        });
+      }
+      this.bookmakerRepository
+          .AddMissingTournamentCouponUrls(missingTournamentCouponURLs);
     }
 
     protected IEnumerable<Tournament> DaysTournaments(DateTime date, string sport)

@@ -89,7 +89,7 @@ namespace Samurai.Services
       {
         //will have already been checked for the FetchAllTennisOddsVersion
         var missingURL = new MissingTournamentCouponURLObject { ExternalSource = oddsSource.Source, Tournament = tournament.TournamentName };
-        throw new TournamentCouponURLMissingException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
+        throw new MissingTournamentCouponURLException(new MissingTournamentCouponURLObject[] { missingURL }, "Tournament coupons missing");
       }
       return FetchCoupons(date, tournament.TournamentName, oddsSource.Source, this.sport, true, false);
     }
@@ -112,7 +112,7 @@ namespace Samurai.Services
                    .ToList();
 
       if (urlCheck.Count() > 0)
-        throw new TournamentCouponURLMissingException(urlCheck.ToList(), "Tournament coupons missing");
+        throw new MissingTournamentCouponURLException(urlCheck.ToList(), "Tournament coupons missing");
 
       foreach (var tournament in tournaments)
       {

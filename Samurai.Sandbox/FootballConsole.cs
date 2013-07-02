@@ -96,7 +96,7 @@ namespace Samurai.Sandbox
           Fixtures = this.footballService.UpdateDaysSchedule(date);
           break;
         }
-        catch (TournamentCouponURLMissingException tcmEx)
+        catch (MissingTournamentCouponURLException tcmEx)
         {
           missingURLs.AddRange(tcmEx.MissingData);
         }

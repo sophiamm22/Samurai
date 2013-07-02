@@ -89,7 +89,7 @@ namespace Samurai.Sandbox
           Fixtures = tennisService.UpdateDaysSchedule(date);
           break;
         }
-        catch (TournamentCouponURLMissingException tcmEx)
+        catch (MissingTournamentCouponURLException tcmEx)
         {
           missingURLs.AddRange(tcmEx.MissingData);
         }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Samurai.Domain.Exceptions
 {
   [Serializable]
-  public class TournamentCouponURLMissingException : Exception
+  public class MissingTournamentCouponURLException : Exception
   {
     public IEnumerable<MissingTournamentCouponURLObject> MissingData { get; private set; }
 
-    public TournamentCouponURLMissingException(IEnumerable<MissingTournamentCouponURLObject> missingData, string message)
+    public MissingTournamentCouponURLException(IEnumerable<MissingTournamentCouponURLObject> missingData, string message)
       : base(message)
     {
       MissingData = missingData;

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Web.ViewModels.Tennis;
+using Samurai.Domain.Exceptions;
 
 namespace Samurai.Services.Contracts.Async
 {
@@ -18,6 +19,7 @@ namespace Samurai.Services.Contracts.Async
     TeamPlayerViewModel GetTeamOrPlayer(string slug);
     void AddAlias(string source, string playerName, string valueSamuraiName, string valueSamuraiFirstName = null);
     DateTime GetLatestDate();
+    void RecordMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerAliasObject> players);
   }
 
   public interface IAsyncFootballFixtureService : IAsyncFixtureService

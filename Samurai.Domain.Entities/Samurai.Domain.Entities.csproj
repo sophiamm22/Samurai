@@ -52,6 +52,7 @@
     <Compile Include="MissingBookmakerExternalSourceAlias.cs" />
     <Compile Include="MissingTeamPlayerExternalSourceAlias.cs" />
     <Compile Include="MissingTournamentCouponURL.cs" />
+    <Compile Include="OutcomeComment.cs" />
     <Compile Include="TennisPredictionStat.cs" />
     <Compile Include="TournamentCouponURL.cs" />
     <Compile Include="ExternalSource.cs" />

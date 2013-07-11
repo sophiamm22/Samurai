@@ -51,6 +51,7 @@ namespace Samurai.SqlDataAccess
     public DbSet<MissingBookmakerExternalSourceAlias> MissingBookmakerExternalSourceAlias { get; set; }
     public DbSet<MissingTeamPlayerExternalSourceAlias> MissingTeamPlayerExternalSourceAlias { get; set; }
     public DbSet<MissingTournamentCouponURL> MissingTournamentCouponURL { get; set; }
+    public DbSet<OutcomeComment> OutcomeCommments { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
@@ -81,6 +82,7 @@ namespace Samurai.SqlDataAccess
       modelBuilder.Configurations.Add(new MissingBookmakerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new MissingTeamPlayerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new MissingTournamentCouponURLMap());
+      modelBuilder.Configurations.Add(new OutcomeCommentMap());
     }
   }
 }

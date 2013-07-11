@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 using Samurai.Domain.Entities;
+using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Domain.APIModel;
 using Samurai.SqlDataAccess.Contracts;
 using Samurai.Domain.Repository;
+using Samurai.Domain.Model;
 using Samurai.Core;
 
 namespace Samurai.Domain.Value.Async
@@ -92,6 +94,47 @@ namespace Samurai.Domain.Value.Async
 
     public async Task<IEnumerable<GenericMatchDetailQuery>> UpdateResults(DateTime fixtureDate)
     {
+      var tb365Uri = 
+        this.fixtureRepository
+            .GetDaysResultsURI(fixtureDate);
+
+      var webRepository =
+        this.webRepositoryProvider
+            .CreateWebRepository(fixtureDate);
+
+      var persistedMatches =
+        this.fixtureRepository
+            .GetDaysMatchesWithTeamsTournaments(fixtureDate, "Tennis")
+            .ToList();
+
+      var daysResults =
+        await webRepository.ParseJsonEnumerable<APIDaysResults>(tb365Uri);
+
+      var daysResultsDictionary =
+        daysResults.ToDictionary(x => string.Format("{0},{1} vs. {2},{3}"));
+
+      foreach (var result in daysResults)
+      {
+        Entities.Match persistedMatch;
+        persistedMatch = persistedMatches
+          .FirstOrDefault(x => x.TeamsPlayerA.FirstName == result.WinnerFirstName && x.TeamsPlayerA .Name == result.WinnerSurname &&
+                               x.TeamsPlayerB.FirstName == result.LoserFirstName  && x.TeamsPlayerB.Name ==  result.LoserSurname);
+        if (persistedMatch == null)
+          persistedMatch = persistedMatches
+          .FirstOrDefault(x => x.TeamsPlayerA.FirstName == result.LoserFirstName && x.TeamsPlayerA.Name == result.LoserSurname &&
+                               x.TeamsPlayerB.FirstName == result.WinnerFirstName  && x.TeamsPlayerB.Name == result.WinnerSurname);
+
+        if (persistedMatch == null)
+        {
+          ProgressReporterProvider.Current.ReportProgress(
+            string.Format("Result existed for {0} {1} vs. {2} {3} @ {4} had no persisted match", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),
+            ReporterImportance.Error, ReporterAudience.Admin);
+          continue;
+        }
+
+
+        
+      }
       throw new NotImplementedException();
     }
 

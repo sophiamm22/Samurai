@@ -207,6 +207,12 @@ namespace Samurai.SqlDataAccess
     {
       return new Uri(string.Format(@"http://www.tennisbetting365.com/api/gettournamentladder/{0}/{1}", tournamentName, year.ToString()));
     }
+
+    public Uri GetDaysResultsURI(DateTime fixtureDate)
+    {
+      return new Uri(string.Format(@"http://www.tennisbetting365.com/api/getdaysresults/{0}/{1}/{2}", fixtureDate.Day, fixtureDate.Month, fixtureDate.Year));
+    }
+
     public TeamPlayer GetTeamOrPlayerById(int id)
     {
       var teamOrPlayer = GetByKey<TeamPlayer>(id);

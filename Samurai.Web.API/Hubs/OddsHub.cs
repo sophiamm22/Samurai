@@ -35,7 +35,7 @@ namespace Samurai.Web.API.Hubs
         {
           var dateParts = dateString.Split('-');
           int day, month, year;
-          if (int.TryParse(dateParts[0], out year) && int.TryParse(dateParts[1], out month) && int.TryParse(dateParts[2], out day))
+          if (dateParts.Length == 3 && int.TryParse(dateParts[0], out year) && int.TryParse(dateParts[1], out month) && int.TryParse(dateParts[2], out day))
           {
             var fixtureDate = new DateTime(year, month, day);
             if (!Extensions.IsValidDate(year, month, day))
@@ -54,6 +54,7 @@ namespace Samurai.Web.API.Hubs
               this.tennisService.RecordMissingTournamentCouponURLs(missingTournamentCouponsURLs);
 
               //update client to query the new missing records
+              this.Clients.All.getMissingTournamentCouponURLs();
             }
             catch (MissingTeamPlayerAliasException mtpaEx)
             {
@@ -63,11 +64,16 @@ namespace Samurai.Web.API.Hubs
               this.tennisService.RecordMissingTeamPlayerAlias(missingTeamPlayerAliass);
 
               //update client to query the new missing records
+              this.Clients.All.getMissingTeamPlayerAlias();
             }
             catch (Exception ex)
             {
               ProgressReporterProvider.Current.ReportProgress(string.Format("Exception thrown\n{0}", ex.Message), ReporterImportance.Error, ReporterAudience.Admin);
             }
+          }
+          else
+          {
+            ProgressReporterProvider.Current.ReportProgress("Not a recognised date format", ReporterImportance.Error, ReporterAudience.Admin);
           }
         });
     }

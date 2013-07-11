@@ -30,6 +30,7 @@ namespace Samurai.SqlDataAccess.Contracts
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
     Uri GetTennisTournamentCalendar();
     Uri GetTennisTournamentLadder(string tournamentName, int year);
+    Uri GetDaysResultsURI(DateTime fixtureDate);
     
     TeamPlayer GetTeamOrPlayerById(int id);
     TeamPlayer GetTeamOrPlayer(string slug);

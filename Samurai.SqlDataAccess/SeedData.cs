@@ -15,6 +15,7 @@ namespace Samurai.SqlDataAccess
     public IDictionary<string, Sport> Sport { get; set; }
     public IDictionary<string, Competition> Competition { get; set; }
     public IDictionary<string, Tournament> Tournament { get; set; }
+    public IDictionary<string, TournamentEvent> TournamentEvent { get; set; }
     public IDictionary<string, Fund> Fund { get; set; }
     public IDictionary<string, ExternalSource> ExternalSource { get; set; }
     public IDictionary<string, MatchOutcome> MatchOutcome { get; set; }
@@ -25,6 +26,7 @@ namespace Samurai.SqlDataAccess
     public IEnumerable<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
     public IEnumerable<TournamentCouponURL> TournamentCouponURL { get; set; }
     public IEnumerable<CompetitionCouponURL> CompetitionCouponURL { get; set; }
+    public IEnumerable<OutcomeComment> OutcomeComment { get; set; }
 
     public SeedDataDictionaries()
       : base()
@@ -34,6 +36,7 @@ namespace Samurai.SqlDataAccess
       Sport = Sports.ToDictionary(d => d.SportName);
       Competition = Competitions.ToDictionary(d => d.CompetitionName);
       Tournament = Tournaments.ToDictionary(d => d.TournamentName);
+      TournamentEvent = TournamentEvents.ToDictionary(d => d.EventName);
       Fund = Funds.ToDictionary(d => d.FundName);
       ExternalSource = ExternalSources.ToDictionary(d => d.Source);
       MatchOutcome = MatchOutcomes.ToDictionary(d => d.MatchOutcomeString);
@@ -44,6 +47,7 @@ namespace Samurai.SqlDataAccess
       BookmakerExternalSourceAlias = BookmakerExternalSourceAliass.ToList();
       TournamentCouponURL = TournamentCouponURLs.ToList();
       CompetitionCouponURL = CompetitionCouponURLs.ToList();
+      OutcomeComment = OutcomeComments.ToList();
     }
   }
 
@@ -99,6 +103,8 @@ namespace Samurai.SqlDataAccess
       var bsporting_odds = new Bookmaker { BookmakerName = "Sporting Odds", Slug = "sporting-odds", IsExchange = false, BookmakerURL = "www.sportingodds.co.uk", CurrentCommission = null, OddsCheckerShortID = null, Priority = 38 };
       var bexpekt = new Bookmaker { BookmakerName = "Expekt", Slug = "expekt", IsExchange = false, BookmakerURL = "http://www.expekt.com", CurrentCommission = null, OddsCheckerShortID = null, Priority = 39 };
       var bbetway = new Bookmaker { BookmakerName = "Betway", Slug = "betway", IsExchange = false, BookmakerURL = "http://new.betway.com/en/sports/", CurrentCommission = null, OddsCheckerShortID = "WA", Priority = 40 };
+      var bcome_on = new Bookmaker { BookmakerName = "Come On", Slug = "comeon", IsExchange = false, BookmakerURL = "https://www.comeon.com/", CurrentCommission = null, OddsCheckerShortID = null, Priority = 41 };
+      var bunibet = new Bookmaker { BookmakerName = "Unibet", Slug = "unibet", IsExchange = false, BookmakerURL = "https://www.unibet.co.uk", CurrentCommission = null, OddsCheckerShortID = "UN", Priority = 42 };
       //sport
       var football = new Sport { SportName = "Football" };
       var tennis = new Sport { SportName = "Tennis" };
@@ -569,6 +575,9 @@ namespace Samurai.SqlDataAccess
       var ccow_atp = new CompetitionCouponURL { Competition = atp, ExternalSource = oddsCheckerMobi, CouponURL = "http://www.oddschecker.com/tennis/mens-tour" };
       var ccom_atp = new CompetitionCouponURL { Competition = atp, ExternalSource = oddsCheckerMobi, CouponURL = "http://oddschecker.mobi/tennis/mens-tour" };
 
+      var comsComplete = new OutcomeComment { Comment = "Completed" };
+      var comsRetired = new OutcomeComment { Comment = "Retired" };
+      var comsWalkOver = new OutcomeComment { Comment = "Walk-over" };
 
       #region OddsCheckerJavaScript
       var oddsCheckerJavaScript = new KeyValuePair 
@@ -578,7 +587,7 @@ namespace Samurai.SqlDataAccess
       };
       #endregion
 
-      Bookmakers = new Bookmaker[] { bexpekt, bbetway, bTennisDataBestAvailable, bOddsCheckerWebBestAvailable, bOddsCheckerMobiBestAvailable, bBestBettingBestAvailable, bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b188bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds };
+      Bookmakers = new Bookmaker[] { bexpekt, bbetway, bTennisDataBestAvailable, bOddsCheckerWebBestAvailable, bOddsCheckerMobiBestAvailable, bBestBettingBestAvailable, bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b188bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds, bcome_on, bunibet };
       Sports = new Sport[] { football, tennis };
       Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp };
       Tournaments = new Tournament[] { t_premierLeague, t_championship, t_leagueOne, t_leagueTwo, brisbane_international, aircel_chennai_open, qatar_exxonmobil_open, apia_international_sydney, heineken_open, australian_open, open_sud_de_france, pbz_zagreb_indoors, vtr_open, abn_amro_world_tennis_tournament, brasil_open_2012, sap_open, regions_morgan_keegan_championships, copa_claro, open_13, dubai_duty_free_tennis_championships, delray_beach_international_tennis_championships, abierto_mexicano_telcel, bnp_paribas_open, sony_ericsson_open, grand_prix_hassan_ii, us_mens_clay_court_championship, monte_carlo_rolex_masters, brd_nastase_tiriac_trophy, barcelona_open_banc_sabadell, bmw_open, serbia_open_2012, estoril_open, mutua_madrid_open, internazionali_bnl_ditalia, open_de_nice_cote_dazur, roland_garros, gerry_weber_open, aegon_championships, unicef_open, aegon_international, wimbledon, mercedescup, campbells_hall_of_fame_tennis_championships, skistar_swedish_open, atp_vegeta_croatia_open_umag, bet_at_home_open___german_tennis_championships_2012, bbt_atlanta_open, credit_agricole_suisse_open_gstaad, bet_at_home_cup_kitzbuhel, farmers_classic, legg_mason_tennis_classic, rogers_cup, western__southern_open, winston_salem_open, us_open, moselle_open, st_petersburg_open, ptt_thailand_open, malaysian_open_kuala_lumpur, china_open, rakuten_japan_open_tennis_championships, shanghai_rolex_masters, erste_bank_open, if_stockholm_open, kremlin_cup, valencia_open_500, swiss_indoors_basel, bnp_paribas_masters, london_2012_olympics, barclays_atp_world_tour_finals };
@@ -593,6 +602,7 @@ namespace Samurai.SqlDataAccess
       TeamPlayerExternalSourceAliass = new TeamPlayerExternalSourceAlias[] { ocw_manunited, ocw_wolves, ocw_middlesboro, ocw_nottmforest, ocw_sheffieldunited, ocw_bristolrvs, ocw_dagandred, ocw_miltonkeynes, ocw_nottscounty, ocw_peterboro, ocw_sheffieldweds, ocw_lincolncity, ocw_crawleytown, ocm_manunited, ocm_wolves, ocm_middlesboro, ocm_nottmforest, ocm_sheffieldunited, ocm_bristolrvs, ocm_dagandred, ocm_miltonkeynes, ocm_nottscounty, ocm_peterboro, ocm_sheffieldweds, ocm_lincolncity, ocm_crawleytown, bb_birmingham, bb_blackburn, bb_bolton, bb_mancity, bb_manunited, bb_newcastle, bb_stoke, bb_tottenham, bb_westbrom, bb_wigan, bb_wolves, bb_cardiff, bb_coventry, bb_derby, bb_doncaster, bb_hull, bb_ipswich, bb_leeds, bb_leicester, bb_middlesboro, bb_norwich, bb_nottmforest, bb_preston, bb_qpr, bb_scunthorpe, bb_swansea, bb_bournemouth, bb_brighton, bb_bristolrvs, bb_carlisle, bb_charlton, bb_colchester, bb_dagandred, bb_exeter, bb_hartlepool, bb_huddersfield, bb_miltonkeynes, bb_oldham, bb_peterboro, bb_plymouth, bb_sheffieldweds, bb_swindon, bb_tranmere, bb_yeovil, bb_accrington, bb_aldershot, bb_bradford, bb_burton, bb_cheltenham, bb_crewe, bb_hereford, bb_lincolncity, bb_macclesfield, bb_northampton, bb_oxford, bb_rotherham, bb_shrewsbury, bb_southend, bb_stockport, bb_torquay, bb_wycombe, bb_york, ss_astonvilla, ss_afcwimbledon, ss_bournemouth, ss_bristolcity, ss_bristolrvs, ss_burton, ss_crystalpalace, ss_chesterfield, ss_crawleytown, ss_dagandred, ss_fleetwoodtown, ss_huddersfield, ss_hull, ss_leytonorient, ss_manunited, ss_middlesboro, ss_miltonkeynes, ss_nottmforest, ss_northampton, ss_nottscounty, ss_oxford, ss_sheffieldunited, ss_sheffieldweds, ss_southampton, ss_stoke, ss_york };
       KeyValuePairs = new KeyValuePair[] { oddsCheckerJavaScript };
       BookmakerExternalSourceAliass = new BookmakerExternalSourceAlias[] { tdbbet_365, tdbexpekt, tdbladbrokes, tdbpinnacle_sports, tdbstan_james, bbb_totesport, bbb_888sport, bbb_skybet, bbb_sportingbet, fdbbet_365, fdbblue_square, fdbladbrokes, fdbpinnacle_sports, fdbsporting_bet, fdbstan_james, fdbwilliam_hill, fdbbet_win, fdbgamebookers, fdbinterwetten, fdbsporting_odds, fdbstanleybet, fdbbetvictor };
+      OutcomeComments = new OutcomeComment[] { comsComplete, comsRetired, comsWalkOver };
     }
 
     public Bookmaker[] Bookmakers { get; set; }
@@ -610,5 +620,6 @@ namespace Samurai.SqlDataAccess
     public TeamPlayerExternalSourceAlias[] TeamPlayerExternalSourceAliass { get; set; }
     public KeyValuePair[] KeyValuePairs { get; set; }
     public BookmakerExternalSourceAlias[] BookmakerExternalSourceAliass { get; set; }
+    public OutcomeComment[] OutcomeComments { get; set; }
   }
 }

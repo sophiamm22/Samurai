@@ -69,6 +69,7 @@
     <Compile Include="Mapping\MissingBookmakerExternalSourceAliasMap.cs" />
     <Compile Include="Mapping\MissingTeamPlayerExternalSourceAliasMap.cs" />
     <Compile Include="Mapping\MissingTournamentCouponURLMap.cs" />
+    <Compile Include="Mapping\OutcomeCommentMap.cs" />
     <Compile Include="Mapping\TennisPredictionStatMap.cs" />
     <Compile Include="Mapping\TournamentCouponURLMap.cs" />
     <Compile Include="Mapping\CompetitionMap.cs" />
@@ -103,6 +104,10 @@
     <Compile Include="Migrations\201307020411374_ManuallyUpdatedDatabase.cs" />
     <Compile Include="Migrations\201307020411374_ManuallyUpdatedDatabase.Designer.cs">
       <DependentUpon>201307020411374_ManuallyUpdatedDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201307110359426_stuffedupagain.cs" />
+    <Compile Include="Migrations\201307110359426_stuffedupagain.Designer.cs">
+      <DependentUpon>201307110359426_stuffedupagain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Procedures\GetGenericMatchDetails.cs" />
@@ -144,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201307020411374_ManuallyUpdatedDatabase.resx">
       <DependentUpon>201307020411374_ManuallyUpdatedDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201307110359426_stuffedupagain.resx">
+      <DependentUpon>201307110359426_stuffedupagain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -283,7 +283,7 @@ namespace Samurai.SqlDataAccess
       var teamOrPlayerBWin = new MatchOutcome { MatchOutcomeString = "Away Win" };
 
       //score outcomes
-      var scoreOutcomes = 
+      var scoreOutcomesNormal = 
       (
         from scoreA in Enumerable.Range(0, 21)
         from scoreB in Enumerable.Range(0, 21)
@@ -295,6 +295,26 @@ namespace Samurai.SqlDataAccess
           MatchOutcome = outcome
         }
       ).ToArray();
+
+      var additionalTennisScoreOutcomes = //handles the situation where a tennis match might be 1-1 and player B retires so A wins.
+      (
+        from scoreA in Enumerable.Range(0, 4)
+        from scoreB in Enumerable.Range(0, 4)
+        from playerAWin in Enumerable.Range(1, 2)
+        let outcome = (playerAWin == 1 ? teamOrPlayerAWin : teamOrPlayerBWin)
+        select new ScoreOutcome
+        {
+          TeamAScore = scoreA,
+          TeamBScore = scoreB,
+          MatchOutcome = outcome
+        }
+      ).ToArray();
+
+      var scoreOutcomes = 
+        scoreOutcomesNormal
+          .Union(additionalTennisScoreOutcomes)
+          .Distinct()
+          .ToArray();
 
       //teams
       var arsenal = new TeamPlayer { Name = "Arsenal", Slug = "arsenal", ExternalID = "0" };

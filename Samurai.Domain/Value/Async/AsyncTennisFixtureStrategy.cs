@@ -26,12 +26,14 @@ namespace Samurai.Domain.Value.Async
   public class AsyncTennisFixtureStrategy : IAsyncTennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
+    protected readonly IStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProviderAsync webRepositoryProvider;
 
-    public AsyncTennisFixtureStrategy(IFixtureRepository fixtureRepository,
-      IWebRepositoryProviderAsync webRepositoryProvider)
+    public AsyncTennisFixtureStrategy(IFixtureRepository fixtureRepository, 
+      IStoredProceduresRepository storedProcRepository, IWebRepositoryProviderAsync webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
+      this.storedProcRepository = storedProcRepository;
       this.webRepositoryProvider = webRepositoryProvider;
     }
 
@@ -110,19 +112,20 @@ namespace Samurai.Domain.Value.Async
       var daysResults =
         await webRepository.ParseJsonEnumerable<APIDaysResults>(tb365Uri);
 
-      var daysResultsDictionary =
-        daysResults.ToDictionary(x => string.Format("{0},{1} vs. {2},{3}"));
-
       foreach (var result in daysResults)
       {
+        bool playerAWins = true;
         Entities.Match persistedMatch;
         persistedMatch = persistedMatches
-          .FirstOrDefault(x => x.TeamsPlayerA.FirstName == result.WinnerFirstName && x.TeamsPlayerA .Name == result.WinnerSurname &&
-                               x.TeamsPlayerB.FirstName == result.LoserFirstName  && x.TeamsPlayerB.Name ==  result.LoserSurname);
+          .FirstOrDefault(x => x.TeamsPlayerA.FirstName == result.WinnerFirstName && x.TeamsPlayerA.Name == result.WinnerSurname &&
+                               x.TeamsPlayerB.FirstName == result.LoserFirstName && x.TeamsPlayerB.Name == result.LoserSurname);
         if (persistedMatch == null)
+        {
           persistedMatch = persistedMatches
           .FirstOrDefault(x => x.TeamsPlayerA.FirstName == result.LoserFirstName && x.TeamsPlayerA.Name == result.LoserSurname &&
-                               x.TeamsPlayerB.FirstName == result.WinnerFirstName  && x.TeamsPlayerB.Name == result.WinnerSurname);
+                               x.TeamsPlayerB.FirstName == result.WinnerFirstName && x.TeamsPlayerB.Name == result.WinnerSurname);
+          playerAWins = false;
+        }
 
         if (persistedMatch == null)
         {
@@ -132,10 +135,68 @@ namespace Samurai.Domain.Value.Async
           continue;
         }
 
+        int playerAScore = 0;
+        int playerBScore = 0;
+        var setsPlayed = ((result.WinnerFirstSetScore.HasValue && result.LoserFirstSetScore.HasValue) ? 1 : 0) +
+                         ((result.WinnerSecondSetScore.HasValue && result.LoserSecondSetScore.HasValue) ? 1 : 0) +
+                         ((result.WinnerThirdSetScore.HasValue && result.LoserThirdSetScore.HasValue) ? 1 : 0) +
+                         ((result.WinnerFourthSetScore.HasValue && result.LoserFourthSetScore.HasValue) ? 1 : 0) +
+                         ((result.WinnerFifthSetScore.HasValue && result.LoserFifthSetScore.HasValue) ? 1 : 0);
 
-        
+        if (setsPlayed >= 1)
+        {
+          playerAScore += (result.WinnerFirstSetScore.Value > result.LoserFirstSetScore ? 1 : 0);
+          playerBScore += (result.WinnerFirstSetScore.Value > result.LoserFirstSetScore ? 0 : 1);
+        }
+        if (setsPlayed >= 2)
+        {
+          playerAScore += (result.WinnerSecondSetScore.Value > result.LoserSecondSetScore ? 1 : 0);
+          playerBScore += (result.WinnerSecondSetScore.Value > result.LoserSecondSetScore ? 0 : 1);
+        }
+        if (setsPlayed >= 3)
+        {
+          playerAScore += (result.WinnerThirdSetScore.Value > result.LoserThirdSetScore ? 1 : 0);
+          playerBScore += (result.WinnerThirdSetScore.Value > result.LoserThirdSetScore ? 0 : 1);
+        }
+        if (setsPlayed >= 4)
+        {
+          playerAScore += (result.WinnerFourthSetScore.Value > result.LoserFourthSetScore ? 1 : 0);
+          playerBScore += (result.WinnerFourthSetScore.Value > result.LoserFourthSetScore ? 0 : 1);
+        }
+        if (setsPlayed >= 5)
+        {
+          playerAScore += (result.WinnerFifthSetScore.Value > result.LoserFifthSetScore ? 1 : 0);
+          playerBScore += (result.WinnerFifthSetScore.Value > result.LoserFifthSetScore ? 0 : 1);
+        }
+
+        var scoreOutcome =
+          this.fixtureRepository
+              .GetScoreOutcome(playerAScore, playerBScore, playerAWins);
+
+        int commentID = 1;
+        if (result.LoserRetired)
+          commentID = 2;
+        else if (result.LoserWalkedOver)
+          commentID = 3;
+
+        //needs to check if this already exists
+        var observedOutcome = new ObservedOutcome()
+        {
+          MatchID = persistedMatch.Id,
+          ScoreOutcomeID = scoreOutcome.Id,
+          OutcomeCommentID = commentID
+        };
+
+        this.fixtureRepository.AddObservedOutcome(observedOutcome);
+
+        ProgressReporterProvider.Current.ReportProgress(
+          string.Format("Persisted result for {0} {1} vs. {2} {3} @ {4}", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),
+          ReporterImportance.Error, ReporterAudience.Admin);
       }
-      throw new NotImplementedException();
+
+      return this.storedProcRepository
+                 .GetGenericMatchDetails(fixtureDate, "Tennis")
+                 .ToList();
     }
 
     public async Task<APITournamentDetail> GetTournamentDetail(string tournament, int year)

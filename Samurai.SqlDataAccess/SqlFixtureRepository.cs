@@ -306,9 +306,23 @@ namespace Samurai.SqlDataAccess
                             .ToList();
     }
 
-    public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore)
+    public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore, bool? teamPlayerAWins = null)
     {
-      return First<ScoreOutcome>(o => o.TeamAScore == teamAScore && o.TeamBScore == teamBScore);
+      if (teamPlayerAWins.HasValue)
+      {
+        var outcome = (teamPlayerAWins.Value ? "Home Win" : "Away Win");
+        return First<ScoreOutcome>(o => o.TeamAScore == teamAScore &&
+                                        o.TeamBScore == teamBScore &&
+                                        o.MatchOutcome.MatchOutcomeString == outcome);
+      }
+      else
+      {
+        var outcome = (teamAScore > teamBScore ? "Home Win" : (teamAScore < teamBScore ? "Away Win" : "Draw"));
+        return First<ScoreOutcome>(o => o.TeamAScore == teamAScore && 
+                                        o.TeamBScore == teamBScore &&
+                                        o.MatchOutcome.MatchOutcomeString == outcome);
+      }
+
     }
 
     public Competition GetCompetitionById(int competitionID)
@@ -336,6 +350,11 @@ namespace Samurai.SqlDataAccess
                         .FirstOrDefault();
       return tournament.TournamentEvents
                        .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
+    }
+
+    public void AddObservedOutcome(ObservedOutcome observedOutcome)
+    {
+      Save<ObservedOutcome>(observedOutcome);
     }
 
     public MatchOutcome GetMatchOutcomeByID(int id)

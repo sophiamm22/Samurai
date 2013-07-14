@@ -24,6 +24,7 @@ namespace Samurai.Tests.DomainValue
       protected Mock<IWebRepository> webRepository;
       protected Mock<IWebRepositoryProvider> webRepositoryProvider;
       protected Mock<IFixtureRepository> fixtureRepository;
+      protected Mock<IStoredProceduresRepository> storedProcRepository;
 
       [Test, Category("TennisFixtureStrategyTests.UpdateTournamentEvents")]
       public void CreatesNewListOfTournamentEvents()
@@ -46,7 +47,7 @@ namespace Samurai.Tests.DomainValue
 
         //Act
         var fixtureStategy = new TestableTennisFixtureStrategy(this.fixtureRepository, 
-          this.webRepositoryProvider);
+          this.storedProcRepository, this.webRepositoryProvider);
 
         var tournamentEvents = fixtureStategy.UpdateTournamentEvents();
         var tournamentEvent = tournamentEvents.FirstOrDefault();
@@ -112,7 +113,7 @@ namespace Samurai.Tests.DomainValue
 
         //Act
         var fixtureStrategy = new TestableTennisFixtureStrategy(this.fixtureRepository,
-          this.webRepositoryProvider);
+          this.storedProcRepository, this.webRepositoryProvider);
 
         var tournamentEvents = fixtureStrategy.UpdateTournamentEvents();
         var tournamentEvent = tournamentEvents.FirstOrDefault();
@@ -135,11 +136,12 @@ namespace Samurai.Tests.DomainValue
   public class TestableTennisFixtureStrategy : TennisFixtureStrategy
   {
     public Mock<IFixtureRepository> MockedFixtureRepository { get; private set; }
+    public Mock<IStoredProceduresRepository> MockedStoredProcRepository { get; private set; }
     public Mock<IWebRepositoryProvider> MockedWebRepositoryProvider { get; private set; }
 
     public TestableTennisFixtureStrategy(Mock<IFixtureRepository> mockFixtureRepository,
-      Mock<IWebRepositoryProvider> mockWebRepositoryProvider)
-      : base(mockFixtureRepository.Object, mockWebRepositoryProvider.Object)
+      Mock<IStoredProceduresRepository> mockedStoredProcRepository, Mock<IWebRepositoryProvider> mockWebRepositoryProvider)
+      : base(mockFixtureRepository.Object, mockedStoredProcRepository.Object, mockWebRepositoryProvider.Object)
     {
       MockedFixtureRepository = mockFixtureRepository;
       MockedWebRepositoryProvider = mockWebRepositoryProvider;

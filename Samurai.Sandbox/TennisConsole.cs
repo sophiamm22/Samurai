@@ -21,8 +21,6 @@ namespace Samurai.Sandbox
   {
     private readonly ITennisFacadeAdminService tennisService;
 
-    public IEnumerable<TennisFixtureViewModel> Fixtures { get; set; }
-
     public TennisConsole(ITennisFacadeAdminService tennisService)
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
@@ -37,7 +35,7 @@ namespace Samurai.Sandbox
         ProgressReporterProvider.Current.ReportProgress("Value-Samurai -- Main Menu", ReporterImportance.High, ReporterAudience.Admin);
         ProgressReporterProvider.Current.ReportProgress("1.\tGet Calendar", ReporterImportance.Medium, ReporterAudience.Admin);
         ProgressReporterProvider.Current.ReportProgress("2.\tFetch Day's Schedule", ReporterImportance.Medium, ReporterAudience.Admin);
-        ProgressReporterProvider.Current.ReportProgress("3.\tGet Day's Schedule", ReporterImportance.Medium, ReporterAudience.Admin);
+        ProgressReporterProvider.Current.ReportProgress("3.\tFetch Day's Results", ReporterImportance.Medium, ReporterAudience.Admin);
         ProgressReporterProvider.Current.ReportProgress("4.\tCalculate Ladder Challenge", ReporterImportance.Medium, ReporterAudience.Admin);
         ProgressReporterProvider.Current.ReportProgress("", ReporterImportance.Medium, ReporterAudience.Admin);
         ProgressReporterProvider.Current.ReportProgress("5.\tReturn to main menu", ReporterImportance.Low, ReporterAudience.Admin);
@@ -55,7 +53,7 @@ namespace Samurai.Sandbox
           else if (number == 2)
             FetchTennisSchedule();
           else if (number == 3)
-            GetTennisSchedule();
+            FetchTennisResults();
           else if (number == 4)
             GetTournamentLadderChallenge();
           else
@@ -86,7 +84,7 @@ namespace Samurai.Sandbox
         var missingAlias = new List<MissingTeamPlayerAliasObject>();
         try
         {
-          Fixtures = tennisService.UpdateDaysSchedule(date);
+          var fixtures = tennisService.UpdateDaysSchedule(date);
           break;
         }
         catch (MissingTournamentCouponURLException tcmEx)
@@ -102,9 +100,9 @@ namespace Samurai.Sandbox
       }
     }
 
-    private void GetTennisSchedule()
+    private void FetchTennisResults()
     {
-      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch full tennis schedule (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
+      ProgressReporterProvider.Current.ReportProgress("Enter the date to fetch tennis results (dd/mm/yy)", ReporterImportance.High, ReporterAudience.Admin);
 
       var dateString = Console.ReadLine();
       DateTime date;
@@ -115,7 +113,24 @@ namespace Samurai.Sandbox
       }
       try
       {
-        Fixtures = tennisService.GetDaysSchedule(date);
+        var dates = 
+          Enumerable.Range(0, 200)
+                    .Select(x => (new DateTime(2013, 01, 04)).AddDays(x))
+                    .ToList();
+
+        foreach (var dateFor in dates)
+        {
+          var fixtures = tennisService.FetchTennisResults(dateFor);
+
+          foreach (var fixture in fixtures)
+          {
+            ProgressReporterProvider.Current.ReportProgress(
+              string.Format("Picked up {0} vs. {1} on {3}", fixture.TeamPlayerA, fixture.TeamPlayerB, date.ToShortDateString()),
+              ReporterImportance.High,
+              ReporterAudience.Admin);
+          }
+
+        }
       }
       catch (Exception ex)
       {

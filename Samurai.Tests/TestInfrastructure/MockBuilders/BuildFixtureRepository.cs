@@ -54,7 +54,7 @@ namespace Samurai.Tests.TestInfrastructure.MockBuilders
 
     public static Mock<IFixtureRepository> CanReturnScoreOutcome(this Mock<IFixtureRepository> repo)
     {
-      repo.Setup(x => x.GetScoreOutcome(It.IsAny<int>(), It.IsAny<int>()))
+      repo.Setup(x => x.GetScoreOutcome(It.IsAny<int>(), It.IsAny<int>(), null))
           .Returns((int a, int b) =>
             {
               return new E.ScoreOutcome

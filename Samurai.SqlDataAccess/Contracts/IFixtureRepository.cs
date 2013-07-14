@@ -57,7 +57,9 @@ namespace Samurai.SqlDataAccess.Contracts
     Competition GetCompetitionById(int competitionID);
     Competition GetCompetition(string competitionName);
 
-    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
+    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore, bool? teamPlayerAWins = null);
+
+    void AddObservedOutcome(ObservedOutcome observedOutcome);
 
     MatchOutcome GetMatchOutcomeByID(int id);
 

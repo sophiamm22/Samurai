@@ -93,6 +93,11 @@ namespace Samurai.Services
       this.tennisOddsService.AddTournamentCouponURL(viewModel);
     }
 
+    public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
+    {
+      return this.tennisFixtureService.FetchTennisResults(matchDate);
+    }
+
     public IEnumerable<ShowTournamentLadderChallengeViewModel> CalculateTournamentLadderChallenge(CalculateTournamentLadderChallengeViewModel viewModel)
     {
       ProgressReporterProvider.Current.ReportProgress(string.Format("Calculating tournament ladder challenge for {0}-{1}", viewModel.Tournament, viewModel.StartDate.ToShortDateString()), ReporterImportance.High, ReporterAudience.Admin);

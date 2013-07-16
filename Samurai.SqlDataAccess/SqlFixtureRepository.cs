@@ -352,9 +352,19 @@ namespace Samurai.SqlDataAccess
                        .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
     }
 
-    public void AddObservedOutcome(ObservedOutcome observedOutcome)
+    public void AddOrUpdateObservedOutcome(ObservedOutcome observedOutcome)
     {
-      Save<ObservedOutcome>(observedOutcome);
+      var persisted = First<ObservedOutcome>(x => x.MatchID == observedOutcome.MatchID);
+      if (persisted == null)
+      {
+        Save<ObservedOutcome>(observedOutcome);
+      }
+      else
+      {
+        persisted.OutcomeCommentID = observedOutcome.OutcomeCommentID;
+        persisted.ScoreOutcomeID = observedOutcome.ScoreOutcomeID;
+        SaveChanges();
+      }
     }
 
     public MatchOutcome GetMatchOutcomeByID(int id)

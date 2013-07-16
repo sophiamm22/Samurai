@@ -28,6 +28,9 @@
 
     @Scripts.Render("~/scripts/vendor")
     @Scripts.Render("~/scripts/signalr")
+    @Scripts.Render("~/scripts/crossfilter")  
+    @Scripts.Render("~/scripts/dc")
+    
     <script src="http://localhost:3600/signalr/hubs"></script>
         @if(HttpContext.Current.IsDebuggingEnabled) {
             <script type="text/javascript" src="~/App/durandal/amd/require.js" data-main="@Url.Content("~/App/main")"></script>

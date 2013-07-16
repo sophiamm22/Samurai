@@ -37,7 +37,7 @@ namespace Samurai.Services.Contracts.Async
   {
     IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
     TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);
-    Task<IEnumerable<TennisMatchViewModel>> FetchTennisResults(DateTime matchDate);
+    Task<IEnumerable<TennisFixtureViewModel>> FetchTennisResults(DateTime matchDate);
     Task<IEnumerable<TournamentEventViewModel>> FetchTournamentEvents();
     Task<IEnumerable<TennisLadderViewModel>> FetchTournamentLadder(DateTime matchDate, string tournament);
   }

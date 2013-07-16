@@ -14,6 +14,7 @@ using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.Domain.APIModel;
+using Model = Samurai.Domain.Model;
 
 namespace Samurai.Services.Async
 {
@@ -43,13 +44,15 @@ namespace Samurai.Services.Async
       return Mapper.Map<Match, TennisMatchViewModel>(match);
     }
 
-    public async Task<IEnumerable<TennisMatchViewModel>> FetchTennisResults(DateTime matchDate)
+    public async Task<IEnumerable<TennisFixtureViewModel>> FetchTennisResults(DateTime matchDate)
     {
       var fixtures = await
         this.fixtureStrategy
             .UpdateResults(matchDate);
 
-      return Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<TennisMatchViewModel>>(fixtures);
+      var fixturesDTO = Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<Model.GenericMatchDetail>>(fixtures);
+
+      return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<TennisFixtureViewModel>>(fixturesDTO);
     }
 
     public async Task<IEnumerable<TournamentEventViewModel>> FetchTournamentEvents()

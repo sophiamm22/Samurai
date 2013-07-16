@@ -115,7 +115,7 @@ namespace Samurai.Sandbox
       {
         var dates = 
           Enumerable.Range(0, 200)
-                    .Select(x => (new DateTime(2013, 01, 04)).AddDays(x))
+                    .Select(x => (new DateTime(2013, 01, 21)).AddDays(x))
                     .ToList();
 
         foreach (var dateFor in dates)
@@ -125,8 +125,8 @@ namespace Samurai.Sandbox
           foreach (var fixture in fixtures)
           {
             ProgressReporterProvider.Current.ReportProgress(
-              string.Format("Picked up {0} vs. {1} on {3}", fixture.TeamPlayerA, fixture.TeamPlayerB, date.ToShortDateString()),
-              ReporterImportance.High,
+              string.Format("Picked up {0} vs. {1} on {2}", fixture.PlayerAFirstName, fixture.PlayerBFirstName, date.ToShortDateString()),
+              ReporterImportance.Medium,
               ReporterAudience.Admin);
           }
 

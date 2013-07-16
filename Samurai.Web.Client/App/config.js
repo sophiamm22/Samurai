@@ -43,13 +43,22 @@
 
   var throttle = 400;
 
+  var minTennisGames = 70;
+  var minEdgeTennis = 0.2;
+  var kellyMultiplier = 0.25;
+  var exhaustiveKellyLimit = 7;
+
   return {
     routes: routes,
     startModule: startModule,
     remoteServiceName: remoteServiceName,
     hashes: hashes,
     throttle: throttle,
-    signalrServiceName: signalrServiceName
+    signalrServiceName: signalrServiceName,
+    minTennisGames: minTennisGames,
+    minEdgeTennis: minEdgeTennis,
+    kellyMultiplier: kellyMultiplier,
+    exhaustiveKellyLimit: exhaustiveKellyLimit
   };
 
 });

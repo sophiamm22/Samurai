@@ -6,9 +6,10 @@
         todaysFootballOdds = ko.observableArray(),
         todaysTennisOdds = ko.observableArray(),
         betFilter = new BetFilter(),
-        valueCalculator = new ValueCalculator();
+        valueCalculator = new ValueCalculator(),
         hasFootballOdds = ko.observable(true),
-        hasTennisOdds = ko.observable(true)
+        hasTennisOdds = ko.observable(true),
+        initialised = false;
 
         todaysMatchesCount = ko.computed(function () {
           return todaysFootballSchedules().length + todaysTennisSchedules().length;

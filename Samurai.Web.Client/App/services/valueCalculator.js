@@ -1,5 +1,5 @@
-﻿define(['services/kellyCalcs'],
-  function (kelly) {
+﻿define(['services/kellyCalcs', 'config'],
+  function (kelly, config) {
     var ValueCalculator = function () {
       var self = this;
 
@@ -26,10 +26,10 @@
           };
         });
         var calculator;
-        if (calculatedBets.length >= 7) {
-          calculator = new kelly.WhitrowKelly(.25, 0, _.map(calculatedBets, function (bet) { return bet.calcBet; }));
+        if (calculatedBets.length >= config.exhaustiveKellyLimit) {
+          calculator = new kelly.WhitrowKelly(config.kellyMultiplier, 0, _.map(calculatedBets, function (bet) { return bet.calcBet; }));
         } else {
-          calculator = new kelly.ExhaustiveKelly(0.25, 0, _.map(calculatedBets, function (bet) { return bet.calcBet; }));
+          calculator = new kelly.ExhaustiveKelly(config.kellyMultiplier, 0, _.map(calculatedBets, function (bet) { return bet.calcBet; }));
         }
         var betPercentages = calculator.calculateKelly();
 

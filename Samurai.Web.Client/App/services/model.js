@@ -466,9 +466,9 @@
       });
 
       tennisMatch.hasQualifyingBet = ko.computed(function () {
-        if (tennisMatch.predictions().playerAGames() < 50 || tennisMatch.predictions().playerBGames() < 50) { return false; }
+        if (tennisMatch.predictions().playerAGames() < config.minTennisGames || tennisMatch.predictions().playerBGames() < config.minTennisGames) { return false; }
         var bestBet = _.max([tennisMatch.homeWinEdge(), tennisMatch.awayWinEdge()]);
-        return bestBet > 0.1; //need to have this stored somewhere      
+        return bestBet >= config.kellyMultiplier; //need to have this stored somewhere      
       });
 
       tennisMatch.valueOutcome = ko.computed(function () {

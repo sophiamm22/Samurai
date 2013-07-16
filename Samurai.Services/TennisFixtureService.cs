@@ -44,11 +44,12 @@ namespace Samurai.Services
       return Mapper.Map<Match, TennisMatchViewModel>(match);
     }
 
-    public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisResults(DateTime matchDate)
     {
       var fixtures = this.fixtureStrategy.UpdateResults(matchDate);
+      var fixturesDTO = Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<Model.GenericMatchDetail>>(fixtures);
 
-      return Mapper.Map<IEnumerable<GenericMatchDetailQuery>, IEnumerable<TennisMatchViewModel>>(fixtures);
+      return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<TennisFixtureViewModel>>(fixturesDTO);
     }
 
     public IEnumerable<TournamentEventViewModel> GetTournamentEvents()

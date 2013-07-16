@@ -8,6 +8,8 @@ namespace Samurai.Web.Client
     public static void RegisterBundles(BundleCollection bundles)
     {
       bundles.IgnoreList.Clear();
+      bundles.UseCdn = true;
+
       AddDefaultIgnorePatterns(bundles.IgnoreList);
 
       // Modernizr
@@ -31,11 +33,24 @@ namespace Samurai.Web.Client
           .Include("~/scripts/bootstrap.js")
           .Include("~/scripts/moment.js")
           .Include("~/scripts/underscore.js")
+          .Include("~/scripts/d3.v3.js")
         );
 
       bundles.Add(
         new ScriptBundle("~/scripts/signalr")
           .Include("~/Scripts/jquery.signalR-{version}.js")
+        );
+
+      bundles.Add(
+        new ScriptBundle("~/scripts/dc",
+          "//cdnjs.cloudflare.com/ajax/libs/dc/1.3.0/dc.min.js")
+          .Include("~/Scripts/dc.js")
+        );
+
+      bundles.Add(
+        new ScriptBundle("~/scripts/crossfilter",
+          "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js")
+          .Include("~/Scripts/crossfilter.js")
         );
 
       bundles.Add(

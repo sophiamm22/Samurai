@@ -35,7 +35,7 @@ namespace Samurai.Services.Contracts
   {
     IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
     TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);
-    IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate);
+    IEnumerable<TennisFixtureViewModel> FetchTennisResults(DateTime matchDate);
     IEnumerable<TournamentEventViewModel> GetTournamentEvents();
     IEnumerable<TennisLadderViewModel> GetTournamentLadder(DateTime matchDate, string tournament);
   }

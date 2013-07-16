@@ -29,8 +29,8 @@ namespace Samurai.Domain.APIModel
     public int RoundID { get; set; }
     [JsonProperty]
     public string Round { get; set; }
-    [JsonProperty]
-    public TimeSpan? Time { get; set; }
+    //[JsonProperty]
+    //public DateTime Time { get; set; }
     [JsonProperty]
     public string Comment { get; set; }
     [JsonProperty]

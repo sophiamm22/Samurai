@@ -82,7 +82,8 @@ namespace Samurai.Domain.Value
           match.ObservedOutcomes.Add(new ObservedOutcome()
           {
             Match = match,
-            ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore)
+            ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore),
+            OutcomeCommentID = 1
           });
         }
         else

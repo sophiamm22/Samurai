@@ -187,7 +187,7 @@ namespace Samurai.Domain.Value.Async
           OutcomeCommentID = commentID
         };
 
-        this.fixtureRepository.AddObservedOutcome(observedOutcome);
+        this.fixtureRepository.AddOrUpdateObservedOutcome(observedOutcome);
 
         ProgressReporterProvider.Current.ReportProgress(
           string.Format("Persisted result for {0} {1} vs. {2} {3} @ {4}", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),

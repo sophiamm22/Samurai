@@ -93,7 +93,7 @@ namespace Samurai.Services
       this.tennisOddsService.AddTournamentCouponURL(viewModel);
     }
 
-    public IEnumerable<TennisMatchViewModel> FetchTennisResults(DateTime matchDate)
+    public IEnumerable<TennisFixtureViewModel> FetchTennisResults(DateTime matchDate)
     {
       return this.tennisFixtureService.FetchTennisResults(matchDate);
     }

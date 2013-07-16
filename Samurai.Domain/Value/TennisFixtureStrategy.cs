@@ -131,8 +131,8 @@ namespace Samurai.Domain.Value
         if (persistedMatch == null)
         {
           ProgressReporterProvider.Current.ReportProgress(
-            string.Format("Result existed for {0} {1} vs. {2} {3} @ {4} had no persisted match", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),
-            ReporterImportance.Error, ReporterAudience.Admin);
+            string.Format("No result for {0} {1} vs. {2} {3} @ {4} had no persisted match", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),
+            ReporterImportance.High, ReporterAudience.Admin);
           continue;
         }
 
@@ -188,11 +188,11 @@ namespace Samurai.Domain.Value
           OutcomeCommentID = commentID
         };
 
-        this.fixtureRepository.AddObservedOutcome(observedOutcome);
+        this.fixtureRepository.AddOrUpdateObservedOutcome(observedOutcome);
 
         ProgressReporterProvider.Current.ReportProgress(
           string.Format("Persisted result for {0} {1} vs. {2} {3} @ {4}", result.WinnerFirstName, result.WinnerSurname, result.LoserFirstName, result.LoserSurname, result.TournamentName),
-          ReporterImportance.Error, ReporterAudience.Admin);
+          ReporterImportance.Medium, ReporterAudience.Admin);
       }
 
       return this.storedProcRepository

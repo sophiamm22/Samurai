@@ -59,7 +59,7 @@ namespace Samurai.SqlDataAccess.Contracts
 
     ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore, bool? teamPlayerAWins = null);
 
-    void AddObservedOutcome(ObservedOutcome observedOutcome);
+    void AddOrUpdateObservedOutcome(ObservedOutcome observedOutcome);
 
     MatchOutcome GetMatchOutcomeByID(int id);
 

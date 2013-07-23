@@ -1,0 +1,1028 @@
+﻿TournamentName,Surface,Series,MatchDate,PlayerASurname,PlayerAFirstName,PlayerBSurname,PlayerBFirstName,PlayerAGames,PlayerBGames,ExpectedMatchOutcome,MatchOutcomeProbability,BookmakerName,Source,OddAfterCommission,Edge,ObservedMatchOutcome,TeamAScore,TeamBScore,MatchComment
+Australian Open,Hard,Grand Slam,24/01/2013,Djokovic,Novak,Ferrer,David,116,124,Away Win,0.208482829,Marathonbet.co.uk,Best Betting,9.4,0.959738593,Home Win,3,0,Completed
+Australian Open,Hard,Grand Slam,25/01/2013,Murray,Andy,Federer,Roger,110,111,Away Win,0.594006054,Paddy Power,Odds Checker Web,2.38,0.413734409,Home Win,3,2,Completed
+Australian Open,Hard,Grand Slam,27/01/2013,Djokovic,Novak,Murray,Andy,117,111,Home Win,0.791517171,Paddy Power,Odds Checker Web,1.57,0.242681958,Home Win,3,1,Completed
+VTR Open,Clay,ATP,4/02/2013,Alund,Martin,Giraldo,Santiago,0,55,Home Win,0.341856582,Marathonbet.co.uk,Best Betting,3.25,0.111033892,Away Win,2,1,Completed
+VTR Open,Clay,ATP,4/02/2013,Mayer,Leonardo,Volandri,Filippo,26,39,Home Win,0.6489401,Paddy Power,Best Betting,1.57,0.018835957,Away Win,2,0,Completed
+VTR Open,Clay,ATP,4/02/2013,Mayer,Leonardo,Volandri,Filippo,26,39,Away Win,0.351059899,Marathonbet.co.uk,Best Betting,3.05,0.070732692,Away Win,2,0,Completed
+VTR Open,Clay,ATP,5/02/2013,Lajovic,Dusan,Garin,Christian,6,0,Away Win,0.222442094,Pinnacle Sports,Odds Checker Web,6.49,0.44364919,Away Win,2,0,Completed
+VTR Open,Clay,ATP,5/02/2013,Riba,Pere,Robredo,Tommy,14,22,Home Win,0.180195619,Pinnacle Sports,Odds Checker Web,6.65,0.198300866,Away Win,2,0,Completed
+VTR Open,Clay,ATP,5/02/2013,Massu,Nicolas,Montanes,Albert,1,33,Away Win,0.886199574,Betfred,Odds Checker Web,1.29,0.14319745,Away Win,2,1,Completed
+VTR Open,Clay,ATP,5/02/2013,Rufin,Guillaume,Ramirez Hidalgo,Ruben,13,17,Away Win,0.51932298,Marathonbet.co.uk,Best Betting,2.88,0.495650182,Home Win,2,0,Completed
+VTR Open,Clay,ATP,5/02/2013,Berlocq,Carlos,Kuznetsov,Andrey,62,11,Away Win,0.397333025,Marathonbet.co.uk,Best Betting,3.35,0.331065634,Home Win,2,0,Completed
+VTR Open,Clay,ATP,5/02/2013,Schwartzman,Diego-Sebastian,Zeballos,Horacio,0,14,Away Win,0.824704489,Pinnacle Sports,Odds Checker Web,1.69,0.393750586,Away Win,2,1,Completed
+VTR Open,Clay,ATP,5/02/2013,Delbonis,Federico,Pella,Guido,10,2,Home Win,0.646002982,Coral,Best Betting,1.62,0.046524831,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Klizan,Martin,Viola,Matteo,34,3,Home Win,0.77939366,Ladbrokes,Odds Checker Web,1.4,0.091151124,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Mektic,Nikola,Sijsling,Igor,0,25,Away Win,0.852166623,Stan James,Odds Checker Web,1.2,0.022599948,Away Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Pavic,Mate,Petzschner,Philipp,3,35,Home Win,0.167213749,Pinnacle Sports,Odds Checker Web,7.56,0.264135942,Away Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Karlovic,Ivo,Dimitrov,Grigor,40,65,Home Win,0.459816312,Marathonbet.co.uk,Best Betting,3.45,0.586366276,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Kavcic,Blaz,Bedene,Aljaz,25,15,Away Win,0.729016956,Bet Victor,Odds Checker Mobi,1.67,0.217458317,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,5/02/2013,Zemlja,Grega,Bozoljac,Ilija,22,0,Home Win,0.581089186,Coral,Best Betting,2,0.162178372,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Mannarino,Adrian,Darcis,Steve,18,45,Away Win,0.629448549,Marathonbet.co.uk,Best Betting,2.75,0.73098351,Away Win,2,0,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Nieminen,Jarkko,Serra,Florent,74,15,Home Win,0.785881972,Ladbrokes,Odds Checker Web,1.44,0.13167004,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Paire,Benoit,Menendez-Maceiras,Adrian,60,2,Away Win,0.280694062,Marathonbet.co.uk,Best Betting,4.45,0.249088576,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Monfils,Gael,Bemelmans,Ruben,56,11,Home Win,0.878757322,Bet Victor,Odds Checker Mobi,1.22,0.072083933,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Stakhovsky,Sergiy,Mathieu,Paul-Henri,54,32,Home Win,0.420899919,Marathonbet.co.uk,Best Betting,3.2,0.346879741,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Hajek,Jan,Sela,Dudi,13,39,Away Win,0.788751402,Betfred,Odds Checker Web,1.5,0.183127103,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,5/02/2013,Hanescu,Victor,Olaso,Guillermo,24,0,Home Win,0.899034296,Pinnacle Sports,Odds Checker Web,1.36,0.222686643,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,6/02/2013,Veic,Antonio,Haase,Robin,8,59,Home Win,0.38386937,Pinnacle Sports,Odds Checker Web,3.1,0.189995047,Away Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,6/02/2013,Kamke,Tobias,Baghdatis,Marcos,39,85,Home Win,0.197632697,Marathonbet.co.uk,Best Betting,6.4,0.264849261,Away Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,6/02/2013,Dodig,Ivan,Becker,Benjamin,56,28,Home Win,0.700313908,Pinnacle Sports,Odds Checker Web,1.71,0.197536783,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,6/02/2013,Youzhny,Mikhail,Sijsling,Igor,70,26,Home Win,0.691287328,Sporting Bet,Odds Checker Web,1.5,0.036930992,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,6/02/2013,Davydenko,Nikolay,Nieminen,Jarkko,72,75,Home Win,0.706913798,32Red bet,Odds Checker Web,1.53,0.081578111,Away Win,2,0,Completed
+Open Sud de France,Hard,ATP,6/02/2013,Troicki,Viktor,Pouille,Lucas,68,0,Home Win,0.940434072,Ladbrokes,Odds Checker Web,1.17,0.100307864,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,6/02/2013,De Schepper,Kenny,Llodra,Michael,6,34,Away Win,0.757380846,Stan James,Odds Checker Web,1.5,0.136071269,Away Win,2,0,Completed
+Open Sud de France,Hard,ATP,6/02/2013,Paire,Benoit,Darcis,Steve,61,46,Away Win,0.580903761,Pinnacle Sports,Odds Checker Web,3.11,0.806610697,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,6/02/2013,Brugues-Davi,Arnau,Kukushkin,Mikhail,2,37,Away Win,0.757415998,Bet 365,Odds Checker Web,3.4,1.575214393,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,6/02/2013,Roger-Vasselin,Edouard,Ito,Tatsuma,41,28,Away Win,0.389767435,32Red bet,Odds Checker Web,3.95,0.539581368,Away Win,2,1,Completed
+VTR Open,Clay,ATP,6/02/2013,Rufin,Guillaume,Monaco,Juan,14,75,Away Win,0.892950645,Marathonbet.co.uk,Best Betting,1.21,0.08047028,Home Win,2,0,Completed
+VTR Open,Clay,ATP,6/02/2013,Nadal,Rafael,Delbonis,Federico,65,11,Home Win,0.99543757,Bet 365,Odds Checker Web,1.07,0.0651182,Home Win,2,0,Completed
+VTR Open,Clay,ATP,6/02/2013,Ramos,Albert,Dutra Silva,Rogerio,69,7,Home Win,0.756190375,Betway,Odds Checker Web,1.45,0.096476044,Home Win,2,0,Completed
+VTR Open,Clay,ATP,6/02/2013,Berlocq,Carlos,Giraldo,Santiago,63,56,Away Win,0.423701607,Marathonbet.co.uk,Best Betting,2.75,0.165179419,Home Win,2,1,Completed
+VTR Open,Clay,ATP,6/02/2013,Sousa,Joao,Gimeno-Traver,Daniel,11,23,Home Win,0.308630845,Marathonbet.co.uk,Best Betting,3.3,0.018481789,Away Win,2,1,Completed
+VTR Open,Clay,ATP,6/02/2013,Naso,Gianluca,Lorenzi,Paolo,1,30,Away Win,0.672017878,Marathonbet.co.uk,Best Betting,1.7,0.142430393,Away Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Klizan,Martin,Haase,Robin,35,60,Home Win,0.511151713,32Red bet,Odds Checker Web,2.4,0.226764111,Away Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Kavcic,Blaz,Baghdatis,Marcos,26,85,Away Win,0.855630207,Stan James,Odds Checker Web,1.17,0.001087342,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Cilic,Marin,Zemlja,Grega,82,23,Away Win,0.188038823,Betfair,Best Betting,6.0065,0.17900342,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Dodig,Ivan,Karlovic,Ivo,56,40,Away Win,0.515658399,Marathonbet.co.uk,Best Betting,2.42,0.247893326,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Devvarman,Somdev,Melzer,Jurgen,16,59,Home Win,0.329923584,Bet 365,Odds Checker Web,3.75,0.23721344,Away Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,7/02/2013,Cipolla,Flavio,Rosol,Lukas,49,49,Home Win,0.511376405,Pinnacle Sports,Odds Checker Web,3.47,0.774476125,Away Win,2,1,Completed
+Open Sud de France,Hard,ATP,7/02/2013,Brugues-Davi,Arnau,Simon,Gilles,3,84,Away Win,0.925428488,Ladbrokes,Odds Checker Web,1.11,0.027225622,Away Win,2,0,Completed
+Open Sud de France,Hard,ATP,7/02/2013,Llodra,Michael,Tipsarevic,Janko,38,116,Away Win,0.645992424,Marathonbet.co.uk,Best Betting,1.85,0.195085984,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,7/02/2013,Gasquet,Richard,Monfils,Gael,84,57,Home Win,0.742309989,Pinnacle Sports,Odds Checker Web,1.7,0.261926981,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,7/02/2013,Ito,Tatsuma,Stakhovsky,Sergiy,29,54,Home Win,0.359456339,Pinnacle Sports,Odds Checker Web,2.93,0.053207073,Away Win,2,1,Completed
+VTR Open,Clay,ATP,7/02/2013,Zeballos,Horacio,Andujar,Pablo,15,63,Away Win,0.670467217,Pinnacle Sports,Odds Checker Web,2.82,0.890717552,Home Win,2,0,Completed
+VTR Open,Clay,ATP,7/02/2013,Robredo,Tommy,Lorenzi,Paolo,23,31,Home Win,0.722715223,Stan James,Odds Checker Web,1.67,0.206934422,Away Win,2,0,Completed
+VTR Open,Clay,ATP,7/02/2013,Chardy,Jeremy,Garin,Christian,60,1,Away Win,0.347127659,Betfair,Best Betting,8.1725,1.967941484,Home Win,2,1,Completed
+VTR Open,Clay,ATP,7/02/2013,Ramos,Albert,Volandri,Filippo,70,40,Away Win,0.370543733,Pinnacle Sports,Odds Checker Web,3.01,0.115336636,Home Win,2,1,Completed
+VTR Open,Clay,ATP,7/02/2013,Montanes,Albert,Gimeno-Traver,Daniel,33,24,Away Win,0.535763503,Paddy Power,Odds Checker Web,2.1,0.125103356,Away Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,8/02/2013,Rosol,Lukas,Melzer,Jurgen,50,60,Away Win,0.536949325,Marathonbet.co.uk,Best Betting,1.99,0.068529157,Away Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,8/02/2013,Haase,Robin,Petzschner,Philipp,61,37,Away Win,0.559673281,Stan James,Odds Checker Web,2.1,0.17531389,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,8/02/2013,Youzhny,Mikhail,Dodig,Ivan,71,56,Home Win,0.621845329,Marathonbet.co.uk,Best Betting,1.61,0.00117098,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,8/02/2013,Cilic,Marin,Kavcic,Blaz,82,27,Away Win,0.172339565,Pinnacle Sports,Odds Checker Web,8.53,0.470056489,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,8/02/2013,Hajek,Jan,Llodra,Michael,15,38,Away Win,0.910236445,Pinnacle Sports,Odds Checker Web,1.16,0.055874276,Away Win,2,0,Completed
+Open Sud de France,Hard,ATP,8/02/2013,Nieminen,Jarkko,Stakhovsky,Sergiy,76,54,Away Win,0.366919242,Pinnacle Sports,Odds Checker Web,3.3,0.210833499,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,8/02/2013,Paire,Benoit,Simon,Gilles,62,89,Home Win,0.360701658,Totesport,Odds Checker Web,2.88,0.038820775,Home Win,2,0,Completed
+VTR Open,Clay,ATP,8/02/2013,Nadal,Rafael,Gimeno-Traver,Daniel,69,25,Home Win,0.991996836,Marathonbet.co.uk,Best Betting,1.04,0.031676709,Home Win,2,0,Completed
+VTR Open,Clay,ATP,8/02/2013,Chardy,Jeremy,Lorenzi,Paolo,61,32,Away Win,0.409027373,Betfred,Odds Checker Web,3.25,0.329338962,Home Win,2,0,Completed
+VTR Open,Clay,ATP,8/02/2013,Ramos,Albert,Zeballos,Horacio,71,16,Home Win,0.665519958,Pinnacle Sports,Odds Checker Web,1.79,0.191280725,Away Win,2,1,Completed
+Open Sud de France,Hard,ATP,8/02/2013,Gasquet,Richard,Benneteau,Julien,84,74,Away Win,0.301122765,Marathonbet.co.uk,Best Betting,3.45,0.038873539,Home Win,2,1,Completed
+PBZ Zagreb Indoors,Hard,ATP,9/02/2013,Melzer,Jurgen,Haase,Robin,61,62,Away Win,0.425763626,Marathonbet.co.uk,Best Betting,2.4,0.021832702,Home Win,2,0,Completed
+PBZ Zagreb Indoors,Hard,ATP,9/02/2013,Cilic,Marin,Youzhny,Mikhail,82,72,Home Win,0.671111037,Marathonbet.co.uk,Best Betting,1.67,0.120755432,Home Win,2,1,Completed
+VTR Open,Clay,ATP,9/02/2013,Zeballos,Horacio,Berlocq,Carlos,17,64,Away Win,0.684281397,32Red bet,Odds Checker Web,1.6,0.094850235,Home Win,2,0,Completed
+Open Sud de France,Hard,ATP,9/02/2013,Paire,Benoit,Llodra,Michael,63,39,Away Win,0.718182529,Paddy Power,Odds Checker Web,1.5,0.077273794,Home Win,2,1,Completed
+Open Sud de France,Hard,ATP,9/02/2013,Nieminen,Jarkko,Gasquet,Richard,77,84,Away Win,0.868178691,Ladbrokes,Odds Checker Web,1.29,0.119950511,Away Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Klizan,Martin,Mathieu,Paul-Henri,36,33,Away Win,0.682168446,Marathonbet.co.uk,Best Betting,1.78,0.214259834,Home Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Brands,Daniel,Simon,Gilles,23,86,Away Win,0.848530426,Pinnacle Sports,Best Betting,1.68,0.425531116,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Tomic,Bernard,Dimitrov,Grigor,68,66,Home Win,0.558029755,Pinnacle Sports,Odds Checker Web,1.84,0.026774749,Away Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Tsonga,Jo-Wilfried,Sijsling,Igor,112,27,Away Win,0.106942266,Pinnacle Sports,Odds Checker Web,10.43,0.115407834,Away Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Mayer,Florian,Davydenko,Nikolay,67,72,Away Win,0.747439675,Betfred,Odds Checker Web,1.44,0.076313132,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Hanescu,Victor,Janowicz,Jerzy,26,17,Home Win,0.323510995,Boylesports,Odds Checker Web,4,0.29404398,Home Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,11/02/2013,Viola,Matteo,Granollers,Marcel,4,64,Away Win,0.914294071,Ladbrokes,Best Betting,1.3,0.188582292,Home Win,2,1,Completed
+Brasil Open,Clay,ATP,11/02/2013,Andujar,Pablo,Giraldo,Santiago,64,57,Away Win,0.716343176,Betfred,Odds Checker Web,1.62,0.160475945,Home Win,2,0,Completed
+Brasil Open,Clay,ATP,11/02/2013,Robredo,Tommy,Bolelli,Simone,24,22,Away Win,0.383457302,Pinnacle Sports,Odds Checker Web,2.67,0.023830996,Away Win,2,0,Completed
+SAP Open,Hard,ATP,11/02/2013,Malisse,Xavier,Soeda,Go,60,38,Away Win,0.608707635,Pinnacle Sports,Odds Checker Web,2.27,0.381766331,Home Win,2,1,Completed
+SAP Open,Hard,ATP,11/02/2013,Levine,Jesse,Klahn,Bradley,28,3,Away Win,0.329547181,Boylesports,Odds Checker Web,3.9,0.285234006,Home Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,12/02/2013,Gulbis,Ernests,Haase,Robin,38,63,Home Win,0.607387965,Stan James,Odds Checker Web,1.83,0.111519976,Home Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,12/02/2013,Monfils,Gael,Del Potro,Juan-Martin,55,96,Away Win,0.867573104,32Red bet,Best Betting,1.26,0.093142111,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,12/02/2013,Nieminen,Jarkko,Goffin,David,78,34,Home Win,0.625648994,Pinnacle Sports,Odds Checker Web,1.69,0.0573468,Home Win,2,0,Completed
+Brasil Open,Clay,ATP,12/02/2013,Fognini,Fabio,Pella,Guido,62,3,Home Win,0.741237744,Betfred,Odds Checker Web,1.5,0.111856616,Away Win,2,1,Completed
+Brasil Open,Clay,ATP,12/02/2013,Garcia-Lopez,Guillermo,Ramos,Albert,61,72,Home Win,0.351746783,Marathonbet.co.uk,Best Betting,3.45,0.213526401,Away Win,2,0,Completed
+Brasil Open,Clay,ATP,12/02/2013,Gimeno-Traver,Daniel,Volandri,Filippo,26,41,Home Win,0.690130138,Pinnacle Sports,Odds Checker Web,1.73,0.193925139,Away Win,2,1,Completed
+Brasil Open,Clay,ATP,12/02/2013,Clezar,Guilherme,Bellucci,Thomaz,0,54,Away Win,0.969440301,Marathonbet.co.uk,Best Betting,1.17,0.134245152,Away Win,2,1,Completed
+Brasil Open,Clay,ATP,12/02/2013,Kuznetsov,Andrey,Berlocq,Carlos,12,65,Home Win,0.369167724,Marathonbet.co.uk,Best Betting,3.8,0.402837351,Away Win,2,0,Completed
+SAP Open,Hard,ATP,12/02/2013,Pospisil,Vasek,Donskoy,Evgeny,22,9,Home Win,0.418878612,Betfred,Odds Checker Web,3,0.256635836,Home Win,2,0,Completed
+SAP Open,Hard,ATP,12/02/2013,Kavcic,Blaz,Hewitt,Lleyton,28,31,Away Win,0.747268847,Stan James,Odds Checker Web,1.57,0.17321209,Away Win,2,1,Completed
+SAP Open,Hard,ATP,12/02/2013,Becker,Benjamin,Harrison,Ryan,29,57,Away Win,0.675401526,Boylesports,Odds Checker Web,1.53,0.033364335,Home Win,2,1,Completed
+SAP Open,Hard,ATP,12/02/2013,Sock,Jack,Matosevic,Marinko,14,40,Away Win,0.660216681,Betfred,Odds Checker Web,1.8,0.188390026,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,13/02/2013,Federer,Roger,Zemlja,Grega,110,24,Home Win,0.983025261,32Red bet,Best Betting,1.03,0.012516019,Home Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,13/02/2013,Davydenko,Nikolay,Dimitrov,Grigor,72,66,Home Win,0.634719475,Ladbrokes,Best Betting,1.91,0.212314197,Away Win,2,0,Completed
+Brasil Open,Clay,ATP,13/02/2013,Nalbandian,David,Aguilar,Jorge,48,0,Home Win,0.927226226,32Red bet,Best Betting,1.32,0.223938618,Home Win,2,1,Completed
+Brasil Open,Clay,ATP,13/02/2013,Chardy,Jeremy,Alund,Martin,63,2,Away Win,0.246870909,Marathonbet.co.uk,Best Betting,4.2,0.036857818,Away Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,15/02/2013,Dimitrov,Grigor,Baghdatis,Marcos,66,87,Away Win,0.594121694,Pinnacle Sports,Odds Checker Web,1.98,0.176360954,Home Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,15/02/2013,Nieminen,Jarkko,Del Potro,Juan-Martin,80,96,Away Win,0.853275278,Paddy Power,Best Betting,1.2,0.023930334,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,15/02/2013,Federer,Roger,Benneteau,Julien,111,75,Away Win,0.165200015,Marathonbet.co.uk,Best Betting,12,0.98240018,Away Win,2,0,Completed
+Brasil Open,Clay,ATP,15/02/2013,Montanes,Albert,Bolelli,Simone,35,24,Home Win,0.46321538,Pinnacle Sports,Odds Checker Web,2.26,0.046866759,Away Win,2,0,Completed
+Brasil Open,Clay,ATP,15/02/2013,Alund,Martin,Volandri,Filippo,3,43,Home Win,0.391447104,Pinnacle Sports,Odds Checker Web,2.56,0.002104586,Home Win,2,0,Completed
+Brasil Open,Clay,ATP,15/02/2013,Nalbandian,David,Almagro,Nicolas,48,90,Away Win,0.752342832,Pinnacle Sports,Best Betting,1.58,0.188701675,Home Win,2,1,Completed
+Brasil Open,Clay,ATP,15/02/2013,Nadal,Rafael,Berlocq,Carlos,72,67,Home Win,0.991288902,Marathonbet.co.uk,Best Betting,1.08,0.070592014,Home Win,2,1,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,16/02/2013,Dimitrov,Grigor,Del Potro,Juan-Martin,67,97,Away Win,0.811746822,Pinnacle Sports,Odds Checker Web,1.24,0.006566059,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,16/02/2013,Benneteau,Julien,Simon,Gilles,76,90,Home Win,0.525779594,Pinnacle Sports,Best Betting,2.08,0.093621556,Home Win,2,0,Completed
+Brasil Open,Clay,ATP,16/02/2013,Bolelli,Simone,Nalbandian,David,25,49,Away Win,0.618616909,Stan James,Best Betting,1.62,0.002159393,Away Win,2,0,Completed
+ABN AMRO World Tennis Tournament,Hard,ATP,17/02/2013,Benneteau,Julien,Del Potro,Juan-Martin,77,98,Home Win,0.239279685,Bet 365,Odds Checker Mobi,5,0.196398425,Away Win,2,0,Completed
+Brasil Open,Clay,ATP,17/02/2013,Nadal,Rafael,Nalbandian,David,72,50,Home Win,0.859107775,Paddy Power,Odds Checker Web,1.5,0.288661663,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,18/02/2013,Harrison,Ryan,Kubot,Lukasz,56,58,Away Win,0.487330977,Marathonbet.co.uk,Best Betting,2.96,0.442499692,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,18/02/2013,Cilic,Marin,Dodig,Ivan,83,54,Home Win,0.849994461,Pinnacle Sports,Odds Checker Web,1.27,0.079492965,Home Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,18/02/2013,Johnson,Steve,Williams,Rhyne,12,3,Home Win,0.632997384,Pinnacle Sports,Odds Checker Web,2.05,0.297644637,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,18/02/2013,Sousa,Joao,Delbonis,Federico,12,12,Home Win,0.413725993,Marathonbet.co.uk,Best Betting,3.5,0.448040976,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,18/02/2013,Bellucci,Thomaz,Schwartzman,Diego-Sebastian,55,1,Home Win,0.953812755,Marathonbet.co.uk,Best Betting,1.63,0.554714791,Away Win,2,1,Completed
+Copa Claro,Clay,ATP,18/02/2013,Bedene,Aljaz,Zeballos,Horacio,16,20,Home Win,0.551482196,Marathonbet.co.uk,Best Betting,3.25,0.792317137,Home Win,2,1,Completed
+Copa Claro,Clay,ATP,18/02/2013,Pella,Guido,Almagro,Nicolas,5,90,Away Win,0.935124515,Stan James,Odds Checker Web,1.17,0.094095683,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,18/02/2013,Ramos,Albert,Cipolla,Flavio,74,51,Away Win,0.33514124,Marathonbet.co.uk,Best Betting,3.95,0.323807898,Home Win,2,0,Completed
+Open 13,Hard,ATP,18/02/2013,Rosol,Lukas,Janowicz,Jerzy,51,18,Home Win,0.369182633,Pinnacle Sports,Odds Checker Web,2.97,0.09647242,Away Win,2,0,Completed
+Open 13,Hard,ATP,18/02/2013,Klizan,Martin,Tomic,Bernard,39,69,Away Win,0.776093056,Ladbrokes,Odds Checker Web,1.4,0.086530278,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Melzer,Jurgen,Sijsling,Igor,62,29,Away Win,0.365781733,Marathonbet.co.uk,Best Betting,2.88,0.053451391,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Mayer,Florian,Blake,James,67,29,Away Win,0.589994068,Pinnacle Sports,Odds Checker Web,1.76,0.03838956,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Querrey,Sam,Falla,Alejandro,73,50,Away Win,0.280140873,Pinnacle Sports,Best Betting,3.85,0.078542361,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Istomin,Denis,Isner,John,74,80,Home Win,0.466175793,Stan James,Odds Checker Web,2.62,0.221380578,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Marchenko,Illya,Nishikori,Kei,1,76,Away Win,0.887163419,Bet Victor,Odds Checker Mobi,1.29,0.144440811,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Bogomolov Jr.,Alex,Russell,Michael,56,25,Away Win,0.537374305,Marathonbet.co.uk,Best Betting,2.04,0.096243582,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,19/02/2013,Becker,Benjamin,Lopez,Feliciano,31,72,Away Win,0.720431242,Marathonbet.co.uk,Best Betting,2.14,0.541722858,Away Win,2,1,Completed
+Copa Claro,Clay,ATP,19/02/2013,Robredo,Tommy,Elias,Gastao,25,1,Home Win,0.766277629,Pinnacle Sports,Best Betting,1.54,0.180067549,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,19/02/2013,Mayer,Leonardo,Bolelli,Simone,27,26,Home Win,0.412064518,Marathonbet.co.uk,Best Betting,2.82,0.162021941,Home Win,2,1,Completed
+Copa Claro,Clay,ATP,19/02/2013,Lorenzi,Paolo,Wawrinka,Stanislas,34,70,Away Win,0.847333373,Pinnacle Sports,Best Betting,1.26,0.06764005,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,19/02/2013,Reister,Julian,Alund,Martin,4,5,Home Win,0.520077143,Paddy Power,Odds Checker Web,2.5,0.300192858,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,19/02/2013,Kuznetsov,Andrey,Volandri,Filippo,13,44,Home Win,0.508303279,Boylesports,Odds Checker Web,2.5,0.270758198,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,19/02/2013,Andujar,Pablo,Montanes,Albert,66,36,Home Win,0.466305943,Bet 365,Odds Checker Mobi,2.38,0.109808144,Away Win,2,1,Completed
+Copa Claro,Clay,ATP,19/02/2013,Lajovic,Dusan,Gimeno-Traver,Daniel,7,26,Away Win,0.793724947,Marathonbet.co.uk,Best Betting,1.42,0.127089425,Away Win,2,0,Completed
+Open 13,Hard,ATP,19/02/2013,Paire,Benoit,Devvarman,Somdev,66,17,Away Win,0.39982261,Pinnacle Sports,Odds Checker Web,4.67,0.867171589,Away Win,2,1,Completed
+Open 13,Hard,ATP,19/02/2013,Llodra,Michael,Goffin,David,38,35,Away Win,0.311325166,Sporting Bet,Odds Checker Web,4,0.245300664,Home Win,2,0,Completed
+Open 13,Hard,ATP,19/02/2013,Gulbis,Ernests,Nieminen,Jarkko,39,81,Away Win,0.650063832,Pinnacle Sports,Odds Checker Web,2.04,0.326130217,Home Win,2,0,Completed
+Open 13,Hard,ATP,19/02/2013,Muller,Gilles,Gasquet,Richard,56,85,Away Win,0.880440197,Stan James,Odds Checker Web,1.17,0.03011503,Home Win,2,1,Completed
+Open 13,Hard,ATP,19/02/2013,Monfils,Gael,Granollers,Marcel,53,65,Away Win,0.401226834,Marathonbet.co.uk,Best Betting,4.1,0.645030019,Away Win,2,0,Completed
+Open 13,Hard,ATP,19/02/2013,Stakhovsky,Sergiy,Davydenko,Nikolay,50,67,Away Win,0.789304045,Pinnacle Sports,Odds Checker Web,1.45,0.144490865,Away Win,2,1,Completed
+Open 13,Hard,ATP,19/02/2013,Krajinovic,Filip,Bautista-Agut,Roberto,3,21,Away Win,0.805332412,Pinnacle Sports,Best Betting,1.34,0.079145432,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,20/02/2013,Lu,Yen-Hsun,Hewitt,Lleyton,39,33,Away Win,0.718546712,Pinnacle Sports,Odds Checker Web,1.71,0.228714878,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,20/02/2013,Haas,Tommy,Donskoy,Evgeny,63,10,Home Win,0.81912742,Marathonbet.co.uk,Best Betting,1.25,0.023909275,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,20/02/2013,Phau,Bjorn,Dolgopolov,Alexandr,24,82,Away Win,0.784349691,Stan James,Odds Checker Web,1.29,0.011811101,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,20/02/2013,Sock,Jack,Raonic,Milos,15,81,Away Win,0.939578064,Stan James,Odds Checker Web,1.12,0.052327432,Home Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,20/02/2013,Soeda,Go,Matosevic,Marinko,39,42,Home Win,0.643820078,Marathonbet.co.uk,Best Betting,2.06,0.326269361,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,20/02/2013,Ferrer,David,Velotti,Agustin,123,0,Home Win,0.992168767,Paddy Power,Odds Checker Web,1.02,0.012012142,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,20/02/2013,Berlocq,Carlos,Nalbandian,David,68,51,Away Win,0.724426811,Sporting Bet,Odds Checker Web,1.73,0.253258383,Away Win,2,1,Completed
+Copa Claro,Clay,ATP,20/02/2013,Garcia-Lopez,Guillermo,Fognini,Fabio,61,61,Home Win,0.423392559,32Red bet,Odds Checker Web,2.5,0.058481398,Away Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Benneteau,Julien,Pouille,Lucas,78,1,Home Win,0.970991366,Stan James,Odds Checker Web,1.14,0.106930157,Home Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Simon,Gilles,Haase,Robin,90,64,Home Win,0.834344276,Stan James,Odds Checker Web,1.33,0.109677887,Home Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Berdych,Tomas,Gulbis,Ernests,99,40,Home Win,0.900357099,Bwin,Odds Checker Web,1.38,0.242492797,Home Win,2,1,Completed
+Open 13,Hard,ATP,20/02/2013,Davydenko,Nikolay,Tsonga,Jo-Wilfried,73,111,Home Win,0.324600172,Marathonbet.co.uk,Best Betting,4.1,0.330860705,Away Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Granollers,Marcel,Muller,Gilles,66,56,Away Win,0.476682759,Marathonbet.co.uk,Best Betting,2.34,0.115437656,Away Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Tomic,Bernard,Devvarman,Somdev,69,18,Away Win,0.244846536,Marathonbet.co.uk,Best Betting,4.45,0.089567085,Home Win,2,0,Completed
+Open 13,Hard,ATP,20/02/2013,Tursunov,Dmitry,Roger-Vasselin,Edouard,26,38,Home Win,0.603216563,Pinnacle Sports,Odds Checker Web,2.56,0.544234401,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Cilic,Marin,Sijsling,Igor,84,30,Away Win,0.213918052,Pinnacle Sports,Odds Checker Web,4.93,0.054615996,Home Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Querrey,Sam,Matosevic,Marinko,74,43,Home Win,0.839701065,Ladbrokes,Odds Checker Web,1.29,0.083214374,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Blake,James,Sock,Jack,29,16,Home Win,0.82826209,Sporting Bet,Odds Checker Web,1.53,0.267240998,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Hewitt,Lleyton,Istomin,Denis,33,74,Home Win,0.497150286,Sporting Bet,Odds Checker Web,2.75,0.367163287,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Williams,Rhyne,Dolgopolov,Alexandr,4,76,Away Win,0.871009583,Sporting Bet,Odds Checker Web,1.35,0.175862937,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Young,Donald,Nishikori,Kei,40,77,Away Win,0.878372157,Pinnacle Sports,Odds Checker Web,1.22,0.071614032,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,21/02/2013,Russell,Michael,Kubot,Lukasz,26,59,Home Win,0.571078507,Marathonbet.co.uk,Best Betting,2.22,0.267794286,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Kuznetsov,Andrey,Almagro,Nicolas,14,91,Away Win,0.877317119,William Hill,Odds Checker Web,1.14,0.000141516,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Schwartzman,Diego-Sebastian,Robredo,Tommy,2,26,Away Win,0.922012516,Marathonbet.co.uk,Best Betting,1.6,0.475220026,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Ferrer,David,Nalbandian,David,124,52,Away Win,0.207200488,Sporting Bet,Odds Checker Web,6,0.243202928,Home Win,2,1,Completed
+Copa Claro,Clay,ATP,21/02/2013,Gimeno-Traver,Daniel,Wawrinka,Stanislas,28,71,Home Win,0.223795551,Marathonbet.co.uk,Best Betting,5.1,0.14135731,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Montanes,Albert,Delbonis,Federico,37,13,Home Win,0.59685155,Marathonbet.co.uk,Best Betting,2.6,0.55181403,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Ramos,Albert,Mayer,Leonardo,75,28,Away Win,0.495436266,Marathonbet.co.uk,Best Betting,2.78,0.377312819,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,21/02/2013,Trungelliti,Marco,Fognini,Fabio,3,60,Away Win,0.788666462,Ladbrokes,Best Betting,1.33,0.048926394,Away Win,2,0,Completed
+Open 13,Hard,ATP,21/02/2013,Tipsarevic,Janko,Tursunov,Dmitry,106,27,Away Win,0.251745036,Stan James,Odds Checker Web,4.5,0.132852662,Away Win,2,0,Completed
+Open 13,Hard,ATP,21/02/2013,Llodra,Michael,Del Potro,Juan-Martin,39,99,Away Win,0.845938004,Pinnacle Sports,Odds Checker Web,1.36,0.150475685,Away Win,2,1,Completed
+Open 13,Hard,ATP,21/02/2013,Benneteau,Julien,Janowicz,Jerzy,78,19,Home Win,0.732839263,Pinnacle Sports,Odds Checker Web,1.9,0.3923946,Away Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,22/02/2013,Cilic,Marin,Nishikori,Kei,85,80,Home Win,0.588906313,Marathonbet.co.uk,Best Betting,1.94,0.142478247,Away Win,2,0,Completed
+Copa Claro,Clay,ATP,22/02/2013,Robredo,Tommy,Reister,Julian,27,6,Home Win,0.705312812,Marathonbet.co.uk,Best Betting,1.42,0.001544193,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,22/02/2013,Delbonis,Federico,Almagro,Nicolas,14,92,Away Win,0.862582932,Pinnacle Sports,Odds Checker Web,1.22,0.052351177,Away Win,2,0,Completed
+Open 13,Hard,ATP,22/02/2013,Tursunov,Dmitry,Muller,Gilles,28,53,Home Win,0.53221724,William Hill,Odds Checker Web,1.91,0.016534928,Home Win,2,1,Completed
+Open 13,Hard,ATP,22/02/2013,Tomic,Bernard,Tsonga,Jo-Wilfried,70,112,Home Win,0.254336788,Marathonbet.co.uk,Best Betting,4.55,0.157232385,Away Win,2,1,Completed
+Open 13,Hard,ATP,22/02/2013,Berdych,Tomas,Janowicz,Jerzy,100,20,Home Win,0.896022047,Pinnacle Sports,Odds Checker Web,1.4,0.254430866,Home Win,2,1,Completed
+Open 13,Hard,ATP,22/02/2013,Simon,Gilles,Del Potro,Juan-Martin,92,100,Away Win,0.80728554,Pinnacle Sports,Odds Checker Web,1.36,0.097908334,Home Win,2,0,Completed
+Copa Claro,Clay,ATP,23/02/2013,Wawrinka,Stanislas,Almagro,Nicolas,73,93,Away Win,0.616693903,Sporting Bet,Odds Checker Web,1.73,0.066880452,Home Win,2,0,Completed
+Open 13,Hard,ATP,23/02/2013,Tsonga,Jo-Wilfried,Simon,Gilles,113,93,Home Win,0.642993657,Sporting Bet,Odds Checker Web,1.57,0.009500041,Home Win,2,0,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,23/02/2013,Istomin,Denis,Lopez,Feliciano,75,74,Home Win,0.663332047,William Hill,Odds Checker Web,1.67,0.107764518,Away Win,2,1,Completed
+U.S. National Indoor Tennis Championships,Hard,ATP,24/02/2013,Nishikori,Kei,Lopez,Feliciano,80,75,Home Win,0.833755501,Stan James,Odds Checker Web,1.36,0.133907481,Home Win,2,0,Completed
+Open 13,Hard,ATP,24/02/2013,Berdych,Tomas,Tsonga,Jo-Wilfried,101,114,Home Win,0.625566079,Pinnacle Sports,Odds Checker Web,1.69,0.057206674,Away Win,2,1,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Mathieu,Paul-Henri,Seppi,Andreas,34,82,Away Win,0.64069929,Marathonbet.co.uk,Best Betting,1.62,0.03793285,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Kavcic,Blaz,Youzhny,Mikhail,26,72,Away Win,0.764212875,Sky Bet,Odds Checker Web,1.4,0.069898025,Away Win,2,1,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Devvarman,Somdev,Kunitsyn,Igor,18,33,Home Win,0.614939028,Spreadex,Best Betting,1.91,0.174533543,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Serra,Florent,Brands,Daniel,16,24,Home Win,0.367522841,Pinnacle Sports,Odds Checker Web,3.26,0.198124462,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Goffin,David,Bautista-Agut,Roberto,36,23,Home Win,0.511714977,Sporting Bet,Odds Checker Web,2.4,0.228115945,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,25/02/2013,Rosol,Lukas,Viola,Matteo,50,6,Home Win,0.741024078,Pinnacle Sports,Odds Checker Web,1.52,0.126356599,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,25/02/2013,Donskoy,Evgeny,Darcis,Steve,11,43,Away Win,0.672001423,Stan James,Odds Checker Web,2,0.344002846,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,25/02/2013,Malisse,Xavier,Falla,Alejandro,62,49,Away Win,0.523404637,Stan James,Odds Checker Web,2,0.046809274,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,25/02/2013,Dolgopolov,Alexandr,Dodig,Ivan,81,54,Home Win,0.687418397,Coral,Odds Checker Web,1.53,0.051750147,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Ramirez,Cesar,Almagro,Nicolas,1,93,Away Win,0.983755243,Stan James,Odds Checker Web,1.03,0.0132679,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Schwartzman,Diego-Sebastian,Nadal,Rafael,3,66,Away Win,0.998624732,Bet 365,Odds Checker Web,1.04,0.038569721,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Bedene,Aljaz,Nalbandian,David,18,52,Away Win,0.745566357,Bet Victor,Odds Checker Mobi,1.36,0.013970246,Home Win,2,1,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Gimeno-Traver,Daniel,Berlocq,Carlos,28,66,Home Win,0.463053665,Marathonbet.co.uk,Best Betting,3.3,0.528077095,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Robredo,Tommy,Volandri,Filippo,28,43,Home Win,0.730910981,Pinnacle Sports,Odds Checker Web,1.51,0.103675581,Home Win,2,1,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Wawrinka,Stanislas,Fognini,Fabio,73,63,Home Win,0.865233388,Stan James,Odds Checker Web,1.22,0.055584733,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Zeballos,Horacio,Bolelli,Simone,20,27,Away Win,0.644422305,Marathonbet.co.uk,Best Betting,2.26,0.456394409,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,26/02/2013,Bellucci,Thomaz,Kuznetsov,Andrey,55,15,Home Win,0.709647645,Stan James,Odds Checker Web,1.73,0.227690426,Away Win,2,1,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Tipsarevic,Janko,Davydenko,Nikolay,111,71,Away Win,0.436771943,Marathonbet.co.uk,Best Betting,2.78,0.214226002,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Djokovic,Novak,Troicki,Viktor,107,66,Home Win,0.997725681,Stan James,Odds Checker Web,1.03,0.027657451,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Tsonga,Jo-Wilfried,Llodra,Michael,114,39,Away Win,0.218527315,Stan James,Odds Checker Web,6,0.31116389,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Granollers,Marcel,Montanes,Albert,66,37,Away Win,0.311102307,Pinnacle Sports,Odds Checker Web,4.02,0.250631274,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Ram,Rajeev,Berdych,Tomas,18,101,Away Win,0.958962639,Stan James,Odds Checker Web,1.06,0.016500397,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Kamke,Tobias,Kukushkin,Mikhail,37,36,Away Win,0.528305258,Stan James,Odds Checker Web,3,0.584915774,Home Win,2,1,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,26/02/2013,Tursunov,Dmitry,Hajek,Jan,29,16,Home Win,0.862663306,Bet Victor,Odds Checker Mobi,1.44,0.242235161,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Gulbis,Ernests,Blake,James,40,28,Away Win,0.59123018,32Red bet,Odds Checker Web,2.67,0.578584581,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Isner,John,Levine,Jesse,75,30,Home Win,0.853207657,Pinnacle Sports,Odds Checker Web,1.49,0.271279409,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Harrison,Ryan,Munoz-De La Nava,Daniel,54,8,Home Win,0.937751729,Sporting Bet,Odds Checker Web,1.36,0.275342351,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Ebden,Matthew,Sock,Jack,50,17,Home Win,0.547126208,Marathonbet.co.uk,Best Betting,2.08,0.138022513,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Smyczek,Tim,Anderson,Kevin,13,82,Away Win,0.834775421,Marathonbet.co.uk,Best Betting,1.38,0.151990081,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Cipolla,Flavio,Roger-Vasselin,Edouard,51,39,Home Win,0.418004037,Paddy Power,Odds Checker Web,3,0.254012111,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Istomin,Denis,Becker,Benjamin,75,32,Home Win,0.771189336,Pinnacle Sports,Odds Checker Web,1.45,0.118224537,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Matosevic,Marinko,Soeda,Go,44,39,Away Win,0.531517184,Stan James,Odds Checker Web,1.9,0.00988265,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,26/02/2013,Reynolds,Bobby,Lu,Yen-Hsun,11,39,Away Win,0.556573676,Coral,Odds Checker Web,1.83,0.018529827,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,27/02/2013,Giraldo,Santiago,Sousa,Joao,56,14,Away Win,0.403298129,Pinnacle Sports,Odds Checker Web,2.75,0.109069855,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Del Potro,Juan-Martin,Devvarman,Somdev,100,19,Home Win,0.938787322,Bet Victor,Odds Checker Mobi,1.08,0.013890308,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Granollers,Marcel,Federer,Roger,66,109,Home Win,0.062045038,WBX,Odds Checker Mobi,16.295,0.06097015,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Djokovic,Novak,Bautista-Agut,Roberto,107,24,Home Win,0.990637718,Bet 365,Odds Checker Web,1.02,0.010450472,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Brands,Daniel,Youzhny,Mikhail,25,73,Away Win,0.745390326,Ladbrokes,Odds Checker Web,1.5,0.118085489,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Rosol,Lukas,Seppi,Andreas,51,83,Away Win,0.756200987,Ladbrokes,Odds Checker Web,1.44,0.088929421,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Llodra,Michael,Tursunov,Dmitry,39,31,Away Win,0.367197827,Marathonbet.co.uk,Best Betting,2.92,0.072217655,Away Win,2,1,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,27/02/2013,Davydenko,Nikolay,Hanescu,Victor,71,27,Away Win,0.199431438,Marathonbet.co.uk,Best Betting,5.8,0.15670234,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,28/02/2013,Ferrer,David,Lorenzi,Paolo,127,37,Away Win,0.04496956,Marathonbet.co.uk,Best Betting,26,0.16920856,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,28/02/2013,Fognini,Fabio,Giraldo,Santiago,64,57,Away Win,0.512669024,Pinnacle Sports,Odds Checker Web,2.15,0.102238402,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,28/02/2013,Zeballos,Horacio,Almagro,Nicolas,22,95,Away Win,0.866495093,Ladbrokes,Odds Checker Web,1.29,0.11777867,Away Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,28/02/2013,Mayer,Leonardo,Nadal,Rafael,31,72,Away Win,0.990712201,Ladbrokes,Odds Checker Web,1.04,0.030340689,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,28/02/2013,Del Potro,Juan-Martin,Brands,Daniel,100,26,Home Win,0.939258302,Marathonbet.co.uk,Best Betting,1.17,0.098932213,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,28/02/2013,Tursunov,Dmitry,Berdych,Tomas,32,102,Home Win,0.145901538,Pinnacle Sports,Odds Checker Web,11,0.604916918,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,28/02/2013,Djokovic,Novak,Seppi,Andreas,107,84,Home Win,0.957812479,Betfred,Odds Checker Web,1.05,0.005703103,Home Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,28/02/2013,Davydenko,Nikolay,Federer,Roger,71,109,Home Win,0.150005538,Sporting Bet,Odds Checker Web,8,0.200044304,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Malisse,Xavier,Munoz-De La Nava,Daniel,63,9,Home Win,0.91480552,Marathonbet.co.uk,Best Betting,1.45,0.326468004,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Istomin,Denis,Haas,Tommy,75,63,Away Win,0.607859566,Pinnacle Sports,Odds Checker Web,1.78,0.081990027,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Gulbis,Ernests,Querrey,Sam,40,76,Away Win,0.733389333,Pinnacle Sports,Odds Checker Web,1.77,0.298099119,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Lu,Yen-Hsun,Anderson,Kevin,40,82,Away Win,0.802029411,Pinnacle Sports,Odds Checker Web,1.5,0.203044117,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Isner,John,Soeda,Go,75,40,Home Win,0.751040939,Betway,Odds Checker Web,1.35,0.013905268,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Karlovic,Ivo,Roger-Vasselin,Edouard,37,40,Home Win,0.656148117,Pinnacle Sports,Odds Checker Web,1.96,0.286050309,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Sock,Jack,Berankis,Ricardas,17,19,Away Win,0.743101449,Stan James,Odds Checker Web,1.67,0.24097942,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,28/02/2013,Dodig,Ivan,Donskoy,Evgeny,55,12,Home Win,0.741802718,Sporting Bet,Odds Checker Web,1.62,0.201720403,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,1/03/2013,Ferrer,David,Fognini,Fabio,127,65,Home Win,0.97832962,Paddy Power,Odds Checker Web,1.06,0.037029397,Home Win,2,1,Completed
+Abierto Mexicano Telcel,Clay,ATP,1/03/2013,Almagro,Nicolas,Nadal,Rafael,96,72,Home Win,0.167893454,Pinnacle Sports,Odds Checker Web,6.54,0.098023189,Away Win,2,0,Completed
+Dubai Duty Free Tennis Championships,Hard,ATP,1/03/2013,Berdych,Tomas,Federer,Roger,103,109,Home Win,0.451510839,Betfred,Odds Checker Web,3.5,0.580287937,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,1/03/2013,Munoz-De La Nava,Daniel,Gulbis,Ernests,10,41,Away Win,0.92243098,Marathonbet.co.uk,Best Betting,1.27,0.171487345,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,1/03/2013,Dodig,Ivan,Haas,Tommy,56,63,Away Win,0.795300837,Marathonbet.co.uk,Best Betting,1.5,0.192951256,Away Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,1/03/2013,Roger-Vasselin,Edouard,Berankis,Ricardas,41,20,Away Win,0.634017383,Paddy Power,Odds Checker Web,1.67,0.05880903,Home Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,1/03/2013,Isner,John,Anderson,Kevin,75,82,Away Win,0.598948272,Pinnacle Sports,Odds Checker Web,2.04,0.221854475,Home Win,2,0,Completed
+Abierto Mexicano Telcel,Clay,ATP,2/03/2013,Ferrer,David,Nadal,Rafael,128,72,Away Win,0.703111136,Pinnacle Sports,Odds Checker Web,1.53,0.075760038,Away Win,2,0,Completed
+Delray Beach International Tennis Championships,Hard,ATP,2/03/2013,Gulbis,Ernests,Haas,Tommy,42,64,Away Win,0.650573105,Bet Victor,Odds Checker Mobi,2.05,0.333674865,Home Win,2,1,Completed
+Delray Beach International Tennis Championships,Hard,ATP,2/03/2013,Isner,John,Roger-Vasselin,Edouard,75,42,Home Win,0.805888137,Pinnacle Sports,Odds Checker Web,1.28,0.031536815,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Granollers,Marcel,Nalbandian,David,66,51,Home Win,0.374225799,32Red bet,Odds Checker Web,2.85,0.066543527,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Hewitt,Lleyton,Rosol,Lukas,34,52,Home Win,0.757693855,Stan James,Odds Checker Web,1.57,0.189579352,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Soeda,Go,Harrison,Ryan,41,55,Home Win,0.566900755,Pinnacle Sports,Odds Checker Web,2.66,0.507956008,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Bellucci,Thomaz,Tomic,Bernard,56,70,Home Win,0.342764203,Betfred,Odds Checker Web,3.6,0.233951131,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Brands,Daniel,Baghdatis,Marcos,27,85,Away Win,0.789897869,Pinnacle Sports,Odds Checker Web,1.51,0.192745782,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Gulbis,Ernests,Lopez,Feliciano,44,73,Away Win,0.542422558,Stan James,Odds Checker Web,2.38,0.290965688,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Mayer,Leonardo,Malisse,Xavier,32,64,Home Win,0.450406267,Pinnacle Sports,Odds Checker Web,2.44,0.098991291,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Pospisil,Vasek,Istomin,Denis,22,76,Away Win,0.814415407,Ladbrokes,Odds Checker Web,1.4,0.14018157,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Troicki,Viktor,Goffin,David,67,37,Away Win,0.454620465,Stan James,Odds Checker Web,2.62,0.191105618,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Zverev,Mischa,Melzer,Jurgen,4,61,Away Win,0.700266201,Pinnacle Sports,Odds Checker Web,1.79,0.2534765,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Pella,Guido,Dodig,Ivan,6,57,Away Win,0.906838056,Marathonbet.co.uk,Best Betting,1.58,0.432804128,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Kubot,Lukasz,Paire,Benoit,61,68,Home Win,0.347502147,Pinnacle Sports,Odds Checker Web,2.97,0.032081377,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Odesnik,Wayne,Bautista-Agut,Roberto,12,25,Away Win,0.621554066,Stan James,Odds Checker Web,1.67,0.03799529,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,7/03/2013,Muller,Gilles,Lorenzi,Paolo,54,38,Home Win,0.737220684,Bet770,Best Betting,1.6,0.179553094,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Andujar,Pablo,Johnson,Steve,67,13,Home Win,0.406463224,Pinnacle Sports,Odds Checker Web,3.1,0.260035994,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Blake,James,Haase,Robin,28,59,Home Win,0.715099265,Pinnacle Sports,Odds Checker Web,1.95,0.394443567,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Sock,Jack,Karlovic,Ivo,18,37,Away Win,0.738958823,Betfred,Odds Checker Web,1.91,0.411411352,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Becker,Benjamin,Reynolds,Bobby,33,12,Home Win,0.53125593,Pinnacle Sports,Odds Checker Web,2.02,0.073136979,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Matosevic,Marinko,Robredo,Tommy,46,31,Away Win,0.558889058,Betfred,Odds Checker Web,2,0.117778116,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Lu,Yen-Hsun,Smyczek,Tim,41,14,Away Win,0.44055917,Marathonbet.co.uk,Best Betting,2.64,0.163076209,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Fognini,Fabio,Bedene,Aljaz,66,20,Away Win,0.641647062,Paddy Power,Odds Checker Web,2.1,0.34745883,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Tursunov,Dmitry,Petzschner,Philipp,33,36,Home Win,0.701287602,Stan James,Odds Checker Web,1.57,0.101021535,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Munoz-De La Nava,Daniel,Llodra,Michael,11,40,Away Win,0.953483844,Pinnacle Sports,Odds Checker Web,1.64,0.563713504,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Zeballos,Horacio,Ramos,Albert,23,76,Away Win,0.572248832,Pinnacle Sports,Odds Checker Web,1.96,0.121607711,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Ebden,Matthew,Kuznetsov,Andrey,51,17,Home Win,0.803903635,William Hill,Odds Checker Web,1.67,0.34251907,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Phau,Bjorn,Falla,Alejandro,26,49,Home Win,0.409837563,Pinnacle Sports,Odds Checker Web,3.14,0.286889948,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,8/03/2013,Donskoy,Evgeny,Ito,Tatsuma,13,29,Away Win,0.50359361,Marathonbet.co.uk,Best Betting,2.92,0.470493341,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Istomin,Denis,Federer,Roger,77,108,Home Win,0.133996206,Bet 365,Best Betting,13,0.741950678,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Nadal,Rafael,Harrison,Ryan,71,56,Home Win,0.981816214,32Red bet,Best Betting,1.13,0.109452322,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Janowicz,Jerzy,Nalbandian,David,21,52,Away Win,0.777449653,Stan James,Best Betting,1.67,0.298340921,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Tomic,Bernard,Gasquet,Richard,71,84,Away Win,0.842552128,Stan James,Best Betting,1.5,0.263828192,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Berdych,Tomas,Zverev,Mischa,105,5,Home Win,0.942775203,32Red bet,Best Betting,1.07,0.008769467,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Simon,Gilles,Lorenzi,Paolo,90,39,Home Win,0.907994215,Pinnacle Sports,Best Betting,1.23,0.116832884,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Gulbis,Ernests,Tipsarevic,Janko,45,108,Away Win,0.624848911,Stan James,Best Betting,2.1,0.312182713,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Benneteau,Julien,Dodig,Ivan,71,58,Home Win,0.704432816,Pinnacle Sports,Best Betting,1.65,0.162314146,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Seppi,Andreas,Brands,Daniel,85,28,Home Win,0.696015749,Pinnacle Sports,Best Betting,1.81,0.259788506,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,9/03/2013,Goffin,David,Mayer,Florian,38,65,Away Win,0.53760612,32Red bet,Best Betting,2.12,0.139724974,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Dodig,Ivan,Federer,Roger,59,109,Away Win,0.943675807,32Red bet,Odds Checker Web,1.06,0.000296355,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Hewitt,Lleyton,Wawrinka,Stanislas,36,75,Away Win,0.740174507,Stan James,Odds Checker Web,1.4,0.03624431,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Nieminen,Jarkko,Anderson,Kevin,81,85,Away Win,0.735040851,Stan James,Odds Checker Web,1.5,0.102561277,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Seppi,Andreas,Gulbis,Ernests,86,46,Home Win,0.515225638,Marathonbet.co.uk,Best Betting,3,0.545676914,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Berdych,Tomas,Mayer,Florian,106,66,Home Win,0.967533851,Marathonbet.co.uk,Best Betting,1.09,0.054611898,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Janowicz,Jerzy,Gasquet,Richard,22,85,Away Win,0.763613653,Boylesports,Odds Checker Web,1.4,0.069059114,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,11/03/2013,Simon,Gilles,Paire,Benoit,91,70,Home Win,0.701054339,Stan James,Odds Checker Web,1.8,0.26189781,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Fish,Mardy,Tsonga,Jo-Wilfried,42,112,Home Win,0.395366392,Sporting Bet,Odds Checker Web,6,1.372198352,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Djokovic,Novak,Dimitrov,Grigor,107,66,Home Win,0.965142778,Stan James,Odds Checker Web,1.05,0.013399917,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Murray,Andy,Lu,Yen-Hsun,101,43,Home Win,0.975021945,32Red bet,Odds Checker Web,1.08,0.053023701,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Querrey,Sam,Matosevic,Marinko,78,48,Home Win,0.752367821,Pinnacle Sports,Odds Checker Web,1.42,0.068362306,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Berlocq,Carlos,Nishikori,Kei,68,83,Away Win,0.898286548,Stan James,Odds Checker Web,1.12,0.006080934,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Phau,Bjorn,Del Potro,Juan-Martin,28,103,Away Win,0.943767658,32Red bet,Best Betting,1.06,0.000393717,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Cilic,Marin,Raonic,Milos,84,82,Home Win,0.476329204,Betfred,Odds Checker Web,2.3,0.095557169,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,12/03/2013,Almagro,Nicolas,Haas,Tommy,98,66,Home Win,0.58476529,Stan James,Odds Checker Web,1.73,0.011643952,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Simon,Gilles,Anderson,Kevin,92,86,Home Win,0.399178306,32Red bet,Odds Checker Web,3.2,0.277370579,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Wawrinka,Stanislas,Federer,Roger,76,110,Home Win,0.22121834,Marathonbet.co.uk,Best Betting,6.1,0.349431874,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Nadal,Rafael,Gulbis,Ernests,72,47,Home Win,0.908143615,Stan James,Odds Checker Web,1.36,0.235075316,Home Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Djokovic,Novak,Querrey,Sam,108,79,Home Win,0.950658393,Marathonbet.co.uk,Best Betting,1.07,0.017204481,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Raonic,Milos,Tsonga,Jo-Wilfried,83,113,Home Win,0.522815952,Marathonbet.co.uk,Best Betting,2.52,0.317496199,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Berdych,Tomas,Gasquet,Richard,107,86,Home Win,0.646591161,Pinnacle Sports,Odds Checker Web,1.55,0.0022163,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Murray,Andy,Berlocq,Carlos,102,69,Away Win,0.071635631,10Bet,Best Betting,21,0.504348251,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,13/03/2013,Haas,Tommy,Del Potro,Juan-Martin,67,104,Home Win,0.290287859,Pinnacle Sports,Odds Checker Web,4.4,0.27726658,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,14/03/2013,Berdych,Tomas,Anderson,Kevin,108,87,Home Win,0.830701972,Bet Victor,Odds Checker Mobi,1.25,0.038377465,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,14/03/2013,Nadal,Rafael,Federer,Roger,73,111,Home Win,0.537045552,Marathonbet.co.uk,Best Betting,2.24,0.202982036,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,15/03/2013,Djokovic,Novak,Tsonga,Jo-Wilfried,109,114,Home Win,0.925143781,William Hill,Odds Checker Web,1.14,0.05466391,Home Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,15/03/2013,Murray,Andy,Del Potro,Juan-Martin,103,105,Away Win,0.413681548,Marathonbet.co.uk,Best Betting,3.1,0.282412799,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,16/03/2013,Berdych,Tomas,Nadal,Rafael,109,74,Home Win,0.352070645,32Red bet,Odds Checker Web,2.86,0.006922045,Away Win,2,0,Completed
+BNP Paribas Open,Hard,Masters,16/03/2013,Djokovic,Novak,Del Potro,Juan-Martin,110,106,Home Win,0.879732034,Stan James,Odds Checker Web,1.17,0.02928648,Away Win,2,1,Completed
+BNP Paribas Open,Hard,Masters,17/03/2013,Del Potro,Juan-Martin,Nadal,Rafael,107,75,Away Win,0.646246604,Pinnacle Sports,Odds Checker Web,1.57,0.014607168,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Sousa,Joao,Hewitt,Lleyton,15,37,Away Win,0.903663883,Pinnacle Sports,Odds Checker Web,1.26,0.138616493,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Davydenko,Nikolay,Lorenzi,Paolo,74,40,Home Win,0.873144761,Ladbrokes,Odds Checker Web,1.25,0.091430951,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Harrison,Ryan,Blake,James,57,30,Away Win,0.621367284,32Red bet,Odds Checker Web,1.94,0.205452531,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Ram,Rajeev,Malisse,Xavier,19,65,Away Win,0.645038437,Pinnacle Sports,Odds Checker Web,1.56,0.006259962,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Tursunov,Dmitry,Smyczek,Tim,34,15,Home Win,0.74607257,Pinnacle Sports,Odds Checker Web,1.81,0.350391352,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Kuznetsov,Andrey,Hanescu,Victor,18,29,Away Win,0.848752695,32Red bet,Odds Checker Web,2.17,0.841793348,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Paire,Benoit,Llodra,Michael,71,41,Away Win,0.673707415,Pinnacle Sports,Odds Checker Web,2.27,0.529315832,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Melzer,Jurgen,Berankis,Ricardas,62,21,Home Win,0.557134046,Pinnacle Sports,Odds Checker Web,1.85,0.030697985,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Muller,Gilles,Rosol,Lukas,55,53,Home Win,0.593849128,Marathonbet.co.uk,Best Betting,2.26,0.342099029,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Kamke,Tobias,Kavcic,Blaz,39,27,Home Win,0.582877902,youwin,Odds Checker Web,2.05,0.194899699,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Zemlja,Grega,Bautista-Agut,Roberto,25,26,Home Win,0.424022366,Pinnacle Sports,Odds Checker Web,2.62,0.110938599,Home Win,0,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,de Bakker,Thiemo,Zeballos,Horacio,4,24,Home Win,0.595309953,Boylesports,Best Betting,1.8,0.071557915,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Donskoy,Evgeny,Devvarman,Somdev,15,20,Away Win,0.572640626,Marathonbet.co.uk,Best Betting,2.75,0.574761722,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Sijsling,Igor,Mayer,Leonardo,33,34,Away Win,0.468743514,youwin,Odds Checker Web,2.4,0.124984434,Home Win,1,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Hajek,Jan,Ramos,Albert,17,78,Away Win,0.733738309,youwin,Odds Checker Web,1.55,0.137294379,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,20/03/2013,Matosevic,Marinko,Sela,Dudi,49,36,Away Win,0.399954757,Ladbrokes,Odds Checker Web,2.75,0.099875582,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Gicquel,Marc,Tomic,Bernard,1,72,Home Win,0.246838249,Pinnacle Sports,Odds Checker Web,6.02,0.485966259,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Nieminen,Jarkko,Nalbandian,David,82,53,Away Win,0.639543557,Ladbrokes,Odds Checker Web,1.57,0.004083384,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Ginepri,Robby,Lu,Yen-Hsun,6,44,Home Win,0.433445894,32Red bet,Odds Checker Web,2.79,0.209314044,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Levine,Jesse,Bolelli,Simone,31,28,Away Win,0.440856288,Bet770,Best Betting,2.4,0.058055091,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Gimeno-Traver,Daniel,Istomin,Denis,32,78,Away Win,0.807303629,Ladbrokes,Odds Checker Web,1.33,0.073713827,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Williams,Rhyne,Giraldo,Santiago,5,59,Away Win,0.708707179,Pinnacle Sports,Odds Checker Web,1.81,0.282759994,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Andujar,Pablo,Troicki,Viktor,69,68,Away Win,0.688632051,Pinnacle Sports,Odds Checker Web,1.5,0.032948077,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Copil,Marius,Rufin,Guillaume,9,15,Home Win,0.723571249,Boylesports,Odds Checker Web,1.67,0.208363986,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Dancevic,Frank,Kubot,Lukasz,6,62,Home Win,0.594606765,Blue Square,Odds Checker Web,1.83,0.08813038,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Pella,Guido,Berlocq,Carlos,7,70,Away Win,0.833265741,Stan James,Odds Checker Web,1.4,0.166572037,Home Win,1,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Ito,Tatsuma,Rochus,Olivier,30,39,Home Win,0.348018502,Pinnacle Sports,Odds Checker Web,3.64,0.266787347,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Goffin,David,Haase,Robin,39,60,Home Win,0.614749745,Boylesports,Odds Checker Web,1.8,0.106549541,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Dodig,Ivan,Lacko,Lukas,60,41,Home Win,0.678561203,32Red bet,Odds Checker Web,1.48,0.00427058,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Becker,Benjamin,Bedene,Aljaz,34,21,Away Win,0.661698266,Betfred,Odds Checker Web,2,0.323396532,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,21/03/2013,Soeda,Go,Falla,Alejandro,42,50,Home Win,0.536487467,32Red bet,Odds Checker Web,1.9,0.019326187,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Tomic,Bernard,Murray,Andy,73,104,Away Win,0.879123037,Ladbrokes,Odds Checker Web,1.14,0.002200262,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Verdasco,Fernando,Falla,Alejandro,68,51,Home Win,0.673901016,Pinnacle Sports,Odds Checker Web,1.92,0.293889951,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Gasquet,Richard,Rochus,Olivier,87,40,Away Win,0.172354835,Betfair,Best Betting,7.8115,0.408139002,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Isner,John,Dodig,Ivan,76,61,Away Win,0.476682759,Sporting Bet,Odds Checker Web,2.45,0.16787276,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Raonic,Milos,Rufin,Guillaume,84,16,Home Win,0.943904977,Pinnacle Sports,Odds Checker Web,1.14,0.076051674,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Kubot,Lukasz,Querrey,Sam,63,80,Home Win,0.254032096,Sporting Bet,Odds Checker Web,4,0.016128384,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Bellucci,Thomaz,Janowicz,Jerzy,58,23,Home Win,0.38726463,Betfred,Best Betting,3,0.16179389,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Pella,Guido,Almagro,Nicolas,8,99,Away Win,0.944410076,32Red bet,Odds Checker Web,1.09,0.029406983,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Giraldo,Santiago,Cilic,Marin,60,85,Away Win,0.842289998,Pinnacle Sports,Odds Checker Web,1.26,0.061285397,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Kohlschreiber,Philipp,Goffin,David,84,40,Home Win,0.664653693,Ladbrokes,Odds Checker Web,1.73,0.149850889,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Nieminen,Jarkko,Klizan,Martin,83,41,Home Win,0.781057247,32Red bet,Best Betting,1.54,0.20282816,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Dimitrov,Grigor,Bolelli,Simone,67,29,Home Win,0.8127097,youwin,Odds Checker Web,1.3,0.05652261,Home Win,1,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Seppi,Andreas,Bedene,Aljaz,87,22,Away Win,0.34774416,Sky Bet,Odds Checker Web,3.75,0.3040406,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,23/03/2013,Lu,Yen-Hsun,Youzhny,Mikhail,45,75,Away Win,0.642435246,Pinnacle Sports,Odds Checker Web,2.02,0.297719197,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Ferrer,David,Fognini,Fabio,130,69,Home Win,0.944682481,Ladbrokes,Odds Checker Web,1.1,0.039150729,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Djokovic,Novak,Devvarman,Somdev,112,22,Home Win,0.990237355,Betfred,Odds Checker Web,1.02,0.010042102,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Ramos,Albert,Blake,James,79,32,Away Win,0.693880934,Marathonbet.co.uk,Best Betting,1.55,0.075515448,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Malisse,Xavier,Nishikori,Kei,66,85,Away Win,0.798021722,Marathonbet.co.uk,Best Betting,1.27,0.013487587,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Dolgopolov,Alexandr,Haas,Tommy,81,69,Away Win,0.66676376,Sporting Bet,Odds Checker Web,1.83,0.220177681,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Anderson,Kevin,Tipsarevic,Janko,89,110,Home Win,0.686943193,Marathonbet.co.uk,Best Betting,1.66,0.1403257,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,24/03/2013,Melzer,Jurgen,Kamke,Tobias,64,40,Home Win,0.677599984,Pinnacle Sports,Odds Checker Web,1.6,0.084159974,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Dimitrov,Grigor,Murray,Andy,67,105,Home Win,0.142626374,Marathonbet.co.uk,Best Betting,8.3,0.183798904,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Tsonga,Jo-Wilfried,Nieminen,Jarkko,116,84,Home Win,0.790495593,Marathonbet.co.uk,Best Betting,1.3,0.027644271,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Isner,John,Cilic,Marin,77,86,Away Win,0.701166653,Marathonbet.co.uk,Best Betting,1.55,0.086808312,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Gasquet,Richard,Youzhny,Mikhail,88,76,Home Win,0.851130238,Stan James,Best Betting,1.36,0.157537124,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Goffin,David,Almagro,Nicolas,41,100,Home Win,0.237524489,Marathonbet.co.uk,Best Betting,5.3,0.258879792,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Falla,Alejandro,Berdych,Tomas,52,111,Away Win,0.954439313,32Red bet,Best Betting,1.07,0.021250065,Away Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Raonic,Milos,Querrey,Sam,85,81,Home Win,0.721886275,Pinnacle Sports,Best Betting,1.53,0.104486001,Away Win,0,0,Completed
+Sony Open Tennis,Hard,Masters,25/03/2013,Seppi,Andreas,Bellucci,Thomaz,87,59,Home Win,0.756200986,Stan James,Best Betting,1.57,0.187235548,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,27/03/2013,Ferrer,David,Melzer,Jurgen,132,66,Home Win,0.929172419,Pinnacle Sports,Odds Checker Web,1.09,0.012797937,Home Win,2,1,Completed
+Sony Open Tennis,Hard,Masters,27/03/2013,Haas,Tommy,Simon,Gilles,71,96,Home Win,0.650385934,Pinnacle Sports,Best Betting,1.59,0.034113635,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,28/03/2013,Cilic,Marin,Murray,Andy,88,107,Home Win,0.352070645,Marathonbet.co.uk,Best Betting,6.3,1.218045064,Away Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,28/03/2013,Gasquet,Richard,Berdych,Tomas,88,113,Away Win,0.714097048,32Red bet,Odds Checker Web,1.48,0.056863631,Home Win,2,0,Completed
+Sony Open Tennis,Hard,Masters,29/03/2013,Haas,Tommy,Ferrer,David,72,133,Away Win,0.737901973,Stan James,Odds Checker Web,1.53,0.128990019,Away Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,8/04/2013,Robredo,Tommy,Rufin,Guillaume,30,17,Home Win,0.784005947,32Red bet,Odds Checker Web,1.6,0.254409515,Home Win,2,0,Completed
+US Men's Clay Court Championship,Clay,ATP,8/04/2013,Monfils,Gael,Blake,James,49,33,Home Win,0.729037469,Stan James,Odds Checker Web,1.67,0.217492573,Home Win,2,0,Completed
+US Men's Clay Court Championship,Clay,ATP,8/04/2013,Ouanna,Josselin,Smyczek,Tim,1,16,Home Win,0.769147315,Betfred,Odds Checker Web,2.5,0.922868288,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Haase,Robin,Bautista-Agut,Roberto,58,27,Home Win,0.73547334,Marathonbet.co.uk,Best Betting,2.22,0.632750815,Home Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Wawrinka,Stanislas,Kavcic,Blaz,76,29,Away Win,0.148964125,Sporting Bet,Odds Checker Web,7,0.042748875,Home Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Paire,Benoit,Bedene,Aljaz,70,24,Away Win,0.577468487,Stan James,Odds Checker Web,2.2,0.270430671,Home Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Robredo,Tommy,Kamke,Tobias,30,40,Home Win,0.731985914,Betway,Odds Checker Web,1.57,0.149217885,Home Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Darcis,Steve,De Schepper,Kenny,43,6,Home Win,0.853405682,32Red bet,Odds Checker Web,1.32,0.1264955,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,10/04/2013,Roger-Vasselin,Edouard,Garcia-Lopez,Guillermo,46,58,Away Win,0.583361731,Pinnacle Sports,Odds Checker Web,2.07,0.207558783,Away Win,2,1,Completed
+US Men's Clay Court Championship,Clay,ATP,10/04/2013,Alund,Martin,Hewitt,Lleyton,8,39,Away Win,0.829996584,32Red bet,Odds Checker Web,1.59,0.319694569,Home Win,2,1,Completed
+US Men's Clay Court Championship,Clay,ATP,10/04/2013,Devvarman,Somdev,Ramirez Hidalgo,Ruben,20,20,Away Win,0.683121864,Marathonbet.co.uk,Best Betting,2.05,0.400399821,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,11/04/2013,Volandri,Filippo,Klizan,Martin,41,42,Away Win,0.65629224,Ladbrokes,Best Betting,1.62,0.063193429,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,11/04/2013,Haase,Robin,De Schepper,Kenny,58,7,Home Win,0.898978872,Pinnacle Sports,Best Betting,1.53,0.375437674,Home Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,12/04/2013,Paire,Benoit,Robredo,Tommy,71,30,Away Win,0.7051578,Sporting Bet,Best Betting,1.8,0.26928404,Away Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,12/04/2013,Wawrinka,Stanislas,Garcia-Lopez,Guillermo,76,58,Home Win,0.905286631,Sporting Bet,Odds Checker Web,1.17,0.059185358,Home Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,12/04/2013,Zemlja,Grega,Anderson,Kevin,29,87,Home Win,0.347882501,Pinnacle Sports,Odds Checker Web,4.05,0.408924129,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,12/04/2013,Haase,Robin,Klizan,Martin,59,43,Home Win,0.562643742,Paddy Power,Odds Checker Web,2.75,0.547270291,Away Win,2,0,Completed
+US Men's Clay Court Championship,Clay,ATP,12/04/2013,Williams,Rhyne,Ramirez Hidalgo,Ruben,8,22,Home Win,0.532575931,Marathonbet.co.uk,Best Betting,2.15,0.145038252,Home Win,2,1,Completed
+US Men's Clay Court Championship,Clay,ATP,12/04/2013,Isner,John,Berankis,Ricardas,80,24,Home Win,0.803864228,Pinnacle Sports,Odds Checker Web,1.4,0.125409919,Home Win,2,1,Completed
+US Men's Clay Court Championship,Clay,ATP,12/04/2013,Ginepri,Robby,Monaco,Juan,9,69,Away Win,0.833423024,Stan James,Odds Checker Web,1.25,0.04177878,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,13/04/2013,Wawrinka,Stanislas,Robredo,Tommy,76,31,Away Win,0.308003463,Pinnacle Sports,Best Betting,3.84,0.182733298,Away Win,2,1,Completed
+Grand Prix Hassan II,Clay,ATP,13/04/2013,Klizan,Martin,Anderson,Kevin,44,88,Home Win,0.63443222,Pinnacle Sports,Best Betting,2.39,0.516293006,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,14/04/2013,Malisse,Xavier,Dimitrov,Grigor,65,62,Home Win,0.415463427,Marathonbet.co.uk,Best Betting,3.45,0.433348823,Away Win,2,0,Completed
+Grand Prix Hassan II,Clay,ATP,14/04/2013,Robredo,Tommy,Anderson,Kevin,32,89,Home Win,0.700063394,32Red bet,Odds Checker Web,2.12,0.484134395,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Dodig,Ivan,Paire,Benoit,58,72,Home Win,0.397960772,Sporting Bet,Odds Checker Web,3.2,0.27347447,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Bautista-Agut,Roberto,Simon,Gilles,28,91,Away Win,0.826863705,Paddy Power,Odds Checker Web,1.25,0.033579631,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Raonic,Milos,Benneteau,Julien,81,73,Home Win,0.713257933,Ladbrokes,Odds Checker Web,1.53,0.091284637,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Cilic,Marin,Zeballos,Horacio,83,26,Home Win,0.766846643,Pinnacle Sports,Best Betting,1.31,0.004569102,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Nieminen,Jarkko,Troicki,Viktor,81,65,Away Win,0.409910791,Marathonbet.co.uk,Best Betting,2.44,0.00018233,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Brands,Daniel,Davydenko,Nikolay,30,73,Away Win,0.780414535,Pinnacle Sports,Best Betting,1.62,0.264271547,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Fognini,Fabio,Seppi,Andreas,66,87,Away Win,0.697093847,Sporting Bet,Odds Checker Web,1.67,0.164146724,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Youzhny,Mikhail,Gimeno-Traver,Daniel,73,35,Home Win,0.601435267,Pinnacle Sports,Best Betting,1.84,0.106640891,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Andujar,Pablo,Chardy,Jeremy,64,65,Away Win,0.809433958,Marathonbet.co.uk,Best Betting,2.15,0.74028301,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,15/04/2013,Haase,Robin,Roger-Vasselin,Edouard,60,47,Home Win,0.774447389,Pinnacle Sports,Best Betting,1.88,0.455961091,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Tipsarevic,Janko,Dimitrov,Grigor,106,63,Away Win,0.463443302,Marathonbet.co.uk,Best Betting,2.26,0.047381863,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Paire,Benoit,Gasquet,Richard,73,90,Away Win,0.870317243,Pinnacle Sports,Best Betting,1.22,0.061787036,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Tsonga,Jo-Wilfried,Davydenko,Nikolay,109,74,Away Win,0.400517643,Bwin,Odds Checker Web,3.8,0.521967043,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Dolgopolov,Alexandr,Del Potro,Juan-Martin,75,109,Away Win,0.838038219,Pinnacle Sports,Best Betting,1.23,0.030787009,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Matosevic,Marinko,Verdasco,Fernando,49,66,Away Win,0.905404524,Pinnacle Sports,Best Betting,1.55,0.403377012,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Kohlschreiber,Philipp,Andujar,Pablo,82,65,Home Win,0.839269635,Stan James,Odds Checker Web,1.53,0.284082542,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Monfils,Gael,Montanes,Albert,51,34,Home Win,0.728144269,Pinnacle Sports,Best Betting,1.61,0.172312273,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Gulbis,Ernests,Isner,John,44,83,Away Win,0.669162552,Pinnacle Sports,Best Betting,2.81,0.880346771,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Wawrinka,Stanislas,Istomin,Denis,77,77,Away Win,0.25715002,Pinnacle Sports,Best Betting,6.2,0.594330124,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Balleret,Benjamin,Mayer,Florian,1,58,Away Win,0.923328087,32Red bet,Odds Checker Web,1.11,0.024894177,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Janowicz,Jerzy,Anderson,Kevin,24,90,Home Win,0.435544687,Marathonbet.co.uk,Best Betting,2.42,0.054018143,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Goffin,David,Almagro,Nicolas,40,101,Away Win,0.894782817,Pinnacle Sports,Best Betting,1.19,0.064791552,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Ramos,Albert,Stepanek,Radek,74,49,Away Win,0.515750866,Pinnacle Sports,Best Betting,3.6,0.856703118,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Hanescu,Victor,Granollers,Marcel,30,64,Away Win,0.595344303,Pinnacle Sports,Best Betting,2.27,0.351431568,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Melzer,Jurgen,Huta Galung,Jesse,63,3,Home Win,0.848664796,Sporting Bet,Odds Checker Web,1.57,0.33240373,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,16/04/2013,Klizan,Martin,Monaco,Juan,45,71,Away Win,0.647198736,Pinnacle Sports,Best Betting,1.55,0.003158041,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Berdych,Tomas,Granollers,Marcel,107,65,Away Win,0.134766612,Pinnacle Sports,Best Betting,7.78,0.048484241,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Matosevic,Marinko,Nadal,Rafael,50,69,Home Win,0.040800941,Betfair,Best Betting,54.2,1.325653637,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Djokovic,Novak,Youzhny,Mikhail,114,74,Home Win,0.956549294,32Red bet,Odds Checker Web,1.08,0.033073238,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Roger-Vasselin,Edouard,Murray,Andy,48,96,Home Win,0.095987518,Marathonbet.co.uk,Best Betting,10.5,0.007868939,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Raonic,Milos,Nieminen,Jarkko,82,82,Home Win,0.791401099,Stan James,Odds Checker Web,1.36,0.076305495,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Ramos,Albert,Fognini,Fabio,75,67,Home Win,0.57759701,Marathonbet.co.uk,Best Betting,2.18,0.259161482,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Melzer,Jurgen,Almagro,Nicolas,64,102,Away Win,0.834344277,Stan James,Odds Checker Web,1.25,0.042930346,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Gulbis,Ernests,Monaco,Juan,45,72,Away Win,0.774487479,Pinnacle Sports,Best Betting,2.27,0.758086577,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Cilic,Marin,Anderson,Kevin,84,91,Home Win,0.689283996,Sporting Bet,Best Betting,1.5,0.033925994,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Cilic,Marin,Anderson,Kevin,84,91,Away Win,0.310716004,Sky Bet,Odds Checker Web,3.25,0.009827013,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Wawrinka,Stanislas,Montanes,Albert,78,35,Away Win,0.209868229,Pinnacle Sports,Best Betting,5.4,0.133288437,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,17/04/2013,Mayer,Florian,Bautista-Agut,Roberto,59,29,Home Win,0.721701219,Pinnacle Sports,Best Betting,2.39,0.724865913,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Tsonga,Jo-Wilfried,Melzer,Jurgen,110,65,Away Win,0.277553115,Marathonbet.co.uk,Best Betting,4.95,0.373887919,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Kohlschreiber,Philipp,Nadal,Rafael,83,70,Home Win,0.093067168,Pinnacle Sports,Best Betting,29.68,1.762233546,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Wawrinka,Stanislas,Murray,Andy,79,97,Home Win,0.3872647,Marathonbet.co.uk,Best Betting,3.45,0.336063215,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Djokovic,Novak,Monaco,Juan,115,73,Home Win,0.935081811,Pinnacle Sports,Best Betting,1.12,0.047291628,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Berdych,Tomas,Fognini,Fabio,108,68,Home Win,0.895016411,Pinnacle Sports,Best Betting,1.27,0.136670842,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Dimitrov,Grigor,Mayer,Florian,64,60,Away Win,0.289280463,Marathonbet.co.uk,Best Betting,3.8,0.099265759,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Cilic,Marin,Gasquet,Richard,85,91,Away Win,0.611732233,Pinnacle Sports,Best Betting,1.67,0.021592829,Away Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,18/04/2013,Nieminen,Jarkko,Del Potro,Juan-Martin,83,110,Home Win,0.157132856,Boylesports,Odds Checker Web,7,0.099929992,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,19/04/2013,Tsonga,Jo-Wilfried,Wawrinka,Stanislas,111,80,Away Win,0.644470533,Pinnacle Sports,Best Betting,1.86,0.198715191,Home Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,19/04/2013,Dimitrov,Grigor,Nadal,Rafael,65,71,Away Win,0.966601209,Marathonbet.co.uk,Best Betting,1.04,0.005265257,Away Win,2,1,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,19/04/2013,Fognini,Fabio,Gasquet,Richard,69,92,Away Win,0.889758341,Stan James,Odds Checker Web,1.33,0.183378594,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,19/04/2013,Djokovic,Novak,Nieminen,Jarkko,116,84,Home Win,0.968046922,32Red bet,Odds Checker Web,1.12,0.084212553,Home Win,2,0,Completed
+Monte-Carlo Rolex Masters,Clay,Masters,21/04/2013,Djokovic,Novak,Nadal,Rafael,118,73,Home Win,0.550715831,Ladbrokes,Odds Checker Web,3,0.652147493,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Berlocq,Carlos,Gimeno-Traver,Daniel,68,36,Away Win,0.438654566,Sporting Bet,Odds Checker Web,2.75,0.206300057,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Gulbis,Ernests,Verdasco,Fernando,47,67,Away Win,0.722405635,10Bet,Best Betting,2.95,1.131096623,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Davydenko,Nikolay,Berdych,Tomas,73,109,Away Win,0.793357795,Pinnacle Sports,Best Betting,1.44,0.142435225,Away Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Nishikori,Kei,Olaso,Guillermo,77,1,Home Win,0.906844044,Stan James,Odds Checker Web,1.2,0.088212853,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Carreno-Busta,Pablo,Bellucci,Thomaz,3,59,Away Win,0.797697293,Stan James,Odds Checker Web,1.8,0.435855127,Away Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Tomic,Bernard,De Schepper,Kenny,66,8,Home Win,0.70897123,Coral,Odds Checker Web,1.44,0.020918571,Home Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Robredo,Tommy,Lopez,Marc,32,1,Home Win,0.893098506,Paddy Power,Odds Checker Web,1.2,0.071718207,Home Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Ramos,Albert,Struff,Jan-Lennard,75,0,Away Win,0.240135603,Marathonbet.co.uk,Best Betting,6.1,0.464827178,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Roger-Vasselin,Edouard,Hajek,Jan,49,18,Away Win,0.635121962,Bwin,Odds Checker Web,2.05,0.302000022,Home Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Falla,Alejandro,Kavcic,Blaz,53,30,Away Win,0.546245874,Ladbrokes,Odds Checker Web,2.1,0.147116335,Away Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,23/04/2013,Kuznetsov,Andrey,Kohlschreiber,Philipp,19,81,Away Win,0.70349064,Stan James,Odds Checker Web,1.53,0.076340679,Away Win,2,1,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Cipolla,Flavio,Mayer,Florian,49,61,Away Win,0.832863779,Ladbrokes,Odds Checker Web,1.36,0.132694739,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Volandri,Filippo,Monfils,Gael,42,48,Away Win,0.777617214,Betway,Odds Checker Web,1.45,0.12754496,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Bachinger,Matthias,Hanescu,Victor,30,31,Away Win,0.730424906,Ladbrokes,Odds Checker Web,1.57,0.146767102,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Garcia-Lopez,Guillermo,Zeballos,Horacio,58,27,Home Win,0.507415251,Marathonbet.co.uk,Best Betting,2.52,0.278686433,Home Win,2,1,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Nieminen,Jarkko,Donskoy,Evgeny,80,15,Home Win,0.805837059,Paddy Power,Odds Checker Web,1.25,0.007296324,Home Win,2,1,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Muller,Gilles,Rosol,Lukas,50,51,Home Win,0.476469995,Marathonbet.co.uk,Best Betting,3.15,0.500880484,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Malisse,Xavier,Giraldo,Santiago,65,53,Home Win,0.51252105,youwin,Odds Checker Web,2.86,0.465810203,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Kamke,Tobias,Mathieu,Paul-Henri,38,37,Away Win,0.597419348,Pinnacle Sports,Best Betting,1.92,0.147045148,Home Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,23/04/2013,Pospisil,Jaroslav,Stakhovsky,Sergiy,0,50,Away Win,0.706243515,Ladbrokes,Odds Checker Web,1.57,0.108802319,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,25/04/2013,Goffin,David,Mayer,Florian,42,62,Away Win,0.710231221,Pinnacle Sports,Best Betting,1.85,0.313927759,Away Win,2,1,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,25/04/2013,Youzhny,Mikhail,Hanescu,Victor,75,32,Home Win,0.600085468,Pinnacle Sports,Best Betting,1.78,0.068152133,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,25/04/2013,Tipsarevic,Janko,Giraldo,Santiago,103,54,Away Win,0.475062495,Ladbrokes,Odds Checker Web,2.62,0.244663737,Home Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,25/04/2013,Stakhovsky,Sergiy,Garcia-Lopez,Guillermo,51,59,Home Win,0.525296441,Marathonbet.co.uk,Best Betting,2.26,0.187169957,Away Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,25/04/2013,Chardy,Jeremy,Monaco,Juan,63,75,Home Win,0.37448148,Bet 365,Odds Checker Web,4.5,0.68516666,Away Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,25/04/2013,Almagro,Nicolas,Granollers,Marcel,104,67,Away Win,0.205336852,Sporting Bet,Odds Checker Web,5.5,0.129352686,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,25/04/2013,Tursunov,Dmitry,Bellucci,Thomaz,28,60,Away Win,0.778504203,Bwin,Odds Checker Web,1.85,0.440232776,Away Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,26/04/2013,Robredo,Tommy,Berdych,Tomas,34,110,Home Win,0.367000858,Boylesports,Odds Checker Web,3.12,0.145042677,Home Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,26/04/2013,Almagro,Nicolas,Monaco,Juan,105,76,Home Win,0.657981067,Marathonbet.co.uk,Best Betting,1.63,0.072509139,Home Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,26/04/2013,Klizan,Martin,Kohlschreiber,Philipp,47,82,Away Win,0.589942418,Coral,Best Betting,2.75,0.62234165,Away Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,26/04/2013,Nishikori,Kei,Ramos,Albert,78,77,Home Win,0.703997872,Pinnacle Sports,Best Betting,1.6,0.126396595,Away Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,26/04/2013,Raonic,Milos,Gulbis,Ernests,80,48,Home Win,0.690410088,Marathonbet.co.uk,Best Betting,1.64,0.132272544,Home Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,26/04/2013,Brands,Daniel,Simon,Gilles,32,92,Away Win,0.859394539,Marathonbet.co.uk,Best Betting,1.47,0.263309972,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,26/04/2013,Troicki,Viktor,Rosol,Lukas,64,52,Away Win,0.587964934,Stan James,Odds Checker Web,2,0.175929868,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,26/04/2013,Tipsarevic,Janko,Garcia-Lopez,Guillermo,103,59,Away Win,0.281179287,Marathonbet.co.uk,Best Betting,3.7,0.040363362,Away Win,2,1,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,26/04/2013,Hanescu,Victor,Mayer,Florian,33,63,Away Win,0.589230684,Pinnacle Sports,Best Betting,1.99,0.172569061,Away Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,27/04/2013,Kohlschreiber,Philipp,Almagro,Nicolas,81,106,Home Win,0.278224675,Pinnacle Sports,Best Betting,4.06,0.129592181,Away Win,2,0,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,27/04/2013,Raonic,Milos,Nadal,Rafael,82,77,Home Win,0.253677936,Marathonbet.co.uk,Best Betting,12,2.044135232,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,27/04/2013,Rosol,Lukas,Simon,Gilles,52,93,Home Win,0.397585128,Marathonbet.co.uk,Best Betting,3.35,0.331910179,Home Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,27/04/2013,Garcia-Lopez,Guillermo,Mayer,Florian,59,64,Home Win,0.474123451,Marathonbet.co.uk,Best Betting,2.62,0.242203442,Home Win,2,1,Completed
+Barcelona Open Banc Sabadell,Clay,ATP,28/04/2013,Almagro,Nicolas,Nadal,Rafael,107,78,Home Win,0.197123238,32Red bet,Odds Checker Web,9.2,0.81353379,Away Win,2,0,Completed
+BRD Nastase Tiriac Trophy,Clay,ATP,28/04/2013,Garcia-Lopez,Guillermo,Rosol,Lukas,60,53,Away Win,0.649501953,youwin,Odds Checker Web,1.6,0.039203125,Away Win,2,0,Completed
+Estoril Open,Clay,ATP,29/04/2013,Goffin,David,Sousa,Pedro,43,1,Away Win,0.301993378,Boylesports,Odds Checker Web,3.5,0.056976823,Home Win,2,1,Completed
+Estoril Open,Clay,ATP,29/04/2013,Sijsling,Igor,Paire,Benoit,33,76,Away Win,0.778861365,Ladbrokes,Odds Checker Web,1.33,0.035885615,Away Win,2,0,Completed
+Estoril Open,Clay,ATP,29/04/2013,Istomin,Denis,Donskoy,Evgeny,79,16,Away Win,0.484461829,Stan James,Odds Checker Web,2.25,0.090039115,Home Win,2,1,Completed
+BMW Open,Clay,ATP,29/04/2013,Davydenko,Nikolay,Dodig,Ivan,73,59,Away Win,0.287320065,Marathonbet.co.uk,Best Betting,3.75,0.077450244,Away Win,2,0,Completed
+BMW Open,Clay,ATP,29/04/2013,Brands,Daniel,Kamke,Tobias,30,40,Away Win,0.615016401,Bwin,Odds Checker Web,2.7,0.660544283,Home Win,2,1,Completed
+BMW Open,Clay,ATP,29/04/2013,Matosevic,Marinko,Krawietz,Kevin,52,0,Away Win,0.2584636,Pinnacle Sports,Best Betting,5.29,0.367272444,Home Win,2,0,Completed
+BMW Open,Clay,ATP,29/04/2013,Mathieu,Paul-Henri,Tursunov,Dmitry,38,27,Home Win,0.66362397,Stan James,Odds Checker Web,2.88,0.911237034,Away Win,2,0,Completed
+Estoril Open,Clay,ATP,30/04/2013,Hanescu,Victor,Machado,Rui,34,14,Home Win,0.760105806,Pinnacle Sports,Best Betting,1.59,0.208568232,Home Win,2,0,Completed
+Estoril Open,Clay,ATP,30/04/2013,Gimeno-Traver,Daniel,Robredo,Tommy,37,35,Away Win,0.734701763,Pinnacle Sports,Best Betting,1.38,0.013888433,Away Win,2,1,Completed
+Estoril Open,Clay,ATP,30/04/2013,Zeballos,Horacio,Elias,Gastao,28,2,Away Win,0.43172411,Pinnacle Sports,Best Betting,2.45,0.05772407,Away Win,2,0,Completed
+Estoril Open,Clay,ATP,30/04/2013,Andujar,Pablo,Haase,Robin,67,61,Away Win,0.626752059,Marathonbet.co.uk,Best Betting,2.4,0.504204942,Away Win,2,1,Completed
+Estoril Open,Clay,ATP,30/04/2013,Lorenzi,Paolo,Desein,Niels,46,0,Home Win,0.890608576,Ladbrokes,Best Betting,1.29,0.148885063,Home Win,2,1,Completed
+Estoril Open,Clay,ATP,2/05/2013,Elias,Gastao,Istomin,Denis,3,80,Home Win,0.60060774,Bet Victor,Odds Checker Mobi,1.73,0.03905139,Home Win,2,1,Completed
+Estoril Open,Clay,ATP,2/05/2013,Ramos,Albert,Wawrinka,Stanislas,79,80,Away Win,0.775508712,32Red bet,Odds Checker Web,1.3,0.008161326,Away Win,2,1,Completed
+Estoril Open,Clay,ATP,2/05/2013,Seppi,Andreas,Falla,Alejandro,84,55,Home Win,0.727218511,Pinnacle Sports,Best Betting,1.41,0.025378101,Home Win,2,0,Completed
+Estoril Open,Clay,ATP,2/05/2013,Haase,Robin,Robredo,Tommy,62,36,Home Win,0.316250152,Marathonbet.co.uk,Best Betting,3.75,0.18593807,Away Win,2,0,Completed
+BMW Open,Clay,ATP,2/05/2013,Tipsarevic,Janko,Zemlja,Grega,100,32,Home Win,0.833662897,Sporting Bet,Best Betting,1.4,0.167128056,Home Win,2,0,Completed
+BMW Open,Clay,ATP,2/05/2013,Brands,Daniel,Monfils,Gael,31,51,Away Win,0.827117139,Pinnacle Sports,Best Betting,1.55,0.282031565,Home Win,2,1,Completed
+Estoril Open,Clay,ATP,3/05/2013,Elias,Gastao,Wawrinka,Stanislas,4,80,Away Win,0.871097252,Pinnacle Sports,Best Betting,1.16,0.010472812,Away Win,2,0,Completed
+Estoril Open,Clay,ATP,3/05/2013,Ferrer,David,Hanescu,Victor,126,36,Home Win,0.916480548,Paddy Power,Odds Checker Web,1.1,0.008128603,Home Win,2,0,Completed
+Estoril Open,Clay,ATP,3/05/2013,Carreno-Busta,Pablo,Fognini,Fabio,6,69,Away Win,0.815825576,William Hill,Odds Checker Web,1.53,0.248213131,Home Win,2,1,Completed
+Estoril Open,Clay,ATP,3/05/2013,Seppi,Andreas,Robredo,Tommy,84,37,Away Win,0.576201246,Paddy Power,Odds Checker Web,1.83,0.05444828,Home Win,2,0,Completed
+BMW Open,Clay,ATP,3/05/2013,Dolgopolov,Alexandr,Dodig,Ivan,75,60,Home Win,0.660655511,Marathonbet.co.uk,Best Betting,1.54,0.017409487,Away Win,2,0,Completed
+BMW Open,Clay,ATP,3/05/2013,Dolgopolov,Alexandr,Dodig,Ivan,75,60,Away Win,0.339344489,Stan James,Odds Checker Web,3,0.018033467,Away Win,2,0,Completed
+BMW Open,Clay,ATP,3/05/2013,Mayer,Florian,Haas,Tommy,66,69,Away Win,0.801567652,Stan James,Odds Checker Web,1.33,0.066084977,Away Win,2,0,Completed
+BMW Open,Clay,ATP,3/05/2013,Kohlschreiber,Philipp,Troicki,Viktor,83,66,Away Win,0.303110499,Marathonbet.co.uk,Best Betting,3.7,0.121508846,Home Win,2,0,Completed
+BMW Open,Clay,ATP,3/05/2013,Tipsarevic,Janko,Brands,Daniel,100,32,Home Win,0.798026344,Pinnacle Sports,Best Betting,1.56,0.244921097,Away Win,2,1,Completed
+Estoril Open,Clay,ATP,4/05/2013,Carreno-Busta,Pablo,Wawrinka,Stanislas,7,80,Away Win,0.894738314,Paddy Power,Odds Checker Web,1.17,0.046843827,Away Win,2,1,Completed
+Estoril Open,Clay,ATP,4/05/2013,Ferrer,David,Seppi,Andreas,126,84,Home Win,0.853817649,32Red bet,Odds Checker Web,1.21,0.033119355,Home Win,2,0,Completed
+BMW Open,Clay,ATP,4/05/2013,Haas,Tommy,Dodig,Ivan,70,61,Away Win,0.2657245,Marathonbet.co.uk,Best Betting,4.4,0.1691878,Home Win,2,0,Completed
+BMW Open,Clay,ATP,4/05/2013,Brands,Daniel,Kohlschreiber,Philipp,33,84,Away Win,0.800381603,Pinnacle Sports,Best Betting,1.58,0.264602933,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,5/05/2013,Goffin,David,Verdasco,Fernando,45,67,Away Win,0.756122406,Ladbrokes,Odds Checker Web,1.73,0.308091762,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,5/05/2013,Andujar,Pablo,Cilic,Marin,66,80,Away Win,0.920388262,Marathonbet.co.uk,Best Betting,1.37,0.260931919,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,5/05/2013,Benneteau,Julien,Simon,Gilles,71,93,Home Win,0.375545961,32Red bet,Odds Checker Web,2.87,0.077816908,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,5/05/2013,Tomic,Bernard,Stepanek,Radek,68,50,Away Win,0.651237184,Marathonbet.co.uk,Best Betting,1.75,0.139665072,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,5/05/2013,Chardy,Jeremy,Zeballos,Horacio,63,29,Home Win,0.619650442,Ladbrokes,Odds Checker Web,1.62,0.003833716,Home Win,2,0,Completed
+BMW Open,Clay,ATP,5/05/2013,Kohlschreiber,Philipp,Haas,Tommy,85,71,Away Win,0.668276797,Stan James,Odds Checker Web,1.53,0.022463499,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Lopez,Feliciano,Gimeno-Traver,Daniel,66,37,Home Win,0.575185741,Stan James,Odds Checker Web,2.2,0.26540863,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Nishikori,Kei,Melzer,Jurgen,75,65,Home Win,0.760720314,888sport,Best Betting,1.45,0.103044455,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Raonic,Milos,Davydenko,Nikolay,82,72,Home Win,0.767137703,Pinnacle Sports,Best Betting,1.38,0.05865003,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Isner,John,Garcia-Lopez,Guillermo,83,60,Home Win,0.657456944,Marathonbet.co.uk,Best Betting,1.63,0.071654819,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Janowicz,Jerzy,Querrey,Sam,26,79,Away Win,0.542133688,Marathonbet.co.uk,Best Betting,2.38,0.290278177,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Anderson,Kevin,Levine,Jesse,83,33,Away Win,0.237936104,Sporting Bet,Odds Checker Web,5,0.18968052,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Haase,Robin,Dolgopolov,Alexandr,61,76,Away Win,0.725290832,Sporting Bet,Odds Checker Web,1.48,0.073430431,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Matosevic,Marinko,Mayer,Florian,54,65,Home Win,0.487603574,Marathonbet.co.uk,Best Betting,3.15,0.535951258,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,6/05/2013,Malisse,Xavier,Istomin,Denis,62,81,Away Win,0.559253442,Betway,Odds Checker Web,2.05,0.146469556,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Stepanek,Radek,Federer,Roger,51,107,Away Win,0.939195303,32Red bet,Odds Checker Web,1.08,0.014330927,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Murray,Andy,Mayer,Florian,98,66,Home Win,0.921015618,Stan James,Odds Checker Web,1.12,0.031537492,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Djokovic,Novak,Dimitrov,Grigor,115,65,Home Win,0.957307028,Ladbrokes,Odds Checker Web,1.06,0.01474545,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Tipsarevic,Janko,Monaco,Juan,101,73,Home Win,0.401226833,Marathonbet.co.uk,Best Betting,3.05,0.223741841,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Gasquet,Richard,Gimeno-Traver,Daniel,93,38,Home Win,0.837596224,Bwin,Odds Checker Web,1.2,0.005115469,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Baghdatis,Marcos,Robredo,Tommy,73,38,Away Win,0.815847573,Stan James,Odds Checker Web,1.36,0.109552699,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Raonic,Milos,Verdasco,Fernando,83,68,Home Win,0.838850728,Pinnacle Sports,Best Betting,1.37,0.149225497,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Isner,John,Andujar,Pablo,84,67,Home Win,0.737972312,Marathonbet.co.uk,Best Betting,1.5,0.106958468,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Fognini,Fabio,Youzhny,Mikhail,69,72,Away Win,0.474939993,Pinnacle Sports,Best Betting,2.39,0.135106583,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Haas,Tommy,Seppi,Andreas,72,85,Home Win,0.684028996,Pinnacle Sports,Best Betting,1.61,0.101286684,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Giraldo,Santiago,Klizan,Martin,54,47,Home Win,0.413703019,Marathonbet.co.uk,Best Betting,2.42,0.001161306,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Copil,Marius,Wawrinka,Stanislas,7,80,Away Win,0.96470145,William Hill,Odds Checker Web,1.08,0.041877566,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Chardy,Jeremy,Simon,Gilles,64,94,Home Win,0.437345361,Betway,Odds Checker Web,2.55,0.115230671,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Souza,Joao,Paire,Benoit,16,78,Home Win,0.319601234,888sport,Best Betting,3.45,0.102624257,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,7/05/2013,Troicki,Viktor,Granollers,Marcel,67,63,Away Win,0.622744304,Stan James,Odds Checker Web,1.9,0.183214178,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Nadal,Rafael,Paire,Benoit,79,79,Home Win,0.989865603,Paddy Power,Odds Checker Web,1.02,0.009662915,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Haase,Robin,Tsonga,Jo-Wilfried,62,107,Home Win,0.197354618,Marathonbet.co.uk,Best Betting,5.4,0.065714937,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Istomin,Denis,Ferrer,David,82,126,Home Win,0.112061168,Pinnacle Sports,Best Betting,10.25,0.148626972,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Janowicz,Jerzy,Berdych,Tomas,27,110,Away Win,0.851041202,Sporting Bet,Odds Checker Web,1.38,0.174436859,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Haas,Tommy,Robredo,Tommy,73,39,Away Win,0.543654855,Marathonbet.co.uk,Best Betting,2.85,0.549416337,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Monaco,Juan,Anderson,Kevin,73,84,Away Win,0.463744931,Stan James,Odds Checker Web,3,0.391234793,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Youzhny,Mikhail,Almagro,Nicolas,73,108,Away Win,0.837801345,Ladbrokes,Odds Checker Web,1.29,0.080763735,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,8/05/2013,Nishikori,Kei,Troicki,Viktor,75,68,Home Win,0.792233945,Paddy Power,Odds Checker Web,1.33,0.053671147,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,9/05/2013,Nishikori,Kei,Federer,Roger,76,108,Home Win,0.273560319,Sporting Bet,Odds Checker Web,5.5,0.504581755,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,9/05/2013,Murray,Andy,Simon,Gilles,99,95,Away Win,0.197518136,Pinnacle Sports,Best Betting,5.65,0.115977468,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,9/05/2013,Anderson,Kevin,Berdych,Tomas,85,111,Home Win,0.318973308,Marathonbet.co.uk,Best Betting,3.45,0.100457913,Away Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,9/05/2013,Verdasco,Fernando,Tsonga,Jo-Wilfried,69,108,Away Win,0.776296684,Stan James,Odds Checker Web,1.4,0.086815358,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,9/05/2013,Dimitrov,Grigor,Wawrinka,Stanislas,66,82,Away Win,0.731242188,Bet770,Best Betting,1.55,0.133425391,Away Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,11/05/2013,Nadal,Rafael,Andujar,Pablo,82,70,Home Win,0.979318175,32Red bet,Odds Checker Web,1.04,0.018490902,Home Win,2,0,Completed
+Mutua Madrid Open,Clay,Masters,11/05/2013,Wawrinka,Stanislas,Berdych,Tomas,83,112,Home Win,0.618682979,Paddy Power,Odds Checker Web,2.1,0.299234256,Home Win,2,1,Completed
+Mutua Madrid Open,Clay,Masters,12/05/2013,Wawrinka,Stanislas,Nadal,Rafael,84,83,Home Win,0.222443954,Sporting Bet,Odds Checker Web,7,0.557107678,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,12/05/2013,Querrey,Sam,Gasquet,Richard,80,92,Away Win,0.815926515,Marathonbet.co.uk,Best Betting,1.31,0.068863735,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,12/05/2013,Baghdatis,Marcos,Dimitrov,Grigor,74,67,Home Win,0.350877748,Marathonbet.co.uk,Best Betting,4.33,0.519300649,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,12/05/2013,Istomin,Denis,Isner,John,83,80,Home Win,0.466497004,Pinnacle Sports,Best Betting,2.92,0.362171252,Home Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,12/05/2013,Anderson,Kevin,Melzer,Jurgen,84,66,Home Win,0.695875872,Bwin,Odds Checker Web,1.57,0.092525119,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Stepanek,Radek,Starace,Potito,51,26,Away Win,0.434953751,Marathonbet.co.uk,Best Betting,3.45,0.500590441,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Fognini,Fabio,Seppi,Andreas,69,83,Away Win,0.550826176,Paddy Power,Best Betting,2.1,0.15673497,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Nishikori,Kei,Lorenzi,Paolo,77,48,Away Win,0.314928569,Stan James,Best Betting,3.75,0.180982134,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Cilic,Marin,Golubev,Andrey,80,7,Home Win,0.859932526,Sporting Bet,Best Betting,1.2,0.031919031,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Kohlschreiber,Philipp,Raonic,Milos,84,83,Away Win,0.739706597,Ladbrokes,Best Betting,1.57,0.161339357,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Nieminen,Jarkko,Gulbis,Ernests,79,49,Home Win,0.592600799,Marathonbet.co.uk,Best Betting,3.8,1.251883036,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Giraldo,Santiago,Janowicz,Jerzy,55,28,Home Win,0.596930144,Boylesports,Best Betting,2.25,0.343092824,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,13/05/2013,Montanes,Albert,Klizan,Martin,37,48,Away Win,0.543344331,Pinnacle Sports,Best Betting,1.88,0.021487342,Home Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Dimitrov,Grigor,Gasquet,Richard,68,93,Away Win,0.6740134,Marathonbet.co.uk,Best Betting,1.78,0.199743852,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Starace,Potito,Federer,Roger,27,104,Away Win,0.961612722,32Red bet,Odds Checker Web,1.06,0.019309485,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Haas,Tommy,Youzhny,Mikhail,75,74,Home Win,0.815326557,Pinnacle Sports,Best Betting,1.36,0.108844118,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Volandri,Filippo,Simon,Gilles,43,95,Away Win,0.767574475,Coral,Odds Checker Web,1.4,0.074604265,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Istomin,Denis,Berdych,Tomas,84,110,Home Win,0.160131229,Pinnacle Sports,Best Betting,7.24,0.159350098,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Berlocq,Carlos,Wawrinka,Stanislas,70,85,Away Win,0.827886163,Pinnacle Sports,Best Betting,1.48,0.225271521,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Del Potro,Juan-Martin,Kuznetsov,Andrey,102,22,Home Win,0.892221975,Pinnacle Sports,Best Betting,1.17,0.043899711,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Zeballos,Horacio,Verdasco,Fernando,30,68,Away Win,0.762930779,Pinnacle Sports,Best Betting,1.5,0.144396169,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Chardy,Jeremy,Lopez,Feliciano,63,64,Away Win,0.428499321,Marathonbet.co.uk,Best Betting,2.42,0.036968357,Home Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,14/05/2013,Rosol,Lukas,Troicki,Viktor,54,67,Home Win,0.647268537,Pinnacle Sports,Best Betting,1.95,0.262173647,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Tsonga,Jo-Wilfried,Janowicz,Jerzy,106,29,Home Win,0.852868081,Pinnacle Sports,Best Betting,1.34,0.142843229,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Fognini,Fabio,Nadal,Rafael,70,84,Away Win,0.966327921,32Red bet,Odds Checker Web,1.04,0.004981038,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Youzhny,Mikhail,Simon,Gilles,75,96,Away Win,0.563897994,Marathonbet.co.uk,Best Betting,2.22,0.251853547,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Nishikori,Kei,Chardy,Jeremy,78,64,Home Win,0.723447737,Stan James,Odds Checker Web,1.44,0.041764741,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Troicki,Viktor,Gulbis,Ernests,68,50,Away Win,0.764099721,888sport,Best Betting,1.4,0.069739609,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Ferrer,David,Verdasco,Fernando,126,69,Home Win,0.88266697,Sporting Bet,Odds Checker Web,1.18,0.041547025,Home Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Ramos,Albert,Kohlschreiber,Philipp,81,85,Home Win,0.46415505,Marathonbet.co.uk,Best Betting,2.34,0.086122817,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,15/05/2013,Paire,Benoit,Benneteau,Julien,81,71,Away Win,0.5,Marathonbet.co.uk,Best Betting,2.35,0.175,Home Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,17/05/2013,Djokovic,Novak,Berdych,Tomas,116,112,Home Win,0.859294576,Marathonbet.co.uk,Best Betting,1.17,0.005374654,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,17/05/2013,Ferrer,David,Nadal,Rafael,127,86,Home Win,0.176280999,Marathonbet.co.uk,Best Betting,6.7,0.181082693,Away Win,2,1,Completed
+Internazionali BNL d'Italia,Clay,Masters,17/05/2013,Janowicz,Jerzy,Federer,Roger,31,106,Away Win,0.958188624,Pinnacle Sports,Best Betting,1.18,0.130662576,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,17/05/2013,Paire,Benoit,Granollers,Marcel,83,65,Away Win,0.512806891,Marathonbet.co.uk,Best Betting,2.8,0.435859295,Home Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,18/05/2013,Berdych,Tomas,Nadal,Rafael,113,87,Home Win,0.192109178,Pinnacle Sports,Best Betting,6.05,0.162260527,Away Win,2,0,Completed
+Internazionali BNL d'Italia,Clay,Masters,18/05/2013,Paire,Benoit,Federer,Roger,84,107,Away Win,0.960239245,Pinnacle Sports,Best Betting,1.14,0.094672739,Away Win,2,0,Completed
+Open de Nice C�te d�Azur,Clay,ATP,24/05/2013,Montanes,Albert,Roger-Vasselin,Edouard,41,56,Home Win,0.565156474,Pinnacle Sports,Best Betting,1.84,0.039887912,Home Win,2,1,Completed
+Open de Nice C�te d�Azur,Clay,ATP,24/05/2013,Monfils,Gael,Andujar,Pablo,51,74,Home Win,0.778068008,Marathonbet.co.uk,Best Betting,1.49,0.159321332,Home Win,2,0,Completed
+Power Horse Cup,Clay,ATP,24/05/2013,Sijsling,Igor,Nieminen,Jarkko,37,82,Away Win,0.785162187,Marathonbet.co.uk,Best Betting,1.6,0.256259499,Away Win,2,1,Completed
+Open de Nice C�te d�Azur,Clay,ATP,25/05/2013,Montanes,Albert,Monfils,Gael,42,52,Home Win,0.301558135,Boylesports,Odds Checker Web,3.4,0.025297659,Home Win,2,0,Completed
+Open de Nice C�te d�Azur,Clay,ATP,25/05/2013,Montanes,Albert,Monfils,Gael,42,52,Away Win,0.698441864,Stan James,Odds Checker Web,1.44,0.005756284,Home Win,2,0,Completed
+Power Horse Cup,Clay,ATP,25/05/2013,Monaco,Juan,Nieminen,Jarkko,74,83,Away Win,0.325150774,Bet 365,Odds Checker Web,3.75,0.219315403,Home Win,2,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Carreno-Busta,Pablo,Federer,Roger,8,105,Away Win,0.976560863,Bodog,Best Betting,1.1,0.074216949,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Darcis,Steve,Llodra,Michael,41,38,Home Win,0.444327306,Marathonbet.co.uk,Best Betting,2.26,0.004179712,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Darcis,Steve,Llodra,Michael,41,38,Away Win,0.555672693,Sporting Bet,Odds Checker Web,1.82,0.011324301,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Simon,Gilles,Hewitt,Lleyton,100,41,Away Win,0.422495565,Pinnacle Sports,Best Betting,5.98,1.526523479,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Matosevic,Marinko,Ferrer,David,56,124,Away Win,0.978605128,Bodog,Best Betting,1.1,0.076465641,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Raonic,Milos,Malisse,Xavier,84,64,Home Win,0.920983411,Sporting Bet,Odds Checker Web,1.1,0.013081752,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Becker,Benjamin,Chardy,Jeremy,36,66,Away Win,0.925694184,Bodog,Best Betting,1.1,0.018263602,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Marchenko,Illya,Anderson,Kevin,2,87,Away Win,0.939295026,Bodog,Best Betting,1.1,0.033224529,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Troicki,Viktor,Blake,James,72,29,Away Win,0.433206835,Marathonbet.co.uk,Best Betting,4.4,0.906110074,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Seppi,Andreas,Mayer,Leonardo,85,36,Away Win,0.375203221,Sporting Bet,Odds Checker Web,5.5,1.063617716,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Kavcic,Blaz,Duckworth,James,33,8,Home Win,0.781841256,Sporting Bet,Odds Checker Web,1.67,0.305674898,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Devvarman,Somdev,Munoz-De La Nava,Daniel,17,12,Away Win,0.630029283,Marathonbet.co.uk,Best Betting,1.75,0.102551245,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Sousa,Joao,Soeda,Go,16,40,Home Win,0.878561738,Stan James,Odds Checker Web,1.29,0.133344642,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Lacko,Lukas,Querrey,Sam,43,83,Away Win,0.821562836,Bodog,Best Betting,1.25,0.026953545,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Bautista-Agut,Roberto,Muller,Gilles,32,51,Away Win,0.384732181,Marathonbet.co.uk,Best Betting,4.95,0.904424296,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,26/05/2013,Hajek,Jan,Kudla,Denis,23,9,Home Win,0.707826814,Stan James,Odds Checker Web,1.53,0.082975025,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Nadal,Rafael,Brands,Daniel,86,36,Home Win,0.995376141,BETDAQ,Best Betting,1.855,0.891214668,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Berdych,Tomas,Monfils,Gael,110,52,Away Win,0.294559257,Marathonbet.co.uk,Best Betting,4.95,0.458068322,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Tsonga,Jo-Wilfried,Bedene,Aljaz,103,26,Away Win,0.202913675,Marathonbet.co.uk,Best Betting,11,1.232050425,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Stakhovsky,Sergiy,Gasquet,Richard,52,95,Home Win,0.087551758,Pinnacle Sports,Best Betting,14,0.225724612,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Stakhovsky,Sergiy,Gasquet,Richard,52,95,Away Win,0.912448242,Bodog,Best Betting,1.1,0.003693066,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Benneteau,Julien,Berankis,Ricardas,72,28,Home Win,0.747309876,32Red bet,Odds Checker Web,1.34,0.001395234,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Nieminen,Jarkko,Mathieu,Paul-Henri,83,42,Away Win,0.34935074,Marathonbet.co.uk,Best Betting,3.05,0.065519757,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Alund,Martin,Roger-Vasselin,Edouard,10,57,Home Win,0.420389516,Marathonbet.co.uk,Best Betting,3.7,0.555441209,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Berlocq,Carlos,Isner,John,73,82,Away Win,0.485399366,Pinnacle Sports,Best Betting,2.13,0.03390065,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Haider-Maurer,Andreas,Almagro,Nicolas,3,109,Home Win,0.141390832,Betfair,Best Betting,17.64875,1.619265163,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Gulbis,Ernests,Dutra Silva,Rogerio,52,9,Away Win,0.294808866,Marathonbet.co.uk,Best Betting,11,2.242897526,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Struff,Jan-Lennard,Donskoy,Evgeny,1,18,Away Win,0.469409448,Marathonbet.co.uk,Best Betting,2.76,0.295570076,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Mannarino,Adrian,Cuevas,Pablo,10,0,Away Win,0.776973292,Pinnacle Sports,Best Betting,2.25,0.748189907,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Ramos,Albert,Janowicz,Jerzy,83,32,Home Win,0.572620663,32Red bet,Odds Checker Web,2.35,0.345658558,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Levine,Jesse,Nishikori,Kei,34,79,Home Win,0.137640927,Marathonbet.co.uk,Best Betting,10.5,0.445229734,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Granollers,Marcel,Lopez,Feliciano,66,65,Home Win,0.662088443,Sporting Bet,Best Betting,1.6,0.059341509,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Petzschner,Philipp,Cilic,Marin,31,82,Home Win,0.167791964,Marathonbet.co.uk,Best Betting,13,1.181295532,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Kamke,Tobias,Lorenzi,Paolo,44,50,Away Win,0.5306899,Pinnacle Sports,Best Betting,2.58,0.369179942,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Johnson,Steve,Montanes,Albert,15,42,Away Win,0.923570113,youwin,Odds Checker Web,1.26,0.163698342,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Sijsling,Igor,Melzer,Jurgen,38,67,Away Win,0.777207556,Pinnacle Sports,Best Betting,2.2,0.709856623,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Kuznetsov,Andrey,Harrison,Ryan,23,56,Away Win,0.378587752,Boylesports,Odds Checker Web,3.1,0.173622031,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Zemlja,Grega,Giraldo,Santiago,35,57,Away Win,0.674401477,Stan James,Odds Checker Web,1.53,0.03183426,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Riba,Pere,Rosol,Lukas,9,56,Away Win,0.740227186,Stan James,Odds Checker Web,1.4,0.03631806,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Beck,Andreas,Fognini,Fabio,7,73,Home Win,0.237409182,Stan James,Odds Checker Web,6,0.424455092,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Przysiezny,Michal,Williams,Rhyne,0,10,Away Win,0.729434313,Stan James,Odds Checker Web,2.38,0.736053665,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Zopp,Jurgen,Robredo,Tommy,18,40,Home Win,0.159761616,Betfair,Best Betting,14.49,1.428376563,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Monaco,Juan,Gimeno-Traver,Daniel,74,40,Away Win,0.281903306,Pinnacle Sports,Best Betting,5.42,0.527915919,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,Stepanek,Radek,Kyrgios,Nick,52,0,Home Win,0.878217197,Ladbrokes,Odds Checker Web,1.17,0.02751412,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,27/05/2013,De Schepper,Kenny,Haase,Robin,9,66,Away Win,0.831434867,Marathonbet.co.uk,Best Betting,1.34,0.114122722,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Djokovic,Novak,Goffin,David,115,47,Home Win,0.976361236,Bodog,Best Betting,1.1,0.07399736,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Djokovic,Novak,Goffin,David,115,47,Away Win,0.023638763,Betfair,Best Betting,45.175,0.122841243,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Haas,Tommy,Rufin,Guillaume,77,21,Home Win,0.829039278,Pinnacle Sports,Best Betting,1.21,0.003137526,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Serra,Florent,Davydenko,Nikolay,15,74,Home Win,0.346054798,Boylesports,Odds Checker Web,4.8,0.66106303,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Wawrinka,Stanislas,de Bakker,Thiemo,86,5,Away Win,0.139445163,Boylesports,Best Betting,11,0.533896793,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Verdasco,Fernando,Gicquel,Marc,70,3,Away Win,0.182798735,Marathonbet.co.uk,Best Betting,7.1,0.297871019,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Sock,Jack,Garcia-Lopez,Guillermo,21,59,Away Win,0.95106918,888sport,Best Betting,1.34,0.274432701,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Vesely,Jiri,Kohlschreiber,Philipp,0,87,Home Win,0.272969282,Marathonbet.co.uk,Best Betting,5.3,0.446737195,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Delbonis,Federico,Reister,Julian,15,7,Home Win,0.489710274,Pinnacle Sports,Best Betting,2.63,0.287938021,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Dodig,Ivan,Pella,Guido,62,14,Away Win,0.455949695,Pinnacle Sports,Best Betting,2.6,0.185469207,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Kuznetsov,Alex,Pouille,Lucas,2,2,Away Win,0.428444341,32Red bet,Odds Checker Web,2.51,0.075395296,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Youzhny,Mikhail,Andujar,Pablo,76,75,Home Win,0.655100806,Sporting Bet,Best Betting,2.05,0.342956652,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,28/05/2013,Dolgopolov,Alexandr,Tursunov,Dmitry,77,27,Away Win,0.227373754,32Red bet,Odds Checker Web,4.8,0.091394019,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Djokovic,Novak,Pella,Guido,116,15,Home Win,0.981980283,Bodog,Best Betting,1.1,0.080178311,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Djokovic,Novak,Pella,Guido,116,15,Away Win,0.018019716,Betfair,Best Betting,54.2,0.027123812,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Pouille,Lucas,Dimitrov,Grigor,3,70,Home Win,0.208217412,Marathonbet.co.uk,Best Betting,15,2.12326118,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Paire,Benoit,Kubot,Lukasz,86,60,Away Win,0.300263078,32Red bet,Odds Checker Web,5.4,0.621420621,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Zemlja,Grega,Nishikori,Kei,36,80,Home Win,0.202345084,Marathonbet.co.uk,Best Betting,6.7,0.355712063,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,30/05/2013,Rosol,Lukas,Fognini,Fabio,57,74,Home Win,0.515725219,Stan James,Odds Checker Web,2.75,0.418244352,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Benneteau,Julien,Federer,Roger,74,106,Away Win,0.980952524,Bodog,Best Betting,1.1,0.079047776,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Tsonga,Jo-Wilfried,Chardy,Jeremy,104,68,Away Win,0.382969467,Marathonbet.co.uk,Best Betting,4.65,0.780808022,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Nadal,Rafael,Klizan,Martin,87,50,Home Win,0.994523477,Bodog,Best Betting,1.1,0.093975825,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Monfils,Gael,Robredo,Tommy,55,42,Away Win,0.463821689,Marathonbet.co.uk,Best Betting,3.15,0.46103832,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Przysiezny,Michal,Gasquet,Richard,1,96,Home Win,0.03769663,Betfair,Best Betting,27.125,0.074353955,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Przysiezny,Michal,Gasquet,Richard,1,96,Away Win,0.962303369,Bodog,Best Betting,1.1,0.058533706,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Lopez,Feliciano,Ferrer,David,67,126,Away Win,0.974425754,Bodog,Best Betting,1.1,0.071868329,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Haas,Tommy,Sock,Jack,78,22,Home Win,0.927855238,Pinnacle Sports,Best Betting,1.16,0.076312076,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Simon,Gilles,Querrey,Sam,102,85,Away Win,0.333824173,Pinnacle Sports,Best Betting,3.14,0.048207903,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Verdasco,Fernando,Tipsarevic,Janko,71,101,Away Win,0.484626589,32Red bet,Odds Checker Web,2.21,0.071024762,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Seppi,Andreas,Almagro,Nicolas,87,111,Home Win,0.203294237,Marathonbet.co.uk,Best Betting,5.1,0.036800609,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Troicki,Viktor,Cilic,Marin,74,84,Away Win,0.856045462,32Red bet,Odds Checker Web,1.27,0.087177737,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Harrison,Ryan,Isner,John,57,83,Home Win,0.336872566,Marathonbet.co.uk,Best Betting,3.9,0.313803007,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Wawrinka,Stanislas,Zeballos,Horacio,87,32,Away Win,0.094607494,Paddy Power,Odds Checker Web,34,2.216654796,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Raonic,Milos,Anderson,Kevin,86,89,Home Win,0.650912075,Pinnacle Sports,Best Betting,1.69,0.100041407,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Haase,Robin,Janowicz,Jerzy,67,33,Home Win,0.570462074,Marathonbet.co.uk,Best Betting,3.95,1.253325192,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,31/05/2013,Youzhny,Mikhail,Delbonis,Federico,77,16,Away Win,0.300614049,Ladbrokes,Best Betting,7,1.104298343,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Nadal,Rafael,Fognini,Fabio,88,75,Home Win,0.992606684,Bodog,Best Betting,1.1,0.091867352,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Djokovic,Novak,Dimitrov,Grigor,117,71,Home Win,0.962028926,Pinnacle Sports,Best Betting,1.13,0.087092686,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Paire,Benoit,Nishikori,Kei,87,81,Away Win,0.699372237,Marathonbet.co.uk,Best Betting,2.2,0.538618921,Away Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Davydenko,Nikolay,Gasquet,Richard,76,97,Away Win,0.852495125,Paddy Power,Odds Checker Web,1.25,0.065618906,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Haas,Tommy,Isner,John,79,84,Away Win,0.296742414,32Red bet,Odds Checker Web,3.9,0.157295415,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Hanescu,Victor,Kohlschreiber,Philipp,41,88,Home Win,0.390986824,Marathonbet.co.uk,Best Betting,3.5,0.368453884,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Wawrinka,Stanislas,Janowicz,Jerzy,88,34,Home Win,0.839438247,Sporting Bet,Odds Checker Web,1.36,0.141636016,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,1/06/2013,Youzhny,Mikhail,Tipsarevic,Janko,78,102,Home Win,0.577387572,Sporting Bet,Odds Checker Web,1.83,0.056619257,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,2/06/2013,Tsonga,Jo-Wilfried,Troicki,Viktor,105,75,Away Win,0.141595714,Sporting Bet,Odds Checker Web,9,0.274361426,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,2/06/2013,Simon,Gilles,Federer,Roger,103,107,Away Win,0.949442316,Bodog,Best Betting,1.1,0.044386548,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,2/06/2013,Anderson,Kevin,Ferrer,David,90,127,Home Win,0.220279114,Marathonbet.co.uk,Best Betting,7.5,0.652093355,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,2/06/2013,Robredo,Tommy,Almagro,Nicolas,43,112,Home Win,0.377214258,Marathonbet.co.uk,Best Betting,5.5,1.074678419,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,3/06/2013,Djokovic,Novak,Kohlschreiber,Philipp,118,89,Home Win,0.953616236,Bodog,Best Betting,1.1,0.04897786,Home Win,3,1,Completed
+Roland Garros,Clay,Grand Slam,3/06/2013,Nadal,Rafael,Nishikori,Kei,89,82,Away Win,0.096658068,Pinnacle Sports,Best Betting,16,0.546529088,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,3/06/2013,Haas,Tommy,Youzhny,Mikhail,80,79,Home Win,0.730908431,Stan James,Odds Checker Web,2,0.461816862,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,3/06/2013,Wawrinka,Stanislas,Gasquet,Richard,89,98,Away Win,0.439473142,Marathonbet.co.uk,Best Betting,2.3,0.010788227,Home Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,4/06/2013,Tsonga,Jo-Wilfried,Federer,Roger,106,108,Away Win,0.828052773,888sport,Odds Checker Web,1.62,0.341445492,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,4/06/2013,Robredo,Tommy,Ferrer,David,44,128,Home Win,0.167129607,Pinnacle Sports,Best Betting,13.9,1.323101537,Away Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,5/06/2013,Nadal,Rafael,Wawrinka,Stanislas,90,90,Away Win,0.103412997,Sporting Bet,Best Betting,13,0.344368961,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,5/06/2013,Djokovic,Novak,Haas,Tommy,119,81,Away Win,0.160750131,Pinnacle Sports,Best Betting,7.97,0.281178544,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,7/06/2013,Djokovic,Novak,Nadal,Rafael,120,91,Home Win,0.531237288,Marathonbet.co.uk,Best Betting,2.46,0.306843728,Away Win,3,2,Completed
+Roland Garros,Clay,Grand Slam,7/06/2013,Ferrer,David,Tsonga,Jo-Wilfried,129,107,Home Win,0.755659284,Pinnacle Sports,Best Betting,1.74,0.314847154,Home Win,3,0,Completed
+Roland Garros,Clay,Grand Slam,9/06/2013,Nadal,Rafael,Ferrer,David,92,130,Away Win,0.177324543,888sport,Odds Checker Mobi,8,0.418596344,Home Win,3,0,Completed
+Gerry Weber Open ,Grass,ATP,10/06/2013,Hernych,Jan,Brands,Daniel,4,37,Home Win,0.512015315,Boylesports,Best Betting,4,1.04806126,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,10/06/2013,Youzhny,Mikhail,Gimeno-Traver,Daniel,80,42,Home Win,0.938669742,Stan James,Best Betting,1.14,0.070083506,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,10/06/2013,Mayer,Florian,Fischer,Martin,66,4,Home Win,0.861529813,Betinternet,Best Betting,1.22,0.051066372,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,10/06/2013,Zverev,Mischa,Goffin,David,5,48,Home Win,0.541159628,Marathonbet.co.uk,Best Betting,2.92,0.580186114,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Pella,Guido,Evans,Daniel,16,1,Home Win,0.631698726,Marathonbet.co.uk,Best Betting,2.88,0.819292331,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Dodig,Ivan,Ward,James,63,5,Away Win,0.411909252,Marathonbet.co.uk,Best Betting,3.8,0.565255158,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Hewitt,Lleyton,Russell,Michael,42,32,Home Win,0.957572386,Ladbrokes,Best Betting,1.25,0.196965483,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Sela,Dudi,Dimitrov,Grigor,34,72,Home Win,0.46076534,Boylesports,Best Betting,5.5,1.53420937,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Bedene,Aljaz,Mathieu,Paul-Henri,27,43,Away Win,0.847512683,Sporting Bet,Best Betting,1.5,0.271269025,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Garcia-Lopez,Guillermo,Malisse,Xavier,60,65,Home Win,0.526182411,Bet 365,Best Betting,3,0.578547233,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Corrie,Edward,Stakhovsky,Sergiy,0,53,Home Win,0.207881982,Stan James,Best Betting,6,0.247291892,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Giraldo,Santiago,Levine,Jesse,58,35,Home Win,0.428242732,Marathonbet.co.uk,Best Betting,2.64,0.130560812,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Ito,Tatsuma,Sijsling,Igor,30,40,Home Win,0.335265269,Pinnacle Sports,Best Betting,3.87,0.297476591,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Rufin,Guillaume,Roger-Vasselin,Edouard,22,59,Home Win,0.481296692,Coral,Best Betting,3.5,0.684538422,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Paire,Benoit,Baker,Jamie,88,6,Home Win,0.918985354,Pinnacle Sports,Best Betting,1.28,0.176301253,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,Nielsen,Frederik,Matosevic,Marinko,1,57,Away Win,0.772799157,Coral,Best Betting,1.4,0.08191882,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,10/06/2013,de Bakker,Thiemo,Bozoljac,Ilija,6,1,Away Win,0.571072397,Ladbrokes,Best Betting,2,0.142144794,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Baghdatis,Marcos,Gulbis,Ernests,76,54,Home Win,0.413045957,Marathonbet.co.uk,Best Betting,2.82,0.164789599,Away Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Kohlschreiber,Philipp,Berlocq,Carlos,90,74,Away Win,0.231763944,Betfair,Best Betting,9.9775,1.421933215,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Kamke,Tobias,Kubot,Lukasz,46,61,Away Win,0.601002736,Pinnacle Sports,Best Betting,1.91,0.147915226,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Stebe,Cedrik-Marcel,Wang,Jimmy,25,5,Away Win,0.765506489,Marathonbet.co.uk,Best Betting,2.6,0.990316871,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Struff,Jan-Lennard,Mayer,Leonardo,2,37,Away Win,0.543263375,Paddy Power,Best Betting,2.2,0.195179425,Away Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,11/06/2013,Melzer,Jurgen,Ghedin,Riccardo,68,1,Home Win,0.927851696,Pinnacle Sports,Best Betting,1.22,0.131979069,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Querrey,Sam,Bedene,Aljaz,86,28,Away Win,0.493424426,BetVictor,Best Betting,4.6,1.26975236,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Malisse,Xavier,Del Potro,Juan-Martin,66,104,Away Win,0.813539126,Pinnacle Sports,Best Betting,1.28,0.041330081,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Lopez,Feliciano,Berankis,Ricardas,68,29,Away Win,0.370648636,Pinnacle Sports,Best Betting,2.87,0.063761585,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Becker,Benjamin,Tomic,Bernard,37,70,Home Win,0.709865078,Pinnacle Sports,Best Betting,2.19,0.554604521,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Mannarino,Adrian,Benneteau,Julien,11,75,Home Win,0.415231113,Stan James,Best Betting,3.25,0.349501117,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Zemlja,Grega,Edmund,Kyle,37,0,Home Win,0.917485896,Marathonbet.co.uk,Best Betting,1.14,0.045933921,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Llodra,Michael,Andujar,Pablo,40,76,Home Win,0.981818805,Ladbrokes,Best Betting,1.17,0.148728002,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Rosol,Lukas,Groth,Samuel,58,0,Home Win,0.930906811,Pinnacle Sports,Best Betting,1.42,0.321887672,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Nieminen,Jarkko,Harrison,Ryan,86,58,Away Win,0.487166878,Stan James,Best Betting,2.1,0.023050444,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Mahut,Nicolas,Williams,Rhyne,35,11,Home Win,0.882998804,Pinnacle Sports,Best Betting,1.53,0.35098817,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,Kuznetsov,Andrey,Istomin,Denis,24,88,Away Win,0.887874529,Stan James,Best Betting,1.4,0.243024341,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,11/06/2013,De Schepper,Kenny,Ram,Rajeev,10,20,Away Win,0.555882041,Marathonbet.co.uk,Best Betting,2.82,0.567587356,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,12/06/2013,Youzhny,Mikhail,Nishikori,Kei,81,83,Away Win,0.628276302,Pinnacle Sports,Best Betting,1.83,0.149745633,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,12/06/2013,Hernych,Jan,Monfils,Gael,5,57,Home Win,0.42945179,Pinnacle Sports,Best Betting,6.27,1.692662723,Away Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,12/06/2013,Zverev,Mischa,Basic,Mirza,6,1,Away Win,0.64925072,Stan James,Best Betting,2.75,0.78543948,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,12/06/2013,Federer,Roger,Stebe,Cedrik-Marcel,109,26,Home Win,0.985610546,Coral,Best Betting,1.04,0.025034968,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Hewitt,Lleyton,Dimitrov,Grigor,43,73,Home Win,0.848318016,Pinnacle Sports,Best Betting,2.93,1.485571787,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,de Bakker,Thiemo,Berdych,Tomas,7,111,Home Win,0.150171135,Pinnacle Sports,Best Betting,7.45,0.118774956,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Nieminen,Jarkko,Evans,Daniel,87,2,Home Win,0.800345173,Marathonbet.co.uk,Best Betting,1.32,0.056455628,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Cilic,Marin,Dodig,Ivan,85,64,Home Win,0.805165586,Stan James,Best Betting,1.44,0.159438444,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Zemlja,Grega,Stakhovsky,Sergiy,38,54,Home Win,0.698342108,Marathonbet.co.uk,Best Betting,2.15,0.501435532,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Rosol,Lukas,Becker,Benjamin,59,38,Home Win,0.645102635,Pinnacle Sports,Best Betting,2.34,0.509540166,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Sijsling,Igor,Istomin,Denis,41,89,Away Win,0.705348381,Coral,Best Betting,2,0.410696762,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,12/06/2013,Giraldo,Santiago,Dolgopolov,Alexandr,59,78,Away Win,0.671841738,Sporting Bet,Best Betting,1.67,0.121975702,Away Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,13/06/2013,Kohlschreiber,Philipp,Kamke,Tobias,91,47,Away Win,0.174597051,Pinnacle Sports,Best Betting,6.23,0.087739628,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,13/06/2013,Melzer,Jurgen,Gasquet,Richard,69,99,Away Win,0.911196031,Stan James,Best Betting,1.2,0.093435237,Away Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,13/06/2013,Haas,Tommy,Gulbis,Ernests,82,55,Away Win,0.462130701,Marathonbet.co.uk,Best Betting,2.95,0.363285568,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Tsonga,Jo-Wilfried,Roger-Vasselin,Edouard,108,60,Away Win,0.180531819,Marathonbet.co.uk,Best Betting,8.2,0.480360916,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Murray,Andy,Mahut,Nicolas,98,36,Home Win,0.949249616,Coral,Best Betting,1.12,0.06315957,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Murray,Andy,Mahut,Nicolas,98,36,Away Win,0.050750383,Pinnacle Sports,Best Betting,21,0.065758043,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Evans,Daniel,Del Potro,Juan-Martin,3,105,Away Win,0.935760786,Marathonbet.co.uk,Best Betting,1.11,0.038694472,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Lopez,Feliciano,Benneteau,Julien,69,76,Away Win,0.512610963,Stan James,Best Betting,15,6.689164445,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Zemlja,Grega,Berdych,Tomas,39,112,Home Win,0.244879017,Marathonbet.co.uk,Best Betting,12,1.938548204,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Becker,Benjamin,Dolgopolov,Alexandr,39,79,Home Win,0.776410447,Stan James,Best Betting,2.1,0.630461939,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Querrey,Sam,Hewitt,Lleyton,87,44,Away Win,0.751755921,Ladbrokes,Best Betting,1.91,0.435853809,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,13/06/2013,Kudla,Denis,De Schepper,Kenny,12,12,Away Win,0.594821204,Marathonbet.co.uk,Best Betting,1.77,0.052833531,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,14/06/2013,Federer,Roger,Zverev,Mischa,110,7,Home Win,0.985690916,Paddy Power,Best Betting,1.02,0.005404734,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,14/06/2013,Mayer,Florian,Gasquet,Richard,68,100,Away Win,0.856270575,888sport,Best Betting,1.43,0.224466922,Away Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,14/06/2013,Haas,Tommy,Monfils,Gael,83,58,Home Win,0.671478987,Stan James,Best Betting,1.5,0.007218481,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,14/06/2013,Haas,Tommy,Monfils,Gael,83,58,Away Win,0.328521013,Marathonbet.co.uk,Best Betting,3.12,0.024985561,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,14/06/2013,Kohlschreiber,Philipp,Youzhny,Mikhail,92,82,Home Win,0.660453232,Pinnacle Sports,Best Betting,1.53,0.010493445,Away Win,2,0,Completed
+AEGON Championships,Grass,ATP,14/06/2013,Cilic,Marin,Berdych,Tomas,87,113,Home Win,0.537781976,Marathonbet.co.uk,Best Betting,3.65,0.962904212,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,14/06/2013,Hewitt,Lleyton,Del Potro,Juan-Martin,45,106,Home Win,0.594326728,Stan James,Best Betting,2.88,0.711660977,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,14/06/2013,Murray,Andy,Becker,Benjamin,100,40,Away Win,0.109220168,10Bet,Best Betting,12.5,0.3652521,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,14/06/2013,Tsonga,Jo-Wilfried,Kudla,Denis,110,13,Home Win,0.929059974,Coral,Best Betting,1.11,0.031256571,Home Win,2,0,Completed
+Gerry Weber Open ,Grass,ATP,15/06/2013,Federer,Roger,Haas,Tommy,111,84,Home Win,0.78345184,Marathonbet.co.uk,Best Betting,1.3,0.018487392,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,15/06/2013,Youzhny,Mikhail,Gasquet,Richard,83,101,Away Win,0.790038463,Marathonbet.co.uk,Best Betting,1.53,0.208758848,Home Win,2,0,Completed
+AEGON Championships,Grass,ATP,15/06/2013,Hewitt,Lleyton,Cilic,Marin,46,88,Home Win,0.615771031,Marathonbet.co.uk,Best Betting,2.32,0.428588792,Away Win,2,1,Completed
+AEGON Championships,Grass,ATP,15/06/2013,Murray,Andy,Tsonga,Jo-Wilfried,101,111,Away Win,0.351746784,Marathonbet.co.uk,Best Betting,3.25,0.143177048,Home Win,2,1,Completed
+Gerry Weber Open ,Grass,ATP,16/06/2013,Federer,Roger,Youzhny,Mikhail,112,84,Home Win,0.915129155,Paddy Power,Odds Checker Mobi,1.12,0.024944654,Home Win,2,1,Completed
+AEGON Championships,Grass,ATP,16/06/2013,Murray,Andy,Cilic,Marin,102,89,Away Win,0.325150774,Stan James,Odds Checker Mobi,5.5,0.788329257,Home Win,2,1,Completed
+UNICEF Open,Grass,ATP,16/06/2013,Brands,Daniel,Huta Galung,Jesse,38,4,Home Win,0.653682522,Pinnacle Sports,Best Betting,1.59,0.03935521,Home Win,2,0,Completed
+AEGON International,Grass,ATP,17/06/2013,Edmund,Kyle,De Schepper,Kenny,1,13,Away Win,0.876739972,Marathonbet.co.uk,Best Betting,1.2,0.052087966,Home Win,2,0,Completed
+AEGON International,Grass,ATP,17/06/2013,Verdasco,Fernando,Dolgopolov,Alexandr,72,80,Home Win,0.538885148,Marathonbet.co.uk,Best Betting,2.18,0.174769623,Home Win,2,1,Completed
+AEGON International,Grass,ATP,17/06/2013,Zemlja,Grega,Fognini,Fabio,40,76,Home Win,0.514918456,Marathonbet.co.uk,Best Betting,2.32,0.194610818,Away Win,2,1,Completed
+AEGON International,Grass,ATP,17/06/2013,Seppi,Andreas,Rufin,Guillaume,88,23,Home Win,0.791233588,Marathonbet.co.uk,Best Betting,1.63,0.289710748,Home Win,2,1,Completed
+AEGON International,Grass,ATP,17/06/2013,Harrison,Ryan,Mathieu,Paul-Henri,59,44,Away Win,0.639248361,Marathonbet.co.uk,Best Betting,2.18,0.393561427,Home Win,2,1,Completed
+AEGON International,Grass,ATP,17/06/2013,Ramos,Albert,Blake,James,84,30,Away Win,0.890361269,Marathonbet.co.uk,Best Betting,1.47,0.308831065,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Lorenzi,Paolo,de Bakker,Thiemo,51,8,Away Win,0.748334849,Stan James,Best Betting,1.44,0.077602183,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Isner,John,Donskoy,Evgeny,85,20,Home Win,0.938092015,Stan James,Best Betting,1.14,0.069424897,Away Win,2,1,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Hanescu,Victor,Garcia-Lopez,Guillermo,42,61,Home Win,0.44807152,Marathonbet.co.uk,Best Betting,2.38,0.066410218,Away Win,2,0,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Berlocq,Carlos,Baghdatis,Marcos,75,77,Home Win,0.435375796,Betfair,Best Betting,6.0065,1.729806241,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Kuznetsov,Andrey,Gimeno-Traver,Daniel,25,43,Away Win,0.45460952,Pinnacle Sports,Best Betting,3.28,0.491119226,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,17/06/2013,Bautista-Agut,Roberto,Bohli,Stephane,34,1,Away Win,0.609914793,Pinnacle Sports,Best Betting,1.7,0.036855148,Home Win,2,1,Completed
+AEGON International,Grass,ATP,18/06/2013,Tomic,Bernard,Ward,James,71,6,Away Win,0.395632581,Pinnacle Sports,Best Betting,3.18,0.258111608,Home Win,2,0,Completed
+AEGON International,Grass,ATP,18/06/2013,Nieminen,Jarkko,Lopez,Feliciano,88,71,Away Win,0.639047778,32Red bet,Best Betting,1.61,0.028866923,Away Win,2,0,Completed
+AEGON International,Grass,ATP,18/06/2013,Troicki,Viktor,Klizan,Martin,76,51,Away Win,0.319884683,Stan James,Best Betting,3.5,0.119596391,Away Win,2,0,Completed
+AEGON International,Grass,ATP,18/06/2013,Istomin,Denis,Dodig,Ivan,90,65,Home Win,0.538445707,Bet 365,Best Betting,2,0.076891414,Away Win,2,0,Completed
+AEGON International,Grass,ATP,18/06/2013,Stepanek,Radek,Matosevic,Marinko,53,59,Home Win,0.713253153,Stan James,Best Betting,1.53,0.091277324,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Ferrer,David,Malisse,Xavier,131,67,Home Win,0.912363946,Coral,Best Betting,1.2,0.094836735,Away Win,2,0,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Hernych,Jan,Goffin,David,6,49,Home Win,0.768334583,Pinnacle Sports,Best Betting,1.85,0.421418979,Home Win,2,1,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Roger-Vasselin,Edouard,Lu,Yen-Hsun,61,46,Away Win,0.560063122,Marathonbet.co.uk,Best Betting,3.1,0.736195678,Away Win,2,0,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Mahut,Nicolas,Berankis,Ricardas,37,30,Away Win,0.534221246,Stan James,Best Betting,2.62,0.399659665,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Dutra Silva,Rogerio,Copil,Marius,10,8,Home Win,0.5,Marathonbet.co.uk,Best Betting,3.75,0.875,Away Win,2,1,Completed
+UNICEF Open,Grass,ATP,18/06/2013,Chardy,Jeremy,Pouille,Lucas,69,4,Away Win,0.283113141,32Red bet,Best Betting,3.9,0.10414125,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Donskoy,Evgeny,Haase,Robin,21,69,Home Win,0.605725163,32Red bet,Best Betting,2.65,0.605171682,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Lorenzi,Paolo,Wawrinka,Stanislas,52,92,Home Win,0.215579727,Betfair,Best Betting,6.7285,0.515525481,Away Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Hernych,Jan,Llodra,Michael,7,42,Home Win,0.417920316,Pinnacle Sports,Best Betting,4.36,0.822132578,Home Win,2,1,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Malisse,Xavier,Lu,Yen-Hsun,68,47,Home Win,0.788641147,Paddy Power,Best Betting,1.36,0.07255196,Home Win,2,1,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Mahut,Nicolas,Kuznetsov,Andrey,38,26,Home Win,0.81335908,Coral,Odds Checker Mobi,1.5,0.22003862,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Garcia-Lopez,Guillermo,Brands,Daniel,62,39,Home Win,0.491551991,Marathonbet.co.uk,Best Betting,2.26,0.1109075,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Chardy,Jeremy,Copil,Marius,70,9,Away Win,0.283113141,Stan James,Best Betting,3.75,0.061674279,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,19/06/2013,Bautista-Agut,Roberto,Berlocq,Carlos,35,76,Home Win,0.778160566,Marathonbet.co.uk,Best Betting,2.15,0.673045217,Home Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Raonic,Milos,Dodig,Ivan,88,66,Home Win,0.711216698,Pinnacle Sports,Best Betting,1.51,0.073937214,Away Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Edmund,Kyle,Simon,Gilles,2,104,Home Win,0.176411786,Boylesports,Best Betting,6.5,0.146676609,Away Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Monaco,Juan,Lopez,Feliciano,76,72,Home Win,0.538744724,Marathonbet.co.uk,Best Betting,3.5,0.885606534,Away Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Stepanek,Radek,Kohlschreiber,Philipp,54,93,Away Win,0.563897994,Sporting Bet,Best Betting,1.85,0.043211289,Home Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Ramos,Albert,Verdasco,Fernando,85,73,Home Win,0.38406959,Stan James,Best Betting,3,0.15220877,Away Win,2,0,Completed
+AEGON International,Grass,ATP,19/06/2013,Seppi,Andreas,Harrison,Ryan,89,60,Home Win,0.698122329,Stan James,Best Betting,1.67,0.165864289,Home Win,2,1,Completed
+AEGON International,Grass,ATP,19/06/2013,Benneteau,Julien,Tomic,Bernard,78,72,Home Win,0.637993987,32Red bet,Best Betting,1.81,0.154769116,Away Win,2,1,Completed
+AEGON International,Grass,ATP,19/06/2013,Klizan,Martin,Fognini,Fabio,52,77,Away Win,0.605114015,Sporting Bet,Odds Checker Mobi,1.98,0.19812575,Away Win,2,1,Completed
+AEGON International,Grass,ATP,20/06/2013,Lopez,Feliciano,Verdasco,Fernando,73,74,Away Win,0.538124083,Stan James,Best Betting,2.5,0.345310208,Home Win,2,0,Completed
+AEGON International,Grass,ATP,20/06/2013,Tomic,Bernard,Simon,Gilles,73,105,Away Win,0.711697155,Pinnacle Sports,Best Betting,2.22,0.579967684,Away Win,2,0,Completed
+AEGON International,Grass,ATP,20/06/2013,Dodig,Ivan,Fognini,Fabio,67,78,Away Win,0.5,Paddy Power,Best Betting,2.5,0.25,Home Win,2,0,Completed
+AEGON International,Grass,ATP,20/06/2013,Seppi,Andreas,Stepanek,Radek,90,55,Home Win,0.383721167,Marathonbet.co.uk,Best Betting,2.72,0.043721574,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,20/06/2013,Chardy,Jeremy,Wawrinka,Stanislas,71,93,Home Win,0.373974504,Marathonbet.co.uk,Best Betting,3.05,0.140622237,Away Win,2,0,Completed
+UNICEF Open,Grass,ATP,20/06/2013,Malisse,Xavier,Bautista-Agut,Roberto,69,36,Home Win,0.824079324,Pinnacle Sports,Best Betting,1.31,0.079543914,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,20/06/2013,Garcia-Lopez,Guillermo,Hernych,Jan,63,8,Away Win,0.555792616,Marathonbet.co.uk,Best Betting,2.4,0.333902278,Home Win,2,0,Completed
+UNICEF Open,Grass,ATP,20/06/2013,Donskoy,Evgeny,Mahut,Nicolas,22,39,Home Win,0.524902185,Marathonbet.co.uk,Best Betting,3.25,0.705932101,Away Win,2,0,Completed
+AEGON International,Grass,ATP,22/06/2013,Lopez,Feliciano,Simon,Gilles,75,107,Away Win,0.512980226,Boylesports,Odds Checker Mobi,2.25,0.154205509,Home Win,2,1,Completed
+UNICEF Open,Grass,ATP,22/06/2013,Mahut,Nicolas,Wawrinka,Stanislas,41,95,Home Win,0.597233825,Bet 365,Odds Checker Mobi,3.5,1.090318388,Home Win,2,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Hanescu,Victor,Federer,Roger,43,113,Home Win,0.013983195,BETDAQ,Best Betting,75.86,0.115858961,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Hanescu,Victor,Federer,Roger,43,113,Away Win,0.986016804,Paddy Power,Best Betting,1.02,0.00573714,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Becker,Benjamin,Murray,Andy,41,103,Home Win,0.099275293,Betfair,Best Betting,37.955,2.961084191,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Nadal,Rafael,Darcis,Steve,93,43,Away Win,0.097325294,Betfair,Best Betting,45.175,3.622951465,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Hewitt,Lleyton,Wawrinka,Stanislas,47,96,Home Win,0.901845605,Boylesports,Best Betting,2.3,1.074244892,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Baghdatis,Marcos,Cilic,Marin,78,90,Away Win,0.896006709,Bet Victor,Odds Checker Mobi,1.22,0.093128185,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Tsonga,Jo-Wilfried,Goffin,David,112,50,Away Win,0.064248977,Betfair,Best Betting,18.1,0.220730563,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Edmund,Kyle,Janowicz,Jerzy,3,36,Home Win,0.258287379,32Red bet,Best Betting,5.3,0.368923109,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Tipsarevic,Janko,Troicki,Viktor,103,77,Home Win,0.702651932,Pinnacle Sports,Best Betting,1.44,0.011818782,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Fognini,Fabio,Melzer,Jurgen,79,70,Away Win,0.386526916,Marathonbet.co.uk,Best Betting,3.1,0.19823344,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Ward,James,Lu,Yen-Hsun,7,48,Home Win,0.343104852,Boylesports,Best Betting,3.12,0.070487138,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Haase,Robin,Youzhny,Mikhail,70,85,Home Win,0.175187667,Marathonbet.co.uk,Best Betting,7.1,0.243832436,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Almagro,Nicolas,Zopp,Jurgen,113,19,Away Win,0.15571239,Marathonbet.co.uk,Best Betting,14,1.17997346,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Lacko,Lukas,Ram,Rajeev,44,21,Away Win,0.614221694,Marathonbet.co.uk,Best Betting,1.85,0.136310134,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Andujar,Pablo,Mannarino,Adrian,77,12,Away Win,0.959175346,Stan James,Best Betting,1.29,0.237336196,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Mahut,Nicolas,Hajek,Jan,42,25,Away Win,0.08826636,Marathonbet.co.uk,Best Betting,12,0.05919632,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Robert,Stephane,Falla,Alejandro,3,58,Away Win,0.645434705,Marathonbet.co.uk,Best Betting,2.38,0.536134598,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Kubot,Lukasz,Andreev,Igor,62,27,Away Win,0.462090843,Stan James,Best Betting,7,2.234635901,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Roger-Vasselin,Edouard,Gulbis,Ernests,62,56,Home Win,0.222153927,Marathonbet.co.uk,Best Betting,4.8,0.06633885,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Roger-Vasselin,Edouard,Gulbis,Ernests,62,56,Away Win,0.777846073,BetVictor,Best Betting,1.29,0.003421434,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Gicquel,Marc,Pospisil,Vasek,4,21,Home Win,0.819152829,Marathonbet.co.uk,Best Betting,2.3,0.884051507,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Brown,Dustin,Garcia-Lopez,Guillermo,10,65,Away Win,0.830901287,Pinnacle Sports,Best Betting,1.56,0.296206008,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Dutra Silva,Rogerio,Stakhovsky,Sergiy,11,55,Home Win,0.282788213,Pinnacle Sports,Best Betting,6.52,0.843779149,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Kuznetsov,Andrey,Montanes,Albert,27,45,Away Win,0.685614566,Marathonbet.co.uk,Best Betting,3.1,1.125405155,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Ungur,Adrian,Paire,Benoit,16,91,Home Win,0.102126012,Marathonbet.co.uk,Best Betting,10.5,0.072323126,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Monaco,Juan,Knittel,Bastian,77,0,Away Win,0.321108601,Marathonbet.co.uk,Best Betting,4.4,0.412877844,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Kamke,Tobias,Benneteau,Julien,48,79,Home Win,0.422284473,Boylesports,Best Betting,4.1,0.731366339,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Verdasco,Fernando,Malisse,Xavier,75,71,Home Win,0.579859676,Boylesports,Best Betting,2.05,0.188712336,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Robredo,Tommy,Bogomolov Jr.,Alex,45,41,Away Win,0.38380187,Marathonbet.co.uk,Best Betting,3.95,0.516017387,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Matosevic,Marinko,Rufin,Guillaume,60,24,Home Win,0.712443077,Bet Victor,Odds Checker Mobi,1.83,0.303770831,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Stepanek,Radek,Reid,Matt,56,0,Home Win,0.889606586,Marathonbet.co.uk,Best Betting,1.15,0.023047574,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Stepanek,Radek,Reid,Matt,56,0,Away Win,0.110393413,Betfair,Best Betting,8.8945,0.027762675,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,Reister,Julian,Rosol,Lukas,8,60,Away Win,0.899583915,Marathonbet.co.uk,Best Betting,1.55,0.394355068,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,24/06/2013,De Schepper,Kenny,Lorenzi,Paolo,14,53,Home Win,0.698679869,Marathonbet.co.uk,Best Betting,1.62,0.131861388,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Djokovic,Novak,Mayer,Florian,121,69,Home Win,0.991856918,Stan James,Best Betting,1.03,0.021612626,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Ramos,Albert,Del Potro,Juan-Martin,86,107,Home Win,0.158688776,32Red bet,Best Betting,15.5,1.459676028,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Tursunov,Dmitry,Haas,Tommy,29,85,Home Win,0.221274705,32Red bet,Best Betting,9,0.991472345,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Gasquet,Richard,Granollers,Marcel,102,67,Away Win,0.07811868,Betfair,Best Betting,12.23375,0.001872071,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Tomic,Bernard,Querrey,Sam,74,88,Away Win,0.731092578,Stan James,Best Betting,1.8,0.31596664,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Simon,Gilles,Lopez,Feliciano,108,76,Home Win,0.451785252,32Red bet,Best Betting,2.31,0.043623932,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Harrison,Ryan,Chardy,Jeremy,61,72,Away Win,0.724426219,Stan James,Best Betting,1.73,0.253257359,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Raonic,Milos,Berlocq,Carlos,89,77,Away Win,0.20313266,Marathonbet.co.uk,Best Betting,6.7,0.360988822,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Dimitrov,Grigor,Bolelli,Simone,74,29,Away Win,0.596213776,888sport,Best Betting,18,9.731847968,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Istomin,Denis,Seppi,Andreas,91,92,Home Win,0.405077902,Stan James,Best Betting,2.88,0.166624358,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Reynolds,Bobby,Johnson,Steve,14,16,Away Win,0.740848913,Marathonbet.co.uk,Best Betting,1.64,0.214992217,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Duckworth,James,Kudla,Denis,9,14,Away Win,0.691223996,Pinnacle Sports,Best Betting,1.45,0.002274794,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Berankis,Ricardas,Mathieu,Paul-Henri,31,45,Away Win,0.491306754,Marathonbet.co.uk,Best Betting,2.42,0.188962345,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Mayer,Leonardo,Bedene,Aljaz,40,29,Away Win,0.792462537,32Red bet,Best Betting,1.63,0.291713935,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Zeballos,Horacio,Giraldo,Santiago,33,60,Away Win,0.728663611,888sport,Best Betting,1.45,0.056562236,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Brands,Daniel,Gimeno-Traver,Daniel,40,44,Home Win,0.858943178,Bodog,Best Betting,1.24,0.065089541,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Kavcic,Blaz,Struff,Jan-Lennard,35,3,Home Win,0.339873016,Sporting Bet,Odds Checker Mobi,3.2,0.087593651,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Kuznetsov,Alex,Sijsling,Igor,3,43,Away Win,0.823518973,Stan James,Odds Checker Mobi,1.25,0.029398716,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Odesnik,Wayne,Wang,Jimmy,14,6,Away Win,0.92847381,Stan James,Best Betting,1.62,0.504127572,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Zemlja,Grega,Russell,Michael,41,33,Home Win,0.799430872,Ladbrokes,Best Betting,1.4,0.119203221,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Anderson,Kevin,Rochus,Olivier,92,37,Away Win,0.71869544,888sport,Best Betting,6.5,3.67152036,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Llodra,Michael,Nieminen,Jarkko,43,89,Home Win,0.676767192,Paddy Power,Best Betting,1.62,0.096362851,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Nishikori,Kei,Ebden,Matthew,84,46,Away Win,0.375528316,Marathonbet.co.uk,Best Betting,5.9,1.215617064,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Haider-Maurer,Andreas,Soeda,Go,4,41,Away Win,0.705483232,Sporting Bet,Best Betting,1.48,0.044115183,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Blake,James,de Bakker,Thiemo,31,9,Home Win,0.686015099,Pinnacle Sports,Best Betting,1.72,0.17994597,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Elias,Gastao,Dolgopolov,Alexandr,5,81,Home Win,0.269771504,888sport,Odds Checker Mobi,11,1.967486544,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Petzschner,Philipp,Przysiezny,Michal,32,2,Home Win,0.894329942,888sport,Best Betting,2.33,1.083788765,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,25/06/2013,Bautista-Agut,Roberto,Gabashvili,Teymuraz,37,5,Home Win,0.747069422,Pinnacle Sports,Best Betting,1.7,0.270018017,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Stakhovsky,Sergiy,Federer,Roger,56,114,Away Win,0.999679068,Paddy Power,Best Betting,1.01,0.009675859,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Verdasco,Fernando,Benneteau,Julien,76,80,Home Win,0.595805295,Marathonbet.co.uk,Best Betting,2.02,0.203526696,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Lu,Yen-Hsun,Murray,Andy,49,104,Home Win,0.041937601,Betfair,Best Betting,43.37,0.912354606,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Brown,Dustin,Hewitt,Lleyton,11,48,Away Win,0.945867913,Marathonbet.co.uk,Best Betting,1.17,0.106665458,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Almagro,Nicolas,Rufin,Guillaume,114,25,Away Win,0.28984004,Pinnacle Sports,Best Betting,6.34,0.837585854,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Robredo,Tommy,Mahut,Nicolas,46,43,Home Win,0.337934602,Marathonbet.co.uk,Best Betting,3.05,0.030700536,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Pospisil,Vasek,Youzhny,Mikhail,22,86,Away Win,0.930539639,Marathonbet.co.uk,Best Betting,1.17,0.088731378,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Monaco,Juan,Ram,Rajeev,78,22,Away Win,0.672092242,Marathonbet.co.uk,Best Betting,3.75,1.520345908,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Troicki,Viktor,Kuznetsov,Andrey,78,28,Home Win,0.786897557,Sporting Bet,Best Betting,1.44,0.133132482,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,26/06/2013,Melzer,Jurgen,Reister,Julian,71,9,Home Win,0.736222013,Paddy Power,Best Betting,1.57,0.15586856,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Levine,Jesse,Del Potro,Juan-Martin,37,108,Home Win,0.110150551,Betfair,Best Betting,19.0025,1.197503492,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Djokovic,Novak,Reynolds,Bobby,122,15,Away Win,0.028755966,Betfair,Best Betting,43.37,0.31127205,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Gasquet,Richard,Soeda,Go,103,42,Away Win,0.091409463,Matchbook.com,Best Betting,18.55125,0.780199292,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Brands,Daniel,Berdych,Tomas,41,115,Home Win,0.168819531,Marathonbet.co.uk,Best Betting,13,1.194653903,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Nishikori,Kei,Mayer,Leonardo,85,41,Away Win,0.133686435,Betfair,Best Betting,9.075,0.270021133,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Blake,James,Tomic,Bernard,32,75,Home Win,0.511826326,32Red bet,Best Betting,2.72,0.392167607,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Raonic,Milos,Sijsling,Igor,90,44,Away Win,0.477278655,Ladbrokes,Best Betting,3,0.431835965,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Anderson,Kevin,Przysiezny,Michal,93,3,Away Win,0.396701191,Stan James,Best Betting,7.5,1.975258933,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,27/06/2013,Kudla,Denis,Dodig,Ivan,15,70,Home Win,0.395072473,Marathonbet.co.uk,Best Betting,3.15,0.24447829,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Almagro,Nicolas,Janowicz,Jerzy,115,38,Home Win,0.527744462,Marathonbet.co.uk,Best Betting,2.22,0.171592706,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Robredo,Tommy,Murray,Andy,47,105,Away Win,0.961473155,32Red bet,Best Betting,1.05,0.009546813,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Ferrer,David,Bautista-Agut,Roberto,133,38,Away Win,0.197469597,Spreadex,Best Betting,7.5,0.481021978,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Melzer,Jurgen,Stakhovsky,Sergiy,72,57,Home Win,0.641327703,Marathonbet.co.uk,Best Betting,2.12,0.35961473,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Wang,Jimmy,Haas,Tommy,7,86,Home Win,0.094787545,32Red bet,Best Betting,15.5,0.469206948,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,28/06/2013,Mannarino,Adrian,Brown,Dustin,13,12,Home Win,0.549572708,Betway,Odds Checker Mobi,2.4,0.318974499,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Gasquet,Richard,Tomic,Bernard,104,76,Home Win,0.93626933,Sporting Bet,Best Betting,1.44,0.348227835,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Djokovic,Novak,Chardy,Jeremy,123,74,Home Win,0.95239979,Marathonbet.co.uk,Best Betting,1.05,1.98E-05,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Djokovic,Novak,Chardy,Jeremy,123,74,Away Win,0.04760021,Betfair,Best Betting,22.6125,0.130504988,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Anderson,Kevin,Berdych,Tomas,94,116,Home Win,0.238412509,Marathonbet.co.uk,Best Betting,5.5,0.3112688,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Ferrer,David,Dolgopolov,Alexandr,134,83,Home Win,0.903287863,Marathonbet.co.uk,Best Betting,1.36,0.228471494,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Troicki,Viktor,Youzhny,Mikhail,79,87,Home Win,0.435000085,Pinnacle Sports,Best Betting,2.37,0.030950201,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Lopez,Feliciano,Haas,Tommy,78,87,Away Win,0.792582001,Marathonbet.co.uk,Best Betting,1.52,0.204724642,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Gulbis,Ernests,Verdasco,Fernando,57,77,Home Win,0.594922097,Stan James,Best Betting,1.73,0.029215228,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Gulbis,Ernests,Verdasco,Fernando,57,77,Away Win,0.405077903,Marathonbet.co.uk,Best Betting,2.52,0.020796316,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Zemlja,Grega,Del Potro,Juan-Martin,43,109,Home Win,0.248219537,Betfair,Best Betting,9.075,1.358085602,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,29/06/2013,Kubot,Lukasz,Paire,Benoit,64,92,Home Win,0.353627492,Stan James,Best Betting,3.75,0.326103095,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Youzhny,Mikhail,Murray,Andy,88,106,Home Win,0.084344221,Boylesports,Best Betting,13,0.096474873,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Djokovic,Novak,Haas,Tommy,124,88,Away Win,0.133163115,Boylesports,Best Betting,10,0.33163115,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Seppi,Andreas,Del Potro,Juan-Martin,95,110,Away Win,0.810882307,Pinnacle Sports,Best Betting,1.28,0.037929353,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Tomic,Bernard,Berdych,Tomas,77,117,Away Win,0.911891691,Marathonbet.co.uk,Best Betting,1.45,0.322242952,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Ferrer,David,Dodig,Ivan,135,72,Home Win,0.853682948,32Red bet,Best Betting,1.34,0.14393515,Home Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Verdasco,Fernando,De Schepper,Kenny,78,17,Away Win,0.33701135,Pinnacle Sports,Best Betting,5.01,0.688426864,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,1/07/2013,Janowicz,Jerzy,Melzer,Jurgen,39,73,Away Win,0.54443505,Marathonbet.co.uk,Best Betting,4.4,1.39551422,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,3/07/2013,Ferrer,David,Del Potro,Juan-Martin,136,111,Home Win,0.67179171,Boylesports,Best Betting,1.73,0.162199658,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,3/07/2013,Verdasco,Fernando,Murray,Andy,79,107,Home Win,0.211485067,Marathonbet.co.uk,Best Betting,13,1.749305871,Away Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,3/07/2013,Djokovic,Novak,Berdych,Tomas,125,118,Home Win,0.917969124,Marathonbet.co.uk,Best Betting,1.14,0.046484801,Home Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,3/07/2013,Kubot,Lukasz,Janowicz,Jerzy,66,40,Home Win,0.534775858,Marathonbet.co.uk,Best Betting,5.5,1.941267219,Away Win,3,0,Completed
+Wimbledon,Grass,Grand Slam,5/07/2013,Djokovic,Novak,Del Potro,Juan-Martin,126,112,Home Win,0.911181623,Paddy Power,Best Betting,1.17,0.066082499,Home Win,3,2,Completed
+Wimbledon,Grass,Grand Slam,5/07/2013,Janowicz,Jerzy,Murray,Andy,41,108,Away Win,0.936924246,Paddy Power,Best Betting,1.22,0.14304758,Away Win,3,1,Completed
+Wimbledon,Grass,Grand Slam,7/07/2013,Djokovic,Novak,Murray,Andy,127,109,Home Win,0.726761301,Paddy Power,Odds Checker Mobi,1.62,0.177353308,Away Win,3,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Hajek,Jan,Garcia-Lopez,Guillermo,26,64,Home Win,0.467810462,Marathonbet.co.uk,Best Betting,2.46,0.150813737,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Souza,Joao,Troicki,Viktor,17,77,Away Win,0.810569427,Stan James,Best Betting,1.33,0.078057338,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Verdasco,Fernando,Vinciguerra,Andreas,80,0,Away Win,0.283373747,Betfair,Odds Checker Mobi,9.52625,1.826653126,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Struff,Jan-Lennard,Stakhovsky,Sergiy,5,57,Away Win,0.554922632,Pinnacle Sports,Best Betting,2.02,0.120943717,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Ramos,Albert,Reister,Julian,85,10,Away Win,0.492611442,Sporting Bet,Best Betting,2.6,0.280789749,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Schwartzman,Diego-Sebastian,de Bakker,Thiemo,4,9,Away Win,0.846635995,Paddy Power,Best Betting,2.1,0.77793559,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Volandri,Filippo,Zopp,Jurgen,43,20,Away Win,0.352665711,Stan James,Best Betting,2.88,0.015677248,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Copil,Marius,Kavcic,Blaz,10,35,Away Win,0.695166792,Paddy Power,Best Betting,2.1,0.459850263,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,9/07/2013,Laaksonen,Henri,Veic,Antonio,4,10,Away Win,0.592048339,Stan James,Best Betting,1.9,0.124891844,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Mathieu,Paul-Henri,Monfils,Gael,47,54,Away Win,0.814731413,Paddy Power,Best Betting,1.29,0.051003523,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,9/07/2013,Mayer,Florian,Beck,Andreas,69,6,Home Win,0.763829706,Stan James,Best Betting,1.33,0.015893509,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Langer,Nils,Kern,Robin,0,1,Home Win,0.8854364,888sport,Best Betting,1.45,0.28388278,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Munoz-De La Nava,Daniel,Davydenko,Nikolay,13,76,Away Win,0.841987974,William Hill,Best Betting,1.4,0.178783164,Away Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Mayer,Leonardo,Andujar,Pablo,42,77,Home Win,0.408147975,Marathonbet.co.uk,Best Betting,2.75,0.122406931,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Ward,Alexander,Fognini,Fabio,0,79,Away Win,0.927419088,Pinnacle Sports,Best Betting,1.18,0.094354524,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,9/07/2013,Granollers,Marcel,Gulbis,Ernests,68,58,Away Win,0.723447738,Pinnacle Sports,Best Betting,1.49,0.07793713,Away Win,2,1,Completed
+MercedesCup,Clay,ATP,9/07/2013,Hanescu,Victor,Tursunov,Dmitry,42,29,Home Win,0.714130036,Marathonbet.co.uk,Best Betting,1.52,0.085477655,Home Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Matosevic,Marinko,Sock,Jack,60,23,Home Win,0.681735007,Pinnacle Sports,Best Betting,2.18,0.486182315,Away Win,1,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Querrey,Sam,Smyczek,Tim,88,18,Home Win,0.857288973,Ladbrokes,Best Betting,1.22,0.045892547,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Ebden,Matthew,Hewitt,Lleyton,46,49,Away Win,0.877149107,Ladbrokes,Best Betting,1.36,0.192922786,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Mahut,Nicolas,Williams,Rhyne,43,12,Home Win,0.919178151,Ladbrokes,Best Betting,1.25,0.148972689,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Kudla,Denis,Pospisil,Vasek,16,22,Home Win,0.760784596,William Hill,Best Betting,1.91,0.453098578,Away Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Roger-Vasselin,Edouard,Karlovic,Ivo,61,37,Away Win,0.843378081,Marathonbet.co.uk,Best Betting,3.15,1.656640955,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Bossel,Adrien,Ram,Rajeev,0,23,Away Win,0.83138863,Paddy Power,Best Betting,1.5,0.247082945,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Kuznetsov,Alex,De Schepper,Kenny,4,18,Away Win,0.878876464,youwin,Odds Checker Mobi,1.45,0.274370873,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Sijsling,Igor,Viola,Matteo,46,8,Away Win,0.195068588,Pinnacle Sports,Best Betting,6.65,0.29720611,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Amritraj,Prakash,Cipolla,Flavio,2,48,Home Win,0.859546688,888sport,Best Betting,1.64,0.409656568,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Hernych,Jan,Pavic,Ante,9,0,Home Win,0.827930998,Stan James,Best Betting,1.29,0.068030987,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,9/07/2013,Russell,Michael,Marchenko,Illya,34,3,Away Win,0.567789576,Pinnacle Sports,Best Betting,2.18,0.237781276,Home Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,10/07/2013,Dimitrov,Grigor,Volandri,Filippo,77,44,Away Win,0.327182347,32Red bet,Best Betting,3.35,0.096060862,Home Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,10/07/2013,Robredo,Tommy,Ramos,Albert,48,86,Home Win,0.773321355,Pinnacle Sports,Best Betting,1.41,0.090383111,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,10/07/2013,Laaksonen,Henri,Monaco,Juan,5,80,Home Win,0.131584407,Betfair,Odds Checker Mobi,9.52625,0.31255446,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,10/07/2013,Kavcic,Blaz,Berlocq,Carlos,36,79,Home Win,0.362778505,Marathonbet.co.uk,Best Betting,4.33,0.570830927,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,10/07/2013,Bautista-Agut,Roberto,Klizan,Martin,39,55,Home Win,0.394166233,Bet Victor,Odds Checker Mobi,2.6,0.024832206,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,10/07/2013,Mayer,Florian,Monfils,Gael,70,55,Away Win,0.762436411,Pinnacle Sports,Best Betting,1.59,0.212273893,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Sock,Jack,Hernych,Jan,24,10,Away Win,0.7258004,Bet Victor,Odds Checker Mobi,2.3,0.66934092,Away Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Amritraj,Prakash,Hewitt,Lleyton,3,50,Away Win,0.913506932,Ladbrokes,Best Betting,1.14,0.041397902,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Mannarino,Adrian,Isner,John,16,89,Home Win,0.333429047,Pinnacle Sports,Best Betting,3.64,0.213681731,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Smyczek,Tim,Mahut,Nicolas,19,44,Home Win,0.287622479,Boylesports,Best Betting,3.6,0.035440924,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Karlovic,Ivo,Pospisil,Vasek,38,23,Home Win,0.886213068,Pinnacle Sports,Best Betting,2.04,0.807874659,Home Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Przysiezny,Michal,Ram,Rajeev,5,24,Away Win,0.719483874,Paddy Power,Best Betting,1.67,0.20153807,Home Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Sijsling,Igor,Sugita,Yuichi,47,3,Away Win,0.233068283,Pinnacle Sports,Best Betting,4.9,0.142034587,Home Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,10/07/2013,Russell,Michael,Kuznetsov,Alex,35,5,Home Win,0.634423811,Paddy Power,Odds Checker Mobi,1.62,0.027766574,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,11/07/2013,Berdych,Tomas,Alund,Martin,119,13,Away Win,0.082261149,Bet 365,Best Betting,15,0.233917235,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,11/07/2013,Garcia-Lopez,Guillermo,Almagro,Nicolas,65,114,Away Win,0.837402958,Marathonbet.co.uk,Best Betting,1.27,0.063501757,Away Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,11/07/2013,de Bakker,Thiemo,Troicki,Viktor,10,78,Home Win,0.358217705,Boylesports,Best Betting,4.33,0.551082663,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,11/07/2013,Davydenko,Nikolay,Paire,Benoit,77,92,Home Win,0.525729613,Stan James,Best Betting,2,0.051459226,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,11/07/2013,Haas,Tommy,Gulbis,Ernests,88,59,Away Win,0.439892363,Stan James,Best Betting,2.5,0.099730908,Home Win,2,1,Completed
+MercedesCup,Clay,ATP,11/07/2013,Mayer,Leonardo,Fognini,Fabio,43,80,Away Win,0.718929016,Pinnacle Sports,Best Betting,1.43,0.028068493,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,11/07/2013,Sijsling,Igor,Russell,Michael,48,35,Home Win,0.767669325,Pinnacle Sports,Best Betting,1.41,0.082413748,Away Win,2,1,Completed
+Hall of Fame Tennis Championships,Grass,ATP,11/07/2013,Mahut,Nicolas,Przysiezny,Michal,45,6,Away Win,0.27646582,Pinnacle Sports,Best Betting,5.12,0.415504998,Home Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,12/07/2013,Verdasco,Fernando,Almagro,Nicolas,82,115,Away Win,0.594663531,32Red bet,Best Betting,1.78,0.058501085,Home Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,12/07/2013,Berdych,Tomas,de Bakker,Thiemo,120,11,Away Win,0.195696489,BETDAQ,Best Betting,11.7825,1.416851639,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,12/07/2013,Ramos,Albert,Berlocq,Carlos,86,79,Away Win,0.5,Pinnacle Sports,Best Betting,2.09,0.045,Away Win,2,1,Completed
+MercedesCup,Clay,ATP,12/07/2013,Hanescu,Victor,Paire,Benoit,44,92,Home Win,0.509587241,Sporting Bet,Odds Checker Mobi,2.6,0.324926827,Home Win,2,0,Completed
+MercedesCup,Clay,ATP,12/07/2013,Haas,Tommy,Fognini,Fabio,89,80,Home Win,0.773327741,32Red bet,Best Betting,1.38,0.067192283,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,12/07/2013,Monfils,Gael,Kohlschreiber,Philipp,56,94,Away Win,0.416158193,Marathonbet.co.uk,Best Betting,3.05,0.269282489,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,12/07/2013,Karlovic,Ivo,Isner,John,39,90,Home Win,0.574312101,Pinnacle Sports,Best Betting,4.3,1.469542034,Away Win,2,0,Completed
+Hall of Fame Tennis Championships,Grass,ATP,12/07/2013,Hernych,Jan,Hewitt,Lleyton,11,50,Home Win,0.185223108,Boylesports,Best Betting,6.5,0.203950202,Away Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,13/07/2013,Dimitrov,Grigor,Verdasco,Fernando,79,82,Home Win,0.511962773,Ladbrokes,Best Betting,2.25,0.151916239,Away Win,2,1,Completed
+SkiStar Swedish Open,Clay,ATP,13/07/2013,de Bakker,Thiemo,Berlocq,Carlos,12,79,Home Win,0.492955376,Marathonbet.co.uk,Best Betting,2.95,0.454218359,Away Win,2,0,Completed
+MercedesCup,Clay,ATP,13/07/2013,Fognini,Fabio,Bautista-Agut,Roberto,80,41,Away Win,0.268470896,Marathonbet.co.uk,Best Betting,3.75,0.00676586,Home Win,2,0,Completed
+MercedesCup,Clay,ATP,13/07/2013,Hanescu,Victor,Kohlschreiber,Philipp,45,94,Home Win,0.374978077,Marathonbet.co.uk,Best Betting,3.75,0.406167789,Away Win,2,0,Completed
+SkiStar Swedish Open,Clay,ATP,14/07/2013,Berlocq,Carlos,Verdasco,Fernando,80,82,Home Win,0.331197397,Bet 365,Odds Checker Mobi,3.75,0.241990239,Home Win,2,0,Completed
+MercedesCup,Clay,ATP,14/07/2013,Fognini,Fabio,Kohlschreiber,Philipp,81,94,Away Win,0.61040669,Bet Victor,Odds Checker Mobi,1.67,0.019379172,Home Win,2,1,Completed

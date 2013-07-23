@@ -1,10 +1,60 @@
 ﻿<section>
-  <h2 class="page-title" data-bind="text: title"></h2>
-  <section id="performance">
-    <div id="data-table">
-      <div class="header">
-        <span></span>
-      </div>
+  <h1 id="outcome" class="text-center">Crunching the numbers, please be patient...</h1>
+  <div class="row">
+    <div id="daily-bubble-chart" class="chart">
+      <strong>Daily bet performance</strong> (x: date, y: flat profit, radius: bet size)
+      <a class="reset" href="javascript:dailyBubbleChart.filterAll();dc.redrawAll('group');" style="display:none;">reset</a>
+      <div class="clearfix"></div>
     </div>
-  </section>
+  </div>
+  <div class="row">
+    <div id="profit-or-loss-chart">
+      <strong>Bets by profit/loss</strong>
+      <a class="reset" href="javascript:profitOrLossChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+            
+      <div class="clearfix"></div>
+    </div>
+    <div id="bets-by-surface-chart">
+      <strong>Bets by surface</strong>
+      <a class="reset" href="javascript:betsBySurfaceChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+                    
+      <div class="clearfix"></div>
+    </div>
+    <div id="bets-by-series-chart">
+      <strong>Bets by series</strong>
+      <a class="reset" href="javascript:betsBySeriesChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+                    
+      <div class="clearfix"></div>
+    </div>
+    <div id="edge-chart">
+      <strong>Bets by edge</strong>
+      <a class="reset" href="javascript:edgeChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+    
+      <div class="clearfix"></div>
+    </div>
+    <div id="games-played-chart">
+      <strong>Bets by min games played over 18 months</strong>
+      <a class="reset" href="javascript:gamesPlayedChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+    
+      <div class="clearfix"></div>
+    </div>            
+  </div>
+  <div class="row">
+    <table class="table table-hover dc-data-table">
+      <thead>
+        <tr class="header">
+          <th>Date</th>
+          <th>Match</th>
+          <th>Probability</th>
+          <th>Odds</th>
+          <th>Bookmaker</th>
+          <th>Edge</th>
+          <th>Stake</th>
+          <th>Outcome</th>
+          <th>Profit</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
 </section>

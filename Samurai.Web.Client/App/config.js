@@ -47,6 +47,7 @@
   var minEdgeTennis = 0.2;
   var kellyMultiplier = 0.25;
   var exhaustiveKellyLimit = 7;
+  var startBank = 1000;
 
   return {
     routes: routes,
@@ -58,7 +59,8 @@
     minTennisGames: minTennisGames,
     minEdgeTennis: minEdgeTennis,
     kellyMultiplier: kellyMultiplier,
-    exhaustiveKellyLimit: exhaustiveKellyLimit
+    exhaustiveKellyLimit: exhaustiveKellyLimit,
+    startBank: startBank
   };
 
 });

@@ -9,7 +9,7 @@ using Infrastructure.Data;
 using Samurai.Domain.Entities;
 using Samurai.SqlDataAccess.Contracts;
 
-namespace Samurai.SqlDataAccess.Procedures
+namespace Samurai.SqlDataAccess.LinqProcedures
 {
   public partial class SqlStoredProceduresRepository : GenericRepository, IStoredProceduresRepository
   {

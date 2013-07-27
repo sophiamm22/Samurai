@@ -70,6 +70,7 @@
     <Compile Include="Mapping\MissingTeamPlayerExternalSourceAliasMap.cs" />
     <Compile Include="Mapping\MissingTournamentCouponURLMap.cs" />
     <Compile Include="Mapping\OutcomeCommentMap.cs" />
+    <Compile Include="Mapping\SurfaceMap.cs" />
     <Compile Include="Mapping\TennisPredictionStatMap.cs" />
     <Compile Include="Mapping\TournamentCouponURLMap.cs" />
     <Compile Include="Mapping\CompetitionMap.cs" />
@@ -110,10 +111,10 @@
       <DependentUpon>201307110359426_stuffedupagain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Procedures\GetGenericMatchDetails.cs" />
-    <Compile Include="Procedures\GetOddsForEvent.cs" />
-    <Compile Include="Procedures\GetOutcomeProbabilitiesForSport.cs" />
-    <Compile Include="Procedures\SqlStoredProceduresRepository.cs" />
+    <Compile Include="LinqProcedures\GetGenericMatchDetails.cs" />
+    <Compile Include="LinqProcedures\GetOddsForEvent.cs" />
+    <Compile Include="LinqProcedures\GetOutcomeProbabilitiesForSport.cs" />
+    <Compile Include="LinqProcedures\SqlStoredProceduresRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeedData.cs" />
     <Compile Include="SqlBookmakerRepository.cs" />
@@ -121,6 +122,9 @@
     <Compile Include="SqlFundRepository.cs" />
     <Compile Include="SqlMVCMembershipRepository.cs" />
     <Compile Include="SqlPredictionRepository.cs" />
+    <Compile Include="SQLProcedures\DaysBestOddsForSport.cs" />
+    <Compile Include="SQLProcedures\DaysFootballPredictions.cs" />
+    <Compile Include="SQLProcedures\DaysTennisPredictions.cs" />
     <Compile Include="ValueSamuraiContext.cs" />
   </ItemGroup>
   <ItemGroup>

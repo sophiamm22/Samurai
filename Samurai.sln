@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DB573A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Samurai.Database", "Samurai.Database\Samurai.Database.sqlproj", "{73DFCEBE-769B-4000-B80F-16B1598659C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,12 @@ Global
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

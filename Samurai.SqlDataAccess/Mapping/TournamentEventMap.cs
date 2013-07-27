@@ -17,11 +17,15 @@ namespace Samurai.SqlDataAccess.Mapping
       this.ToTable("TournamentEvents");
       this.Property(t => t.Id).HasColumnName("TournamentEventID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
       this.Property(t => t.TournamentID).HasColumnName("TournamentID_fk");
+      this.Property(t => t.SurfaceID).HasColumnName("SurfaceID_fk");
 
       //Relationships
       this.HasRequired(t => t.Tournament)
           .WithMany(t => t.TournamentEvents)
           .HasForeignKey(d => d.TournamentID);
+      this.HasOptional(t => t.Surface)
+          .WithMany(t => t.TournamentEvents)
+          .HasForeignKey(t => t.SurfaceID);
     }
   }
 }

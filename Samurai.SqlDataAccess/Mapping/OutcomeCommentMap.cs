@@ -13,7 +13,7 @@ namespace Samurai.SqlDataAccess.Mapping
       this.ToTable("OutcomeComments");
       this.Property(t => t.Id).HasColumnName("OutcomeCommentID_pk").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-      this.Property(t => t.Comment).IsRequired();
+      //this.Property(t => t.Comment).IsRequired(); //causing all sorts of havoc with automatic migrations. Come back to this
       
     }
   }

@@ -113,23 +113,14 @@ namespace Samurai.Sandbox
       }
       try
       {
-        var dates = 
-          Enumerable.Range(0, 200)
-                    .Select(x => (new DateTime(2013, 01, 21)).AddDays(x))
-                    .ToList();
+        var fixtures = tennisService.FetchTennisResults(date);
 
-        foreach (var dateFor in dates)
+        foreach (var fixture in fixtures)
         {
-          var fixtures = tennisService.FetchTennisResults(dateFor);
-
-          foreach (var fixture in fixtures)
-          {
-            ProgressReporterProvider.Current.ReportProgress(
-              string.Format("Picked up {0} vs. {1} on {2}", fixture.PlayerAFirstName, fixture.PlayerBFirstName, date.ToShortDateString()),
-              ReporterImportance.Medium,
-              ReporterAudience.Admin);
-          }
-
+          ProgressReporterProvider.Current.ReportProgress(
+            string.Format("Picked up {0} vs. {1} on {2}", fixture.PlayerAFirstName, fixture.PlayerBFirstName, date.ToShortDateString()),
+            ReporterImportance.Medium,
+            ReporterAudience.Admin);
         }
       }
       catch (Exception ex)

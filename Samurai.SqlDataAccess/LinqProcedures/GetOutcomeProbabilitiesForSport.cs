@@ -8,7 +8,7 @@ using System.Data.Objects;
 using Samurai.Domain.Entities;
 using Samurai.Domain.Entities.ComplexTypes;
 
-namespace Samurai.SqlDataAccess.Procedures
+namespace Samurai.SqlDataAccess.LinqProcedures
 {
   public partial class SqlStoredProceduresRepository
   {

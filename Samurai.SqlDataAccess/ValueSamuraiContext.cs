@@ -43,6 +43,7 @@ namespace Samurai.SqlDataAccess
     public DbSet<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }
     public DbSet<ScoreOutcome> ScoreOutcomes { get; set; }
     public DbSet<Sport> Sports { get; set; }
+    public DbSet<Surface> Surfaces { get; set; }
     public DbSet<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public DbSet<TeamPlayer> TeamsPlayers { get; set; }
     public DbSet<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
@@ -73,6 +74,7 @@ namespace Samurai.SqlDataAccess
       modelBuilder.Configurations.Add(new ScoreOutcomeProbabilitiesInMatchMap());
       modelBuilder.Configurations.Add(new ScoreOutcomeMap());
       modelBuilder.Configurations.Add(new SportMap());
+      modelBuilder.Configurations.Add(new SurfaceMap());
       modelBuilder.Configurations.Add(new TeamPlayerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new TeamsPlayerMap());
       modelBuilder.Configurations.Add(new TournamentExternalSourceAliasMap());

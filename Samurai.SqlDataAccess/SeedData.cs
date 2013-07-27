@@ -21,6 +21,7 @@ namespace Samurai.SqlDataAccess
     public IDictionary<string, MatchOutcome> MatchOutcome { get; set; }
     public IDictionary<string, ScoreOutcome> ScoreOutcome { get; set; }
     public IDictionary<string, TeamPlayer> TeamsPlayer { get; set; }
+    public IDictionary<string, Surface> Surface { get; set; }
     public IEnumerable<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public IDictionary<string, KeyValuePair> KeyValuePair { get; set; }
     public IEnumerable<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
@@ -109,12 +110,19 @@ namespace Samurai.SqlDataAccess
       var football = new Sport { SportName = "Football" };
       var tennis = new Sport { SportName = "Tennis" };
 
+      //surface
+      var hard = new Surface { SurfaceName = "Hard" };
+      var clay = new Surface { SurfaceName = "Clay" };
+      var grass = new Surface { SurfaceName = "Grass" };
+
       //competition
       var premierLeague = new Competition { Sport = football, CompetitionName = "Premier League", Slug = "premier-league", EdgeRequired = 0.1M };
       var championship = new Competition { Sport = football, CompetitionName = "Championship", Slug = "championship", EdgeRequired = 0.1M };
       var leagueOne = new Competition { Sport = football, CompetitionName = "League One", Slug = "league-one", EdgeRequired = 0.1M };
       var leagueTwo = new Competition { Sport = football, CompetitionName = "League Two", Slug = "league-two", EdgeRequired = 0.1M };
-      var atp = new Competition { Sport = tennis, CompetitionName = "ATP", Slug = "atp", EdgeRequired = 0.1M, GamesRequiredForBet = 70 };
+      var atp = new Competition { Sport = tennis, CompetitionName = "ATP", Slug = "atp", EdgeRequired = 0.2M, GamesRequiredForBet = 70 };
+      var masters = new Competition { Sport = tennis, CompetitionName = "Masters", Slug = "masters", EdgeRequired = 0.2M, GamesRequiredForBet = 70 };
+      var grandSlam = new Competition { Sport = tennis, CompetitionName = "Grand Slam", Slug = "grand-slam", EdgeRequired = 0.2M, GamesRequiredForBet = 70 };
 
       //tournament
       var t_premierLeague = new Tournament { Competition = premierLeague, TournamentName = "Premier League", Slug = "premier-league", Location = "England" };
@@ -609,7 +617,8 @@ namespace Samurai.SqlDataAccess
 
       Bookmakers = new Bookmaker[] { bexpekt, bbetway, bTennisDataBestAvailable, bOddsCheckerWebBestAvailable, bOddsCheckerMobiBestAvailable, bBestBettingBestAvailable, bFootballDataBestAvailable, bmarathonbet_co_uk, b10bet, b188bet, b32red_bet, b888sport, bbet_365, bbet_victor, bbet770, bbetdaq, bbetfair, bbetfred, bbetinternet, bbetvictor, bblue_square, bbodog, bboylesports, bbwin, bcoral, bcorbetts, bladbrokes, bmatchbook_com, bpaddy_power, bpanbet, bpinnacle_sports, bsky_bet, bsmarkets, bsporting_bet, bspreadex, bstan_james, btotesport, bwbx, bwilliam_hill, byouwin, bbet_win, bgamebookers, binterwetten, bstanleybet, bsporting_odds, bcome_on, bunibet };
       Sports = new Sport[] { football, tennis };
-      Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp };
+      Surfaces = new Surface[] { hard, clay, grass };
+      Competitions = new Competition[] { premierLeague, championship, leagueOne, leagueTwo, atp, masters, grandSlam };
       Tournaments = new Tournament[] { t_premierLeague, t_championship, t_leagueOne, t_leagueTwo, brisbane_international, aircel_chennai_open, qatar_exxonmobil_open, apia_international_sydney, heineken_open, australian_open, open_sud_de_france, pbz_zagreb_indoors, vtr_open, abn_amro_world_tennis_tournament, brasil_open_2012, sap_open, regions_morgan_keegan_championships, copa_claro, open_13, dubai_duty_free_tennis_championships, delray_beach_international_tennis_championships, abierto_mexicano_telcel, bnp_paribas_open, sony_ericsson_open, grand_prix_hassan_ii, us_mens_clay_court_championship, monte_carlo_rolex_masters, brd_nastase_tiriac_trophy, barcelona_open_banc_sabadell, bmw_open, serbia_open_2012, estoril_open, mutua_madrid_open, internazionali_bnl_ditalia, open_de_nice_cote_dazur, roland_garros, gerry_weber_open, aegon_championships, unicef_open, aegon_international, wimbledon, mercedescup, campbells_hall_of_fame_tennis_championships, skistar_swedish_open, atp_vegeta_croatia_open_umag, bet_at_home_open___german_tennis_championships_2012, bbt_atlanta_open, credit_agricole_suisse_open_gstaad, bet_at_home_cup_kitzbuhel, farmers_classic, legg_mason_tennis_classic, rogers_cup, western__southern_open, winston_salem_open, us_open, moselle_open, st_petersburg_open, ptt_thailand_open, malaysian_open_kuala_lumpur, china_open, rakuten_japan_open_tennis_championships, shanghai_rolex_masters, erste_bank_open, if_stockholm_open, kremlin_cup, valencia_open_500, swiss_indoors_basel, bnp_paribas_masters, london_2012_olympics, barclays_atp_world_tour_finals };
       TournamentEvents = new TournamentEvent[] { s2011_t_premierLeague, s2012_t_premierLeague, s2012_t_championship, s2012_t_leagueOne, s2012_t_leagueTwo, s2012_brisbane_international, s2012_aircel_chennai_open, s2012_qatar_exxonmobil_open, s2012_apia_international_sydney, s2012_heineken_open, s2012_australian_open, s2012_open_sud_de_france, s2012_pbz_zagreb_indoors, s2012_vtr_open, s2012_abn_amro_world_tennis_tournament, s2012_brasil_open_2012, s2012_sap_open, s2012_regions_morgan_keegan_championships, s2012_copa_claro, s2012_open_13, s2012_dubai_duty_free_tennis_championships, s2012_delray_beach_international_tennis_championships, s2012_abierto_mexicano_telcel, s2012_bnp_paribas_open, s2012_sony_ericsson_open, s2012_grand_prix_hassan_ii, s2012_us_mens_clay_court_championship, s2012_monte_carlo_rolex_masters, s2012_brd_nastase_tiriac_trophy, s2012_barcelona_open_banc_sabadell, s2012_bmw_open, s2012_serbia_open_2012, s2012_estoril_open, s2012_mutua_madrid_open, s2012_internazionali_bnl_ditalia, s2012_open_de_nice_cote_dazur, s2012_roland_garros, s2012_gerry_weber_open, s2012_aegon_championships, s2012_unicef_open, s2012_aegon_international, s2012_wimbledon, s2012_mercedescup, s2012_campbells_hall_of_fame_tennis_championships, s2012_skistar_swedish_open, s2012_atp_studena_croatia_open, s2012_bet_at_home_open___german_tennis_championships_2012, s2012_atlanta_tennis_championships, s2012_credit_agricole_suisse_open_gstaad, s2012_bet_at_home_cup_kitzbuhel, s2012_farmers_classic, s2012_london_2012_olympics, s2012_legg_mason_tennis_classic, s2012_rogers_cup, s2012_western__southern_open, s2012_winston_salem_open, s2012_us_open, s2012_moselle_open, s2012_st_petersburg_open, s2012_ptt_thailand_open, s2012_malaysian_open_kuala_lumpur, s2012_china_open, s2012_rakuten_japan_open_tennis_championships, s2012_shanghai_rolex_masters, s2012_erste_bank_open, s2012_if_stockholm_open, s2012_kremlin_cup, s2012_valencia_open_500, s2012_swiss_indoors_basel, s2012_bnp_paribas_masters, s2012_barclays_atp_world_tour_finals };
       CompetitionCouponURLs = new CompetitionCouponURL[] { ccb_premierLeague, ccb_championship, ccb_leagueOne, ccb_leagueTwo, ccow_premierLeague, ccow_championship, ccow_leagueOne, ccow_leagueTwo, ccom_premierLeague, ccom_championship, ccom_leagueOne, ccom_leagueTwo, ccb_atp, ccow_atp, ccom_atp };
@@ -627,6 +636,7 @@ namespace Samurai.SqlDataAccess
 
     public Bookmaker[] Bookmakers { get; set; }
     public Sport[] Sports { get; set; }
+    public Surface[] Surfaces { get; set; }
     public Competition[] Competitions { get; set; }
     public Tournament[] Tournaments { get; set; }
     public TournamentEvent[] TournamentEvents { get; set; }

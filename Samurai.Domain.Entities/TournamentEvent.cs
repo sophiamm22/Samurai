@@ -14,6 +14,7 @@ namespace Samurai.Domain.Entities
     }
 
     public int TournamentID { get; set; }
+    public int? SurfaceID { get; set; }
     public string EventName { get; set; }
     public string Slug { get; set; }
     public DateTime StartDate { get; set; }
@@ -22,6 +23,8 @@ namespace Samurai.Domain.Entities
     public bool TournamentCompleted { get; set; }
 
     public virtual Tournament Tournament { get; set; }
+    public virtual Surface Surface { get; set; }
+
     public virtual ICollection<Match> Matches { get; set; }
   }
 }

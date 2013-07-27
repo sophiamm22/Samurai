@@ -42,7 +42,7 @@
       gamesPlayedChart = dc.barChart('#games-played-chart', 'group');
 
       d3.csv("content/Performance.csv", function (data) {
-        var dateFormat = d3.time.format("%d/%m/%Y");
+        var dateFormat = d3.time.format("%d-%m-%Y");
         var numberFormat = d3.format(".2f");
         var index = 1;
 
@@ -325,7 +325,7 @@
               var text = d.TournamentName + ' (' + d.Series + ' - ' + d.Surface.toLowerCase() + ' court)';
               return text;
             })
-            .size(50)
+            .size(100)
             .columns([
                 function (d) {
                   return d.day.toLocaleDateString();

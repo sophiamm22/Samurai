@@ -217,6 +217,16 @@ namespace Samurai.Tests.TestInfrastructure
       }
     }
 
+    public IEnumerable<TEntity> ExecuteStoredProc<TEntity, TProcParams>(TProcParams args)
+      where TEntity : class
+      where TProcParams : IStoredProc, new()
+    {
+      throw new NotImplementedException();
+    }
+
     private IUnitOfWork unitOfWork;
+
+
+
   }
 }

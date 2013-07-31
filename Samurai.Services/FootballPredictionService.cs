@@ -22,10 +22,10 @@ namespace Samurai.Services
     protected readonly IPredictionStrategyProvider predictionProvider;
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
 
     public PredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
     {
       if (predictionProvider == null) throw new ArgumentNullException("predictionProvider");
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
@@ -119,7 +119,7 @@ namespace Samurai.Services
   public class FootballPredictionService : PredictionService, IFootballPredictionService
   {
     public FootballPredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 

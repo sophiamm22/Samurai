@@ -20,7 +20,7 @@ namespace Samurai.Services
   public class TennisPredictionService : PredictionService, ITennisPredictionService
   {
     public TennisPredictionService(IPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 

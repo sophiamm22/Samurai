@@ -219,6 +219,10 @@ namespace Infrastructure.Data
         /// <returns></returns>
         int Count<TEntity>(ISpecification<TEntity> criteria) where TEntity : BaseEntity;
 
+        IEnumerable<TEntity> ExecuteStoredProc<TEntity, TProcParams>(TProcParams args)
+          where TEntity : class
+          where TProcParams : IStoredProc, new();
+
         /// <summary>
         /// Gets the unit of work.
         /// </summary>

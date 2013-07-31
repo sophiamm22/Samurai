@@ -23,7 +23,7 @@ namespace Samurai.Tests.DomainValue
       private DateTime matchDate;
       private Mock<IFixtureRepository> mockFixtureRepository;
       private IWebRepositoryProvider webRepositoryProvider;
-      private Mock<IStoredProceduresRepository> mockStoredProcRepository;
+      private Mock<ISqlLinqStoredProceduresRepository> mockStoredProcRepository;
       private List<E.Match> matches;
 
       [Test, Category("FootballFixtureStrategyTests.UpdateFixtures")]
@@ -40,7 +40,7 @@ namespace Samurai.Tests.DomainValue
           .CanAddOrUpdateMatches(matches)
           .HasFootballTournamentEvents();
 
-        this.mockStoredProcRepository = new Mock<IStoredProceduresRepository>();
+        this.mockStoredProcRepository = new Mock<ISqlLinqStoredProceduresRepository>();
 
         var footballFixtureStrategy = new TestableFootballFixtureStrategy(this.mockFixtureRepository,
           this.mockStoredProcRepository, this.webRepositoryProvider);
@@ -89,7 +89,7 @@ namespace Samurai.Tests.DomainValue
           .CanAddOrUpdateMatches(matches)
           .HasFootballTournamentEvents();
 
-        this.mockStoredProcRepository = new Mock<IStoredProceduresRepository>();
+        this.mockStoredProcRepository = new Mock<ISqlLinqStoredProceduresRepository>();
 
         var footballFixtureStrategy = new TestableFootballFixtureStrategy(this.mockFixtureRepository,
           this.mockStoredProcRepository, this.webRepositoryProvider);
@@ -110,7 +110,7 @@ namespace Samurai.Tests.DomainValue
       private DateTime matchDate;
       private Mock<IFixtureRepository> mockFixtureRepository;
       private IWebRepositoryProvider webRepositoryProvider;
-      private Mock<IStoredProceduresRepository> mockStoredProcRepository;
+      private Mock<ISqlLinqStoredProceduresRepository> mockStoredProcRepository;
       private List<E.Match> matches;
 
       [Test, Category("FootballFixtureStrategyTests.UpdateResults")]
@@ -128,7 +128,7 @@ namespace Samurai.Tests.DomainValue
           .HasFootballTournamentEvents()
           .CanReturnScoreOutcome();
 
-        this.mockStoredProcRepository = new Mock<IStoredProceduresRepository>();
+        this.mockStoredProcRepository = new Mock<ISqlLinqStoredProceduresRepository>();
 
         var footballFixtureStrategy = new TestableFootballFixtureStrategy(this.mockFixtureRepository,
           this.mockStoredProcRepository, this.webRepositoryProvider);
@@ -188,7 +188,7 @@ namespace Samurai.Tests.DomainValue
           .HasFootballTournamentEvents()
           .CanReturnScoreOutcome();
 
-        this.mockStoredProcRepository = new Mock<IStoredProceduresRepository>();
+        this.mockStoredProcRepository = new Mock<ISqlLinqStoredProceduresRepository>();
 
         var footballFixtureStrategy = new TestableFootballFixtureStrategy(this.mockFixtureRepository,
           this.mockStoredProcRepository, this.webRepositoryProvider);
@@ -226,7 +226,7 @@ namespace Samurai.Tests.DomainValue
   public class TestableFootballFixtureStrategy : FootballFixtureStrategy
   {
     public TestableFootballFixtureStrategy(Mock<IFixtureRepository> mockFixtureRepository,
-      Mock<IStoredProceduresRepository> mockStoredProcRepository, IWebRepositoryProvider webRepositoryProvider)
+      Mock<ISqlLinqStoredProceduresRepository> mockStoredProcRepository, IWebRepositoryProvider webRepositoryProvider)
       : base(mockFixtureRepository.Object, mockStoredProcRepository.Object, webRepositoryProvider)
     {
 

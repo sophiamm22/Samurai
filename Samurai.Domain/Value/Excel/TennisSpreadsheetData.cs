@@ -38,7 +38,7 @@ namespace Samurai.Domain.Value.Excel
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
     private readonly IWebRepository webRepository;
-    private readonly IStoredProceduresRepository storedProcRepository;
+    private readonly ISqlLinqStoredProceduresRepository storedProcRepository;
 
     private EnumerableRowCollection<DataRow> excelMatches;
 
@@ -47,7 +47,7 @@ namespace Samurai.Domain.Value.Excel
 
     public TennisSpreadsheetData(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IPredictionRepository predictionRepository,
-      IWebRepository webRepository, IStoredProceduresRepository storedProcRepository)
+      IWebRepository webRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
     {
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");

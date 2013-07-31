@@ -22,12 +22,12 @@ namespace Samurai.Domain.Value.Async
   public class AsyncFootballFixtureStrategy : IAsyncFootballFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProviderAsync webRepositoryProvider;
 
     protected string storedHTML = "";
 
-    public AsyncFootballFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
+    public AsyncFootballFixtureStrategy(IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository,
       IWebRepositoryProviderAsync webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;

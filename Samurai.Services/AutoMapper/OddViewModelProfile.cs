@@ -22,6 +22,16 @@ namespace Samurai.Services.AutoMapper
             .ConvertUsing<OddViewModelConverter>();
       Mapper.CreateMap<IEnumerable<GenericMatchCoupon>, IEnumerable<OddViewModel>>()
             .ConvertUsing<OddViewModelConverterEnumerable>();
+      Mapper.CreateMap<DaysBestOddsForSport, OddViewModel>()
+            .IgnoreAllNonExisting()
+            .ForMember(x => x.MatchId, opt => opt.MapFrom(x => x.MatchID_pk))
+            .ForMember(x => x.Sport, opt => opt.MapFrom(x => x.SportName))
+            .ForMember(x => x.Outcome, opt => opt.MapFrom(x => x.MatchOutcome))
+            .ForMember(x => x.OddBeforeCommission, opt => opt.MapFrom(x => (double)x.Odd))
+            .ForMember(x => x.CommissionPct, opt => opt.MapFrom(x => (double?)x.CurrentCommission))
+            .ForMember(x => x.DecimalOdd, opt => opt.MapFrom(x => (double)x.OddAfterCommission))
+            .ForMember(x => x.Bookmaker, opt => opt.MapFrom(x => x.BookmakerName))
+            .ForMember(x => x.OddsSource, opt => opt.MapFrom(x => x.Source));
     }
   }
 

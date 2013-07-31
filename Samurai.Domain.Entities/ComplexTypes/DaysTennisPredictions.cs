@@ -2,26 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
 
-using Infrastructure.Data;
-
-namespace Samurai.SqlDataAccess.SQLProcedures
+namespace Samurai.Domain.Entities.ComplexTypes
 {
-  public class DaysTennisPredictionsParams : IStoredProc
-  {
-    private const string storedProcName = "sp_Get_Days_Tennis_Predictions";
-
-    [NotMapped]
-    public string StoredProcName { get { return storedProcName; } }
-
-    [StoredProcAttributes.Name("date")]
-    [StoredProcAttributes.ParameterType(SqlDbType.Date)]
-    public DateTime PredictionDate { get; set; }
-  }
-
   public class DaysTennisPredictions
   {
     public int MatchID_pk { get; set; }
@@ -38,6 +21,9 @@ namespace Samurai.SqlDataAccess.SQLProcedures
     public int PlayerBGames { get; set; }
     public decimal PlayerAProbability { get; set; }
     public decimal PlayerBProbability { get; set; }
+    public decimal ESets { get; set; }
+    public decimal EGames { get; set; }
+    public decimal EPoints { get; set; }
     public string Score { get; set; }
     public decimal? Score_3_0 { get; set; }
     public decimal? Score_3_1 { get; set; }
@@ -48,7 +34,7 @@ namespace Samurai.SqlDataAccess.SQLProcedures
     public decimal? Score_2_0 { get; set; }
     public decimal? Score_2_1 { get; set; }
     public decimal? Score_1_2 { get; set; }
-    public decimal? Scpre_0_2 { get; set; }
+    public decimal? Score_0_2 { get; set; }
   }
 
 

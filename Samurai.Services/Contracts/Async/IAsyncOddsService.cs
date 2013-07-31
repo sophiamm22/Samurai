@@ -17,6 +17,7 @@ namespace Samurai.Services.Contracts.Async
     OddsSourceViewModel FindOddsSource(string slug);
     SportViewModel FindSport(string slug);
     TournamentViewModel FindTournament(string slug);
+    Task<IEnumerable<OddViewModel>> GetDaysBestOdds(DateTime oddsDate);
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);
     void RecordMissingTournamentCouponURLs(IEnumerable<MissingTournamentCouponURLObject> urls);
   }

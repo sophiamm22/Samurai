@@ -23,8 +23,9 @@ namespace Samurai.Services
     protected readonly ITennisFixtureStrategy fixtureStrategy;
 
     public TennisFixtureService(IFixtureRepository fixtureRepository,
-      ITennisFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, storedProcRepository)
+      ITennisFixtureStrategy fixtureStrategy, ISqlLinqStoredProceduresRepository linqStoredProcRepository,
+      ISqlStoredProceduresRepository sqlStoredProcRespository)
+      : base(fixtureRepository, linqStoredProcRepository, sqlStoredProcRespository)
     {
       if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
       this.fixtureStrategy = fixtureStrategy;
@@ -35,6 +36,19 @@ namespace Samurai.Services
       var matches = this.fixtureRepository.GetDaysTennisMatches(matchDate);
 
       return Mapper.Map<IEnumerable<Match>, IEnumerable<TennisMatchViewModel>>(matches);
+    }
+
+    public IEnumerable<TennisMatchViewModel> GetTennisPredictions(DateTime fixtureDate)
+    {
+      var fixtures = this.sqlStoredProcRepository
+                         .GetDaysTennisPredictions(fixtureDate)
+                         .ToList();
+      if (fixtures.Count == 0)
+        return Enumerable.Empty<TennisMatchViewModel>();
+      else
+      {
+        return Mapper.Map<IEnumerable<DaysTennisPredictions>, IEnumerable<TennisMatchViewModel>>(fixtures);
+      }
     }
 
     public TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate)

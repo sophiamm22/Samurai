@@ -24,6 +24,7 @@ namespace Samurai.Services.Contracts.Async
 
   public interface IAsyncFootballFixtureService : IAsyncFixtureService
   {
+    IEnumerable<FootballFixtureViewModel> GetFootballPredictions(DateTime fixtureDate);
     FootballFixtureViewModel GetFootballFixture(DateTime fixtureDate, string homeTeam, string awayTeam);
     Task<IEnumerable<FootballFixtureViewModel>> FetchSkySportsFootballFixtures(DateTime fixtureDate);
     Task<IEnumerable<FootballFixtureViewModel>> FetchSkySportsFootballResults(DateTime fixtureDate);
@@ -35,6 +36,7 @@ namespace Samurai.Services.Contracts.Async
 
   public interface IAsyncTennisFixtureService : IAsyncFixtureService
   {
+    IEnumerable<TennisFixtureViewModel> GetTennisPredictions(DateTime fixtureDate);
     IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate);
     TennisMatchViewModel GetTennisMatch(string playerAName, string playerBName, DateTime matchDate);
     Task<IEnumerable<TennisFixtureViewModel>> FetchTennisResults(DateTime matchDate);

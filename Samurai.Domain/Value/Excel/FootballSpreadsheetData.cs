@@ -34,7 +34,7 @@ namespace Samurai.Domain.Value.Excel
     private readonly IBookmakerRepository bookmakerRepository;
     private readonly IFixtureRepository fixtureRepository;
     private readonly IPredictionRepository predictionRepository;
-    private readonly IStoredProceduresRepository storedProcRepository;
+    private readonly ISqlLinqStoredProceduresRepository storedProcRepository;
 
     private List<Model.GenericPrediction> genericPredictions;
 

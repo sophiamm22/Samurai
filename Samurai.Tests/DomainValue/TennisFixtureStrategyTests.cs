@@ -24,7 +24,7 @@ namespace Samurai.Tests.DomainValue
       protected Mock<IWebRepository> webRepository;
       protected Mock<IWebRepositoryProvider> webRepositoryProvider;
       protected Mock<IFixtureRepository> fixtureRepository;
-      protected Mock<IStoredProceduresRepository> storedProcRepository;
+      protected Mock<ISqlLinqStoredProceduresRepository> storedProcRepository;
 
       [Test, Category("TennisFixtureStrategyTests.UpdateTournamentEvents")]
       public void CreatesNewListOfTournamentEvents()
@@ -136,11 +136,11 @@ namespace Samurai.Tests.DomainValue
   public class TestableTennisFixtureStrategy : TennisFixtureStrategy
   {
     public Mock<IFixtureRepository> MockedFixtureRepository { get; private set; }
-    public Mock<IStoredProceduresRepository> MockedStoredProcRepository { get; private set; }
+    public Mock<ISqlLinqStoredProceduresRepository> MockedStoredProcRepository { get; private set; }
     public Mock<IWebRepositoryProvider> MockedWebRepositoryProvider { get; private set; }
 
     public TestableTennisFixtureStrategy(Mock<IFixtureRepository> mockFixtureRepository,
-      Mock<IStoredProceduresRepository> mockedStoredProcRepository, Mock<IWebRepositoryProvider> mockWebRepositoryProvider)
+      Mock<ISqlLinqStoredProceduresRepository> mockedStoredProcRepository, Mock<IWebRepositoryProvider> mockWebRepositoryProvider)
       : base(mockFixtureRepository.Object, mockedStoredProcRepository.Object, mockWebRepositoryProvider.Object)
     {
       MockedFixtureRepository = mockFixtureRepository;

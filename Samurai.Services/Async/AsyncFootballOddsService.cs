@@ -23,7 +23,8 @@ namespace Samurai.Services.Async
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IBookmakerRepository bookmakerRepository;
-    protected readonly IStoredProceduresRepository storedProcedureRepository;
+    protected readonly ISqlLinqStoredProceduresRepository linqStoredProcRepository;
+    protected readonly ISqlStoredProceduresRepository sqlStoredProcRepository;
     protected readonly IPredictionRepository predicitonRepository;
     protected readonly IAsyncCouponStrategyProvider couponProvider;
     protected readonly IAsyncOddsStrategyProvider oddsProvider;
@@ -31,19 +32,22 @@ namespace Samurai.Services.Async
     protected string sport;
 
     public AsyncOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predicitonRepository,
-      IAsyncCouponStrategyProvider couponProvider, IAsyncOddsStrategyProvider oddsProvider)
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository, ISqlStoredProceduresRepository sqlStoredProcRepository,
+      IPredictionRepository predicitonRepository, IAsyncCouponStrategyProvider couponProvider, 
+      IAsyncOddsStrategyProvider oddsProvider)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
-      if (storedProcedureRepository == null) throw new ArgumentNullException("storedProcedureRepository");
+      if (linqStoredProcRepository == null) throw new ArgumentNullException("linqStoredProcRepository");
+      if (sqlStoredProcRepository == null) throw new ArgumentNullException("sqlStoredProcRepository");
       if (predicitonRepository == null) throw new ArgumentNullException("predictionRepository");
       if (couponProvider == null) throw new ArgumentNullException("couponProvider");
       if (oddsProvider == null) throw new ArgumentNullException("oddsProvider");
 
       this.fixtureRepository = fixtureRepository;
       this.bookmakerRepository = bookmakerRepository;
-      this.storedProcedureRepository = storedProcedureRepository;
+      this.linqStoredProcRepository = linqStoredProcRepository;
+      this.sqlStoredProcRepository = sqlStoredProcRepository;
       this.predicitonRepository = predicitonRepository;
       this.couponProvider = couponProvider;
       this.oddsProvider = oddsProvider;
@@ -90,6 +94,12 @@ namespace Samurai.Services.Async
       }
       this.bookmakerRepository
           .AddMissingTournamentCouponUrls(missingTournamentCouponURLs);
+    }
+
+    public async Task<IEnumerable<OddViewModel>> GetDaysBestOdds(DateTime oddsDate)
+    {
+      var odds = await Task.Run(() => this.sqlStoredProcRepository.GetDaysBestOddsForSport(oddsDate, this.sport));
+      return Mapper.Map<IEnumerable<DaysBestOddsForSport>, IEnumerable<OddViewModel>>(odds);
     }
 
     protected IEnumerable<Tournament> DaysTournaments(DateTime date, string sport)
@@ -367,10 +377,11 @@ namespace Samurai.Services.Async
   public class AsyncFootballOddsService : AsyncOddsService, IAsyncFootballOddsService
   {
     public AsyncFootballOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository, ISqlStoredProceduresRepository sqlStoredProcRepository,
+      IPredictionRepository predictionRepository,
       IAsyncCouponStrategyProvider couponProvider, IAsyncOddsStrategyProvider oddsProvider)
-      : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository,
-      couponProvider, oddsProvider)
+      : base(fixtureRepository, bookmakerRepository, linqStoredProcRepository, sqlStoredProcRepository,
+      predictionRepository, couponProvider, oddsProvider)
     {
       this.sport = "Football";
     }
@@ -420,7 +431,7 @@ namespace Samurai.Services.Async
       foreach (var oddsSource in oddsSources)
       {
         var oddsForEvent =
-          this.storedProcedureRepository
+          this.linqStoredProcRepository
               .GetBestOddsFromMatchID(matchID, oddsSource)
               .ToList();
 

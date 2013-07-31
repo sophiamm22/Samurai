@@ -9,7 +9,7 @@ using Samurai.Domain.Entities.ComplexTypes;
 
 namespace Samurai.SqlDataAccess.Contracts
 {
-  public interface IStoredProceduresRepository
+  public interface ISqlLinqStoredProceduresRepository
   {
     IEnumerable<OddsForEvent> GetBestOddsFromMatchID(int matchID, string oddsSource);
     IEnumerable<OddsForEvent> GetAllOddsForEvent(DateTime matchDate, string oddsSource, string teamA, string teamB, string firstNameA = null, string firstNameB = null);

@@ -26,11 +26,11 @@ namespace Samurai.Domain.Value.Async
   public class AsyncTennisFixtureStrategy : IAsyncTennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProviderAsync webRepositoryProvider;
 
     public AsyncTennisFixtureStrategy(IFixtureRepository fixtureRepository, 
-      IStoredProceduresRepository storedProcRepository, IWebRepositoryProviderAsync webRepositoryProvider)
+      ISqlLinqStoredProceduresRepository storedProcRepository, IWebRepositoryProviderAsync webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
       this.storedProcRepository = storedProcRepository;

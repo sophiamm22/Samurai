@@ -20,15 +20,20 @@ namespace Samurai.Services
   public abstract class FixtureService : IFixtureService
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository linqStoredProcRepository;
+    protected readonly ISqlStoredProceduresRepository sqlStoredProcRepository;
 
     public FixtureService(IFixtureRepository fixtureRepository,
-      IStoredProceduresRepository storedProcRepository)
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository,
+      ISqlStoredProceduresRepository sqlStoredProcRepository)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (storedProcRepository == null) throw new ArgumentNullException("storedProcRepository");
+      if (linqStoredProcRepository == null) throw new ArgumentNullException("linqStoredProcRepository");
+      if (sqlStoredProcRepository == null) throw new ArgumentNullException("sqlStoredProcRepository");
+
       this.fixtureRepository = fixtureRepository;
-      this.storedProcRepository = storedProcRepository;
+      this.linqStoredProcRepository = linqStoredProcRepository;
+      this.sqlStoredProcRepository = sqlStoredProcRepository;
     }
 
     public int GetCountOfDaysMatches(DateTime fixtureDate, string sport)
@@ -79,8 +84,9 @@ namespace Samurai.Services
     protected readonly IFootballFixtureStrategy fixtureStrategy;
 
     public FootballFixtureService(IFixtureRepository fixtureRepository,
-      IFootballFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, storedProcRepository)
+      IFootballFixtureStrategy fixtureStrategy, ISqlLinqStoredProceduresRepository linqStoredProcRepository,
+      ISqlStoredProceduresRepository sqlStoredProcRepository)
+      : base(fixtureRepository, linqStoredProcRepository, sqlStoredProcRepository)
     {
       if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
       this.fixtureStrategy = fixtureStrategy;
@@ -114,7 +120,7 @@ namespace Samurai.Services
 
     public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate)
     {
-      var fixtures = this.storedProcRepository
+      var fixtures = this.linqStoredProcRepository
                          .GetGenericMatchDetails(fixtureDate, "Football")
                          .ToList();
       if (fixtures.Count == 0)
@@ -126,6 +132,19 @@ namespace Samurai.Services
       }
     }
 
+    public IEnumerable<FootballFixtureViewModel> GetFootballPredictions(DateTime fixtureDate)
+    {
+      var fixtures = this.sqlStoredProcRepository
+                         .GetDaysFootballPredictions(fixtureDate)
+                         .ToList();
+      if (fixtures.Count == 0)
+        return Enumerable.Empty<FootballFixtureViewModel>();
+      else
+      {
+        return Mapper.Map<IEnumerable<DaysFootballPredictions>, IEnumerable<FootballFixtureViewModel>>(fixtures);
+      }
+    }
+    
     public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDateLeague(DateTime fixtureDate, string league)
     {
       throw new NotImplementedException();

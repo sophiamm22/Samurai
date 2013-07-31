@@ -8,6 +8,7 @@ using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
+using Samurai.Domain.Entities.ComplexTypes;
 
 namespace Samurai.Services.Contracts
 {

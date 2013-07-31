@@ -19,7 +19,7 @@ namespace Samurai.Services.Async
   public class AsyncTennisPredictionService : AsyncPredictionService, IAsyncTennisPredictionService
   {
     public AsyncTennisPredictionService(IAsyncPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 

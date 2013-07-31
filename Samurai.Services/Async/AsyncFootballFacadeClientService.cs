@@ -33,34 +33,44 @@ namespace Samurai.Services.Async
 
     public async Task<IEnumerable<FootballFixtureViewModel>> GetDaysSchedule(DateTime fixtureDate)
     {
-      var ret = new List<FootballFixtureViewModel>();
-
       var fixtures = await Task.Run(() =>
         this.footballFixtureService
-            .GetFootballFixturesByDate(fixtureDate));
+            .GetFootballPredictions(fixtureDate));
 
-      var predictions = (await Task.Run(() =>
-        this.footballPredictionService
-            .GetFootballPredictionsNoScorePredictions(fixtures)))
-            .ToDictionary(x => x.MatchIdentifier);
+      return fixtures;
 
-      foreach (var fixture in fixtures)
-      {
-        if (predictions.ContainsKey(fixture.MatchIdentifier))
-        {
-          fixture.Predictions = predictions[fixture.MatchIdentifier];
-          fixture.Predictions.MatchId = fixture.Id;
-        }
-        ret.Add(fixture);
-      }
-      return ret;
+      //var ret = new List<FootballFixtureViewModel>();
+
+      //var fixtures = await Task.Run(() =>
+      //  this.footballFixtureService
+      //      .GetFootballFixturesByDate(fixtureDate));
+
+      //var predictions = (await Task.Run(() =>
+      //  this.footballPredictionService
+      //      .GetFootballPredictionsNoScorePredictions(fixtures)))
+      //      .ToDictionary(x => x.MatchIdentifier);
+
+      //foreach (var fixture in fixtures)
+      //{
+      //  if (predictions.ContainsKey(fixture.MatchIdentifier))
+      //  {
+      //    fixture.Predictions = predictions[fixture.MatchIdentifier];
+      //    fixture.Predictions.MatchId = fixture.Id;
+      //  }
+      //  ret.Add(fixture);
+      //}
+      //return ret;
     }
 
     public async Task<IEnumerable<OddViewModel>> GetDaysOdds(DateTime fixtureDate)
     {
-      return await 
+      return await
         this.footballOddsService
-            .GetAllFootballTodaysOdds(fixtureDate);
+            .GetDaysBestOdds(fixtureDate);
+      
+      //return await 
+      //  this.footballOddsService
+      //      .GetAllFootballTodaysOdds(fixtureDate);
     }
 
     public DateTime GetLatestDate()

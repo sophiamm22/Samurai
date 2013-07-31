@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[sp_Get_Days_Tennis_Predictions]
 		
-		@date DATE = '20130724'
+		@date DATE = '20130730'
 AS
 	SET NOCOUNT ON
 		
@@ -19,17 +19,20 @@ AS
 		, ts.PlayerBGames
 		, mpPlayerA.MatchOutcomeProbability AS PlayerAProbability
 		, mpPlayerB.MatchOutcomeProbability AS PlayerBProbability
+		, ts.ESets
+		, ts.EGames
+		, ts.EPoints
 		, COALESCE(CONVERT(NVARCHAR(2), so.TeamAScore) + '-' + CONVERT(NVARCHAR(2), so.TeamBScore), 'not played') AS Score
-		, [3-0]
-		, [3-1]
-		, [3-2]
-		, [2-3]
-		, [1-3]
-		, [0-3]
-		, [2-0]
-		, [2-1]
-		, [1-2]
-		, [0-2]
+		, [3-0] AS Score_3_0
+		, [3-1] AS Score_3_1
+		, [3-2] AS Score_3_2
+		, [2-3] AS Score_2_3
+		, [1-3] AS Score_1_3
+		, [0-3] AS Score_0_3
+		, [2-0] AS Score_2_0
+		, [2-1] AS Score_2_1
+		, [1-2] AS Score_1_2
+		, [0-2] AS Score_0_2
 	FROM
 		Matches m
 		INNER JOIN TeamsPlayers ta ON m.TeamAID_fk = ta.TeamPlayerID_pk
@@ -50,7 +53,7 @@ AS
 		INNER JOIN MatchOutcomeProbabilitiesInMatch mpPlayerB
 			ON m.MatchID_pk = mpPlayerB.MatchID_fk
 			AND mpPlayerB.MatchOutcomeID_fk = 2
-		INNER JOIN
+		LEFT JOIN
 			(
 				SELECT
 						MatchID_fk

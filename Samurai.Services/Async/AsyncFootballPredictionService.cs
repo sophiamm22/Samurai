@@ -22,10 +22,10 @@ namespace Samurai.Services.Async
     protected readonly IAsyncPredictionStrategyProvider predictionProvider;
     protected readonly IPredictionRepository predictionRepository;
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
 
     public AsyncPredictionService(IAsyncPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
     {
       if (predictionProvider == null) throw new ArgumentNullException("predictionProvider");
       if (predictionRepository == null) throw new ArgumentNullException("predictionRepository");
@@ -120,7 +120,7 @@ namespace Samurai.Services.Async
   {
 
     public AsyncFootballPredictionService(IAsyncPredictionStrategyProvider predictionProvider,
-      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository)
+      IPredictionRepository predictionRepository, IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository)
       : base(predictionProvider, predictionRepository, fixtureRepository, storedProcRepository)
     { }
 

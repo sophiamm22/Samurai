@@ -23,11 +23,23 @@ namespace Samurai.Services.Async
     protected readonly IAsyncTennisFixtureStrategy fixtureStrategy;
 
     public AsyncTennisFixtureService(IFixtureRepository fixtureRepository,
-      IAsyncTennisFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, storedProcRepository)
+      IAsyncTennisFixtureStrategy fixtureStrategy, 
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository, ISqlStoredProceduresRepository sqlStoredProcRepository)
+      : base(fixtureRepository, linqStoredProcRepository, sqlStoredProcRepository)
     {
       if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
       this.fixtureStrategy = fixtureStrategy;
+    }
+
+    public IEnumerable<TennisFixtureViewModel> GetTennisPredictions(DateTime fixtureDate)
+    {
+      var fixtures = this.sqlStoredProcRepository
+                         .GetDaysTennisPredictions(fixtureDate)
+                         .ToList();
+      if (fixtures.Count == 0)
+        return Enumerable.Empty<TennisFixtureViewModel>();
+      else
+        return Mapper.Map<IEnumerable<DaysTennisPredictions>, IEnumerable<TennisFixtureViewModel>>(fixtures);
     }
 
     public IEnumerable<TennisMatchViewModel> GetTennisMatches(DateTime matchDate)

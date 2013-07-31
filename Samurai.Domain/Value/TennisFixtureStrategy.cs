@@ -26,11 +26,11 @@ namespace Samurai.Domain.Value
   public class TennisFixtureStrategy : ITennisFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     public TennisFixtureStrategy(IFixtureRepository fixtureRepository,
-      IStoredProceduresRepository storedProcRepository, IWebRepositoryProvider webRepositoryProvider)
+      ISqlLinqStoredProceduresRepository storedProcRepository, IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
       this.storedProcRepository = storedProcRepository;

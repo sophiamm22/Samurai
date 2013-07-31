@@ -22,15 +22,18 @@ namespace Samurai.Services.Async
   public abstract class AsyncFixtureService : IAsyncFixtureService
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository linqStoredProcRepository;
+    protected readonly ISqlStoredProceduresRepository sqlStoredProcRepository;
 
     public AsyncFixtureService(IFixtureRepository fixtureRepository,
-      IStoredProceduresRepository storedProcRepository)
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository, ISqlStoredProceduresRepository sqlStoredProcRepository)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
-      if (storedProcRepository == null) throw new ArgumentNullException("storedProcRepository");
+      if (linqStoredProcRepository == null) throw new ArgumentNullException("storedProcRepository");
+      if (sqlStoredProcRepository == null) throw new ArgumentNullException("sqlStoredProcRepository");
       this.fixtureRepository = fixtureRepository;
-      this.storedProcRepository = storedProcRepository;
+      this.linqStoredProcRepository = linqStoredProcRepository;
+      this.sqlStoredProcRepository = sqlStoredProcRepository;
     }
 
     public int GetCountOfDaysMatches(DateTime fixtureDate, string sport)
@@ -106,8 +109,9 @@ namespace Samurai.Services.Async
     protected readonly IAsyncFootballFixtureStrategy fixtureStrategy;
 
     public AsyncFootballFixtureService(IFixtureRepository fixtureRepository,
-      IAsyncFootballFixtureStrategy fixtureStrategy, IStoredProceduresRepository storedProcRepository)
-      : base(fixtureRepository, storedProcRepository)
+      IAsyncFootballFixtureStrategy fixtureStrategy, ISqlLinqStoredProceduresRepository linqStoredProcRepository,
+      ISqlStoredProceduresRepository sqlStoredProcRepository)
+      : base(fixtureRepository, linqStoredProcRepository, sqlStoredProcRepository)
     {
       if (fixtureStrategy == null) throw new ArgumentNullException("fixtureStrategy");
       this.fixtureStrategy = fixtureStrategy;
@@ -149,9 +153,21 @@ namespace Samurai.Services.Async
       return Mapper.Map<IEnumerable<Model.GenericMatchDetail>, IEnumerable<FootballFixtureViewModel>>(fixturesDTO);
     }
 
+    public IEnumerable<FootballFixtureViewModel> GetFootballPredictions(DateTime fixtureDate)
+    {
+      var fixtures = this.sqlStoredProcRepository
+                         .GetDaysFootballPredictions(fixtureDate)
+                         .ToList();
+      if (fixtures.Count == 0)
+        return Enumerable.Empty<FootballFixtureViewModel>();
+      else
+        return Mapper.Map<IEnumerable<DaysFootballPredictions>, IEnumerable<FootballFixtureViewModel>>(fixtures);
+      
+    }
+
     public IEnumerable<FootballFixtureViewModel> GetFootballFixturesByDate(DateTime fixtureDate)
     {
-      var fixtures = this.storedProcRepository
+      var fixtures = this.linqStoredProcRepository
                          .GetGenericMatchDetails(fixtureDate, "Football")
                          .ToList();
       if (fixtures.Count == 0)

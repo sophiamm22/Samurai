@@ -22,9 +22,10 @@ namespace Samurai.Services.Async
   public class AsyncTennisOddsService : AsyncOddsService, IAsyncTennisOddsService
   {
     public AsyncTennisOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
-      IAsyncCouponStrategyProvider couponProvider, IAsyncOddsStrategyProvider oddsProvider)
-      : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository, 
+      ISqlLinqStoredProceduresRepository linqStoredProcRepository, ISqlStoredProceduresRepository sqlStoredProcRepository, 
+      IPredictionRepository predictionRepository, IAsyncCouponStrategyProvider couponProvider, 
+      IAsyncOddsStrategyProvider oddsProvider)
+      : base(fixtureRepository, bookmakerRepository, linqStoredProcRepository, sqlStoredProcRepository, predictionRepository, 
       couponProvider, oddsProvider)
     {
       this.sport = "Tennis";
@@ -142,7 +143,7 @@ namespace Samurai.Services.Async
 
       var allOdds = new List<OddsForEvent>();
       var oddsForPeriod =
-        this.storedProcedureRepository
+        this.linqStoredProcRepository
             .GetAllOddsForPeriod(startDate, endDate, oddsSources.First()) //come back to this
             .ToList();
 
@@ -167,7 +168,7 @@ namespace Samurai.Services.Async
       foreach (var oddsSource in oddsSources)
       {
         var oddsForEvent =
-          this.storedProcedureRepository
+          this.linqStoredProcRepository
               .GetBestOddsFromMatchID(matchID, oddsSource)
               .ToList();
 

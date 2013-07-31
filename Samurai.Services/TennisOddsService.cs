@@ -22,9 +22,11 @@ namespace Samurai.Services
   public class TennisOddsService : OddsService, ITennisOddsService
   {
     public TennisOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
-      ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
-      : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository, 
+      ISqlLinqStoredProceduresRepository linqStoredProcedureRepository, ISqlStoredProceduresRepository sqlStoredProcedureRepository, 
+      IPredictionRepository predictionRepository, ICouponStrategyProvider couponProvider, 
+      IOddsStrategyProvider oddsProvider)
+      : base(fixtureRepository, bookmakerRepository, 
+      linqStoredProcedureRepository, sqlStoredProcedureRepository, predictionRepository, 
       couponProvider, oddsProvider)
     {
       this.sport = "Tennis";
@@ -44,7 +46,7 @@ namespace Samurai.Services
       foreach (var oddsSource in oddsSources)
       {
         var oddsForEvent =
-          this.storedProcedureRepository
+          this.linqStoredProcedureRepository
               .GetLatestOddsForEvent(date,
                                      oddsSource.Source,
                                      fixture.PlayerASurname,

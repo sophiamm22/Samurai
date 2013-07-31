@@ -22,7 +22,8 @@ namespace Samurai.Services
   {
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IBookmakerRepository bookmakerRepository;
-    protected readonly IStoredProceduresRepository storedProcedureRepository;
+    protected readonly ISqlLinqStoredProceduresRepository linqStoredProcedureRepository;
+    protected readonly ISqlStoredProceduresRepository sqlStoredProcedureRepository;
     protected readonly IPredictionRepository predicitonRepository;
     protected readonly ICouponStrategyProvider couponProvider;
     protected readonly IOddsStrategyProvider oddsProvider;
@@ -32,19 +33,21 @@ namespace Samurai.Services
     protected List<Model.GenericMatchCoupon> prescreenedCouponTarget;
 
     public OddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predicitonRepository,
-      ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
+      ISqlLinqStoredProceduresRepository linqStoredProcedureRepository, ISqlStoredProceduresRepository sqlStoredProcedureRepository,
+      IPredictionRepository predicitonRepository, ICouponStrategyProvider couponProvider, 
+      IOddsStrategyProvider oddsProvider)
     {
       if (fixtureRepository == null) throw new ArgumentNullException("fixtureRepository");
       if (bookmakerRepository == null) throw new ArgumentNullException("bookmakerRepository");
-      if (storedProcedureRepository == null) throw new ArgumentNullException("storedProcedureRepository");
+      if (linqStoredProcedureRepository == null) throw new ArgumentNullException("linqStoredProcedureRepository");
+      if (sqlStoredProcedureRepository == null) throw new ArgumentNullException("sqlStoredProcedureRepository");
       if (predicitonRepository == null) throw new ArgumentNullException("predictionRepository");
       if (couponProvider == null) throw new ArgumentNullException("couponProvider");
       if (oddsProvider == null) throw new ArgumentNullException("oddsProvider");
 
       this.fixtureRepository = fixtureRepository;
       this.bookmakerRepository = bookmakerRepository;
-      this.storedProcedureRepository = storedProcedureRepository;
+      this.linqStoredProcedureRepository = linqStoredProcedureRepository;
       this.predicitonRepository = predicitonRepository;
       this.couponProvider = couponProvider;
       this.oddsProvider = oddsProvider;
@@ -85,6 +88,11 @@ namespace Samurai.Services
       var tournaments = this.fixtureRepository.GetDaysTournaments(date, sport);
 
       return tournaments;
+    }
+
+    protected IEnumerable<DaysBestOddsForSport> GetBestOdds(DateTime oddsDate)
+    {
+      return this.sqlStoredProcedureRepository.GetDaysBestOddsForSport(oddsDate, this.sport);
     }
 
     //a total mess but going forward I will be getting all odds anyway so this is just for backwards compatability with my persisted data...
@@ -187,7 +195,7 @@ namespace Samurai.Services
       var getOddsForReturn = new List<Model.GenericMatchCoupon>();
       var dontGetOddsForReturn = new List<Model.GenericMatchCoupon>();
 
-      var probabilities = this.storedProcedureRepository
+      var probabilities = this.linqStoredProcedureRepository
                               .GetOutcomeProbabilitiesForSport(date, this.sport)
                               .ToDictionary(p => string.Format("{0}|{1}", p.HomeTeam, p.AwayTeam));
 
@@ -444,10 +452,11 @@ namespace Samurai.Services
   public class FootballOddsService : OddsService, IFootballOddsService
   {
     public FootballOddsService(IFixtureRepository fixtureRepository, IBookmakerRepository bookmakerRepository,
-      IStoredProceduresRepository storedProcedureRepository, IPredictionRepository predictionRepository,
-      ICouponStrategyProvider couponProvider, IOddsStrategyProvider oddsProvider)
-      : base(fixtureRepository, bookmakerRepository, storedProcedureRepository, predictionRepository,
-      couponProvider, oddsProvider)
+      ISqlLinqStoredProceduresRepository linqStoredProcedureRepository, ISqlStoredProceduresRepository sqlStoredProcedureRepository,
+      IPredictionRepository predictionRepository, ICouponStrategyProvider couponProvider, 
+      IOddsStrategyProvider oddsProvider)
+      : base(fixtureRepository, bookmakerRepository, linqStoredProcedureRepository, sqlStoredProcedureRepository, 
+      predictionRepository, couponProvider, oddsProvider)
     {
       this.sport = "Football";
     }

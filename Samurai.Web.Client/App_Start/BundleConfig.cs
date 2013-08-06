@@ -64,6 +64,8 @@ namespace Samurai.Web.Client
           .Include("~/Content/app.css")
           .Include("~/Content/dc.css")
         );
+      //bundles.Add(new Bundle("~/Content/Less", new LessTransform(), new CssMinify())
+      //    .Include("~/Content/styles.less"));
     }
 
     public static void AddDefaultIgnorePatterns(IgnoreList ignoreList)

@@ -56,7 +56,7 @@ namespace Samurai.Services.AutoMapper
         MatchIdentifier = prediction.MatchID_pk.ToString(),
         Tournament = prediction.TournamentName,
         Year = prediction.MatchDate.AddDays(7).Year,
-        PlayerAFirstName = prediction.PlayerBFirstName,
+        PlayerAFirstName = prediction.PlayerAFirstName,
         PlayerASurname = prediction.PlayerASurname,
         PlayerBFirstName = prediction.PlayerBFirstName,
         PlayerBSurname = prediction.PlayerBSurname,

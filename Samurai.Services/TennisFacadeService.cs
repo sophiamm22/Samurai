@@ -159,10 +159,10 @@ namespace Samurai.Services
         {
           bool playerAGoesThrough = true;
           var prediction = this.tennisPredictionService.GetSingleTennisPrediction(
-            previousRoundMatches[i].ExpectedWinnerSurname,
-            previousRoundMatches[i].ExpectedWinnerFirstName,
-            previousRoundMatches[i + 1].ExpectedWinnerSurname,
-            previousRoundMatches[i + 1].ExpectedWinnerFirstName,
+            previousRoundMatches[i].ExpectedWinnerSurname.Replace(".", ""),
+            previousRoundMatches[i].ExpectedWinnerFirstName.Replace(".", ""),
+            previousRoundMatches[i + 1].ExpectedWinnerSurname.Replace(".", ""),
+            previousRoundMatches[i + 1].ExpectedWinnerFirstName.Replace(".", ""),
             year,
             tournamentSlug,
             false /*we don't want to accidentally introduce hindsight*/);

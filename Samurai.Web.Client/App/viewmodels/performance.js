@@ -188,7 +188,7 @@
               return p.value.stake;
             })
             .maxBubbleRelativeSize(.02)
-            .x(d3.scale.linear().domain([new Date(2012, 12, 01), new Date(2013, 07, 31)]))
+            .x(d3.scale.linear().domain([new Date(2012, 12, 01), new Date(2013, 12, 31)]))
             .y(d3.scale.linear().domain([-200, 400]))
             .r(d3.scale.linear().domain([0, 200]))
             .elasticY(true)
@@ -359,9 +359,9 @@
                 }
             ])
             .sortBy(function (d) {
-              return d.day;
+              return d.day.getTime();
             })
-            .order(d3.ascending)
+            //.order(d3.descending)
             .renderlet(function (table) {
               table.selectAll(".dc-table-group").classed("info", true);
             });

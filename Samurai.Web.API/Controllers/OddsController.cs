@@ -38,7 +38,7 @@ namespace Samurai.Web.API.Controllers
     [ActionName("todays-tennis-odds")]
     public async Task<HttpResponseMessage> GetTodaysTennisOdds()
     {
-      TennisOddsDateArgs requestArgs = null; // new TennisOddsDateArgs() { Day = 26, Month = 02, Year = 2013 }; 
+      TennisOddsDateArgs requestArgs = null; // new TennisOddsDateArgs() { Day = 06, Month = 08, Year = 2013 }; 
       var request = new RequestWrapper<TennisOddsDateArgs>(Request, requestArgs);
       return await this.bus
                        .RequestReply(request);

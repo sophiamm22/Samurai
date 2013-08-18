@@ -12,6 +12,7 @@
 
     ValueCalculator.prototype = function () {
       var calculateValue = function (footballSchedules, tennisSchedules) {
+
         var footballBets = _.filter(footballSchedules, function (schedule) {
           return schedule.hasQualifyingBet();
         });

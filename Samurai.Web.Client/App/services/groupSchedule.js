@@ -16,18 +16,6 @@
         isSelected: ko.observable()
       });
 
-      if (footballSchedules.length > 0) {
-        sched.push({
-          caption: 'Football',
-          sport: 'Football',
-          sportSlug: 'football',
-          competition: '',
-          competitionSlug: '',
-          hash: hashSport + '/football',
-          isSelected: ko.observable()
-        });
-        reduceSchedules(footballSchedules, sched, 'Football');
-      }
       if (tennisSchedules.length > 0) {
         sched.push({
           caption: 'Tennis',
@@ -39,6 +27,19 @@
           isSelected: ko.observable()
         });
         reduceSchedules(tennisSchedules, sched, 'Tennis');
+      }
+
+      if (footballSchedules.length > 0) {
+        sched.push({
+          caption: 'Football',
+          sport: 'Football',
+          sportSlug: 'football',
+          competition: '',
+          competitionSlug: '',
+          hash: hashSport + '/football',
+          isSelected: ko.observable()
+        });
+        reduceSchedules(footballSchedules, sched, 'Football');
       }
 
       return sched;

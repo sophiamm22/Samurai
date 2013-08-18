@@ -19,7 +19,7 @@
           return groupSchedule.schedulesToHeadings(todaysFootballSchedules(), todaysTennisSchedules());
         }),
         
-        calculateValue = function(){
+        calculateValue = function () {
           var betPercentages = valueCalculator.calculateValue(todaysFootballSchedules(), todaysTennisSchedules());
           var schedules = _.union(todaysFootballSchedules(), todaysTennisSchedules());
           schedules.forEach(function (schedule) {

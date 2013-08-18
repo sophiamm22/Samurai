@@ -38,7 +38,7 @@ namespace Samurai.Web.API.Controllers
     [ActionName("todays-tennis-schedule")]
     public async Task<HttpResponseMessage> GetTodaysTennisSchedule()
     {
-      TennisScheduleDateArgs requestArgs = null; // new TennisScheduleDateArgs() { Day = 26, Month = 02, Year = 2013 }; 
+      TennisScheduleDateArgs requestArgs = null; // new TennisScheduleDateArgs() { Day = 06, Month = 08, Year = 2013 }; 
       var request = new RequestWrapper<TennisScheduleDateArgs>(Request, requestArgs);
       return await this.bus
                        .RequestReply(request);

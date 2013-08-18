@@ -468,7 +468,7 @@
       tennisMatch.hasQualifyingBet = ko.computed(function () {
         if (tennisMatch.predictions().playerAGames() < config.minTennisGames || tennisMatch.predictions().playerBGames() < config.minTennisGames) { return false; }
         var bestBet = _.max([tennisMatch.homeWinEdge(), tennisMatch.awayWinEdge()]);
-        return bestBet >= config.kellyMultiplier; //need to have this stored somewhere      
+        return bestBet >= config.minEdgeTennis; //need to have this stored somewhere      
       });
 
       tennisMatch.valueOutcome = ko.computed(function () {

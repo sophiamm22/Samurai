@@ -3,7 +3,7 @@
     <h2 class="page-title"><span>Value Samurai</span></h2>
     <h1>Automated Betting Value Calculator</h1>
     <p>We take <strong>tennis</strong> and <strong>football</strong> predicitons from <a href="http://www.tennisbetting365.com">Tennis Betting 365</a> and <a href="http://www.dectech.co.uk/football.html">Decision Technology</a>, respectively.</p>
-    <p>We calculate the best value bets from a variety of bookmakers <em>and</em> betting exchanges.</p>
+    <p>We calculate the best value bets from a variety of bookmakers and betting exchanges.</p>
     <p>This project is <strong>open source</strong>. If you'd like to contribute, please visit our <a href="https://github.com/martinstaniforth/Samurai">GitHub repository</a>.</p>
     <p>For further information, follow our blog.</p>
     <h3 class="page-title"><span data-bind="text: title"></span></h3>
@@ -30,39 +30,6 @@
         </li>
       </ul>
     </nav>
-    <section class="view-list" data-bind="foreach: todaysFootballSchedules">
-      <article class="article-left-content">
-        <div>
-          <small data-bind="text: league" class="left"></small>
-          <small data-bind="text: matchTime" class="right"></small>
-          <div class="row">
-            <div class="span3 offset1"><h3 data-bind="text: homeTeam" class="text-right page-title"></h3></div>
-            <div class="span2"><p class="text-center vs">vs.</p></div>
-            <div class="span4"><h3 data-bind="text: awayTeam" class="text-left page-title"></h3></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1"><p class="text-right">Home win</p></div>
-            <div class="span2"><p class="text-center">Draw</p></div>
-            <div class="span4"><p class="text-left">Away win</p></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1"><p data-bind="text: homeWinProb" class="text-right"></p></div>
-            <div class="span2"><p data-bind="text: drawProb" class="text-center"></p></div>
-            <div class="span4"><p data-bind="text: awayWinProb" class="text-left"></p></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
-            <div class="span2 text-center"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div>
-            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div>
-          </div>
-          <div class="row">
-            <div class="span10 text-center">
-              <span class="advice" data-bind="text: temporaryBetCaption"></span>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
     <section class="view-list" data-bind="foreach: todaysTennisSchedules">
       <article class="article-left-content">
         <div>
@@ -87,6 +54,39 @@
             <div class="span3 offset1"><p data-bind="text: playerAGames" class="text-right"></p></div>
             <div class="span2 text-center"><p>Matches (last 18 months)</p></div>
             <div class="span4"><p data-bind="text: playerBGames" class="text-left"></p></div>
+          </div>
+          <div class="row">
+            <div class="span10 text-center">
+              <span class="advice" data-bind="text: temporaryBetCaption"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+        <section class="view-list" data-bind="foreach: todaysFootballSchedules">
+      <article class="article-left-content">
+        <div>
+          <small data-bind="text: league" class="left"></small>
+          <small data-bind="text: matchTime" class="right"></small>
+          <div class="row">
+            <div class="span3 offset1"><h3 data-bind="text: homeTeam" class="text-right page-title"></h3></div>
+            <div class="span2"><p class="text-center vs">vs.</p></div>
+            <div class="span4"><h3 data-bind="text: awayTeam" class="text-left page-title"></h3></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p class="text-right">Home win</p></div>
+            <div class="span2"><p class="text-center">Draw</p></div>
+            <div class="span4"><p class="text-left">Away win</p></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1"><p data-bind="text: homeWinProb" class="text-right"></p></div>
+            <div class="span2"><p data-bind="text: drawProb" class="text-center"></p></div>
+            <div class="span4"><p data-bind="text: awayWinProb" class="text-left"></p></div>
+          </div>
+          <div class="row">
+            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
+            <div class="span2 text-center"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div>
+            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div>
           </div>
           <div class="row">
             <div class="span10 text-center">

@@ -269,6 +269,10 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\dc.css" />
     <Content Include="Content\durandal.css" />
     <Content Include="Content\font-awesome-ie7.css" />
@@ -277,9 +281,15 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\ie10mobile.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\bottom-paint.png" />
     <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\ios-startup-image-landscape.png" />
+    <Content Include="Content\images\ios-startup-image-portrait.png" />
+    <Content Include="Content\images\lightpaper-1.png" />
+    <Content Include="Content\images\lightpaper-2.png" />
+    <Content Include="Content\images\search.png" />
+    <Content Include="Content\images\top-paint.png" />
+    <Content Include="Content\images\val-sam.png" />
     <Content Include="Content\styles.css">
       <DependentUpon>styles.less</DependentUpon>
     </Content>
@@ -302,13 +312,13 @@
     <Content Include="Scripts\App\predictions.js">
       <DependentUpon>predictions.coffee</DependentUpon>
     </Content>
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\Performance.csv" />
+    <Content Include="Content\styles.less" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.eot" />
     <Content Include="Content\font\FontAwesome.otf" />
-    <Content Include="Content\toastr.less" />
-    <Content Include="Content\Performance.csv" />
-    <Content Include="Content\styles.less" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -323,7 +333,6 @@
       <DependentUpon>dc.js</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
-    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\dc.js" />
     <Content Include="Scripts\dc.min.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
@@ -359,7 +368,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\HotTowel\index.cshtml" />
     <Content Include="Views\HotTowel\_splash.cshtml" />
-    <Content Include="Scripts\jquery-2.0.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

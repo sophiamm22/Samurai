@@ -1,25 +1,43 @@
 ﻿﻿define(function () {
   toastr.options.timeOut = 4000;
-  toastr.options.positionClass = 'toaster-bottom-right';
+  toastr.options.positionClass = 'toast-bottom-right';
 
   var routes = [{
     url: 'today',
     moduleId: 'viewmodels/today',
     name: 'Today',
     visible: true,
-    caption: 'Today'
+    caption: 'Today',
+    settings: {
+      id:'today-button'
+    }
   }, {
     url: 'performance',
     moduleId: 'viewmodels/performance',
     name: 'Performance',
-    visible: true
-  }, {
-    url: 'admin',
-    moduleId: 'viewmodels/admin',
-    name: 'Admin',
     visible: true,
-    settings: { admin: true }
+    caption: 'Performance',
+    settings: {
+      id: 'performance-button'
+    }
   }, {
+    url: 'free-bets',
+    moduleId: 'viewmodels/today',
+    name: 'Free Bets',
+    visible: true,
+    caption: 'Free Bets',
+    settings: {
+      id:'free-bets-button'
+    }
+  },
+  //{
+  //  url: 'admin',
+  //  moduleId: 'viewmodels/admin',
+  //  name: 'Admin',
+  //  visible: true,
+  //  settings: { admin: true }
+  //},
+  {
     url: 'today/competition/:competition',
     moduleId: 'viewmodels/today',
     name: 'Today'

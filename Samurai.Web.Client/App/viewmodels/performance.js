@@ -99,7 +99,7 @@
               var playerBetOn = v.ExpectedMatchOutcome == 'Home Win' ? v.PlayerASurname : v.PlayerBSurname;
               var playerBetAgainst = v.ExpectedMatchOutcome == 'Home Win' ? v.PlayerBSurname : v.PlayerASurname;
 
-              p.matches[playerBetOn + ' to bt. ' + playerBetAgainst] = playerBetOn + ' to bt. ' + playerBetAgainst + ' @ ' + v.TournamentName + (betWon ? ' WON ' : ' LOST ') + ' ($' + numberFormat(v.flatProfit) + ')';
+              p.matches[playerBetOn + ' to bt. ' + playerBetAgainst] = playerBetOn + ' to bt. ' + playerBetAgainst + ' @ ' + v.TournamentName + (betWon ? ' WON ' : ' LOST ') + ' (£' + numberFormat(v.flatProfit) + ')';
 
               return p;
             },
@@ -188,7 +188,7 @@
               return p.value.stake;
             })
             .maxBubbleRelativeSize(.02)
-            .x(d3.scale.linear().domain([new Date(2012, 12, 01), new Date(2013, 12, 31)]))
+            .x(d3.scale.linear().domain([new Date(2012, 12, 01), new Date(2013, 08, 31)]))
             .y(d3.scale.linear().domain([-200, 400]))
             .r(d3.scale.linear().domain([0, 200]))
             .elasticY(true)
@@ -215,7 +215,7 @@
           return (new Date(s)).toLocaleDateString();
         });
         dailyBubbleChart.yAxis().tickFormat(function (s) {
-          return '$' + s;
+          return '£' + s;
         })
 
 
@@ -382,7 +382,7 @@
         bets += d.value.bets;
       });
       $('#outcome').fadeOut(function () {
-        $(this).text(bets + ' bets, totalling $' + numberWithCommas(stakes.toFixed(2)) + ', returned a ' + (profit >= 0 ? 'profit' : 'loss') + ' of $' + numberWithCommas(profit.toFixed(2)) + ' giving an ROI of ' + (stakes == 0 ? '0' : (profit * 100 / stakes).toFixed(2)) + '%')
+        $(this).text(bets + ' bets, totalling £' + numberWithCommas(stakes.toFixed(2)) + ', returned a ' + (profit >= 0 ? 'profit' : 'loss') + ' of £' + numberWithCommas(profit.toFixed(2)) + ' giving an ROI of ' + (stakes == 0 ? '0' : (profit * 100 / stakes).toFixed(2)) + '%')
       }).fadeIn();
     }
 

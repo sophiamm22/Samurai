@@ -1,20 +1,25 @@
-﻿<nav class="navbar navbar-fixed-top">
-    <a id="fork-me" href="https://github.com/martinstaniforth/Samurai"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    <div class="navbar-inner">
-        <a class="brand" href="/">
-            <span class="title">Value Samurai</span> 
-        </a>
-        <div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
-            <div class="progress progress-striped active page-progress-bar">
-                <div class="bar" style="width: 100px;"></div>
-            </div>
-        </div>
-      </div>
-    <div class="navbar-inner navbar-secondary">    
-        <div class="btn-group" data-bind="foreach: router.visibleRoutes">
-            <a data-bind="css: { active: isActive }, attr: { href: hash }, text: name" 
-                class="btn btn-info" href="#"></a>
-        </div>
-
+﻿<nav class="navbar white-paper">
+	<div class="navbar-inner text-center">
+    <div class="btn-group" data-bind="foreach: router.visibleRoutes">
+        <a data-bind="css: { active: isActive }, attr: { href: hash, id: settings.id }, text: name" 
+            class="btn btn-info top-navo" href="#/"></a>
     </div>
+    <!--<div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
+      <div class="progress progress-striped active page-progress-bar">
+        <div class="bar" style="width: 100px;"></div>
+      </div>
+    </div>-->
+	</div>
+	<img id="top-paint" src="content/images/top-paint.png" alt="top-paint" />
 </nav>
+<header>
+	<div id="elevator-pitch" class="white-paper">
+		<h2 class="page-title"><img id="val-sam" src="content/images/val-sam.png" alt="Value Samurai" /></h2>
+			<h1>Automated Betting Value Calculator</h1>
+			<p>We take <strong>tennis</strong> and <strong>football</strong> predictions from <a href="http://www.tennisbetting365.com">Tennis Betting 365</a> and <a href="http://www.dectech.co.uk/football.html">Decision Technology</a>, respectively.</p>
+    	<p>We calculate the best value bets from a variety of bookmakers and betting exchanges.</p>
+			<p>This project is (soon to be) <strong>open source</strong>. If you'd like to contribute, please visit our <a href="https://github.com">GitHub repository</a>.</p>
+    	<p>For further information, follow our blog.</p>			    
+	</div>
+	<img id="bottom-paint" src="content/images/bottom-paint.png" alt="top-paint" />
+</header>

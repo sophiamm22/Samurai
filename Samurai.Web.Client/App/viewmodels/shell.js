@@ -8,6 +8,7 @@
       });
 
       var shell = {
+        viewAttached: viewAttached,
         activate: activate,
         adminRoutes: adminRoutes,
         router: router
@@ -16,6 +17,20 @@
       return shell;
 
       //#region Internal Methods
+      function viewAttached(view) {
+        attachScrollEvent('#free-bets-button', '#free-bets');
+        attachScrollEvent('#today-button', '#insert-sections');
+        attachScrollEvent('#performance-button', '#insert-sections');
+      }
+
+      function attachScrollEvent(scrollFrom, scrollTo) {
+        $(scrollFrom).click(function () {
+          $('html, body').animate({
+            scrollTop:($(scrollTo).position().top - 60)
+          }, 'slow')
+        });
+      }
+
       function activate() {
         return datacontext.primeData()
           .then(boot)

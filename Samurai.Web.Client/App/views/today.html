@@ -1,100 +1,111 @@
-﻿<section id="sessions-view" class="view">
-  <header>
-    <h2 class="page-title"><span>Value Samurai</span></h2>
-    <h1>Automated Betting Value Calculator</h1>
-    <p>We take <strong>tennis</strong> and <strong>football</strong> predicitons from <a href="http://www.tennisbetting365.com">Tennis Betting 365</a> and <a href="http://www.dectech.co.uk/football.html">Decision Technology</a>, respectively.</p>
-    <p>We calculate the best value bets from a variety of bookmakers and betting exchanges.</p>
-    <p>This project is <strong>open source</strong>. If you'd like to contribute, please visit our <a href="https://github.com/martinstaniforth/Samurai">GitHub repository</a>.</p>
-    <p>For further information, follow our blog.</p>
-    <h3 class="page-title"><span data-bind="text: title"></span></h3>
-    <div class="article-counter">
-      <address data-bind="text: todaysMatchesCount"></address>
-      <address>found</address>
-    </div>
-  </header>
-  <div class="filter-box-container">
-    <input class="filter-box"
-           data-bind="value: betFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
-           placeholder="filter by team, player, league, competition or sport" type="text" />
-    <a class="clear-text" data-bind="click: clearFilter" title="Clear"></a>
-  </div>
-  <a class="btn btn-info btn-force-refresh pull-right" 
-      data-bind="click: calculateValue" href="#"><i class="icon-refresh"></i> Calculate Bets</a>
-  <section id="today">
+﻿<div id="todays-matches-anchor" class="main-content-info">
+	<h2 class="text-center">Today's Matches</h2>
+	<p>We calculate today's value bets using the simultaneous <a href="http://en.wikipedia.org/wiki/Kelly_criterion">Kelly Criterion</a>.</p>
+	<p>Where more than <span>9</span> bets occur in a single day we switch to Chris Whitrow's <a href="http://www.academia.edu/1027427/Algorithms_for_optimal_allocation_of_bets_on_many_simultaneous_events">algorithm</a> for estimated bet sizes.</p>
+</div>	
+<div class="main-banner-container text-center">
+	<div class="main-banner">
+
+	</div>
+</div>
+		
+<div class="row">
+	<div class="col-lg-3">
     <nav>
-      <ul data-bind="foreach: competitions">
-        <li class="route-left" data-bind="css: {'route-active': isSelected()}">
-          <a data-bind="attr: { href: hash }">
+      <ul id="side-bar" class="nav nav-pills nav-stacked" data-bind="foreach: competitions">
+        <li data-bind="css: { 'active': isSelected() }">
+          <a>
             <span data-bind="text: caption, click: $parent.selectGrouping"></span>
+            <span class="pull-right"><i class="icon-chevron-right"></i></span>
           </a>
         </li>
       </ul>
     </nav>
-    <section class="view-list" data-bind="foreach: todaysTennisSchedules">
-      <article class="article-left-content">
-        <div>
-          <small data-bind="text: tournament" class="left"></small>
-          <small data-bind="text: matchTime" class="right"></small>
+	</div>
+	<div class="col-lg-9">
+    <div class="filter-box-container">
+      <input class="filter-box"
+              data-bind="value: betFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
+              placeholder="filter by team, player, league, competition or sport" type="text" />
+      <a class="clear-text" data-bind="click: clearFilter" title="Clear"><i class="icon-remove"></i></a>
+    </div>
+    <div id="action-wrapper">
+      <a id="calculate-value" class="btn btn-info btn-force-refresh pull-right" 
+          data-bind="click: calculateValue" href="#"><i class="icon-refresh"></i> Calculate Bets</a>
+      <div class="match-counter">
+        <span data-bind="text: todaysMatchesCount"></span>
+        <span>found</span>
+      </div>
+    </div>
+		<section id="matches-collection-tennis" data-bind="foreach: todaysTennisSchedules">
+			<div class="match">
+				<div class="match-header">
+					<small class="pull-left" data-bind="text: tournament"></small>
+					<small class="pull-right" data-bind="text: matchTime"></small>
+				</div>
+				<div class="match-content">
+					<div class="row">
+					  <div class="col-lg-4 text-right"><div class="team" data-bind="text: homeTeam"></div></div>
+					  <div class="col-lg-4 text-center"><div class="vs">vs.</div></div>
+					  <div class="col-lg-4 text-left"><div class="team" data-bind="text: awayTeam"></div></div>
+					</div>
+					<div class="row">
+					  <div class="col-lg-4 text-right"><div class="prob" data-bind="text: playerAWinProb"></div></div>
+					  <div class="col-lg-4 text-center"><div class="prob"></div></div>
+					  <div class="col-lg-4 text-left"><div class="prob" data-bind="text: playerBWinProb"></div></div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
+						<div class="col-lg-4 text-center"><div class="odd">Best Odds</div></div>
+						<div class="col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
+					</div>
+					<div class="row" data-bind="with: predictions">
+						<div class="col-lg-4 text-right"><div class="match-count" data-bind="text: playerAGames"></div></div>
+						<div class="col-lg-4 text-center"><div class="match-count">Matches (last 18 months)</div></div>
+						<div class="col-lg-4 text-left"><div class="match-count" data-bind="text: playerBGames"></div></div>
+					</div>
           <div class="row">
-            <div class="span3 offset1"><h3 data-bind="text: homeTeam" class="text-right page-title"></h3></div>
-            <div class="span2"><p class="text-center vs">vs.</p></div>
-            <div class="span4"><h3 data-bind="text: awayTeam" class="text-left page-title"></h3></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1"><p data-bind="text: playerAWinProb" class="text-right"></p></div>
-            <div class="span2"><p></p></div>
-            <div class="span4"><p data-bind="text: playerBWinProb" class="text-left"></p></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
-            <div class="span2 text-center"><p>Best Odds</p></div>
-            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target:'_blank' }, text: awayWinOdds"></a></div>
-          </div>
-          <div class="row" data-bind="with: predictions">
-            <div class="span3 offset1"><p data-bind="text: playerAGames" class="text-right"></p></div>
-            <div class="span2 text-center"><p>Matches (last 18 months)</p></div>
-            <div class="span4"><p data-bind="text: playerBGames" class="text-left"></p></div>
-          </div>
-          <div class="row">
-            <div class="span10 text-center">
+            <div class="col-lg-12 text-center">
               <span class="advice" data-bind="text: temporaryBetCaption"></span>
             </div>
-          </div>
-        </div>
-      </article>
-    </section>
-        <section class="view-list" data-bind="foreach: todaysFootballSchedules">
-      <article class="article-left-content">
-        <div>
-          <small data-bind="text: league" class="left"></small>
-          <small data-bind="text: matchTime" class="right"></small>
+          </div>	
+				</div>
+			</div>	 <!--Match div-->		
+		</section>
+    <section id="matches-collection-football" data-bind="foreach: todaysFootballSchedules">
+			<div class="match">
+				<div class="match-header">
+					<small class="pull-left" data-bind="text: league"></small>
+					<small class="pull-right" data-bind="text: matchTime"></small>
+				</div>
+				<div class="match-content">
+					<div class="row">
+					  <div class="col-lg-4 text-right"><div class="team" data-bind="text: homeTeam"></div></div>
+					  <div class="col-lg-4 text-center"><div class="vs">vs.</div></div>
+					  <div class="col-lg-4 text-left"><div class="team" data-bind="text: awayTeam"></div></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 text-right"><div class="outcome">Home win</div></div>
+						<div class="col-lg-4 text-center"><div class="outcome">Draw</div></div>
+						<div class="col-lg-4 text-left"><div class="outcome">Away win</div></div>
+					</div>								
+					<div class="row">
+					  <div class="col-lg-4 text-right"><div class="prob" data-bind="text: homeWinProb"></div></div>
+					  <div class="col-lg-4 text-center"><div class="prob" data-bind="text: drawProb"></div></div>
+					  <div class="col-lg-4 text-left"><div class="prob" data-bind="text: awayWinProb"></div></div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
+						<div class="col-lg-4 text-center"><div class="odd"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div></div>
+						<div class="col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
+					</div>
           <div class="row">
-            <div class="span3 offset1"><h3 data-bind="text: homeTeam" class="text-right page-title"></h3></div>
-            <div class="span2"><p class="text-center vs">vs.</p></div>
-            <div class="span4"><h3 data-bind="text: awayTeam" class="text-left page-title"></h3></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1"><p class="text-right">Home win</p></div>
-            <div class="span2"><p class="text-center">Draw</p></div>
-            <div class="span4"><p class="text-left">Away win</p></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1"><p data-bind="text: homeWinProb" class="text-right"></p></div>
-            <div class="span2"><p data-bind="text: drawProb" class="text-center"></p></div>
-            <div class="span4"><p data-bind="text: awayWinProb" class="text-left"></p></div>
-          </div>
-          <div class="row">
-            <div class="span3 offset1 text-right"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div>
-            <div class="span2 text-center"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div>
-            <div class="span4 text-left"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div>
-          </div>
-          <div class="row">
-            <div class="span10 text-center">
+            <div class="col-lg-12 text-center">
               <span class="advice" data-bind="text: temporaryBetCaption"></span>
             </div>
-          </div>
-        </div>
-      </article>
+          </div>				
+				</div>
+			</div>	 <!--Match div-->	
     </section>
-  </section>
-</section>
+	</div>
+</div>

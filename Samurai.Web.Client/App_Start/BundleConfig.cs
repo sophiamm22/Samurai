@@ -56,8 +56,8 @@ namespace Samurai.Web.Client
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap.css")
-          .Include("~/Content/bootstrap-responsive.css")
+          .Include("~/Content/bootstrap/bootstrap.css")
+          //.Include("~/Content/bootstrap/bootstrap-theme.css")
           .Include("~/Content/font-awesome.min.css")
           .Include("~/Content/durandal.css")
           .Include("~/Content/toastr.css")

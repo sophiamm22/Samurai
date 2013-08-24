@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Services", "Samurai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Domain.Entities", "Samurai.Domain.Entities\Samurai.Domain.Entities.csproj", "{805325F9-8997-4247-B5C7-36476609F616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Tests", "Samurai.Tests\Samurai.Tests.csproj", "{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72C47E48-76BF-482F-9B2C-F6454AF41708}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -67,10 +65,6 @@ Global
 		{805325F9-8997-4247-B5C7-36476609F616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{805325F9-8997-4247-B5C7-36476609F616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{805325F9-8997-4247-B5C7-36476609F616}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E885E0C6-3082-4B26-96AD-ECE45C90CC1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU

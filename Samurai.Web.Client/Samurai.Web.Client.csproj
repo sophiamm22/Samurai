@@ -301,14 +301,14 @@
     <Content Include="D3 LICENSE.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="App\services\kelly.js">
+    <Content Include="Scripts\App\kelly.js">
       <DependentUpon>kelly.coffee</DependentUpon>
     </Content>
-    <Content Include="App\services\kelly.min.js">
+    <Content Include="Scripts\App\kelly.min.js">
       <DependentUpon>kelly.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\App\predictions.coffee" />
-    <Content Include="App\services\kelly.coffee" />
+    <Content Include="Scripts\App\kelly.coffee" />
     <Content Include="Scripts\App\predictions.js">
       <DependentUpon>predictions.coffee</DependentUpon>
     </Content>
@@ -341,6 +341,8 @@
     <Content Include="Scripts\jquery.signalR-1.1.2.min.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="Scripts\knockout-2.3.0.debug.js" />
+    <Content Include="Scripts\knockout-2.3.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
@@ -349,7 +351,6 @@
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
     <Content Include="Scripts\toastr.js" />
-    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
     <Content Include="Scripts\_references.js" />

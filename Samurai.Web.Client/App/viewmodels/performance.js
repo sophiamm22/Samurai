@@ -162,6 +162,9 @@
         //#endregion
 
         //#region Charts
+        var dateLow = new Date(2012, 12, 01);
+        var dateHigh = new Date(2013, 8, 15);
+
         dailyBubbleChart.width(1200)
             .height(300)
             .margins({
@@ -188,7 +191,7 @@
               return p.value.stake;
             })
             .maxBubbleRelativeSize(.02)
-            .x(d3.scale.linear().domain([new Date(2012, 12, 01), new Date(2013, 08, 31)]))
+            .x(d3.scale.linear().domain([dateLow, dateHigh]))
             .y(d3.scale.linear().domain([-200, 400]))
             .r(d3.scale.linear().domain([0, 200]))
             .elasticY(true)

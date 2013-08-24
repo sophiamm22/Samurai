@@ -1,4 +1,5 @@
-﻿﻿define(
+﻿define('services/jsonResultsAdapter',
+
   new breeze.JsonResultsAdapter({
     name: "samurai",
 
@@ -35,4 +36,6 @@
       //  return { entityType: 'TennisOdd' };
       //}
     }
-  }));
+  })
+
+);

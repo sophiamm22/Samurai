@@ -17,23 +17,24 @@ namespace Samurai.Web.Client
         .Include("~/Scripts/modernizr-{version}.js"));
 
       // jQuery
-      bundles.Add(new ScriptBundle("~/bundles/jquery",
-          "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+      bundles.Add(new ScriptBundle("~/scripts/jquery",
+          "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.js")
           .Include("~/Scripts/jquery-{version}.js"));
 
 
       bundles.Add(
         new ScriptBundle("~/scripts/vendor")
-          .Include("~/scripts/jquery-{version}.js")
+          .Include("~/scripts/sammy-{version}.min.js")
+          //.Include("~/scripts/jquery-{version}.js")
           .Include("~/scripts/knockout-{version}.debug.js")
-          .Include("~/scripts/sammy-{version}.js")
           .Include("~/scripts/toastr.js")
           .Include("~/scripts/Q.js")
           .Include("~/scripts/breeze.debug.js")
           .Include("~/scripts/bootstrap.js")
+          
+          .Include("~/scripts/d3.v3.js")
           .Include("~/scripts/moment.js")
           .Include("~/scripts/underscore.js")
-          .Include("~/scripts/d3.v3.js")
         );
 
       bundles.Add(
@@ -42,14 +43,14 @@ namespace Samurai.Web.Client
         );
 
       bundles.Add(
-        new ScriptBundle("~/scripts/dc",
-          "//cdnjs.cloudflare.com/ajax/libs/dc/1.3.0/dc.min.js")
+        new ScriptBundle("~/scripts/dc")//,
+          //"//cdnjs.cloudflare.com/ajax/libs/dc/1.3.0/dc.min.js") ////cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js
           .Include("~/Scripts/dc.js")
         );
 
       bundles.Add(
-        new ScriptBundle("~/scripts/crossfilter",
-          "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js")
+        new ScriptBundle("~/scripts/crossfilter")//,
+          /* "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js") */
           .Include("~/Scripts/crossfilter.js")
         );
 
@@ -64,6 +65,9 @@ namespace Samurai.Web.Client
           .Include("~/Content/app.css")
           .Include("~/Content/dc.css")
         );
+
+      BundleTable.EnableOptimizations = true;
+
       //bundles.Add(new Bundle("~/Content/Less", new LessTransform(), new CssMinify())
       //    .Include("~/Content/styles.less"));
     }

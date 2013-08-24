@@ -11,6 +11,7 @@
   "mainConfigFile": "C:\\Git\\Samurai\\Samurai.Web.Client\\App\\main.js",
   "include": [
     "config",
+    "main-built",
     "main",
     "durandal/app",
     "durandal/composition",
@@ -31,8 +32,6 @@
     "services/filter",
     "services/groupSchedule",
     "services/jsonResultsAdapter",
-    "services/kelly",
-    "services/kelly.min",
     "services/kellyCalcs",
     "services/logger",
     "services/model",

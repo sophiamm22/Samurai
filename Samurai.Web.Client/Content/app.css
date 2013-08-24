@@ -186,6 +186,11 @@ p {
   padding-top: 150px;
 }
 
+.advice {
+  font-weight:bold;
+  font-size:1.2em;
+}
+
 .active{
   font-weight:bold;
   font-size:1.29em;

@@ -49,9 +49,8 @@
 
   var startModule = 'today';
 
-  var remoteServiceName = 'http://localhost:3600/api';
-
-  var signalrServiceName = 'http://localhost:3600/signalr';
+  var remoteServiceName = location.hostname.match('localhost') ? 'http://localhost:3600/api' : 'http://samuraiapi.apphb.com/api';
+  var signalrServiceName = location.hostname.match('localhost') ? 'http://localhost:3600/signalr' : 'http://samuraiapi.apphb.com/signalr';
 
   var hashes = {
     today: '#/today',

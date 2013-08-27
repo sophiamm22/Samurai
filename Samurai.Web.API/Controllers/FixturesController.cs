@@ -24,6 +24,13 @@ namespace Samurai.Web.API.Controllers
       this.bus = bus;
     }
 
+    [HttpGet]
+    [ActionName("ping")]
+    public HttpResponseMessage Ping()
+    {
+      return Request.CreateResponse<string>(HttpStatusCode.OK, "Ping!");
+    }
+
     [HttpPost]
     [ActionName("fetch-tennis-schedule")]
     public async Task<HttpResponseMessage> FetchTennisSchedules(TennisScheduleDateArgs commandArgs)

@@ -1,5 +1,6 @@
 using System;
 using System.Web.Optimization;
+using Samurai.Web.Client.App_Start;
 
 namespace Samurai.Web.Client
 {
@@ -31,7 +32,6 @@ namespace Samurai.Web.Client
           .Include("~/scripts/Q.js")
           .Include("~/scripts/breeze.debug.js")
           .Include("~/scripts/bootstrap.js")
-          
           .Include("~/scripts/d3.v3.js")
           .Include("~/scripts/moment.js")
           .Include("~/scripts/underscore.js")
@@ -53,7 +53,7 @@ namespace Samurai.Web.Client
           /* "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js") */
           .Include("~/Scripts/crossfilter.js")
         );
-
+      
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
@@ -65,7 +65,7 @@ namespace Samurai.Web.Client
           .Include("~/Content/app.css")
           .Include("~/Content/dc.css")
         );
-
+      
       BundleTable.EnableOptimizations = true;
 
       //bundles.Add(new Bundle("~/Content/Less", new LessTransform(), new CssMinify())

@@ -53,13 +53,23 @@ namespace Samurai.Web.Client
           /* "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.1.3/crossfilter.min.js") */
           .Include("~/Scripts/crossfilter.js")
         );
+
+      bundles.Add(
+        new StyleBundle("~/Content/bootstrap",
+          "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css")
+          .Include("~/Content/bootstrap/bootstrap.css"));
+
+      bundles.Add(
+        new StyleBundle("~/Content/fontawesome",
+          "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css")
+          .Include("~/Content/font-awesome.min.css"));
       
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap/bootstrap.css")
+          //.Include("~/Content/bootstrap/bootstrap.css")
           //.Include("~/Content/bootstrap/bootstrap-theme.css")
-          .Include("~/Content/font-awesome.min.css")
+          //.Include("~/Content/font-awesome.min.css")
           .Include("~/Content/durandal.css")
           .Include("~/Content/toastr.css")
           .Include("~/Content/app.css")

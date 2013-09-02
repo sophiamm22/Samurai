@@ -150,7 +150,6 @@
     <EmbeddedResource Include="TestData\20130206\æfootballæenglishæpremier-leaguehttp~ææwww.oddschecker.comæfootballæenglishæpremier-league.txt" />
     <EmbeddedResource Include="TestData\20130206\æfootballæfixtures-resultsæ06-february-2013.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellierhttp~ææwww.oddschecker.comætennisæatp-montpellier.txt" />
-    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinner.txt" />

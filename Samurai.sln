@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.SqlDataAccess", "Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{83CE8910-37AA-415A-954B-3E36F9701D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.WebPresentationModel", "Samurai.WebPresentationModel\Samurai.WebPresentationModel.csproj", "{4695755F-1CFA-46E3-9B01-672E21C36BD0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.ViewModels", "Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj", "{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Services", "Samurai.Services\Samurai.Services.csproj", "{7118D25C-F41F-4B1E-8F3B-739D25D86321}"
@@ -25,8 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.PresentationModel", "Samurai.Web.PresentationModel\Samurai.Web.PresentationModel.csproj", "{E24961E3-7619-4E38-9D87-F54763C811D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.Client", "Samurai.Web.Client\Samurai.Web.Client.csproj", "{BC8E5129-5233-4C97-9374-51B24AA44B8A}"
 EndProject
@@ -63,10 +59,6 @@ Global
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,10 +79,6 @@ Global
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU

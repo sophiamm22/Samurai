@@ -15,7 +15,7 @@ nav, section, summary, time, mark, audio, video
 /* #region Splash */
 .page-splash
 {
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     width: 100%;
@@ -48,6 +48,11 @@ nav, section, summary, time, mark, audio, video
 .page-progress-bar {
     margin: 10% 30% 0 30%;
 }
+.splash-wrapper{
+  background-color: rgba(0,0,0,0.75);
+  padding-bottom: 30px;
+}
+
 /* #endregion */
 
 /* #region bootstrap overrides */
@@ -122,6 +127,19 @@ p {
   background-color:transparent;
 	border-color:transparent;
 }
+.progress-bar{
+  background-color:#B21B1B;
+}
+
+/* #endregion */
+
+/* #region toastr overrides */
+.toast-info {
+  background-color: #B21B1B;
+}
+.toast-message{
+  color:#ffffff;
+}
 /* #endregion */
 
 .white-paper{
@@ -151,7 +169,8 @@ p {
 	width: 100%;
 	margin-left: -3%;
 	margin-top: 0.7%;
-	overflow:hidden;
+	/*overflow:scroll;
+  -webkit-overflow-scrolling:touch;*/
 }
 #bottom-paint{
 	margin-top:-85px;
@@ -168,8 +187,9 @@ p {
   color: white;
 }
 
-#elevator-pitch h2 > img{
+.logo-img{
 	width: 260px;
+  height: 34px;
 	margin-top:4%;
 }
 #elevator-pitch p{
@@ -304,9 +324,11 @@ p {
 @media only screen and (max-width: 1200px) {
   body { font-size: 15px }
 
-  #elevator-pitch h2 > img{
-	  width: 220px;
+  .logo-img {
+    width: 220px;
+    height: 29px;
   }
+
   #elevator-pitch {
     height: 450px;
   }
@@ -317,7 +339,8 @@ p {
 @media only screen and (max-width: 1060px) {
   body { font-size: 13px }
 
-  #elevator-pitch h2 > img{
+  .logo-img {
 	  width: 180px;
+    height: 23px;
   }
 }

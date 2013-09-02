@@ -28,7 +28,7 @@
           filterResults(footballScheduleObservable, data.results, options.filter);
           //footballScheduleObservable(data.results);
         }
-        log('Retrieved todays football schedule from remote data source',
+        log('Fetched football schedule',
           data, true);
       }
     };
@@ -55,7 +55,7 @@
         if (footballOddsObservable) {
           footballOddsObservable(data.results);
         }
-        log('Retrieved todays football odds from remote data source',
+        log('Fetched football odds',
           data, true);
       }
     };
@@ -84,7 +84,7 @@
           filterResults(tennisScheduleObservable, data.results, options.filter);
           //tennisScheduleObservable(data.results);
         }
-        log('Retrieved todays tennis schedule from remote data source',
+        log('Fetched tennis schedule',
           data, true);
       }
     };
@@ -111,7 +111,7 @@
         if (tennisOddsObservable) {
           tennisOddsObservable(data.results);
         }
-        log('Retrieved todays tennis odds from remote data source',
+        log('Fetched tennis odds',
           data, true);
       }
     };

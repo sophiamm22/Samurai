@@ -38,7 +38,7 @@
       }
 
       function boot() {
-        log('Value Samurai loaded!', null, system.getModuleId(shell), true);
+        log('Fetching schedules..', null, system.getModuleId(shell), true);
         router.map(config.routes);
         return router.activate(config.startModule);
       }

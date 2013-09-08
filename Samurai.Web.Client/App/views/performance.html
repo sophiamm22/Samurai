@@ -4,61 +4,62 @@
   <p>We take bets with a perceived edge of 20% over bookmaker's prices, you are free to set your own parameters.</p>
   <p>Dectech football model and previous year's analysis coming soon...</p>
   <p id="outcome">Crunching the numbers, please be patient...</p>
-  <div class="row">
-    <div id="daily-bubble-chart" class="chart">
-      <strong>Daily bet performance</strong> (x: date, y: flat profit, radius: bet size)
-      <a class="reset" href="javascript:dailyBubbleChart.filterAll();dc.redrawAll('group');" style="display:none;">reset</a>
-      <div class="clearfix"></div>
+  <div class="white-section">
+    <div class="row">
+      <div id="daily-bubble-chart" class="chart">
+        <strong>Daily bet performance</strong> (x: date, y: flat profit, radius: bet size)
+        <a class="reset" href="javascript:dailyBubbleChart.filterAll();dc.redrawAll('group');" style="display:none;">reset</a>
+        <div class="clearfix"></div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div id="profit-or-loss-chart">
-      <strong>Bets by profit/loss</strong>
-      <a class="reset" href="javascript:profitOrLossChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+    <div class="row">
+      <div id="profit-or-loss-chart">
+        <strong>Bets by profit/loss</strong>
+        <a class="reset" href="javascript:profitOrLossChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
             
-      <div class="clearfix"></div>
-    </div>
-    <div id="bets-by-surface-chart">
-      <strong>Bets by surface</strong>
-      <a class="reset" href="javascript:betsBySurfaceChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+      </div>
+      <div id="bets-by-surface-chart">
+        <strong>Bets by surface</strong>
+        <a class="reset" href="javascript:betsBySurfaceChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
                     
-      <div class="clearfix"></div>
-    </div>
-    <div id="bets-by-series-chart">
-      <strong>Bets by series</strong>
-      <a class="reset" href="javascript:betsBySeriesChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+      </div>
+      <div id="bets-by-series-chart">
+        <strong>Bets by series</strong>
+        <a class="reset" href="javascript:betsBySeriesChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
                     
-      <div class="clearfix"></div>
-    </div>
-    <div id="edge-chart">
-      <strong>Bets by edge</strong>
-      <a class="reset" href="javascript:edgeChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+      </div>
+      <div id="edge-chart">
+        <strong>Bets by edge</strong>
+        <a class="reset" href="javascript:edgeChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
     
-      <div class="clearfix"></div>
-    </div>
-    <div id="games-played-chart">
-      <strong>Bets by min games played over 18 months</strong>
-      <a class="reset" href="javascript:gamesPlayedChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+      </div>
+      <div id="games-played-chart">
+        <strong>Bets by min games played over 18 months</strong>
+        <a class="reset" href="javascript:gamesPlayedChart.filterAll();dc.redrawAll('group');" style="display: none;">reset</a>
     
-      <div class="clearfix"></div>
-    </div>            
+        <div class="clearfix"></div>
+      </div>            
+    </div>
+    <div class="row">
+      <table class="table table-hover dc-data-table">
+        <thead>
+          <tr class="header">
+            <th>Date</th>
+            <th>Match</th>
+            <th>Probability</th>
+            <th>Odds</th>
+            <th>Bookmaker</th>
+            <th>Edge</th>
+            <th>Stake</th>
+            <th>Outcome</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
   </div>
-  <div class="row">
-    <table class="table table-hover dc-data-table">
-      <thead>
-        <tr class="header">
-          <th>Date</th>
-          <th>Match</th>
-          <th>Probability</th>
-          <th>Odds</th>
-          <th>Bookmaker</th>
-          <th>Edge</th>
-          <th>Stake</th>
-          <th>Outcome</th>
-          <th>Profit</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-
 </section>

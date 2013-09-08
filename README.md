@@ -14,7 +14,6 @@ I'd appreciate some help! But, please consider...
 
 * **Coding styles:** do as I do, unless what I do is stupid. In which case, please tell me why I am stupid
 * **Unit tests:** please try and do a better job at unit testing than me
-* **Admins:** if you are better at this than me, please offer your services as an admin
 
 ### Wish-list
 

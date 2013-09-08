@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-lg-3">
     <nav>
-      <ul id="side-bar" class="nav nav-pills nav-stacked" data-bind="foreach: competitions">
+      <ul id="side-bar" class="nav nav-pills nav-stacked white-section" data-bind="foreach: competitions">
         <li data-bind="css: { 'active': isSelected() }">
           <a>
             <span data-bind="text: caption, click: $parent.selectGrouping"></span>
@@ -22,7 +22,7 @@
       </ul>
     </nav>
 	</div>
-	<div class="col-lg-9">
+	<div class="col-lg-9 white-section">
     <div class="filter-box-container">
       <input class="filter-box"
               data-bind="value: betFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"

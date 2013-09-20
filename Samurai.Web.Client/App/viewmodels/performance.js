@@ -163,7 +163,7 @@
 
         //#region Charts
         var dateLow = new Date(2012, 12, 01);
-        var dateHigh = new Date(2013, 8, 15);
+        var dateHigh = new Date(2013, 10, 15);
 
         dailyBubbleChart.width(1200)
             .height(300)

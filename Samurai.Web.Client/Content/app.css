@@ -257,7 +257,10 @@ p {
 .main-content-info{
 	margin: 3% auto;
 }
-
+.margin-clear{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .main-banner{
 	background-color: rgba(0, 0, 0, 0.75);
 	border-radius: 4px;

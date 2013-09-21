@@ -19,12 +19,16 @@
       //#region Internal Methods
       function viewAttached(view) {
         attachScrollEvent('#free-bets-button', '#free-bets');
+        attachScrollEvent('#blog-button', '#free-bets', 'http://blog.valuesamurai.com');
         attachScrollEvent('#today-button', '#insert-sections');
         attachScrollEvent('#performance-button', '#insert-sections');
       }
 
-      function attachScrollEvent(scrollFrom, scrollTo) {
+      function attachScrollEvent(scrollFrom, scrollTo, navigateTo) {
         $(scrollFrom).click(function () {
+          if (navigateTo) {
+            window.open(navigateTo);
+          }
           $('html, body').animate({
             scrollTop:($(scrollTo).position().top - 60)
           }, 'slow')

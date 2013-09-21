@@ -27,7 +27,17 @@
     visible: true,
     caption: 'Free Bets',
     settings: {
-      id:'free-bets-button'
+      id: 'free-bets-button'
+    }
+  }, {
+    url: 'free-bets',
+    moduleId: 'viewmodels/today',
+    name: 'Blog',
+    visible: true,
+    caption: 'Free Bets',
+    settings: {
+      id: 'blog-button',
+      url: 'http://blog.valuesamurai.com'
     }
   },
   //{

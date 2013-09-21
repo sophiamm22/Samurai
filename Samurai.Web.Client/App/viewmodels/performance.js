@@ -163,15 +163,15 @@
 
         //#region Charts
         var dateLow = new Date(2012, 12, 01);
-        var dateHigh = new Date(2013, 10, 15);
+        var dateHigh = new Date(2013, 9, 30); //r.js will shit itself if you put a leading zero on any month
 
-        dailyBubbleChart.width(1200)
-            .height(300)
+        dailyBubbleChart.width(1100)
+            .height(400)
             .margins({
               top: 10,
               right: 50,
               bottom: 30,
-              left: 100
+              left: 50
             })
             .dimension(betsByDay)
             .group(betsByDayGroup)
@@ -192,10 +192,10 @@
             })
             .maxBubbleRelativeSize(.02)
             .x(d3.scale.linear().domain([dateLow, dateHigh]))
-            .y(d3.scale.linear().domain([-200, 400]))
-            .r(d3.scale.linear().domain([0, 200]))
+            .y(d3.scale.linear().domain([-300, 400]))
+            .r(d3.scale.linear().domain([0, 250]))
             .elasticY(true)
-            .xAxisPadding(300)
+            .xAxisPadding(0)
             .yAxisPadding(50)
             .renderHorizontalGridLines(true)
             .renderVerticalGridLines(true)
@@ -278,7 +278,7 @@
             .elasticX(true)
             .xAxis().ticks(4)
 
-        edgeChart.width(290)
+        edgeChart.width(260)
             .height(180)
             .margins({
               top: 10,
@@ -292,15 +292,15 @@
             .centerBar(true)
             .gap(1)
             .round(dc.round.floor)
-            .x(d3.scale.linear().domain([0, 120]))
+            .x(d3.scale.linear().domain([0, 150]))
             .renderHorizontalGridLines(true)
-            .filter([20, 120])
+            .filter([20, 150])
             .xAxis()
             .tickFormat(function (v) {
               return v;
             });
 
-        gamesPlayedChart.width(290)
+        gamesPlayedChart.width(260)
             .height(180)
             .margins({
               top: 10,
@@ -314,9 +314,9 @@
             .centerBar(true)
             .gap(1)
             .round(dc.round.floor)
-            .x(d3.scale.linear().domain([0, 120]))
+            .x(d3.scale.linear().domain([0, 150]))
             .renderHorizontalGridLines(true)
-            .filter([70, 120])
+            .filter([70, 150])
             .xAxis()
             .tickFormat(function (v) {
               return v;

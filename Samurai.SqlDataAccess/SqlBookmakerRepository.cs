@@ -37,6 +37,16 @@ namespace Samurai.SqlDataAccess
         return new Uri(couponData.CouponURL);
     }
 
+    public Uri GetTournamentCouponUrl(string tournament, string externalSource)
+    {
+      var couponData = GetQuery<TournamentCouponURL>(c => c.Tournament.TournamentName == tournament && c.ExternalSource.Source == externalSource)
+                        .FirstOrDefault();
+      if (couponData == null)
+        return null;
+      else
+        return new Uri(couponData.CouponURL);
+    }
+
     public IEnumerable<ExternalSource> GetActiveOddsSources()
     {
       return GetQuery<ExternalSource>(e => e.UseByDefault && e.OddsSource).OrderByDescending(x => x.PrescreenDecider).ToList();
@@ -108,7 +118,8 @@ namespace Samurai.SqlDataAccess
       var bookmakerAlias = GetQuery<BookmakerExternalSourceAlias>()
                               .Include(t => t.Bookmaker)
                               .Where(a => a.Alias == bookmakerNameSource &&
-                                          a.ExternalSource.Source == source.Source);
+                                          a.ExternalSource.Source == source.Source)
+                              .ToList();
 
       if (bookmakerAlias.Count() == 0)
         bookmakerNameDestination = bookmakerNameSource;
@@ -128,6 +139,19 @@ namespace Samurai.SqlDataAccess
       };
       Add<TournamentCouponURL>(tournamentCoupon);
       SaveChanges();
+    }
+
+    public void AddMissingTournamentCouponUrls(IEnumerable<MissingTournamentCouponURL> urls)
+    {
+      foreach (var url in urls)
+      {
+        var mtcu = GetQuery<MissingTournamentCouponURL>(x => x.ExternalSourceID == url.ExternalSourceID && x.TournamentID == url.TournamentID).FirstOrDefault();
+        if (mtcu == null)
+        {
+          Add<MissingTournamentCouponURL>(url);
+        }
+      }
+      this.SaveChanges();
     }
 
     public void SaveChanges()

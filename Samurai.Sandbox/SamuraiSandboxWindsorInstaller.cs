@@ -13,7 +13,7 @@ using Infrastructure.Data;
 using Samurai.SqlDataAccess;
 using Samurai.Domain.Repository;
 using Samurai.SqlDataAccess.Mapping;
-using Samurai.Services.AdminServices;
+using Samurai.Services;
 using Samurai.Domain.Value;
 using Samurai.Domain.Value.Excel;
 using Samurai.Domain.Model;
@@ -29,7 +29,7 @@ namespace Samurai.Sandbox
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
       var repositoryType = "SaveTestData";
-      var basePath = @"C:\My Box Files\";
+      var basePath = @"D:\My Box Files\";
 
       container.AddFacility<TypedFactoryFacility>();
 
@@ -51,30 +51,26 @@ namespace Samurai.Sandbox
                         }
                         ));
 
-      container.Register(Component
-                        .For<IBus>()
-                        .ImplementedBy<MessageBus>());
-
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<SqlPredictionRepository>()
                         .Where(t => t.Name.StartsWith("Sql") &&
                                     t.Name.EndsWith("Repository"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
-                        .FromAssemblyContaining<FootballFixtureAdminService>()
+      container.Register(Classes
+                        .FromAssemblyContaining<FootballFixtureService>()
                         .Where(t => t.Name.EndsWith("Service"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<GetTennisScheduleHandler>()
                         .Where(t => t.Name.EndsWith("Handler"))
                         .WithService
                         .AllInterfaces());
 
-      container.Register(AllTypes
+      container.Register(Classes
                         .FromAssemblyContaining<PredictionStrategyProvider>()
                         .Where(t => !t.Name.StartsWith("Excel"))
                         .WithService

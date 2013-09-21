@@ -26,7 +26,7 @@ namespace Samurai.SqlDataAccess.Mapping
       this.HasRequired(t => t.TeamsPlayerA)
           .WithMany(t => t.MatchesA)
           .HasForeignKey(d => d.TeamAID);
-      
+
     }
   }
 }

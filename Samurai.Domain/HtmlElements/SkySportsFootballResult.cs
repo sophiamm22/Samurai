@@ -31,8 +31,8 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<div class=æscore-subæ\>(?<KickOffTimeString>[^\<]+)\</div\>[^\<]+\<div class=æscore-compæ\>[\s\n]+(?<League>(Barclays Prem|Championship|League 1|League 2))[^\<]+\</div\>[^\<]+\<div class=æscore-side score-side1æ\>[\s\n]+(?<HomeTeam>[^\<]+)\<ul class=æscorersæ\>[^<]+(\<li\>[^\<]+\</li\>[^\<]+){1,}\</ul\>[^\<]+\</div\>[^\<]+\<div class=æscore-status score-postæ\>(?<Score>[^\<]+)\</div\>[^\<]+\<div class=æscore-side score-side2æ\>[\s\n]+(?<AwayTeam>[^\<]+)"),
-          new Regex(@"\<div class=æscore-subæ\>(?<KickOffTimeString>[^\<]+)\</div\>[^\<]+\<div class=æscore-compæ\>[\s\n]+(?<League>(Barclays Prem|Championship|League 1|League 2))[^\<]+\</div\>[^\<]+\<div class=æscore-side score-side1æ\>[\s\n]+(?<HomeTeam>[^\<]+)\</div\>[^\<]+\<div class=æscore-status score-postæ\>(?<Score>[^\<]+)\</div\>[^\<]+\<div class=æscore-side score-side2æ\>[\s\n]+(?<AwayTeam>[^\<]+)\<")
+          new Regex(@"\<div class=æscore-subæ\>(?<KickOffTimeString>[^\<]+)\</div\>[^\<]+\<div class=æscore-compæ\>[\s\n]+(?<League>(Barclays Prem|Sky Bet Ch'ship|Sky Bet League 1|Sky Bet League 2))[^\<]+\</div\>[^\<]+\<div class=æscore-side score-side1æ\>[\s\n]+(?<HomeTeam>[^\<]+)\<ul class=æscorersæ\>[^<]+(\<li\>[^\<]+\</li\>[^\<]+){1,}\</ul\>[^\<]+\</div\>[^\<]+\<div class=æscore-status score-postæ\>(?<Score>[^\<]+)\</div\>[^\<]+\<div class=æscore-side score-side2æ\>[\s\n]+(?<AwayTeam>[^\<]+)"),
+          new Regex(@"\<div class=æscore-subæ\>(?<KickOffTimeString>[^\<]+)\</div\>[^\<]+\<div class=æscore-compæ\>[\s\n]+(?<League>(Barclays Prem|Sky Bet Ch'ship|Sky Bet League 1|Sky Bet League 2))[^\<]+\</div\>[^\<]+\<div class=æscore-side score-side1æ\>[\s\n]+(?<HomeTeam>[^\<]+)\</div\>[^\<]+\<div class=æscore-status score-postæ\>(?<Score>[^\<]+)\</div\>[^\<]+\<div class=æscore-side score-side2æ\>[\s\n]+(?<AwayTeam>[^\<]+)\<")
         };
       }
     }
@@ -52,9 +52,9 @@ namespace Samurai.Domain.HtmlElements
 
       if (League == "Barclays Prem")
         LeagueEnum = Model.LeagueEnum.Premier;
-      else if (League == "Championship")
+      else if (League == "Sky Bet Ch'ship")
         LeagueEnum = Model.LeagueEnum.Championship;
-      else if (League == "League 1")
+      else if (League == "Sky Bet League 1")
         LeagueEnum = Model.LeagueEnum.League1;
       else
         LeagueEnum = Model.LeagueEnum.League2;

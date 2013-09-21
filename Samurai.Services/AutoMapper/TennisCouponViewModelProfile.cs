@@ -18,16 +18,16 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<GenericMatchCoupon, TennisCouponViewModel>()
-        .IgnoreAllNonExisting()
-        .ForMember(x => x.CouponURL, opt => { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
-        .ForMember(x => x.PlayerAOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); })
-        .ForMember(x => x.PlayerBOdds, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
+      //Mapper.CreateMap<GenericMatchCoupon, TennisCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.CouponURL, opt => { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
+      //  .ForMember(x => x.OddsCollection, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.HomeWin)); })
+      //  .ForMember(x => x.AwayWin, opt => { opt.ResolveUsing<TennisCouponOddsResolver>().ConstructedBy(() => new TennisCouponOddsResolver(Outcome.AwayWin)); });
 
-      Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponViewModel>()
-        .IgnoreAllNonExisting()
-        .ForMember(x => x.PlayerAOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
-        .ForMember(x => x.PlayerBOdds, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
+      //Mapper.CreateMap<IEnumerable<OddsForEvent>, TennisCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.OddsCollection, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.HomeWin)))
+      //  .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<TennisCouponOddsForEventResolver>().ConstructedBy(() => new TennisCouponOddsForEventResolver(Outcome.AwayWin)));
 
     }
   }
@@ -50,6 +50,7 @@ namespace Samurai.Services.AutoMapper
       var bestOddsAvailable = source.ActualOdds[this.outcome].Max(x => x.DecimalOdds);
       ret.Add(new OddViewModel
       {
+        Sport = "Tennis",
         IsBetable = false,
         Outcome = actualOutcome,
         OddBeforeCommission = bestOddsAvailable,
@@ -93,8 +94,6 @@ namespace Samurai.Services.AutoMapper
 
     protected override IEnumerable<OddViewModel> ResolveCore(IEnumerable<OddsForEvent> source)
     {
-      var ret = new TennisCouponViewModel();
-
       var playerOdds =
         source.Where(x => x.Outcome.Replace(" ", "") == Enum.GetName(typeof(Outcome), outcome))
               .ToList();

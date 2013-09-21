@@ -27,7 +27,7 @@ namespace Samurai.Domain.Value
     protected readonly IFixtureRepository fixtureRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
     protected readonly IValueOptions valueOptions;
-    protected List<MissingTeamPlayerAlias> missingAlias;
+    protected List<MissingTeamPlayerAliasObject> missingAlias;
 
     public AbstractCouponStrategy(IBookmakerRepository bookmakerRepository,
       IFixtureRepository fixtureRepository, IWebRepositoryProvider webRepositoryProvider, 
@@ -43,7 +43,7 @@ namespace Samurai.Domain.Value
       this.webRepositoryProvider = webRepositoryProvider;
       this.valueOptions = valueOptions;
 
-      this.missingAlias = new List<MissingTeamPlayerAlias>();
+      this.missingAlias = new List<MissingTeamPlayerAliasObject>();
     }
 
     public abstract IEnumerable<IGenericTournamentCoupon> GetTournaments(OddsDownloadStage stage = OddsDownloadStage.Tournament);
@@ -63,12 +63,12 @@ namespace Samurai.Domain.Value
       bool @continue = false;
       if (teamOrPlayerA == null)
       {
-        this.missingAlias.Add(new MissingTeamPlayerAlias { TeamOrPlayerName = teamOrPlayerALookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingTeamPlayerAliasObject { TeamOrPlayerName = teamOrPlayerALookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
       if (teamOrPlayerB == null)
       {
-        this.missingAlias.Add(new MissingTeamPlayerAlias { TeamOrPlayerName = teamOrPlayerBLookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
+        this.missingAlias.Add(new MissingTeamPlayerAliasObject { TeamOrPlayerName = teamOrPlayerBLookup, ExternalSource = this.valueOptions.OddsSource.Source, Tournament = this.valueOptions.Tournament.TournamentName });
         @continue = true;
       }
       return @continue;
@@ -353,4 +353,5 @@ namespace Samurai.Domain.Value
       return returnMatches;
     }
   }
+
 }

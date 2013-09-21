@@ -11,6 +11,8 @@
     <AssemblyName>Samurai.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +60,7 @@
   <ItemGroup>
     <Compile Include="DomainValue\CouponStrategyTests.cs" />
     <Compile Include="DomainValue\FootballFixtureStrategyTests.cs" />
+    <Compile Include="DomainValue\KellyTests.cs" />
     <Compile Include="DomainValue\OddsStrategyTests.cs" />
     <Compile Include="DomainValue\FootballPredictionStrategyTests.cs" />
     <Compile Include="DomainValue\TennisFixtureStrategyTests.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="TestInfrastructure\MockBuilders\BuildWebRepositoryProvider.cs" />
     <Compile Include="TestInfrastructure\SafeCollection.cs" />
     <Compile Include="TestInfrastructure\ManifestWebRepositoryProvider.cs" />
+    <Compile Include="TestInfrastructure\TestBetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj">
@@ -100,10 +104,6 @@
     <ProjectReference Include="..\Samurai.SqlDataAccess\Samurai.SqlDataAccess.csproj">
       <Project>{d118c841-b535-480a-9eff-be652cd6b116}</Project>
       <Name>Samurai.SqlDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samurai.Web.API\Samurai.Web.API.csproj">
-      <Project>{842da32e-deb3-4181-ae5a-7c85a43e8c10}</Project>
-      <Name>Samurai.Web.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj">
       <Project>{9fdb6e16-ed5c-4276-81c4-8f7c7b258bfe}</Project>
@@ -150,7 +150,6 @@
     <EmbeddedResource Include="TestData\20130206\æfootballæenglishæpremier-leaguehttp~ææwww.oddschecker.comæfootballæenglishæpremier-league.txt" />
     <EmbeddedResource Include="TestData\20130206\æfootballæfixtures-resultsæ06-february-2013.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellierhttp~ææwww.oddschecker.comætennisæatp-montpellier.txt" />
-    <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræadrian-ungur-v-julien-benneteauæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræarnau-brugues-davi-v-mikhail-kukushkinæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræbenoit-paire-v-steve-darcisæwinner.txt" />
     <EmbeddedResource Include="TestData\20130206\ætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinnerhttp~ææwww.oddschecker.comætennisæatp-montpellieræedouard-roger-vasselin-v-tatsuma-itoæwinner.txt" />
@@ -389,6 +388,7 @@
     <EmbeddedResource Include="TestData\20130202\æfootballæfixtures-resultsæ02-february-2013results.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

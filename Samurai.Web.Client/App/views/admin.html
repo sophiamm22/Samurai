@@ -1,0 +1,21 @@
+﻿<section id="admin-view" class="view">
+  <header>
+    <h2 class="page-title" data-bind="text: title"></h2>
+  </header>
+  <article class="article-admin-sections">
+    <h3>Fixtures, results and odds</h3>
+    <div>
+      <label class="inline-label">Update all</label>
+      <select class="inline-input" data-bind="options: sports, value: sport"></select>
+      <select class="inline-input" data-bind="options: fixtureOptions, value: fixtureOption"></select>
+      <label class="inline-label">from</label>
+      <input class="inline-input" type="date" name="football-schedule" data-bind="value: scheduleDateString"/>
+      <a class="btn btn-info btn-force-refresh inline-button"
+        data-bind="click: updateFixturesResultsOdds" href="#"><i class="icon-refresh"></i> Update</a>
+    </div>
+  </article>
+  <div data-bind="visible: showProgress">
+    <textarea class="big" data-bind="value: progressReport" rows="15" />
+    <br />
+  </div>
+</section>

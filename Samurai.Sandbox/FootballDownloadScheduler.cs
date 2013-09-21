@@ -15,9 +15,9 @@ namespace Samurai.Sandbox
   {
     private readonly IWindsorContainer container;
     private readonly DateTime date;
-    private readonly IFootballFixtureAdminService footballFixtureService;
-    private readonly IFootballPredictionAdminService footballPredictionService;
-    private readonly IFootballOddsAdminService footballOddsService;
+    private readonly IFootballFixtureService footballFixtureService;
+    private readonly IFootballPredictionService footballPredictionService;
+    private readonly IFootballOddsService footballOddsService;
 
     public FootballDownloadScheduler(IWindsorContainer container, DateTime date)
     {
@@ -26,9 +26,9 @@ namespace Samurai.Sandbox
 
       this.container = container;
       this.date = date;
-      this.footballFixtureService = this.container.Resolve<IFootballFixtureAdminService>();
-      this.footballPredictionService = this.container.Resolve<IFootballPredictionAdminService>();
-      this.footballOddsService = this.container.Resolve<IFootballOddsAdminService>();
+      this.footballFixtureService = this.container.Resolve<IFootballFixtureService>();
+      this.footballPredictionService = this.container.Resolve<IFootballPredictionService>();
+      this.footballOddsService = this.container.Resolve<IFootballOddsService>();
     }
 
     public void RunSchedule()

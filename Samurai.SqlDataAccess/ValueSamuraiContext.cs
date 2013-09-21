@@ -1,5 +1,9 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Linq.Expressions;
+using System.Linq;
+using System;
+using System.Reflection;
 
 using Samurai.Domain.Entities;
 using Samurai.SqlDataAccess.Mapping;
@@ -11,12 +15,14 @@ namespace Samurai.SqlDataAccess
   {
     static ValueSamuraiContext()
     {
-      Database.SetInitializer<ValueSamuraiContext>(null);
+      //Database.SetInitializer<ValueSamuraiContext>(null);
     }
 
     public ValueSamuraiContext()
       : base("Name=ValueSamuraiContext")
     {
+      //needed for linqpad, for some reason
+      typeof(Database).GetMethod("SetInitializer").MakeGenericMethod(base.GetType()).Invoke(null, new object[] { null });
     }
 
     public DbSet<BettingPAndL> BettingPAndLs { get; set; }
@@ -37,11 +43,16 @@ namespace Samurai.SqlDataAccess
     public DbSet<ScoreOutcomeProbabilitiesInMatch> ScoreOutcomeProbabilitiesInMatches { get; set; }
     public DbSet<ScoreOutcome> ScoreOutcomes { get; set; }
     public DbSet<Sport> Sports { get; set; }
+    public DbSet<Surface> Surfaces { get; set; }
     public DbSet<TeamPlayerExternalSourceAlias> TeamPlayerExternalSourceAlias { get; set; }
     public DbSet<TeamPlayer> TeamsPlayers { get; set; }
     public DbSet<BookmakerExternalSourceAlias> BookmakerExternalSourceAlias { get; set; }
     public DbSet<KeyValuePair> KeyValuePairs { get; set; }
     public DbSet<TennisPredictionStat> TennisPredictionStats { get; set; }
+    public DbSet<MissingBookmakerExternalSourceAlias> MissingBookmakerExternalSourceAlias { get; set; }
+    public DbSet<MissingTeamPlayerExternalSourceAlias> MissingTeamPlayerExternalSourceAlias { get; set; }
+    public DbSet<MissingTournamentCouponURL> MissingTournamentCouponURL { get; set; }
+    public DbSet<OutcomeComment> OutcomeCommments { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
@@ -63,12 +74,17 @@ namespace Samurai.SqlDataAccess
       modelBuilder.Configurations.Add(new ScoreOutcomeProbabilitiesInMatchMap());
       modelBuilder.Configurations.Add(new ScoreOutcomeMap());
       modelBuilder.Configurations.Add(new SportMap());
+      modelBuilder.Configurations.Add(new SurfaceMap());
       modelBuilder.Configurations.Add(new TeamPlayerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new TeamsPlayerMap());
       modelBuilder.Configurations.Add(new TournamentExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new BookmakerExternalSourceAliasMap());
       modelBuilder.Configurations.Add(new KeyValuePairMap());
       modelBuilder.Configurations.Add(new TennisPredictionStatMap());
+      modelBuilder.Configurations.Add(new MissingBookmakerExternalSourceAliasMap());
+      modelBuilder.Configurations.Add(new MissingTeamPlayerExternalSourceAliasMap());
+      modelBuilder.Configurations.Add(new MissingTournamentCouponURLMap());
+      modelBuilder.Configurations.Add(new OutcomeCommentMap());
     }
   }
 }

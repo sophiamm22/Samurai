@@ -4,42 +4,57 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 using Samurai.Web.API.Infrastructure;
-using Samurai.Web.API.Messaging.TennisSchedule;
-using Samurai.Services.Contracts;
+using Samurai.Services.Contracts.Async;
 using Samurai.Web.ViewModels.Tennis;
 
 namespace Samurai.Web.API.Messaging.TennisSchedule
 {
-  public class GetTennisScheduleHandler : IMessageHandler<GetTennisScheduleRequest>
+  public class GetTennisScheduleHandler : IMessageHandler<TennisScheduleDateArgs>
   {
-    private readonly ITennisFixtureClientService tennisService;
+    private readonly IAsyncTennisFacadeClientService tennisService;
 
-    public GetTennisScheduleHandler(ITennisFixtureClientService tennisService)
-      :base()
+    public GetTennisScheduleHandler(IAsyncTennisFacadeClientService tennisService)
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
       this.tennisService = tennisService;
     }
 
-    public HttpResponseMessage Handle(GetTennisScheduleRequest request)
+    public async Task<HttpResponseMessage> Handle(RequestWrapper<TennisScheduleDateArgs> requestWrapper)
     {
-      if (!Extensions.IsValidDate(request.Year, request.Month, request.Day))
-        return request.RequestMessage.CreateErrorMessage(HttpStatusCode.BadRequest, "not a valid date");
+      DateTime fixtureDate;
+      if (requestWrapper.RequestArguments == null)
+      {
+        fixtureDate = this.tennisService.GetLatestDate();
+      }
+      else if (!Extensions.IsValidDate(requestWrapper.RequestArguments.Year, requestWrapper.RequestArguments.Month, requestWrapper.RequestArguments.Day))
+      {
+        return requestWrapper.RequestMessage.CreateErrorMessage(HttpStatusCode.BadRequest, "not a valid date");
+      }
+      else
+      {
+        fixtureDate = new DateTime(requestWrapper.RequestArguments.Year,
+                                   requestWrapper.RequestArguments.Month,
+                                   requestWrapper.RequestArguments.Day);
+      }
 
-      var fixtureDate = new DateTime(request.Year, request.Month, request.Day);
-
-      IEnumerable<TennisFixtureViewModel> tennisFixtures;
+      IQueryable<TennisFixtureViewModel> tennisFixtures;
       try
       {
-        tennisFixtures = this.tennisService.GetDaysSchedule(fixtureDate);
+        tennisFixtures = (await
+          this.tennisService
+              .GetDaysSchedule(fixtureDate))
+              .AsQueryable();
       }
       catch (Exception ex)
       {
-        return request.RequestMessage.CreateErrorMessage(HttpStatusCode.NotFound, ex.Message);
+        return requestWrapper.RequestMessage
+                             .CreateErrorMessage(HttpStatusCode.NotFound, ex.Message);
       }
-      return request.RequestMessage.CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
+      return requestWrapper.RequestMessage
+                           .CreateSuccessMessage(HttpStatusCode.OK, tennisFixtures);
     }
 
   }

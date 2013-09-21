@@ -11,6 +11,8 @@
     <AssemblyName>Samurai.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="Async\AsyncFootballFacadeAdminService.cs" />
+    <Compile Include="Async\AsyncFootballFacadeClientService.cs" />
+    <Compile Include="Async\AsyncFootballFixtureService.cs" />
+    <Compile Include="Async\AsyncFootballOddsService.cs" />
+    <Compile Include="Async\AsyncFootballPredictionService.cs" />
+    <Compile Include="Async\AsyncTennisFacadeAdminService.cs" />
+    <Compile Include="Async\AsyncTennisFixtureService.cs" />
+    <Compile Include="Async\AsyncTennisOddsService.cs" />
+    <Compile Include="Async\AsyncTennisPredictionService.cs" />
     <Compile Include="AutoMapper\AutoMapperManualConfiguration.cs" />
     <Compile Include="AutoMapper\FootballCouponDictionaryProfile.cs" />
     <Compile Include="AutoMapper\FootballCouponViewModelProfile.cs" />
@@ -55,6 +66,7 @@
     <Compile Include="AutoMapper\GenericMatchDetailProfile.cs" />
     <Compile Include="AutoMapper\GenericOddProfile.cs" />
     <Compile Include="AutoMapper\OddsSourceProfile.cs" />
+    <Compile Include="AutoMapper\OddViewModelProfile.cs" />
     <Compile Include="AutoMapper\SportProfile.cs" />
     <Compile Include="AutoMapper\TennisCouponDictionaryProfile.cs" />
     <Compile Include="AutoMapper\TennisCouponViewModelProfile.cs" />
@@ -66,23 +78,31 @@
     <Compile Include="AutoMapper\TennisPredictionViewModelProfile.cs" />
     <Compile Include="AutoMapper\TournamentEventViewModelProfile.cs" />
     <Compile Include="AutoMapper\TournamentProfile.cs" />
-    <Compile Include="ClientServices\TennisFixtureClientService.cs" />
+    <Compile Include="Async\AsyncTennisFacadeClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFootballFacadeClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncTennisFacadeClientService.cs" />
+    <Compile Include="TennisFixtureClientService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFixtureService.cs" />
+    <Compile Include="Contracts\Async\IAsyncFootballFacadeAdminService.cs" />
+    <Compile Include="Contracts\Async\IAsyncPredictionService.cs" />
+    <Compile Include="Contracts\Async\IAsyncOddsService.cs" />
+    <Compile Include="Contracts\Async\IAsyncTennisFacadeAdminService.cs" />
     <Compile Include="Contracts\IAccountService.cs" />
-    <Compile Include="Contracts\IFixtureAdminService.cs" />
+    <Compile Include="Contracts\IFixtureService.cs" />
     <Compile Include="Contracts\IFootballFacadeAdminService.cs" />
-    <Compile Include="Contracts\IOddsAdminService.cs" />
-    <Compile Include="Contracts\IPredictionAdminService.cs" />
+    <Compile Include="Contracts\IOddsService.cs" />
+    <Compile Include="Contracts\IPredictionService.cs" />
     <Compile Include="Contracts\ITennisFacadeAdminService.cs" />
-    <Compile Include="AdminServices\FootballFacadeAdminService.cs" />
-    <Compile Include="AdminServices\FootballFixtureAdminService.cs" />
-    <Compile Include="AdminServices\FootballOddsAdminService.cs" />
-    <Compile Include="AdminServices\FootballPredictionAdminService.cs" />
+    <Compile Include="FootballFacadeAdminService.cs" />
+    <Compile Include="FootballFixtureService.cs" />
+    <Compile Include="FootballOddsService.cs" />
+    <Compile Include="FootballPredictionService.cs" />
     <Compile Include="Contracts\ITennisFixtureClientService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AdminServices\TennisFacadeAdminService.cs" />
-    <Compile Include="AdminServices\TennisFixtureAdminService.cs" />
-    <Compile Include="AdminServices\TennisOddsAdminService.cs" />
-    <Compile Include="AdminServices\TennisPredictionAdminService.cs" />
+    <Compile Include="TennisFacadeService.cs" />
+    <Compile Include="TennisFixtureService.cs" />
+    <Compile Include="TennisOddsService.cs" />
+    <Compile Include="TennisPredictionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -111,6 +131,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

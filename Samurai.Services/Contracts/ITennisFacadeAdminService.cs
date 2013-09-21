@@ -13,6 +13,7 @@ namespace Samurai.Services.Contracts
   public interface ITennisFacadeAdminService
   {
     IEnumerable<TennisFixtureViewModel> GetDaysSchedule(DateTime fixtureDate);
+    IEnumerable<TennisFixtureViewModel> FetchTennisResults(DateTime matchDate);
     IEnumerable<TennisFixtureViewModel> UpdateDaysSchedule(DateTime fixtureDate);
     IEnumerable<TournamentEventViewModel> GetTournamentEvents();
     void AddTournamentCouponURL(TournamentCouponURLViewModel viewModel);

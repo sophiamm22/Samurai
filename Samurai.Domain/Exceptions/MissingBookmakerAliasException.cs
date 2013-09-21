@@ -9,9 +9,9 @@ namespace Samurai.Domain.Exceptions
   [Serializable]
   public class MissingBookmakerAliasException : Exception
   {
-    public IEnumerable<MissingBookmakerAlias> MissingAlias { get; private set; }
+    public IEnumerable<MissingBookmakerAliasObject> MissingAlias { get; private set; }
 
-    public MissingBookmakerAliasException(IEnumerable<MissingBookmakerAlias> missingAlias, string message)
+    public MissingBookmakerAliasException(IEnumerable<MissingBookmakerAliasObject> missingAlias, string message)
       : base(message)
     {
       MissingAlias = missingAlias;
@@ -19,10 +19,12 @@ namespace Samurai.Domain.Exceptions
   }
 
   [Serializable]
-  public class MissingBookmakerAlias
+  public class MissingBookmakerAliasObject
   {
     public string Bookmaker { get; set; }
+    public int BookmakerID { get; set; }
     public string ExternalSource { get; set; }
+    public int ExternalSourceID { get; set; }
 
     public override string ToString()
     {

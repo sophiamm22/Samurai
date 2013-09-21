@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,12 +17,13 @@ namespace Samurai.Services.AutoMapper
     protected override void Configure()
     {
       Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.HomeWinProbability, opt =>
-        { opt.ResolveUsing<FootballProbabilityResolver>().ConstructedBy(() => new FootballProbabilityResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.DrawProbabilitity, opt =>
-        { opt.ResolveUsing<FootballProbabilityResolver>().ConstructedBy(() => new FootballProbabilityResolver(Outcome.Draw)); });
-      Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.AwayWinProbability, opt =>
-        { opt.ResolveUsing<FootballProbabilityResolver>().ConstructedBy(() => new FootballProbabilityResolver(Outcome.AwayWin)); });
+
+      Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.MatchId, opt =>
+        { opt.MapFrom(x => x.MatchID); });
+      
+      Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.Probabilities, opt =>
+        { opt.ResolveUsing<FootballProbabilityResolver>(); });
+
       Mapper.CreateMap<FootballPrediction, FootballPredictionViewModel>().ForMember(x => x.ScoreLineProbabilities, opt =>
         { opt.ResolveUsing<FootballScoreLineResolver>(); });
     }
@@ -38,23 +39,16 @@ namespace Samurai.Services.AutoMapper
       }
     }
 
-    public class FootballProbabilityResolver : ValueResolver<FootballPrediction, OutcomeProbabilityViewModel>
+    public class FootballProbabilityResolver : ValueResolver<FootballPrediction, Dictionary<string, double>>
     {
-      private readonly Outcome outcome;
-
-      public FootballProbabilityResolver(Outcome outcome)
+      protected override Dictionary<string, double> ResolveCore(FootballPrediction source)
       {
-        this.outcome = outcome;
-      }
-
-      protected override OutcomeProbabilityViewModel ResolveCore(FootballPrediction source)
-      {
-        var probability = source.OutcomeProbabilities[this.outcome];
-        return new OutcomeProbabilityViewModel
+        var ret = new Dictionary<string, double>();
+        foreach (var outcomeKVP in source.OutcomeProbabilities)
         {
-          Outcome = this.outcome.ToString(),
-          OutcomeProbability = probability
-        };
+          ret.Add(outcomeKVP.Key.ToString(), outcomeKVP.Value);
+        }
+        return ret;
       }
     }
   }

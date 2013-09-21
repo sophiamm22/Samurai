@@ -2,16 +2,18 @@
 @using System.Web.Optimization
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Value Samurai</title>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/fontawesome")
     @Styles.Render("~/Content/css")
+
     <script type="text/javascript">
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
             var msViewportStyle = document.createElement("style");
@@ -20,18 +22,36 @@
             document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
         }
     </script>
-</head>
-<body>
+  </head>
+  <body>
+    
     <div id="applicationHost">
         @Html.Partial("_splash")
     </div>
 
+    @Scripts.Render("~/scripts/jquery")
     @Scripts.Render("~/scripts/vendor")
-        @if(HttpContext.Current.IsDebuggingEnabled) {
-            <script type="text/javascript" src="~/App/durandal/amd/require.js" data-main="@Url.Content("~/App/main")"></script>
-        } else {
-			<!-- Remember to run the Durandal optimizer.exe to create the main-built.js  -->
-            <script type="text/javascript" src="~/App/main-built.js"></script>
-        }
-</body>
+    @Scripts.Render("~/scripts/signalr")
+    @Scripts.Render("~/scripts/crossfilter")  
+    @Scripts.Render("~/scripts/dc")
+    
+    <script src="http://localhost:3600/signalr/hubs"></script>
+    @if(HttpContext.Current.IsDebuggingEnabled) {
+    <script type="text/javascript" src="~/App/durandal/amd/require.js" data-main="@Url.Content("~/App/main")"></script>
+    } else {
+    <script type="text/javascript" src="~/App/main-built.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-43511610-1', 'valuesamurai.com');
+      ga('send', 'pageview');
+
+    </script>      
+    }
+  </body>
 </html>

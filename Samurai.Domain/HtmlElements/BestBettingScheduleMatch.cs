@@ -43,7 +43,7 @@ namespace Samurai.Domain.HtmlElements
     {
       BestOdds = new Dictionary<Outcome, double>();
       //url
-      MatchURL = new Uri("http://odds.bestbetting.com" + PartURL);
+      MatchURL = new Uri("http://odds.bestbetting.com" + PartURL.Replace("-after-30-minutes",""));
       
       //Best Odds
       var oddsTokens = WebUtils.ParseWebsite<BestBettingScheduleMatchOdds>(BestOddsString, s => ProgressReporterProvider.Current.ReportProgress(s, ReporterImportance.Low, ReporterAudience.Admin))

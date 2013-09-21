@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.SqlDataAccess", "Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{83CE8910-37AA-415A-954B-3E36F9701D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.WebPresentationModel", "Samurai.WebPresentationModel\Samurai.WebPresentationModel.csproj", "{4695755F-1CFA-46E3-9B01-672E21C36BD0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web", "Samurai.Web\Samurai.Web.csproj", "{5F61DCEB-418C-4059-8D75-F2EF0B1BA768}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.ViewModels", "Samurai.Web.ViewModels\Samurai.Web.ViewModels.csproj", "{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Services", "Samurai.Services\Samurai.Services.csproj", "{7118D25C-F41F-4B1E-8F3B-739D25D86321}"
@@ -28,11 +24,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.API", "Samurai.Web.API\Samurai.Web.API.csproj", "{842DA32E-DEB3-4181-AE5A-7C85A43E8C10}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.PresentationModel", "Samurai.Web.PresentationModel\Samurai.Web.PresentationModel.csproj", "{E24961E3-7619-4E38-9D87-F54763C811D5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.Client", "Samurai.Web.Client\Samurai.Web.Client.csproj", "{BC8E5129-5233-4C97-9374-51B24AA44B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samurai.Web.API", "Samurai.Web.API\Samurai.Web.API.csproj", "{833F484B-6FA9-4353-8DB7-299165BF3CEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DB573AE0-A49B-4EFD-9F20-61D476E23F3E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Samurai.Database", "Samurai.Database\Samurai.Database.sqlproj", "{73DFCEBE-769B-4000-B80F-16B1598659C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,14 +59,6 @@ Global
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83CE8910-37AA-415A-954B-3E36F9701D17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4695755F-1CFA-46E3-9B01-672E21C36BD0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F61DCEB-418C-4059-8D75-F2EF0B1BA768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F61DCEB-418C-4059-8D75-F2EF0B1BA768}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F61DCEB-418C-4059-8D75-F2EF0B1BA768}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F61DCEB-418C-4059-8D75-F2EF0B1BA768}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FDB6E16-ED5C-4276-81C4-8F7C7B258BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -84,18 +79,20 @@ Global
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{834F3846-ACB1-4D8D-AB5B-04C9C5D3F5BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{842DA32E-DEB3-4181-AE5A-7C85A43E8C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{842DA32E-DEB3-4181-AE5A-7C85A43E8C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{842DA32E-DEB3-4181-AE5A-7C85A43E8C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{842DA32E-DEB3-4181-AE5A-7C85A43E8C10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E24961E3-7619-4E38-9D87-F54763C811D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC8E5129-5233-4C97-9374-51B24AA44B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833F484B-6FA9-4353-8DB7-299165BF3CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DFCEBE-769B-4000-B80F-16B1598659C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

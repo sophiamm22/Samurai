@@ -24,6 +24,13 @@ namespace Samurai.Web.API.Infrastructure
       var responseMessage = request.CreateResponse(statusCode, data);
       return AddResponseHeaders(request, responseMessage, null);
     }
+
+    public static HttpResponseMessage CreateSuccessMessage(this HttpRequestMessage request, HttpStatusCode statusCode)
+    {
+      var responseMessage = request.CreateResponse(statusCode);
+      return AddResponseHeaders(request, responseMessage, null);
+    }
+
     public static HttpResponseMessage CreateErrorMessage(this HttpRequestMessage request, HttpStatusCode statusCode, string message, string filenamePrefix)
     {
       var responseMessage = request.CreateResponse(

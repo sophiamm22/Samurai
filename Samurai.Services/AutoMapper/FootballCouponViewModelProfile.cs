@@ -10,6 +10,7 @@ using Samurai.Web.ViewModels;
 using Samurai.Web.ViewModels.Football;
 using Samurai.Web.ViewModels.Value;
 using Samurai.Domain.Model;
+using Samurai.Domain.Entities.ComplexTypes;
 
 namespace Samurai.Services.AutoMapper
 {
@@ -17,15 +18,23 @@ namespace Samurai.Services.AutoMapper
   {
     protected override void Configure()
     {
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>().IgnoreAllNonExisting();
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>().ForMember(x => x.CouponURL, opt =>
-        { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); });
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>().ForMember(x => x.HomeOdds, opt =>
-        { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.HomeWin)); });
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>().ForMember(x => x.DrawOdds, opt =>
-        { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.Draw)); });
-      Mapper.CreateMap<GenericMatchCoupon, FootballCouponViewModel>().ForMember(x => x.AwayOdds, opt =>
-        { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.AwayWin)); });
+      //Mapper.CreateMap<GenericMatchCoupon, FootballCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.CouponURL, opt =>
+      //    { opt.ResolveUsing<GenericMatchCouponURLDictionaryResolver>(); })
+      //  .ForMember(x => x.OddsCollection, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.HomeWin)); })
+      //  .ForMember(x => x.Draw, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.Draw)); })
+      //  .ForMember(x => x.AwayWin, opt =>
+      //    { opt.ResolveUsing<FootballCouponOddsResolver>().ConstructedBy(() => new FootballCouponOddsResolver(Outcome.AwayWin)); });
+
+      //Mapper.CreateMap<IEnumerable<OddsForEvent>, FootballCouponOutcomeViewModel>()
+      //  .IgnoreAllNonExisting()
+      //  .ForMember(x => x.OddsCollection, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.HomeWin)))
+      //  .ForMember(x => x.Draw, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.Draw)))
+      //  .ForMember(x => x.AwayWin, opt => opt.ResolveUsing<FootballCouponOddsForEventResolver>().ConstructedBy(() => new FootballCouponOddsForEventResolver(Outcome.AwayWin)));
+
     }
   }
 
@@ -59,6 +68,7 @@ namespace Samurai.Services.AutoMapper
       var bestOddsAvailable = source.HeadlineOdds.Count == 0 ? source.ActualOdds[this.outcome].Max(x => x.DecimalOdds) : source.HeadlineOdds[this.outcome];
       ret.Add(new OddViewModel
       {
+        Sport = "Football",
         IsBetable = false,
         Outcome = actualOutcome,
         OddBeforeCommission = bestOddsAvailable,
@@ -90,4 +100,49 @@ namespace Samurai.Services.AutoMapper
       return ret;
     }
   }
+
+  public class FootballCouponOddsForEventResolver : ValueResolver<IEnumerable<OddsForEvent>, IEnumerable<OddViewModel>>
+  {
+    private readonly Outcome outcome;
+
+    public FootballCouponOddsForEventResolver(Outcome outcome)
+    {
+      this.outcome = outcome;
+    }
+
+    protected override IEnumerable<OddViewModel> ResolveCore(IEnumerable<OddsForEvent> source)
+    {
+      var odds =
+        source.Where(x => x.Outcome.Replace(" ", "") == Enum.GetName(typeof(Outcome), outcome))
+              .ToList();
+
+      return ConvertToViewModel(odds);
+    }
+
+    private IEnumerable<OddViewModel> ConvertToViewModel(IEnumerable<OddsForEvent> oddsForEvent)
+    {
+      var ret = new List<OddViewModel>();
+
+      foreach (var odd in oddsForEvent)
+      {
+        var oddViewModel = new OddViewModel
+        {
+          Outcome = odd.Outcome,
+          OddBeforeCommission = (double)odd.OddBeforeCommission,
+          CommissionPct = odd.CommissionPct,
+          DecimalOdd = odd.DecimalOdd,
+          TimeStamp = odd.TimeStamp,
+          Bookmaker = odd.Bookmaker,
+          OddsSource = odd.OddsSource,
+          ClickThroughURL = odd.ClickThroughURL,
+          Priority = odd.Priority
+        };
+        ret.Add(oddViewModel);
+      }
+
+      return ret;
+    }
+  }
+
+
 }

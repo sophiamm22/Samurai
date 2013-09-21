@@ -9,6 +9,7 @@ namespace Samurai.Domain.Model
 {
   public abstract class GenericOdd
   {
+    public int MatchId { get; set; }
     public double OddsBeforeCommission { get; set; }
     public double CommissionPct { get; set; }
     public double DecimalOdds { get; set; }

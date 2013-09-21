@@ -30,12 +30,14 @@ namespace Samurai.SqlDataAccess.Contracts
     Uri GetSkySportsFootballFixturesOrResults(DateTime fixtureDate);
     Uri GetTennisTournamentCalendar();
     Uri GetTennisTournamentLadder(string tournamentName, int year);
+    Uri GetDaysResultsURI(DateTime fixtureDate);
     
     TeamPlayer GetTeamOrPlayerById(int id);
     TeamPlayer GetTeamOrPlayer(string slug);
     TeamPlayer GetTeamOrPlayerFromName(string team);
     TeamPlayer GetTeamOrPlayerFromNameAndMaybeFirstName(string teamSurname, string firstName);
     IQueryable<TeamPlayer> GetLeagueLadder(string leagueName, DateTime date);
+    void AddMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerExternalSourceAlias> aliass);
     
     void AddMatch(Match match);
     
@@ -55,11 +57,15 @@ namespace Samurai.SqlDataAccess.Contracts
     Competition GetCompetitionById(int competitionID);
     Competition GetCompetition(string competitionName);
 
-    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore);
+    ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore, bool? teamPlayerAWins = null);
+
+    void AddOrUpdateObservedOutcome(ObservedOutcome observedOutcome);
 
     MatchOutcome GetMatchOutcomeByID(int id);
 
     Sport GetSport(string sport);
+
+    DateTime GetLatestDate();
 
     void SaveChanges();
   }

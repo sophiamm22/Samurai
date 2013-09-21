@@ -207,6 +207,12 @@ namespace Samurai.SqlDataAccess
     {
       return new Uri(string.Format(@"http://www.tennisbetting365.com/api/gettournamentladder/{0}/{1}", tournamentName, year.ToString()));
     }
+
+    public Uri GetDaysResultsURI(DateTime fixtureDate)
+    {
+      return new Uri(string.Format(@"http://www.tennisbetting365.com/api/getdaysresults/{0}/{1}/{2}", fixtureDate.Day, fixtureDate.Month, fixtureDate.Year));
+    }
+
     public TeamPlayer GetTeamOrPlayerById(int id)
     {
       var teamOrPlayer = GetByKey<TeamPlayer>(id);
@@ -300,9 +306,23 @@ namespace Samurai.SqlDataAccess
                             .ToList();
     }
 
-    public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore)
+    public ScoreOutcome GetScoreOutcome(int teamAScore, int teamBScore, bool? teamPlayerAWins = null)
     {
-      return First<ScoreOutcome>(o => o.TeamAScore == teamAScore && o.TeamBScore == teamBScore);
+      if (teamPlayerAWins.HasValue)
+      {
+        var outcome = (teamPlayerAWins.Value ? "Home Win" : "Away Win");
+        return First<ScoreOutcome>(o => o.TeamAScore == teamAScore &&
+                                        o.TeamBScore == teamBScore &&
+                                        o.MatchOutcome.MatchOutcomeString == outcome);
+      }
+      else
+      {
+        var outcome = (teamAScore > teamBScore ? "Home Win" : (teamAScore < teamBScore ? "Away Win" : "Draw"));
+        return First<ScoreOutcome>(o => o.TeamAScore == teamAScore && 
+                                        o.TeamBScore == teamBScore &&
+                                        o.MatchOutcome.MatchOutcomeString == outcome);
+      }
+
     }
 
     public Competition GetCompetitionById(int competitionID)
@@ -332,6 +352,21 @@ namespace Samurai.SqlDataAccess
                        .FirstOrDefault(t => t.StartDate.Year == seasonStartYear);//
     }
 
+    public void AddOrUpdateObservedOutcome(ObservedOutcome observedOutcome)
+    {
+      var persisted = First<ObservedOutcome>(x => x.MatchID == observedOutcome.MatchID);
+      if (persisted == null)
+      {
+        Save<ObservedOutcome>(observedOutcome);
+      }
+      else
+      {
+        persisted.OutcomeCommentID = observedOutcome.OutcomeCommentID;
+        persisted.ScoreOutcomeID = observedOutcome.ScoreOutcomeID;
+        SaveChanges();
+      }
+    }
+
     public MatchOutcome GetMatchOutcomeByID(int id)
     {
       return First<MatchOutcome>(m => m.Id == id);
@@ -350,7 +385,7 @@ namespace Samurai.SqlDataAccess
     public Tournament GetTournamentFromTournamentEvent(string tournamentEventName)
     {
       var tournamentEvent = GetQuery<TournamentEvent>(t => t.EventName == tournamentEventName)
-                            .Include(t=>t.Tournament)
+                            .Include(t => t.Tournament)
                             .FirstOrDefault();
 
       if (tournamentEvent == null) return null;
@@ -417,6 +452,24 @@ namespace Samurai.SqlDataAccess
       return ret.Values.AsQueryable();      
     }
 
+    public void AddMissingTeamPlayerAlias(IEnumerable<MissingTeamPlayerExternalSourceAlias> aliass)
+    {
+      foreach (var alias in aliass)
+      {
+        var mtp = GetQuery<MissingTeamPlayerExternalSourceAlias>(x => x.ExternalSourceID == alias.Id && x.TournamentID == alias.Id)
+          .FirstOrDefault();
+        if (mtp == null)
+        {
+          Add<MissingTeamPlayerExternalSourceAlias>(alias);
+        }
+        else
+        {
+          mtp.TeamPlayer = alias.TeamPlayer;
+        }
+      }
+      this.SaveChanges();
+    }
+
     public void AddMatch(Match match)
     {
       Add<Match>(match);
@@ -425,6 +478,11 @@ namespace Samurai.SqlDataAccess
     public Match SaveMatch(Match match)
     {
       return Save<Match>(match);
+    }
+
+    public DateTime GetLatestDate()
+    {
+      return GetQuery<Match>().Max(x => x.MatchDate);
     }
 
     public void SaveChanges()

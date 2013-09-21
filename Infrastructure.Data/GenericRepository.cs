@@ -252,6 +252,15 @@ namespace Infrastructure.Data
       return criteria.SatisfyingEntitiesFrom(GetQuery<TEntity>()).Count();
     }
 
+    public IEnumerable<TEntity> ExecuteStoredProc<TEntity, TProcArgs>(TProcArgs args)
+      where TEntity : class
+      where TProcArgs : IStoredProc, new()
+    {
+      var sProc = new StoredProc<TProcArgs>(typeof(TEntity)).HasName(args.StoredProcName);
+      var resultsSet = DbContext.CallStoredProc<TProcArgs>(sProc, args);
+      return resultsSet.ToList<TEntity>();
+    }
+
     public IUnitOfWork UnitOfWork
     {
       get

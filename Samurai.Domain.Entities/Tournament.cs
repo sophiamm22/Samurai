@@ -23,6 +23,8 @@ namespace Samurai.Domain.Entities
     public virtual Competition Competition { get; set; }
     public virtual ICollection<TournamentCouponURL> TournamentCouponURLs { get; set; }
     public virtual ICollection<TournamentExternalSourceAlias> TournamentExternalSourceAlias { get; set; }
+    public virtual ICollection<MissingTournamentCouponURL> MissingTournamentCouponURLs { get; set; }
+    public virtual ICollection<MissingTeamPlayerExternalSourceAlias> MissingTeamPlayerExternalSourceAlias { get; set; }
     public virtual ICollection<TournamentEvent> TournamentEvents { get; set; }
 
   }

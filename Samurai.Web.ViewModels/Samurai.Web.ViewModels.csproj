@@ -11,6 +11,8 @@
     <AssemblyName>Samurai.Web.ViewModels</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,13 +47,14 @@
   <ItemGroup>
     <Compile Include="AccountViewModels.cs" />
     <Compile Include="API\ErrorModel.cs" />
-    <Compile Include="Football\FootballCouponViewModel.cs" />
+    <Compile Include="Football\FootballCouponOutcomeViewModel.cs" />
     <Compile Include="Football\FootballFixtureViewModel.cs" />
     <Compile Include="Football\FootballLadderViewModel.cs" />
     <Compile Include="Football\FootballPredictionViewModel.cs" />
+    <Compile Include="Generic\TodaysFixturesViewModel.cs" />
     <Compile Include="Tennis\CalculateTournamentLadderChallengeViewModel.cs" />
     <Compile Include="Tennis\ShowTournamentLadderChallengeViewModel.cs" />
-    <Compile Include="Tennis\TennisCouponViewModel.cs" />
+    <Compile Include="Tennis\TennisCouponOutcomeViewModel.cs" />
     <Compile Include="Tennis\TennisFixtureViewModel.cs" />
     <Compile Include="Tennis\TennisLadderViewModel.cs" />
     <Compile Include="Tennis\TennisPredictionViewModel.cs" />
@@ -71,6 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

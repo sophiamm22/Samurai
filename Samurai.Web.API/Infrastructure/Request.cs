@@ -6,20 +6,27 @@ using System.Net.Http;
 
 namespace Samurai.Web.API.Infrastructure
 {
-  public interface IRequest
+  public interface IRequestWrapper<T>
+    where T : class
   {
     HttpRequestMessage RequestMessage { get; set; }
+    T RequestArguments { get; set; }
   }
 
-  public abstract class Request : IRequest
+  public class RequestWrapper<T> : IRequestWrapper<T>
+    where T : class
   {
     public HttpRequestMessage RequestMessage { get; set; }
+    public T RequestArguments { get; set; }
 
-    public Request(HttpRequestMessage request)
+    public RequestWrapper(HttpRequestMessage request, T args)
     {
-      if (request == null) throw new ArgumentNullException("request");
+      //if (request == null) throw new ArgumentNullException("request");
+
       RequestMessage = request;
+      RequestArguments = args;
     }
+
   }
 
 }

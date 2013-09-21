@@ -24,13 +24,13 @@ namespace Samurai.Domain.Value
   public class FootballFixtureStrategy : IFootballFixtureStrategy
   {
     protected readonly IFixtureRepository fixtureRepository;
-    protected readonly IStoredProceduresRepository storedProcRepository;
+    protected readonly ISqlLinqStoredProceduresRepository storedProcRepository;
     protected readonly IWebRepositoryProvider webRepositoryProvider;
 
     protected string storedHTML = "";
 
 
-    public FootballFixtureStrategy(IFixtureRepository fixtureRepository, IStoredProceduresRepository storedProcRepository,
+    public FootballFixtureStrategy(IFixtureRepository fixtureRepository, ISqlLinqStoredProceduresRepository storedProcRepository,
       IWebRepositoryProvider webRepositoryProvider)
     {
       this.fixtureRepository = fixtureRepository;
@@ -82,7 +82,8 @@ namespace Samurai.Domain.Value
           match.ObservedOutcomes.Add(new ObservedOutcome()
           {
             Match = match,
-            ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore)
+            ScoreOutcome = this.fixtureRepository.GetScoreOutcome(mt.Token.HomeTeamScore, mt.Token.AwayTeamScore),
+            OutcomeCommentID = 1
           });
         }
         else

@@ -21,6 +21,7 @@ namespace Samurai.Web.ViewModels.Tennis
     public string PlayerASurname { get; set; }
     public string PlayerBFirstName { get; set; }
     public string PlayerBSurname { get; set; }
+    public string PredictionURL { get; set; }
 
     public string ScoreLine { get; set; }
     public string Comment { get; set; }

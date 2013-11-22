@@ -1,5 +1,5 @@
 ﻿define(['../system'], function(system) {
-    var fadeOutDuration = 100;
+    var fadeOutDuration = 200;
 
     var entrance = function(parent, newChild, settings) {
         return system.defer(function(dfd) {
@@ -46,15 +46,15 @@
                     }
 
                     var startValues = {
-                        marginLeft: '20px',
-                        marginRight: '-20px',
+                        marginBottom: '20px',
+                        marginTop: '-20px',
                         opacity: 0,
                         display: 'block'
                     };
 
                     var endValues = {
-                        marginRight: 0,
-                        marginLeft: 0,
+                        marginBottom: 0,
+                        marginTop: 0,
                         opacity: 1
                     };
 

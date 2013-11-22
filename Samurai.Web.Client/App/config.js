@@ -1,6 +1,6 @@
 ﻿﻿define(function () {
   toastr.options.timeOut = 4000;
-  toastr.options.positionClass = 'toast-bottom-right';
+  toastr.options.positionClass = 'toast-bottom-left';
 
   var routes = [{
     url: 'today',
@@ -72,6 +72,7 @@
 
   var minTennisGames = 70;
   var minEdgeTennis = 0.2;
+  var minEdgeFootball = 0.2;
   var kellyMultiplier = 0.25;
   var exhaustiveKellyLimit = 7;
   var startBank = 1000;
@@ -85,6 +86,7 @@
     signalrServiceName: signalrServiceName,
     minTennisGames: minTennisGames,
     minEdgeTennis: minEdgeTennis,
+    minEdgeFootball: minEdgeFootball,
     kellyMultiplier: kellyMultiplier,
     exhaustiveKellyLimit: exhaustiveKellyLimit,
     startBank: startBank

@@ -9,8 +9,8 @@
 	</div>
 </div>
 		
-<div class="row">
-	<div class="col-lg-3">
+<div class="row margin-clear">
+	<div class="col-sm-3 col-lg-3">
     <nav>
       <ul id="side-bar" class="nav nav-pills nav-stacked white-section" data-bind="foreach: competitions">
         <li data-bind="css: { 'active': isSelected() }">
@@ -22,7 +22,7 @@
       </ul>
     </nav>
 	</div>
-	<div class="col-lg-9 white-section">
+	<div class="col-sm-9 col-lg-9 white-section">
     <div class="filter-box-container">
       <input class="filter-box"
               data-bind="value: betFilter.searchText, valueUpdate: 'afterkeydown', escape: clearFilter"
@@ -45,27 +45,34 @@
 				</div>
 				<div class="match-content">
 					<div class="row">
-					  <div class="col-lg-4 text-right"><div class="team" data-bind="text: homeTeam"></div></div>
-					  <div class="col-lg-4 text-center"><div class="vs">vs.</div></div>
-					  <div class="col-lg-4 text-left"><div class="team" data-bind="text: awayTeam"></div></div>
+            <div class="clearfix visible-xs"></div>
+					  <div class="col-xs-5 col-lg-4 text-right"><div class="team" data-bind="text: playerASurname"></div></div>
+					  <div class="col-xs-2 col-lg-4 text-center"><div class="vs">vs.</div></div>
+					  <div class="col-xs-5 col-lg-4 text-left"><div class="team" data-bind="text: playerBSurname"></div></div>
 					</div>
 					<div class="row">
-					  <div class="col-lg-4 text-right"><div class="prob" data-bind="text: playerAWinProb"></div></div>
-					  <div class="col-lg-4 text-center"><div class="prob"></div></div>
-					  <div class="col-lg-4 text-left"><div class="prob" data-bind="text: playerBWinProb"></div></div>
+            <div class="clearfix visible-xs"></div>
+					  <div class="col-xs-5 col-lg-4 text-right"><div class="first-name" data-bind="text: playerAFirstName"></div></div>
+					  <div class="col-xs-2 col-lg-4 text-center"><div class="first-name"></div></div>
+					  <div class="col-xs-5 col-lg-4 text-left"><div class="first-name" data-bind="text: playerBFirstName"></div></div>
+					</div>
+					<div class="row">
+					  <div class="col-xs-5 col-lg-4 text-right"><div class="prob" data-bind="text: playerAWinProb"></div></div>
+					  <div class="col-xs-2 col-lg-4 text-center"><div class="prob"></div></div>
+					  <div class="col-xs-5 col-lg-4 text-left"><div class="prob" data-bind="text: playerBWinProb"></div></div>
 					</div>						
 					<div class="row">
-						<div class="col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
-						<div class="col-lg-4 text-center"><div class="odd">Best Odds</div></div>
-						<div class="col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
+						<div class="col-xs-5 col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
+						<div class="col-xs-2 col-lg-4 text-center"><div class="odd"><span class="no-months">Best </span>Odds</div></div>
+						<div class="col-xs-5 col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
 					</div>
 					<div class="row" data-bind="with: predictions">
-						<div class="col-lg-4 text-right"><div class="match-count" data-bind="text: playerAGames"></div></div>
-						<div class="col-lg-4 text-center"><div class="match-count">Matches (last 18 months)</div></div>
-						<div class="col-lg-4 text-left"><div class="match-count" data-bind="text: playerBGames"></div></div>
+						<div class="col-xs-5 col-lg-4 text-right"><div class="match-count" data-bind="text: playerAGames"></div></div>
+						<div class="col-xs-2 col-lg-4 text-center"><div class="match-count">Matches<span class="no-months"> (last 18 months)</span></div></div>
+						<div class="col-xs-5 col-lg-4 text-left"><div class="match-count" data-bind="text: playerBGames"></div></div>
 					</div>
           <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-xs-12 col-lg-12 text-center">
               <span class="advice" data-bind="text: temporaryBetCaption"></span>
             </div>
           </div>	
@@ -80,24 +87,26 @@
 				</div>
 				<div class="match-content">
 					<div class="row">
-					  <div class="col-lg-4 text-right"><div class="team" data-bind="text: homeTeam"></div></div>
-					  <div class="col-lg-4 text-center"><div class="vs">vs.</div></div>
-					  <div class="col-lg-4 text-left"><div class="team" data-bind="text: awayTeam"></div></div>
+            <div class="clearfix visible-xs"></div>
+					  <div class="col-xs-5 col-lg-4 text-right"><div class="team" data-bind="text: homeTeam"></div></div>
+					  <div class="col-xs-2 col-lg-4 text-center"><div class="vs">vs.</div></div>
+					  <div class="col-xs-5 col-lg-4 text-left"><div class="team" data-bind="text: awayTeam"></div></div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 text-right"><div class="outcome">Home win</div></div>
-						<div class="col-lg-4 text-center"><div class="outcome">Draw</div></div>
-						<div class="col-lg-4 text-left"><div class="outcome">Away win</div></div>
+            <div class="clearfix visible-xs"></div>
+						<div class="col-xs-5 col-lg-4 text-right"><div class="outcome">Home win</div></div>
+						<div class="col-xs-2 col-lg-4 text-center"><div class="outcome">Draw</div></div>
+						<div class="col-xs-5 col-lg-4 text-left"><div class="outcome">Away win</div></div>
 					</div>								
 					<div class="row">
-					  <div class="col-lg-4 text-right"><div class="prob" data-bind="text: homeWinProb"></div></div>
-					  <div class="col-lg-4 text-center"><div class="prob" data-bind="text: drawProb"></div></div>
-					  <div class="col-lg-4 text-left"><div class="prob" data-bind="text: awayWinProb"></div></div>
+					  <div class="col-xs-5 col-lg-4 text-right"><div class="prob" data-bind="text: homeWinProb"></div></div>
+					  <div class="col-xs-2 col-lg-4 text-center"><div class="prob" data-bind="text: drawProb"></div></div>
+					  <div class="col-xs-5 col-lg-4 text-left"><div class="prob" data-bind="text: awayWinProb"></div></div>
 					</div>						
 					<div class="row">
-						<div class="col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
-						<div class="col-lg-4 text-center"><div class="odd"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div></div>
-						<div class="col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
+						<div class="col-xs-5 col-lg-4 text-right"><div class="odd"><a data-bind="attr: { href: homeWinClickThrough, title: homeWinClickThroughLocation, target: '_blank' }, text: homeWinOdds"></a></div></div>
+						<div class="col-xs-2 col-lg-4 text-center"><div class="odd"><a data-bind="attr: { href: drawClickThrough, title: drawClickThroughLocation, target: '_blank' }, text: drawOdds"></a></div></div>
+						<div class="col-xs-5 col-lg-4 text-left"><div class="odd"><a data-bind="attr: { href: awayWinClickThrough, title: awayWinClickThroughLocation, target: '_blank' }, text: awayWinOdds"></a></div></div>
 					</div>
           <div class="row">
             <div class="col-lg-12 text-center">

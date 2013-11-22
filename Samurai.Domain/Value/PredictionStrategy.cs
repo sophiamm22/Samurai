@@ -103,7 +103,8 @@ namespace Samurai.Domain.Value
         TeamOrPlayerB = apiPrediction.AwayTeam,
         MatchDate = date,
         MatchIdentifier = string.Format("{0}/vs/{1}/{2}/{3}", apiPrediction.HomeTeam, apiPrediction.AwayTeam,
-          tournamentEvent.EventName, date.ToShortDateString().Replace("/", "-"))
+          tournamentEvent.EventName, date.ToShortDateString().Replace("/", "-")),
+        PredictionURL = predictionURL
       };
 
       footballPrediction.OutcomeProbabilities.Add(Model.Outcome.HomeWin, apiPrediction.ExpectedProbabilities.HomeWinProb);

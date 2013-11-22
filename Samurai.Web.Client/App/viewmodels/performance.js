@@ -72,7 +72,7 @@
 
         //By edge
         var edge = perf.dimension(function (d) {
-          var x = Math.round((d.MatchOutcomeProbability * d.OddAfterCommission - 1) * 100);
+          var x = Math.round((d.MatchOutcomeProbability * d.OddAfterCommission - 1) * 10000) / 100;
           return x;
         });
         var edgeGroup = edge.group();
@@ -163,7 +163,7 @@
 
         //#region Charts
         var dateLow = new Date(2012, 12, 01);
-        var dateHigh = new Date(2013, 9, 30); //r.js will shit itself if you put a leading zero on any month
+        var dateHigh = new Date(2013, 11, 30); //r.js will shit itself if you put a leading zero on any month
 
         dailyBubbleChart.width(1100)
             .height(400)
@@ -328,7 +328,7 @@
               var text = d.TournamentName + ' (' + d.Series + ' - ' + d.Surface.toLowerCase() + ' court)';
               return text;
             })
-            .size(100)
+            .size(200)
             .columns([
                 function (d) {
                   return d.day.toLocaleDateString();

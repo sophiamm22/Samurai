@@ -59,7 +59,7 @@ namespace Samurai.Services
         {
           var tournamentName = Reg.Regex.Replace(prediction.TournamentName, @" 20\d{2}", "");
 
-          var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentAndDate(prediction.MatchDate, tournamentName);
+          var tournamentEvent = this.fixtureRepository.GetTournamentEventFromTournamentEventNameAndDate(prediction.MatchDate, tournamentName);
           match = this.fixtureRepository.CreateMatch(teamA, teamB, prediction.MatchDate, tournamentEvent);
         }
         matchIDs.Add(match.Id);

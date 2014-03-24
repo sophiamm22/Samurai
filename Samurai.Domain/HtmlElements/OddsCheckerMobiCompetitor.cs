@@ -22,7 +22,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<form action=æhttp://oddschecker\.mobi/betslipæ target=æ_blankæ method=æPOSTæ enctype=æmultipart/form-dataæ\>\<span class=æleftæ\>(?<OutcomeFullName>[^\<]+)\</span\>")
+          new Regex(@"\<span class=æleft nameæ\>(?<OutcomeFullName>[^\<]+)\</span\>")
         };
       }
     }

@@ -17,7 +17,9 @@ namespace Samurai.SqlDataAccess
   {
     public SqlPredictionRepository(DbContext context)
       :base(context)
-    { }
+    {
+      context.Configuration.AutoDetectChangesEnabled = false;
+    }
 
     public void AddOrUpdateTennisPredictionsStats(TennisPredictionStat stat)
     {

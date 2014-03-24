@@ -82,6 +82,7 @@
     <Compile Include="HtmlElements\BestBettingOdds.cs" />
     <Compile Include="HtmlElements\BestBettingOddsCompetitor.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleDate.cs" />
+    <Compile Include="HtmlElements\BestBettingScheduleFinalURL.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleInRunning.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleMatch.cs" />
     <Compile Include="HtmlElements\BestBettingScheduleMatchOdds.cs" />

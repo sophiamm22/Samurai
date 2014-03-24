@@ -21,7 +21,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<h2\>(?<Heading>[^\<]+)\</h2\>")
+          new Regex(@"\<span class=æcell flex vertæ\>(?<Heading>[^\<]+)\</span\>")
         };
       }
     }

@@ -27,7 +27,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<a href=æ(?<MatchPartURL>[^æ]+)æ class=æ(mOdd|mEven)æ\>(?<GameState>(\<[^\>]+\>|))(?<TeamOrPlayerA>[^/]+) v (?<TeamOrPlayerB>[^\</]+)\</a\>")
+          new Regex(@"<a class=ælist-view-link cell vertæ href=æ(?<MatchPartURL>[^æ]+)æ title=æ[^æ]+æ data-date-time=æ[^æ]+æ\>\d{1,2}:\d{1,2} (?<TeamOrPlayerA>[^/]+) v (?<TeamOrPlayerB>[^\</]+)\</a\>")
         };
       }
     }
@@ -35,7 +35,7 @@ namespace Samurai.Domain.HtmlElements
     public bool Validates() { return true; }
     public void Clean()
     {
-      MatchURL = new Uri(@"http://oddschecker.mobi" + MatchPartURL);
+      MatchURL = new Uri(@"http://m.oddschecker.com" + MatchPartURL);
       TeamOrPlayerA = TeamOrPlayerA.Replace("&amp;", "&");
       TeamOrPlayerB = TeamOrPlayerB.Replace("&amp;", "&");
       InPlay = !string.IsNullOrEmpty(GameState);

@@ -30,7 +30,7 @@ namespace Samurai.Domain.HtmlElements
       {
         return new List<Regex>()
         {
-          new Regex(@"\<option value=æbetslip/(?<BookmakerCode>[^/]+)/(?<MarketIDOne>[^/]+)/(?<MarketIDTwo>[^/]+)/(?<URLPart>[^/]+)/(?<URLStub>[^æ]+)æ\>(?<OddsText>[^\s]+) (?<Bookmaker>[^\<]+)\</option\>")
+          new Regex(@"\<option value=æ[^æ]+æ class=æotoSelLiæ\>(?<OddsText>[^\s]+) (?<Bookmaker>[^\<]+)\</option\>")
         };
       }
     }

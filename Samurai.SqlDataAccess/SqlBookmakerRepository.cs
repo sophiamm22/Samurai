@@ -15,7 +15,9 @@ namespace Samurai.SqlDataAccess
   {
     public SqlBookmakerRepository(DbContext context)
       :base(context)
-    { }
+    {
+      context.Configuration.AutoDetectChangesEnabled = false;
+    }
 
     public int? GetMinGamesForTennisBet()
     {

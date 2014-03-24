@@ -50,6 +50,7 @@ namespace Samurai.SqlDataAccess.Contracts
 
     void AddTournamentEvent(TournamentEvent entity);
     TournamentEvent GetTournamentEventFromTournamentAndDate(DateTime matchDate, string tournamentName);
+    TournamentEvent GetTournamentEventFromTournamentEventNameAndDate(DateTime matchDate, string tournamentName);
     TournamentEvent GetTournamentEventFromTournamentAndYear(int year, string tournamentName);
     TournamentEvent GetFootballTournamentEvent(int leagueEnum, DateTime matchDate);
     TournamentEvent GetTournamentEventById(int tournamentEventID);

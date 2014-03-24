@@ -76,6 +76,10 @@ namespace Samurai.Domain.Value.Async
         WebUtils.ParseWebsite<BestBettingScheduleDate, BestBettingScheduleMatch, BestBettingScheduleInRunning>(html, s => { })
                 .ToList();
 
+      matchTokens.AddRange(
+        WebUtils.ParseWebsite<BestBettingScheduleFinalURL>(html, s => { })
+                .ToList());
+
       var currentDate = DateTime.Now.Date;
       var lastChecked = DateTime.Now;
 

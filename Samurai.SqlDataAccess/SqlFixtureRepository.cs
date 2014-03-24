@@ -18,7 +18,9 @@ namespace Samurai.SqlDataAccess
   {
     public SqlFixtureRepository(DbContext context)
       : base(context)
-    { }
+    {
+      context.Configuration.AutoDetectChangesEnabled = false;
+    }
 
     public Match GetTennisMatch(string playerASlug, string playerBSlug, DateTime matchDate)
     {
@@ -253,6 +255,15 @@ namespace Samurai.SqlDataAccess
     public TournamentEvent GetTournamentEventFromTournamentAndDate(DateTime matchDate, string tournamentName)
     {
       var tournamentEvent = GetQuery<TournamentEvent>(t => t.Tournament.TournamentName == tournamentName)
+                              .OrderBy(t => SqlFunctions.DateDiff("dd", t.StartDate, matchDate) ^ 2)
+                              .First();
+      return tournamentEvent;
+    }
+
+    public TournamentEvent GetTournamentEventFromTournamentEventNameAndDate(DateTime matchDate, string tournamentName)
+    {
+      var eventName = string.Format("{0} ({1})", tournamentName, matchDate.AddDays(15).Year);
+      var tournamentEvent = GetQuery<TournamentEvent>(t => t.EventName == eventName)
                               .OrderBy(t => SqlFunctions.DateDiff("dd", t.StartDate, matchDate) ^ 2)
                               .First();
       return tournamentEvent;

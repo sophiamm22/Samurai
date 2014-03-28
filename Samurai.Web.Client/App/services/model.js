@@ -314,7 +314,7 @@
 
       footballMatch.hasQualifyingBet = ko.computed(function () {
         var bestBet = _.max([footballMatch.homeWinEdge(), footballMatch.drawEdge(), footballMatch.awayWinEdge()]);
-        return bestBet > 0.1; //need to have this stored somewhere
+        return bestBet > config.minEdgeFootball; //need to have this stored somewhere
       });
 
       footballMatch.valueOutcome = ko.computed(function () {

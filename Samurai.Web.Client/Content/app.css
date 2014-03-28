@@ -63,17 +63,20 @@ nav, section, summary, time, mark, audio, video
 /* #endregion */
 
 /* #region bootstrap overrides */
+html{
+      overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 body{
 	background-image: url("images/lightpaper-1.png"), url("images/lightpaper-2.png");
     background-repeat: repeat-y, repeat;
     font-family: "Segoe UI", sans-serif;
     font-size:17px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+
 }
 
 h1,h2,h3 {
-	font-family:"FuturaBT-Bold", Impact, sans-sefif;
+	font-family:"FuturaBT-Bold", "Futura-CondensedExtraBold", Impact, sans-sefif;
 	text-transform:uppercase;
 	word-spacing:.1em;
 }
@@ -137,7 +140,6 @@ p {
 .progress-bar{
   background-color:#B21B1B;
 }
-
 /* #endregion */
 
 /* #region toastr overrides */
@@ -226,7 +228,7 @@ p {
 
 .main {
 	max-width: 1100px;
-	margin: -2% auto 3% auto;
+	margin: 0 auto;
 	color: rgba(0, 0, 0, 0.75);
 }
 .main > h2 {
@@ -254,10 +256,7 @@ p {
 	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-.main-content-info{
-	margin: 3% auto;
-}
-.margin-clear{
+.row{
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -310,6 +309,12 @@ p {
 	word-spacing: .1em;
   font-weight:bold;
 }
+.match .first-name {
+  font-size: 1em;
+	word-spacing: .1em;
+  font-style:italic;
+  margin-bottom: 10%;
+}
 .match-header {
 	min-height: 1em;
 }
@@ -321,6 +326,9 @@ p {
   padding: 8px 12px;
   margin-left: 1%;
   font-size: 1.2em;
+}
+.no-months{
+  display: inline;
 }
 /* #region icons */
 .clear-text {
@@ -350,13 +358,22 @@ p {
   }
 }
 
-
-
 @media only screen and (max-width: 1060px) {
   body { font-size: 13px }
 
   .logo-img {
 	  width: 180px;
     height: 23px;
+  }
+  .no-months{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body { font-size: 8px }
+
+  .no-months{
+    display:none;
   }
 }

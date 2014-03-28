@@ -14,18 +14,24 @@ using Samurai.Web.ViewModels.Tennis;
 using Samurai.Web.ViewModels.Value;
 using Samurai.Domain.Infrastructure;
 using Samurai.Domain.Model;
+using Samurai.Domain.Repository;
 
 namespace Samurai.Sandbox
 {
   public class TennisConsole
   {
     private readonly ITennisFacadeAdminService tennisService;
+    private readonly ITwitterClient twitter;
+    private readonly IWebRepositoryProvider webRepositoryProvider;
 
-    public TennisConsole(ITennisFacadeAdminService tennisService)
+    public TennisConsole(ITennisFacadeAdminService tennisService, 
+      IWebRepositoryProvider webRepositoryProvider = null, ITwitterClient twitter = null)
     {
       if (tennisService == null) throw new ArgumentNullException("tennisService");
-
+      
       this.tennisService = tennisService;
+      this.webRepositoryProvider = webRepositoryProvider;
+      this.twitter = twitter;
     }
 
     public void TennisMenu()
@@ -252,6 +258,30 @@ namespace Samurai.Sandbox
       }
       else
         return response;
+    }
+
+    private void TweetPredictions(IEnumerable<TennisFixtureViewModel> fixtures)
+    {
+      var qualifyingPredictions =
+        fixtures.Where(x => x.Predictions.PlayerAGames >= 70 && x.Predictions.PlayerBGames >= 70)
+                .ToList();
+      if (qualifyingPredictions.Count == 0) return;
+
+      var webRepository = 
+        this.webRepositoryProvider
+            .CreateWebRepository(fixtures.First().MatchDate.Date);
+
+      var auth = this.twitter.Auth();
+      foreach (var prediction in qualifyingPredictions)
+      {
+        var tinyURL = webRepository.GetHTMLRaw(new Uri[] { new Uri(string.Format("http://tinyurl.com/api-create.php?url={0}", prediction.PredictionURL)) }, s => Console.WriteLine(s)).First();
+        
+
+
+        //var tweet = string.Format("{0} to bt. {1}, {2:P1} @ {3} {4}"  prediction.PlayerASurname
+      }
+      
+
     }
   }
   

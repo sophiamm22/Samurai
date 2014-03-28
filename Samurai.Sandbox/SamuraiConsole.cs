@@ -51,6 +51,7 @@ namespace Samurai.Sandbox
         {
           if (number == 1)
           {
+            //throw new NotImplementedException();
             var tennisConsole = new TennisConsole(tennisService);
             tennisConsole.TennisMenu();
           }

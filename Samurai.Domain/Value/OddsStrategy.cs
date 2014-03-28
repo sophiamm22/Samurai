@@ -114,6 +114,7 @@ namespace Samurai.Domain.Value
             ClickThroughURL = odd.ClickThroughURL
           });
         }
+
       }
       if (missingBookmakerAlias.Count() != 0)
         throw new MissingBookmakerAliasException(missingBookmakerAlias, "Missing bookmaker alias");

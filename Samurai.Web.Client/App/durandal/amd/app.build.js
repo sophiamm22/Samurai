@@ -7,8 +7,8 @@
   "paths": {
     "text": "durandal/amd/text"
   },
-  "baseUrl": "D:\\Git\\Samurai\\Samurai.Web.Client\\App",
-  "mainConfigFile": "D:\\Git\\Samurai\\Samurai.Web.Client\\App\\main.js",
+  "baseUrl": "C:\\Git\\Samurai\\Samurai.Web.Client\\App",
+  "mainConfigFile": "C:\\Git\\Samurai\\Samurai.Web.Client\\App\\main.js",
   "include": [
     "config",
     "main-built",
@@ -54,7 +54,7 @@
   "exclude": [],
   "keepBuildDir": true,
   "optimize": "uglify2",
-  "out": "D:\\Git\\Samurai\\Samurai.Web.Client\\App\\main-built.js",
+  "out": "C:\\Git\\Samurai\\Samurai.Web.Client\\App\\main-built.js",
   "pragmas": {
     "build": true
   },

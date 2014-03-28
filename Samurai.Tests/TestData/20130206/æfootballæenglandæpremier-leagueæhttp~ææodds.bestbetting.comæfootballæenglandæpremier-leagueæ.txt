@@ -1,0 +1,2972 @@
+<!DOCTYPE html PUBLIC æ-//W3C//DTD XHTML 1.0 Transitional//ENæ æhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtdæ>
+<html xmlns=æhttp://www.w3.org/1999/xhtmlæ xml:lang=æenæ>
+<!--googleoff: index-->
+<head><meta http-equiv=æContent-Languageæ content=æENæ /><meta http-equiv=æContent-Typeæ content=æUTF-8æ /><meta name=æauthoræ content=æcontactus@betgenius.comæ /><meta name=æverify-v1æ content=ævr0HJ2q/eSuzDhXVTn9h6hQ9LnTaSRs+q6SAvH1q0SY=æ /><link rel=æsearchæ href=æhttp://odds.bestbetting.com/provider.xmlæ type=æapplication/opensearchdescription+xmlæ title=æbestbetting.comæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/favicon.icoæ rel=æshortcut iconæ /><link href=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ rel=æimage_srcæ /><meta name=ækeywordsæ content=æOdds comparison, betting odds, best odds, compare best odds, In play odds and betting, live betting odds, In Running betting odds, Premiership Odds, Premier League odds, Champions League odds, free bets, horse racing betting and odds, antepost betting, horse racing results, football odds, football betting, tennis betting, snooker betting, GAA betting, grand national betting, cheltenham betting, darts betting, greyhound betting, Wales, France, New Zealand, Australia, King George, PDC World dartsæ /><meta name=ædescriptionæ content=æBestbetting compares odds from the leading internet bookmakers, ensuring that you always get the best value from your bets. Find odds on horse racing, football, golf, tennis, NFL, snooker, darts, cricket and more.æ /><meta name=ærobotsæ content=æFOLLOW,INDEXæ /><link href=æhttp://cdn3.resources.bestbetting.com/com.bestbetting/css/core.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/coupon.css?89æ rel=æstylesheetæ type=ætext/cssæ /><link href=æhttp://cdn3.resources.bestbetting.com/default/css/odds.css?89æ rel=æstylesheetæ type=ætext/cssæ /><script type=ætext/javascriptæ src=æ/djs/localiser/en?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/Betgenius_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/com.bestbetting/javascript/odds_core.js?89æ></script>
+<script type=ætext/javascriptæ src=æhttp://cdn4.resources.bestbetting.com/default/javascript/coupon.js?89æ></script>
+<title>
+	Bestbetting > Football > European Leagues > England > Barclays Premier League > 2012-2013
+</title></head>
+<!--googleon: index-->
+<body>
+    <table class=æsiteContaineræ cellpadding=æ0æ cellspacing=æ0æ>
+        <tr>
+            <td>
+				<!--googleoff: index-->
+                <div class=æinnerBaræ>
+                	
+                    <div id=æclockPanelæ>
+                        <span id=æserverTimeæ>
+                            Wed 06, February 2013 08:40:05
+                        </span>
+                        GMT
+                    </div>
+                    
+                    <p>
+                        bestbetting.com | <a href=æhttp://odds.bestbetting.com/æ>UK</a> |
+                        
+                        <a href=æhttp://eu.bestbetting.com/æ>EU</a> | <a href=æhttp://int.bestbetting.com/æ>INT</a>
+                        | <a href=æhttp://free-bets.com/æ>Free Bets</a>
+                            <span id=æsearchEngineContaineræ></span>                        
+                            </p>
+                </div>
+                <div class=æheaderContaineræ>
+                    <div class=æleaderboardContaineræ>
+                        <a href=æhttp://affiliates.stanjamesaffiliates.com/processing/clickthrgh.asp?btag=a_1701b_2851æ  ><img src=æhttp://affiliates.stanjamesaffiliates.com/processing/impressions.asp?btag=a_1701b_2851æ alt=æwww.stanjames.comæ  style=æborder:none; width:728px;  height:90px; æ/></a>
+                    </div>
+                    <a href=æ/æ>
+                        <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/header/bestbetting_logo.gifæ class=ælogoæ width=æ230æ height=æ60æ
+                            alt=æBestbetting odds comparison | Premier League football odds | Horse Racing odds | Free Bets | FA Cup | Super Bowl XLVI |  6 Nationsæ /></a>
+                </div>
+                <div class=ætopNavContaineræ>
+                     <div class=æoddsFormatContaineræ>
+                        <ul>
+                            <li><a href=æ#æ class=ænavLink fractional-odds setOddsFormat selectedæ>Fractional</a></li>
+                            <li><a href=æ#æ class=ænavLink european-odds setOddsFormatæ>Decimal</a></li>
+                            <li><a href=æ#æ class=ænavLink american-odds setOddsFormatæ>American</a></li>
+                        </ul>
+                    </div>
+                    <form class=æsearchContaineræ action=æ/searchæ method=ægetæ>
+                    <input type=æhiddenæ name=æsearchFromæ value=æbbæ />
+                    <input type=æhiddenæ name=æactionæ value=æsearchæ />
+                    <input type=æhiddenæ name=æquickSearchæ value=ætrueæ />
+                    <fieldset>
+                        <input class=ætextæ type=ætextæ name=æsearchæ value=ææ size=æ30æ />
+                        <input class=æsubmitBtnæ type=æsubmitæ value=æSearchæ />
+                    </fieldset>
+                    </form>
+                    <ul class=ælinksæ>
+                        <li><a href=æ/æ class=ænavLink navLinkNBæ>Home</a></li>
+                        <li><a href=æhttp://www.free-bets.com/æ class=ænavLinkæ target=æ_blankæ>Free Bets</a></li>
+                        <li><a href=æ/steamersæ class=ænavLink navLinkLæ>Steamers</a></li>
+                    </ul>
+                    <div class=æcleaneræ>&nbsp;</div>
+                </div>
+                <!--googleon: index-->
+                <div class=æbodyContaineræ>
+                    <table cellpadding=æ0æ cellspacing=æ0æ>
+                        <tr>
+                            <td id=ænavContaineræ>
+                                <!-- Force Left Nav Width -->
+                                <img class=æcleaneræ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ width=æ158æ height=æ1æ />
+                                
+	
+<!--googleoff: index-->
+
+		<div class=ætopMenu æ>
+			<a class=æicon-s100557æ href=æ/alpine-skiing/æ>Alpine Skiing</a>
+			<div class=æsubMenu s100557æ>
+			
+					<a href=æ/alpine-skiing/world-cup/æ id=ærf219æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s17æ href=æ/american-football/æ>American Football</a>
+			<div class=æsubMenu s17æ>
+			
+					<a href=æ/american-football/nfl/æ id=ærf39æ>NFL</a>
+				
+					<a href=æ/american-football/cfl/æ id=ærf147æ>CFL</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4021954æ href=æ/archery/æ>Archery</a>
+			<div class=æsubMenu s4021954æ>
+			
+					<a href=æ/archery/world/æ id=æs4021954reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s1æ href=æ/athletics/æ>Athletics</a>
+			<div class=æsubMenu s1æ>
+			
+					<a href=æ/athletics/world/æ id=æs1reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s2æ href=æ/australian-rules/æ>Australian Rules</a>
+			<div class=æsubMenu s2æ>
+			
+					<a href=æ/australian-rules/afl/æ id=ærf19æ>AFL</a>
+				
+					<a href=æ/austrailian-rules/afl/nab-cup/æ id=ærf146æ>NAB Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s271554æ href=æ/badminton/æ>Badminton</a>
+			<div class=æsubMenu s271554æ>
+			
+					<a href=æ/badminton/world/æ id=æs271554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s337919æ href=æ/bandy/æ>Bandy</a>
+			<div class=æsubMenu s337919æ>
+			
+					<a href=æ/bandy/sweden/æ id=æs337919reg216æ>Sweden</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s3æ href=æ/baseball/æ>Baseball</a>
+			<div class=æsubMenu s3æ>
+			
+					<a href=æ/baseball/major-league-baseball/æ id=ærf38æ>MLB</a>
+				
+					<a href=æ/baseball/world/æ id=æs3reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4æ href=æ/basketball/æ>Basketball</a>
+			<div class=æsubMenu s4æ>
+			
+					<a href=æ/basketball/nba/æ id=ærf126æ>NBA</a>
+				
+					<a href=æ/basketball/ncaa/æ id=ærf127æ>NCAA</a>
+				
+					<a href=æ/basketball/eurochallenge/æ id=ærf153æ>EuroChallenge</a>
+				
+					<a href=æ/basketball/eurocup/æ id=ærf155æ>Eurocup</a>
+				
+					<a href=æ/basketball/euroleague/æ id=ærf154æ>Euroleague</a>
+				
+					<a href=æ/basketball/other-leagues/æ id=ærf129æ>Other Leagues</a>
+				
+					<a href=æ/basketball/european-leagues/æ id=ærf128æ>European Leagues</a>
+				
+					<a href=æ/basketball/eurobasket/æ id=ærf152æ>EuroBasket</a>
+				
+					<a href=æ/basketball/asia/æ id=æs4reg5æ>Asia</a>
+				
+					<a href=æ/basketball/mexico/æ id=æs4reg119æ>Mexico</a>
+				
+					<a href=æ/basketball/usa/æ id=æs4reg140æ>USA</a>
+				
+					<a href=æ/basketball/euroleague-women/æ id=ærf379æ>Euroleague Women</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s102842æ href=æ/biathlon/æ>Biathlon</a>
+			<div class=æsubMenu s102842æ>
+			
+					<a href=æ/biathlon/world-cup/æ id=ærf234æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8554æ href=æ/bowls/æ>Bowls</a>
+			<div class=æsubMenu s8554æ>
+			
+					<a href=æ/bowls/world/æ id=æs8554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s5æ href=æ/boxing/æ>Boxing</a>
+			<div class=æsubMenu s5æ>
+			
+					<a href=æ/boxing/professional-boxing/æ id=ærf90æ>Professional</a>
+				
+					<a href=æ/boxing/world/æ id=æs5reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022228æ href=æ/canoeing-kayaking/æ>Canoeing/Kayaking</a>
+			<div class=æsubMenu s4022228æ>
+			
+					<a href=æ/canoeing-kayaking/world/æ id=æs4022228reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6æ href=æ/cricket/æ>Cricket</a>
+			<div class=æsubMenu s6æ>
+			
+					<a href=æ/cricket/ICC-Champions-Trophy/æ id=ærf259æ>ICC Champions Trophy</a>
+				
+					<a href=æ/cricket/icc-test-championship/æ id=ærf115æ>Test Series</a>
+				
+					<a href=æ/cricket/indian-premier-league/æ id=ærf139æ>IPL</a>
+				
+					<a href=æ/cricket/english-domestic/æ id=ærf122æ>English Domestic</a>
+				
+					<a href=æ/cricket/icc-odi-championship/æ id=ærf116æ>ODI Series</a>
+				
+					<a href=æ/cricket/the-ashes/æ id=ærf110æ>The Ashes</a>
+				
+					<a href=æ/cricket/twenty20-internationals/æ id=ærf137æ>Twenty20 Internationals</a>
+				
+					<a href=æ/cricket/twenty20-world-cup/æ id=ærf117æ>Twenty20 World Cup</a>
+				
+					<a href=æ/cricket/world-cup/æ id=ærf138æ>World Cup</a>
+				
+					<a href=æ/cricket/australian-domestic/æ id=ærf121æ>Australian Domestic</a>
+				
+					<a href=æ/cricket/bangladesh/æ id=æs6reg154æ>Bangladesh</a>
+				
+					<a href=æ/cricket/world/æ id=æs6reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s102857æ href=æ/cross-country/æ>Cross Country</a>
+			<div class=æsubMenu s102857æ>
+			
+					<a href=æ/cross-country/world-cup/æ id=ærf231æ>World Cup</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7æ href=æ/cycling/æ>Cycling</a>
+			<div class=æsubMenu s7æ>
+			
+					<a href=æ/cycling/le-tour-de-france/æ id=ærf140æ>Le Tour de France</a>
+				
+					<a href=æ/cycling/belgium/æ id=æs7reg235æ>Belgium</a>
+				
+					<a href=æ/cycling/qatar/æ id=æs7reg185æ>Qatar</a>
+				
+					<a href=æ/cycling/milano-sanremo/æ id=ærf285æ>Milano-Sanremo</a>
+				
+					<a href=æ/cycling/paris-roubaix/æ id=ærf321æ>Paris Roubaix</a>
+				
+					<a href=æ/cycling/ronde-van-vlaanderen/æ id=ærf157æ>Ronde Van Vlaanderen</a>
+				
+					<a href=æ/cycling/world/æ id=æs7reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s8æ href=æ/darts/æ>Darts</a>
+			<div class=æsubMenu s8æ>
+			
+					<a href=æ/darts/dubai-masters/æ id=æcomp4638æ>Dubai Masters</a>
+				
+					<a href=æ/darts/bdo-world-championships/æ id=æcomp438æ>Lakeside World Professional Darts Championship</a>
+				
+					<a href=æ/darts/uk-open/æ id=æcomp452æ>Speedy Services UK Open</a>
+				
+					<a href=æ/darts/premier-league/æ id=ærf125æ>Premier League</a>
+				
+					<a href=æ/darts/pdc-world-championships/æ id=ærf193æ>PDC World Championships</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022299æ href=æ/diving/æ>Diving</a>
+			<div class=æsubMenu s4022299æ>
+			
+					<a href=æ/diving/world/æ id=æs4022299reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s70679æ href=æ/equestrian/æ>Equestrian</a>
+			<div class=æsubMenu s70679æ>
+			
+					<a href=æ/equestrian/world/æ id=æs70679reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022341æ href=æ/fencing/æ>Fencing</a>
+			<div class=æsubMenu s4022341æ>
+			
+					<a href=æ/fencing/world/æ id=æs4022341reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s99112æ href=æ/floorball/æ>Floorball</a>
+			<div class=æsubMenu s99112æ>
+			
+					<a href=æ/floorball/sweden/æ id=æs99112reg216æ>Sweden</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu navActiveæ>
+			<a class=æicon-s10æ href=æ/football/æ>Football</a>
+			<div class=æsubMenu s10æ>
+			
+					<a href=æ/football/england/æ id=æs10reg3795032æ>England</a>
+				
+					<a href=æ/football/scotland/æ id=æs10reg3795035æ>Scotland</a>
+				
+					<a href=æ/football/italy/æ id=æs10reg225æ>Italy</a>
+				
+					<a href=æ/football/spain/æ id=æs10reg232æ>Spain</a>
+				
+					<a href=æ/football/germany/æ id=æs10reg237æ>Germany</a>
+				
+					<a href=æ/football/france/æ id=æs10reg236æ>France</a>
+				
+					<a href=æ/football/african-cup-of-nations/æ id=ærf316æ>African Cup of Nations</a>
+				
+					<a href=æ/football/european-leagues/æ class=ænavItemActiveæ>European Leagues</a>
+				
+					<a href=æ/football/champions-league/æ id=ærf3æ>Champions League</a>
+				
+					<a href=æ/football/uefa-europa-league/æ id=ærf211æ>UEFA Europa League</a>
+				
+					<a href=æ/football/international-friendlies/æ id=ærf7æ>International Friendlies</a>
+				
+					<a href=æ/football/latin-american-leagues/æ id=ærf5æ>Latin American Leagues</a>
+				
+					<a href=æ/football/uefa-euro-2016/æ id=ærf442æ>UEFA Euro 2016</a>
+				
+					<a href=æ/football/other-leagues/æ id=ærf6æ>Other Leagues</a>
+				
+					<a href=æ/football/world-cup-qualification/æ id=ærf441æ>World Cup Qualifiers</a>
+				
+					<a href=æ/football/world-cup/æ id=ærf8æ>World Cup 2014</a>
+				
+					<a href=æ/football/youth/æ id=ærf11æ>Youth</a>
+				
+					<a href=æ/football/concacaf-champions-league/æ id=ærf267æ>CONCACAF Champions League</a>
+				
+					<a href=æ/football/club-friendlies/æ id=ærf237æ>Club Friendlies</a>
+				
+					<a href=æ/football/world/æ id=æs10reg2æ>World</a>
+				
+					<a href=æ/football/bangladesh/æ id=æs10reg154æ>Bangladesh</a>
+				
+					<a href=æ/football/europe/æ id=æs10reg6æ>Europe</a>
+				
+					<a href=æ/football/women's/æ id=ærf183æ>Women's</a>
+				
+					<a href=æ/football/specials/æ id=æcomp1837æ>Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s491393æ href=æ/futsal/æ>Futsal</a>
+			<div class=æsubMenu s491393æ>
+			
+					<a href=æ/futsal/spain/æ id=æs491393reg232æ>Spain</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf199æ href=æ/gaa/æ>GAA</a>
+			<div class=æsubMenu rf199æ>
+			
+					<a href=æ/gaelic-football/æ id=æs6463040æ>Gaelic Football</a>
+				
+					<a href=æ/hurling/æ id=æs6463041æ>Hurling</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s12æ href=æ/golf/æ>Golf</a>
+			<div class=æsubMenu s12æ>
+			
+					<a href=æ/golf/the-open-championship/æ id=ærf198æ>the Open</a>
+				
+					<a href=æ/golf/isps-handa-new-zealand-women's-open/æ id=æcomp4640æ>ISPS Handa New Zealand Women's Open</a>
+				
+					<a href=æ/golf/the-presidents-cup/æ id=æcomp505æ>The Presidents Cup</a>
+				
+					<a href=æ/golf/allianz-championship/æ id=æcomp539æ>Allianz Championship</a>
+				
+					<a href=æ/golf/pebble-beach-national-pro-am/æ id=æcomp456æ>AT&amp;T Pebble Beach National Pro-Am</a>
+				
+					<a href=æ/golf/joburg-open/æ id=ærf81æ>Joburg Open</a>
+				
+					<a href=æ/golf/solheim-cup/æ id=æcomp472æ>Solheim Cup</a>
+				
+					<a href=æ/golf/money-list/æ id=ærf82æ>Money List</a>
+				
+					<a href=æ/golf/ryder-cup/æ id=ærf87æ>Ryder Cup</a>
+				
+					<a href=æ/golf/masters-tournament/æ id=ærf83æ>US Masters</a>
+				
+					<a href=æ/golf/us-open/æ id=ærf86æ>US Open</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s13æ href=æ/greyhounds/æ>Greyhounds</a>
+			<div class=æsubMenu s13æ>
+			
+					<a href=æ/greyhounds/uk-wednesday/æ id=ærf202æ>UK Wednesday</a>
+				
+					<a href=æ/greyhounds/virtual/2013/æ id=æcomp1951æ>Virtual</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022394æ href=æ/gymnastics/æ>Gymnastics</a>
+			<div class=æsubMenu s4022394æ>
+			
+					<a href=æ/gymnastics/world/æ id=æs4022394reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s99614æ href=æ/handball/æ>Handball</a>
+			<div class=æsubMenu s99614æ>
+			
+					<a href=æ/handball/european-leagues/æ id=ærf93æ>European Leagues</a>
+				
+					<a href=æ/handball/ehf-champions-league/æ id=ærf96æ>Champions League</a>
+				
+					<a href=æ/handball/europe/æ id=æs99614reg6æ>Europe</a>
+				
+					<a href=æ/handball/slovenia/æ id=æs99614reg231æ>Slovenia</a>
+				
+					<a href=æ/handball/world/æ id=æs99614reg2æ>World</a>
+				
+					<a href=æ/handball/women's/æ id=ærf268æ>Women's</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s208627æ href=æ/hockey/æ>Hockey</a>
+			<div class=æsubMenu s208627æ>
+			
+					<a href=æ/hockey/world/æ id=æs208627reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s14æ href=æ/horse-racing/æ>Horse Racing</a>
+			<div class=æsubMenu s14æ>
+			
+					<a href=æ/horse-racing/nexthorserace/æ id=ærf62æ>Next Horse Race</a>
+				
+					<a href=æ/horse-racing/todayæ id=ærf41æ>Today</a>
+				
+					<a href=æ/horse-racing/tomorrowæ id=ærf42æ>Tomorrow</a>
+				
+					<a href=æ/horse-racing/antepost/æ id=ærf130æ>Antepost</a>
+				
+					<a href=æ/horse-racing/international-racing/æ id=ærf94æ>International</a>
+				
+					<a href=æ/horse-racing/virtual-horse-racing/æ id=ærf97æ>Virtual</a>
+				
+					<a href=æ/horse-racing/calendar/æ id=ærf136æ>Calendar</a>
+				
+					<a href=æ/steamersæ id=ærf214æ>Steamers</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s15æ href=æ/ice-hockey/æ>Ice Hockey</a>
+			<div class=æsubMenu s15æ>
+			
+					<a href=æ/ice-hockey/nhl/æ id=ærf101æ>NHL</a>
+				
+					<a href=æ/ice-hockey/european-leagues/æ id=ærf98æ>European Leagues</a>
+				
+					<a href=æ/ice-hockey/ahl/æ id=ærf99æ>AHL</a>
+				
+					<a href=æ/ice-hockey/world-championship/æ id=ærf102æ>World Championship</a>
+				
+					<a href=æ/ice-hockey/canada/æ id=æs15reg137æ>Canada</a>
+				
+					<a href=æ/ice-hockey/europe/æ id=æs15reg6æ>Europe</a>
+				
+					<a href=æ/ice-hockey/world/æ id=æs15reg2æ>World</a>
+				
+					<a href=æ/ice-hockey/winter-olympics/æ id=ærf251æ>Winter Olympics</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022554æ href=æ/judo/æ>Judo</a>
+			<div class=æsubMenu s4022554æ>
+			
+					<a href=æ/judo/world/æ id=æs4022554reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s300115æ href=æ/martial-arts-ufc/æ>Martial Arts/UFC</a>
+			<div class=æsubMenu s300115æ>
+			
+					<a href=æ/martial-arts-ufc/ultimate-fighting-championship/æ id=ærf165æ>UFC</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022615æ href=æ/modern-pentathlon/æ>Modern Pentathlon</a>
+			<div class=æsubMenu s4022615æ>
+			
+					<a href=æ/modern-pentathlon/world/æ id=æs4022615reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s16æ href=æ/motor-sport/æ>Motor Sport</a>
+			<div class=æsubMenu s16æ>
+			
+					<a href=æ/motor-sport/formula-1/æ id=ærf15æ>Formula 1</a>
+				
+					<a href=æ/motor-sport/moto-gp/æ id=ærf144æ>Moto GP</a>
+				
+					<a href=æ/motor-sport/world-rally-championship/æ id=ærf17æ>WRC</a>
+				
+					<a href=æ/motor-sport/nascar/æ id=ærf18æ>NASCAR</a>
+				
+					<a href=æ/motor-sport/speedway/æ id=ærf143æ>Speedway</a>
+				
+					<a href=æ/motor-sport/superbike/æ id=ærf16æ>Superbike</a>
+				
+					<a href=æ/motor-sport/supercars/æ id=ærf255æ>V8 Supercars</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf14æ href=æ/olympics/æ>Olympics</a>
+			<div class=æsubMenu rf14æ>
+			
+					<a href=æ/olympics/outrights/æ id=ærf417æ>Outrights</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s78155æ href=æ/politics/æ>Politics</a>
+			<div class=æsubMenu s78155æ>
+			
+					<a href=æ/politics/united-kingdom/æ id=ærf149æ>UK</a>
+				
+					<a href=æ/politics/australia/æ id=æs78155reg243æ>Australia</a>
+				
+					<a href=æ/politics/italy/æ id=æs78155reg225æ>Italy</a>
+				
+					<a href=æ/politics/sweden/æ id=æs78155reg216æ>Sweden</a>
+				
+					<a href=æ/politics/usa/æ id=æs78155reg140æ>USA</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s62969æ href=æ/rowing/æ>Rowing</a>
+			<div class=æsubMenu s62969æ>
+			
+					<a href=æ/rowing/world/æ id=æs62969reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73743æ href=æ/rugby-league/æ>Rugby League</a>
+			<div class=æsubMenu s73743æ>
+			
+					<a href=æ/rugby-league/england/æ id=ærf132æ>English Domestic</a>
+				
+					<a href=æ/rugby-league/australia/æ id=ærf131æ>Australian Domestic</a>
+				
+					<a href=æ/rugby-league/rugby-league-world-cup/æ id=ærf133æ>World Cup</a>
+				
+					<a href=æ/rugby-league/world-club-challenge/æ id=ærf134æ>World Cup Challenge</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s73744æ href=æ/rugby-union/æ>Rugby Union</a>
+			<div class=æsubMenu s73744æ>
+			
+					<a href=æ/rugby-union/england/æ id=æs73744reg3795032æ>England</a>
+				
+					<a href=æ/rugby-union/british-and-irish-lions/æ id=ærf168æ>British & Irish Lions</a>
+				
+					<a href=æ/rugby-union/tri-nations/æ id=ærf172æ>Tri Nations</a>
+				
+					<a href=æ/rugby-union/six-nations-championship/æ id=ærf167æ>Six Nations</a>
+				
+					<a href=æ/rugby-union/magners-league/æ id=ærf174æ>Magners League</a>
+				
+					<a href=æ/rugby-union/european-leagues/æ id=ærf176æ>European Leagues</a>
+				
+					<a href=æ/rugby-union/european-rugby-cup/æ id=ærf169æ>Heineken Cup</a>
+				
+					<a href=æ/rugby-union/european-challenge-cup/æ id=ærf170æ>Challenge Cup</a>
+				
+					<a href=æ/rugby-union/super-14/æ id=ærf171æ>Super 14</a>
+				
+					<a href=æ/rugby-union/world-cup/æ id=ærf173æ>World Cup</a>
+				
+					<a href=æ/rugby-union/super-15/æ id=ærf381æ>Super 15</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022667æ href=æ/sailing/æ>Sailing</a>
+			<div class=æsubMenu s4022667æ>
+			
+					<a href=æ/sailing/world/æ id=æs4022667reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022691æ href=æ/shooting/æ>Shooting</a>
+			<div class=æsubMenu s4022691æ>
+			
+					<a href=æ/shooting/world/æ id=æs4022691reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s100558æ href=æ/ski-jumping/æ>Ski Jumping</a>
+			<div class=æsubMenu s100558æ>
+			
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s22æ href=æ/snooker/æ>Snooker</a>
+			<div class=æsubMenu s22æ>
+			
+					<a href=æ/snooker/championship-league-snooker/æ id=æcomp1490æ>Championship League Snooker</a>
+				
+					<a href=æ/snooker/haikou-world-open/æ id=æcomp1099æ>Haikou World Open</a>
+				
+					<a href=æ/snooker/welsh-open/æ id=æcomp440æ>Welsh Open</a>
+				
+					<a href=æ/snooker/world-championship/æ id=ærf142æ>World Championship</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s550153æ href=æ/swimming/æ>Swimming</a>
+			<div class=æsubMenu s550153æ>
+			
+					<a href=æ/swimming/world/æ id=æs550153reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s269467æ href=æ/table-tennis/æ>Table Tennis</a>
+			<div class=æsubMenu s269467æ>
+			
+					<a href=æ/table-tennis/world/æ id=æs269467reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022858æ href=æ/taekwondo/æ>Taekwondo</a>
+			<div class=æsubMenu s4022858æ>
+			
+					<a href=æ/taekwondo/world/æ id=æs4022858reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf190æ href=æ/tennis/æ>Tennis</a>
+			<div class=æsubMenu rf190æ>
+			
+					<a href=æ/tennis/atp-vtr-open/æ id=æcomp1478æ>ATP, Movistar Open</a>
+				
+					<a href=æ/tennis/open-sud-de-france/æ id=æcomp359æ>ATP, Lyon</a>
+				
+					<a href=æ/tennis/pbz-zagreb-indoors/æ id=æcomp315æ>ATP, Zagreb</a>
+				
+					<a href=æ/tennis/atp-tour/æ id=ærf179æ>ATP Tour</a>
+				
+					<a href=æ/tennis/wta-tour/æ id=ærf180æ>WTA Tour</a>
+				
+					<a href=æ/tennis/davis-cup/æ id=ærf150æ>Davis Cup</a>
+				
+					<a href=æ/tennis/us-open/æ id=ærf74æ>US Open</a>
+				
+					<a href=æ/tennis/australian-open/æ id=ærf77æ>Australian Open</a>
+				
+					<a href=æ/tennis/french-open/æ id=ærf78æ>French Open</a>
+				
+					<a href=æ/tennis/wimbledon/æ id=ærf1æ>Wimbledon</a>
+				
+					<a href=æ/tennis/player-specials/æ id=æcomp1821æ>Player Specials</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4022991æ href=æ/triathlon/æ>Triathlon</a>
+			<div class=æsubMenu s4022991æ>
+			
+					<a href=æ/triathlon/world/æ id=æs4022991reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s6230056æ href=æ/tv--film--music/æ>TV / Film & Music</a>
+			<div class=æsubMenu s6230056æ>
+			
+					<a href=æ/tv--film--music/oscars/æ id=ærf109æ>Oscars</a>
+				
+					<a href=æ/tv--film--music/x-factor/æ id=ærf45æ>X Factor</a>
+				
+					<a href=æ/tv--film--music/baftas/æ id=ærf188æ>BAFTAs</a>
+				
+					<a href=æ/tv-film-music/brit-awards/æ id=ærf311æ>Brit Awards</a>
+				
+					<a href=æ/tv--film--music/eurovision/æ id=ærf163æ>Eurovision</a>
+				
+					<a href=æ/tv-film-music/grammy-awards/æ id=ærf304æ>Grammy Awards</a>
+				
+					<a href=æ/tv--film--music/sports-personality-of-the-year/æ id=ærf66æ>Sports Personality of the Year</a>
+				
+					<a href=æ/tv--film--music/united-kingdom/æ id=æs6230056reg217æ>UK</a>
+				
+					<a href=æ/tv--film--music/usa/american-idol/æ id=ærf189æ>American Idol</a>
+				
+					<a href=æ/tv--film--music/dancing-on-ice/æ id=ærf107æ>Dancing On Ice</a>
+				
+					<a href=æ/tv--film--music/usa/æ id=æs6230056reg140æ>USA</a>
+				
+					<a href=æ/tv-film-music/dancing-with-the-stars/æ id=ærf341æ>Dancing with the Stars</a>
+				
+					<a href=æ/tv-film-music/melodifestivalen/æ id=ærf339æ>Melodifestivalen</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s91189æ href=æ/volleyball/æ>Volleyball</a>
+			<div class=æsubMenu s91189æ>
+			
+					<a href=æ/volleyball/world/æ id=æs91189reg2æ>World</a>
+				
+					<a href=æ/volleyball/brazil/æ id=æs91189reg124æ>Brazil</a>
+				
+					<a href=æ/volleyball/europe/æ id=æs91189reg6æ>Europe</a>
+				
+					<a href=æ/volleyball/korea-rep/æ id=æs91189reg152æ>Korea Rep</a>
+				
+					<a href=æ/volleyball/cev-champions-league/æ id=ærf111æ>Champions League</a>
+				
+					<a href=æ/volleyball/european-leagues/æ id=ærf114æ>European Leagues</a>
+				
+					<a href=æ/volleyball/fivb-world-league/æ id=ærf196æ>FIVB World League</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s276032æ href=æ/water-polo/æ>Water Polo</a>
+			<div class=æsubMenu s276032æ>
+			
+					<a href=æ/water-polo/world/æ id=æs276032reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s729926æ href=æ/weightlifting/æ>Weightlifting</a>
+			<div class=æsubMenu s729926æ>
+			
+					<a href=æ/weightlifting/world/æ id=æs729926reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s4023055æ href=æ/wrestling/æ>Wrestling</a>
+			<div class=æsubMenu s4023055æ>
+			
+					<a href=æ/wrestling/world/æ id=æs4023055reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-rf228æ href=æ/winter-olympics/æ>Winter Olympics</a>
+			<div class=æsubMenu rf228æ>
+			
+					<a href=æ/ice-hockey/winter-olympics/æ id=ærf251æ>Ice Hockey</a>
+				
+			</div>
+		</div>
+	
+		<div class=ætopMenu æ>
+			<a class=æicon-s7950337æ href=æ/beach-volleyball/æ>Beach Volleyball</a>
+			<div class=æsubMenu s7950337æ>
+			
+					<a href=æ/beach-volleyball/world/æ id=æs7950337reg2æ>World</a>
+				
+			</div>
+		</div>
+	
+
+<script type=ætext/javascriptæ>
+    var lastMenu = 's10';
+	collapseMenu();
+</script>
+<!--googleon: index-->
+
+                            </td>
+                            <td class=æcontentContaineræ>
+                                <!-- Force Minimum Height -->
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    alt=ææ height=æ1æ width=æ672æ class=æminHeightFixeræ />
+                                <div class=æinneræ>
+                                    <div id=æbreadCrumbsContaineræ>
+                                        
+	
+		<a href=æ/æ>Home</a> &#187; 
+
+		<a href=æ/football/æ>Football</a> &#187; 
+
+		<a href=æ/football/european-leagues/æ>European Leagues</a> &#187; 
+
+		<a href=æ/football/england/æ>England</a> &#187; 
+
+		<a href=æ/football/england/premier-league/æ>Barclays Premier League</a> &#187; 
+
+
+                                    </div>
+                                    
+	
+
+<div>
+    <div class=æpopupMoreEventsContaineræ>
+        <h4 id=æctl00_MainContent_ctl00_moreBetsButtonæ>More Bets &#187;</h4>
+	    <h1>
+			Football: Barclays Premier League
+		</h1>
+	    <div style=ædisplay: none;æ class=æsubContaineræ>
+	        <div>
+	            
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Season Bets
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/aston-villa-v-queens-park-rangers/season-match-bet/æ>Season Match Bet</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/winner/æ>Winner</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-4/æ>Top 4</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/winner-without-big-4/æ>Winner Without Big 4</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-6/æ>Top 6</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-10/æ>Top 10</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-london-club/æ>Top London Club</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-manchester-club/æ>Top Manchester Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-merseyside-club/æ>Top Merseyside Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-midlands-club/æ>Top Midlands Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-north-east-club/æ>Top North East Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-north-west-club/æ>Top North West Club</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-goalscorer/æ>Top Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-promoted-team/æ>Top Promoted Team</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/relegation/æ>Relegation</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/to-stay-up/æ>To Stay Up</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/top-newcomer/æ>Top Newcomer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/winner-without-big-6/æ>Winner Without Big 6</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/winner-without-manchester-clubs/æ>Winner Without Manchester Clubs</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/straight-forecast/æ>Straight Forecast</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/premier-league/handicap-winner/æ>Handicap Winner</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Group Betting
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/group-betting/finish-bottom/æ>Finish Bottom</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Specials
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/specials/pfa-player-of-the-year/æ>PFA Player of the Year</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/specials/finish-bottom-half/æ>Finish Bottom Half</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/specials/finish-top-half/æ>Finish Top Half</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/premier-league/specials/manager-of-the-year/æ>Manager Of The Year</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/specials/total-number-of-top-four-managers-to-leave/æ>Total Number Of Top Four Managers To Leave</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+<!--googleoff: index-->
+
+<div class=ærelatedEventsContaineræ>
+	<div class=æexpandCollapseButtonæ>Collapse</div>
+	<h2>
+		Team Betting
+		
+	</h2>
+	
+	<div class=ærelatedEvents æ>
+		
+                <table>
+                    <tr>
+						
+							<td class=æeventGroupæ>
+							<table class=ælistOneæ cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/arsenal-multiple-trophies/æ>Arsenal Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/chelsea-multiple-trophies/æ>Chelsea Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/liverpool-multiple-trophies/æ>Liverpool Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/manchester-city-multiple-trophies/æ>Manchester City Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/manchester-united-multiple-trophies/æ>Manchester United Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/tottenham-multiple-trophies/æ>Tottenham Multiple Trophies</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-arsenal-goalscorer/æ>Top Arsenal Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-chelsea-goalscorer/æ>Top Chelsea Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-everton-goalscorer/æ>Top Everton Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-fulham-goalscorer/æ>Top Fulham Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-manchester-city-goalscorer/æ>Top Manchester City Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-norwich-goalscorer/æ>Top Norwich Goalscorer</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-qpr-goalscorer/æ>Top QPR Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-reading-goalscorer/æ>Top Reading Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-stoke-city-goalscorer/æ>Top Stoke City Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-tottenham-goalscorer/æ>Top Tottenham Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-west-brom-goalscorer/æ>Top West Brom Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-west-ham-goalscorer/æ>Top West Ham Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/top-wigan-goalscorer/æ>Top Wigan Goalscorer</a>
+									
+								</td></tr>
+							
+								<tr><td class=æevent outputSeperatoræ>
+									<a href=æ/football/england/premier-league/team-betting/next-manager-to-leave-post/æ>Next Manager To Leave Post</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/allardyce-in-charge-last-day-of-the-season/æ>Allardyce In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/arsenal-top-4-finish/æ>Arsenal Top 4 Finish</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/clarke-in-charge-last-day-of-the-season/æ>Clarke In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/ferguson-in-charge-last-day-of-the-season/æ>Ferguson In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+						
+							<td class=æeventGroupæ>
+							<table cellpadding=æ0æ cellspacing=æ0æ>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/hughton-in-charge-last-day-of-the-season/æ>Hughton In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/jol-in-charge-last-day-of-the-season/æ>Jol In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/lambert-in-charge-last-day-of-the-season/æ>Lambert In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/laudrup-in-charge-last-day-of-the-season/æ>Laudrup In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/mancini-in-charge-last-day-of-the-season/æ>Mancini In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/martinez-in-charge-last-day-of-the-season/æ>Martinez In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/mcdermott-in-charge-last-day-of-the-season/æ>McDermott In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/o'neill-in-charge-last-day-of-the-season/æ>O'Neill In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/pardew-in-charge-last-day-of-the-season/æ>Pardew In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/pulis-in-charge-last-day-of-the-season/æ>Pulis In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/rodgers-in-charge-last-day-of-season/æ>Rodgers in Charge Last Day of Season</a>
+									
+								</td></tr>
+							
+								<tr><td class=æeventæ>
+									<a href=æ/football/england/premier-league/team-betting/wenger-in-charge-last-day-of-the-season/æ>Wenger In Charge Last Day Of The Season</a>
+									
+								</td></tr>
+							
+							</table>
+							</td>
+							
+		             </tr>
+		         </table>    
+		
+	</div>
+	<div class=æcleaneræ>&nbsp;</div>
+</div>
+
+<!--googleon: index-->
+	            <p class=æcloseButtonæ><a href=æ#æ class=æpopupMoreEventsContainerCloseButtonæ>Close</a></p>
+	        </div>
+	    </div>
+	</div>
+</div>
+<div id=æcouponUpdateAreaæ class=æcouponTableæ>
+	
+<div class=æcouponTabsæ>
+	
+<div class=ætabContaineræ>
+	<ul>
+		
+		<li class=æactiveæ>
+			
+			<span>Match Result</span>
+			
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/premier-league/season-match-bet/æ onclick=ædisplayPage(this, ''); return false;æ>Season Match Bet</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/premier-league/half-time/æ onclick=ædisplayPage(this, ''); return false;æ>Half Time</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/premier-league/draw-no-bet/æ onclick=ædisplayPage(this, ''); return false;æ>Draw No Bet</a>	
+				
+		</li>	
+		
+		<li>
+			
+					<a href=æ/football/england/premier-league/asian-handicap/æ onclick=ædisplayPage(this, ''); return false;æ>Asian Handicap</a>	
+				
+		</li>	
+		
+	</ul>
+</div>
+</div>
+
+
+<div id=æouterFrameæ>
+	<table class=æcouponTableæ>
+		<tbody>
+			
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Saturday 9 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/tottenham-hotspur-v-newcastle-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400838æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/tottenham-hotspur-v-newcastle-united/match-result/æ>Tottenham Hotspur v Newcastle United</a> 
+				(12:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs228121924æ class=æselectionBestOddæ style=æ æ>
+					7/10
+					</td>
+				
+					<td id=æs228121928æ class=æselectionBestOddæ style=æ æ>
+					3
+					</td>
+				
+					<td id=æs228121930æ class=æselectionBestOddæ style=æ æ>
+					9/2
+					</td>
+				
+			<td id=æbpp50400838æ class=æbppWidth bppæ>101.05 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400838æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/chelsea-v-wigan-athletic/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400697æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/chelsea-v-wigan-athletic/match-result/æ>Chelsea v Wigan Athletic</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228120767æ class=æselectionBestOddæ style=æ æ>
+					4/11
+					</td>
+				
+					<td id=æs228120770æ class=æselectionBestOddæ style=æ æ>
+					9/2
+					</td>
+				
+					<td id=æs228120771æ class=æselectionBestOddæ style=æ æ>
+					9
+					</td>
+				
+			<td id=æbpp50400697æ class=æbppWidth bppæ>100.43 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400697æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/norwich-city-v-fulham/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400729æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/norwich-city-v-fulham/match-result/æ>Norwich City v Fulham</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228120960æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+					<td id=æs228120965æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+					<td id=æs228120969æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+			<td id=æbpp50400729æ class=æbppWidth bppæ>99.82 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400729æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/stoke-city-v-reading/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400804æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/stoke-city-v-reading/match-result/æ>Stoke City v Reading</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228121756æ class=æselectionBestOddæ style=æ æ>
+					19/20
+					</td>
+				
+					<td id=æs228121758æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs228121762æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+			<td id=æbpp50400804æ class=æbppWidth bppæ>99.74 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400804æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/sunderland-v-arsenal/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400816æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/sunderland-v-arsenal/match-result/æ>Sunderland v Arsenal</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228121787æ class=æselectionBestOddæ style=æ æ>
+					7/2
+					</td>
+				
+					<td id=æs228121790æ class=æselectionBestOddæ style=æ æ>
+					11/4
+					</td>
+				
+					<td id=æs228121792æ class=æselectionBestOddæ style=æ æ>
+					10/11
+					</td>
+				
+			<td id=æbpp50400816æ class=æbppWidth bppæ>100.72 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400816æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/swansea-city-v-queens-park-rangers/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400829æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/swansea-city-v-queens-park-rangers/match-result/æ>Swansea City v Queens Park Rangers</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228121875æ class=æselectionBestOddæ style=æ æ>
+					17/20
+					</td>
+				
+					<td id=æs228121880æ class=æselectionBestOddæ style=æ æ>
+					14/5
+					</td>
+				
+					<td id=æs228121883æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+			<td id=æbpp50400829æ class=æbppWidth bppæ>100.20 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400829æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/southampton-v-manchester-city/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400798æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/southampton-v-manchester-city/match-result/æ>Southampton v Manchester City</a> 
+				(17:30&nbsp;GMT)
+			</td>
+			
+					<td id=æs228121737æ class=æselectionBestOddæ style=æ æ>
+					5
+					</td>
+				
+					<td id=æs228121738æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+					<td id=æs228121739æ class=æselectionBestOddæ style=æ æ>
+					13/20
+					</td>
+				
+			<td id=æbpp50400798æ class=æbppWidth bppæ>100.19 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400798æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Sunday 10 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/aston-villa-v-west-ham/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50404256æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/aston-villa-v-west-ham/match-result/æ>Aston Villa v West Ham</a> 
+				(13:30&nbsp;GMT)
+			</td>
+			
+					<td id=æs228149019æ class=æselectionBestOddæ style=æ æ>
+					8/5
+					</td>
+				
+					<td id=æs228149020æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228149021æ class=æselectionBestOddæ style=æ æ>
+					2
+					</td>
+				
+			<td id=æbpp50404256æ class=æbppWidth bppæ>101.40 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50404256æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/manchester-united-v-everton/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400715æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/manchester-united-v-everton/match-result/æ>Manchester United v Everton</a> 
+				(16:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228120868æ class=æselectionBestOddæ style=æ æ>
+					7/10
+					</td>
+				
+					<td id=æs228120871æ class=æselectionBestOddæ style=æ æ>
+					3
+					</td>
+				
+					<td id=æs228120873æ class=æselectionBestOddæ style=æ æ>
+					9/2
+					</td>
+				
+			<td id=æbpp50400715æ class=æbppWidth bppæ>101.31 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400715æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Monday 11 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-26/liverpool-v-west-bromwich-albion/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400704æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-26/liverpool-v-west-bromwich-albion/match-result/æ>Liverpool v West Bromwich Albion</a> 
+				(20:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228120802æ class=æselectionBestOddæ style=æ æ>
+					2/5
+					</td>
+				
+					<td id=æs228120805æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+					<td id=æs228120808æ class=æselectionBestOddæ style=æ æ>
+					9
+					</td>
+				
+			<td id=æbpp50400704æ class=æbppWidth bppæ>101.09 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400704æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Sunday 17 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/liverpool-v-swansea-city/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400943æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/liverpool-v-swansea-city/match-result/æ>Liverpool v Swansea City</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228122927æ class=æselectionBestOddæ style=æ æ>
+					4/7
+					</td>
+				
+					<td id=æs228122931æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+					<td id=æs228122935æ class=æselectionBestOddæ style=æ æ>
+					11/2
+					</td>
+				
+			<td id=æbpp50400943æ class=æbppWidth bppæ>102.57 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400943æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Saturday 23 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/fulham-v-stoke-city/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400974æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/fulham-v-stoke-city/match-result/æ>Fulham v Stoke City</a> 
+				(12:45&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123138æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+					<td id=æs228123141æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228123144æ class=æselectionBestOddæ style=æ æ>
+					3
+					</td>
+				
+			<td id=æbpp50400974æ class=æbppWidth bppæ>99.87 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400974æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/arsenal-v-aston-villa/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400958æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/arsenal-v-aston-villa/match-result/æ>Arsenal v Aston Villa</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123046æ class=æselectionBestOddæ style=æ æ>
+					1/3
+					</td>
+				
+					<td id=æs228123049æ class=æselectionBestOddæ style=æ æ>
+					9/2
+					</td>
+				
+					<td id=æs228123054æ class=æselectionBestOddæ style=æ æ>
+					11
+					</td>
+				
+			<td id=æbpp50400958æ class=æbppWidth bppæ>101.19 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400958æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/norwich-city-v-everton/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401032æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/norwich-city-v-everton/match-result/æ>Norwich City v Everton</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123750æ class=æselectionBestOddæ style=æ æ>
+					14/5
+					</td>
+				
+					<td id=æs228123751æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228123752æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+			<td id=æbpp50401032æ class=æbppWidth bppæ>100.51 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401032æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/queens-park-rangers-v-manchester-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401040æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/queens-park-rangers-v-manchester-united/match-result/æ>Queens Park Rangers v Manchester United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123779æ class=æselectionBestOddæ style=æ æ>
+					15/2
+					</td>
+				
+					<td id=æs228123781æ class=æselectionBestOddæ style=æ æ>
+					7/2
+					</td>
+				
+					<td id=æs228123782æ class=æselectionBestOddæ style=æ æ>
+					1/2
+					</td>
+				
+			<td id=æbpp50401040æ class=æbppWidth bppæ>100.69 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401040æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/reading-v-wigan-athletic/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401049æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/reading-v-wigan-athletic/match-result/æ>Reading v Wigan Athletic</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123804æ class=æselectionBestOddæ style=æ æ>
+					11/8
+					</td>
+				
+					<td id=æs228123807æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228123808æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+			<td id=æbpp50401049æ class=æbppWidth bppæ>100.84 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401049æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/west-bromwich-albion-v-sunderland/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401059æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/west-bromwich-albion-v-sunderland/match-result/æ>West Bromwich Albion v Sunderland</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228123843æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+					<td id=æs228123845æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228123848æ class=æselectionBestOddæ style=æ æ>
+					3
+					</td>
+				
+			<td id=æbpp50401059æ class=æbppWidth bppæ>99.56 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401059æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Sunday 24 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/manchester-city-v-chelsea/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400917æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/manchester-city-v-chelsea/match-result/æ>Manchester City v Chelsea</a> 
+				(13:30&nbsp;GMT)
+			</td>
+			
+					<td id=æs228122744æ class=æselectionBestOddæ style=æ æ>
+					11/10
+					</td>
+				
+					<td id=æs228122746æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs228122748æ class=æselectionBestOddæ style=æ æ>
+					10/3
+					</td>
+				
+			<td id=æbpp50400917æ class=æbppWidth bppæ>100.11 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400917æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/newcastle-united-v-southampton/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50400927æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/newcastle-united-v-southampton/match-result/æ>Newcastle United v Southampton</a> 
+				(13:30&nbsp;GMT)
+			</td>
+			
+					<td id=æs228122776æ class=æselectionBestOddæ style=æ æ>
+					10/11
+					</td>
+				
+					<td id=æs228122777æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+					<td id=æs228122778æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+			<td id=æbpp50400927æ class=æbppWidth bppæ>99.73 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50400927æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Monday 25 February 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-27/west-ham-v-tottenham-hotspur/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm68813829æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-27/west-ham-v-tottenham-hotspur/match-result/æ>West Ham v Tottenham Hotspur</a> 
+				(20:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs289128397æ class=æselectionBestOddæ style=æ æ>
+					11/4
+					</td>
+				
+					<td id=æs289128398æ class=æselectionBestOddæ style=æ æ>
+					12/5
+					</td>
+				
+					<td id=æs289128399æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+			<td id=æbpp68813829æ class=æbppWidth bppæ>101.89 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm68813829æ></td>
+		</tr>
+	
+				
+					
+		<tr>
+			
+			<th>&nbsp;</th>
+			
+			<th class=æfirstColumnæ>Saturday 2 March 2013</th>
+			
+					<th>Home</th>
+				
+					<th>Draw</th>
+				
+					<th>Away</th>
+				
+			<th class=æbppWidthæ>BPP</th>
+			
+		</tr>
+
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/chelsea-v-west-bromwich-albion/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401210æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/chelsea-v-west-bromwich-albion/match-result/æ>Chelsea v West Bromwich Albion</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228125429æ class=æselectionBestOddæ style=æ æ>
+					2/5
+					</td>
+				
+					<td id=æs228125433æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+					<td id=æs228125436æ class=æselectionBestOddæ style=æ æ>
+					9
+					</td>
+				
+			<td id=æbpp50401210æ class=æbppWidth bppæ>102.56 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401210æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/everton-v-reading/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401179æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/everton-v-reading/match-result/æ>Everton v Reading</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228125201æ class=æselectionBestOddæ style=æ æ>
+					2/5
+					</td>
+				
+					<td id=æs228125203æ class=æselectionBestOddæ style=æ æ>
+					4
+					</td>
+				
+					<td id=æs228125205æ class=æselectionBestOddæ style=æ æ>
+					17/2
+					</td>
+				
+			<td id=æbpp50401179æ class=æbppWidth bppæ>102.51 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401179æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/manchester-united-v-norwich-city/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401154æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/manchester-united-v-norwich-city/match-result/æ>Manchester United v Norwich City</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228125085æ class=æselectionBestOddæ style=æ æ>
+					2/9
+					</td>
+				
+					<td id=æs228125086æ class=æselectionBestOddæ style=æ æ>
+					6
+					</td>
+				
+					<td id=æs228125087æ class=æselectionBestOddæ style=æ æ>
+					15
+					</td>
+				
+			<td id=æbpp50401154æ class=æbppWidth bppæ>102.58 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401154æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/southampton-v-queens-park-rangers/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401162æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/southampton-v-queens-park-rangers/match-result/æ>Southampton v Queens Park Rangers</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228125111æ class=æselectionBestOddæ style=æ æ>
+					11/10
+					</td>
+				
+					<td id=æs228125112æ class=æselectionBestOddæ style=æ æ>
+					23/10
+					</td>
+				
+					<td id=æs228125113æ class=æselectionBestOddæ style=æ æ>
+					3
+					</td>
+				
+			<td id=æbpp50401162æ class=æbppWidth bppæ>102.61 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401162æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/stoke-city-v-west-ham/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401269æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/stoke-city-v-west-ham/match-result/æ>Stoke City v West Ham</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228126126æ class=æselectionBestOddæ style=æ æ>
+					7/6
+					</td>
+				
+					<td id=æs228126128æ class=æselectionBestOddæ style=æ æ>
+					23/10
+					</td>
+				
+					<td id=æs228126131æ class=æselectionBestOddæ style=æ æ>
+					14/5
+					</td>
+				
+			<td id=æbpp50401269æ class=æbppWidth bppæ>102.49 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401269æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/sunderland-v-fulham/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401275æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/sunderland-v-fulham/match-result/æ>Sunderland v Fulham</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228126141æ class=æselectionBestOddæ style=æ æ>
+					6/5
+					</td>
+				
+					<td id=æs228126144æ class=æselectionBestOddæ style=æ æ>
+					7/3
+					</td>
+				
+					<td id=æs228126145æ class=æselectionBestOddæ style=æ æ>
+					13/5
+					</td>
+				
+			<td id=æbpp50401275æ class=æbppWidth bppæ>102.67 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401275æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/swansea-city-v-newcastle-united/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401286æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/swansea-city-v-newcastle-united/match-result/æ>Swansea City v Newcastle United</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228126183æ class=æselectionBestOddæ style=æ æ>
+					7/5
+					</td>
+				
+					<td id=æs228126186æ class=æselectionBestOddæ style=æ æ>
+					23/10
+					</td>
+				
+					<td id=æs228126189æ class=æselectionBestOddæ style=æ æ>
+					9/4
+					</td>
+				
+			<td id=æbpp50401286æ class=æbppWidth bppæ>102.39 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401286æ></td>
+		</tr>
+	
+		<tr class=ærow1æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/tottenham-hotspur-v-arsenal/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401297æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/tottenham-hotspur-v-arsenal/match-result/æ>Tottenham Hotspur v Arsenal</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228126286æ class=æselectionBestOddæ style=æ æ>
+					5/4
+					</td>
+				
+					<td id=æs228126289æ class=æselectionBestOddæ style=æ æ>
+					7/3
+					</td>
+				
+					<td id=æs228126291æ class=æselectionBestOddæ style=æ æ>
+					5/2
+					</td>
+				
+			<td id=æbpp50401297æ class=æbppWidth bppæ>102.67 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401297æ></td>
+		</tr>
+	
+		<tr class=ærow0æ>
+			
+			<td><a href=æ/football/england/premier-league/round-28/wigan-athletic-v-liverpool/match-result/all-odds/defaultSortæ class=æcouponDetailsæ id=æm50401316æ><img src=æhttp://cdn1.resources.bestbetting.com/default/images/buttons/maximize.gifæ alt=ææ /></a></td>
+			
+			<td class=æfirstColumnæ>
+				<a href=æ/football/england/premier-league/round-28/wigan-athletic-v-liverpool/match-result/æ>Wigan Athletic v Liverpool</a> 
+				(15:00&nbsp;GMT)
+			</td>
+			
+					<td id=æs228126447æ class=æselectionBestOddæ style=æ æ>
+					5
+					</td>
+				
+					<td id=æs228126451æ class=æselectionBestOddæ style=æ æ>
+					14/5
+					</td>
+				
+					<td id=æs228126454æ class=æselectionBestOddæ style=æ æ>
+					4/6
+					</td>
+				
+			<td id=æbpp50401316æ class=æbppWidth bppæ>102.51 %</td>
+			
+		</tr>
+		<tr>
+			<td style=ædisplay: none;æ colspan=æ6æ id=æpm50401316æ></td>
+		</tr>
+	
+				
+		</tbody>
+	</table>
+</div>
+
+
+</div>
+<table cellspacing=æ0æ cellpadding=æ0æ style=æwidth: 100%æ>
+	<tr>
+		<td style=æwidth: 50%æ class=æpremiershipæ>
+	<div class=æsimpleGroupContaineræ>
+		<h2><span>Group Betting</span></h2>
+		<div class=æbodyæ>
+		    <ul>
+		    
+			    <li><a href=æ/football/england/premier-league/group-betting/finish-bottom/æ>Finish Bottom</a></li>
+ 		    
+ 		    </ul>
+ 		</div>
+	</div> 	
+
+	<div class=æsimpleGroupContaineræ>
+		<h2><span>Season Bets</span></h2>
+		<div class=æbodyæ>
+		    <ul>
+		    
+			    <li><a href=æ/football/england/premier-league/winner/æ>Winner</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-4/æ>Top 4</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/winner-without-big-4/æ>Winner Without Big 4</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-6/æ>Top 6</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-10/æ>Top 10</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-london-club/æ>Top London Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-manchester-club/æ>Top Manchester Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-merseyside-club/æ>Top Merseyside Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-midlands-club/æ>Top Midlands Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-north-east-club/æ>Top North East Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-north-west-club/æ>Top North West Club</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-goalscorer/æ>Top Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-promoted-team/æ>Top Promoted Team</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/relegation/æ>Relegation</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/to-stay-up/æ>To Stay Up</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/top-newcomer/æ>Top Newcomer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/winner-without-big-6/æ>Winner Without Big 6</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/winner-without-manchester-clubs/æ>Winner Without Manchester Clubs</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/straight-forecast/æ>Straight Forecast</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/handicap-winner/æ>Handicap Winner</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/aston-villa-v-queens-park-rangers/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/aston-villa-v-wigan-athletic/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/blackburn-rovers-v-burnley/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/blackburn-rovers-v-millwall/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/brighton--hove-albion-v-middlesbrough/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/burnley-v-leeds-united/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/crystal-palace-v-middlesbrough/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/crystal-palace-v-watford/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/fulham-v-newcastle-united/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/fulham-v-sunderland/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/fulham-v-west-ham/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/hull-city-v-watford/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/leeds-united-v-nottingham-forest/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/newcastle-united-v-norwich-city/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/newcastle-united-v-west-ham/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/queens-park-rangers-v-reading/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/southampton-v-wigan-athletic/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/stoke-city-v-sunderland/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/stoke-city-v-swansea-city/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/stoke-city-v-west-bromwich-albion/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/swansea-city-v-west-bromwich-albion/season-match-bet/æ>Season Match Bet</a></li>
+ 		    
+ 		    </ul>
+ 		</div>
+	</div> 	
+
+	<div class=æsimpleGroupContaineræ>
+		<h2><span>Specials</span></h2>
+		<div class=æbodyæ>
+		    <ul>
+		    
+			    <li><a href=æ/football/england/premier-league/specials/finish-bottom-half/æ>Finish Bottom Half</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/specials/finish-top-half/æ>Finish Top Half</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/specials/manager-of-the-year/æ>Manager Of The Year</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/specials/pfa-player-of-the-year/æ>PFA Player of the Year</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/specials/total-number-of-top-four-managers-to-leave/æ>Total Number Of Top Four Managers To Leave</a></li>
+ 		    
+ 		    </ul>
+ 		</div>
+	</div> 	
+
+	<div class=æsimpleGroupContaineræ>
+		<h2><span>Team Betting</span></h2>
+		<div class=æbodyæ>
+		    <ul>
+		    
+			    <li><a href=æ/football/england/premier-league/team-betting/allardyce-in-charge-last-day-of-the-season/æ>Allardyce In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/arsenal-multiple-trophies/æ>Arsenal Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/arsenal-top-4-finish/æ>Arsenal Top 4 Finish</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/chelsea-multiple-trophies/æ>Chelsea Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/clarke-in-charge-last-day-of-the-season/æ>Clarke In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/ferguson-in-charge-last-day-of-the-season/æ>Ferguson In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/hughton-in-charge-last-day-of-the-season/æ>Hughton In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/jol-in-charge-last-day-of-the-season/æ>Jol In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/lambert-in-charge-last-day-of-the-season/æ>Lambert In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/laudrup-in-charge-last-day-of-the-season/æ>Laudrup In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/liverpool-multiple-trophies/æ>Liverpool Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/manchester-city-multiple-trophies/æ>Manchester City Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/manchester-united-multiple-trophies/æ>Manchester United Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/mancini-in-charge-last-day-of-the-season/æ>Mancini In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/martinez-in-charge-last-day-of-the-season/æ>Martinez In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/mcdermott-in-charge-last-day-of-the-season/æ>McDermott In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/next-manager-to-leave-post/æ>Next Manager To Leave Post</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/o'neill-in-charge-last-day-of-the-season/æ>O'Neill In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/pardew-in-charge-last-day-of-the-season/æ>Pardew In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/pulis-in-charge-last-day-of-the-season/æ>Pulis In Charge Last Day Of The Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/rodgers-in-charge-last-day-of-season/æ>Rodgers in Charge Last Day of Season</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-arsenal-goalscorer/æ>Top Arsenal Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-chelsea-goalscorer/æ>Top Chelsea Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-everton-goalscorer/æ>Top Everton Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-fulham-goalscorer/æ>Top Fulham Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-manchester-city-goalscorer/æ>Top Manchester City Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-norwich-goalscorer/æ>Top Norwich Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-qpr-goalscorer/æ>Top QPR Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-reading-goalscorer/æ>Top Reading Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-stoke-city-goalscorer/æ>Top Stoke City Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-tottenham-goalscorer/æ>Top Tottenham Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-west-brom-goalscorer/æ>Top West Brom Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-west-ham-goalscorer/æ>Top West Ham Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/top-wigan-goalscorer/æ>Top Wigan Goalscorer</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/tottenham-multiple-trophies/æ>Tottenham Multiple Trophies</a></li>
+ 		    
+			    <li><a href=æ/football/england/premier-league/team-betting/wenger-in-charge-last-day-of-the-season/æ>Wenger In Charge Last Day Of The Season</a></li>
+ 		    
+ 		    </ul>
+ 		</div>
+	</div> 	
+</td>
+		<td style=æwidth: 50%æ class=æleagueTableæ>
+<div class=æsimpleGroupContaineræ>
+	<h2><span>League Table</span></h2>
+	<div class=æbodyæ>
+	    <table>
+	    
+		    <tr style=æfont-weight:700;æ>
+			    <th>Pos</th>
+			    <th>Team</th>
+			    <th class=ænumHdæ>P</th>
+			    <th class=ænumHdæ>W</th>
+			    <th class=ænumHdæ>D</th>
+			    <th class=ænumHdæ>L</th>
+			    <th class=ægdæ>GD</th>
+			    <th class=ænumHdæ>Pts</th>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>1</td>
+			    <td class=æteamæ>Manchester Utd</td>
+			    <td>9</td>
+			    <td>7</td>
+			    <td>1</td>
+			    <td>1</td>
+			    <td class=ægdæ>10</td>
+			    <td class=æpointsæ>22</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>2</td>
+			    <td class=æteamæ>Everton</td>
+			    <td>8</td>
+			    <td>5</td>
+			    <td>3</td>
+			    <td>0</td>
+			    <td class=ægdæ>7</td>
+			    <td class=æpointsæ>18</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>3</td>
+			    <td class=æteamæ>West Brom</td>
+			    <td>10</td>
+			    <td>5</td>
+			    <td>1</td>
+			    <td>4</td>
+			    <td class=ægdæ>0</td>
+			    <td class=æpointsæ>16</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>4</td>
+			    <td class=æteamæ>Manchester City</td>
+			    <td>7</td>
+			    <td>4</td>
+			    <td>3</td>
+			    <td>0</td>
+			    <td class=ægdæ>6</td>
+			    <td class=æpointsæ>15</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>5</td>
+			    <td class=æteamæ>Tottenham</td>
+			    <td>8</td>
+			    <td>4</td>
+			    <td>3</td>
+			    <td>1</td>
+			    <td class=ægdæ>3</td>
+			    <td class=æpointsæ>15</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>6</td>
+			    <td class=æteamæ>Newcastle Utd</td>
+			    <td>10</td>
+			    <td>4</td>
+			    <td>1</td>
+			    <td>5</td>
+			    <td class=ægdæ>-5</td>
+			    <td class=æpointsæ>13</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>7</td>
+			    <td class=æteamæ>Arsenal</td>
+			    <td>7</td>
+			    <td>3</td>
+			    <td>3</td>
+			    <td>1</td>
+			    <td class=ægdæ>8</td>
+			    <td class=æpointsæ>12</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>8</td>
+			    <td class=æteamæ>Liverpool</td>
+			    <td>7</td>
+			    <td>3</td>
+			    <td>3</td>
+			    <td>1</td>
+			    <td class=ægdæ>8</td>
+			    <td class=æpointsæ>12</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>9</td>
+			    <td class=æteamæ>Norwich City</td>
+			    <td>11</td>
+			    <td>3</td>
+			    <td>3</td>
+			    <td>5</td>
+			    <td class=ægdæ>-8</td>
+			    <td class=æpointsæ>12</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>10</td>
+			    <td class=æteamæ>Reading</td>
+			    <td>5</td>
+			    <td>3</td>
+			    <td>2</td>
+			    <td>0</td>
+			    <td class=ægdæ>3</td>
+			    <td class=æpointsæ>11</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>11</td>
+			    <td class=æteamæ>Southampton</td>
+			    <td>10</td>
+			    <td>2</td>
+			    <td>5</td>
+			    <td>3</td>
+			    <td class=ægdæ>0</td>
+			    <td class=æpointsæ>11</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>12</td>
+			    <td class=æteamæ>West Ham</td>
+			    <td>9</td>
+			    <td>3</td>
+			    <td>1</td>
+			    <td>5</td>
+			    <td class=ægdæ>-5</td>
+			    <td class=æpointsæ>10</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>13</td>
+			    <td class=æteamæ>Fulham</td>
+			    <td>9</td>
+			    <td>2</td>
+			    <td>3</td>
+			    <td>4</td>
+			    <td class=ægdæ>-2</td>
+			    <td class=æpointsæ>9</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>14</td>
+			    <td class=æteamæ>Sunderland</td>
+			    <td>8</td>
+			    <td>2</td>
+			    <td>2</td>
+			    <td>4</td>
+			    <td class=ægdæ>-4</td>
+			    <td class=æpointsæ>8</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>15</td>
+			    <td class=æteamæ>Swansea</td>
+			    <td>7</td>
+			    <td>2</td>
+			    <td>1</td>
+			    <td>4</td>
+			    <td class=ægdæ>-2</td>
+			    <td class=æpointsæ>7</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>16</td>
+			    <td class=æteamæ>Stoke City</td>
+			    <td>9</td>
+			    <td>1</td>
+			    <td>4</td>
+			    <td>4</td>
+			    <td class=ægdæ>-5</td>
+			    <td class=æpointsæ>7</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>17</td>
+			    <td class=æteamæ>QPR</td>
+			    <td>10</td>
+			    <td>1</td>
+			    <td>4</td>
+			    <td>5</td>
+			    <td class=ægdæ>-6</td>
+			    <td class=æpointsæ>7</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>18</td>
+			    <td class=æteamæ>Wigan</td>
+			    <td>8</td>
+			    <td>1</td>
+			    <td>3</td>
+			    <td>4</td>
+			    <td class=ægdæ>-1</td>
+			    <td class=æpointsæ>6</td>
+		    </tr>
+		    
+		    <tr class=ærowAæ>
+			    <td class=ænumæ>19</td>
+			    <td class=æteamæ>Chelsea</td>
+			    <td>5</td>
+			    <td>1</td>
+			    <td>2</td>
+			    <td>2</td>
+			    <td class=ægdæ>-2</td>
+			    <td class=æpointsæ>5</td>
+		    </tr>
+		    
+		    <tr class=ærowBæ>
+			    <td class=ænumæ>20</td>
+			    <td class=æteamæ>Aston Villa</td>
+			    <td>5</td>
+			    <td>0</td>
+			    <td>2</td>
+			    <td>3</td>
+			    <td class=ægdæ>-5</td>
+			    <td class=æpointsæ>2</td>
+		    </tr>
+		    
+	    </table>
+	</div>
+</div>
+</td>
+	</tr>
+</table>
+<div class=æclearBaræ></div>
+
+<p class=ædisclaimerContaineræ>
+	While every effort is made to ensure that the Football betting information displayed here is correct and up to date, 
+	we are not liable for any errors and it is your responsibility to check the Football odds with the bookmaker before placing a bet.
+</p>
+<noscript>
+    <div id=ænoJavascriptæ>
+        <p class=ærobots-nocontentæ>Your browser does not support Javascript or you have Javascript disabled. Some features of this site will be unavailable.</p>
+    </div>
+</noscript>
+
+                                </div>
+                            </td>
+                            <td class=ærightNavContaineræ>
+                                <!-- Force Right Nav Width -->
+                                <img class=æfixed-imageæ src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/1x1.gifæ
+                                    width=æ162æ height=æ0æ alt=ææ />
+                                
+                                
+	
+
+                                
+	
+
+                                <div class=ærightMenuBannerContaineræ>
+                                    
+	<a href=æhttp://affiliates.stanjamesaffiliates.com/processing/clickthrgh.asp?btag=a_1701b_2849æ  ><img src=æhttp://affiliates.stanjamesaffiliates.com/processing/impressions.asp?btag=a_1701b_2849æ alt=æwww.stanjames.comæ  style=æborder:none; width:160px;  height:600px; æ/></a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class=æclearBaræ>
+                    </div>
+                </div>
+                <!--googleoff: index-->
+                <div class=æfooterContaineræ>
+                    <div class=æftoplinksæ>
+                        <a href=æ/aboutæ>
+                            About Us</a> | <a href=æ/helpæ>
+                                Help</a> | <a href=æ/featuresæ>
+                                        Features</a> | <a href=æ/bookmakersæ>
+                                            Bookmakers</a> | 
+                                            <a href=æ/steamersæ>
+                                            Steamers</a> | 
+                                            <a href=æ/help/glossaryæ>
+                                                Glossary</a> | <a href=æ/rssæ class=ærsslinkæ>
+                                                    RSS</a>
+                    </div>
+                    <div class=æfmiddlelinksæ>
+                        <ul class=ætodaysRaceCoursesæ>
+                            <li><a href=æ/horse-racing/todayæ><strong>Todays Racing</strong></a></li>
+                            
+                                    <li><a href=æ/horse-racing/2013-02-06/carlisle/æ>
+                                        Carlisle</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-06/kempton-park/æ>
+                                        Kempton Park</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-06/southwell/æ>
+                                        Southwell</a></li>
+                                
+                                    <li><a href=æ/horse-racing/2013-02-06/ludlow/æ>
+                                        Ludlow</a></li>
+                                
+                            <li><a href=æhttp://www.turftrax.comæ>In depth racing<br />at TurfTrax.com</a></li>
+                        </ul>
+					    <ul class=æcontactæ>
+					        <li><a href=æ/contactæ><strong>Contact</strong></a></li>
+                            <li><a href=æmailto:advertising@betgenius.comæ>Advertising</a></li>
+                            <li><a href=æhttp://www.betgenius.com/careers/æ>Jobs</a></li>
+                        </ul>
+                        <ul class=æbetgeniusæ>
+                                <li><a href=æhttp://www.betgenius.com/products/æ><strong>Betgenius Products</strong></a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/customer-marketing/connextra/æ>Connextra</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/æ>Sportsbook Management</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/sportsbook-manager/æ>Sportsbook Manager</a></li>
+                                <li><a href=æhttp://www.betgenius.com/products/sportsbook-management/inplay-manager/æ>InPlay Manager</a></li>
+                        </ul>
+                    </div>
+                    <div class=æfbottomlinksæ>
+                        <p>
+                            <a href=æhttp://betgenius.comæ>
+                                <img src=æhttp://cdn1.resources.bestbetting.com/com.bestbetting/images/poweredbyBetgenius.gifæ
+                                    alt=æPowered by Betgeniusæ style=æfloat: leftæ /></a>
+                        </p>
+                        <p>
+                            Bestbetting - Sports betting odds comparison &#169; Copyright
+                            2013
+                            <a href=æhttp://betgenius.com/?originsite=bestbetting&amp;origintype=footeræ target=æ_blankæ>
+                                Betgenius Limited</a> | <a href=æ/help/tosæ>
+                                    Terms of Service</a><br />
+                            Please <a href=æ/contactæ>contact us</a> for any further information, including
+                            advertising or commercial terms.
+			    <img src='http://ff.connextra.com/BETDAQGBE/selector/image?client=BETDAQGBE&placement=oddstable_marketpagelink_0x0' border='0' width='0' height='0' />
+			    <a href='http://ff.connextra.com/PaddyPower/selector/click?client=PaddyPower&placement=oddstable_textlink_0x0' target='_blank'><img src='http://ff.connextra.com/PaddyPower/selector/image?client=PaddyPower&placement=oddstable_textlink_0x0' border='0' width='0' height='0' /></a>
+                        </p>
+                        <p>
+							Served by: VM-BBWEB3
+                        </p>
+                    </div>
+                </div>
+				<!--googleon: index-->
+            </td>
+        </tr>
+    </table>
+    <script src=æhttp://www.google-analytics.com/urchin.jsæ type=ætext/javascriptæ></script>
+    <script type=ætext/javascriptæ defer=ædeferæ>
+		    //<![CDATA[
+			_uacct = æUA-425479-2æ;
+			urchinTracker();
+			
+	
+
+			culture = 'en';
+			var serverTimeZone = 'GMT';
+		    //]]>
+    </script>
+</body>
+</html>
